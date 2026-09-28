@@ -6625,5 +6625,24 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Deep Learning course about PyTorch Validation Loop and Metric Tracking: Validation switches modules to evaluation behavior, disables gradient recording separately, accumulates metrics across every example, and uses the result for model selection rather than parameter updates.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Validation batches flow through a stable forward pass, contribute correct and total counts to a shared meter, then produce one dataset-level metric and checkpoint decision. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
     "player": "https://github.com/user-attachments/assets/ffea3dd2-65be-433d-a3b2-40d3bb7e42da"
+  },
+  {
+    "id": "recvw24KNremp6",
+    "record_id": "recvw24KNremp6",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "name": "Byte-Pair Encoding Tokenization",
+    "title": "Byte-Pair Encoding Tokenization: Merge Frequent Pairs",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.md",
+    "tags": [
+      "recvw24KNremp6",
+      "GENERATIVE-AI"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Byte-Pair Encoding Tokenization. Start from individual characters, count adjacent pairs across a tiny corpus, merge the leading pair and recount, then replay the learned ranks on “lowest” so the common stem compresses while the suffix stays split.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main symbols; accent `#b87f00` on the selected pair; result `#c0729d` on the learned chunks; warn `#d55e00` on a low-frequency or unmatched fragment; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use draw-on + stagger-in — adjacent character pairs combine in ranked order and learned chunks replay across a new word, with 12f fades, offsets stepping 8-14f, and nothing landing in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/6898c9d6-83d4-45b3-9200-2fab8a15557a"
   }
 ]

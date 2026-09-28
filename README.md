@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **420 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **421 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 92 prompts</sub>
+  <sub>7 courses · 93 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 92 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 93 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -302,7 +302,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-gen.md"><img src="assets/course-covers/ai-gen.svg" width="100%" alt="Generative Artificial Intelligence course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-gen.md"><strong>Generative Artificial Intelligence</strong></a><br>
-  <sub>8 prompts · Course notes (no required textbook)</sub>
+  <sub>9 prompts · Course notes (no required textbook)</sub>
 </td>
 </tr>
 <tr>
@@ -434,6 +434,7 @@
 6. [**Diffusion Forward Noising**](catalog/artificial-intelligence/ai-gen.md#c30-a006) · `C30-A006` · ▶ PLAY VIDEO
 7. [**Diffusion Reverse Denoising**](catalog/artificial-intelligence/ai-gen.md#c30-a007) · `C30-A007` · ▶ PLAY VIDEO
 8. [**Classifier-Free Guidance**](catalog/artificial-intelligence/ai-gen.md#c30-a008) · `C30-A008` · ▶ PLAY VIDEO
+9. [**Byte-Pair Encoding Tokenization: Merge Frequent Pairs**](catalog/artificial-intelligence/ai-gen.md#recvw24knremp6) · `recvw24KNremp6` · ▶ PLAY VIDEO
 
 ### [AI Agent Systems](catalog/artificial-intelligence/ai-agent-systems.md)
 

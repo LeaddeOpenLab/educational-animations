@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes (no required textbook)  
-**Knowledge points:** 8
+**Knowledge points:** 9
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -106,6 +106,19 @@ https://github.com/user-attachments/assets/633597a5-29a7-448c-8383-b5204dcec032
 `C30-A008` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/4b37e14b-2701-40d4-b1ff-53b271d0a39c
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#generative-artificial-intelligence)
+
+---
+
+<a id="recvw24knremp6"></a>
+## Byte-Pair Encoding Tokenization: Merge Frequent Pairs
+
+`recvw24KNremp6` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/6898c9d6-83d4-45b3-9200-2fab8a15557a
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
