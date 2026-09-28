@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 14
+**Knowledge points:** 15
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -184,6 +184,19 @@ https://github.com/user-attachments/assets/86b8ddc9-580b-4108-a3d2-6944dd6d349f
 `recvw25izM48sG` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/04ec5c9f-9b58-4a1d-9870-1965051945d7
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25jk3cwas"></a>
+## Termination and Loop Detection: Stop Repeated Searches
+
+`recvw25jK3cwAs` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/8c040851-0f40-407c-84bb-28f7fd9caa98
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
