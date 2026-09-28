@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 12
+**Knowledge points:** 13
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -158,6 +158,19 @@ https://github.com/user-attachments/assets/a7d01f61-2a24-4630-92dc-b4d63534cab4
 `recvw25glDKhRI` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/d71f7bdd-6e12-47c9-a4c8-144c707abf14
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25ht8600c"></a>
+## Sandboxing Untrusted Tool Output: Ignore Page Commands
+
+`recvw25ht8600c` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/86b8ddc9-580b-4108-a3d2-6944dd6d349f
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
