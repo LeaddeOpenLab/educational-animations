@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 5
+**Knowledge points:** 6
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -67,6 +67,19 @@ https://github.com/user-attachments/assets/0e6eb41a-6140-48fd-9ec3-0ac050199fc2
 `recvw257DvN3QU` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/c15dfca4-33ff-42c2-a0a5-a76cf4141aa8
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw258jlr6ax"></a>
+## Short-Term and Long-Term Agent Memory: Plan a Route
+
+`recvw258JLr6AX` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/5c851f88-f747-4842-b70b-d07a8b1c2fd0
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
