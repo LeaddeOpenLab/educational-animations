@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 11
+**Knowledge points:** 12
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -145,6 +145,19 @@ https://github.com/user-attachments/assets/feae2d0f-9df4-4ad0-baaa-5beb1c1742e9
 `recvw25f2UAbYl` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/a7d01f61-2a24-4630-92dc-b4d63534cab4
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25gldkhri"></a>
+## Idempotent Tool Execution: Replay One Ticket Safely
+
+`recvw25glDKhRI` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/d71f7bdd-6e12-47c9-a4c8-144c707abf14
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
