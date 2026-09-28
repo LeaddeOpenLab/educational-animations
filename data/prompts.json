@@ -6644,5 +6644,257 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Byte-Pair Encoding Tokenization. Start from individual characters, count adjacent pairs across a tiny corpus, merge the leading pair and recount, then replay the learned ranks on “lowest” so the common stem compresses while the suffix stays split.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main symbols; accent `#b87f00` on the selected pair; result `#c0729d` on the learned chunks; warn `#d55e00` on a low-frequency or unmatched fragment; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use draw-on + stagger-in — adjacent character pairs combine in ranked order and learned chunks replay across a new word, with 12f fades, offsets stepping 8-14f, and nothing landing in a scene’s last 25 frames.",
     "player": "https://github.com/user-attachments/assets/6898c9d6-83d4-45b3-9200-2fab8a15557a"
+  },
+  {
+    "id": "recvw24MaggI13",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Next-Token Probability Distribution: Softmax Scores",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.md",
+    "tags": [
+      "recvw24MaggI13",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Next-Token Probability Distribution. Start with several candidate words after “The”, show their raw logits, normalize them with softmax, and compare the resulting probabilities to explain that each candidate carries a share of uncertainty.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + count-up — logits settle before the shared softmax denominator appears; candidate probabilities then rise into normalized bars with 12f fades and 8-14f offsets. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/f77956eb-07ad-4e8e-97c2-a9003f23a414"
+  },
+  {
+    "id": "recvw24NhiUpZV",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Temperature and Sampling Diversity: Adjust Diversity",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.md",
+    "tags": [
+      "recvw24NhiUpZV",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Temperature and Sampling Diversity. Compare one fixed set of candidate logits before and after temperature scaling, showing a sharp low-temperature distribution and a flatter high-temperature distribution while preserving their rank.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on + stagger-in — reveal the low-temperature curve before the flatter high-temperature curve; lines draw over 45f and labels fade in by 10f offsets. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/ce786a0b-563e-4cbb-9120-e37c996e777f"
+  },
+  {
+    "id": "recvw24OpQBvQ8",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Top-k and Top-p Sampling: Fixed and Nucleus Cutoffs",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.md",
+    "tags": [
+      "recvw24OpQBvQ8",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Top-k and Top-p Sampling. Sort five candidate tokens by probability, first retain a fixed top-k count and then accumulate a top-p nucleus until its probability mass crosses the threshold; explain how the retained set changes.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. marker-travel + stagger-in — a fixed count boundary appears first, then the cumulative-mass boundary advances across ranked bars; each candidate enters with 12f fades. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/14fbcb83-61ea-49d6-af77-8c1529d748d9"
+  },
+  {
+    "id": "recvw24PwwhY6Z",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Prompt Structure and Role Separation: Keep Roles Distinct",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.md",
+    "tags": [
+      "recvw24PwwhY6Z",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Prompt Structure and Role Separation. Build a conversation from clearly tagged system, user, assistant, and tool messages, emphasizing role boundaries and the open assistant prefix where generation resumes.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + slide-up — role-labelled message blocks enter in conversation order with 12f fades and 10f offsets; the active assistant boundary settles last. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/b32f9ea9-290f-4932-b6f9-3f6a3d957a64"
+  },
+  {
+    "id": "recvw24QGLkzOo",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Few-Shot In-Context Learning: Infer from Examples",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.md",
+    "tags": [
+      "recvw24QGLkzOo",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Few-Shot In-Context Learning. Show two labeled examples that reveal a mapping, apply that pattern to a new query, and keep the model parameter block visibly frozen to distinguish inference from training.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + marker-travel — labeled examples appear before the query; the inferred mapping arrow travels to its output after the pattern is visible. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/d42d55bb-6298-4f8e-b302-7f3ac8dd676c"
+  },
+  {
+    "id": "recvw24T2zGQI9",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Retrieval-Augmented Generation Pipeline: Ground the Answer",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.md",
+    "tags": [
+      "recvw24T2zGQI9",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Retrieval-Augmented Generation Pipeline. Move a question through an indexed document corpus, retrieve relevant passages, insert them into the model context, and generate a response grounded in the retrieved evidence.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on + stagger-in — activate corpus and index before the query’s retrieval branch, then reveal context and grounded answer in causal order. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/9c514f72-acca-46cb-ba34-15efa5b678ad"
+  },
+  {
+    "id": "recvw24U8nIXtd",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Chunking and Overlap for Retrieval: Preserve Boundaries",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.md",
+    "tags": [
+      "recvw24U8nIXtd",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Chunking and Overlap for Retrieval. Slide bounded windows across a long sentence, highlight the repeated span shared across a cut, reconstruct a phrase crossing the boundary, and show the storage cost of added overlap.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. slide-up + band-sweep — the second window slides into place and a highlighted shared span sweeps across the boundary over 45f. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/f318e340-7a4d-4748-b930-8f5f3be1628b"
+  },
+  {
+    "id": "recvw24Vlk0V3K",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Embedding-Based Semantic Search: Find Semantic Neighbors",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.md",
+    "tags": [
+      "recvw24Vlk0V3K",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Embedding-Based Semantic Search. Place a query vector near paraphrases in a shared two-dimensional embedding space and farther from a lexical decoy; draw directional comparisons to explain semantic retrieval.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. marker-travel + draw-on — encode the query, then draw comparison rays to semantically close vectors before the retrieval candidates brighten. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/9ad0454e-775e-46d7-a5cc-858081d5b00b"
+  },
+  {
+    "id": "recvw24Wq3ZOpq",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Reranking Retrieved Passages: Reorder the Shortlist",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.md",
+    "tags": [
+      "recvw24Wq3ZOpq",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Reranking Retrieved Passages. Show a fast retriever shortlist, score each query-passage pair jointly, and reorder the list so a stronger evidence passage rises before a compact set continues.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + marker-travel — score each pair, move the winning passage upward, then settle the new shortlist with 12f staggered fades. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/089a325b-06f5-4a13-ab97-c49ed870faf6"
+  },
+  {
+    "id": "recvw24XspdsIn",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Transformer Decoder Causal Mask: Block Future Tokens",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.md",
+    "tags": [
+      "recvw24XspdsIn",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Transformer Decoder Causal Mask. Reveal a lower-triangular query-key attention matrix row by row, keeping future-token cells blocked and connecting the mask to safe left-to-right generation.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + band-sweep — permitted matrix cells illuminate row by row while the blocked future triangle remains muted. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/7f0ff1df-0ba1-4dc6-b437-874e9d7ccd45"
+  },
+  {
+    "id": "recvw24YBaWNKx",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "KV Cache for Autoregressive Generation: Compute One New Pair",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.md",
+    "tags": [
+      "recvw24YBaWNKx",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: KV Cache for Autoregressive Generation. Generate tokens one at a time while appending each new key-value pair to a persistent cache, reusing earlier slots instead of recomputing the prefix.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. slide-up + stagger-in — append one token and its K/V slots per step while earlier cache entries remain fixed and visible. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/8a03d941-1c92-40d3-9e42-e06b4da72a23"
+  },
+  {
+    "id": "recvw24ZMOZKIS",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Tool Calling with Structured Arguments: Validate Arguments",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.md",
+    "tags": [
+      "recvw24ZMOZKIS",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Tool Calling with Structured Arguments. Serialize a named tool call as typed JSON, pass it through a schema validation gate, execute the valid function, and return the tool result to the assistant turn.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on + pop-in — the JSON call travels to a schema gate, the valid gate pops to its accepted state, and only then does execution begin. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/df49f562-46cf-4328-b6a0-29934c754f2e"
+  },
+  {
+    "id": "recvw250ZqaTah",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "Fine-Tuning with LoRA Adapters: Train a Low-Rank Update",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.md",
+    "tags": [
+      "recvw250ZqaTah",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: Fine-Tuning with LoRA Adapters. Keep a pretrained weight matrix frozen, project through compact low-rank factors A and B, then add their scaled product as the learned update.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + draw-on — reveal frozen W, then low-rank A and B in sequence; draw their product into the scaled update over 50f. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/de2569ea-39ea-4961-b6d6-8aed02a90efe"
+  },
+  {
+    "id": "recvw2525onwzm",
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "textbook": "Course notes (no required textbook)",
+    "title": "LLM Hallucination Evaluation: Check Claims against Evidence",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.mp4",
+    "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.jpg",
+    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.md",
+    "tags": [
+      "recvw2525onwzm",
+      "AI-GEN",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Generative Artificial Intelligence course: LLM Hallucination Evaluation. Align generated claims with source evidence and label each as supported, contradicted, or unresolved before aggregating claim-level factuality metrics.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main structure; accent `#b87f00` on the key quantity; result `#c0729d` on the conclusion; warn `#d55e00` on blocked or unsupported cases; “Helvetica Neue”, Helvetica, Arial, “Segoe UI”, sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. stagger-in + band-sweep — align claims and evidence first, then reveal supported, contradicted, and unresolved verdicts before the metric summary. No element lands in a scene’s last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/1e6f1f59-38e1-447e-adb5-d9585c7b5ff1"
   }
 ]

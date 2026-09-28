@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **421 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **435 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 93 prompts</sub>
+  <sub>7 courses · 107 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 93 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 107 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -302,7 +302,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-gen.md"><img src="assets/course-covers/ai-gen.svg" width="100%" alt="Generative Artificial Intelligence course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-gen.md"><strong>Generative Artificial Intelligence</strong></a><br>
-  <sub>9 prompts · Course notes (no required textbook)</sub>
+  <sub>23 prompts · Course notes (no required textbook)</sub>
 </td>
 </tr>
 <tr>
@@ -435,6 +435,20 @@
 7. [**Diffusion Reverse Denoising**](catalog/artificial-intelligence/ai-gen.md#c30-a007) · `C30-A007` · ▶ PLAY VIDEO
 8. [**Classifier-Free Guidance**](catalog/artificial-intelligence/ai-gen.md#c30-a008) · `C30-A008` · ▶ PLAY VIDEO
 9. [**Byte-Pair Encoding Tokenization: Merge Frequent Pairs**](catalog/artificial-intelligence/ai-gen.md#recvw24knremp6) · `recvw24KNremp6` · ▶ PLAY VIDEO
+10. [**Next-Token Probability Distribution: Softmax Scores**](catalog/artificial-intelligence/ai-gen.md#recvw24maggi13) · `recvw24MaggI13` · ▶ PLAY VIDEO
+11. [**Temperature and Sampling Diversity: Adjust Diversity**](catalog/artificial-intelligence/ai-gen.md#recvw24nhiupzv) · `recvw24NhiUpZV` · ▶ PLAY VIDEO
+12. [**Top-k and Top-p Sampling: Fixed and Nucleus Cutoffs**](catalog/artificial-intelligence/ai-gen.md#recvw24opqbvq8) · `recvw24OpQBvQ8` · ▶ PLAY VIDEO
+13. [**Prompt Structure and Role Separation: Keep Roles Distinct**](catalog/artificial-intelligence/ai-gen.md#recvw24pwwhy6z) · `recvw24PwwhY6Z` · ▶ PLAY VIDEO
+14. [**Few-Shot In-Context Learning: Infer from Examples**](catalog/artificial-intelligence/ai-gen.md#recvw24qglkzoo) · `recvw24QGLkzOo` · ▶ PLAY VIDEO
+15. [**Retrieval-Augmented Generation Pipeline: Ground the Answer**](catalog/artificial-intelligence/ai-gen.md#recvw24t2zgqi9) · `recvw24T2zGQI9` · ▶ PLAY VIDEO
+16. [**Chunking and Overlap for Retrieval: Preserve Boundaries**](catalog/artificial-intelligence/ai-gen.md#recvw24u8nixtd) · `recvw24U8nIXtd` · ▶ PLAY VIDEO
+17. [**Embedding-Based Semantic Search: Find Semantic Neighbors**](catalog/artificial-intelligence/ai-gen.md#recvw24vlk0v3k) · `recvw24Vlk0V3K` · ▶ PLAY VIDEO
+18. [**Reranking Retrieved Passages: Reorder the Shortlist**](catalog/artificial-intelligence/ai-gen.md#recvw24wq3zopq) · `recvw24Wq3ZOpq` · ▶ PLAY VIDEO
+19. [**Transformer Decoder Causal Mask: Block Future Tokens**](catalog/artificial-intelligence/ai-gen.md#recvw24xspdsin) · `recvw24XspdsIn` · ▶ PLAY VIDEO
+20. [**KV Cache for Autoregressive Generation: Compute One New Pair**](catalog/artificial-intelligence/ai-gen.md#recvw24ybawnkx) · `recvw24YBaWNKx` · ▶ PLAY VIDEO
+21. [**Tool Calling with Structured Arguments: Validate Arguments**](catalog/artificial-intelligence/ai-gen.md#recvw24zmozkis) · `recvw24ZMOZKIS` · ▶ PLAY VIDEO
+22. [**Fine-Tuning with LoRA Adapters: Train a Low-Rank Update**](catalog/artificial-intelligence/ai-gen.md#recvw250zqatah) · `recvw250ZqaTah` · ▶ PLAY VIDEO
+23. [**LLM Hallucination Evaluation: Check Claims against Evidence**](catalog/artificial-intelligence/ai-gen.md#recvw2525onwzm) · `recvw2525onwzm` · ▶ PLAY VIDEO
 
 ### [AI Agent Systems](catalog/artificial-intelligence/ai-agent-systems.md)
 
