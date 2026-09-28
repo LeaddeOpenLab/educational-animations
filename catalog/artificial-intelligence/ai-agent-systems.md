@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 8
+**Knowledge points:** 9
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -106,6 +106,19 @@ https://github.com/user-attachments/assets/df47bbc2-ca3f-49e2-a735-28f4cbf2fe6f
 `recvw25bHkLHf9` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/1dee7d6d-581e-407e-a057-3b696bd34e02
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25crpco1w"></a>
+## Human Approval Checkpoint: Review Before Sending Email
+
+`recvw25cRpcO1W` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/67963ec3-2268-43d6-aea8-ed03b471e045
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
