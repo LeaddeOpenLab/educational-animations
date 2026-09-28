@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **388 English prompts** across **17 disciplines** and **39 courses**.
+> An open educational animation and AI prompt library with **389 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>6 courses · 60 prompts</sub>
+  <sub>7 courses · 61 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**6 courses · 60 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 61 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -304,6 +304,15 @@
   <a href="catalog/artificial-intelligence/ai-gen.md"><strong>Generative Artificial Intelligence</strong></a><br>
   <sub>8 prompts · Course notes (no required textbook)</sub>
 </td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+  <a href="catalog/artificial-intelligence/ai-agent-systems.md"><img src="assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg" width="100%" alt="AI Agent Systems course cover"></a><br>
+  <a href="catalog/artificial-intelligence/ai-agent-systems.md"><strong>AI Agent Systems</strong></a><br>
+  <sub>1 prompts · Course notes</sub>
+</td>
+<td></td>
+<td></td>
 </tr>
 </table>
 
@@ -408,6 +417,14 @@
 6. [**Diffusion Forward Noising**](catalog/artificial-intelligence/ai-gen.md#c30-a006) · `C30-A006` · ▶ PLAY VIDEO
 7. [**Diffusion Reverse Denoising**](catalog/artificial-intelligence/ai-gen.md#c30-a007) · `C30-A007` · ▶ PLAY VIDEO
 8. [**Classifier-Free Guidance**](catalog/artificial-intelligence/ai-gen.md#c30-a008) · `C30-A008` · ▶ PLAY VIDEO
+
+### [AI Agent Systems](catalog/artificial-intelligence/ai-agent-systems.md)
+
+**TEXTBOOK · Course notes** &nbsp; [Open course page](catalog/artificial-intelligence/ai-agent-systems.md)
+
+#### Knowledge points
+
+1. [**Agent Observe-Plan-Act Loop: Adapts a Trip to Rain**](catalog/artificial-intelligence/ai-agent-systems.md#recvw253eevb3x) · `recvw253eEvb3X` · ▶ PLAY VIDEO
 
 ---
 
@@ -1108,12 +1125,12 @@
 <table>
 <tr>
 <td width="33%" valign="top">
-  <a href="catalog/embedded-systems/es-mcu.md"><img src="assets/course-covers/es-mcu.svg" width="100%" alt="Microcontroller Fundamentals course cover"></a><br>
+  <a href="catalog/embedded-systems/es-mcu.md"><img src="assets/video-covers/embedded-systems/microcontroller-fundamentals/interrupt-entry-and-return.jpg" width="100%" alt="Microcontroller Fundamentals course cover"></a><br>
   <a href="catalog/embedded-systems/es-mcu.md"><strong>Microcontroller Fundamentals</strong></a><br>
   <sub>4 prompts · Course notes (no required textbook)</sub>
 </td>
 <td width="33%" valign="top">
-  <a href="catalog/embedded-systems/es-rtos.md"><img src="assets/course-covers/es-rtos.svg" width="100%" alt="Real-Time Operating Systems course cover"></a><br>
+  <a href="catalog/embedded-systems/es-rtos.md"><img src="assets/video-covers/embedded-systems/real-time-operating-systems/task-state-transitions.jpg" width="100%" alt="Real-Time Operating Systems course cover"></a><br>
   <a href="catalog/embedded-systems/es-rtos.md"><strong>Real-Time Operating Systems</strong></a><br>
   <sub>4 prompts · Course notes (no required textbook)</sub>
 </td>
@@ -1153,12 +1170,12 @@
 <table>
 <tr>
 <td width="33%" valign="top">
-  <a href="catalog/digital-electronics/de-dld.md"><img src="assets/course-covers/de-dld.svg" width="100%" alt="Digital Logic Design course cover"></a><br>
+  <a href="catalog/digital-electronics/de-dld.md"><img src="assets/video-covers/digital-electronics/digital-logic-design/combinational-propagation-delay.jpg" width="100%" alt="Digital Logic Design course cover"></a><br>
   <a href="catalog/digital-electronics/de-dld.md"><strong>Digital Logic Design</strong></a><br>
   <sub>5 prompts · Digital Design and Computer Architecture (Harris and Harris)</sub>
 </td>
 <td width="33%" valign="top">
-  <a href="catalog/digital-electronics/de-fpga.md"><img src="assets/course-covers/de-fpga.svg" width="100%" alt="FPGA Fundamentals course cover"></a><br>
+  <a href="catalog/digital-electronics/de-fpga.md"><img src="assets/video-covers/digital-electronics/fpga-fundamentals/setup-and-hold-time.jpg" width="100%" alt="FPGA Fundamentals course cover"></a><br>
   <a href="catalog/digital-electronics/de-fpga.md"><strong>FPGA Fundamentals</strong></a><br>
   <sub>4 prompts · Course notes (no required textbook)</sub>
 </td>

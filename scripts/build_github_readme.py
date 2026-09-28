@@ -31,8 +31,9 @@ def course_card(course, prompts):
     first = prompts[0]
     course_code = first["tags"][1].lower()
     page = course_page(first)
+    cover = first.get("cover", f"assets/course-covers/{course_code}.svg")
     return f'''<td width="33%" valign="top">
-  <a href="{page}"><img src="assets/course-covers/{course_code}.svg" width="100%" alt="{html.escape(course)} course cover"></a><br>
+  <a href="{page}"><img src="{cover}" width="100%" alt="{html.escape(course)} course cover"></a><br>
   <a href="{page}"><strong>{html.escape(course)}</strong></a><br>
   <sub>{len(prompts)} prompts · {html.escape(first['textbook'])}</sub>
 </td>'''
