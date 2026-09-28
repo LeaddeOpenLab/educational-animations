@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 9
+**Knowledge points:** 10
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -119,6 +119,19 @@ https://github.com/user-attachments/assets/1dee7d6d-581e-407e-a057-3b696bd34e02
 `recvw25cRpcO1W` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/67963ec3-2268-43d6-aea8-ed03b471e045
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25dwamuw5"></a>
+## Agent Runtime State Machine: Pause a Slow Search
+
+`recvw25dWAMuw5` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/feae2d0f-9df4-4ad0-baaa-5beb1c1742e9
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
