@@ -6106,5 +6106,24 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: Tool Registry and Tool Selection. Explain that tools are declared with capabilities before an agent selects one, then match a travel request to the registered tools whose descriptions satisfy its intent.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
     "player": "https://github.com/user-attachments/assets/07138386-6c53-4134-8daf-e696d6cbd468"
+  },
+  {
+    "id": "recvw255ufAgzt",
+    "record_id": "recvw255ufAgzt",
+    "subject": "Artificial Intelligence",
+    "course": "AI Agent Systems",
+    "textbook": "Course notes",
+    "name": "Function Calling Schema Validation",
+    "title": "Function Calling Schema Validation: Repair Missing Fields",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.mp4",
+    "cover": "assets/covers/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.jpg",
+    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.md",
+    "tags": [
+      "recvw255ufAgzt",
+      "AI-AGENT-SYSTEMS"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: Function Calling Schema Validation. Trace a structured function call from argument generation through schema checks, showing how required fields and types reject malformed input before execution.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/44252c7f-5c50-4846-9c49-c9b56c83d890"
   }
 ]

@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 2
+**Knowledge points:** 3
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -28,6 +28,19 @@ https://github.com/user-attachments/assets/9205a67a-3131-4f60-80c3-ccd202f945c0
 `recvw254kdt8Gm` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/07138386-6c53-4134-8daf-e696d6cbd468
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw255ufagzt"></a>
+## Function Calling Schema Validation: Repair Missing Fields
+
+`recvw255ufAgzt` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/44252c7f-5c50-4846-9c49-c9b56c83d890
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
