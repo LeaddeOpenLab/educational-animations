@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **401 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **402 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 73 prompts</sub>
+  <sub>7 courses · 74 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 73 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 74 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -309,7 +309,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-agent-systems.md"><img src="assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg" width="100%" alt="AI Agent Systems course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-agent-systems.md"><strong>AI Agent Systems</strong></a><br>
-  <sub>13 prompts · Course notes</sub>
+  <sub>14 prompts · Course notes</sub>
 </td>
 <td></td>
 <td></td>
@@ -437,6 +437,7 @@
 11. [**Retry and Backoff for Tool Failures: Respect a Rate Limit**](catalog/artificial-intelligence/ai-agent-systems.md#recvw25f2uabyl) · `recvw25f2UAbYl` · ▶ PLAY VIDEO
 12. [**Idempotent Tool Execution: Replay One Ticket Safely**](catalog/artificial-intelligence/ai-agent-systems.md#recvw25gldkhri) · `recvw25glDKhRI` · ▶ PLAY VIDEO
 13. [**Sandboxing Untrusted Tool Output: Ignore Page Commands**](catalog/artificial-intelligence/ai-agent-systems.md#recvw25ht8600c) · `recvw25ht8600c` · ▶ PLAY VIDEO
+14. [**Agent Trace and Step-Level Evaluation: Find a Route Delay**](catalog/artificial-intelligence/ai-agent-systems.md#recvw25izm48sg) · `recvw25izM48sG` · ▶ PLAY VIDEO
 
 ---
 
