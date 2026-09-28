@@ -6201,5 +6201,24 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: Planning with a Shared State. Explain how agents coordinate through a shared task state that records goals, ownership, status, and evidence, preventing work from drifting across participants.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
     "player": "https://github.com/user-attachments/assets/df47bbc2-ca3f-49e2-a735-28f4cbf2fe6f"
+  },
+  {
+    "id": "recvw25bHkLHf9",
+    "record_id": "recvw25bHkLHf9",
+    "subject": "Artificial Intelligence",
+    "course": "AI Agent Systems",
+    "textbook": "Course notes",
+    "name": "Multi-Agent Handoff Protocol",
+    "title": "Multi-Agent Handoff Protocol: Delegate Train Research",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.mp4",
+    "cover": "assets/covers/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.jpg",
+    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.md",
+    "tags": [
+      "recvw25bHkLHf9",
+      "AI-AGENT-SYSTEMS"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: Multi-Agent Handoff Protocol. Follow a task as one agent transfers ownership, context, and evidence to another, then receives a result through an explicit return path.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/1dee7d6d-581e-407e-a057-3b696bd34e02"
   }
 ]

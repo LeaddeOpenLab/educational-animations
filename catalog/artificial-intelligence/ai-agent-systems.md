@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 7
+**Knowledge points:** 8
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -93,6 +93,19 @@ https://github.com/user-attachments/assets/5c851f88-f747-4842-b70b-d07a8b1c2fd0
 `recvw25aen0hew` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/df47bbc2-ca3f-49e2-a735-28f4cbf2fe6f
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25bhklhf9"></a>
+## Multi-Agent Handoff Protocol: Delegate Train Research
+
+`recvw25bHkLHf9` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/1dee7d6d-581e-407e-a057-3b696bd34e02
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
