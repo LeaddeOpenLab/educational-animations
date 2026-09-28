@@ -6385,5 +6385,245 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Training and Evaluation Modes: Training intentionally injects stochastic regularization and updates normalization statistics; evaluation removes stochastic masks and consumes the stored estimates.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — The same activation stream forks into train and eval lanes, then the masks disappear and batch statistics settle into running averages. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
     "player": "https://github.com/user-attachments/assets/b44af211-1815-4a1a-b1a4-cc36573dfcfe"
+  },
+  {
+    "id": "C26-A011",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "PyTorch Tensor Shape and Broadcasting: Align Trailing Axes",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/pytorch-tensor-shape-and-broadcasting.mp4",
+    "tags": [
+      "C26-A011",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about PyTorch Tensor Shape and Broadcasting: Broadcasting compares dimensions from the right, accepts equal sizes or a singleton, then logically expands the singleton without copying the source values.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Dimension columns align from the trailing edge, singleton tiles fan across the missing extent, and an incompatible pair stops at the first mismatch. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/b759ab96-2b18-4d7a-b489-61c21fe73916"
+  },
+  {
+    "id": "C26-A012",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Autograd Computation Graph: Trace Gradients Backward",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/autograd-computation-graph.mp4",
+    "tags": [
+      "C26-A012",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Autograd Computation Graph: Autograd records tensor operations as a directed computation graph, evaluates values forward, then applies local derivatives backward from a scalar objective.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Inputs flow through multiply and add nodes into a loss; only after the forward value exists do gradient signals travel in reverse. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/8e90352d-5f44-4827-af98-73dea2a96420"
+  },
+  {
+    "id": "C26-A013",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Gradient Accumulation: Sum Before One Update",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/gradient-accumulation.mp4",
+    "tags": [
+      "C26-A013",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Gradient Accumulation: Gradient accumulation sums or averages several micro-batch contributions before a single optimizer update, trading compute cadence for a larger effective batch without holding all examples in memory.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Four distinct mini-batches deposit partial gradients into one accumulator; only after the last deposit does one parameter update fire. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/272bbe9e-d4ed-4eb6-862a-79fe0feaa842"
+  },
+  {
+    "id": "C26-A014",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Zeroing Gradients Before Backpropagation: Clear Before Sum",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/zeroing-gradients-before-backpropagation.mp4",
+    "tags": [
+      "C26-A014",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Zeroing Gradients Before Backpropagation: Autograd adds into parameter gradient buffers by default, so a fresh training step must clear the previous step before backward unless deliberate accumulation is intended.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Old gradient bars remain in the buffer, new bars stack on top, then a zeroing boundary empties the slots before the next backward pass. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/6926ddf7-2063-4b4f-a36b-de6a3885d631"
+  },
+  {
+    "id": "C26-A015",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Mini-Batch Data Loading: Shuffle and Group Samples",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/mini-batch-data-loading.mp4",
+    "tags": [
+      "C26-A015",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Mini-Batch Data Loading: Mini-batching partitions one shuffled epoch into bounded groups; the batch size controls memory use, update frequency, and the noise of each gradient estimate.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — An index ribbon shuffles, divides into four six-example groups, and feeds those groups to consecutive parameter updates. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/3264f24e-e8af-4b58-92bb-54384cb58cbe"
+  },
+  {
+    "id": "C26-A016",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Dataset and DataLoader Pipeline: Index to Batch",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/dataset-and-dataloader-pipeline.mp4",
+    "tags": [
+      "C26-A016",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Dataset and DataLoader Pipeline: Dataset defines how one indexed example is retrieved; DataLoader combines sampling, batching, parallel fetching, and collation into an iterable training stream.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Indices leave the sampler, multiple workers fetch separate examples, a collator stacks them into a batch, and the iterator yields that batch to the model. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/5e78e30c-58ac-49bb-a7ae-ce619aaaad82"
+  },
+  {
+    "id": "C26-A017",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Device Placement Across CPU and GPU: Move Data and Model",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/device-placement-across-cpu-and-gpu.mp4",
+    "tags": [
+      "C26-A017",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Device Placement Across CPU and GPU: A model operation requires compatible tensor placement; moving batches to an accelerator only helps when transfer cost is amortized by useful device computation.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Inputs begin on host memory, cross an explicit transfer bridge to the accelerator, meet model parameters there, and return only when results are needed on the host. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/c7c42a7a-1138-434c-8040-189f9efdf208"
+  },
+  {
+    "id": "C26-A018",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Loss Reduction Across a Batch: Sum or Average",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/loss-reduction-across-a-batch.mp4",
+    "tags": [
+      "C26-A018",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Loss Reduction Across a Batch: Reduction chooses how per-example losses become one scalar and scales gradients accordingly; averaging batches of unequal size must weight each example consistently.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Individual loss tiles flow into a sum or mean funnel, while unequal batch groups reveal why averaging the batch means can distort the pooled result. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/36b455f2-677a-4924-8cd5-ab4380ccad61"
+  },
+  {
+    "id": "C26-A019",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Optimizer Step and Learning-Rate Schedule: Update Then Decay",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/optimizer-step-and-learning-rate-schedule.mp4",
+    "tags": [
+      "C26-A019",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Optimizer Step and Learning-Rate Schedule: The optimizer combines stored gradients with its state and learning rate to update parameters; a scheduler changes the scale applied to future updates over training time.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — A parameter point moves opposite its gradient, while a separate learning-rate curve warms up, peaks, and decays across optimizer steps. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/56e5b844-a245-4b3f-a49d-ad4536f212b6"
+  },
+  {
+    "id": "C26-A020",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Gradient Clipping: Cap the Global Norm",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/gradient-clipping.mp4",
+    "tags": [
+      "C26-A020",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Gradient Clipping: Global norm clipping rescales the entire gradient vector only when its norm exceeds a threshold, limiting update magnitude while preserving direction.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — A long two-dimensional gradient vector is projected back onto the threshold-radius circle without rotating its direction. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/f15983b0-708a-4737-94fb-0f871c06d4f7"
+  },
+  {
+    "id": "C26-A021",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Mixed-Precision Training: Scale Before Unscaling",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/mixed-precision-training.mp4",
+    "tags": [
+      "C26-A021",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Mixed-Precision Training: Mixed precision uses lower-precision arithmetic for suitable operations while retaining stable accumulation where needed; loss scaling protects small FP16 gradients from underflow.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Autocast selects operation precision, a scaler magnifies the loss before backward, then unscales gradients before clipping and the optimizer step. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/1c51d944-a2b9-4d18-8cac-15ad69f87005"
+  },
+  {
+    "id": "C26-A022",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Checkpoint Save and Restore: Resume Training State",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/checkpoint-save-and-restore.mp4",
+    "tags": [
+      "C26-A022",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Checkpoint Save and Restore: A checkpoint is a snapshot of the state required for a chosen recovery goal; model weights alone support inference, while faithful training resume also needs optimizer and progress state.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Live training state branches into a serialized checkpoint, then reloads into a freshly constructed model and optimizer before the next step. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/5abcfa0e-9f3c-4e15-8d4d-e59da52c6ec4"
+  },
+  {
+    "id": "C26-A023",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Transfer Learning with a Frozen Backbone: Freeze, Then Tune",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/transfer-learning-with-a-frozen-backbone.mp4",
+    "tags": [
+      "C26-A023",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Transfer Learning with a Frozen Backbone: Transfer learning reuses a pretrained representation, first trains a task-specific head with the backbone frozen, then optionally unfreezes selected layers for careful fine-tuning.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Images pass through locked feature blocks into a newly initialized head; gradient arrows stop at the frozen boundary, then selectively extend backward during fine-tuning. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/2477e3f3-70ee-4cad-885c-7cb6a90bc589"
+  },
+  {
+    "id": "C26-A024",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Reproducible Training with Random Seeds: Seed Every Source",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/reproducible-training-with-random-seeds.mp4",
+    "tags": [
+      "C26-A024",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Reproducible Training with Random Seeds: A seed initializes pseudorandom streams but reproducibility also requires controlling independent libraries, data-loader workers, checkpointed RNG state, and nondeterministic kernels.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — One seed branches into model initialization, data order, augmentation, and worker streams; repeated runs align only when every branch is controlled. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/bdf60fed-6e51-4b78-a36c-4c24ace5f843"
+  },
+  {
+    "id": "C26-A025",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "PyTorch Validation Loop and Metric Tracking: Track Metrics",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/pytorch-validation-loop-and-metric-tracking.mp4",
+    "tags": [
+      "C26-A025",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about PyTorch Validation Loop and Metric Tracking: Validation switches modules to evaluation behavior, disables gradient recording separately, accumulates metrics across every example, and uses the result for model selection rather than parameter updates.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — Validation batches flow through a stable forward pass, contribute correct and total counts to a shared meter, then produce one dataset-level metric and checkpoint decision. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/ffea3dd2-65be-433d-a3b2-40d3bb7e42da"
   }
 ]

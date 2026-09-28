@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **405 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **420 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 77 prompts</sub>
+  <sub>7 courses · 92 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 77 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 92 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -280,7 +280,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-dl.md"><img src="assets/course-covers/ai-dl.svg" width="100%" alt="Deep Learning course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-dl.md"><strong>Deep Learning</strong></a><br>
-  <sub>10 prompts · Deep Learning (Goodfellow et al.)</sub>
+  <sub>25 prompts · Deep Learning (Goodfellow et al.)</sub>
 </td>
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-nlp.md"><img src="assets/course-covers/ai-nlp.svg" width="100%" alt="Natural Language Processing course cover"></a><br>
@@ -359,6 +359,21 @@
 8. [**Attention Mechanism**](catalog/artificial-intelligence/ai-dl.md#c26-a008) · `C26-A008` · ▶ PLAY VIDEO
 9. [**Data Loading Optimization**](catalog/artificial-intelligence/ai-dl.md#c26-a009) · `C26-A009` · ▶ PLAY VIDEO
 10. [**Training and Evaluation Modes: Switch Modes Safely**](catalog/artificial-intelligence/ai-dl.md#c26-a010) · `C26-A010` · ▶ PLAY VIDEO
+11. [**PyTorch Tensor Shape and Broadcasting: Align Trailing Axes**](catalog/artificial-intelligence/ai-dl.md#c26-a011) · `C26-A011` · ▶ PLAY VIDEO
+12. [**Autograd Computation Graph: Trace Gradients Backward**](catalog/artificial-intelligence/ai-dl.md#c26-a012) · `C26-A012` · ▶ PLAY VIDEO
+13. [**Gradient Accumulation: Sum Before One Update**](catalog/artificial-intelligence/ai-dl.md#c26-a013) · `C26-A013` · ▶ PLAY VIDEO
+14. [**Zeroing Gradients Before Backpropagation: Clear Before Sum**](catalog/artificial-intelligence/ai-dl.md#c26-a014) · `C26-A014` · ▶ PLAY VIDEO
+15. [**Mini-Batch Data Loading: Shuffle and Group Samples**](catalog/artificial-intelligence/ai-dl.md#c26-a015) · `C26-A015` · ▶ PLAY VIDEO
+16. [**Dataset and DataLoader Pipeline: Index to Batch**](catalog/artificial-intelligence/ai-dl.md#c26-a016) · `C26-A016` · ▶ PLAY VIDEO
+17. [**Device Placement Across CPU and GPU: Move Data and Model**](catalog/artificial-intelligence/ai-dl.md#c26-a017) · `C26-A017` · ▶ PLAY VIDEO
+18. [**Loss Reduction Across a Batch: Sum or Average**](catalog/artificial-intelligence/ai-dl.md#c26-a018) · `C26-A018` · ▶ PLAY VIDEO
+19. [**Optimizer Step and Learning-Rate Schedule: Update Then Decay**](catalog/artificial-intelligence/ai-dl.md#c26-a019) · `C26-A019` · ▶ PLAY VIDEO
+20. [**Gradient Clipping: Cap the Global Norm**](catalog/artificial-intelligence/ai-dl.md#c26-a020) · `C26-A020` · ▶ PLAY VIDEO
+21. [**Mixed-Precision Training: Scale Before Unscaling**](catalog/artificial-intelligence/ai-dl.md#c26-a021) · `C26-A021` · ▶ PLAY VIDEO
+22. [**Checkpoint Save and Restore: Resume Training State**](catalog/artificial-intelligence/ai-dl.md#c26-a022) · `C26-A022` · ▶ PLAY VIDEO
+23. [**Transfer Learning with a Frozen Backbone: Freeze, Then Tune**](catalog/artificial-intelligence/ai-dl.md#c26-a023) · `C26-A023` · ▶ PLAY VIDEO
+24. [**Reproducible Training with Random Seeds: Seed Every Source**](catalog/artificial-intelligence/ai-dl.md#c26-a024) · `C26-A024` · ▶ PLAY VIDEO
+25. [**PyTorch Validation Loop and Metric Tracking: Track Metrics**](catalog/artificial-intelligence/ai-dl.md#c26-a025) · `C26-A025` · ▶ PLAY VIDEO
 
 ### [Natural Language Processing](catalog/artificial-intelligence/ai-nlp.md)
 
