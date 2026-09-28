@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **392 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **393 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 64 prompts</sub>
+  <sub>7 courses · 65 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 64 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 65 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -309,7 +309,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-agent-systems.md"><img src="assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg" width="100%" alt="AI Agent Systems course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-agent-systems.md"><strong>AI Agent Systems</strong></a><br>
-  <sub>4 prompts · Course notes</sub>
+  <sub>5 prompts · Course notes</sub>
 </td>
 <td></td>
 <td></td>
@@ -428,6 +428,7 @@
 2. [**Tool Registry and Tool Selection: Schedule a Review**](catalog/artificial-intelligence/ai-agent-systems.md#recvw254kdt8gm) · `recvw254kdt8Gm` · ▶ PLAY VIDEO
 3. [**Function Calling Schema Validation: Repair Missing Fields**](catalog/artificial-intelligence/ai-agent-systems.md#recvw255ufagzt) · `recvw255ufAgzt` · ▶ PLAY VIDEO
 4. [**ReAct Reasoning and Acting Cycle: Grounded Lookup**](catalog/artificial-intelligence/ai-agent-systems.md#recvw256znx1eb) · `recvw256zNx1Eb` · ▶ PLAY VIDEO
+5. [**Task Decomposition into Subgoals: Rebuild a Brief**](catalog/artificial-intelligence/ai-agent-systems.md#recvw257dvn3qu) · `recvw257DvN3QU` · ▶ PLAY VIDEO
 
 ---
 

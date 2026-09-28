@@ -6144,5 +6144,24 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: ReAct Reasoning and Acting Cycle. Distinguish reasoning, tool action, and observation in a ReAct cycle, and show how returned evidence grounds the next reasoning step.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
     "player": "https://github.com/user-attachments/assets/0e6eb41a-6140-48fd-9ec3-0ac050199fc2"
+  },
+  {
+    "id": "recvw257DvN3QU",
+    "record_id": "recvw257DvN3QU",
+    "subject": "Artificial Intelligence",
+    "course": "AI Agent Systems",
+    "textbook": "Course notes",
+    "name": "Task Decomposition into Subgoals",
+    "title": "Task Decomposition into Subgoals: Rebuild a Brief",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.mp4",
+    "cover": "assets/covers/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.jpg",
+    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.md",
+    "tags": [
+      "recvw257DvN3QU",
+      "AI-AGENT-SYSTEMS"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: Task Decomposition into Subgoals. Decompose a broad task into ordered subgoals with dependencies, then recompose their completed results into the original goal.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/c15dfca4-33ff-42c2-a0a5-a76cf4141aa8"
   }
 ]
