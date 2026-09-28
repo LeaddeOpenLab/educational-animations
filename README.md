@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **394 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **395 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 66 prompts</sub>
+  <sub>7 courses · 67 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 66 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 67 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -309,7 +309,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-agent-systems.md"><img src="assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg" width="100%" alt="AI Agent Systems course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-agent-systems.md"><strong>AI Agent Systems</strong></a><br>
-  <sub>6 prompts · Course notes</sub>
+  <sub>7 prompts · Course notes</sub>
 </td>
 <td></td>
 <td></td>
@@ -430,6 +430,7 @@
 4. [**ReAct Reasoning and Acting Cycle: Grounded Lookup**](catalog/artificial-intelligence/ai-agent-systems.md#recvw256znx1eb) · `recvw256zNx1Eb` · ▶ PLAY VIDEO
 5. [**Task Decomposition into Subgoals: Rebuild a Brief**](catalog/artificial-intelligence/ai-agent-systems.md#recvw257dvn3qu) · `recvw257DvN3QU` · ▶ PLAY VIDEO
 6. [**Short-Term and Long-Term Agent Memory: Plan a Route**](catalog/artificial-intelligence/ai-agent-systems.md#recvw258jlr6ax) · `recvw258JLr6AX` · ▶ PLAY VIDEO
+7. [**Planning with a Shared State: Coordinate Two Agents**](catalog/artificial-intelligence/ai-agent-systems.md#recvw25aen0hew) · `recvw25aen0hew` · ▶ PLAY VIDEO
 
 ---
 

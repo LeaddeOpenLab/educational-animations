@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 6
+**Knowledge points:** 7
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -80,6 +80,19 @@ https://github.com/user-attachments/assets/c15dfca4-33ff-42c2-a0a5-a76cf4141aa8
 `recvw258JLr6AX` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/5c851f88-f747-4842-b70b-d07a8b1c2fd0
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25aen0hew"></a>
+## Planning with a Shared State: Coordinate Two Agents
+
+`recvw25aen0hew` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/df47bbc2-ca3f-49e2-a735-28f4cbf2fe6f
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
