@@ -6369,5 +6369,21 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university AI Agent Systems course: Termination and Loop Detection. Show that an agent should stop when its goal is reached, its step budget is exhausted, or a state repeats, avoiding endless loops.\n\nDark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.",
     "player": "https://github.com/user-attachments/assets/8c040851-0f40-407c-84bb-28f7fd9caa98"
+  },
+  {
+    "id": "C26-A010",
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "textbook": "Deep Learning (Goodfellow et al.)",
+    "title": "Training and Evaluation Modes: Switch Modes Safely",
+    "status": "ready",
+    "video": "assets/videos/artificial-intelligence/deep-learning/training-and-evaluation-modes.mp4",
+    "tags": [
+      "C26-A010",
+      "Deep Learning",
+      "P0"
+    ],
+    "prompt": "A 30-second silent English concept animation for a university Deep Learning course about Training and Evaluation Modes: Training intentionally injects stochastic regularization and updates normalization statistics; evaluation removes stochastic masks and consumes the stored estimates.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#009e73` on the main entity; accent `#b87f00` on the key quantity; result `#0072b2` on the conclusion; warn `#d55e00` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Use stagger-in and draw-on to enact this topic's visual argument — The same activation stream forks into train and eval lanes, then the masks disappear and batch statistics settle into running averages. — with 12f fades, offsets stepping 8-14f, and nothing landing in a scene's last 25 frames.",
+    "player": "https://github.com/user-attachments/assets/b44af211-1815-4a1a-b1a4-cc36573dfcfe"
   }
 ]

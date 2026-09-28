@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **404 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **405 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -16,7 +16,7 @@
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
-  <sub>7 courses · 76 prompts</sub>
+  <sub>7 courses · 77 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#mathematics"><img src="assets/subject-cards/mathematics.png" width="100%" alt="Mathematics subject card"></a><br>
@@ -268,7 +268,7 @@
 <a id="artificial-intelligence"></a>
 ## Artificial Intelligence
 
-**7 courses · 76 prompts** &nbsp; [Back to cards](#browse-the-library)
+**7 courses · 77 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -280,7 +280,7 @@
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-dl.md"><img src="assets/course-covers/ai-dl.svg" width="100%" alt="Deep Learning course cover"></a><br>
   <a href="catalog/artificial-intelligence/ai-dl.md"><strong>Deep Learning</strong></a><br>
-  <sub>9 prompts · Deep Learning (Goodfellow et al.)</sub>
+  <sub>10 prompts · Deep Learning (Goodfellow et al.)</sub>
 </td>
 <td width="33%" valign="top">
   <a href="catalog/artificial-intelligence/ai-nlp.md"><img src="assets/course-covers/ai-nlp.svg" width="100%" alt="Natural Language Processing course cover"></a><br>
@@ -358,6 +358,7 @@
 7. [**Vanishing Gradients in Recurrent Neural Networks**](catalog/artificial-intelligence/ai-dl.md#c26-a007) · `C26-A007` · ▶ PLAY VIDEO
 8. [**Attention Mechanism**](catalog/artificial-intelligence/ai-dl.md#c26-a008) · `C26-A008` · ▶ PLAY VIDEO
 9. [**Data Loading Optimization**](catalog/artificial-intelligence/ai-dl.md#c26-a009) · `C26-A009` · ▶ PLAY VIDEO
+10. [**Training and Evaluation Modes: Switch Modes Safely**](catalog/artificial-intelligence/ai-dl.md#c26-a010) · `C26-A010` · ▶ PLAY VIDEO
 
 ### [Natural Language Processing](catalog/artificial-intelligence/ai-nlp.md)
 

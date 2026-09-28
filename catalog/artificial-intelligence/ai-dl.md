@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Deep Learning (Goodfellow et al.)  
-**Knowledge points:** 9
+**Knowledge points:** 10
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -119,6 +119,19 @@ https://github.com/user-attachments/assets/b35ebc51-abcd-4c3e-9479-316f82f007a8
 `C26-A009` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/59318ad9-3a9d-4578-a2d9-e5aef6dbdf42
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#deep-learning)
+
+---
+
+<a id="c26-a010"></a>
+## Training and Evaluation Modes: Switch Modes Safely
+
+`C26-A010` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/b44af211-1815-4a1a-b1a4-cc36573dfcfe
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
