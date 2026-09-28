@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 3
+**Knowledge points:** 4
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -41,6 +41,19 @@ https://github.com/user-attachments/assets/07138386-6c53-4134-8daf-e696d6cbd468
 `recvw255ufAgzt` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/44252c7f-5c50-4846-9c49-c9b56c83d890
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw256znx1eb"></a>
+## ReAct Reasoning and Acting Cycle: Grounded Lookup
+
+`recvw256zNx1Eb` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/0e6eb41a-6140-48fd-9ec3-0ac050199fc2
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
