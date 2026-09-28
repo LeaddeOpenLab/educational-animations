@@ -3,7 +3,7 @@
 [← Back to Artificial Intelligence](../../README.md#artificial-intelligence)
 
 **Textbook:** Course notes  
-**Knowledge points:** 10
+**Knowledge points:** 11
 
 > **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)
 
@@ -132,6 +132,19 @@ https://github.com/user-attachments/assets/67963ec3-2268-43d6-aea8-ed03b471e045
 `recvw25dWAMuw5` · **▶ Play video below**
 
 https://github.com/user-attachments/assets/feae2d0f-9df4-4ad0-baaa-5beb1c1742e9
+
+> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
+
+[Back to course top](#ai-agent-systems)
+
+---
+
+<a id="recvw25f2uabyl"></a>
+## Retry and Backoff for Tool Failures: Respect a Rate Limit
+
+`recvw25f2UAbYl` · **▶ Play video below**
+
+https://github.com/user-attachments/assets/a7d01f61-2a24-4630-92dc-b4d63534cab4
 
 > **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)
 
