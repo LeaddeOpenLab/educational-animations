@@ -1,0 +1,11 @@
+# SN2 Reaction: One Concerted Displacement
+
+Record: recvvJaLnaiGDy  
+Course: Organic Chemistry I  
+Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+
+```text
+Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘SN2 Reaction: One Concerted Displacement’. Learning objective: A nucleophile attacks opposite the leaving group while the leaving bond breaks. Use Cyanide displacing bromide at 2-bromobutane as the concrete example. 0–5.83333s: Draw asymmetric tetrahedral substrate and incoming carbon end of cyanide on opposite side. The nucleophile approaches opposite the C–Br bond. 5.83333–12.5s: Interpolate two opposing bond strengths with coordinated electron-pair arrows. C–Nu forms as C–Br breaks. This is one concerted step. 12.5–18.5s: Bracket transition arrangement with partial Nu–C–Br bonds and one energy peak. Both axial bonds are partial. The other three groups flatten. 18.5–24.8333s: Carry substituent endpoints to the opposite umbrella orientation as Br leaves. The product has inverted geometry. There is no carbocation intermediate. 24.8333–30s: Reveal product and compare clear versus crowded approach corridors. rate = k[substrate][Nu⁻]. Crowding slows backside access. Approach from backside, show both partial bonds in one transition state, invert remaining three substituents.
+
+Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
+```

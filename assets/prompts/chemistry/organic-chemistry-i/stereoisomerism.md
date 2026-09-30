@@ -1,0 +1,11 @@
+# Stereoisomerism: Mirror or Non-Mirror
+
+Record: recvvJaLn4CnlI  
+Course: Organic Chemistry I  
+Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+
+```text
+Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Stereoisomerism: Mirror or Non-Mirror’. Learning objective: Stereoisomers share connectivity but differ spatially; enantiomers are mirror pairs and diastereomers are not. Use Two stereocenters in 2,3-dichlorobutane as the concrete example. 0–5s: Draw CH3–CHCl–CHCl–CH3 with both centers highlighted. Two stereocenters can vary without changing the carbon chain. 5–11.5s: Display paired Fischer projections with both left-right substituent positions reflected. (R,R) and (S,S) are mirror images. They form an enantiomeric pair. 11.5–17.6667s: Hold upper center and swap lower H/Cl in one projection, show nonmirror comparison. (R,S) is not the mirror of (R,R). This pair is diastereomeric. 17.6667–24.5s: Highlight horizontal internal symmetry of same-side chlorines Fischer projection. Here, (R,S) is the meso form. Its mirror is superimposable. 24.5–30s: Show three configuration nodes linked by mirror and nonmirror relationships, with meso label. Same links, different arrangement. Mirror test separates the categories. Build connectivity, compare RR/SS mirror pair, introduce RS meso form, show nonmirror relationship.
+
+Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
+```

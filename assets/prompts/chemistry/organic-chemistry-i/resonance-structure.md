@@ -1,0 +1,11 @@
+# Resonance Structure: One Ion, Two Drawings
+
+Record: recvvJaLmNyaoH  
+Course: Organic Chemistry I  
+Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+
+```text
+Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Resonance Structure: One Ion, Two Drawings’. Learning objective: Acetate has two equivalent contributors but one delocalized electronic structure. Use Acetate ion as the concrete example. 0–5s: Draw acetate with left O double bonded and right O negatively charged. The atoms stay in place. Only electron placement changes. 5–11.3333s: Reveal both correctly directed curved electron arrows on the same fixed skeleton. A lone pair makes a π bond. The old π pair moves onto oxygen. 11.3333–17.3333s: Animate bond order and charge transfer without moving nuclei; place resonance symbol between contributors. The double bond changes sides. The total charge remains −1. 17.3333–24s: Replace contributor with two partial double bonds and equal partial negative labels. Both C–O bonds are equivalent. Charge is shared over both oxygens. 24–30s: Display contributors dimmed above a large hybrid; spotlight both equal bonds. Resonance is not an equilibrium. No atom shuttles between the drawings. Keep atom positions fixed while electron pairs and bond orders move; finish with equal partial bonds.
+
+Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
+```

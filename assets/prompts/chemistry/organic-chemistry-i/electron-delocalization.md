@@ -1,0 +1,11 @@
+# Electron Delocalization: Connected p Orbitals
+
+Record: recvvJaLmRntsl  
+Course: Organic Chemistry I  
+Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+
+```text
+Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Electron Delocalization: Connected p Orbitals’. Learning objective: Conjugation requires a continuous array of aligned p orbitals. Use 1,3-butadiene compared with an interrupted chain as the concrete example. 0–5.33333s: Draw the four-carbon butadiene chain with alternating bond orders. Two double bonds are separated by one single bond. 5.33333–11s: Reveal four upright p orbitals one after another above the carbon positions. The p orbitals must align. Sideways overlap joins neighbors. 11–18s: Add overlap bridges and highlight the central partial pi bond; electronic density sweeps all four sites. Electron density is delocalized. The central bond gains π character. 18–24.3333s: Swap to five-carbon interrupted chain with missing middle p orbital and split overlap regions. A saturated carbon breaks the chain of neighboring p orbitals. 24.3333–30s: Compare continuous and interrupted orbital arrays side by side with distinct connected spans. Alternating bonds are a useful clue. Orbital alignment is the mechanism. Build alternating double bonds, add four p orbitals, connect overlap, then insert an sp3 interruption.
+
+Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
+```

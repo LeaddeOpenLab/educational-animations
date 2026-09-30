@@ -1,0 +1,11 @@
+# Conformational Analysis: Rotate the C–C Bond
+
+Record: recvvJaLmTq2bv  
+Course: Organic Chemistry I  
+Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+
+```text
+Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Conformational Analysis: Rotate the C–C Bond’. Learning objective: Rotation around a sigma bond changes torsional energy without changing connectivity. Use Ethane viewed down C–C as the concrete example. 0–6s: Build a Newman view with separated front/back bonds at a small dihedral. Front carbon: blue bonds. Back carbon: amber bonds. 6–13s: Rotate back groups to zero and highlight three eclipsing alignments. The dihedral angle is zero. Torsional energy is relatively high. 13–20.8333s: Continuously rotate back bonds by 60 degrees while a small energy indicator drops. A 60° turn separates the bonds. Torsional energy falls. 20.8333–30s: Animate a full rotation beside a drawn three-peak energy-versus-angle curve with a moving marker. Three maxima occur in a full turn. No bond is broken. Rotate Newman back substituents from eclipsed to staggered; trace a periodic energy curve.
+
+Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
+```

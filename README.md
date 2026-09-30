@@ -767,20 +767,20 @@
 
 #### Knowledge points
 
-1. [**Resonance structure**](catalog/chemistry/5-12.md#c09-a001) · `C09-A001` · VIDEO COMING SOON
-2. [**Acidity and alkalinity**](catalog/chemistry/5-12.md#c09-a002) · `C09-A002` · VIDEO COMING SOON
-3. [**Electron delocalization**](catalog/chemistry/5-12.md#c09-a003) · `C09-A003` · VIDEO COMING SOON
-4. [**Conformational analysis**](catalog/chemistry/5-12.md#c09-a004) · `C09-A004` · VIDEO COMING SOON
-5. [**Cyclohexane flip**](catalog/chemistry/5-12.md#c09-a005) · `C09-A005` · VIDEO COMING SOON
-6. [**Chirality**](catalog/chemistry/5-12.md#c09-a006) · `C09-A006` · VIDEO COMING SOON
-7. [**R/S configuration**](catalog/chemistry/5-12.md#c09-a007) · `C09-A007` · VIDEO COMING SOON
-8. [**Stereoisomerism**](catalog/chemistry/5-12.md#c09-a008) · `C09-A008` · VIDEO COMING SOON
-9. [**SN1 response**](catalog/chemistry/5-12.md#c09-a009) · `C09-A009` · VIDEO COMING SOON
-10. [**SN2 reaction**](catalog/chemistry/5-12.md#c09-a010) · `C09-A010` · VIDEO COMING SOON
-11. [**E1 response**](catalog/chemistry/5-12.md#c09-a011) · `C09-A011` · VIDEO COMING SOON
-12. [**E2 reaction**](catalog/chemistry/5-12.md#c09-a012) · `C09-A012` · VIDEO COMING SOON
-13. [**Multi-step organic synthesis**](catalog/chemistry/5-12.md#c09-a013) · `C09-A013` · VIDEO COMING SOON
-14. [**Retrosynthetic analysis**](catalog/chemistry/5-12.md#c09-a014) · `C09-A014` · VIDEO COMING SOON
+1. [**Resonance Structure: One Ion, Two Drawings**](catalog/chemistry/5-12.md#c09-a001) · `C09-A001` · ▶ PLAY VIDEO
+2. [**Acidity and Alkalinity: Follow the Proton**](catalog/chemistry/5-12.md#c09-a002) · `C09-A002` · ▶ PLAY VIDEO
+3. [**Electron Delocalization: Connected p Orbitals**](catalog/chemistry/5-12.md#c09-a003) · `C09-A003` · ▶ PLAY VIDEO
+4. [**Conformational Analysis: Rotate the C–C Bond**](catalog/chemistry/5-12.md#c09-a004) · `C09-A004` · ▶ PLAY VIDEO
+5. [**Cyclohexane Flip: Axial Becomes Equatorial**](catalog/chemistry/5-12.md#c09-a005) · `C09-A005` · ▶ PLAY VIDEO
+6. [**Chirality: Test the Mirror Image**](catalog/chemistry/5-12.md#c09-a006) · `C09-A006` · ▶ PLAY VIDEO
+7. [**R/S Configuration: Rank, Orient, Trace**](catalog/chemistry/5-12.md#c09-a007) · `C09-A007` · ▶ PLAY VIDEO
+8. [**Stereoisomerism: Mirror or Non-Mirror**](catalog/chemistry/5-12.md#c09-a008) · `C09-A008` · ▶ PLAY VIDEO
+9. [**SN1 Response: A Carbocation Intermediate**](catalog/chemistry/5-12.md#c09-a009) · `C09-A009` · ▶ PLAY VIDEO
+10. [**SN2 Reaction: One Concerted Displacement**](catalog/chemistry/5-12.md#c09-a010) · `C09-A010` · ▶ PLAY VIDEO
+11. [**E1 Response: Leave, Then Lose a Proton**](catalog/chemistry/5-12.md#c09-a011) · `C09-A011` · ▶ PLAY VIDEO
+12. [**E2 Reaction: Align and Eliminate**](catalog/chemistry/5-12.md#c09-a012) · `C09-A012` · ▶ PLAY VIDEO
+13. [**Multi-Step Organic Synthesis: Link the Steps**](catalog/chemistry/5-12.md#c09-a013) · `C09-A013` · ▶ PLAY VIDEO
+14. [**Retrosynthetic Analysis: Work Backward**](catalog/chemistry/5-12.md#c09-a014) · `C09-A014` · ▶ PLAY VIDEO
 
 ---
 
