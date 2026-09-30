@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **435 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **436 English prompts** across **17 disciplines** and **40 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -26,7 +26,7 @@
 <tr>
 <td width="33%" valign="top">
   <a href="#mathematics-statistics"><img src="assets/subject-cards/mathematics-statistics.png" width="100%" alt="Mathematics &amp; Statistics subject card"></a><br>
-  <sub>1 courses · 11 prompts</sub>
+  <sub>1 courses · 12 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#physics"><img src="assets/subject-cards/physics.png" width="100%" alt="Physics subject card"></a><br>
@@ -647,14 +647,14 @@
 <a id="mathematics-statistics"></a>
 ## Mathematics & Statistics
 
-**1 courses · 11 prompts** &nbsp; [Back to cards](#browse-the-library)
+**1 courses · 12 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
 <td width="33%" valign="top">
   <a href="catalog/mathematics-statistics/6-041.md"><img src="assets/course-covers/6.041.svg" width="100%" alt="Applied Probability course cover"></a><br>
   <a href="catalog/mathematics-statistics/6-041.md"><strong>Applied Probability</strong></a><br>
-  <sub>11 prompts · Introduction to Probability, 2e (Bertsekas &amp; Tsitsiklis)</sub>
+  <sub>12 prompts · Introduction to Probability, 2e (Bertsekas &amp; Tsitsiklis)</sub>
 </td>
 <td></td>
 <td></td>
@@ -667,17 +667,18 @@
 
 #### Knowledge points
 
-1. [**Conditional probability**](catalog/mathematics-statistics/6-041.md#c06-a001) · `C06-A001` · VIDEO COMING SOON
-2. [**Bayesian formula**](catalog/mathematics-statistics/6-041.md#c06-a002) · `C06-A002` · VIDEO COMING SOON
-3. [**Random variable transformation**](catalog/mathematics-statistics/6-041.md#c06-a003) · `C06-A003` · VIDEO COMING SOON
-4. [**Joint distribution**](catalog/mathematics-statistics/6-041.md#c06-a004) · `C06-A004` · VIDEO COMING SOON
-5. [**Expectation**](catalog/mathematics-statistics/6-041.md#c06-a005) · `C06-A005` · VIDEO COMING SOON
-6. [**Variance**](catalog/mathematics-statistics/6-041.md#c06-a006) · `C06-A006` · VIDEO COMING SOON
-7. [**Covariance**](catalog/mathematics-statistics/6-041.md#c06-a007) · `C06-A007` · VIDEO COMING SOON
-8. [**Law of large numbers**](catalog/mathematics-statistics/6-041.md#c06-a008) · `C06-A008` · VIDEO COMING SOON
-9. [**Central limit theorem**](catalog/mathematics-statistics/6-041.md#c06-a009) · `C06-A009` · VIDEO COMING SOON
-10. [**Markov chain**](catalog/mathematics-statistics/6-041.md#c06-a010) · `C06-A010` · VIDEO COMING SOON
-11. [**Markov chain steady state**](catalog/mathematics-statistics/6-041.md#c06-a011) · `C06-A011` · VIDEO COMING SOON
+1. [**Conditional Probability: Rainy Trip Denominator**](catalog/mathematics-statistics/6-041.md#c06-a001) · `C06-A001` · ▶ PLAY VIDEO
+2. [**Bayesian Formula: Rare-Test Posterior**](catalog/mathematics-statistics/6-041.md#c06-a002) · `C06-A002` · ▶ PLAY VIDEO
+3. [**Random Variable Transformation: Stretch Density**](catalog/mathematics-statistics/6-041.md#c06-a003) · `C06-A003` · ▶ PLAY VIDEO
+4. [**Joint Distribution: Weather and Delays**](catalog/mathematics-statistics/6-041.md#c06-a004) · `C06-A004` · ▶ PLAY VIDEO
+5. [**Expectation: Prize Wheel Average**](catalog/mathematics-statistics/6-041.md#c06-a005) · `C06-A005` · ▶ PLAY VIDEO
+6. [**Variance: Delivery Spread**](catalog/mathematics-statistics/6-041.md#c06-a006) · `C06-A006` · ▶ PLAY VIDEO
+7. [**Covariance: Temperature and Sales**](catalog/mathematics-statistics/6-041.md#c06-a007) · `C06-A007` · ▶ PLAY VIDEO
+8. [**Law of Large Numbers: Coin Toss Averages**](catalog/mathematics-statistics/6-041.md#c06-a008) · `C06-A008` · ▶ PLAY VIDEO
+9. [**Central Limit Theorem: Skewed Wait-Time Means**](catalog/mathematics-statistics/6-041.md#c06-a009) · `C06-A009` · ▶ PLAY VIDEO
+10. [**Markov Chain: One-Step Location Odds**](catalog/mathematics-statistics/6-041.md#c06-a010) · `C06-A010` · ▶ PLAY VIDEO
+11. [**Markov Chain Steady State: Traffic Mix Converges**](catalog/mathematics-statistics/6-041.md#c06-a011) · `C06-A011` · ▶ PLAY VIDEO
+12. [**Poisson Process: Tickets and Waiting Times**](catalog/mathematics-statistics/6-041.md#c06-a012) · `C06-A012` · ▶ PLAY VIDEO
 
 ---
 
