@@ -22,8 +22,12 @@ def request(method,url,body=None,ctype='application/json'):
         raise RuntimeError(f'GitHub {method} HTTP {e.code}') from e
 
 def main():
+    import argparse
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--course',help='Publish only this canonical course code');args=parser.parse_args()
     global TOKEN;TOKEN=token();path=ROOT/'data/releases.json';index=json.loads(path.read_text()) if path.exists() else {};failed=[]
+    if args.course and args.course not in {k[2] for k in courses()}:raise ValueError('Unknown course code')
     for (subject,course,code),rows in courses().items():
+      if args.course and code!=args.course:continue
       try:
         tag=f'course-videos-{slug(subject)}-{slug(code)}';rel=request('GET',API+'/releases/tags/'+tag)
         wanted=inventory(rows);marker='\n<!-- inventory: ';old=None

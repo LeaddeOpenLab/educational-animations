@@ -10,7 +10,7 @@ The audit used remote `main` at `49241f1`, not the stale local publishing checko
 - `data/prompts.json`: expanded existing schema; original names and aliases retained; all 451 IDs linked to original Feishu records; 314 actual files probed. `data/backlog.json` and the legacy Linear Algebra prompt export are generated views, not separately maintained sources.
 - `scripts/build_github_readme.py`: generates concise README, full INDEX, course pages, existing prompt-file compatibility entries and backlog. Native video attachment paragraphs and stable anchors remain.
 - `app.js`, `index.html`, `styles.css`: data-derived counts, aliases/search, ready-only filter, shareable hash routes, refresh restoration, posters, copying, MP4/course downloads and mobile layout.
-- `build_course_video_bundles.py` / `publish_course_video_releases.py`: existing fixed-tag Releases reused; current package contents compared before upload; indexes, Prompts and reuse notes included. Canonical course codes reconcile the split Deep Learning and Generative AI groups. Pre-existing Release links are retained.
+- `build_course_video_bundles.py` / `publish_course_video_releases.py`: existing fixed-tag Releases reused; current package contents compared before upload; the production publisher updates only the affected course and independently retries its package; indexes, Prompts and reuse notes included. Canonical course codes reconcile the split Deep Learning and Generative AI groups. Pre-existing Release links are retained.
 - `sources/`, media/cover assets and verification documents: actual revised production source and evidence for eight v2 animations.
 - Issue templates, Topics, feedback labels, `CONTRIBUTING.md`, `docs/RIGHTS.md`, `docs/REUSE.md`: discovery, feedback and honest license/reproduction terms.
 
@@ -48,4 +48,4 @@ Review scope and samples: [Row Space](verification/C05-A002.md), [other seven re
 
 ## Repository publication
 
-Pending remote commit verification at report generation; this section is updated only after a successful push.
+Core changes and the concurrent-content merge were pushed to `main` as `352689e`. The initial HTTP 400 left the remote unchanged; retrying the Git transport succeeded. Final status reconciliation is recorded in [publication evidence](verification/publication.json).

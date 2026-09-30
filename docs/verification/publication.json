@@ -1,0 +1,10 @@
+{
+  "core_commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
+  "remote_ref_verified": true,
+  "feishu_status_and_url_readbacks": 451,
+  "revised_videos_fully_synced": 8,
+  "remaining_revised_pending_sync": [],
+  "verified_at": "2026-09-30T08:24:48+00:00",
+  "transport_retry": "Initial HTTP 400 did not update remote; HTTP/1.1 buffered Git retry succeeded.",
+  "limits": "Public website is not deployed. Historical file availability is not review approval."
+}

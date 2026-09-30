@@ -72,7 +72,7 @@ def ensure_native_player(entry, save):
 
 def github_step(entry):
     if not entry.get('player'): raise ValueError('Native GitHub attachment URL required for this version; supply it once, do not create duplicate attachment Issues')
-    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','README.md','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
+    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','data/releases.json','data/release-errors.json','README.md','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
     subprocess.run([sys.executable,'scripts/build_github_readme.py'],cwd=REPO,check=True)
     dirty=command('git','status','--porcelain')
     allowed=lambda path:any(path==p or path.startswith(p+'/') for p in paths)
@@ -87,8 +87,15 @@ def github_step(entry):
     if remote!=command('git','rev-parse','HEAD'): raise RuntimeError('Remote commit verification failed')
     return {'url':f"https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/{entry['page']}#{entry['id'].lower()}", 'commit':remote}
 
+def package_step(entry):
+    subprocess.run([sys.executable,'scripts/publish_course_video_releases.py','--course',entry['course_code']],cwd=REPO,check=True)
+    package=json.loads((REPO/'data/releases.json').read_text())[entry['course_code']]
+    if package['status']!='current' or {'id':entry['id'],'version':entry['artifact_version']} not in package['members']:raise ValueError('Course package version mismatch')
+    github_step(entry)  # Publish the measured package index and regenerated download links.
+    return {'url':package['download_url'],'bundle_version':package['version']}
+
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('key');parser.add_argument('--channel',choices=['all','feishu','github'],default='all');args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('key');parser.add_argument('--channel',choices=['all','feishu','github','course_package'],default='all');args=parser.parse_args()
     state=agent.load_json(agent.STATE_FILE,{})
     item=state.get('items',{}).get(args.key)
     if not item: raise ValueError('Unknown stable work item key')
@@ -111,8 +118,10 @@ def main():
             items=json.loads(data_path.read_text());upsert(items,e);agent.atomic_json(data_path,items)
             return github_step(e)
         operations['github']=github
+    if args.channel in ('all','github','course_package'):operations['course_package']=package_step
     errors=publish_channels(entry,operations,save)
-    item['status']='已发布' if all(entry.get('publication',{}).get(c,{}).get('status')=='succeeded' for c in ['feishu','github']) else '待发布'
+    entry['pending_sync']=[c for c in ['feishu','github','course_package'] if entry.get('publication',{}).get(c,{}).get('status')!='succeeded' or entry['publication'][c].get('version')!=entry['artifact_version']]
+    item['status']='已发布' if not entry['pending_sync'] else '待发布'
     item['error']=json.dumps(errors,ensure_ascii=False) if errors else '';save()
     # Status-only reconciliation is independent of successful media uploads.
     try:
@@ -124,14 +133,17 @@ def main():
         item.pop('status_sync_error',None)
     except Exception as e:
         item['status_sync_error']=str(e);errors['feishu_status']=str(e)
-    if entry.get('publication',{}).get('github',{}).get('status')=='succeeded' and args.channel in ('all','github'):
+    if entry.get('publication',{}).get('github',{}).get('status')=='succeeded':
         try:
             catalog=REPO/'data/prompts.json';items=json.loads(catalog.read_text());upsert(items,entry);agent.atomic_json(catalog,items)
-            command('git','add','--','data/prompts.json')
+            subprocess.run([sys.executable,'scripts/build_github_readme.py'],cwd=REPO,check=True)
+            command('git','add','--','data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','README.md','INDEX.md','catalog','prompts')
             if command('git','diff','--cached','--name-only'):
                 command('git','commit','-m',f"Record delivery status for {entry['id']} {entry['artifact_version']}")
-                command('git','push','origin','HEAD:main')
-                if command('git','ls-remote','origin','refs/heads/main').split()[0]!=command('git','rev-parse','HEAD'):raise RuntimeError('Delivery metadata push not verified')
+            command('git','fetch','origin','main')
+            subprocess.run(['git','merge-base','--is-ancestor','origin/main','HEAD'],cwd=REPO,check=True)
+            command('git','push','origin','HEAD:main')
+            if command('git','ls-remote','origin','refs/heads/main').split()[0]!=command('git','rev-parse','HEAD'):raise RuntimeError('Delivery metadata push not verified')
             item.pop('catalog_status_sync_error',None)
         except Exception as error:
             item['catalog_status_sync_error']=str(error);errors['github_status']=str(error)

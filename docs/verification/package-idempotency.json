@@ -35,5 +35,9 @@
     "Unchanged DE-FPGA",
     "Unchanged AI-AGENT-SYSTEMS",
     "Unchanged cloud-native-kubernetes"
-  ]
+  ],
+  "targeted_course_retry": {
+    "course": "18.06",
+    "result": "Unchanged 18.06"
+  }
 }
