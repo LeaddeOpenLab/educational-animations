@@ -2,7 +2,7 @@
 
 Short educational animations with concept explanations and versioned reuse materials.
 
-**314 video-ready · 8 recorded review passes · 137 awaiting production · 41 courses · 17 disciplines**
+**330 video-ready · 24 recorded review passes · 137 awaiting production · 42 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -46,7 +46,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#computer-science"><img src="assets/subject-cards/computer-science.png" width="100%" alt="Computer Science"></a><br>
 <a href="#computer-science"><strong>Computer Science</strong></a><br>
-<sub>8 courses · 84 videos · 0 awaiting production</sub>
+<sub>9 courses · 100 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence"></a><br>
@@ -145,7 +145,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="computer-science"></a>
 ### Computer Science
 
-84 videos · 0 awaiting production
+100 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -159,7 +159,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="introduction-to-algorithms"></a>
 <a href="catalog/computer-science/6-006.md"><img src="assets/course-covers/6.006.svg" width="100%" alt="Introduction to Algorithms"></a><br>
 <a href="catalog/computer-science/6-006.md"><strong>Introduction to Algorithms</strong></a><br>
-<sub>13 videos · 0 awaiting production</sub>
+<sub>14 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a id="computer-organization-and-architecture"></a>
@@ -201,7 +201,12 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a href="catalog/computer-science/cloud-native-kubernetes.md"><strong>Cloud Native and Kubernetes</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
-<td></td>
+<td width="33%" valign="top">
+<a id="cybersecurity-and-identity-authentication"></a>
+<a href="catalog/computer-science/cybersecurity-and-identity-authentication.md"><img src="assets/covers/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.jpg" width="100%" alt="Cybersecurity and Identity Authentication"></a><br>
+<a href="catalog/computer-science/cybersecurity-and-identity-authentication.md"><strong>Cybersecurity and Identity Authentication</strong></a><br>
+<sub>15 videos · 0 awaiting production</sub>
+</td>
 </tr>
 </table>
 

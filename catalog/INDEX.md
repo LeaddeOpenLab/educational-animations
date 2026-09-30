@@ -35,6 +35,7 @@
 - [C02-A011 · Merge Step in Merge Sort](computer-science/6-006.md#c02-a011) — video
 - [C02-A012 · Union-Find Path Compression](computer-science/6-006.md#c02-a012) — video
 - [C02-A013 · Topological Sorting](computer-science/6-006.md#c02-a013) — video
+- [recvw1Efv8Vc3v · Bellman-Ford Algorithm](computer-science/6-006.md#recvw1efv8vc3v) — video
 ## Computer Organization and Architecture
 
 - [C21-A001 · Two's Complement](computer-science/cs-coa.md#c21-a001) — video
@@ -102,6 +103,23 @@
 - [recvw25sP7lDYZ · ServiceAccount and RBAC Authorization](computer-science/cloud-native-kubernetes.md#recvw25sp7ldyz) — video
 - [recvw25sP72oHb · NetworkPolicy Traffic Selection](computer-science/cloud-native-kubernetes.md#recvw25sp72ohb) — video
 - [recvw25tEzR38D · Helm Values and Template Rendering](computer-science/cloud-native-kubernetes.md#recvw25tezr38d) — video
+## Cybersecurity and Identity Authentication
+
+- [recvw25tEzjpUx · Authentication and Authorization Boundary](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezjpux) — video
+- [recvw25tEzEbVA · Password Hashing with Salt](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezebva) — video
+- [recvw25tEzxx6p · Public-Key Challenge-Response Authentication](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezxx6p) — video
+- [recvw25tEzFOUF · OAuth 2.0 Authorization Code Flow](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezfouf) — video
+- [recvw25tEzOpDR · OpenID Connect ID Token Validation](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezopdr) — video
+- [recvw25tEzQ1BC · WebAuthn Passkey Registration](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezq1bc) — video
+- [recvw25tEzHsSR · Multi-Factor Authentication TOTP](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezhssr) — video
+- [recvw25tEzVmaf · Session Cookie Secure Attributes](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezvmaf) — video
+- [recvw25tEzdrPi · JSON Web Token Signature Verification](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezdrpi) — video
+- [recvw25tEzt9tQ · Refresh Token Rotation](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezt9tq) — video
+- [recvw25tEzw5wp · Role-Based Access Control](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezw5wp) — video
+- [recvw25tEzKHzG · Attribute-Based Access Control](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezkhzg) — video
+- [recvw25tEzy3Ho · SAML Service Provider Login Flow](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezy3ho) — video
+- [recvw25tEzxAcY · Mutual TLS Certificate Authentication](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezxacy) — video
+- [recvw25tEz3sOf · Least-Privilege Access Review](computer-science/cybersecurity-and-identity-authentication.md#recvw25tez3sof) — video
 ## Introduction to Machine Learning
 
 - [C03-A001 · Decision boundary](artificial-intelligence/6-036.md#c03-a001) — video

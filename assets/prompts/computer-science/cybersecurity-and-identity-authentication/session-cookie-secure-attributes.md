@@ -1,0 +1,9 @@
+# recvw25tEzVmaf · Session Cookie Secure Attributes
+
+Version: v1 · alignment: aligned
+
+Create a silent English educational animation about Session Cookie Secure Attributes. 0–5 s: place sid in a browser cookie jar with Secure, HttpOnly and SameSite=Strict. 5–12 s: both HTTP and HTTPS requests travel, but only HTTPS carries sid. 12–20 s: stop a script read at the HttpOnly barrier while an eligible HTTPS fetch carries sid. 20–30 s: move same-site and cross-site requests in parallel, attaching sid only to the same-site request. Cookie withholding does not stop the request itself; these three attributes govern separate behaviors.
+
+Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 19, TypeScript 5.8 and FFmpeg. Render a silent 30.0-second H.264 MP4 at 1920×1080, 30 fps, 900 frames. Preserve the left text/right diagram composition: left copy starts near x=108, and the 1000×700 SVG diagram sits at x=840, y=165. Use the literal dark palette bg0 #070b12, bg1 #0d1626, bg2 #142238, primary #60a5fa, accent #fbbf24, result #34d399, warning #f87171, text #f8fafc and muted text #94a3b8; grid rgba(148,163,184,0.13). Typography is "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif. Use frame-derived state for diagram motion, captions and outcomes, and retain readable whole-line English labels and short scene fades. The source kit is provided; Node.js, Chromium and system fonts are external dependencies. Exact reproduction in a clean environment has not been verified.
+
+Checked final TSX SceneDef durations and frame-derived Stage/Mechanism timing against the approved final record and media duration. Four scenes total 900 frames / 30.0 seconds; the prompt names the actual illustrated objects, state changes, timing, course palette and two-column layout. No generic replacement story was introduced. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
