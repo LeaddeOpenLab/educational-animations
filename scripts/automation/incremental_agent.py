@@ -175,7 +175,7 @@ def select_discovery_courses(config: dict, records: list[dict]) -> list[dict]:
     backlog = Counter()
     for row in records:
         fields = record_fields(row)
-        if fields.get("Pipeline Status") in ("待审核", "待制作", "制作中", "待发布", "失败"):
+        if fields.get("Pipeline Status") in ("待审核", "待制作", "预览中", "制作中", "待发布", "失败"):
             backlog[(fields.get("Discipline"), fields.get("Course"))] += 1
     target = config.get("target_course_candidate_pool", 8)
     ordered = sorted(source_groups, key=lambda pair: (priority_tier(config, pair[0]),
@@ -234,7 +234,7 @@ def select_work_orders(ready: dict, config: dict, counts: Counter) -> list[dict]
         priority_tier(config, pair[0][0]), -len(pair[1]), pair[0][1]))
     work_orders, selected_courses = [], 0
     for (discipline, course), group in groups:
-        resumes = [(key, item) for key, item in group if item["status"] in ("制作中", "失败", "待发布")]
+        resumes = [(key, item) for key, item in group if item["status"] in ("预览中", "制作中", "失败", "待发布")]
         fresh = [(key, item) for key, item in group if item["status"] == "待制作"]
         oldest = min((datetime.fromisoformat(item.get("approved_at", item["updated_at"]))
                       for _, item in fresh), default=None)
@@ -250,14 +250,20 @@ def select_work_orders(ready: dict, config: dict, counts: Counter) -> list[dict]
         selected_courses += 1
         for key, item in selected:
             reviewed = False
+            previewed = False
             final_path = item.get("artifacts", {}).get("final_record")
             if final_path and Path(final_path).is_file():
                 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
                 from final_record import review_passed
-                reviewed = bool(review_passed(load_json(Path(final_path), {})))
+                final=load_json(Path(final_path), {})
+                reviewed = bool(review_passed(final))
+                from production_review import validate_preview
+                try:validate_preview(final);previewed=True
+                except (ValueError,KeyError,TypeError):pass
             work_orders.append({"key": key, "record_id": item["record_id"], "name": item["name"],
                 "discipline": discipline, "course": course, "source": item["source"], "status": item["status"],
-                "resume_from": "publish" if reviewed else "produce",
+                "resume_from": "publish" if reviewed else ("produce" if previewed else "preview"),
+                "production_contract": "docs/PRODUCTION.md",
                 "required_skills": [] if reviewed else ["edu-video-kit", "edu-video-produce", "edu-video-cover-title"],
                 "artifacts": item["artifacts"]})
             counts["queued"] += 1
@@ -453,7 +459,7 @@ def run_discovery() -> int:
             item["status"] = "待制作"
             item["approved_at"] = now()
             item["updated_at"] = now()
-        if fields.get("Review Decision") == "批准制作" and item["status"] in ("待制作", "制作中", "失败", "待发布"):
+        if fields.get("Review Decision") == "批准制作" and item["status"] in ("待制作", "预览中", "制作中", "失败", "待发布"):
             ready[(item["discipline"], item["course"])].append((key, item))
     work_orders = select_work_orders(ready, config, run["counts"])
     order_path = STORE / "runs" / f"{run_id}.work-orders.json"
@@ -484,7 +490,7 @@ def checkpoint(args) -> int:
     item = state.get("items", {}).get(args.key)
     if not item:
         raise RuntimeError(f"unknown item key: {args.key}")
-    allowed = {"已发现", "待审核", "待制作", "制作中", "待发布", "已发布", "失败"}
+    allowed = {"已发现", "待审核", "待制作", "预览中", "制作中", "待发布", "已发布", "失败"}
     if args.status not in allowed:
         raise RuntimeError(f"invalid status: {args.status}")
     if item["status"] == "已发布" and args.status != "已发布" and not args.artifacts:
@@ -503,21 +509,24 @@ def checkpoint(args) -> int:
         item["artifacts"]["github_url"] = args.github_url
     if args.record_id and args.record_id != item.get("record_id"):
         raise RuntimeError("record_id does not match verified candidate")
-    if args.status == "制作中":
+    if args.status in ("预览中", "制作中"):
         from reserve_identity import reserve
         item["stable_id"] = reserve(args.key)
         final_path = item.get("artifacts", {}).get("final_record")
         draft = load_json(Path(final_path), {}) if final_path else {}
         if draft.get("id") != item["stable_id"] or not draft.get("terminology", {}).get("confirmed") or not draft.get("standard_name"):
             raise RuntimeError("Before storyboarding, provide the reserved ID and confirmed standard term in the draft final_record")
+        sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+        from production_review import validate_plan,validate_preview
+        (validate_preview if args.status == "制作中" else validate_plan)(draft)
     if args.status == "待发布":
         sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
-        from final_record import validate
+        from final_record import validate_for_publication
         final_path = item.get("artifacts", {}).get("final_record")
         if not final_path:
             raise RuntimeError("Reviewed final_record JSON is required; a boolean flag is not an audit")
         final = load_json(Path(final_path), {})
-        validate(final, Path(os.environ.get("LEADDE_REPO", Path(__file__).resolve().parents[2])))
+        validate_for_publication(final, Path(os.environ.get("LEADDE_REPO", Path(__file__).resolve().parents[2])))
         if final.get("feishu_record_id") != item.get("record_id"):
             raise RuntimeError("Final artifact / Feishu identity mismatch")
         item["stable_id"] = final["id"]
@@ -582,7 +591,7 @@ def nominate(args) -> int:
         raise RuntimeError("course is not in Feishu; human course mapping required")
     backlog = sum(record_fields(row).get("Discipline") == discipline
                   and record_fields(row).get("Course") == course
-                  and record_fields(row).get("Pipeline Status") in ("待审核", "待制作", "制作中", "待发布", "失败")
+                  and record_fields(row).get("Pipeline Status") in ("待审核", "待制作", "预览中", "制作中", "待发布", "失败")
                   for row in records)
     if backlog >= load_json(CONFIG, {}).get("target_course_candidate_pool", 8):
         raise RuntimeError("course candidate pool is full; process its existing backlog first")

@@ -27,6 +27,8 @@ def probe(path):
 
 def review_passed(entry):
     r = entry.get('review', {})
+    from production_review import approved,TECHNICAL,TEACHING
+    if entry.get('production',{}).get('workflow_version')==2 and not (approved(r.get('technical',{}),entry.get('artifact_version'),TECHNICAL) and approved(r.get('teaching',{}),entry.get('artifact_version'),TEACHING)):return False
     return (r.get('status') == 'passed' and r.get('version') == entry.get('artifact_version')
             and bool(r.get('reviewer') and r.get('reviewed_at') and r.get('evidence'))
             and all(r.get('checks', {}).get(k) is True for k in REVIEW_CHECKS))
@@ -45,7 +47,21 @@ def validate(entry, root=None):
     if any(abs(float(n)-media['duration_seconds']) > .1 for n in claims): raise ValueError('Prompt text duration differs from video')
     if entry.get('player') and entry.get('player_version') != entry['artifact_version']: raise ValueError('Player belongs to another version')
     if entry.get('cover') and entry.get('cover_version') != entry['artifact_version']: raise ValueError('Cover belongs to another version')
+    if entry.get('production',{}).get('workflow_version')==2:
+        from production_review import validate_final
+        validate_final(entry,media)
     return media
+
+def validate_for_publication(entry,root):
+    # Keep retries of already published legacy versions usable, without approving new work.
+    catalog=json.loads((Path(root)/'data/prompts.json').read_text())
+    legacy=any(x['id']==entry['id'] and x.get('artifact_version')==entry.get('artifact_version')
+        and x.get('production',{}).get('workflow_version')!=2 and review_passed(x)
+        and x.get('publication',{}).get('github',{}).get('status')=='succeeded'
+        and all(x.get(k)==entry.get(k) for k in ('video','prompt','cover','player','media')) for x in catalog)
+    if not legacy and entry.get('production',{}).get('workflow_version')!=2:
+        raise ValueError('New or revised production requires the action/preview/dual-review workflow')
+    return validate(entry,root)
 
 def upsert(items, entry):
     matches = [i for i,x in enumerate(items) if x['id'] == entry['id'] or (entry.get('feishu_record_id') and x.get('feishu_record_id') == entry['feishu_record_id'])]

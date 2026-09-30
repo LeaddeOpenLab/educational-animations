@@ -11,7 +11,7 @@ import incremental_agent as agent
 
 REPO=Path(os.environ.get('LEADDE_REPO',Path(__file__).resolve().parents[2]))
 sys.path.insert(0,str(REPO/'scripts'))
-from final_record import validate, upsert, publish_channels
+from final_record import validate_for_publication, upsert, publish_channels
 from feishu_fields import ensure_mapping, values_for
 
 def command(*args):
@@ -104,7 +104,7 @@ def main():
     if not record_path: raise ValueError('artifacts.final_record must point to the reviewed final record JSON')
     entry=json.loads(Path(record_path).read_text())
     if item.get('record_id')!=entry.get('feishu_record_id'): raise ValueError('Work item / final record identity mismatch')
-    entry['media']=validate(entry,REPO)
+    entry['media']=validate_for_publication(entry,REPO)
     def save():
         agent.atomic_json(Path(record_path),entry)
         item['publication']=entry['publication'];item['stable_id']=entry['id']

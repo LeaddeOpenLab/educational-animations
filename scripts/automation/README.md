@@ -7,3 +7,5 @@ Set `LEADDE_WORKSPACE` to the existing render workspace and `LEADDE_REPO` to a d
 Run `python3 scripts/automation/incremental_agent.py run` for discovery, `reserve_identity.py KEY` before production, then use `checkpoint` and `publish_ready.py KEY`. Reviewed publication failures never require a renderer. Legacy `sync_*_delivery.py` entrypoints accept final-record manifests through the common stable-ID importer; they no longer publish by matching mutable titles or assuming file existence means review success.
 
 Course packages are a separate `course_package` publication channel. `publish_ready.py KEY --channel course_package` retries only that package and its generated download index; successful media channels are not regenerated. Package publishing accepts `--course COURSE_CODE`, compares the current inventory, and preserves existing Release tags.
+
+New and revised videos follow [action-first production](../../docs/PRODUCTION.md): action storyboard → critical-process preview → batch production → separate technical/teaching review. The publisher enforces this contract; previously published legacy versions remain retryable.
