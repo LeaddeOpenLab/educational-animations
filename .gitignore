@@ -1,2 +1,8 @@
 .DS_Store
 dist/
+
+__pycache__/
+*.pyc
+.workbuddy/
+.env*
+node_modules/

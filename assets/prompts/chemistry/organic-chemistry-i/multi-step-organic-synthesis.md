@@ -1,11 +1,9 @@
-# Multi-Step Organic Synthesis: Link the Steps
+# C09-A013 · Multi-step organic synthesis
 
-Record: recvvJaLnghnsQ  
-Course: Organic Chemistry I  
-Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+Version: v1 · alignment: unverified
 
-```text
 Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Multi-Step Organic Synthesis: Link the Steps’. Learning objective: A synthesis route must make the functional group needed by the next transformation; yields multiply. Use Ethene → ethanol → ethanal as the concrete example. 0–5.33333s: Draw ethene with two persistent carbon markers and ghost aldehyde target. Start with a two-carbon alkene. Keep track of both carbon atoms. 5.33333–12s: Break pi bond and attach H/OH; oxygen appears at terminal carbon with carbon identity conserved. Add H and OH across C=C. Acid-catalyzed hydration gives ethanol. 12–18.6667s: Change terminal C–O single to double, remove O–H and C–H; label PCC illustrative anhydrous oxidation. A suitable mild oxidant converts the primary alcohol to ethanal. 18.6667–24.6667s: Flow 100 units to 80 to 64 with decreasing cohort bars and computed product. Two 80% steps give 64% overall. Use illustrative, not measured yields. 24.6667–30s: Show full ethene→ethanol→ethanal path with active functional group highlighted at each station. Check functional-group compatibility. Reagents and order both matter. Hydrate the alkene then oxidize alcohol to aldehyde; carry carbon labels and compute overall yield.
 
 Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
-```
+
+Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.

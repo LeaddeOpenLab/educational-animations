@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "max_items_per_feed": 10,
+  "feeds": [
+    {"id": "cs-algorithms-questions", "type": "stackexchange", "site": "cs", "tag": "algorithms", "discipline": "Computer Science", "course": "Introduction to Algorithms"},
+    {"id": "ai-deep-learning-questions", "type": "stackexchange", "site": "ai", "tag": "deep-learning", "discipline": "Artificial Intelligence", "course": "Deep Learning"},
+    {"id": "digital-logic-questions", "type": "stackexchange", "site": "electronics", "tag": "digital-logic", "discipline": "Digital Electronics", "course": "Digital Logic Design"},
+    {"id": "microcontroller-questions", "type": "stackexchange", "site": "electronics", "tag": "microcontroller", "discipline": "Embedded Systems", "course": "Microcontroller Fundamentals"},
+    {"id": "pytorch-tutorial-issues", "type": "github_issues", "repo": "pytorch/tutorials", "discipline": "Artificial Intelligence", "course": "Deep Learning"},
+    {"id": "zephyr-issues", "type": "github_issues", "repo": "zephyrproject-rtos/zephyr", "discipline": "Embedded Systems", "course": "Real-Time Operating Systems"},
+    {"id": "arxiv-machine-learning", "type": "arxiv", "category": "cs.LG", "discipline": "Artificial Intelligence", "course": "Deep Learning"},
+    {"id": "arxiv-algorithms", "type": "arxiv", "category": "cs.DS", "discipline": "Computer Science", "course": "Introduction to Algorithms"},
+    {"id": "openalex-deep-learning", "type": "openalex", "query": "deep learning", "requires_env": "OPENALEX_API_KEY", "discipline": "Artificial Intelligence", "course": "Deep Learning"}
+  ]
+}

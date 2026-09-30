@@ -1,0 +1,28 @@
+{
+  "name": "linear-algebra",
+  "label": "Linear Algebra",
+  "mode": "light",
+  "note": "配色族 tol-bright（Paul Tol bright 中通过门禁的 8 色）；shell 取自配色库条目 tol-bright，内容角色在族内池中按 rot=[3,6,4,7] 轮换。库条目自身的 accent #ccbb44 / warn #ee6677 在 #f6f8fb 上只有 1.83 / 2.90 —— 它们是 Tol 为填充设计的亮色，作描边会隐形。本表改用同一作者更深的已发表成员；warn 由 #ee6677 换成同组的 #bb5566（4.29）。",
+  "colors": {
+    "bg0": "#ffffff",
+    "bg1": "#f6f8fb",
+    "bg2": "#eaeff6",
+    "grid": "rgba(15,23,42,0.10)",
+    "axis": "rgba(15,23,42,0.42)",
+    "textStrong": "#0b1220",
+    "textMuted": "#475569",
+    "textDim": "#5a6675",
+    "primary": "#332288",
+    "accent": "#aa4499",
+    "result": "#117733",
+    "warn": "#bb5566",
+    "alt": "#cc6677"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 52,
+    "gridOpacity": 0.88,
+    "glowOpacity": 0.06,
+    "glowBlur": 64
+  }
+}

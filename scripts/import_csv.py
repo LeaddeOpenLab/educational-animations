@@ -119,5 +119,15 @@ for row in rows:
     prompts.append({"id":row["knowledge_id"],"subject":SUBJECTS[row["discipline"]],"course":COURSES[row["course_title_zh"]],"textbook":english_textbook(row["textbook"]),"title":display_title(topic),"status":"coming_soon","video":"","tags":[row["knowledge_id"],row["course_code"],row["priority"]],"prompt":english_prompt(row, topic, visual_metaphor, conclusion)})
 if any(re.search(r"[\u3400-\u9fff]", item["prompt"]) for item in prompts):
     raise ValueError("Chinese text remains in a prompt; destination was not changed")
+# A partial source export must not erase existing published IDs or final artifacts.
+seen = {item["id"] for item in prompts}
+prompts.extend(item for key, item in previous_items.items() if key not in seen)
+for item in prompts:
+    if "original_name" not in item:
+        item.update(original_name=item["title"], standard_name=item["title"],
+                    requirement_prompt=item.get("prompt", ""), prompt="",
+                    artifact_version="draft", production={"status":"not_started"},
+                    review={"status":"unreviewed","version":"draft"},
+                    reuse={"status":"pending","exact_reproduction_verified":False})
 destination.write_text(json.dumps(prompts, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 print(f"Imported and translated {len(prompts)} prompts to {destination}")

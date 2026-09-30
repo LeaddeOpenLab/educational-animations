@@ -1,0 +1,3488 @@
+[
+  {
+    "id": "C01-A001",
+    "standard_name": "Pointer",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A002",
+    "standard_name": "Memory address",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A003",
+    "standard_name": "Memory layout",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A004",
+    "standard_name": "Time complexity",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A005",
+    "standard_name": "Algorithm growth rate",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A006",
+    "standard_name": "Sorting process",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A007",
+    "standard_name": "Binary search",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A008",
+    "standard_name": "Linked list",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A009",
+    "standard_name": "Tree structure",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A010",
+    "standard_name": "Hash table",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A011",
+    "standard_name": "Relational model",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A012",
+    "standard_name": "SQL JOIN",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A013",
+    "standard_name": "Stack vs. Heap",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A014",
+    "standard_name": "Pointer Dereferencing",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A015",
+    "standard_name": "Pointer Arithmetic",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C01-A016",
+    "standard_name": "Recursive Call Stack",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A001",
+    "standard_name": "Divide and conquer recursion",
+    "version": "v1",
+    "review": "partially_checked",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A002",
+    "standard_name": "Recursive",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A003",
+    "standard_name": "Heap structure",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A004",
+    "standard_name": "Heap sort",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A005",
+    "standard_name": "Balanced binary search tree",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A006",
+    "standard_name": "Graph search",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A007",
+    "standard_name": "Shortest path",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A010",
+    "standard_name": "Quicksort Partitioning",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A011",
+    "standard_name": "Merge Step in Merge Sort",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A012",
+    "standard_name": "Union-Find Path Compression",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C02-A013",
+    "standard_name": "Topological Sorting",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A001",
+    "standard_name": "Two's Complement",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A002",
+    "standard_name": "Floating-Point Representation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A003",
+    "standard_name": "Boolean Logic Gates",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A004",
+    "standard_name": "Combinational Logic",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A005",
+    "standard_name": "Sequential Logic and Clocks",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A006",
+    "standard_name": "CPU Fetch-Decode-Execute Cycle",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A007",
+    "standard_name": "Pipeline Hazards",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C21-A008",
+    "standard_name": "Cache Locality",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A001",
+    "standard_name": "Processes and Threads",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A002",
+    "standard_name": "Process State Transitions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A003",
+    "standard_name": "Context Switching",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A004",
+    "standard_name": "CPU Scheduling",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A005",
+    "standard_name": "Virtual Memory Paging",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A006",
+    "standard_name": "Page-Table Address Translation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A007",
+    "standard_name": "Page Replacement",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C22-A008",
+    "standard_name": "Four Conditions for Deadlock",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A001",
+    "standard_name": "OSI and TCP/IP Layers",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A002",
+    "standard_name": "Packet Encapsulation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A003",
+    "standard_name": "Subnet Masks and CIDR",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A004",
+    "standard_name": "Longest-Prefix Routing Match",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A005",
+    "standard_name": "TCP Three-Way Handshake",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A006",
+    "standard_name": "TCP Congestion Window",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A007",
+    "standard_name": "DNS Resolution",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C23-A008",
+    "standard_name": "HTTP Request and Response",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A001",
+    "standard_name": "Entity-Relationship Model",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A002",
+    "standard_name": "Primary and Foreign Keys",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A003",
+    "standard_name": "Functional Dependencies",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A004",
+    "standard_name": "Database Normalization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A005",
+    "standard_name": "B+ Tree Index",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A006",
+    "standard_name": "ACID Transactions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A007",
+    "standard_name": "Concurrency Control and Locks",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C24-A008",
+    "standard_name": "Multiversion Concurrency Control",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A001",
+    "standard_name": "Lexical Analysis and Tokens",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A002",
+    "standard_name": "Regular Expression to Finite Automaton",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A003",
+    "standard_name": "Context-Free Grammar",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A004",
+    "standard_name": "Abstract Syntax Tree",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A005",
+    "standard_name": "Recursive-Descent Parsing",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A006",
+    "standard_name": "Intermediate Representation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A007",
+    "standard_name": "Data-Flow Analysis",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C25-A008",
+    "standard_name": "Register Allocation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A001",
+    "standard_name": "Decision boundary",
+    "version": "v1",
+    "review": "needs_revision",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A002",
+    "standard_name": "Feature space",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A003",
+    "standard_name": "Gradient descent",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A004",
+    "standard_name": "Loss of terrain",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A005",
+    "standard_name": "Overfitting",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A006",
+    "standard_name": "Underfitting",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A007",
+    "standard_name": "Model bias",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A008",
+    "standard_name": "Model variance",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A009",
+    "standard_name": "Backpropagation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A010",
+    "standard_name": "Chain rule",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A011",
+    "standard_name": "Markov decision process",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A012",
+    "standard_name": "Value iteration",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A013",
+    "standard_name": "Linear Regression",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A014",
+    "standard_name": "Logistic Regression",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A015",
+    "standard_name": "Softmax Classification",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A016",
+    "standard_name": "K-Nearest Neighbors",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A017",
+    "standard_name": "Maximum-Margin Support Vector Machine",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A018",
+    "standard_name": "Decision-Tree Information Gain",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A019",
+    "standard_name": "K-Means Clustering",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C03-A020",
+    "standard_name": "Principal Component Analysis",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A001",
+    "standard_name": "Artificial Neuron",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A002",
+    "standard_name": "Activation Functions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A003",
+    "standard_name": "Parameter Initialization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A004",
+    "standard_name": "Batch Normalization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A005",
+    "standard_name": "Dropout",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A006",
+    "standard_name": "Convolutional Neural Network",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A007",
+    "standard_name": "Vanishing Gradients in Recurrent Neural Networks",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A008",
+    "standard_name": "Attention Mechanism",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A009",
+    "standard_name": "Data Loading Optimization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A001",
+    "standard_name": "Text Tokenization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A002",
+    "standard_name": "N-Gram Language Model",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A003",
+    "standard_name": "Word Embeddings",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A004",
+    "standard_name": "Positional Encoding",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A005",
+    "standard_name": "Self-Attention",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A006",
+    "standard_name": "Encoder-Decoder Architecture",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A007",
+    "standard_name": "Beam Search",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C27-A008",
+    "standard_name": "Retrieval-Augmented Generation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A001",
+    "standard_name": "Image Convolution",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A002",
+    "standard_name": "Edge Detection",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A003",
+    "standard_name": "Padding and Stride",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A004",
+    "standard_name": "Pooling",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A005",
+    "standard_name": "Receptive Field",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A006",
+    "standard_name": "Intersection over Union and Non-Maximum Suppression",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A007",
+    "standard_name": "Semantic Segmentation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C28-A008",
+    "standard_name": "Image Data Augmentation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A001",
+    "standard_name": "States, Actions, and Rewards",
+    "version": "v1",
+    "review": "partially_checked",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A002",
+    "standard_name": "Discounted Return",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A003",
+    "standard_name": "Bellman Optimality Equation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A004",
+    "standard_name": "Q-Learning Update",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A005",
+    "standard_name": "Epsilon-Greedy Exploration",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A006",
+    "standard_name": "Policy Gradient",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A007",
+    "standard_name": "Actor-Critic Method",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C29-A008",
+    "standard_name": "Experience Replay",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A001",
+    "standard_name": "Autoencoder",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A002",
+    "standard_name": "Variational Autoencoder Reparameterization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A003",
+    "standard_name": "Latent-Space Interpolation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A004",
+    "standard_name": "Generative Adversarial Training",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A005",
+    "standard_name": "Mode Collapse",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A006",
+    "standard_name": "Diffusion Forward Noising",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A007",
+    "standard_name": "Diffusion Reverse Denoising",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C30-A008",
+    "standard_name": "Classifier-Free Guidance",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A001",
+    "standard_name": "Limit",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A002",
+    "standard_name": "Continuity",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A003",
+    "standard_name": "Derivatives as local rates of change",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A004",
+    "standard_name": "Fundamental Theorem of Calculus",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A005",
+    "standard_name": "Volume of rotation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A006",
+    "standard_name": "Integral slice",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A007",
+    "standard_name": "Infinite series",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A008",
+    "standard_name": "Taylor Expand",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A009",
+    "standard_name": "Epsilon-Delta Definition of a Limit",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A010",
+    "standard_name": "Left- and Right-Hand Limits",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A011",
+    "standard_name": "Chain Rule",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C04-A012",
+    "standard_name": "Implicit Differentiation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A001",
+    "standard_name": "Column space",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A006",
+    "standard_name": "Least squares",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A007",
+    "standard_name": "Determinant",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A008",
+    "standard_name": "Volume scaling for linear transformations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A009",
+    "standard_name": "Eigenvalue",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A010",
+    "standard_name": "Eigenvector",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A011",
+    "standard_name": "Matrix diagonalization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A012",
+    "standard_name": "Singular value decomposition",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "needs_revision",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A013",
+    "standard_name": "Gaussian Elimination",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A014",
+    "standard_name": "Rank-Nullity Theorem",
+    "version": "v1",
+    "review": "partially_checked",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A015",
+    "standard_name": "Gram-Schmidt Orthogonalization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C05-A016",
+    "standard_name": "QR Decomposition",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A001",
+    "standard_name": "Partial Derivatives",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A002",
+    "standard_name": "Gradient",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A003",
+    "standard_name": "Directional Derivative",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A004",
+    "standard_name": "Jacobian Matrix",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A005",
+    "standard_name": "Hessian Matrix",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A006",
+    "standard_name": "Lagrange Multipliers",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A007",
+    "standard_name": "Double Integral",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C31-A008",
+    "standard_name": "Divergence and Curl",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A001",
+    "standard_name": "Separable Differential Equations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A002",
+    "standard_name": "First-Order Linear Differential Equations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A003",
+    "standard_name": "Phase Line",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A004",
+    "standard_name": "Stability of Equilibria",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A005",
+    "standard_name": "Second-Order Homogeneous Equations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A006",
+    "standard_name": "Forced Oscillation and Resonance",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A007",
+    "standard_name": "Phase Portrait of an ODE System",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C32-A008",
+    "standard_name": "Euler's Method",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A001",
+    "standard_name": "Propositional Logic Truth Tables",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A002",
+    "standard_name": "Mathematical Induction",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A003",
+    "standard_name": "Set Operations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A004",
+    "standard_name": "Relations and Equivalence Classes",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A005",
+    "standard_name": "Permutations and Combinations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A006",
+    "standard_name": "Pigeonhole Principle",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A007",
+    "standard_name": "Recurrence Relations",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C33-A008",
+    "standard_name": "Graph Connectivity",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A001",
+    "standard_name": "Group Axioms",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A002",
+    "standard_name": "Subgroups",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A003",
+    "standard_name": "Cyclic Groups",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A004",
+    "standard_name": "Permutation Groups",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A005",
+    "standard_name": "Cosets and Lagrange's Theorem",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A006",
+    "standard_name": "Group Homomorphisms",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A007",
+    "standard_name": "Rings and Ideals",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C34-A008",
+    "standard_name": "Finite Fields",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A001",
+    "standard_name": "Convex Sets and Convex Functions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A002",
+    "standard_name": "First-Order Optimality Conditions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A003",
+    "standard_name": "Second-Order Optimality Conditions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A004",
+    "standard_name": "Gradient Descent Convergence",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A005",
+    "standard_name": "Newton's Method",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A006",
+    "standard_name": "Lagrangian Duality",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A007",
+    "standard_name": "KKT Conditions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C35-A008",
+    "standard_name": "Projected Gradient Method",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A001",
+    "standard_name": "Conditional probability",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A002",
+    "standard_name": "Bayesian formula",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A003",
+    "standard_name": "Random variable transformation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A004",
+    "standard_name": "Joint distribution",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A005",
+    "standard_name": "Expectation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A006",
+    "standard_name": "Variance",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A007",
+    "standard_name": "Covariance",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A008",
+    "standard_name": "Law of large numbers",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A009",
+    "standard_name": "Central limit theorem",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A010",
+    "standard_name": "Markov chain",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A011",
+    "standard_name": "Markov chain steady state",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C06-A012",
+    "standard_name": "Poisson Process",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A001",
+    "standard_name": "Resonance structure",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A002",
+    "standard_name": "Acidity and alkalinity",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A003",
+    "standard_name": "Electron delocalization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A004",
+    "standard_name": "Conformational analysis",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A005",
+    "standard_name": "Cyclohexane flip",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A006",
+    "standard_name": "Chirality",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A007",
+    "standard_name": "R/S configuration",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A008",
+    "standard_name": "Stereoisomerism",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A010",
+    "standard_name": "SN2 reaction",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A012",
+    "standard_name": "E2 reaction",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A013",
+    "standard_name": "Multi-step organic synthesis",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C09-A014",
+    "standard_name": "Retrosynthetic analysis",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A001",
+    "standard_name": "Exoplanet transit method",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A002",
+    "standard_name": "Exoplanet radial velocity method",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A003",
+    "standard_name": "Observational selection effect",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A004",
+    "standard_name": "Observation bias",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A005",
+    "standard_name": "Schwarzschild radius",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A006",
+    "standard_name": "Curved space-time",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A007",
+    "standard_name": "Black hole event horizon",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A008",
+    "standard_name": "Expansion of the universe",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A009",
+    "standard_name": "Hubble's law",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A010",
+    "standard_name": "Dark matter",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A011",
+    "standard_name": "Dark energy",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C20-A012",
+    "standard_name": "Indirect observational evidence",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C36-A001",
+    "standard_name": "Interrupt Entry and Return",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C36-A002",
+    "standard_name": "Timer Overflow and Compare Match",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C36-A003",
+    "standard_name": "DMA Data Transfer",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C36-A004",
+    "standard_name": "I²C Start, ACK and Stop",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C37-A001",
+    "standard_name": "Task State Transitions",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C37-A002",
+    "standard_name": "Priority Preemption",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C37-A003",
+    "standard_name": "Mutex and Critical Section",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C37-A004",
+    "standard_name": "Priority Inversion",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C38-A001",
+    "standard_name": "Combinational Propagation Delay",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C38-A002",
+    "standard_name": "Edge-Triggered Flip-Flop",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C38-A003",
+    "standard_name": "Finite State Machine Transition",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C38-A004",
+    "standard_name": "Metastability",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C39-A001",
+    "standard_name": "Setup and Hold Time",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C39-A002",
+    "standard_name": "Clock Domain Crossing",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C39-A003",
+    "standard_name": "Pipeline Latency and Throughput",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C39-A004",
+    "standard_name": "Resource Sharing vs Parallel Hardware",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C38-A005",
+    "standard_name": "Shift Register",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw253eEvb3X",
+    "standard_name": "Agent Observe-Plan-Act Loop",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw254kdt8Gm",
+    "standard_name": "Tool Registry and Tool Selection",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw255ufAgzt",
+    "standard_name": "Function Calling Schema Validation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw256zNx1Eb",
+    "standard_name": "ReAct Reasoning and Acting Cycle",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw257DvN3QU",
+    "standard_name": "Task Decomposition into Subgoals",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw258JLr6AX",
+    "standard_name": "Short-Term and Long-Term Agent Memory",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25aen0hew",
+    "standard_name": "Planning with a Shared State",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25bHkLHf9",
+    "standard_name": "Multi-Agent Handoff Protocol",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25cRpcO1W",
+    "standard_name": "Human Approval Checkpoint",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25dWAMuw5",
+    "standard_name": "Agent Runtime State Machine",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25f2UAbYl",
+    "standard_name": "Retry and Backoff for Tool Failures",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25glDKhRI",
+    "standard_name": "Idempotent Tool Execution",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25ht8600c",
+    "standard_name": "Sandboxing Untrusted Tool Output",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25izM48sG",
+    "standard_name": "Agent Trace and Step-Level Evaluation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25jK3cwAs",
+    "standard_name": "Termination and Loop Detection",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A010",
+    "standard_name": "Training and Evaluation Modes",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A011",
+    "standard_name": "PyTorch Tensor Shape and Broadcasting",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A012",
+    "standard_name": "Autograd Computation Graph",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A013",
+    "standard_name": "Gradient Accumulation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A014",
+    "standard_name": "Zeroing Gradients Before Backpropagation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A015",
+    "standard_name": "Mini-Batch Data Loading",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A016",
+    "standard_name": "Dataset and DataLoader Pipeline",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A017",
+    "standard_name": "Device Placement Across CPU and GPU",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A018",
+    "standard_name": "Loss Reduction Across a Batch",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A019",
+    "standard_name": "Optimizer Step and Learning-Rate Schedule",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A020",
+    "standard_name": "Gradient Clipping",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A021",
+    "standard_name": "Mixed-Precision Training",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A022",
+    "standard_name": "Checkpoint Save and Restore",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A023",
+    "standard_name": "Transfer Learning with a Frozen Backbone",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A024",
+    "standard_name": "Reproducible Training with Random Seeds",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "C26-A025",
+    "standard_name": "PyTorch Validation Loop and Metric Tracking",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24KNremp6",
+    "standard_name": "Byte-Pair Encoding Tokenization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24MaggI13",
+    "standard_name": "Next-Token Probability Distribution",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24NhiUpZV",
+    "standard_name": "Temperature and Sampling Diversity",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24OpQBvQ8",
+    "standard_name": "Top-k and Top-p Sampling",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24PwwhY6Z",
+    "standard_name": "Prompt Structure and Role Separation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24QGLkzOo",
+    "standard_name": "Few-Shot In-Context Learning",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24T2zGQI9",
+    "standard_name": "Retrieval-Augmented Generation Pipeline",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24U8nIXtd",
+    "standard_name": "Chunking and Overlap for Retrieval",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24Vlk0V3K",
+    "standard_name": "Embedding-Based Semantic Search",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24Wq3ZOpq",
+    "standard_name": "Reranking Retrieved Passages",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24XspdsIn",
+    "standard_name": "Transformer Decoder Causal Mask",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24YBaWNKx",
+    "standard_name": "KV Cache for Autoregressive Generation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw24ZMOZKIS",
+    "standard_name": "Tool Calling with Structured Arguments",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw250ZqaTah",
+    "standard_name": "Fine-Tuning with LoRA Adapters",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw2525onwzm",
+    "standard_name": "LLM Hallucination Evaluation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  }
+]

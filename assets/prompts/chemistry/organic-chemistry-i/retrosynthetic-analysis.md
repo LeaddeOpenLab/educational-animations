@@ -1,11 +1,9 @@
-# Retrosynthetic Analysis: Work Backward
+# C09-A014 · Retrosynthetic analysis
 
-Record: recvvJaLniApfx  
-Course: Organic Chemistry I  
-Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+Version: v1 · alignment: unverified
 
-```text
 Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Retrosynthetic Analysis: Work Backward’. Learning objective: Retrosynthesis identifies simpler precursors then verifies a feasible forward reaction. Use An ether target: methyl ethyl ether as the concrete example. 0–5.16667s: Draw CH3–CH2–O–CH3 with O–methyl bond highlighted. Identify the bond you want to make. Choose a simple C–O disconnection. 5.16667–11.1667s: Split highlighted C–O bond; use hollow double-line retrosynthetic arrow to precursor boxes. A retrosynthetic arrow means planning. It is not a reaction mechanism. 11.1667–17.6667s: Reveal formal O− and methyl+ synthons with explicit imaginary-fragment label. Ethoxide supplies the nucleophile. A methyl fragment is electrophilic. 17.6667–24s: Replace methyl+ by CH3–I and ethoxide by Na+ salt; show backside approach corridor. Use sodium ethoxide and methyl iodide. The methyl center supports SN2. 24–30s: Replay actual one-step SN2 with incoming O, departing I, and restored ether target. Ethoxide displaces iodide. The target C–O bond is formed. Disconnect O–methyl bond into ethoxide and methyl electrophile, convert synthons to reagents, replay SN2 forward.
 
 Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
-```
+
+Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.

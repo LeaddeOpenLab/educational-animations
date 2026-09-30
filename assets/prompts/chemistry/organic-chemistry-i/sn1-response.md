@@ -1,11 +1,7 @@
-# SN1 Response: A Carbocation Intermediate
+# C09-A009 · SN1 Reaction
 
-Record: recvvJaLn7zaf2  
-Course: Organic Chemistry I  
-Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+Version: v2 · alignment: aligned
 
-```text
-Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘SN1 Response: A Carbocation Intermediate’. Learning objective: SN1 ionization precedes nucleophile attack and its rate depends on substrate concentration. Use tert-Butyl bromide hydrolysis as the concrete example. 0–4.66667s: Draw central carbon with three methyl groups and bromide; water separated. Water is the nucleophile. The C–Br bond is polarized. 4.66667–10.8333s: Electron arrow C–Br→Br followed by bond shrinking and Br anion moving away. The bond pair goes to bromide. A carbocation intermediate forms. 10.8333–16.1667s: Hold trigonal planar cation; plot initial barrier to a distinct intermediate well. Three bonds surround C⁺. Ionization is the slow step. 16.1667–21.5s: Water moves inward with electron arrow; reveal C–OH2+ bond. An oxygen lone pair forms C–O. The attached oxygen is protonated. 21.5–26.1667s: Transfer one H to solvent, change OH2+ to OH and reveal H3O+. Water removes a proton. The neutral alcohol remains. 26.1667–30s: Show completed alcohol and two-step energy trace with rate expression. rate = k[alkyl halide]. SN1 can compete with E1. Break C–Br first, hold a three-coordinate carbocation, attach water, then remove H+.
+Create a 30-second silent English animation about SN1 Reaction in Remotion 4.0.410 and React 19, at 1920×1080 and 30 fps. Use tert-butyl bromide hydrolysis: show the tertiary halide, C–Br bond-pair departure to bromide, the carbocation, water attack, deprotonation to tert-butanol, and an energy diagram with an intermediate. Keep the departing proton label separate from OH. End with rate=k[alkyl halide] and possible competition with E1. Use the supplied Organic Chemistry I source, formula assets and course theme. This describes artifact v2; use the provided code and dependencies to reconstruct it. Pixel-identical output on another machine has not been verified.
 
-Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
-```
+Scene source, shared course components and formula assets included. Clean-machine pixel-identical reproduction is unverified.

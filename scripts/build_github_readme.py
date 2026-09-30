@@ -1,160 +1,75 @@
 #!/usr/bin/env python3
-"""Build a GitHub-native, no-JavaScript card navigation README."""
-import html
-import json
-import re
-from collections import OrderedDict
+"""Generate README, course pages, prompt cards and full index from final records."""
+import html,json,re
 from pathlib import Path
+from collections import OrderedDict
+from final_record import review_passed
+root=Path(__file__).resolve().parents[1]
+items=json.loads((root/'data/prompts.json').read_text())
+releases=json.loads((root/'data/releases.json').read_text()) if (root/'data/releases.json').exists() else {}
+slug=lambda s:re.sub(r'[^a-z0-9]+','-',s.lower()).strip('-')
+ready=lambda x:x.get('status')=='ready' and bool(x.get('video'))
+page=lambda x:f"catalog/{slug(x['subject'])}/{slug(x['tags'][1])}.md"
+name=lambda x:x.get('standard_name',x['title'])
+summary=lambda rows:f"{sum(bool(ready(x)) for x in rows)} videos · {sum(not ready(x) for x in rows)} awaiting production"
+lib=OrderedDict()
+for x in items: lib.setdefault(x['subject'],OrderedDict()).setdefault(x['course'],[]).append(x)
+lines=['# Leadde Knowledge in Motion','', 'Short educational animations with concept explanations and versioned reuse materials.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','', '## Featured videos','']
+for x in items:
+ if x.get('featured') and ready(x):lines += [f"- [**{name(x)}**]({page(x)}#{x['id'].lower()}) — {x['learning_objective']} ([inspection scope]({x['featured']['evidence']}))"]
+lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
+index=['# Complete concept index','','[Home](README.md)','']
+for subject,courses in lib.items():
+ rows=[x for r in courses.values() for x in r]
+ lines += [f'<a id="{slug(subject)}"></a>',f'### {subject}', '',f"{summary(rows)}"+(' · **No finished videos yet**' if not any(ready(x) for x in rows) else ''),'']
+ for course,rows in courses.items():
+  first=rows[0]; dest=page(first); code=first['tags'][1]
+  lines += [f'<a id="{slug(course)}"></a>',f"- [**{course}**]({dest}) — {summary(rows)}"]
+  index += [f'## {course}','']
+  out=[f'# {course}','',f'[← {subject}](../../README.md#{slug(subject)}) · [Complete index](../../INDEX.md)','',summary(rows),'',f"Course bibliography supplied by the source list: {first['textbook']}. Specific supporting references are listed per concept; missing references are not inferred.",'']
+  release=releases.get(code)
+  if release:
+   out += [f"[Download course ZIP]({release['download_url']}) · {release['video_count']} videos · {release['version']} · updated {release['updated_at']}",f"Package status: {release.get('status','unknown')}. Package membership is recorded in its index.",'']
+  else:out+=['Course download package: not yet published.','']
+  product={'Mathematics':'https://leadde.ai/solutions/math-animation','Mathematics & Statistics':'https://leadde.ai/solutions/math-animation','Chemistry':'https://leadde.ai/solutions/chemistry-animation'}.get(subject,'https://leadde.ai/animation')
+  out += [f'[Explore Leadde animation tools]({product}). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.','','---','']
+  for x in rows:
+   id=x['id']; title=name(x); x['page']=dest
+   index += [f"- [{id} · {title}]({dest}#{id.lower()}) — {'video' if ready(x) else 'awaiting production'}"]
+   out += [f'<a id="{id.lower()}"></a>']
+   for alias in x.get('aliases',[]):out += [f'<a id="{slug(alias)}"></a>']
+   out += [f'## {title}','',f"`{id}` · {'Video available' if ready(x) else 'Awaiting production'} · review: **{x.get('review',{}).get('status','unreviewed')}** · version `{x.get('artifact_version','draft')}`",'',f"**Learn:** {x.get('learning_objective') or 'Pending verification.'}",f"**Takeaway:** {x.get('core_conclusion') or 'Pending verification.'}",'']
+   if ready(x):
+    if x.get('player'):out += [x['player'],'']
+    elif x.get('cover'):out += [f"![{title}](../../{x['cover']})",'']
+    media=x.get('media',{})
+    out += [f"[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/{x['video']}) · {media.get('duration_seconds','unknown')} s · {media.get('width','?')}×{media.get('height','?')} · {media.get('format','unknown')}",'']
+   reuse=x.get('reuse',{})
+   out += [f"**Public prompt:** {reuse.get('status','unverified')}. {reuse.get('notes','')}",'','<details>','<summary>View and copy Prompt</summary>','','````text',x.get('prompt') or 'An aligned final-video prompt is pending.','````','','</details>','']
+   prod=x.get('production',{})
+   out += [f"**Production:** {prod.get('tool') or 'Tool not yet verified'}; dependencies: {', '.join(prod.get('dependencies',[])) or 'pending'}. Exact reproduction: {'verified' if reuse.get('exact_reproduction_verified') else 'not verified'}.",'']
+   source=prod.get('source_url')
+   out += [f"[Source / reproduction materials]({source})" if source else '[Reproduction requirements and missing materials](../../docs/REUSE.md)','']
+   for ref in x.get('references',[]):out += [f"- [{ref.get('title','Reference')}]({ref['url']}) — {ref.get('scope','concept reference')}"]
+   if not x.get('references'):out+=['References: pending verification.']
+   if x.get('pending_sync'):out+=['', '**Pending synchronization:** '+', '.join(x['pending_sync'])+'.']
+   out += ['', '[Back to course top](#'+slug(course)+')','','---','']
+   for old_key in ('prompt_file','prompt_card'):
+    old_path=x.get(old_key)
+    if isinstance(old_path,str) and old_path.endswith('.md') and not old_path.startswith('http'):
+     legacy=root/old_path;legacy.parent.mkdir(parents=True,exist_ok=True)
+     legacy.write_text(f"# {id} · {title}\n\nVersion: {x['artifact_version']} · alignment: {reuse.get('status','unverified')}\n\n{x.get('prompt') or 'Aligned final-video prompt pending.'}\n\n{reuse.get('notes','')}\n")
+  target=root/dest;target.parent.mkdir(parents=True,exist_ok=True);target.write_text('\n'.join(out).rstrip()+'\n')
+ lines+=['']
+changes=json.loads((root/'data/changes.json').read_text()) if (root/'data/changes.json').exists() else []
+lines+=['## Recent changes','']
+for c in changes[-8:][::-1]:lines+=[f"- {c['date']} — {c['description']}"]
+lines+=['','## Use and contribute','','See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).','','[Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.','','The static website can be served locally with `python3 -m http.server 8000`. No public site deployment is claimed.']
+(root/'README.md').write_text('\n'.join(lines)+'\n');(root/'INDEX.md').write_text('\n'.join(index)+'\n')
+# page is a stable derived locator stored alongside final metadata for publishers.
+(root/'data/prompts.json').write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n')
+print(f'Generated {len(items)} concepts, {sum(len(c) for c in lib.values())} courses')
 
-root = Path(__file__).resolve().parents[1]
-items = json.loads((root / "data/prompts.json").read_text(encoding="utf-8"))
+(root/'data/linear-algebra-video-prompts.json').write_text(json.dumps([{'id':x['id'],'title':x['final_title'],'knowledgePoint':name(x),'prompt':x.get('prompt',''),'video':x['video'],'artifact_version':x['artifact_version'],'reuse':x['reuse']} for x in items if x['course']=='Linear Algebra'],ensure_ascii=False,indent=2)+'\n')
 
-library = OrderedDict()
-for item in items:
-    library.setdefault(item["subject"], OrderedDict()).setdefault(item["course"], []).append(item)
-course_count = sum(len(courses) for courses in library.values())
-
-def slug(value):
-    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
-
-def course_page(first):
-    return f"catalog/{slug(first['subject'])}/{slug(first['tags'][1])}.md"
-
-def card(subject, courses):
-    count = sum(len(prompts) for prompts in courses.values())
-    return f'''<td width="33%" valign="top">
-  <a href="#{slug(subject)}"><img src="assets/subject-cards/{slug(subject)}.png" width="100%" alt="{html.escape(subject)} subject card"></a><br>
-  <sub>{len(courses)} courses · {count} prompts</sub>
-</td>'''
-
-def course_card(course, prompts):
-    first = prompts[0]
-    course_code = first["tags"][1].lower()
-    page = course_page(first)
-    cover = first.get("cover", f"assets/course-covers/{course_code}.svg")
-    return f'''<td width="33%" valign="top">
-  <a href="{page}"><img src="{cover}" width="100%" alt="{html.escape(course)} course cover"></a><br>
-  <a href="{page}"><strong>{html.escape(course)}</strong></a><br>
-  <sub>{len(prompts)} prompts · {html.escape(first['textbook'])}</sub>
-</td>'''
-
-def write_course_page(subject, course, prompts):
-    first = prompts[0]
-    page = root / course_page(first)
-    page.parent.mkdir(parents=True, exist_ok=True)
-    page_lines = [
-        f"# {course}",
-        "",
-        f"[← Back to {subject}](../../README.md#{slug(subject)})",
-        "",
-        f"**Textbook:** {first['textbook']}  ",
-        f"**Knowledge points:** {len(prompts)}",
-        "",
-        "> **Turn your own idea into an animation:** [Create with Leadde →](https://leadde.ai/animation)",
-        "",
-    ]
-    page_lines.extend(["---", ""])
-    for prompt in prompts:
-        video_ready = prompt.get("status") == "ready" and prompt.get("video")
-        page_lines.extend([
-            f'<a id="{prompt["id"].lower()}"></a>',
-            f"## {prompt['title']}",
-            "",
-            f"`{prompt['id']}` · " + ("**▶ Play video below**" if prompt.get("player") else "Video ready" if video_ready else "Video coming soon"),
-            "",
-        ])
-        if video_ready:
-            if prompt.get("player"):
-                # A GitHub attachment URL on its own line renders as GitHub's native video player.
-                page_lines.extend([prompt["player"], ""])
-        page_lines.extend([
-            "> **Make this concept move:** [Create an animation with Leadde →](https://leadde.ai/animation)",
-            "",
-            f"[Back to course top](#{slug(course)})",
-            "",
-            "---",
-            "",
-        ])
-    page.write_text("\n".join(page_lines), encoding="utf-8")
-
-lines = [
-    "# Leadde Knowledge in Motion",
-    "",
-    f"> An open educational animation and AI prompt library with **{len(items)} English prompts** across **{len(library)} disciplines** and **{course_count} courses**.",
-    ">",
-    "> Browse knowledge points and play finished videos directly with GitHub's native video player.",
-    ">",
-    "> **Watch the concept. Reuse the prompt. [Create your own animation with Leadde →](https://leadde.ai/animation)**",
-    "",
-    "## Browse the library",
-    "",
-    "<table>",
-]
-
-for start in range(0, len(library), 3):
-    lines.append("<tr>")
-    groups = list(library.items())[start:start + 3]
-    lines.extend(card(subject, courses) for subject, courses in groups)
-    lines.extend("<td></td>" for _ in range(3 - len(groups)))
-    lines.append("</tr>")
-lines.extend(["</table>", "", "---", ""])
-
-for subject, courses in library.items():
-    total = sum(len(prompts) for prompts in courses.values())
-    lines.extend([
-        f"<a id=\"{slug(subject)}\"></a>",
-        f"## {subject}",
-        "",
-        f"**{len(courses)} courses · {total} prompts** &nbsp; [Back to cards](#browse-the-library)",
-        "",
-        "<table>",
-    ])
-    for start in range(0, len(courses), 3):
-        lines.append("<tr>")
-        groups = list(courses.items())[start:start + 3]
-        lines.extend(course_card(course, prompts) for course, prompts in groups)
-        lines.extend("<td></td>" for _ in range(3 - len(groups)))
-        lines.append("</tr>")
-    lines.extend(["</table>", ""])
-    for course, prompts in courses.items():
-        write_course_page(subject, course, prompts)
-        textbook = html.escape(prompts[0]["textbook"])
-        page = course_page(prompts[0])
-        lines.extend([
-            f"### [{course}]({page})",
-            "",
-            f"**TEXTBOOK · {textbook}** &nbsp; [Open course page]({page})",
-            "",
-            "#### Knowledge points",
-            "",
-        ])
-        for index, prompt in enumerate(prompts, 1):
-            video_ready = prompt.get("status") == "ready" and prompt.get("video")
-            marker = "▶ PLAY VIDEO" if prompt.get("player") else "▶ OPEN VIDEO" if video_ready else "VIDEO COMING SOON"
-            lines.append(f"{index}. [**{html.escape(prompt['title'])}**]({page}#{prompt['id'].lower()}) · `{prompt['id']}` · {marker}")
-        lines.append("")
-    lines.extend(["---", ""])
-
-lines.extend([
-    "## Video import convention",
-    "",
-    "When a video is complete, place it at:",
-    "",
-    "```text",
-    "assets/videos/<subject-slug>/<course-slug>/<prompt-slug>.mp4",
-    "```",
-    "",
-    "Then set the matching entry in `data/prompts.json` to `status: ready`, populate its repository `video` path, and add its GitHub attachment URL as `player`. A standalone GitHub attachment URL renders as the native inline player.",
-    "",
-    "To refresh the prompt catalog from the source spreadsheet, run:",
-    "",
-    "```bash",
-    "python3 scripts/import_csv.py <prompt-master.csv> data/prompts.json",
-    "python3 scripts/build_github_readme.py",
-    "```",
-    "",
-    "The importer preserves existing English entries, translates the title and explanatory fields of newly added Chinese rows into English, and aborts before writing if any Chinese remains in a prompt.",
-])
-
-(root / "README.md").write_text("\n".join(lines), encoding="utf-8")
-print(f"Built README with {len(items)} prompt cards.")
+(root/'data/backlog.json').write_text(json.dumps([{'id':x['id'],'standard_name':name(x),'version':x['artifact_version'],'review':x['review']['status'],'prompt_alignment':x['reuse']['status'],'missing':[k for k in ['learning_objective','core_conclusion','references'] if not x.get(k)]} for x in items if ready(x) and (not review_passed(x) or x['reuse']['status']!='aligned')],ensure_ascii=False,indent=2)+'\n')

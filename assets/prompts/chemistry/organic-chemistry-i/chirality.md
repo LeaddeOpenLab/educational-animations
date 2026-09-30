@@ -1,11 +1,9 @@
-# Chirality: Test the Mirror Image
+# C09-A006 · Chirality
 
-Record: recvvJaLmXH5oC  
-Course: Organic Chemistry I  
-Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+Version: v1 · alignment: unverified
 
-```text
 Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Chirality: Test the Mirror Image’. Learning objective: A chiral molecule cannot be superimposed on its mirror image by rotation. Use A tetrahedral carbon bearing Br, Cl, F and H as the concrete example. 0–5.83333s: Build two plain bonds, one solid wedge and one hashed wedge with distinct substituents. A tetrahedral carbon is attached to Br, Cl, F and H. 5.83333–12s: Introduce a mirror plane and reveal the reflected tetrahedral arrangement. Reflection reverses handedness. The bonds keep the same connectivity. 12–18.8333s: Translate one projection toward the other; align two groups and highlight swapped remaining depth bonds. Rotations cannot fix the mismatch. The mirror pair is non-superimposable. 18.8333–24.6667s: Replace F by Cl and visibly pair identical groups to remove distinct handedness. With two identical groups, this center is no longer stereogenic. 24.6667–30s: Return distinct group pair with mirror plane and highlight opposite wedge orientations. A four-group carbon is a common cause. Mirror-image matching is the definition. Construct a tetrahedron, reflect it, align a pair of groups, then show the remaining mismatch; contrast repeated groups.
 
 Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
-```
+
+Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.

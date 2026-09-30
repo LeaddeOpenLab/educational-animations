@@ -1,0 +1,28 @@
+{
+  "name": "intro-algorithms",
+  "label": "Introduction to Algorithms",
+  "mode": "dark",
+  "note": "配色族 tol-vibrant（Paul Tol vibrant（7 色全通过））；shell 取自配色库条目 tol-vibrant，内容角色在族内池中按 rot=[3,0,2,4] 轮换。库条目自身声明的 primary/accent/result/warn = #33bbee / #ee7733 / #009988 / #cc3311，全部通过描边门禁。",
+  "colors": {
+    "bg0": "#0e0d10",
+    "bg1": "#18181f",
+    "bg2": "#22222d",
+    "grid": "rgba(148,163,184,0.13)",
+    "axis": "rgba(148,163,184,0.45)",
+    "textStrong": "#f8fafc",
+    "textMuted": "#a8b4c4",
+    "textDim": "#94a3b8",
+    "primary": "#0077bb",
+    "accent": "#33bbee",
+    "result": "#009988",
+    "warn": "#cc3311",
+    "alt": "#ee3377"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 60,
+    "gridOpacity": 0.4,
+    "glowOpacity": 0.14,
+    "glowBlur": 44
+  }
+}

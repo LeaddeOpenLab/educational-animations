@@ -1,0 +1,14 @@
+[
+  {
+    "date": "2026-09-30T07:42:10+00:00",
+    "description": "Corrected eight catalog terms without changing IDs or slugs; separated generation/review/publication; measured all 299 available MP4 files."
+  },
+  {
+    "date": "2026-09-30T07:42:10+00:00",
+    "description": "C05-A002 v2: repaired 16-second formula overlap, rebuilt video and cover, replaced stale Manim/15-second Prompt with actual Remotion/30-second instructions; new native attachment uploaded."
+  },
+  {
+    "date": "2026-09-30T08:01:25+00:00",
+    "description": "Rebuilt the seven other requested terminology corrections; clarified the null-plane slice, corrected left-null cross-section and projection axis scales, removed projection formula overlap, and separated the SN1 proton label."
+  }
+]

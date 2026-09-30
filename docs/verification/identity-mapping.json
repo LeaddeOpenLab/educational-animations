@@ -1,0 +1,18 @@
+{
+  "new_production_record": {
+    "id": "recvw24MaggI13",
+    "record_id": "recvw24MaggI13",
+    "baseline_version": "v1 (introduced for the existing delivered bytes)",
+    "production_batch": "batch-20260928-generative-ai-view-order",
+    "actual_video_bytes_match": true,
+    "actual_attachment_matches": true,
+    "note": "Real newly produced September batch record; no new topic was manufactured for this test."
+  },
+  "revised_record": {
+    "id": "C05-A002",
+    "record_id": "recvvJaLjB54MH",
+    "version": "v2",
+    "actual_video_bytes_match": true,
+    "old_player_retained_in_history": true
+  }
+}

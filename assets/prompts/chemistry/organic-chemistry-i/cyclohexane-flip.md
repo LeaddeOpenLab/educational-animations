@@ -1,11 +1,9 @@
-# Cyclohexane Flip: Axial Becomes Equatorial
+# C09-A005 · Cyclohexane flip
 
-Record: recvvJaLmVhko1  
-Course: Organic Chemistry I  
-Duration: 30 seconds · 1920×1080 · 30 fps · Silent
+Version: v1 · alignment: unverified
 
-```text
 Create a 30-second silent English educational animation at 1920×1080 and 30 fps for Organic Chemistry I, titled ‘Cyclohexane Flip: Axial Becomes Equatorial’. Learning objective: A chair flip exchanges axial and equatorial positions but preserves up/down stereochemistry. Use Methylcyclohexane as the concrete example. 0–5.83333s: Draw a skewed chair with vertical up methyl at one ring carbon. The chair is not a flat hexagon. This methyl group points up. 5.83333–12s: Reveal same-face hydrogen sites and two curved contact highlights. Axial methyl meets two axial H atoms. These are 1,3-diaxial contacts. 12–18.8333s: Interpolate chair puckering and methyl bond direction; preserve carbon connectivity. Axial becomes equatorial. The methyl group still points up. 18.8333–24.6667s: Compare small axial and equatorial chairs with crowded regions only on axial. More room reduces steric strain. Both drawings represent the same molecule. 24.6667–30s: Enlarge equatorial chair with up-direction marker and a/e transition trace. a ↔ e changes. Up remains up; down remains down. Morph a true chair skeleton while an up methyl moves from axial to equatorial; highlight crowding only in axial conformer.
 
 Use a dark navy gradient #070b12 → #0d1626 → #142238, blue #60a5fa for molecular structure, amber #fbbf24 for electron movement, green #34d399 for conclusions, red #f87171 for warnings, near-white #f8fafc headings and #94a3b8 secondary text. Set Helvetica Neue with Helvetica/Arial sans-serif fallbacks. Place explanatory copy on the left and the chemical diagram on the right; keep atom labels, bond orders, charges and electron arrows legible. Course labels fade in over 12 frames; headings enter at frame 18 over 14 frames; body lines enter at frame 30 with 10-frame staggering; the green takeaway enters at frame 54 over 14 frames. Use purposeful bond, orbital or projection changes according to each scene, retain a final reading hold, and introduce no essential information within a scene’s last 25 frames. No narration, music or audio.
-```
+
+Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.

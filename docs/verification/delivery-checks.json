@@ -1,0 +1,190 @@
+{
+  "current_packages": 28,
+  "packaged_videos": 299,
+  "packages": [
+    {
+      "code": "CS50x",
+      "videos": 16,
+      "version": "bundle-1"
+    },
+    {
+      "code": "6.006",
+      "videos": 13,
+      "version": "bundle-2"
+    },
+    {
+      "code": "CS-COA",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "CS-OS",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "CS-NET",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "CS-DB",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "CS-COMP",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "6.036",
+      "videos": 20,
+      "version": "bundle-1"
+    },
+    {
+      "code": "AI-DL",
+      "videos": 25,
+      "version": "bundle-2"
+    },
+    {
+      "code": "AI-NLP",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "AI-CV",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "AI-RL",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "AI-GEN",
+      "videos": 23,
+      "version": "bundle-2"
+    },
+    {
+      "code": "18.01",
+      "videos": 12,
+      "version": "bundle-1"
+    },
+    {
+      "code": "18.06",
+      "videos": 16,
+      "version": "bundle-2"
+    },
+    {
+      "code": "MATH-MVC",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "MATH-ODE",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "MATH-DM",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "MATH-AA",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "MATH-OPT",
+      "videos": 8,
+      "version": "bundle-1"
+    },
+    {
+      "code": "6.041",
+      "videos": 12,
+      "version": "bundle-2"
+    },
+    {
+      "code": "5.12",
+      "videos": 14,
+      "version": "bundle-2"
+    },
+    {
+      "code": "ASTR 160",
+      "videos": 12,
+      "version": "bundle-2"
+    },
+    {
+      "code": "ES-MCU",
+      "videos": 4,
+      "version": "bundle-1"
+    },
+    {
+      "code": "ES-RTOS",
+      "videos": 4,
+      "version": "bundle-1"
+    },
+    {
+      "code": "DE-DLD",
+      "videos": 5,
+      "version": "bundle-1"
+    },
+    {
+      "code": "DE-FPGA",
+      "videos": 4,
+      "version": "bundle-1"
+    },
+    {
+      "code": "AI-AGENT-SYSTEMS",
+      "videos": 15,
+      "version": "bundle-2"
+    }
+  ],
+  "unique_v2_attachment_comments": 8,
+  "player_head_checks": [
+    {
+      "id": "C02-A008",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C02-A009",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C05-A002",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C05-A003",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C05-A004",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C05-A005",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C09-A009",
+      "status": 200,
+      "content_type": "video/mp4"
+    },
+    {
+      "id": "C09-A011",
+      "status": 200,
+      "content_type": "video/mp4"
+    }
+  ],
+  "note": "HEAD checks confirm URL availability, not interactive GitHub playback. Local browser media metadata and layout were separately tested."
+}

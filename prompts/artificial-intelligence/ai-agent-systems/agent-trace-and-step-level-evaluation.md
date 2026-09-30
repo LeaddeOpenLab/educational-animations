@@ -1,16 +1,9 @@
----
-video: 14_Agent_Trace_and_Step_Level_Evaluation.mp4
-knowledge_point: "Agent Trace and Step-Level Evaluation"
-palette: tol-vibrant
-mode: dark
-duration_s: 30
-frames: 900
----
+# recvw25izM48sG · Agent Trace and Step-Level Evaluation
 
-# Agent Trace and Step Level Evaluation
+Version: v1 · alignment: unverified
 
-```text
 A 30-second silent English concept animation for a university AI Agent Systems course: Agent Trace and Step-Level Evaluation. Explain why agent quality must be evaluated across each transition from input to plan, tool call, result, and score instead of judging only the final answer.
 
 Dark ground `#0e0d10` -> `#18181f` -> `#22222d`; primary `#33bbee` on the main entity; accent `#ee7733` on the key quantity; result `#009988` on the conclusion; warn `#cc3311` on danger; "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. draw-on, stagger-in, and node-reveal — each element fades in over 12f with offsets stepping 8-14f, and nothing lands in a scene's last 25 frames.
-```
+
+Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.

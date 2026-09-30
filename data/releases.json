@@ -1,0 +1,1506 @@
+{
+  "CS50x": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs50x/cs50x-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cs50x",
+    "video_count": 16,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:44:42Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C01-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A012",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A013",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A014",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A015",
+        "version": "v1"
+      },
+      {
+        "id": "C01-A016",
+        "version": "v1"
+      }
+    ]
+  },
+  "6.006": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-6-006/6-006-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-6-006",
+    "video_count": 13,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:05:08Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C02-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A008",
+        "version": "v2"
+      },
+      {
+        "id": "C02-A009",
+        "version": "v2"
+      },
+      {
+        "id": "C02-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A012",
+        "version": "v1"
+      },
+      {
+        "id": "C02-A013",
+        "version": "v1"
+      }
+    ]
+  },
+  "CS-COA": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs-coa/cs-coa-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cs-coa",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:45:02Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C21-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C21-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "CS-OS": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs-os/cs-os-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cs-os",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:45:13Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C22-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C22-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "CS-NET": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs-net/cs-net-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cs-net",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:45:21Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C23-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C23-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "CS-DB": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs-db/cs-db-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cs-db",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:45:30Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C24-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C24-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "CS-COMP": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs-comp/cs-comp-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cs-comp",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:45:38Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C25-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C25-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "6.036": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-6-036/6-036-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-6-036",
+    "video_count": 20,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:45:49Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C03-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A012",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A013",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A014",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A015",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A016",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A017",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A018",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A019",
+        "version": "v1"
+      },
+      {
+        "id": "C03-A020",
+        "version": "v1"
+      }
+    ]
+  },
+  "AI-DL": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-dl/ai-dl-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-ai-dl",
+    "video_count": 25,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:05:42Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C26-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A012",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A013",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A014",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A015",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A016",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A017",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A018",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A019",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A020",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A021",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A022",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A023",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A024",
+        "version": "v1"
+      },
+      {
+        "id": "C26-A025",
+        "version": "v1"
+      }
+    ]
+  },
+  "AI-NLP": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-nlp/ai-nlp-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-ai-nlp",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:46:05Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C27-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C27-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "AI-CV": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-cv/ai-cv-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-ai-cv",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:46:15Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C28-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C28-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "AI-RL": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-rl/ai-rl-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-ai-rl",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:46:25Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C29-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C29-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "AI-GEN": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-gen/ai-gen-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-ai-gen",
+    "video_count": 23,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:05:58Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C30-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C30-A008",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24KNremp6",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24MaggI13",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24NhiUpZV",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24OpQBvQ8",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24PwwhY6Z",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24QGLkzOo",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24T2zGQI9",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24U8nIXtd",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24Vlk0V3K",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24Wq3ZOpq",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24XspdsIn",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24YBaWNKx",
+        "version": "v1"
+      },
+      {
+        "id": "recvw24ZMOZKIS",
+        "version": "v1"
+      },
+      {
+        "id": "recvw250ZqaTah",
+        "version": "v1"
+      },
+      {
+        "id": "recvw2525onwzm",
+        "version": "v1"
+      }
+    ]
+  },
+  "18.01": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-01/18-01-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-18-01",
+    "video_count": 12,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:46:51Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C04-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C04-A012",
+        "version": "v1"
+      }
+    ]
+  },
+  "18.06": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-18-06",
+    "video_count": 16,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:06:12Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C05-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A002",
+        "version": "v2"
+      },
+      {
+        "id": "C05-A003",
+        "version": "v2"
+      },
+      {
+        "id": "C05-A004",
+        "version": "v2"
+      },
+      {
+        "id": "C05-A005",
+        "version": "v2"
+      },
+      {
+        "id": "C05-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A012",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A013",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A014",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A015",
+        "version": "v1"
+      },
+      {
+        "id": "C05-A016",
+        "version": "v1"
+      }
+    ]
+  },
+  "MATH-MVC": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-math-mvc/math-mvc-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-math-mvc",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:47:11Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C31-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C31-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "MATH-ODE": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-math-ode/math-ode-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-math-ode",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:47:20Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C32-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C32-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "MATH-DM": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-math-dm/math-dm-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-math-dm",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:47:28Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C33-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C33-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "MATH-AA": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-math-aa/math-aa-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-math-aa",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:47:38Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C34-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C34-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "MATH-OPT": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-math-opt/math-opt-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-math-opt",
+    "video_count": 8,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:47:47Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C35-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C35-A008",
+        "version": "v1"
+      }
+    ]
+  },
+  "6.041": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-statistics-6-041/6-041-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-statistics-6-041",
+    "video_count": 12,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:06:29Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C06-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C06-A012",
+        "version": "v1"
+      }
+    ]
+  },
+  "5.12": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-chemistry-5-12/5-12-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-chemistry-5-12",
+    "video_count": 14,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:06:43Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C09-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A009",
+        "version": "v2"
+      },
+      {
+        "id": "C09-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A011",
+        "version": "v2"
+      },
+      {
+        "id": "C09-A012",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A013",
+        "version": "v1"
+      },
+      {
+        "id": "C09-A014",
+        "version": "v1"
+      }
+    ]
+  },
+  "ASTR 160": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-astronomy-astr-160/astr-160-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-astronomy-astr-160",
+    "video_count": 12,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:06:53Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C20-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A005",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A006",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A007",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A008",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A009",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A010",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A011",
+        "version": "v1"
+      },
+      {
+        "id": "C20-A012",
+        "version": "v1"
+      }
+    ]
+  },
+  "ES-MCU": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-embedded-systems-es-mcu/es-mcu-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-embedded-systems-es-mcu",
+    "video_count": 4,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:48:46Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C36-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C36-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C36-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C36-A004",
+        "version": "v1"
+      }
+    ]
+  },
+  "ES-RTOS": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-embedded-systems-es-rtos/es-rtos-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-embedded-systems-es-rtos",
+    "video_count": 4,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:48:54Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C37-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C37-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C37-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C37-A004",
+        "version": "v1"
+      }
+    ]
+  },
+  "DE-DLD": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-digital-electronics-de-dld/de-dld-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-digital-electronics-de-dld",
+    "video_count": 5,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:49:02Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C38-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C38-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C38-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C38-A004",
+        "version": "v1"
+      },
+      {
+        "id": "C38-A005",
+        "version": "v1"
+      }
+    ]
+  },
+  "DE-FPGA": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-digital-electronics-de-fpga/de-fpga-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-digital-electronics-de-fpga",
+    "video_count": 4,
+    "version": "bundle-1",
+    "updated_at": "2026-09-30T07:49:10Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C39-A001",
+        "version": "v1"
+      },
+      {
+        "id": "C39-A002",
+        "version": "v1"
+      },
+      {
+        "id": "C39-A003",
+        "version": "v1"
+      },
+      {
+        "id": "C39-A004",
+        "version": "v1"
+      }
+    ]
+  },
+  "AI-AGENT-SYSTEMS": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-agent-systems/ai-agent-systems-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-artificial-intelligence-ai-agent-systems",
+    "video_count": 15,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:07:11Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "recvw253eEvb3X",
+        "version": "v1"
+      },
+      {
+        "id": "recvw254kdt8Gm",
+        "version": "v1"
+      },
+      {
+        "id": "recvw255ufAgzt",
+        "version": "v1"
+      },
+      {
+        "id": "recvw256zNx1Eb",
+        "version": "v1"
+      },
+      {
+        "id": "recvw257DvN3QU",
+        "version": "v1"
+      },
+      {
+        "id": "recvw258JLr6AX",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25aen0hew",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25bHkLHf9",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25cRpcO1W",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25dWAMuw5",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25f2UAbYl",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25glDKhRI",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25ht8600c",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25izM48sG",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25jK3cwAs",
+        "version": "v1"
+      }
+    ]
+  }
+}

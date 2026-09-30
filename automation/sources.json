@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "discipline_priority_tiers": [["Computer Science", "Artificial Intelligence", "Digital Electronics", "Embedded Systems"], ["Mathematics & Statistics"]],
+  "max_new_candidates_per_run": 16,
+  "max_discovery_courses_per_run": 2,
+  "target_course_candidate_pool": 8,
+  "max_production_per_run": 16,
+  "max_production_per_course": 8,
+  "max_courses_per_run": 2,
+  "target_course_batch_size": 8,
+  "max_batch_wait_days": 14,
+  "sources": [
+    {
+      "id": "mit-algorithms-2020",
+      "url": "https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-notes/",
+      "discipline": "Computer Science",
+      "course": "Introduction to Algorithms",
+      "pool_anchor_regex": "^Lecture [0-9]+:",
+      "topics": [
+        {"anchor": "Lecture 12: Bellman-Ford", "name": "Bellman-Ford Algorithm", "aliases": ["Bellman-Ford"], "reason": "A stepwise relaxation process and a negative-cycle check fit a short graph animation."}
+      ]
+    },
+    {
+      "id": "pytorch-tutorial-index",
+      "url": "https://docs.pytorch.org/tutorials/beginner/basics/",
+      "discipline": "Artificial Intelligence",
+      "course": "Deep Learning",
+      "allowed_hosts": ["pytorch.org"],
+      "pool_path_prefixes": ["/tutorials/beginner/basics/"],
+      "topics": [
+        {"anchor": "Data Loading Optimization in PyTorch", "name": "Data Loading Optimization", "aliases": ["Optimizing Data Loading"], "reason": "A data pipeline, workers, and a waiting accelerator can be explained visually in one causal example."}
+      ]
+    },
+    {
+      "id": "mit-applied-probability-index",
+      "url": "https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/pages/resource-index/",
+      "discipline": "Mathematics & Statistics",
+      "course": "Applied Probability",
+      "topics": [
+        {"anchor": "Poisson Process - I", "name": "Poisson Process", "aliases": ["Poisson Arrival Process"], "reason": "Random arrivals over equal time intervals make the rate and count mechanism visible in 30 seconds."}
+      ]
+    },
+    {
+      "id": "zephyr-kernel-services",
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/",
+      "discipline": "Embedded Systems",
+      "course": "Real-Time Operating Systems",
+      "topics": [
+        {"anchor": "Semaphores", "name": "Counting Semaphore", "aliases": ["Semaphores", "Semaphore"], "reason": "A token count, waiting tasks, and give/take operations form a concrete independent RTOS mechanism."}
+      ]
+    },
+    {
+      "id": "hdlbits-problem-sets",
+      "url": "https://hdlbits.01xz.net/wiki/Problem_sets",
+      "discipline": "Digital Electronics",
+      "course": "Digital Logic Design",
+      "topics": [
+        {"anchor": "4-bit shift register", "name": "Shift Register", "aliases": ["Shift Registers", "4-bit Shift Register"], "reason": "A bit pattern moving one stage per clock edge is a compact, testable sequential-circuit animation."}
+      ]
+    }
+  ]
+}
