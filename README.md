@@ -1,6 +1,6 @@
 # Leadde Knowledge in Motion
 
-> An open educational animation and AI prompt library with **436 English prompts** across **17 disciplines** and **40 courses**.
+> An open educational animation and AI prompt library with **451 English prompts** across **17 disciplines** and **41 courses**.
 >
 > Browse knowledge points and play finished videos directly with GitHub's native video player.
 >
@@ -12,7 +12,7 @@
 <tr>
 <td width="33%" valign="top">
   <a href="#computer-science"><img src="assets/subject-cards/computer-science.png" width="100%" alt="Computer Science subject card"></a><br>
-  <sub>7 courses · 69 prompts</sub>
+  <sub>8 courses · 84 prompts</sub>
 </td>
 <td width="33%" valign="top">
   <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence subject card"></a><br>
@@ -97,7 +97,7 @@
 <a id="computer-science"></a>
 ## Computer Science
 
-**7 courses · 69 prompts** &nbsp; [Back to cards](#browse-the-library)
+**8 courses · 84 prompts** &nbsp; [Back to cards](#browse-the-library)
 
 <table>
 <tr>
@@ -140,7 +140,11 @@
   <a href="catalog/computer-science/cs-comp.md"><strong>Compiler Design</strong></a><br>
   <sub>8 prompts · Compilers: Principles, Techniques, and Tools (Aho et al.)</sub>
 </td>
-<td></td>
+<td width="33%" valign="top">
+  <a href="catalog/computer-science/cloud-native-kubernetes.md"><img src="assets/course-covers/cloud-native-kubernetes.jpg" width="100%" alt="Cloud Native and Kubernetes course cover"></a><br>
+  <a href="catalog/computer-science/cloud-native-kubernetes.md"><strong>Cloud Native and Kubernetes</strong></a><br>
+  <sub>15 prompts · Kubernetes, Docker, and Helm official documentation</sub>
+</td>
 <td></td>
 </tr>
 </table>
@@ -262,6 +266,28 @@
 6. [**Intermediate Representation**](catalog/computer-science/cs-comp.md#c25-a006) · `C25-A006` · ▶ PLAY VIDEO
 7. [**Data-Flow Analysis**](catalog/computer-science/cs-comp.md#c25-a007) · `C25-A007` · ▶ PLAY VIDEO
 8. [**Register Allocation**](catalog/computer-science/cs-comp.md#c25-a008) · `C25-A008` · ▶ PLAY VIDEO
+
+### [Cloud Native and Kubernetes](catalog/computer-science/cloud-native-kubernetes.md)
+
+**TEXTBOOK · Kubernetes, Docker, and Helm official documentation** &nbsp; [Open course page](catalog/computer-science/cloud-native-kubernetes.md)
+
+#### Knowledge points
+
+1. [**Container Image Layers and Build Cache: Reuse Layers**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7bjsk) · `recvw25sP7BJsk` · ▶ PLAY VIDEO
+2. [**Pod Scheduling onto a Node: Filter and Bind**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7ks8s) · `recvw25sP7ks8S` · ▶ PLAY VIDEO
+3. [**Deployment Replica Reconciliation: Restore Replicas**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7nfvs) · `recvw25sP7NFVs` · ▶ PLAY VIDEO
+4. [**Rolling Update and Rollback: Hand Off Traffic**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7yvvi) · `recvw25sP7YvVI` · ▶ PLAY VIDEO
+5. [**Service Discovery with ClusterIP: Keep a Stable IP**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7lnsn) · `recvw25sP7LNSN` · ▶ PLAY VIDEO
+6. [**Ingress Host and Path Routing: Match Host and Path**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7uxdl) · `recvw25sP7UxDl` · ▶ PLAY VIDEO
+7. [**ConfigMap Injection into a Pod: Compare Update Paths**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7njyg) · `recvw25sP7nJYg` · ▶ PLAY VIDEO
+8. [**Secret Mounting and Environment Variables: Rotate Keys**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7lwkj) · `recvw25sP7lWkJ` · ▶ PLAY VIDEO
+9. [**Liveness and Readiness Probes: Route or Restart**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7jbum) · `recvw25sP7JbUm` · ▶ PLAY VIDEO
+10. [**Horizontal Pod Autoscaler Feedback Loop: Scale to Target**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7irey) · `recvw25sP7iREY` · ▶ PLAY VIDEO
+11. [**PersistentVolume Claim Binding: Keep Stored Data**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp75qpu) · `recvw25sP75Qpu` · ▶ PLAY VIDEO
+12. [**Namespace Resource Quotas: Enforce a Budget**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7wz05) · `recvw25sP7wZ05` · ▶ PLAY VIDEO
+13. [**ServiceAccount and RBAC Authorization: Check Access**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7ldyz) · `recvw25sP7lDYZ` · ▶ PLAY VIDEO
+14. [**NetworkPolicy Traffic Selection: Match Peer and Port**](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp72ohb) · `recvw25sP72oHb` · ▶ PLAY VIDEO
+15. [**Helm Values and Template Rendering: Render Then Install**](catalog/computer-science/cloud-native-kubernetes.md#recvw25tezr38d) · `recvw25tEzR38D` · ▶ PLAY VIDEO
 
 ---
 
@@ -1157,7 +1183,7 @@
 6. [**Curved Space-Time: Follow a Deflected Light Ray**](catalog/astronomy/astr-160.md#c20-a006) · `C20-A006` · ▶ PLAY VIDEO
 7. [**Black Hole Event Horizon: Trace the Escape Boundary**](catalog/astronomy/astr-160.md#c20-a007) · `C20-A007` · ▶ PLAY VIDEO
 8. [**Expansion of the Universe: Watch Distances Grow**](catalog/astronomy/astr-160.md#c20-a008) · `C20-A008` · ▶ PLAY VIDEO
-9. [**Hubble's Law: Fit Speed Against Distance**](catalog/astronomy/astr-160.md#c20-a009) · `C20-A009` · ▶ PLAY VIDEO
+9. [**Hubble&#x27;s Law: Fit Speed Against Distance**](catalog/astronomy/astr-160.md#c20-a009) · `C20-A009` · ▶ PLAY VIDEO
 10. [**Dark Matter: Explain Flat Rotation Curves**](catalog/astronomy/astr-160.md#c20-a010) · `C20-A010` · ▶ PLAY VIDEO
 11. [**Dark Energy: Compare Expansion Histories**](catalog/astronomy/astr-160.md#c20-a011) · `C20-A011` · ▶ PLAY VIDEO
 12. [**Indirect Observational Evidence: Combine Two Mass Probes**](catalog/astronomy/astr-160.md#c20-a012) · `C20-A012` · ▶ PLAY VIDEO
