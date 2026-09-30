@@ -3,6 +3,7 @@
 import html,json,re
 from pathlib import Path
 from collections import OrderedDict
+from urllib.parse import quote
 from final_record import review_passed
 root=Path(__file__).resolve().parents[1]
 items=json.loads((root/'data/prompts.json').read_text())
@@ -18,13 +19,47 @@ lines=['# Leadde Knowledge in Motion','', 'Short educational animations with con
 for x in items:
  if x.get('featured') and ready(x):lines += [f"- [**{name(x)}**]({page(x)}#{x['id'].lower()}) — {x['learning_objective']} ([inspection scope]({x['featured']['evidence']}))"]
 lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
+def card(title, href, image, caption, anchor=None):
+ escape=html.escape
+ parts=['<td width="33%" valign="top">']
+ if anchor:parts.append(f'<a id="{escape(anchor)}"></a>')
+ if image:parts.append(f'<a href="{escape(href)}"><img src="{quote(image)}" width="100%" alt="{escape(title)}"></a><br>')
+ parts += [f'<a href="{escape(href)}"><strong>{escape(title)}</strong></a><br>',f'<sub>{escape(caption)}</sub>','</td>']
+ return '\n'.join(parts)
+
+def card_table(cards):
+ result=['<table>']
+ for start in range(0,len(cards),3):
+  group=cards[start:start+3]
+  result += ['<tr>',*group,*(['<td></td>']*(3-len(group))),'</tr>']
+ return result+['</table>','']
+
+def course_cover(first):
+ code=first.get('course_code',first['tags'][1])
+ for base in [code.lower(),slug(first['course'])]:
+  for ext in ['.svg','.jpg','.png']:
+   path=f'assets/course-covers/{base}{ext}'
+   if (root/path).is_file():return path
+ return first.get('cover')
+
+subject_cards=[]
+for subject,courses in lib.items():
+ rows=[x for group in courses.values() for x in group]
+ caption=f'{len(courses)} courses · {summary(rows)}'
+ if not any(ready(x) for x in rows):caption+=' · No finished videos yet'
+ subject_cards.append(card(subject,'#'+slug(subject),f'assets/subject-cards/{slug(subject)}.png',caption))
+lines += card_table(subject_cards)
 index=['# Complete concept index','','[Home](README.md)','']
 for subject,courses in lib.items():
  rows=[x for r in courses.values() for x in r]
  lines += [f'<a id="{slug(subject)}"></a>',f'### {subject}', '',f"{summary(rows)}"+(' · **No finished videos yet**' if not any(ready(x) for x in rows) else ''),'']
+ course_cards=[]
+ for course,group in courses.items():
+  caption=summary(group)+(' · No finished videos yet' if not any(ready(x) for x in group) else '')
+  course_cards.append(card(course,page(group[0]),course_cover(group[0]),caption,slug(course)))
+ lines += card_table(course_cards)+['[Back to subject cards](#browse-the-library)','']
  for course,rows in courses.items():
   first=rows[0]; dest=page(first); code=first['tags'][1]
-  lines += [f'<a id="{slug(course)}"></a>',f"- [**{course}**]({dest}) — {summary(rows)}"]
   index += [f'## {course}','']
   out=[f'# {course}','',f'[← {subject}](../../README.md#{slug(subject)}) · [Complete index](../../INDEX.md)','',summary(rows),'',f"Course bibliography supplied by the source list: {first['textbook']}. Specific supporting references are listed per concept; missing references are not inferred.",'']
   release=releases.get(code)
