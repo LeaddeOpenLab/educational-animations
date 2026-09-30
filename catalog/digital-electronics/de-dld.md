@@ -1,6 +1,6 @@
 # Digital Logic Design
 
-[← Digital Electronics](../../README.md#digital-electronics) · [Complete index](../../INDEX.md)
+[← Digital Electronics](../../README.md#digital-electronics) · [Complete index](../INDEX.md)
 
 5 videos · 0 awaiting production
 

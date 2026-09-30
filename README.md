@@ -35,7 +35,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 
 ## Watch, download, reuse
 
-- **Watch:** [Browse the concept index](INDEX.md) and play native videos on course pages.
+- **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.
 - **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.
 - **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.
 
@@ -648,6 +648,10 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 
 [Back to subject cards](#browse-the-library)
 
+
+## Repository layout
+
+`catalog/` course pages and full index · `assets/` videos, previews, Prompts and source kits · `data/` final records · `docs/` reuse and verification · `scripts/` production, publishing and tests.
 
 ## Recent changes
 

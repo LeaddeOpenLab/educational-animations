@@ -4,4 +4,4 @@ Install the pinned direct dependencies with `npm install`, then render a composi
 
 Compositions: al08-dynamic-programming-status, al09-dynamic-programming-transfer.
 
-Formula SVGs and shared graphics are included. Host fonts and transitive dependencies can affect rendering. Clean-machine pixel-identical reproduction is not verified. See ../../docs/RIGHTS.md.
+Formula SVGs and shared graphics are included. Host fonts and transitive dependencies can affect rendering. Clean-machine pixel-identical reproduction is not verified. See ../../../docs/RIGHTS.md.

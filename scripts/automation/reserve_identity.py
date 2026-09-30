@@ -3,7 +3,7 @@
 import argparse,json,os,re,fcntl
 from pathlib import Path
 import incremental_agent as agent
-REPO=Path(os.environ.get('LEADDE_REPO',Path(__file__).resolve().parents[1]))
+REPO=Path(os.environ.get('LEADDE_REPO',Path(__file__).resolve().parents[2]))
 def reserve(key):
     state=agent.load_json(agent.STATE_FILE,{});item=state['items'][key]
     if item.get('stable_id'):return item['stable_id']

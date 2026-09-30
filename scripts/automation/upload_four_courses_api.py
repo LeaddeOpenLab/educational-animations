@@ -138,7 +138,7 @@ def process_row(token, row, index, total):
     if not final_path:
         raise RuntimeError("Provide final_record JSON with stable ID, artifact version and review evidence; legacy fill-empty publishing is retired")
     repo = pathlib.Path(os.environ.get("LEADDE_REPO", ROOT / ".publish" / "workflow-upgrade"))
-    sys.path.insert(0, str(repo / "automation"))
+    sys.path.insert(0, str(repo / "scripts/automation"))
     sys.path.insert(0, str(repo / "scripts"))
     from final_record import validate
     from publish_ready import feishu_step

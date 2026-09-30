@@ -75,12 +75,12 @@
     ]
   },
   "6.006": {
-    "revision": 2,
+    "revision": 3,
     "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-6-006/6-006-videos.zip",
     "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-6-006",
     "video_count": 13,
-    "version": "bundle-2",
-    "updated_at": "2026-09-30T08:05:08Z",
+    "version": "bundle-3",
+    "updated_at": "2026-09-30T08:38:24Z",
     "status": "current",
     "members": [
       {
@@ -846,12 +846,12 @@
     ]
   },
   "18.06": {
-    "revision": 2,
+    "revision": 3,
     "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
     "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-mathematics-18-06",
     "video_count": 16,
-    "version": "bundle-2",
-    "updated_at": "2026-09-30T08:06:12Z",
+    "version": "bundle-3",
+    "updated_at": "2026-09-30T08:38:45Z",
     "status": "current",
     "members": [
       {
@@ -1195,12 +1195,12 @@
     ]
   },
   "5.12": {
-    "revision": 2,
+    "revision": 3,
     "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-chemistry-5-12/5-12-videos.zip",
     "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-chemistry-5-12",
     "video_count": 14,
-    "version": "bundle-2",
-    "updated_at": "2026-09-30T08:06:43Z",
+    "version": "bundle-3",
+    "updated_at": "2026-09-30T08:39:00Z",
     "status": "current",
     "members": [
       {

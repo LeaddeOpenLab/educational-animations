@@ -24,7 +24,7 @@ from pathlib import Path
 from discovery_feeds import scan as scan_feeds
 
 
-ROOT = Path(os.environ.get("LEADDE_WORKSPACE", Path(__file__).resolve().parents[1]))
+ROOT = Path(os.environ.get("LEADDE_WORKSPACE", Path(__file__).resolve().parents[2]))
 CONFIG = Path(__file__).with_name("sources.json")
 FEEDS_CONFIG = Path(__file__).with_name("feeds.json")
 STORE = ROOT / ".workbuddy" / "incremental-agent"
@@ -252,7 +252,7 @@ def select_work_orders(ready: dict, config: dict, counts: Counter) -> list[dict]
             reviewed = False
             final_path = item.get("artifacts", {}).get("final_record")
             if final_path and Path(final_path).is_file():
-                sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+                sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
                 from final_record import review_passed
                 reviewed = bool(review_passed(load_json(Path(final_path), {})))
             work_orders.append({"key": key, "record_id": item["record_id"], "name": item["name"],
@@ -511,13 +511,13 @@ def checkpoint(args) -> int:
         if draft.get("id") != item["stable_id"] or not draft.get("terminology", {}).get("confirmed") or not draft.get("standard_name"):
             raise RuntimeError("Before storyboarding, provide the reserved ID and confirmed standard term in the draft final_record")
     if args.status == "待发布":
-        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+        sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
         from final_record import validate
         final_path = item.get("artifacts", {}).get("final_record")
         if not final_path:
             raise RuntimeError("Reviewed final_record JSON is required; a boolean flag is not an audit")
         final = load_json(Path(final_path), {})
-        validate(final, Path(os.environ.get("LEADDE_REPO", Path(__file__).resolve().parents[1])))
+        validate(final, Path(os.environ.get("LEADDE_REPO", Path(__file__).resolve().parents[2])))
         if final.get("feishu_record_id") != item.get("record_id"):
             raise RuntimeError("Final artifact / Feishu identity mismatch")
         item["stable_id"] = final["id"]

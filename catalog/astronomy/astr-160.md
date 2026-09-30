@@ -1,6 +1,6 @@
 # Frontiers and Controversies in Astrophysics
 
-[← Astronomy](../../README.md#astronomy) · [Complete index](../../INDEX.md)
+[← Astronomy](../../README.md#astronomy) · [Complete index](../INDEX.md)
 
 12 videos · 0 awaiting production
 

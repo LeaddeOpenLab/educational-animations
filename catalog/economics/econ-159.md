@@ -1,6 +1,6 @@
 # Game Theory
 
-[← Economics](../../README.md#economics) · [Complete index](../../INDEX.md)
+[← Economics](../../README.md#economics) · [Complete index](../INDEX.md)
 
 0 videos · 12 awaiting production
 

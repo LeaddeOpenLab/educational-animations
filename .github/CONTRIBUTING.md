@@ -4,4 +4,4 @@ Report a concept correction using the issue template: include stable knowledge I
 
 Attachment storage Issues carry the `video-assets` label. Closing an asset Issue archives it without deleting the body, comments, videos or historical links. Search user feedback with `is:issue -label:video-assets`. Do not delete storage comments or create duplicate Issues for publication retries.
 
-Production changes use automation/AGENT_RUNBOOK.md and the versioned final record. Preserve IDs, aliases, slugs and native attachment URLs. A new review must identify the reviewer, scope and evidence; do not approve all historical files at once.
+Production changes use scripts/automation/AGENT_RUNBOOK.md and the versioned final record. Preserve IDs, aliases, slugs and native attachment URLs. A new review must identify the reviewer, scope and evidence; do not approve all historical files at once.

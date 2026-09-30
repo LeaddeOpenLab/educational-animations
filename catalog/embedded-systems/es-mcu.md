@@ -1,6 +1,6 @@
 # Microcontroller Fundamentals
 
-[← Embedded Systems](../../README.md#embedded-systems) · [Complete index](../../INDEX.md)
+[← Embedded Systems](../../README.md#embedded-systems) · [Complete index](../INDEX.md)
 
 4 videos · 0 awaiting production
 

@@ -1,6 +1,6 @@
 # Financial Markets
 
-[← Finance](../../README.md#finance) · [Complete index](../../INDEX.md)
+[← Finance](../../README.md#finance) · [Complete index](../INDEX.md)
 
 0 videos · 12 awaiting production
 

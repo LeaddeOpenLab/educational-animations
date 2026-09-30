@@ -1,6 +1,6 @@
 # Ordinary Differential Equations
 
-[← Mathematics](../../README.md#mathematics) · [Complete index](../../INDEX.md)
+[← Mathematics](../../README.md#mathematics) · [Complete index](../INDEX.md)
 
 8 videos · 0 awaiting production
 

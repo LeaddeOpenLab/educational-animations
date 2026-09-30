@@ -10,7 +10,7 @@ Reviewer: Codex (AI-assisted source, formula/numeric and visual inspection). Eac
 - **C09-A009, SN1 Reaction:** correct terminology; departing proton label separated from OH. Source and Prompt show ionization, carbocation, water attack and deprotonation.
 - **C09-A011, E1 Reaction:** correct terminology; source and Prompt show leaving-group loss followed by beta deprotonation and alkene formation.
 
-Sources and dependencies are included under `sources/`. Clean-machine pixel-identical reproduction was not tested. References linked in the records support terminology and concepts; no textbook page numbers or human reviewers were invented.
+Sources and dependencies are included under `assets/sources/`. Clean-machine pixel-identical reproduction was not tested. References linked in the records support terminology and concepts; no textbook page numbers or human reviewers were invented.
 
 ![C05-A003 v2 samples](C05-A003-v2-sheet.jpg)
 

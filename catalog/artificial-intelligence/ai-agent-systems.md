@@ -1,6 +1,6 @@
 # AI Agent Systems
 
-[← Artificial Intelligence](../../README.md#artificial-intelligence) · [Complete index](../../INDEX.md)
+[← Artificial Intelligence](../../README.md#artificial-intelligence) · [Complete index](../INDEX.md)
 
 15 videos · 0 awaiting production
 

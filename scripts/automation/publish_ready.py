@@ -9,7 +9,7 @@ import sys
 from pathlib import Path
 import incremental_agent as agent
 
-REPO=Path(os.environ.get('LEADDE_REPO',Path(__file__).resolve().parents[1]))
+REPO=Path(os.environ.get('LEADDE_REPO',Path(__file__).resolve().parents[2]))
 sys.path.insert(0,str(REPO/'scripts'))
 from final_record import validate, upsert, publish_channels
 from feishu_fields import ensure_mapping, values_for
@@ -72,7 +72,7 @@ def ensure_native_player(entry, save):
 
 def github_step(entry):
     if not entry.get('player'): raise ValueError('Native GitHub attachment URL required for this version; supply it once, do not create duplicate attachment Issues')
-    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','data/releases.json','data/release-errors.json','README.md','assets/previews','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
+    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','data/releases.json','data/release-errors.json','README.md','assets/previews','catalog','assets/prompts',entry['video'],entry['cover']]
     subprocess.run([sys.executable,'scripts/build_featured_previews.py'],cwd=REPO,check=True)
     subprocess.run([sys.executable,'scripts/build_github_readme.py'],cwd=REPO,check=True)
     dirty=command('git','status','--porcelain')
@@ -138,7 +138,7 @@ def main():
         try:
             catalog=REPO/'data/prompts.json';items=json.loads(catalog.read_text());upsert(items,entry);agent.atomic_json(catalog,items)
             subprocess.run([sys.executable,'scripts/build_github_readme.py'],cwd=REPO,check=True)
-            command('git','add','--','data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','README.md','INDEX.md','catalog','prompts')
+            command('git','add','--','data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','README.md','catalog','assets/prompts')
             if command('git','diff','--cached','--name-only'):
                 command('git','commit','-m',f"Record delivery status for {entry['id']} {entry['artifact_version']}")
             command('git','fetch','origin','main')

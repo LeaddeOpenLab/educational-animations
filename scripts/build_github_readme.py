@@ -24,7 +24,7 @@ for x in items:
   href=f"{page(x)}#{x['id'].lower()}"
   lines += ['<td width="33%" valign="top">',f'<a href="{href}"><img src="{preview}" width="100%" alt="Animated preview: {html.escape(name(x))}"></a><br>',f'<a href="{href}"><strong>{html.escape(name(x))}</strong></a><br>',f'<sub>{html.escape(x["learning_objective"])}</sub><br>',f'<a href="{href}">▶ Watch full video</a> · <a href="{x["featured"]["evidence"]}">Inspection scope</a>','</td>']
 lines += ['</tr>','</table>','','Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.']
-lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
+lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
 def card(title, href, image, caption, anchor=None):
  escape=html.escape
  parts=['<td width="33%" valign="top">']
@@ -55,7 +55,7 @@ for subject,courses in lib.items():
  if not any(ready(x) for x in rows):caption+=' · No finished videos yet'
  subject_cards.append(card(subject,'#'+slug(subject),f'assets/subject-cards/{slug(subject)}.png',caption))
 lines += card_table(subject_cards)
-index=['# Complete concept index','','[Home](README.md)','']
+index=['# Complete concept index','','[Home](../README.md)','']
 for subject,courses in lib.items():
  rows=[x for r in courses.values() for x in r]
  lines += [f'<a id="{slug(subject)}"></a>',f'### {subject}', '',f"{summary(rows)}"+(' · **No finished videos yet**' if not any(ready(x) for x in rows) else ''),'']
@@ -67,7 +67,7 @@ for subject,courses in lib.items():
  for course,rows in courses.items():
   first=rows[0]; dest=page(first); code=first['tags'][1]
   index += [f'## {course}','']
-  out=[f'# {course}','',f'[← {subject}](../../README.md#{slug(subject)}) · [Complete index](../../INDEX.md)','',summary(rows),'',f"Course bibliography supplied by the source list: {first['textbook']}. Specific supporting references are listed per concept; missing references are not inferred.",'']
+  out=[f'# {course}','',f'[← {subject}](../../README.md#{slug(subject)}) · [Complete index](../INDEX.md)','',summary(rows),'',f"Course bibliography supplied by the source list: {first['textbook']}. Specific supporting references are listed per concept; missing references are not inferred.",'']
   release=releases.get(code)
   if release:
    out += [f"[Download course ZIP]({release['download_url']}) · {release['video_count']} videos · {release['version']} · updated {release['updated_at']}",f"Package status: {release.get('status','unknown')}. Package membership is recorded in its index.",'']
@@ -76,7 +76,7 @@ for subject,courses in lib.items():
   out += [f'[Explore Leadde animation tools]({product}). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.','','---','']
   for x in rows:
    id=x['id']; title=name(x); x['page']=dest
-   index += [f"- [{id} · {title}]({dest}#{id.lower()}) — {'video' if ready(x) else 'awaiting production'}"]
+   index += [f"- [{id} · {title}]({dest.removeprefix('catalog/')}#{id.lower()}) — {'video' if ready(x) else 'awaiting production'}"]
    out += [f'<a id="{id.lower()}"></a>']
    for alias in x.get('aliases',[]):out += [f'<a id="{slug(alias)}"></a>']
    out += [f'## {title}','',f"`{id}` · {'Video available' if ready(x) else 'Awaiting production'} · review: **{x.get('review',{}).get('status','unreviewed')}** · version `{x.get('artifact_version','draft')}`",'',f"**Learn:** {x.get('learning_objective') or 'Pending verification.'}",f"**Takeaway:** {x.get('core_conclusion') or 'Pending verification.'}",'']
@@ -103,10 +103,10 @@ for subject,courses in lib.items():
   target=root/dest;target.parent.mkdir(parents=True,exist_ok=True);target.write_text('\n'.join(out).rstrip()+'\n')
  lines+=['']
 changes=json.loads((root/'data/changes.json').read_text()) if (root/'data/changes.json').exists() else []
-lines+=['## Recent changes','']
+lines+=['## Repository layout','','`catalog/` course pages and full index · `assets/` videos, previews, Prompts and source kits · `data/` final records · `docs/` reuse and verification · `scripts/` production, publishing and tests.','','## Recent changes','']
 for c in changes[-8:][::-1]:lines+=[f"- {c['date']} — {c['description']}"]
 lines+=['','## Use and contribute','','See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).','','[Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.','','The static website can be served locally with `python3 -m http.server 8000`. No public site deployment is claimed.']
-(root/'README.md').write_text('\n'.join(lines)+'\n');(root/'INDEX.md').write_text('\n'.join(index)+'\n')
+(root/'README.md').write_text('\n'.join(lines)+'\n');(root/'catalog/INDEX.md').write_text('\n'.join(index)+'\n')
 # page is a stable derived locator stored alongside final metadata for publishers.
 (root/'data/prompts.json').write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n')
 print(f'Generated {len(items)} concepts, {sum(len(c) for c in lib.values())} courses')

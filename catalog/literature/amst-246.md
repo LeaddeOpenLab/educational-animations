@@ -1,6 +1,6 @@
 # American Modernist Literature
 
-[← Literature](../../README.md#literature) · [Complete index](../../INDEX.md)
+[← Literature](../../README.md#literature) · [Complete index](../INDEX.md)
 
 0 videos · 10 awaiting production
 

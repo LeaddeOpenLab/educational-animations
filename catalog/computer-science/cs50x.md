@@ -1,6 +1,6 @@
 # Introduction to Computer Science
 
-[← Computer Science](../../README.md#computer-science) · [Complete index](../../INDEX.md)
+[← Computer Science](../../README.md#computer-science) · [Complete index](../INDEX.md)
 
 16 videos · 0 awaiting production
 

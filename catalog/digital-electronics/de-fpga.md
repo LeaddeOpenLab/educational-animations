@@ -1,6 +1,6 @@
 # FPGA Fundamentals
 
-[← Digital Electronics](../../README.md#digital-electronics) · [Complete index](../../INDEX.md)
+[← Digital Electronics](../../README.md#digital-electronics) · [Complete index](../INDEX.md)
 
 4 videos · 0 awaiting production
 

@@ -16,7 +16,7 @@ for x in rows:
     if review_passed(x):validate(x,root)
 assert '388 educational' not in (root/'index.html').read_text()
 readme=(root/'README.md').read_text();assert f'{sum(x["status"]=="ready" for x in rows)} video-ready' in readme
-for file in [root/'README.md',root/'INDEX.md',*root.glob('catalog/**/*.md')]:
+for file in [root/'README.md',*root.glob('catalog/**/*.md')]:
  for target in re.findall(r'\]\(([^)]+)\)',file.read_text()):
     if '://' in target or target.startswith('#'):continue
     target=target.split('#')[0]

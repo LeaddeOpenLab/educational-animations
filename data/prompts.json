@@ -1486,7 +1486,7 @@
         200,
         180
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/intro-algorithms",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/intro-algorithms",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -1627,7 +1627,7 @@
         175,
         150
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/intro-algorithms",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/intro-algorithms",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -9088,7 +9088,7 @@
         "mathjax-full@3.2.2",
         "host fonts listed in source theme"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
       "composition_id": "la02-line-space",
       "scene_frames": [
         130,
@@ -9236,7 +9236,7 @@
         200,
         180
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -9377,7 +9377,7 @@
         170,
         140
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -9517,7 +9517,7 @@
         230,
         180
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -12790,7 +12790,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Conditional probability. Explain conditioning as restricting the sample space before counting B.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/conditional-probability.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/conditional-probability.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/conditional-probability.md",
     "player": "https://github.com/user-attachments/assets/e8976ee9-0683-49b3-802f-b15073c134fe",
     "feishu_record_id": "recvvJaLlun6so",
     "original_name": "Conditional probability",
@@ -12858,7 +12858,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Bayesian formula. Show Bayes update as reweighting a low prior by diagnostic evidence.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/bayesian-formula.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/bayesian-formula.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/bayesian-formula.md",
     "player": "https://github.com/user-attachments/assets/7d7bc203-23fe-4ef0-984c-087871e32657",
     "feishu_record_id": "recvvJaLlwcT5o",
     "original_name": "Bayesian formula",
@@ -12926,7 +12926,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Random variable transformation. Show probability mass or density moving through a function, including scale change.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/random-variable-transformation.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/random-variable-transformation.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/random-variable-transformation.md",
     "player": "https://github.com/user-attachments/assets/a27f05b8-0ab0-4a30-8f41-93bc0e6f75e5",
     "feishu_record_id": "recvvJaLlxZZFP",
     "original_name": "Random variable transformation",
@@ -12994,7 +12994,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Joint distribution. Explain a joint distribution as a grid whose cells sum to one and whose edges are marginals.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/joint-distribution.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/joint-distribution.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/joint-distribution.md",
     "player": "https://github.com/user-attachments/assets/0d6577e3-270d-44f0-bba9-8b58568fa3bc",
     "feishu_record_id": "recvvJaLlzbTM8",
     "original_name": "Joint distribution",
@@ -13062,7 +13062,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Expectation. Make expectation a probability-weighted balance point, not the most likely outcome.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/expectation.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/expectation.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/expectation.md",
     "player": "https://github.com/user-attachments/assets/17385ba0-68ba-4371-a7ec-7db6ef8b6815",
     "feishu_record_id": "recvvJaLlBMJ3f",
     "original_name": "Expectation",
@@ -13130,7 +13130,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Variance. Explain variance as average squared distance from the mean.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/variance.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/variance.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/variance.md",
     "player": "https://github.com/user-attachments/assets/9a7dead0-9363-459c-b1b7-ff590a1491ed",
     "feishu_record_id": "recvvJaLlDqf7u",
     "original_name": "Variance",
@@ -13198,7 +13198,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Covariance. Show covariance sign from paired deviations, including why marginal spread alone is insufficient.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/covariance.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/covariance.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/covariance.md",
     "player": "https://github.com/user-attachments/assets/a173f675-21c8-410f-94d1-67aaacce4bdc",
     "feishu_record_id": "recvvJaLlFZvW4",
     "original_name": "Covariance",
@@ -13266,7 +13266,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Law of large numbers. Demonstrate convergence of a running sample mean to the true expected value.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/law-of-large-numbers.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/law-of-large-numbers.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/law-of-large-numbers.md",
     "player": "https://github.com/user-attachments/assets/f31f36b9-ee74-4d57-8ecc-edc84477cca9",
     "feishu_record_id": "recvvJaLlIwD9J",
     "original_name": "Law of large numbers",
@@ -13334,7 +13334,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Central limit theorem. Explain the CLT as a distribution over standardized sample means, not as raw data becoming normal.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/central-limit-theorem.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/central-limit-theorem.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/central-limit-theorem.md",
     "player": "https://github.com/user-attachments/assets/785df41c-2e2f-4c2e-a0a0-6184380f342a",
     "feishu_record_id": "recvvJaLlKT6EI",
     "original_name": "Central limit theorem",
@@ -13402,7 +13402,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Markov chain. Show the Markov property through one-step state transitions.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/markov-chain.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/markov-chain.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/markov-chain.md",
     "player": "https://github.com/user-attachments/assets/bb16d6d0-a976-4f5f-9840-e93f10035e87",
     "feishu_record_id": "recvvJaLlMC9VT",
     "original_name": "Markov chain",
@@ -13470,7 +13470,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Markov chain steady state. Show convergence to a stationary distribution and the fixed-point equation.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/markov-chain-steady-state.jpg",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/markov-chain-steady-state.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/markov-chain-steady-state.md",
     "player": "https://github.com/user-attachments/assets/ce3f3bff-4bf3-40a6-9072-3481803b6734",
     "feishu_record_id": "recvvJaLlORHy5",
     "original_name": "Markov chain steady state",
@@ -13538,7 +13538,7 @@
     "video": "assets/videos/mathematics-statistics/applied-probability/poisson-process.mp4",
     "cover_image": "assets/covers/mathematics-statistics/applied-probability/poisson-process.jpg",
     "prompt": "A 30-second silent English concept animation for a university Applied Probability course: Poisson Process. Connect a constant event rate to both Poisson counts and exponential waiting times.\n\nLight ground `#ffffff` -> `#f6f8fb` -> `#eaeff6`; primary `#332288` on the main entity; accent `#117733` on the key quantity; result `#aa4499` on the conclusion; warn `#882255` on danger; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif throughout, 700-800 headings, 21px uppercase kickers at 5px letter-spacing. Stagger-in + draw-on + value-reveal; use 12f fades, 8-14f offsets, and leave the last 25 frames of each scene clear of new elements.",
-    "prompt_file": "prompts/mathematics-statistics/applied-probability/poisson-process.md",
+    "prompt_file": "assets/prompts/mathematics-statistics/applied-probability/poisson-process.md",
     "player": "https://github.com/user-attachments/assets/630e1aa9-f188-44cc-b1a3-7e8bb3cec90e",
     "feishu_record_id": "recvw1EiOfiJmP",
     "original_name": "Poisson Process",
@@ -15517,7 +15517,7 @@
         140,
         115
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/organic-chemistry-i",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/organic-chemistry-i",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -15727,7 +15727,7 @@
         175,
         170
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/sources/organic-chemistry-i",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/organic-chemistry-i",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -21968,7 +21968,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Exoplanet transit method: Infer a planet radius from a repeatable stellar brightness dip; a planet crosses a star, obscuring area; fractional depth is approximately (planet radius / stellar radius)^2.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.md",
     "player": "https://github.com/user-attachments/assets/458eb308-0f23-4d0a-b085-1620d26d709c",
     "feishu_record_id": "recvvJaLs5i7hR",
     "original_name": "Exoplanet transit method",
@@ -22036,7 +22036,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Exoplanet radial velocity method: Infer a companion from periodic stellar line-of-sight speed; star and planet orbit a shared center of mass; the star alternates approaching and receding, shifting spectral lines.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.md",
     "player": "https://github.com/user-attachments/assets/dccd4289-c5ea-4540-af69-785b70e83c9f",
     "feishu_record_id": "recvvJaLs7fuN8",
     "original_name": "Exoplanet radial velocity method",
@@ -22104,7 +22104,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Observational selection effect: Explain why a detected exoplanet sample is unlike the underlying population; a survey sees only objects above a sensitivity boundary; large short-period planets are easier to detect.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.md",
     "player": "https://github.com/user-attachments/assets/d5cabd15-6912-42d4-a742-861da67ca6ea",
     "feishu_record_id": "recvvJaLsakgmL",
     "original_name": "Observational selection effect",
@@ -22172,7 +22172,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Observation bias: Distinguish an observational bias from a genuine sky trend; selection and measurement distort what reaches the catalog; the same physical population can yield a misleading correlation.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.md",
     "player": "https://github.com/user-attachments/assets/3649fbc8-0691-4fce-8652-1cc9bacc51b9",
     "feishu_record_id": "recvvJaLsdZ5KH",
     "original_name": "Observation bias",
@@ -22240,7 +22240,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Schwarzschild radius: Connect mass to the radius of a nonrotating black-hole horizon; schwarzschild radius scales linearly with mass: r_s = 2GM/c².\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.md",
     "player": "https://github.com/user-attachments/assets/f4bf3ce0-0729-45d1-9234-55d602c5eb34",
     "feishu_record_id": "recvvJaLskGNFS",
     "original_name": "Schwarzschild radius",
@@ -22308,7 +22308,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Curved space-time: Show gravity as changed spacetime geometry rather than a force arrow; mass changes geometry; nearby light and freely falling paths follow that geometry.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.md",
     "player": "https://github.com/user-attachments/assets/bd577598-8870-4183-9317-ab78f12dd8d8",
     "feishu_record_id": "recvvJaLsrErPW",
     "original_name": "Curved space-time",
@@ -22376,7 +22376,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Black hole event horizon: Explain the event horizon as a causal boundary; beyond the horizon, future-directed light paths cannot reach distant observers.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.md",
     "player": "https://github.com/user-attachments/assets/fdcacef0-74ab-4ae6-af8b-e93588a305f2",
     "feishu_record_id": "recvvJaLsuc5wI",
     "original_name": "Black hole event horizon",
@@ -22444,7 +22444,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Expansion of the universe: Show expanding space as growth in separation between comoving galaxies; proper distance between comoving galaxies scales with scale factor a(t); bound local systems need not expand.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.md",
     "player": "https://github.com/user-attachments/assets/2064da11-c8e6-4d06-b8c0-6a83f0bc8878",
     "feishu_record_id": "recvvJaLsxYQ2i",
     "original_name": "Expansion of the universe",
@@ -22512,7 +22512,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Hubble's law: Connect measured galaxy distance to recession speed in Hubble’s law; at low redshift, v ≈ H₀d; the slope of a speed-distance plot estimates H₀.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.md",
     "player": "https://github.com/user-attachments/assets/66e96d81-3a9b-4a62-a222-f51322cadaa1",
     "feishu_record_id": "recvvJaLszCC3e",
     "original_name": "Hubble's law",
@@ -22580,7 +22580,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Dark matter: Infer missing gravitating mass from galaxy rotation curves; visible central mass predicts declining outer orbital speed, while observed outer speeds stay roughly flat.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.md",
     "player": "https://github.com/user-attachments/assets/b764994a-1384-442e-86b6-ac58b13adc6a",
     "feishu_record_id": "recvvJaLsCeffI",
     "original_name": "Dark matter",
@@ -22648,7 +22648,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Dark energy: Show evidence for accelerated cosmic expansion; distance-redshift measurements favor a late-time expansion history with growing acceleration relative to matter-only deceleration.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.md",
     "player": "https://github.com/user-attachments/assets/017479d9-502d-4317-b885-840e2cb9796d",
     "feishu_record_id": "recvvJaLsE1Fb5",
     "original_name": "Dark energy",
@@ -22716,7 +22716,7 @@
     ],
     "prompt": "A 30-second silent English concept animation for a university astronomy course about Indirect observational evidence: Teach an evidence chain from observation to hidden physical cause; unseen entities are inferred by combining independent observables and ruling out alternatives.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
     "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.jpg",
-    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.md",
+    "prompt_file": "assets/prompts/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.md",
     "player": "https://github.com/user-attachments/assets/62cbdb67-1ef6-478e-9289-faaa73cb904f",
     "feishu_record_id": "recvvJaLsH0Unl",
     "original_name": "Indirect observational evidence",
@@ -23886,7 +23886,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.md",
     "tags": [
       "recvw253eEvb3X",
       "AI-AGENT-SYSTEMS"
@@ -23952,7 +23952,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/tool-registry-and-tool-selection.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/tool-registry-and-tool-selection.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/tool-registry-and-tool-selection.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/tool-registry-and-tool-selection.md",
     "tags": [
       "recvw254kdt8Gm",
       "AI-AGENT-SYSTEMS"
@@ -24018,7 +24018,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.md",
     "tags": [
       "recvw255ufAgzt",
       "AI-AGENT-SYSTEMS"
@@ -24084,7 +24084,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/react-reasoning-and-acting-cycle.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/react-reasoning-and-acting-cycle.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/react-reasoning-and-acting-cycle.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/react-reasoning-and-acting-cycle.md",
     "tags": [
       "recvw256zNx1Eb",
       "AI-AGENT-SYSTEMS"
@@ -24150,7 +24150,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/task-decomposition-into-subgoals.md",
     "tags": [
       "recvw257DvN3QU",
       "AI-AGENT-SYSTEMS"
@@ -24216,7 +24216,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/short-term-and-long-term-agent-memory.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/short-term-and-long-term-agent-memory.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/short-term-and-long-term-agent-memory.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/short-term-and-long-term-agent-memory.md",
     "tags": [
       "recvw258JLr6AX",
       "AI-AGENT-SYSTEMS"
@@ -24282,7 +24282,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/planning-with-a-shared-state.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/planning-with-a-shared-state.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/planning-with-a-shared-state.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/planning-with-a-shared-state.md",
     "tags": [
       "recvw25aen0hew",
       "AI-AGENT-SYSTEMS"
@@ -24348,7 +24348,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/multi-agent-handoff-protocol.md",
     "tags": [
       "recvw25bHkLHf9",
       "AI-AGENT-SYSTEMS"
@@ -24414,7 +24414,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/human-approval-checkpoint.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/human-approval-checkpoint.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/human-approval-checkpoint.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/human-approval-checkpoint.md",
     "tags": [
       "recvw25cRpcO1W",
       "AI-AGENT-SYSTEMS"
@@ -24480,7 +24480,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/agent-runtime-state-machine.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/agent-runtime-state-machine.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/agent-runtime-state-machine.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/agent-runtime-state-machine.md",
     "tags": [
       "recvw25dWAMuw5",
       "AI-AGENT-SYSTEMS"
@@ -24546,7 +24546,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/retry-and-backoff-for-tool-failures.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/retry-and-backoff-for-tool-failures.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/retry-and-backoff-for-tool-failures.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/retry-and-backoff-for-tool-failures.md",
     "tags": [
       "recvw25f2UAbYl",
       "AI-AGENT-SYSTEMS"
@@ -24612,7 +24612,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/idempotent-tool-execution.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/idempotent-tool-execution.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/idempotent-tool-execution.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/idempotent-tool-execution.md",
     "tags": [
       "recvw25glDKhRI",
       "AI-AGENT-SYSTEMS"
@@ -24678,7 +24678,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/sandboxing-untrusted-tool-output.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/sandboxing-untrusted-tool-output.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/sandboxing-untrusted-tool-output.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/sandboxing-untrusted-tool-output.md",
     "tags": [
       "recvw25ht8600c",
       "AI-AGENT-SYSTEMS"
@@ -24744,7 +24744,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/agent-trace-and-step-level-evaluation.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/agent-trace-and-step-level-evaluation.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/agent-trace-and-step-level-evaluation.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/agent-trace-and-step-level-evaluation.md",
     "tags": [
       "recvw25izM48sG",
       "AI-AGENT-SYSTEMS"
@@ -24810,7 +24810,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/ai-agent-systems/termination-and-loop-detection.mp4",
     "cover": "assets/covers/artificial-intelligence/ai-agent-systems/termination-and-loop-detection.jpg",
-    "prompt_card": "prompts/artificial-intelligence/ai-agent-systems/termination-and-loop-detection.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/ai-agent-systems/termination-and-loop-detection.md",
     "tags": [
       "recvw25jK3cwAs",
       "AI-AGENT-SYSTEMS"
@@ -25900,7 +25900,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.md",
     "tags": [
       "recvw24KNremp6",
       "GENERATIVE-AI"
@@ -25964,7 +25964,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/next-token-probability-distribution.md",
     "tags": [
       "recvw24MaggI13",
       "AI-GEN",
@@ -26031,7 +26031,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/temperature-and-sampling-diversity.md",
     "tags": [
       "recvw24NhiUpZV",
       "AI-GEN",
@@ -26098,7 +26098,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/top-k-and-top-p-sampling.md",
     "tags": [
       "recvw24OpQBvQ8",
       "AI-GEN",
@@ -26165,7 +26165,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/prompt-structure-and-role-separation.md",
     "tags": [
       "recvw24PwwhY6Z",
       "AI-GEN",
@@ -26232,7 +26232,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/few-shot-in-context-learning.md",
     "tags": [
       "recvw24QGLkzOo",
       "AI-GEN",
@@ -26299,7 +26299,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/retrieval-augmented-generation-pipeline.md",
     "tags": [
       "recvw24T2zGQI9",
       "AI-GEN",
@@ -26366,7 +26366,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/chunking-and-overlap-for-retrieval.md",
     "tags": [
       "recvw24U8nIXtd",
       "AI-GEN",
@@ -26433,7 +26433,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/embedding-based-semantic-search.md",
     "tags": [
       "recvw24Vlk0V3K",
       "AI-GEN",
@@ -26500,7 +26500,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/reranking-retrieved-passages.md",
     "tags": [
       "recvw24Wq3ZOpq",
       "AI-GEN",
@@ -26567,7 +26567,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/transformer-decoder-causal-mask.md",
     "tags": [
       "recvw24XspdsIn",
       "AI-GEN",
@@ -26634,7 +26634,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/kv-cache-for-autoregressive-generation.md",
     "tags": [
       "recvw24YBaWNKx",
       "AI-GEN",
@@ -26701,7 +26701,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/tool-calling-with-structured-arguments.md",
     "tags": [
       "recvw24ZMOZKIS",
       "AI-GEN",
@@ -26768,7 +26768,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/fine-tuning-with-lora-adapters.md",
     "tags": [
       "recvw250ZqaTah",
       "AI-GEN",
@@ -26835,7 +26835,7 @@
     "status": "ready",
     "video": "assets/videos/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.mp4",
     "cover": "assets/covers/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.jpg",
-    "prompt_card": "prompts/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.md",
+    "prompt_card": "assets/prompts/artificial-intelligence/generative-artificial-intelligence/llm-hallucination-evaluation.md",
     "tags": [
       "recvw2525onwzm",
       "AI-GEN",

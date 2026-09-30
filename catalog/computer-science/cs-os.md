@@ -1,6 +1,6 @@
 # Operating Systems
 
-[← Computer Science](../../README.md#computer-science) · [Complete index](../../INDEX.md)
+[← Computer Science](../../README.md#computer-science) · [Complete index](../INDEX.md)
 
 8 videos · 0 awaiting production
 

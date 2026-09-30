@@ -1,6 +1,6 @@
 # Philosophy of Death
 
-[← Philosophy](../../README.md#philosophy) · [Complete index](../../INDEX.md)
+[← Philosophy](../../README.md#philosophy) · [Complete index](../INDEX.md)
 
 0 videos · 10 awaiting production
 

@@ -1,6 +1,6 @@
 # Introduction to Political Philosophy
 
-[← Political Science](../../README.md#political-science) · [Complete index](../../INDEX.md)
+[← Political Science](../../README.md#political-science) · [Complete index](../INDEX.md)
 
 0 videos · 14 awaiting production
 

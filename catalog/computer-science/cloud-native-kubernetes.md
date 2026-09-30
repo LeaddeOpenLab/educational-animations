@@ -1,6 +1,6 @@
 # Cloud Native and Kubernetes
 
-[← Computer Science](../../README.md#computer-science) · [Complete index](../../INDEX.md)
+[← Computer Science](../../README.md#computer-science) · [Complete index](../INDEX.md)
 
 15 videos · 0 awaiting production
 
