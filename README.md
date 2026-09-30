@@ -8,9 +8,30 @@ Video-ready means a file is available. Review passes require version-specific ev
 
 ## Featured videos
 
-- [**Divide and conquer recursion**](catalog/computer-science/6-006.md#c02-a001) — Read a divide-and-conquer recurrence as a recursion tree. ([inspection scope](docs/verification/featured-inspection.md))
-- [**States, Actions, and Rewards**](catalog/artificial-intelligence/ai-rl.md#c29-a001) — Distinguish state, action and reward in an interaction loop. ([inspection scope](docs/verification/featured-inspection.md))
-- [**Rank-Nullity Theorem**](catalog/mathematics/18-06.md#c05-a014) — Account for all input dimensions using rank and nullity. ([inspection scope](docs/verification/featured-inspection.md))
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="catalog/computer-science/6-006.md#c02-a001"><img src="assets/previews/c02-a001-v1.gif" width="100%" alt="Animated preview: Divide and conquer recursion"></a><br>
+<a href="catalog/computer-science/6-006.md#c02-a001"><strong>Divide and conquer recursion</strong></a><br>
+<sub>Read a divide-and-conquer recurrence as a recursion tree.</sub><br>
+<a href="catalog/computer-science/6-006.md#c02-a001">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
+</td>
+<td width="33%" valign="top">
+<a href="catalog/artificial-intelligence/ai-rl.md#c29-a001"><img src="assets/previews/c29-a001-v1.gif" width="100%" alt="Animated preview: States, Actions, and Rewards"></a><br>
+<a href="catalog/artificial-intelligence/ai-rl.md#c29-a001"><strong>States, Actions, and Rewards</strong></a><br>
+<sub>Distinguish state, action and reward in an interaction loop.</sub><br>
+<a href="catalog/artificial-intelligence/ai-rl.md#c29-a001">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
+</td>
+<td width="33%" valign="top">
+<a href="catalog/mathematics/18-06.md#c05-a014"><img src="assets/previews/c05-a014-v1.gif" width="100%" alt="Animated preview: Rank-Nullity Theorem"></a><br>
+<a href="catalog/mathematics/18-06.md#c05-a014"><strong>Rank-Nullity Theorem</strong></a><br>
+<sub>Account for all input dimensions using rank and nullity.</sub><br>
+<a href="catalog/mathematics/18-06.md#c05-a014">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
+</td>
+</tr>
+</table>
+
+Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.
 
 ## Watch, download, reuse
 
@@ -636,7 +657,7 @@ Video-ready means a file is available. Review passes require version-specific ev
 
 ## Use and contribute
 
-See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).
+See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).
 
 [Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.
 

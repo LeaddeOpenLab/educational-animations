@@ -16,8 +16,14 @@ summary=lambda rows:f"{sum(bool(ready(x)) for x in rows)} videos · {sum(not rea
 lib=OrderedDict()
 for x in items: lib.setdefault(x['subject'],OrderedDict()).setdefault(x['course'],[]).append(x)
 lines=['# Leadde Knowledge in Motion','', 'Short educational animations with concept explanations and versioned reuse materials.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','', '## Featured videos','']
+lines += ['<table>','<tr>']
 for x in items:
- if x.get('featured') and ready(x):lines += [f"- [**{name(x)}**]({page(x)}#{x['id'].lower()}) — {x['learning_objective']} ([inspection scope]({x['featured']['evidence']}))"]
+ if x.get('featured') and ready(x):
+  preview=f"assets/previews/{x['id'].lower()}-{x['artifact_version']}.gif"
+  if not (root/preview).is_file():raise FileNotFoundError(f'Run scripts/build_featured_previews.py: {preview}')
+  href=f"{page(x)}#{x['id'].lower()}"
+  lines += ['<td width="33%" valign="top">',f'<a href="{href}"><img src="{preview}" width="100%" alt="Animated preview: {html.escape(name(x))}"></a><br>',f'<a href="{href}"><strong>{html.escape(name(x))}</strong></a><br>',f'<sub>{html.escape(x["learning_objective"])}</sub><br>',f'<a href="{href}">▶ Watch full video</a> · <a href="{x["featured"]["evidence"]}">Inspection scope</a>','</td>']
+lines += ['</tr>','</table>','','Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.']
 lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
 def card(title, href, image, caption, anchor=None):
  escape=html.escape
@@ -99,7 +105,7 @@ for subject,courses in lib.items():
 changes=json.loads((root/'data/changes.json').read_text()) if (root/'data/changes.json').exists() else []
 lines+=['## Recent changes','']
 for c in changes[-8:][::-1]:lines+=[f"- {c['date']} — {c['description']}"]
-lines+=['','## Use and contribute','','See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).','','[Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.','','The static website can be served locally with `python3 -m http.server 8000`. No public site deployment is claimed.']
+lines+=['','## Use and contribute','','See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).','','[Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.','','The static website can be served locally with `python3 -m http.server 8000`. No public site deployment is claimed.']
 (root/'README.md').write_text('\n'.join(lines)+'\n');(root/'INDEX.md').write_text('\n'.join(index)+'\n')
 # page is a stable derived locator stored alongside final metadata for publishers.
 (root/'data/prompts.json').write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n')

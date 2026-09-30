@@ -72,7 +72,8 @@ def ensure_native_player(entry, save):
 
 def github_step(entry):
     if not entry.get('player'): raise ValueError('Native GitHub attachment URL required for this version; supply it once, do not create duplicate attachment Issues')
-    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','data/releases.json','data/release-errors.json','README.md','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
+    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','data/releases.json','data/release-errors.json','README.md','assets/previews','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
+    subprocess.run([sys.executable,'scripts/build_featured_previews.py'],cwd=REPO,check=True)
     subprocess.run([sys.executable,'scripts/build_github_readme.py'],cwd=REPO,check=True)
     dirty=command('git','status','--porcelain')
     allowed=lambda path:any(path==p or path.startswith(p+'/') for p in paths)

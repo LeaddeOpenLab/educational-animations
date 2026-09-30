@@ -7299,7 +7299,8 @@
       "checked_at": "2026-09-30T07:42:10+00:00",
       "reviewer": "Codex (AI-assisted inspection)",
       "scope": "MP4 metadata and six sampled frames at 640×360; not a full frame-by-frame teaching approval.",
-      "evidence": "docs/verification/featured-inspection.md"
+      "evidence": "docs/verification/featured-inspection.md",
+      "preview_start_seconds": 8
     },
     "cover": "assets/covers/featured/C29-A001.jpg",
     "cover_version": "v1",
@@ -10162,7 +10163,8 @@
       "checked_at": "2026-09-30T07:42:10+00:00",
       "reviewer": "Codex (AI-assisted inspection)",
       "scope": "MP4 metadata and six sampled frames at 640×360; not a full frame-by-frame teaching approval.",
-      "evidence": "docs/verification/featured-inspection.md"
+      "evidence": "docs/verification/featured-inspection.md",
+      "preview_start_seconds": 17
     },
     "cover": "assets/covers/featured/C05-A014.jpg",
     "cover_version": "v1",

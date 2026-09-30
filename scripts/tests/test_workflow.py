@@ -1,6 +1,6 @@
 import copy,sys,unittest
 from pathlib import Path
-sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from final_record import publish_channels,upsert,validate,REVIEW_CHECKS
 
 def record():
