@@ -5665,180 +5665,228 @@
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Exoplanet transit method",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Exoplanet Transit Method: Read a Stellar Dip",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.mp4",
     "tags": [
       "C20-A001",
       "ASTR 160",
       "P1"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Exoplanet transit method” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Exoplanet transit method”. Dynamically demonstrate the core formula or conclusion: A transit reveals a planet through a periodic dip in starlight..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF4F1); main visual (#1E4F4C); secondary visual (#8E2B4E); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Exoplanet transit method: Infer a planet radius from a repeatable stellar brightness dip; a planet crosses a star, obscuring area; fractional depth is approximately (planet radius / stellar radius)^2.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.md",
+    "player": "https://github.com/user-attachments/assets/458eb308-0f23-4d0a-b085-1620d26d709c",
+    "feishu_record_id": "recvvJaLs5i7hR"
   },
   {
     "id": "C20-A002",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Exoplanet radial velocity method",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Exoplanet Radial Velocity Method: Track a Stellar Wobble",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.mp4",
     "tags": [
       "C20-A002",
       "ASTR 160",
       "P1"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Exoplanet radial velocity method” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Exoplanet radial velocity method”. Dynamically demonstrate the core formula or conclusion: Radial velocity reveals a planet through a star's Doppler wobble..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F7F3EA); main visual (#0B4F6C); secondary visual (#8B1E3F); highlight (#795500); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Exoplanet radial velocity method: Infer a companion from periodic stellar line-of-sight speed; star and planet orbit a shared center of mass; the star alternates approaching and receding, shifting spectral lines.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.md",
+    "player": "https://github.com/user-attachments/assets/dccd4289-c5ea-4540-af69-785b70e83c9f",
+    "feishu_record_id": "recvvJaLs7fuN8"
   },
   {
     "id": "C20-A003",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Observational selection effect",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Observational Selection Effect: Correct a Biased Catalog",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.mp4",
     "tags": [
       "C20-A003",
       "ASTR 160",
       "P1"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Observational selection effect” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Observational selection effect”. Dynamically demonstrate the core formula or conclusion: A selection effect changes which objects enter an observed sample..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Observational selection effect: Explain why a detected exoplanet sample is unlike the underlying population; a survey sees only objects above a sensitivity boundary; large short-period planets are easier to detect.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.md",
+    "player": "https://github.com/user-attachments/assets/d5cabd15-6912-42d4-a742-861da67ca6ea",
+    "feishu_record_id": "recvvJaLsakgmL"
   },
   {
     "id": "C20-A004",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Observation bias",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Observation Bias: Test a Flux-Limited Sample",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.mp4",
     "tags": [
       "C20-A004",
       "ASTR 160",
       "P1"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Observation bias” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Observation bias”. Dynamically demonstrate the core formula or conclusion: Observational bias systematically distorts what the data appear to show..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F4EEF8); main visual (#214E75); secondary visual (#8A2356); highlight (#725400); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Observation bias: Distinguish an observational bias from a genuine sky trend; selection and measurement distort what reaches the catalog; the same physical population can yield a misleading correlation.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.md",
+    "player": "https://github.com/user-attachments/assets/3649fbc8-0691-4fce-8652-1cc9bacc51b9",
+    "feishu_record_id": "recvvJaLsdZ5KH"
   },
   {
     "id": "C20-A005",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Schwarzschild radius",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Schwarzschild Radius: Scale the Horizon with Mass",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.mp4",
     "tags": [
       "C20-A005",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Schwarzschild radius” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Schwarzschild radius”. Dynamically demonstrate the core formula or conclusion: The Schwarzschild radius is $r_s=2GM/c^2$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF7EE); main visual (#145A56); secondary visual (#8F2B2B); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Schwarzschild radius: Connect mass to the radius of a nonrotating black-hole horizon; schwarzschild radius scales linearly with mass: r_s = 2GM/c².\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.md",
+    "player": "https://github.com/user-attachments/assets/f4bf3ce0-0729-45d1-9234-55d602c5eb34",
+    "feishu_record_id": "recvvJaLskGNFS"
   },
   {
     "id": "C20-A006",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Curved space-time",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Curved Space-Time: Follow a Deflected Light Ray",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.mp4",
     "tags": [
       "C20-A006",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Curved space-time” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Curved space-time”. Dynamically demonstrate the core formula or conclusion: Mass-energy curves spacetime and guides motion..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Curved space-time: Show gravity as changed spacetime geometry rather than a force arrow; mass changes geometry; nearby light and freely falling paths follow that geometry.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.md",
+    "player": "https://github.com/user-attachments/assets/bd577598-8870-4183-9317-ab78f12dd8d8",
+    "feishu_record_id": "recvvJaLsrErPW"
   },
   {
     "id": "C20-A007",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Black hole event horizon",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Black Hole Event Horizon: Trace the Escape Boundary",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.mp4",
     "tags": [
       "C20-A007",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Black hole event horizon” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Black hole event horizon”. Dynamically demonstrate the core formula or conclusion: An event horizon is a boundary beyond which light cannot escape..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F0F3FB); main visual (#253D75); secondary visual (#9B2447); highlight (#6A5600); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Black hole event horizon: Explain the event horizon as a causal boundary; beyond the horizon, future-directed light paths cannot reach distant observers.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.md",
+    "player": "https://github.com/user-attachments/assets/fdcacef0-74ab-4ae6-af8b-e93588a305f2",
+    "feishu_record_id": "recvvJaLsuc5wI"
   },
   {
     "id": "C20-A008",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Expansion of the universe",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Expansion of the Universe: Watch Distances Grow",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.mp4",
     "tags": [
       "C20-A008",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Expansion of the universe” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Expansion of the universe”. Dynamically demonstrate the core formula or conclusion: Cosmic expansion increases distances between comoving galaxies..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F9F1F5); main visual (#15516C); secondary visual (#8F253B); highlight (#6E5300); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Expansion of the universe: Show expanding space as growth in separation between comoving galaxies; proper distance between comoving galaxies scales with scale factor a(t); bound local systems need not expand.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.md",
+    "player": "https://github.com/user-attachments/assets/2064da11-c8e6-4d06-b8c0-6a83f0bc8878",
+    "feishu_record_id": "recvvJaLsxYQ2i"
   },
   {
     "id": "C20-A009",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Hubble's law",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Hubble's Law: Fit Speed Against Distance",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.mp4",
     "tags": [
       "C20-A009",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Hubble's law” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Hubble's law”. Dynamically demonstrate the core formula or conclusion: Hubble's law is $v=H_0d$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF4F1); main visual (#1E4F4C); secondary visual (#8E2B4E); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Hubble's law: Connect measured galaxy distance to recession speed in Hubble’s law; at low redshift, v ≈ H₀d; the slope of a speed-distance plot estimates H₀.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.md",
+    "player": "https://github.com/user-attachments/assets/66e96d81-3a9b-4a62-a222-f51322cadaa1",
+    "feishu_record_id": "recvvJaLszCC3e"
   },
   {
     "id": "C20-A010",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Dark matter",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Dark Matter: Explain Flat Rotation Curves",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.mp4",
     "tags": [
       "C20-A010",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Dark matter” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Dark matter”. Dynamically demonstrate the core formula or conclusion: Dark matter is inferred from gravity beyond visible mass..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F7F3EA); main visual (#0B4F6C); secondary visual (#8B1E3F); highlight (#795500); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Dark matter: Infer missing gravitating mass from galaxy rotation curves; visible central mass predicts declining outer orbital speed, while observed outer speeds stay roughly flat.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.md",
+    "player": "https://github.com/user-attachments/assets/b764994a-1384-442e-86b6-ac58b13adc6a",
+    "feishu_record_id": "recvvJaLsCeffI"
   },
   {
     "id": "C20-A011",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Dark energy",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Dark Energy: Compare Expansion Histories",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.mp4",
     "tags": [
       "C20-A011",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Dark energy” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Dark energy”. Dynamically demonstrate the core formula or conclusion: Dark energy drives the accelerated expansion of the universe..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Dark energy: Show evidence for accelerated cosmic expansion; distance-redshift measurements favor a late-time expansion history with growing acceleration relative to matter-only deceleration.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.md",
+    "player": "https://github.com/user-attachments/assets/017479d9-502d-4317-b885-840e2cb9796d",
+    "feishu_record_id": "recvvJaLsE1Fb5"
   },
   {
     "id": "C20-A012",
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "textbook": "Assigned readings by lecture (no single textbook)",
-    "title": "Indirect observational evidence",
-    "status": "coming_soon",
-    "video": "",
+    "title": "Indirect Observational Evidence: Combine Two Mass Probes",
+    "status": "ready",
+    "video": "assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.mp4",
     "tags": [
       "C20-A012",
       "ASTR 160",
       "P0"
     ],
-    "prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Indirect observational evidence” using this visual metaphor: “a deep-space stage showing one observable cosmic effect for Indirect observational evidence”. Dynamically demonstrate the core formula or conclusion: Independent observations constrain an unseen cause through its visible effects..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F4EEF8); main visual (#214E75); secondary visual (#8A2356); highlight (#725400); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background."
+    "prompt": "A 30-second silent English concept animation for a university astronomy course about Indirect observational evidence: Teach an evidence chain from observation to hidden physical cause; unseen entities are inferred by combining independent observables and ruling out alternatives.\n\nDark backgrounds #0b0d0f to #13191f to #1c242c; primary #828231 for the main data, accent #d29343 for the key quantity, result #fdac9e for the inference, and warn #d55e00 for caveats; Helvetica Neue headings and labels; draw-on paths over 40–60 frames, stagger-in labels over 12 frames, and finish every element at least 25 frames before each scene ends.",
+    "cover_image": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.jpg",
+    "prompt_file": "prompts/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.md",
+    "player": "https://github.com/user-attachments/assets/62cbdb67-1ef6-478e-9289-faaa73cb904f",
+    "feishu_record_id": "recvvJaLsH0Unl"
   },
   {
     "id": "C36-A001",

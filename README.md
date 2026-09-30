@@ -1149,18 +1149,18 @@
 
 #### Knowledge points
 
-1. [**Exoplanet transit method**](catalog/astronomy/astr-160.md#c20-a001) · `C20-A001` · VIDEO COMING SOON
-2. [**Exoplanet radial velocity method**](catalog/astronomy/astr-160.md#c20-a002) · `C20-A002` · VIDEO COMING SOON
-3. [**Observational selection effect**](catalog/astronomy/astr-160.md#c20-a003) · `C20-A003` · VIDEO COMING SOON
-4. [**Observation bias**](catalog/astronomy/astr-160.md#c20-a004) · `C20-A004` · VIDEO COMING SOON
-5. [**Schwarzschild radius**](catalog/astronomy/astr-160.md#c20-a005) · `C20-A005` · VIDEO COMING SOON
-6. [**Curved space-time**](catalog/astronomy/astr-160.md#c20-a006) · `C20-A006` · VIDEO COMING SOON
-7. [**Black hole event horizon**](catalog/astronomy/astr-160.md#c20-a007) · `C20-A007` · VIDEO COMING SOON
-8. [**Expansion of the universe**](catalog/astronomy/astr-160.md#c20-a008) · `C20-A008` · VIDEO COMING SOON
-9. [**Hubble&#x27;s law**](catalog/astronomy/astr-160.md#c20-a009) · `C20-A009` · VIDEO COMING SOON
-10. [**Dark matter**](catalog/astronomy/astr-160.md#c20-a010) · `C20-A010` · VIDEO COMING SOON
-11. [**Dark energy**](catalog/astronomy/astr-160.md#c20-a011) · `C20-A011` · VIDEO COMING SOON
-12. [**Indirect observational evidence**](catalog/astronomy/astr-160.md#c20-a012) · `C20-A012` · VIDEO COMING SOON
+1. [**Exoplanet Transit Method: Read a Stellar Dip**](catalog/astronomy/astr-160.md#c20-a001) · `C20-A001` · ▶ PLAY VIDEO
+2. [**Exoplanet Radial Velocity Method: Track a Stellar Wobble**](catalog/astronomy/astr-160.md#c20-a002) · `C20-A002` · ▶ PLAY VIDEO
+3. [**Observational Selection Effect: Correct a Biased Catalog**](catalog/astronomy/astr-160.md#c20-a003) · `C20-A003` · ▶ PLAY VIDEO
+4. [**Observation Bias: Test a Flux-Limited Sample**](catalog/astronomy/astr-160.md#c20-a004) · `C20-A004` · ▶ PLAY VIDEO
+5. [**Schwarzschild Radius: Scale the Horizon with Mass**](catalog/astronomy/astr-160.md#c20-a005) · `C20-A005` · ▶ PLAY VIDEO
+6. [**Curved Space-Time: Follow a Deflected Light Ray**](catalog/astronomy/astr-160.md#c20-a006) · `C20-A006` · ▶ PLAY VIDEO
+7. [**Black Hole Event Horizon: Trace the Escape Boundary**](catalog/astronomy/astr-160.md#c20-a007) · `C20-A007` · ▶ PLAY VIDEO
+8. [**Expansion of the Universe: Watch Distances Grow**](catalog/astronomy/astr-160.md#c20-a008) · `C20-A008` · ▶ PLAY VIDEO
+9. [**Hubble's Law: Fit Speed Against Distance**](catalog/astronomy/astr-160.md#c20-a009) · `C20-A009` · ▶ PLAY VIDEO
+10. [**Dark Matter: Explain Flat Rotation Curves**](catalog/astronomy/astr-160.md#c20-a010) · `C20-A010` · ▶ PLAY VIDEO
+11. [**Dark Energy: Compare Expansion Histories**](catalog/astronomy/astr-160.md#c20-a011) · `C20-A011` · ▶ PLAY VIDEO
+12. [**Indirect Observational Evidence: Combine Two Mass Probes**](catalog/astronomy/astr-160.md#c20-a012) · `C20-A012` · ▶ PLAY VIDEO
 
 ---
 
