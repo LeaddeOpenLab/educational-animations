@@ -3484,5 +3484,185 @@
       "core_conclusion",
       "references"
     ]
+  },
+  {
+    "id": "recvw25sP7BJsk",
+    "standard_name": "Container Image Layers and Build Cache",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7ks8S",
+    "standard_name": "Pod Scheduling onto a Node",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7NFVs",
+    "standard_name": "Deployment Replica Reconciliation",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7YvVI",
+    "standard_name": "Rolling Update and Rollback",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7LNSN",
+    "standard_name": "Service Discovery with ClusterIP",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7UxDl",
+    "standard_name": "Ingress Host and Path Routing",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7nJYg",
+    "standard_name": "ConfigMap Injection into a Pod",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7lWkJ",
+    "standard_name": "Secret Mounting and Environment Variables",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7JbUm",
+    "standard_name": "Liveness and Readiness Probes",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7iREY",
+    "standard_name": "Horizontal Pod Autoscaler Feedback Loop",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP75Qpu",
+    "standard_name": "PersistentVolume Claim Binding",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7wZ05",
+    "standard_name": "Namespace Resource Quotas",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP7lDYZ",
+    "standard_name": "ServiceAccount and RBAC Authorization",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25sP72oHb",
+    "standard_name": "NetworkPolicy Traffic Selection",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
+  },
+  {
+    "id": "recvw25tEzR38D",
+    "standard_name": "Helm Values and Template Rendering",
+    "version": "v1",
+    "review": "unreviewed",
+    "prompt_alignment": "unverified",
+    "missing": [
+      "learning_objective",
+      "core_conclusion",
+      "references"
+    ]
   }
 ]

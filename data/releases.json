@@ -1502,5 +1502,76 @@
         "version": "v1"
       }
     ]
+  },
+  "cloud-native-kubernetes": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cloud-native-kubernetes/cloud-native-kubernetes-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-cloud-native-kubernetes",
+    "video_count": 15,
+    "version": "bundle-2",
+    "updated_at": "2026-09-30T08:21:31Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "recvw25sP7BJsk",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7ks8S",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7NFVs",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7YvVI",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7LNSN",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7UxDl",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7nJYg",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7lWkJ",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7JbUm",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7iREY",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP75Qpu",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7wZ05",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP7lDYZ",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25sP72oHb",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25tEzR38D",
+        "version": "v1"
+      }
+    ]
   }
 }

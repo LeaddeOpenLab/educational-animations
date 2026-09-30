@@ -2,7 +2,7 @@
 
 Short educational animations with concept explanations and versioned reuse materials.
 
-**299 video-ready · 8 recorded review passes · 137 awaiting production · 40 courses · 17 disciplines**
+**314 video-ready · 8 recorded review passes · 137 awaiting production · 41 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -23,7 +23,7 @@ Video-ready means a file is available. Review passes require version-specific ev
 <a id="computer-science"></a>
 ### Computer Science
 
-69 videos · 0 awaiting production
+84 videos · 0 awaiting production
 
 <a id="introduction-to-computer-science"></a>
 - [**Introduction to Computer Science**](catalog/computer-science/cs50x.md) — 16 videos · 0 awaiting production
@@ -39,6 +39,8 @@ Video-ready means a file is available. Review passes require version-specific ev
 - [**Database Systems**](catalog/computer-science/cs-db.md) — 8 videos · 0 awaiting production
 <a id="compiler-design"></a>
 - [**Compiler Design**](catalog/computer-science/cs-comp.md) — 8 videos · 0 awaiting production
+<a id="cloud-native-and-kubernetes"></a>
+- [**Cloud Native and Kubernetes**](catalog/computer-science/cloud-native-kubernetes.md) — 15 videos · 0 awaiting production
 
 <a id="artificial-intelligence"></a>
 ### Artificial Intelligence

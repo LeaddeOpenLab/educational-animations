@@ -85,6 +85,23 @@
 - [C25-A006 · Intermediate Representation](catalog/computer-science/cs-comp.md#c25-a006) — video
 - [C25-A007 · Data-Flow Analysis](catalog/computer-science/cs-comp.md#c25-a007) — video
 - [C25-A008 · Register Allocation](catalog/computer-science/cs-comp.md#c25-a008) — video
+## Cloud Native and Kubernetes
+
+- [recvw25sP7BJsk · Container Image Layers and Build Cache](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7bjsk) — video
+- [recvw25sP7ks8S · Pod Scheduling onto a Node](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7ks8s) — video
+- [recvw25sP7NFVs · Deployment Replica Reconciliation](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7nfvs) — video
+- [recvw25sP7YvVI · Rolling Update and Rollback](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7yvvi) — video
+- [recvw25sP7LNSN · Service Discovery with ClusterIP](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7lnsn) — video
+- [recvw25sP7UxDl · Ingress Host and Path Routing](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7uxdl) — video
+- [recvw25sP7nJYg · ConfigMap Injection into a Pod](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7njyg) — video
+- [recvw25sP7lWkJ · Secret Mounting and Environment Variables](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7lwkj) — video
+- [recvw25sP7JbUm · Liveness and Readiness Probes](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7jbum) — video
+- [recvw25sP7iREY · Horizontal Pod Autoscaler Feedback Loop](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7irey) — video
+- [recvw25sP75Qpu · PersistentVolume Claim Binding](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp75qpu) — video
+- [recvw25sP7wZ05 · Namespace Resource Quotas](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7wz05) — video
+- [recvw25sP7lDYZ · ServiceAccount and RBAC Authorization](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp7ldyz) — video
+- [recvw25sP72oHb · NetworkPolicy Traffic Selection](catalog/computer-science/cloud-native-kubernetes.md#recvw25sp72ohb) — video
+- [recvw25tEzR38D · Helm Values and Template Rendering](catalog/computer-science/cloud-native-kubernetes.md#recvw25tezr38d) — video
 ## Introduction to Machine Learning
 
 - [C03-A001 · Decision boundary](catalog/artificial-intelligence/6-036.md#c03-a001) — video

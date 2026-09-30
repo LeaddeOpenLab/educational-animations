@@ -1,6 +1,6 @@
 {
-  "current_packages": 28,
-  "packaged_videos": 299,
+  "current_packages": 29,
+  "packaged_videos": 314,
   "packages": [
     {
       "code": "CS50x",
@@ -139,6 +139,11 @@
     },
     {
       "code": "AI-AGENT-SYSTEMS",
+      "videos": 15,
+      "version": "bundle-2"
+    },
+    {
+      "code": "cloud-native-kubernetes",
       "videos": 15,
       "version": "bundle-2"
     }

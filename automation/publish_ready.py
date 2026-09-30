@@ -72,7 +72,7 @@ def ensure_native_player(entry, save):
 
 def github_step(entry):
     if not entry.get('player'): raise ValueError('Native GitHub attachment URL required for this version; supply it once, do not create duplicate attachment Issues')
-    paths=['data/prompts.json','README.md','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
+    paths=['data/prompts.json','data/backlog.json','data/linear-algebra-video-prompts.json','README.md','catalog','INDEX.md','prompts',entry['video'],entry['cover']]
     subprocess.run([sys.executable,'scripts/build_github_readme.py'],cwd=REPO,check=True)
     dirty=command('git','status','--porcelain')
     allowed=lambda path:any(path==p or path.startswith(p+'/') for p in paths)
@@ -122,7 +122,8 @@ def main():
         if gh.get('status')=='succeeded': fields.update({mapping['github_url']:gh['url'],mapping['published_at']:gh['published_at']})
         agent.api(agent.table_path(f"records/{entry['feishu_record_id']}"),token,{'fields':fields},method='PUT')
         item.pop('status_sync_error',None)
-    except Exception as e:item['status_sync_error']=str(e)
+    except Exception as e:
+        item['status_sync_error']=str(e);errors['feishu_status']=str(e)
     if entry.get('publication',{}).get('github',{}).get('status')=='succeeded' and args.channel in ('all','github'):
         try:
             catalog=REPO/'data/prompts.json';items=json.loads(catalog.read_text());upsert(items,entry);agent.atomic_json(catalog,items)
@@ -132,7 +133,9 @@ def main():
                 command('git','push','origin','HEAD:main')
                 if command('git','ls-remote','origin','refs/heads/main').split()[0]!=command('git','rev-parse','HEAD'):raise RuntimeError('Delivery metadata push not verified')
             item.pop('catalog_status_sync_error',None)
-        except Exception as error:item['catalog_status_sync_error']=str(error)
+        except Exception as error:
+            item['catalog_status_sync_error']=str(error);errors['github_status']=str(error)
+    if errors:item['status']='待发布';item['error']=json.dumps(errors,ensure_ascii=False)
     save();print(json.dumps({'id':entry['id'],'channels':entry['publication'],'errors':errors},ensure_ascii=False))
     return bool(errors)
 
