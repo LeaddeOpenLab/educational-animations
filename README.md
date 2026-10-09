@@ -1,6 +1,6 @@
-# Leadde Knowledge in Motion
+# Leadde Knowledge in Motion — Animated Computer Science, AI & Math Concepts
 
-Short educational animations with concept explanations and versioned reuse materials.
+Watch animations to understand concepts, download videos, and view animation prompts.
 
 **375 video-ready · 69 recorded review passes · 137 awaiting production · 45 courses · 17 disciplines**
 
@@ -32,6 +32,16 @@ Video-ready means a file is available. Review passes require version-specific ev
 </table>
 
 Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.
+
+## Start learning
+
+Choose a topic and follow the videos in order.
+
+| Learning path | What to explore | Videos |
+| --- | --- | ---: |
+| [Pointers and Memory](catalog/LEARNING-PATHS.md#pointers-and-memory) | Follow how addresses, pointers and the call stack organize program memory. | 7 |
+| [Neural Network Training](catalog/LEARNING-PATHS.md#neural-network-training) | Follow a training cycle from neurons and loss to gradients, updates and validation. | 8 |
+| [LLMs and RAG](catalog/LEARNING-PATHS.md#llms-and-rag) | Connect tokenization and attention to text generation, retrieval and grounded answers. | 8 |
 
 ## Watch, download, reuse
 

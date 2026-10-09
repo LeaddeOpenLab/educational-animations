@@ -15,7 +15,7 @@ name=lambda x:x.get('standard_name',x['title'])
 summary=lambda rows:f"{sum(bool(ready(x)) for x in rows)} videos · {sum(not ready(x) for x in rows)} awaiting production"
 lib=OrderedDict()
 for x in items: lib.setdefault(x['subject'],OrderedDict()).setdefault(x['course'],[]).append(x)
-lines=['# Leadde Knowledge in Motion','', 'Short educational animations with concept explanations and versioned reuse materials.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','', '## Featured videos','']
+lines=['# Leadde Knowledge in Motion — Animated Computer Science, AI & Math Concepts','', 'Watch animations to understand concepts, download videos, and view animation prompts.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','', '## Featured videos','']
 lines += ['<table>','<tr>']
 for x in items:
  if x.get('featured') and ready(x):
@@ -24,6 +24,29 @@ for x in items:
   href=f"{page(x)}#{x['id'].lower()}"
   lines += ['<td width="33%" valign="top">',f'<a href="{href}"><img src="{preview}" width="100%" alt="Animated preview: {html.escape(name(x))}"></a><br>',f'<a href="{href}"><strong>{html.escape(name(x))}</strong></a><br>',f'<sub>{html.escape(x["learning_objective"])}</sub><br>',f'<a href="{href}">▶ Watch full video</a> · <a href="{x["featured"]["evidence"]}">Inspection scope</a>','</td>']
 lines += ['</tr>','</table>','','Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.']
+learning_paths = [
+ ('Pointers and Memory', 'Follow how addresses, pointers and the call stack organize program memory.',
+  ['C01-A002', 'C01-A003', 'C01-A001', 'C01-A014', 'C01-A015', 'C01-A013', 'C01-A016']),
+ ('Neural Network Training', 'Follow a training cycle from neurons and loss to gradients, updates and validation.',
+  ['C26-A001', 'C26-A002', 'C26-A018', 'C03-A010', 'C03-A009', 'C03-A003', 'C26-A019', 'C26-A025']),
+ ('LLMs and RAG', 'Connect tokenization and attention to text generation, retrieval and grounded answers.',
+  ['C27-A001', 'C27-A003', 'C27-A005', 'recvw24MaggI13', 'recvw24U8nIXtd', 'recvw24Vlk0V3K', 'recvw24Wq3ZOpq', 'recvw24T2zGQI9']),
+]
+by_id = {x['id']: x for x in items}
+course_pages = {(subject, course): page(rows[0]) for subject, courses in lib.items() for course, rows in courses.items()}
+lines += ['', '## Start learning', '', 'Choose a topic and follow the videos in order.', '',
+          '| Learning path | What to explore | Videos |', '| --- | --- | ---: |']
+path_lines = ['# Learning paths', '', '[Back to the library](../README.md)', '',
+              'Follow each sequence in order. Every step links to an existing video on its course page, where you can also download it and view its Prompt.', '']
+for title, description, ids in learning_paths:
+ lines += [f'| [{title}](catalog/LEARNING-PATHS.md#{slug(title)}) | {description} | {len(ids)} |']
+ path_lines += [f'## {title}', '', description, '']
+ for step, concept_id in enumerate(ids, 1):
+  x = by_id[concept_id]
+  if not ready(x): raise ValueError(f'Learning path requires an available video: {concept_id}')
+  path_lines += [f"{step}. [{name(x)}]({course_pages[x['subject'], x['course']].removeprefix('catalog/')}#{concept_id.lower()})"]
+ path_lines += ['', '[Back to learning paths](../README.md#start-learning)', '']
+(root/'catalog/LEARNING-PATHS.md').write_text('\n'.join(path_lines).rstrip()+'\n')
 lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
 def card(title, href, image, caption, anchor=None):
  escape=html.escape
