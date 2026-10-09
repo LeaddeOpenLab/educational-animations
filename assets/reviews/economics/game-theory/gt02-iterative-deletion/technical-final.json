@@ -1,0 +1,18 @@
+{
+  "typecheck": "PASS both kits",
+  "state_assertions": "PASS 20 mechanisms",
+  "overlap": {
+    "game-theory": {
+      "frames": 72,
+      "fail": 0,
+      "warn": 0
+    },
+    "principles-of-macroeconomics": {
+      "frames": 48,
+      "fail": 0,
+      "warn": 0
+    }
+  },
+  "media": "Each final MP4 has one video stream and no audio",
+  "reviewed_at": "2026-10-09T17:22:47.838463+08:00"
+}

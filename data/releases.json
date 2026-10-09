@@ -1786,5 +1786,107 @@
         "version": "v1"
       }
     ]
+  },
+  "ECON 159": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-economics-econ-159/econ-159-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-videos-economics-econ-159",
+    "video_count": 12,
+    "version": "bundle-2",
+    "updated_at": "2026-10-09T09:42:20Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C15-A001",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C15-A002",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C15-A003",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A004",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C15-A005",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A006",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A007",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A008",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A009",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A010",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C15-A011",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C15-A012",
+        "version": "economics-game-macro-20261009-v2"
+      }
+    ]
+  },
+  "14.02": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-economics-14-02/14-02-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-videos-economics-14-02",
+    "video_count": 8,
+    "version": "bundle-2",
+    "updated_at": "2026-10-09T09:42:30Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C14-A001",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C14-A002",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C14-A003",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C14-A004",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C14-A005",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C14-A006",
+        "version": "economics-game-macro-20261009-v2"
+      },
+      {
+        "id": "C14-A007",
+        "version": "economics-game-macro-20261009-v1"
+      },
+      {
+        "id": "C14-A008",
+        "version": "economics-game-macro-20261009-v1"
+      }
+    ]
   }
 }

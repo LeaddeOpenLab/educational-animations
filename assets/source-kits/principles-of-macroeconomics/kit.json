@@ -1,0 +1,299 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "principles-of-macroeconomics",
+    "label": "Principles of Macroeconomics",
+    "subject": "Economics",
+    "outputDir": "Economics/Principles of Macroeconomics"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "principles-of-macroeconomics",
+    "file": "src/theme/themes/principles-of-macroeconomics.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#117733",
+      "accent": "#aa4499",
+      "result": "#cc6677",
+      "warn": "#882255",
+      "alt": "#332288"
+    },
+    "bg1": "#f6f8fb",
+    "contrast": {
+      "primary": 5.32,
+      "accent": 4.94,
+      "result": 3.44,
+      "warn": 8.2,
+      "alt": 11.44
+    }
+  },
+  "primitives": [
+    {
+      "name": "Kicker",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Heading",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Caption",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Lines",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Hi",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Arrow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Block",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Verdict",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Chip",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Rule",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Flow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Axes",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "sampleFn",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "rectPts",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "shifted",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Curve",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Stems",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Impulse",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Band",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "VLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "HLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Dot",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "PoleMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "ZeroMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Tag",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Formula",
+      "file": "src/components/Formula.tsx",
+      "summary": "渲染 render-mathjax.cjs 烘出的 MathJax SVG（字形内嵌，不依赖外部字体）"
+    },
+    {
+      "name": "Backdrop",
+      "file": "src/components/Backdrop.tsx",
+      "summary": "整幅背景：底色渐变 + 网格 + 辉光，取主题包 token"
+    },
+    {
+      "name": "GdpBars",
+      "file": "src/components/Macro.tsx",
+      "summary": "GDP 支出法构成：C+I+G+NX 的堆叠条，每块标数值与占比，负值（如 NX<0）向下单独画，底部给总量，可叠加上期的细条做对比",
+      "signature": "({ x, y, w, barH, components: [{label, value}], previous, color, progress })"
+    },
+    {
+      "name": "CircularFlow",
+      "file": "src/components/Macro.tsx",
+      "summary": "经济循环流量图：家庭/企业/政府/国外四部门，实线货币流、虚线实物流，每笔流标名称与数值",
+      "signature": "({ cx, cy, r, sectors, flows: [{from, to, label, value, kind}], color, progress })"
+    },
+    {
+      "name": "IslmModel",
+      "file": "src/components/Macro.tsx",
+      "summary": "IS–LM：横轴收入 Y、纵轴利率 r，数值求交点标 (Y*, r*)；shiftIS/shiftLM 做财政/货币政策平移（虚线留原曲线）",
+      "signature": "({ s, rIS, rLM, shiftIS, shiftLM, color, progress })"
+    },
+    {
+      "name": "ExchangeRate",
+      "file": "src/components/Macro.tsx",
+      "summary": "汇率供需均衡：本币的需求/供给曲线求均衡汇率，标注 e 并相对原均衡判定升值/贬值幅度",
+      "signature": "({ s, Qd, Qs, shiftD, shiftS, color, progress })"
+    },
+    {
+      "name": "BalanceOfPayments",
+      "file": "src/components/Macro.tsx",
+      "summary": "国际收支双栏：经常账户与资本金融账户各自的贷/借条目（正值向右、负值向左），两栏净额加总应等于零",
+      "signature": "({ x, y, colW, accounts: [{name, items: [{label, value}]}], color, progress })"
+    },
+    {
+      "name": "SolowModel",
+      "file": "src/components/Macro.tsx",
+      "summary": "索洛增长：y=f(k)、投资 s·f(k)、持平投资 (n+δ)k 三线，数值求稳态 k* 并给出 y* 与 c*，可叠加更高储蓄率的对比",
+      "signature": "({ s, f, save, breakEven, compare: {save, label}, color, progress })"
+    },
+    {
+      "name": "PhillipsCurve",
+      "file": "src/components/Macro.tsx",
+      "summary": "菲利普斯曲线：短期曲线（失业→通胀）+ 自然失业率处的长期垂直线；expected 为预期通胀，把短期曲线整体上移并留虚线原曲线",
+      "signature": "({ s, SRPC, uNat, expected, color, progress })"
+    }
+  ],
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "ma01Title",
+      "ma01C",
+      "ma01I",
+      "ma01NX",
+      "ma02Title",
+      "ma02Inject",
+      "ma02Leak",
+      "ma02Identity",
+      "ma03Title",
+      "ma03IS",
+      "ma03LM",
+      "ma03Eq",
+      "ma04Title",
+      "ma04Appreciation",
+      "ma04PPP",
+      "ma04UIP",
+      "ma05Title",
+      "ma05CA",
+      "ma05KA",
+      "ma05Reserves",
+      "ma06Title",
+      "ma06Output",
+      "ma06Steady",
+      "ma06Consume",
+      "ma07Title",
+      "ma07Short",
+      "ma07Long",
+      "ma07Tradeoff",
+      "ma08Title",
+      "ma08Anchor",
+      "ma08Adaptive",
+      "ma08Cost"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^ma\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "配色族 tol-muted：Paul Tol muted 中通过门禁的 5 色",
+      "primary #117733 / accent #aa4499 / result #cc6677 / warn #882255 / alt #332288",
+      "所有显示的数字必须由函数产出，不要在场景里写字面量"
+    ]
+  }
+}

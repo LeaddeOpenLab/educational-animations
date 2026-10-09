@@ -1,0 +1,333 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "game-theory",
+    "label": "Game Theory",
+    "subject": "Economics",
+    "outputDir": "Economics/Game Theory"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "game-theory",
+    "file": "src/theme/themes/game-theory.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#cc6677",
+      "accent": "#117733",
+      "result": "#aa4499",
+      "warn": "#882255",
+      "alt": "#332288"
+    },
+    "bg1": "#f6f8fb",
+    "contrast": {
+      "primary": 3.44,
+      "accent": 5.32,
+      "result": 4.94,
+      "warn": 8.2,
+      "alt": 11.44
+    }
+  },
+  "primitives": [
+    {
+      "name": "Kicker",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Heading",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Caption",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Lines",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Hi",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Arrow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Block",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Verdict",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Chip",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Rule",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Flow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Axes",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "sampleFn",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "rectPts",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "shifted",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Curve",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Stems",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Impulse",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Band",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "VLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "HLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Dot",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "PoleMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "ZeroMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Tag",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Formula",
+      "file": "src/components/Formula.tsx",
+      "summary": "渲染 render-mathjax.cjs 烘出的 MathJax SVG（字形内嵌，不依赖外部字体）"
+    },
+    {
+      "name": "Backdrop",
+      "file": "src/components/Backdrop.tsx",
+      "summary": "整幅背景：底色渐变 + 网格 + 辉光，取主题包 token"
+    },
+    {
+      "name": "PayoffMatrix",
+      "file": "src/components/Game.tsx",
+      "summary": "收益矩阵：每格 (行收益, 列收益)，由求解器标出最优反应角标、纯策略纳什均衡格（填充高亮），crossOut 划掉被支配的行/列（迭代剔除的过程可视化）",
+      "signature": "({ x, y, cellW, cellH, rowLabels, colLabels, payoffs, crossOut: {rows, cols}, showBest, showNash, color, progress, rowName, colName })"
+    },
+    {
+      "name": "bestResponses",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：给定收益矩阵，返回行/列玩家在对方每个策略下的最优反应下标集合",
+      "signature": "(payoffs) => { row: number[][], col: number[][] }"
+    },
+    {
+      "name": "nashCells",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：返回所有纯策略纳什均衡格的下标（双方互为最优反应）",
+      "signature": "(payoffs) => [number, number][]"
+    },
+    {
+      "name": "dominatedStrategies",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：返回被严格支配的行/列下标，迭代剔除就是反复调用它",
+      "signature": "(payoffs) => { rows: number[], cols: number[] }"
+    },
+    {
+      "name": "mixedEquilibrium",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：2×2 的混合策略纳什均衡概率 [p, q]（令对方无差异），无解返回 null",
+      "signature": "(payoffs) => { p, q } | null"
+    },
+    {
+      "name": "ReactionCurves",
+      "file": "src/components/Game.tsx",
+      "summary": "连续策略的最优反应曲线（如古诺产量）：两条反应函数数值求交点并标注纳什均衡",
+      "signature": "({ s, R1, R2, color, progress, labels })"
+    },
+    {
+      "name": "MixedSimplex",
+      "file": "src/components/Game.tsx",
+      "summary": "混合策略：横轴是对方的混合概率，两条线是我方取各纯策略的期望收益，交点处无差异即均衡混合概率",
+      "signature": "({ s, payoffs, forWhom: 'column'|'row', color, progress })"
+    },
+    {
+      "name": "GameTree",
+      "file": "src/components/Game.tsx",
+      "summary": "博弈树：分层布局 + 动作名分支 + 终端收益向量；支持信息集虚线连接、逆向归纳（均衡路径加粗、其余淡出）、子博弈虚线框",
+      "signature": "({ cx, cy, levelH, nodeGap, nodes: TreeNode[], solution: {nodeId: action}, subgames: [{root, label}], color, progress, players })"
+    },
+    {
+      "name": "SignalingModel",
+      "file": "src/components/Game.tsx",
+      "summary": "信号传递：类型 → 信号 → 行动三列时序，均衡路径连箭头并标分离成本；路径是否共用同一信号决定 separating / pooling 判定",
+      "signature": "({ x, y, w, types, signals, actions, paths, cost, color, progress })"
+    },
+    {
+      "name": "AdverseSelection",
+      "file": "src/components/Game.tsx",
+      "summary": "逆向选择（柠檬市场）：卖方价值线与买方估值线 + 按平均质量的报价水平线，求质量退出临界点并着色被挤出的高质量区间",
+      "signature": "({ s, sellerValue, buyerValue, qMax, color, progress })"
+    }
+  ],
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "gt01Title",
+      "gt01Strict",
+      "gt01Weak",
+      "gt01Outcome",
+      "gt02Title",
+      "gt02Order",
+      "gt02Survive",
+      "gt02Empty",
+      "gt03Title",
+      "gt03Best",
+      "gt03NoDeviate",
+      "gt03May",
+      "gt04Title",
+      "gt04Expected",
+      "gt04Indifferent",
+      "gt04Support",
+      "gt05Title",
+      "gt05Indiff",
+      "gt05Prob",
+      "gt05Payoff",
+      "gt06Title",
+      "gt06Extensive",
+      "gt06Perfect",
+      "gt06Strategy",
+      "gt07Title",
+      "gt07Last",
+      "gt07Roll",
+      "gt07Result",
+      "gt08Title",
+      "gt08Def",
+      "gt08SPE",
+      "gt08Off",
+      "gt09Title",
+      "gt09Check",
+      "gt09Empty",
+      "gt09Entry",
+      "gt10Title",
+      "gt10Belief",
+      "gt10Seq",
+      "gt10Harsanyi",
+      "gt11Title",
+      "gt11Separate",
+      "gt11Pool",
+      "gt11IC",
+      "gt12Title",
+      "gt12Exit",
+      "gt12Spiral",
+      "gt12Unravel"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^gt\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "配色族 tol-muted：Paul Tol muted 中通过门禁的 5 色",
+      "primary #cc6677 / accent #117733 / result #aa4499 / warn #882255 / alt #332288",
+      "所有显示的数字必须由函数产出，不要在场景里写字面量"
+    ]
+  }
+}

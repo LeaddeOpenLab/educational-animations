@@ -1,0 +1,21 @@
+{
+  "name": "principles-of-macroeconomics",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "render": "remotion render ma01-gdp-accounting out/ma01-gdp-accounting.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.410",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "remotion": "4.0.410"
+  },
+  "devDependencies": {
+    "@types/react": "19.0.0",
+    "@types/react-dom": "19.0.0",
+    "typescript": "5.8.2",
+    "mathjax-full": "3.2.2"
+  },
+  "_note": "node_modules 是 ../_shared/node_modules 的软链（34 个 kit 共用一份依赖树）。单独拷走这个 kit 时，删掉软链重新 npm install 即可。"
+}

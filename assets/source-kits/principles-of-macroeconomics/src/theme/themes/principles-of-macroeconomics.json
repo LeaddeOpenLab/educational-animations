@@ -1,0 +1,28 @@
+{
+  "name": "principles-of-macroeconomics",
+  "label": "Principles of Macroeconomics",
+  "mode": "light",
+  "note": "配色族 tol-muted（Paul Tol muted 中通过门禁的 5 色）；shell 取自配色库条目 tol-muted，内容角色在族内池中按 rot=[1,2,3,0] 轮换。库条目自身的 accent #ddcc77（1.52）与 result #44aa99（2.65）在浅底上不达标，剔除；warn #882255 保留（8.20）。",
+  "colors": {
+    "bg0": "#ffffff",
+    "bg1": "#f6f8fb",
+    "bg2": "#eaeff6",
+    "grid": "rgba(15,23,42,0.10)",
+    "axis": "rgba(15,23,42,0.42)",
+    "textStrong": "#0b1220",
+    "textMuted": "#475569",
+    "textDim": "#5a6675",
+    "primary": "#117733",
+    "accent": "#aa4499",
+    "result": "#cc6677",
+    "warn": "#882255",
+    "alt": "#332288"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 48,
+    "gridOpacity": 0.9,
+    "glowOpacity": 0.05,
+    "glowBlur": 70
+  }
+}

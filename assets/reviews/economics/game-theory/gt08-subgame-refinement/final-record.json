@@ -1,0 +1,339 @@
+{
+  "id": "C15-A008",
+  "subject": "Economics",
+  "course": "Game Theory",
+  "textbook": "Strategy and Games (Dutta); Strategy (Watson)",
+  "title": "Subgame Refinement: Reject an Empty Threat",
+  "status": "ready",
+  "video": "assets/videos/economics/game-theory/gt08-subgame-refinement.mp4",
+  "tags": [
+    "C15-A008",
+    "ECON 159",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Subgame Refinement for Game Theory, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #cc6677, accent #117733, result #aa4499, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: A market-entry threat: incumbent promises to Fight entry, but would earn more by Accommodating if entry occurs. Learning objective: Show why subgame perfection rejects a Nash threat that fails in a proper subgame. Use this actual scene timing: 0–5s: Candidate Nash strategy; 5–9s: Draw proper subgame boundary; 9–14s: Test Fight versus Accommodate inside it; 14–19s: The final strategy is optimal in the whole game and in the boxed proper subgame.; 19–25s: Replace failed continuation and revisit root; 25–30s: Conclude every subgame must pass. Drive objects and values from one state model. Numerical setup: {\"out\":[2,4],\"enter_fight\":[-1,0],\"enter_accommodate\":[4,2],\"candidate\":[\"Stay Out\",\"Fight\"],\"refined\":[\"Enter\",\"Accommodate\"]}. Demonstrate Enter the proper subgame and compare incumbent payoffs there. Then The threatened continuation fails locally; substitute Accommodate and recompute the root choice. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not describe every node as a subgame; an information set cannot be cut. Reproduce from the supplied source kit game-theory, src/videos/gt08-subgame-refinement.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v1 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Subgame refinement",
+  "standard_name": "Subgame Refinement",
+  "aliases": [],
+  "final_title": "Subgame Refinement: Reject an Empty Threat",
+  "learning_objective": "Show why subgame perfection rejects a Nash threat that fails in a proper subgame.",
+  "core_conclusion": "The threatened continuation fails locally; substitute Accommodate and recompute the root choice.",
+  "references": [
+    {
+      "title": "MIT OCW — Introduction to Game Theory",
+      "url": "https://www.ocw.mit.edu/courses/14-75-political-economy-and-economic-development-fall-2012/bf65c969a9bfd655e50589ba7283cda8_MIT14_75F12_Recitation8.pdf",
+      "scope": "Best responses, dominance and Nash equilibrium terminology"
+    },
+    {
+      "title": "MIT OCW — Backward Induction",
+      "url": "https://www.ocw.mit.edu/courses/15-025-game-theory-for-strategic-advantage-spring-2015/resources/mit15_025s15_lec_7/",
+      "scope": "Sequential decisions and backward induction"
+    },
+    {
+      "title": "MIT OCW — Game Theory lecture notes",
+      "url": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024/resources/lecture-notes/",
+      "scope": "Equilibrium refinements and signaling games"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Subgame refinement” using this visual metaphor: “a single animated economic graph tracing one mechanism for Subgame refinement”. Dynamically demonstrate the core formula or conclusion: Subgame perfection requires equilibrium behavior in every subgame..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/game-theory/src/videos/gt08-subgame-refinement.tsx",
+    "source": "assets/source-kits/game-theory/src/videos/gt08-subgame-refinement.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpIL5j6/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": "Full tree, entry-rooted proper subgame frame, candidate threat path, local comparison, corrected path.",
+        "change": "Candidate Nash strategy",
+        "cause": "A market-entry threat: incumbent promises to Fight entry, but would earn more by Accommodating if entry occurs.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 5.0,
+        "end_seconds": 9.0,
+        "reading_seconds": 3.5,
+        "objects": "Full tree, entry-rooted proper subgame frame, candidate threat path, local comparison, corrected path.",
+        "change": "Draw proper subgame boundary",
+        "cause": "Enter the proper subgame and compare incumbent payoffs there.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 9.0,
+        "end_seconds": 14.0,
+        "reading_seconds": 4.5,
+        "objects": "Full tree, entry-rooted proper subgame frame, candidate threat path, local comparison, corrected path.",
+        "change": "Test Fight versus Accommodate inside it",
+        "cause": "Enter the proper subgame and compare incumbent payoffs there.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 14.0,
+        "end_seconds": 19.0,
+        "reading_seconds": 4.5,
+        "objects": "Full tree, entry-rooted proper subgame frame, candidate threat path, local comparison, corrected path.",
+        "change": "The final strategy is optimal in the whole game and in the boxed proper subgame.",
+        "cause": "Enter the proper subgame and compare incumbent payoffs there.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "result",
+        "start_seconds": 19.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 5.5,
+        "objects": "Full tree, entry-rooted proper subgame frame, candidate threat path, local comparison, corrected path.",
+        "change": "Replace failed continuation and revisit root",
+        "cause": "Enter the proper subgame and compare incumbent payoffs there.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "closing",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.5,
+        "objects": "Full tree, entry-rooted proper subgame frame, candidate threat path, local comparison, corrected path.",
+        "change": "Conclude every subgame must pass",
+        "cause": "Enter the proper subgame and compare incumbent payoffs there.",
+        "result": "The final strategy is optimal in the whole game and in the boxed proper subgame.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/game-theory/src/videos/gt08-subgame-refinement.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "result",
+        "uncertainty": "Do not describe every node as a subgame; an information set cannot be cut.",
+        "expected_observation": "The threatened continuation fails locally; substitute Accommodate and recompute the root choice."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 22.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/game-theory/gt08-subgame-refinement/contact-sheet.jpg",
+      "assets/reviews/economics/game-theory/gt08-subgame-refinement/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt08-subgame-refinement/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "video": "assets/videos/economics/game-theory/gt08-subgame-refinement.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt08-subgame-refinement/contact-sheet.jpg",
+        "assets/reviews/economics/game-theory/gt08-subgame-refinement/risk-sheet.jpg"
+      ],
+      "observations": "21–23s: inside the boxed proper subgame, Fight is replaced by Accommodate; the entrant path simultaneously changes Stay Out to Enter. The visible local comparison reads Fight 0 < Accommodate 2.",
+      "times_seconds": [
+        21.0,
+        22.0,
+        23.0
+      ],
+      "teaching_requirement": "Show why subgame perfection rejects a Nash threat that fails in a proper subgame.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 21–23s: inside the boxed proper subgame, Fight is replaced by Accommodate; the entrant path simultaneously changes Stay Out to Enter. The visible local comparison reads Fight 0 < Accommodate 2."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 21–23s: inside the boxed proper subgame, Fight is replaced by Accommodate; the entrant path simultaneously changes Stay Out to Enter. The visible local comparison reads Fight 0 < Accommodate 2."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/game-theory/gt08-subgame-refinement/risk-sheet.jpg",
+          "times_seconds": [
+            21.0,
+            22.0,
+            23.0
+          ],
+          "observation": "21–23s: inside the boxed proper subgame, Fight is replaced by Accommodate; the entrant path simultaneously changes Stay Out to Enter. The visible local comparison reads Fight 0 < Accommodate 2."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/game-theory/gt08-subgame-refinement.md",
+      "assets/source-kits/game-theory/src/videos/gt08-subgame-refinement.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "record_id": "recvvJaLpIL5j6",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/1a3b013d-3157-4908-a307-45670ba3497b",
+        "comment_id": 6078337822,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078337822",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v1",
+        "video_bytes": 2727158,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/1a3b013d-3157-4908-a307-45670ba3497b",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/econ-159.md#c15-a008"
+    }
+  },
+  "feishu_record_id": "recvvJaLpIL5j6",
+  "page": "catalog/economics/econ-159.md",
+  "course_code": "ECON 159",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A market-entry threat: incumbent promises to Fight entry, but would earn more by Accommodating if entry occurs.",
+    "original_name": "Subgame refinement",
+    "standard_name": "Subgame Refinement",
+    "sources": [
+      {
+        "title": "MIT OCW — Introduction to Game Theory",
+        "url": "https://www.ocw.mit.edu/courses/14-75-political-economy-and-economic-development-fall-2012/bf65c969a9bfd655e50589ba7283cda8_MIT14_75F12_Recitation8.pdf",
+        "scope": "Best responses, dominance and Nash equilibrium terminology"
+      },
+      {
+        "title": "MIT OCW — Backward Induction",
+        "url": "https://www.ocw.mit.edu/courses/15-025-game-theory-for-strategic-advantage-spring-2015/resources/mit15_025s15_lec_7/",
+        "scope": "Sequential decisions and backward induction"
+      },
+      {
+        "title": "MIT OCW — Game Theory lecture notes",
+        "url": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024/resources/lecture-notes/",
+        "scope": "Equilibrium refinements and signaling games"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/game-theory/gt08-subgame-refinement.jpg",
+      "assets/reviews/economics/game-theory/gt08-subgame-refinement/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpIL5j6",
+      "slug": "gt08-subgame-refinement",
+      "bbox": [
+        200,
+        264,
+        800,
+        637
+      ],
+      "width": 600,
+      "height": 373,
+      "dx": 0.0,
+      "dy": 0.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/game-theory/gt08-subgame-refinement.jpg",
+  "prompt_file": "assets/prompts/economics/game-theory/gt08-subgame-refinement.md",
+  "cover_image": "assets/covers/economics/game-theory/gt08-subgame-refinement.jpg",
+  "cover_version": "economics-game-macro-20261009-v1",
+  "feishu": {
+    "record_id": "recvvJaLpIL5j6",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/1a3b013d-3157-4908-a307-45670ba3497b",
+  "player_version": "economics-game-macro-20261009-v1"
+}

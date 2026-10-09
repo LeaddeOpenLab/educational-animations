@@ -1,0 +1,341 @@
+{
+  "id": "C14-A001",
+  "subject": "Economics",
+  "course": "Principles of Macroeconomics",
+  "textbook": "Macroeconomics, 8e (Blanchard)",
+  "title": "GDP Accounting: Add Spending and Net Exports",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-macroeconomics/ma01-gdp-accounting.mp4",
+  "tags": [
+    "C14-A001",
+    "14.02",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about GDP Accounting for Principles of Macroeconomics, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #117733, accent #aa4499, result #cc6677, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: A small economy records household spending, business investment, government purchases and net exports. Learning objective: Compute GDP by expenditure and distinguish a negative net export contribution. Use this actual scene timing: 0–5s: Spending categories; 5–12s: Build domestic spending: C + I + G; 12–21s: Subtract negative net exports; 21–30s: Reconcile displayed total. Drive objects and values from one state model. Numerical setup: {\"components\":{\"C\":600,\"I\":200,\"G\":250,\"NX\":-50},\"GDP\":1000}. Demonstrate Add C, I, G, then subtract imports exceeding exports. Then Running total grows with first three components then falls by negative NX. Preserve the visible comparison that proves the result. Avoid this pitfall: Imports are subtracted to avoid counting foreign production as domestic output. Reproduce from the supplied source kit principles-of-macroeconomics, src/videos/ma01-gdp-accounting.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v2 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "GDP accounting",
+  "standard_name": "GDP Accounting",
+  "aliases": [],
+  "final_title": "GDP Accounting: Add Spending and Net Exports",
+  "learning_objective": "Compute GDP by expenditure and distinguish a negative net export contribution.",
+  "core_conclusion": "Running total grows with first three components then falls by negative NX.",
+  "references": [
+    {
+      "title": "OpenStax — GDP expenditure accounting",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "scope": "GDP and negative net exports"
+    },
+    {
+      "title": "OpenStax — Foreign exchange demand and supply",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+      "scope": "Quoted currency units and supply shifts"
+    },
+    {
+      "title": "MIT OCW — Intermediate Macroeconomics resources",
+      "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+      "scope": "IS–LM and Solow model reference scope"
+    },
+    {
+      "title": "OpenStax — Phillips Curve",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+      "scope": "Short-run tradeoff and inflation expectations"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “GDP accounting” using this visual metaphor: “a single animated economic graph tracing one mechanism for GDP accounting”. Dynamically demonstrate the core formula or conclusion: GDP expenditure accounting is $Y=C+I+G+NX$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F0F3FB); main visual (#253D75); secondary visual (#9B2447); highlight (#6A5600); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-macroeconomics/src/videos/ma01-gdp-accounting.tsx",
+    "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma01-gdp-accounting.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLp7KLko/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": "C/I/G positive stacked segments, NX negative segment below baseline, running total.",
+        "change": "Spending categories",
+        "cause": "A small economy records household spending, business investment, government purchases and net exports.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 5.0,
+        "end_seconds": 12.0,
+        "reading_seconds": 6.5,
+        "objects": "C/I/G positive stacked segments, NX negative segment below baseline, running total.",
+        "change": "Build domestic spending: C + I + G",
+        "cause": "Add C, I, G, then subtract imports exceeding exports.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 12.0,
+        "end_seconds": 21.0,
+        "reading_seconds": 8.5,
+        "objects": "C/I/G positive stacked segments, NX negative segment below baseline, running total.",
+        "change": "Subtract negative net exports",
+        "cause": "Add C, I, G, then subtract imports exceeding exports.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 21.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 8.5,
+        "objects": "C/I/G positive stacked segments, NX negative segment below baseline, running total.",
+        "change": "Reconcile displayed total",
+        "cause": "Add C, I, G, then subtract imports exceeding exports.",
+        "result": "Segment amounts and final GDP equal the displayed formula Y=C+I+G+NX; the negative segment is outside the positive stack.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma01-gdp-accounting.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "mechanism",
+        "uncertainty": "Imports are subtracted to avoid counting foreign production as domestic output.",
+        "expected_observation": "Running total grows with first three components then falls by negative NX."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 16.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "Final-frame review identified timing, text length, label separation or mechanism evidence that needed correction.",
+        "affected_ids": [
+          "C14-A001"
+        ],
+        "status": "resolved",
+        "fix": "Targeted source correction and v2 re-render; preserved all other batch outputs.",
+        "evidence": [
+          "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/contact-sheet.jpg",
+          "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "video": "assets/videos/economics/principles-of-macroeconomics/ma01-gdp-accounting.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/risk-sheet.jpg"
+      ],
+      "observations": "15–17s: C=600, I=200 and G=250 are already visible with GDP=1050. Adding the downward NX=−50 bar changes the displayed GDP to 1000 without deleting G.",
+      "times_seconds": [
+        15.0,
+        16.0,
+        17.0
+      ],
+      "teaching_requirement": "Compute GDP by expenditure and distinguish a negative net export contribution.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 15–17s: C=600, I=200 and G=250 are already visible with GDP=1050. Adding the downward NX=−50 bar changes the displayed GDP to 1000 without deleting G."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 15–17s: C=600, I=200 and G=250 are already visible with GDP=1050. Adding the downward NX=−50 bar changes the displayed GDP to 1000 without deleting G."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/risk-sheet.jpg",
+          "times_seconds": [
+            15.0,
+            16.0,
+            17.0
+          ],
+          "observation": "15–17s: C=600, I=200 and G=250 are already visible with GDP=1050. Adding the downward NX=−50 bar changes the displayed GDP to 1000 without deleting G."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-macroeconomics/ma01-gdp-accounting.md",
+      "assets/source-kits/principles-of-macroeconomics/src/videos/ma01-gdp-accounting.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "record_id": "recvvJaLp7KLko",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/5e8b36f6-ac16-40e6-8d68-3d20c61d995d",
+        "comment_id": 6078346135,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078346135",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v2",
+        "video_bytes": 1436623,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/5e8b36f6-ac16-40e6-8d68-3d20c61d995d",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-02.md#c14-a001"
+    }
+  },
+  "feishu_record_id": "recvvJaLp7KLko",
+  "page": "catalog/economics/14-02.md",
+  "course_code": "14.02",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A small economy records household spending, business investment, government purchases and net exports.",
+    "original_name": "GDP accounting",
+    "standard_name": "GDP Accounting",
+    "sources": [
+      {
+        "title": "OpenStax — GDP expenditure accounting",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+        "scope": "GDP and negative net exports"
+      },
+      {
+        "title": "OpenStax — Foreign exchange demand and supply",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+        "scope": "Quoted currency units and supply shifts"
+      },
+      {
+        "title": "MIT OCW — Intermediate Macroeconomics resources",
+        "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+        "scope": "IS–LM and Solow model reference scope"
+      },
+      {
+        "title": "OpenStax — Phillips Curve",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+        "scope": "Short-run tradeoff and inflation expectations"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-macroeconomics/ma01-gdp-accounting.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma01-gdp-accounting/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLp7KLko",
+      "slug": "ma01-gdp-accounting",
+      "bbox": [
+        253,
+        306,
+        747,
+        594
+      ],
+      "width": 494,
+      "height": 288,
+      "dx": 0.0,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-macroeconomics/ma01-gdp-accounting.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-macroeconomics/ma01-gdp-accounting.md",
+  "cover_image": "assets/covers/economics/principles-of-macroeconomics/ma01-gdp-accounting.jpg",
+  "cover_version": "economics-game-macro-20261009-v2",
+  "feishu": {
+    "record_id": "recvvJaLp7KLko",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/5e8b36f6-ac16-40e6-8d68-3d20c61d995d",
+  "player_version": "economics-game-macro-20261009-v2"
+}

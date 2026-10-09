@@ -1,0 +1,114 @@
+{
+  "primitives": [
+    {
+      "name": "PayoffMatrix",
+      "file": "src/components/Game.tsx",
+      "summary": "收益矩阵：每格 (行收益, 列收益)，由求解器标出最优反应角标、纯策略纳什均衡格（填充高亮），crossOut 划掉被支配的行/列（迭代剔除的过程可视化）",
+      "signature": "({ x, y, cellW, cellH, rowLabels, colLabels, payoffs, crossOut: {rows, cols}, showBest, showNash, color, progress, rowName, colName })"
+    },
+    {
+      "name": "bestResponses",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：给定收益矩阵，返回行/列玩家在对方每个策略下的最优反应下标集合",
+      "signature": "(payoffs) => { row: number[][], col: number[][] }"
+    },
+    {
+      "name": "nashCells",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：返回所有纯策略纳什均衡格的下标（双方互为最优反应）",
+      "signature": "(payoffs) => [number, number][]"
+    },
+    {
+      "name": "dominatedStrategies",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：返回被严格支配的行/列下标，迭代剔除就是反复调用它",
+      "signature": "(payoffs) => { rows: number[], cols: number[] }"
+    },
+    {
+      "name": "mixedEquilibrium",
+      "file": "src/components/Game.tsx",
+      "summary": "求解器：2×2 的混合策略纳什均衡概率 [p, q]（令对方无差异），无解返回 null",
+      "signature": "(payoffs) => { p, q } | null"
+    },
+    {
+      "name": "ReactionCurves",
+      "file": "src/components/Game.tsx",
+      "summary": "连续策略的最优反应曲线（如古诺产量）：两条反应函数数值求交点并标注纳什均衡",
+      "signature": "({ s, R1, R2, color, progress, labels })"
+    },
+    {
+      "name": "MixedSimplex",
+      "file": "src/components/Game.tsx",
+      "summary": "混合策略：横轴是对方的混合概率，两条线是我方取各纯策略的期望收益，交点处无差异即均衡混合概率",
+      "signature": "({ s, payoffs, forWhom: 'column'|'row', color, progress })"
+    },
+    {
+      "name": "GameTree",
+      "file": "src/components/Game.tsx",
+      "summary": "博弈树：分层布局 + 动作名分支 + 终端收益向量；支持信息集虚线连接、逆向归纳（均衡路径加粗、其余淡出）、子博弈虚线框",
+      "signature": "({ cx, cy, levelH, nodeGap, nodes: TreeNode[], solution: {nodeId: action}, subgames: [{root, label}], color, progress, players })"
+    },
+    {
+      "name": "SignalingModel",
+      "file": "src/components/Game.tsx",
+      "summary": "信号传递：类型 → 信号 → 行动三列时序，均衡路径连箭头并标分离成本；路径是否共用同一信号决定 separating / pooling 判定",
+      "signature": "({ x, y, w, types, signals, actions, paths, cost, color, progress })"
+    },
+    {
+      "name": "AdverseSelection",
+      "file": "src/components/Game.tsx",
+      "summary": "逆向选择（柠檬市场）：卖方价值线与买方估值线 + 按平均质量的报价水平线，求质量退出临界点并着色被挤出的高质量区间",
+      "signature": "({ s, sellerValue, buyerValue, qMax, color, progress })"
+    }
+  ],
+  "formulaKeys": [
+    "gt01Title",
+    "gt01Strict",
+    "gt01Weak",
+    "gt01Outcome",
+    "gt02Title",
+    "gt02Order",
+    "gt02Survive",
+    "gt02Empty",
+    "gt03Title",
+    "gt03Best",
+    "gt03NoDeviate",
+    "gt03May",
+    "gt04Title",
+    "gt04Expected",
+    "gt04Indifferent",
+    "gt04Support",
+    "gt05Title",
+    "gt05Indiff",
+    "gt05Prob",
+    "gt05Payoff",
+    "gt06Title",
+    "gt06Extensive",
+    "gt06Perfect",
+    "gt06Strategy",
+    "gt07Title",
+    "gt07Last",
+    "gt07Roll",
+    "gt07Result",
+    "gt08Title",
+    "gt08Def",
+    "gt08SPE",
+    "gt08Off",
+    "gt09Title",
+    "gt09Check",
+    "gt09Empty",
+    "gt09Entry",
+    "gt10Title",
+    "gt10Belief",
+    "gt10Seq",
+    "gt10Harsanyi",
+    "gt11Title",
+    "gt11Separate",
+    "gt11Pool",
+    "gt11IC",
+    "gt12Title",
+    "gt12Exit",
+    "gt12Spiral",
+    "gt12Unravel"
+  ]
+}

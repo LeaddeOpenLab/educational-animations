@@ -1,0 +1,363 @@
+{
+  "id": "C14-A006",
+  "subject": "Economics",
+  "course": "Principles of Macroeconomics",
+  "textbook": "Macroeconomics, 8e (Blanchard)",
+  "title": "Solow Growth Model: A Higher Savings Rate",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-macroeconomics/ma06-solow-growth-model.mp4",
+  "tags": [
+    "C14-A006",
+    "14.02",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Solow Growth Model for Principles of Macroeconomics, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #117733, accent #aa4499, result #cc6677, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: An economy raises the share of output invested while population growth and depreciation remain fixed. Learning objective: Derive capital's motion and the new Solow steady state after a savings increase. Use this actual scene timing: 0–5s: Three curves; 5–10s: Identify old steady state; 10–14s: Raise s and show investment gap; 14–20s: Follow capital toward the new steady state; 20–25s: Move capital to new intersection; 25–30s: Compare output and consumption. Drive objects and values from one state model. Numerical setup: {\"f\":\"sqrt(k)\",\"save_before\":0.2,\"save_after\":0.25,\"break_even\":0.05,\"k_star_before\":16,\"k_star_after\":25,\"consumption_before\":3.2,\"consumption_after\":3.75}. Demonstrate Increase saving rate s, raising investment at each k. Then At old k*, investment exceeds break-even, capital rises until new k*; output increases and consumption is recalculated. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not assert consumption must rise after any savings increase. Reproduce from the supplied source kit principles-of-macroeconomics, src/videos/ma06-solow-growth-model.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v2 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Solow growth model",
+  "standard_name": "Solow Growth Model",
+  "aliases": [],
+  "final_title": "Solow Growth Model: A Higher Savings Rate",
+  "learning_objective": "Derive capital's motion and the new Solow steady state after a savings increase.",
+  "core_conclusion": "At old k*, investment exceeds break-even, capital rises until new k*; output increases and consumption is recalculated.",
+  "references": [
+    {
+      "title": "OpenStax — GDP expenditure accounting",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "scope": "GDP and negative net exports"
+    },
+    {
+      "title": "OpenStax — Foreign exchange demand and supply",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+      "scope": "Quoted currency units and supply shifts"
+    },
+    {
+      "title": "MIT OCW — Intermediate Macroeconomics resources",
+      "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+      "scope": "IS–LM and Solow model reference scope"
+    },
+    {
+      "title": "OpenStax — Phillips Curve",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+      "scope": "Short-run tradeoff and inflation expectations"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Solow growth model” using this visual metaphor: “a single animated economic graph tracing one mechanism for Solow growth model”. Dynamically demonstrate the core formula or conclusion: The Solow steady state satisfies $sf(k)=(n+g+\\delta)k$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F4EEF8); main visual (#214E75); secondary visual (#8A2356); highlight (#725400); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-macroeconomics/src/videos/ma06-solow-growth-model.tsx",
+    "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma06-solow-growth-model.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpjGT35/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": "Output f(k), old/new investment curves, break-even line, moving capital point, old/new k* markers.",
+        "change": "Three curves",
+        "cause": "An economy raises the share of output invested while population growth and depreciation remain fixed.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 5.0,
+        "end_seconds": 10.0,
+        "reading_seconds": 4.5,
+        "objects": "Output f(k), old/new investment curves, break-even line, moving capital point, old/new k* markers.",
+        "change": "Identify old steady state",
+        "cause": "Increase saving rate s, raising investment at each k.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 10.0,
+        "end_seconds": 14.0,
+        "reading_seconds": 3.5,
+        "objects": "Output f(k), old/new investment curves, break-even line, moving capital point, old/new k* markers.",
+        "change": "Raise s and show investment gap",
+        "cause": "Increase saving rate s, raising investment at each k.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 14.0,
+        "end_seconds": 20.0,
+        "reading_seconds": 5.5,
+        "objects": "Output f(k), old/new investment curves, break-even line, moving capital point, old/new k* markers.",
+        "change": "Follow capital toward the new steady state",
+        "cause": "Increase saving rate s, raising investment at each k.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "result",
+        "start_seconds": 20.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 4.5,
+        "objects": "Output f(k), old/new investment curves, break-even line, moving capital point, old/new k* markers.",
+        "change": "Move capital to new intersection",
+        "cause": "Increase saving rate s, raising investment at each k.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "closing",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.5,
+        "objects": "Output f(k), old/new investment curves, break-even line, moving capital point, old/new k* markers.",
+        "change": "Compare output and consumption",
+        "cause": "Increase saving rate s, raising investment at each k.",
+        "result": "Capital arrow points right only while s f(k)>(n+δ)k; stops at equality.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma06-solow-growth-model.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "test",
+        "uncertainty": "Do not assert consumption must rise after any savings increase.",
+        "expected_observation": "At old k*, investment exceeds break-even, capital rises until new k*; output increases and consumption is recalculated."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 17.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Final-frame review identified timing, text length, label separation or mechanism evidence that needed correction.",
+        "affected_ids": [
+          "C14-A006"
+        ],
+        "status": "resolved",
+        "fix": "Targeted source correction and v2 re-render; preserved all other batch outputs.",
+        "evidence": [
+          "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/contact-sheet.jpg",
+          "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "video": "assets/videos/economics/principles-of-macroeconomics/ma06-solow-growth-model.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/risk-sheet.jpg"
+      ],
+      "observations": "16–18s: the marked capital point moves right through k≈20.25,21.78,23.36 as the savings curve rises above break-even. Later frames show k=25 and output=5; the old k=16 reference remains.",
+      "times_seconds": [
+        16.0,
+        17.0,
+        18.0
+      ],
+      "teaching_requirement": "Derive capital's motion and the new Solow steady state after a savings increase.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 16–18s: the marked capital point moves right through k≈20.25,21.78,23.36 as the savings curve rises above break-even. Later frames show k=25 and output=5; the old k=16 reference remains."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 16–18s: the marked capital point moves right through k≈20.25,21.78,23.36 as the savings curve rises above break-even. Later frames show k=25 and output=5; the old k=16 reference remains."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/risk-sheet.jpg",
+          "times_seconds": [
+            16.0,
+            17.0,
+            18.0
+          ],
+          "observation": "16–18s: the marked capital point moves right through k≈20.25,21.78,23.36 as the savings curve rises above break-even. Later frames show k=25 and output=5; the old k=16 reference remains."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-macroeconomics/ma06-solow-growth-model.md",
+      "assets/source-kits/principles-of-macroeconomics/src/videos/ma06-solow-growth-model.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "record_id": "recvvJaLpjGT35",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/b858f81c-b695-44f4-af52-c6dd166b5c65",
+        "comment_id": 6078354397,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078354397",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v2",
+        "video_bytes": 3257127,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/b858f81c-b695-44f4-af52-c6dd166b5c65",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-02.md#c14-a006"
+    }
+  },
+  "feishu_record_id": "recvvJaLpjGT35",
+  "page": "catalog/economics/14-02.md",
+  "course_code": "14.02",
+  "terminology": {
+    "confirmed": true,
+    "scope": "An economy raises the share of output invested while population growth and depreciation remain fixed.",
+    "original_name": "Solow growth model",
+    "standard_name": "Solow Growth Model",
+    "sources": [
+      {
+        "title": "OpenStax — GDP expenditure accounting",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+        "scope": "GDP and negative net exports"
+      },
+      {
+        "title": "OpenStax — Foreign exchange demand and supply",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+        "scope": "Quoted currency units and supply shifts"
+      },
+      {
+        "title": "MIT OCW — Intermediate Macroeconomics resources",
+        "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+        "scope": "IS–LM and Solow model reference scope"
+      },
+      {
+        "title": "OpenStax — Phillips Curve",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+        "scope": "Short-run tradeoff and inflation expectations"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-macroeconomics/ma06-solow-growth-model.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma06-solow-growth-model/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpjGT35",
+      "slug": "ma06-solow-growth-model",
+      "bbox": [
+        200,
+        197,
+        800,
+        703
+      ],
+      "width": 600,
+      "height": 506,
+      "dx": 0.0,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-macroeconomics/ma06-solow-growth-model.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-macroeconomics/ma06-solow-growth-model.md",
+  "cover_image": "assets/covers/economics/principles-of-macroeconomics/ma06-solow-growth-model.jpg",
+  "cover_version": "economics-game-macro-20261009-v2",
+  "feishu": {
+    "record_id": "recvvJaLpjGT35",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/b858f81c-b695-44f4-af52-c6dd166b5c65",
+  "player_version": "economics-game-macro-20261009-v2"
+}

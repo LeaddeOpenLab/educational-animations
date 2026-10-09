@@ -2,7 +2,7 @@
 
 Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.
 
-**375 video-ready · 69 recorded review passes · 137 awaiting production · 45 courses · 17 disciplines**
+**395 video-ready · 89 recorded review passes · 117 awaiting production · 45 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -133,7 +133,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#economics"><img src="assets/subject-cards/economics.png" width="100%" alt="Economics"></a><br>
 <a href="#economics"><strong>Economics</strong></a><br>
-<sub>3 courses · 0 videos · 31 awaiting production · No finished videos yet</sub>
+<sub>3 courses · 20 videos · 11 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#finance"><img src="assets/subject-cards/finance.png" width="100%" alt="Finance"></a><br>
@@ -515,7 +515,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="economics"></a>
 ### Economics
 
-0 videos · 31 awaiting production · **No finished videos yet**
+20 videos · 11 awaiting production
 
 <table>
 <tr>
@@ -529,13 +529,13 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="principles-of-macroeconomics"></a>
 <a href="catalog/economics/14-02.md"><img src="assets/course-covers/14.02.svg" width="100%" alt="Principles of Macroeconomics"></a><br>
 <a href="catalog/economics/14-02.md"><strong>Principles of Macroeconomics</strong></a><br>
-<sub>0 videos · 8 awaiting production · No finished videos yet</sub>
+<sub>8 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a id="game-theory"></a>
 <a href="catalog/economics/econ-159.md"><img src="assets/course-covers/econ%20159.svg" width="100%" alt="Game Theory"></a><br>
 <a href="catalog/economics/econ-159.md"><strong>Game Theory</strong></a><br>
-<sub>0 videos · 12 awaiting production · No finished videos yet</sub>
+<sub>12 videos · 0 awaiting production</sub>
 </td>
 </tr>
 </table>

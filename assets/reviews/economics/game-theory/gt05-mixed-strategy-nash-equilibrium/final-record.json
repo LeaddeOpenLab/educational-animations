@@ -1,0 +1,339 @@
+{
+  "id": "C15-A005",
+  "subject": "Economics",
+  "course": "Game Theory",
+  "textbook": "Strategy and Games (Dutta); Strategy (Watson)",
+  "title": "Mixed Strategy Nash Equilibrium: Solve p and q",
+  "status": "ready",
+  "video": "assets/videos/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.mp4",
+  "tags": [
+    "C15-A005",
+    "ECON 159",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Mixed Strategy Nash Equilibrium for Game Theory, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #cc6677, accent #117733, result #aa4499, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: Matching Pennies: row player chooses Heads/Tails, column player guesses Heads/Tails. Learning objective: Derive mixing probabilities from two indifference conditions. Use this actual scene timing: 0–5s: Matching-payoff matrix; 5–9s: Column player's expected payoffs against p; 9–15s: Solve p at the crossing; 15–20s: At the final p,q both within-player expected payoff differences equal zero.; 20–25s: Row player's expected payoffs against q; 25–30s: Show both ties together. Drive objects and values from one state model. Numerical setup: {\"rows\":[\"Heads\",\"Tails\"],\"cols\":[\"Heads\",\"Tails\"],\"payoffs\":[[[2,0],[0,3]],[[0,4],[3,0]]],\"p_row_heads\":0.5714285714285714,\"q_col_heads\":0.6}. Demonstrate Move p until column payoffs tie; independently move q until row payoffs tie. Then Each opponent becomes indifferent at its computed crossing; both conditions jointly determine equilibrium. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not confuse p (row mix) with q (column mix), or choose 50% without calculation in a non-symmetric example. Reproduce from the supplied source kit game-theory, src/videos/gt05-mixed-strategy-nash-equilibrium.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v1 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Mixed Strategy Nash Equilibrium",
+  "standard_name": "Mixed Strategy Nash Equilibrium",
+  "aliases": [],
+  "final_title": "Mixed Strategy Nash Equilibrium: Solve p and q",
+  "learning_objective": "Derive mixing probabilities from two indifference conditions.",
+  "core_conclusion": "Each opponent becomes indifferent at its computed crossing; both conditions jointly determine equilibrium.",
+  "references": [
+    {
+      "title": "MIT OCW — Introduction to Game Theory",
+      "url": "https://www.ocw.mit.edu/courses/14-75-political-economy-and-economic-development-fall-2012/bf65c969a9bfd655e50589ba7283cda8_MIT14_75F12_Recitation8.pdf",
+      "scope": "Best responses, dominance and Nash equilibrium terminology"
+    },
+    {
+      "title": "MIT OCW — Backward Induction",
+      "url": "https://www.ocw.mit.edu/courses/15-025-game-theory-for-strategic-advantage-spring-2015/resources/mit15_025s15_lec_7/",
+      "scope": "Sequential decisions and backward induction"
+    },
+    {
+      "title": "MIT OCW — Game Theory lecture notes",
+      "url": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024/resources/lecture-notes/",
+      "scope": "Equilibrium refinements and signaling games"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Mixed Strategy Nash Equilibrium” using this visual metaphor: “a single animated economic graph tracing one mechanism for Mixed Strategy Nash Equilibrium”. Dynamically demonstrate the core formula or conclusion: A mixed equilibrium makes each used pure strategy equally attractive..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/game-theory/src/videos/gt05-mixed-strategy-nash-equilibrium.tsx",
+    "source": "assets/source-kits/game-theory/src/videos/gt05-mixed-strategy-nash-equilibrium.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpBNIyu/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": "Payoff matrix, two expected-payoff line pairs, crossing points p and q, both players' action-value comparisons.",
+        "change": "Matching-payoff matrix",
+        "cause": "Matching Pennies: row player chooses Heads/Tails, column player guesses Heads/Tails.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 5.0,
+        "end_seconds": 9.0,
+        "reading_seconds": 3.5,
+        "objects": "Payoff matrix, two expected-payoff line pairs, crossing points p and q, both players' action-value comparisons.",
+        "change": "Column player's expected payoffs against p",
+        "cause": "Move p until column payoffs tie; independently move q until row payoffs tie.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 9.0,
+        "end_seconds": 15.0,
+        "reading_seconds": 5.5,
+        "objects": "Payoff matrix, two expected-payoff line pairs, crossing points p and q, both players' action-value comparisons.",
+        "change": "Solve p at the crossing",
+        "cause": "Move p until column payoffs tie; independently move q until row payoffs tie.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 15.0,
+        "end_seconds": 20.0,
+        "reading_seconds": 4.5,
+        "objects": "Payoff matrix, two expected-payoff line pairs, crossing points p and q, both players' action-value comparisons.",
+        "change": "At the final p,q both within-player expected payoff differences equal zero.",
+        "cause": "Move p until column payoffs tie; independently move q until row payoffs tie.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "result",
+        "start_seconds": 20.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 4.5,
+        "objects": "Payoff matrix, two expected-payoff line pairs, crossing points p and q, both players' action-value comparisons.",
+        "change": "Row player's expected payoffs against q",
+        "cause": "Move p until column payoffs tie; independently move q until row payoffs tie.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "closing",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.5,
+        "objects": "Payoff matrix, two expected-payoff line pairs, crossing points p and q, both players' action-value comparisons.",
+        "change": "Show both ties together",
+        "cause": "Move p until column payoffs tie; independently move q until row payoffs tie.",
+        "result": "At the final p,q both within-player expected payoff differences equal zero.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/game-theory/src/videos/gt05-mixed-strategy-nash-equilibrium.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "result",
+        "uncertainty": "Do not confuse p (row mix) with q (column mix), or choose 50% without calculation in a non-symmetric example.",
+        "expected_observation": "Each opponent becomes indifferent at its computed crossing; both conditions jointly determine equilibrium."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 21.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/contact-sheet.jpg",
+      "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "video": "assets/videos/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/contact-sheet.jpg",
+        "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/risk-sheet.jpg"
+      ],
+      "observations": "19–22s: the expected-payoff crossing changes from the column-player plot at p=0.57 to the row-player plot at q=0.60. The final p/q readout confirms both indifference conditions.",
+      "times_seconds": [
+        19.0,
+        21.0,
+        22.0
+      ],
+      "teaching_requirement": "Derive mixing probabilities from two indifference conditions.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 19–22s: the expected-payoff crossing changes from the column-player plot at p=0.57 to the row-player plot at q=0.60. The final p/q readout confirms both indifference conditions."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 19–22s: the expected-payoff crossing changes from the column-player plot at p=0.57 to the row-player plot at q=0.60. The final p/q readout confirms both indifference conditions."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/risk-sheet.jpg",
+          "times_seconds": [
+            19.0,
+            21.0,
+            22.0
+          ],
+          "observation": "19–22s: the expected-payoff crossing changes from the column-player plot at p=0.57 to the row-player plot at q=0.60. The final p/q readout confirms both indifference conditions."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.md",
+      "assets/source-kits/game-theory/src/videos/gt05-mixed-strategy-nash-equilibrium.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "record_id": "recvvJaLpBNIyu",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/c4639058-96e4-4aca-ba58-5d89834bc416",
+        "comment_id": 6078333518,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078333518",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v1",
+        "video_bytes": 2647938,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/c4639058-96e4-4aca-ba58-5d89834bc416",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/econ-159.md#c15-a005"
+    }
+  },
+  "feishu_record_id": "recvvJaLpBNIyu",
+  "page": "catalog/economics/econ-159.md",
+  "course_code": "ECON 159",
+  "terminology": {
+    "confirmed": true,
+    "scope": "Matching Pennies: row player chooses Heads/Tails, column player guesses Heads/Tails.",
+    "original_name": "Mixed Strategy Nash Equilibrium",
+    "standard_name": "Mixed Strategy Nash Equilibrium",
+    "sources": [
+      {
+        "title": "MIT OCW — Introduction to Game Theory",
+        "url": "https://www.ocw.mit.edu/courses/14-75-political-economy-and-economic-development-fall-2012/bf65c969a9bfd655e50589ba7283cda8_MIT14_75F12_Recitation8.pdf",
+        "scope": "Best responses, dominance and Nash equilibrium terminology"
+      },
+      {
+        "title": "MIT OCW — Backward Induction",
+        "url": "https://www.ocw.mit.edu/courses/15-025-game-theory-for-strategic-advantage-spring-2015/resources/mit15_025s15_lec_7/",
+        "scope": "Sequential decisions and backward induction"
+      },
+      {
+        "title": "MIT OCW — Game Theory lecture notes",
+        "url": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024/resources/lecture-notes/",
+        "scope": "Equilibrium refinements and signaling games"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.jpg",
+      "assets/reviews/economics/game-theory/gt05-mixed-strategy-nash-equilibrium/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpBNIyu",
+      "slug": "gt05-mixed-strategy-nash-equilibrium",
+      "bbox": [
+        207,
+        170,
+        792,
+        731
+      ],
+      "width": 585,
+      "height": 561,
+      "dx": -0.5,
+      "dy": 0.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.jpg",
+  "prompt_file": "assets/prompts/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.md",
+  "cover_image": "assets/covers/economics/game-theory/gt05-mixed-strategy-nash-equilibrium.jpg",
+  "cover_version": "economics-game-macro-20261009-v1",
+  "feishu": {
+    "record_id": "recvvJaLpBNIyu",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/c4639058-96e4-4aca-ba58-5d89834bc416",
+  "player_version": "economics-game-macro-20261009-v1"
+}

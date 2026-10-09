@@ -1,0 +1,331 @@
+{
+  "id": "C15-A001",
+  "subject": "Economics",
+  "course": "Game Theory",
+  "textbook": "Strategy and Games (Dutta); Strategy (Watson)",
+  "title": "Dominant Strategy: Café Pricing",
+  "status": "ready",
+  "video": "assets/videos/economics/game-theory/gt01-dominant-strategy.mp4",
+  "tags": [
+    "C15-A001",
+    "ECON 159",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Dominant Strategy for Game Theory, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #cc6677, accent #117733, result #aa4499, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: Two competing cafés choose high or low prices; compare Café A's payoff for each fixed Café B price. Learning objective: Distinguish a dominant action from a merely good response. Use this actual scene timing: 0–6s: Café pricing choices and payoff meaning; 6–13s: Compare A when B is High; 13–21s: Compare B's Low choice, then align the winners; 21–30s: Conclude dominance is conditional on every opponent choice. Drive objects and values from one state model. Numerical setup: {\"rows\":[\"High\",\"Low\"],\"cols\":[\"High\",\"Low\"],\"payoffs\":[[[3,3],[1,4]],[[4,1],[2,2]]],\"dominant_row\":\"Low\"}. Demonstrate Hold B at High, compare A's two payoffs; repeat with B at Low. Then The winning row remains Low in both comparisons, so A has a strictly dominant action. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not infer dominance from the largest payoff in the entire matrix. Reproduce from the supplied source kit game-theory, src/videos/gt01-dominant-strategy.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v2 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Dominant strategy",
+  "standard_name": "Dominant Strategy",
+  "aliases": [],
+  "final_title": "Dominant Strategy: Café Pricing",
+  "learning_objective": "Distinguish a dominant action from a merely good response.",
+  "core_conclusion": "The winning row remains Low in both comparisons, so A has a strictly dominant action.",
+  "references": [
+    {
+      "title": "MIT OCW — Introduction to Game Theory",
+      "url": "https://www.ocw.mit.edu/courses/14-75-political-economy-and-economic-development-fall-2012/bf65c969a9bfd655e50589ba7283cda8_MIT14_75F12_Recitation8.pdf",
+      "scope": "Best responses, dominance and Nash equilibrium terminology"
+    },
+    {
+      "title": "MIT OCW — Backward Induction",
+      "url": "https://www.ocw.mit.edu/courses/15-025-game-theory-for-strategic-advantage-spring-2015/resources/mit15_025s15_lec_7/",
+      "scope": "Sequential decisions and backward induction"
+    },
+    {
+      "title": "MIT OCW — Game Theory lecture notes",
+      "url": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024/resources/lecture-notes/",
+      "scope": "Equilibrium refinements and signaling games"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Dominant strategy” using this visual metaphor: “a single animated economic graph tracing one mechanism for Dominant strategy”. Dynamically demonstrate the core formula or conclusion: A dominant strategy gives the highest payoff against every opponent action..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F0F3FB); main visual (#253D75); secondary visual (#9B2447); highlight (#6A5600); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/game-theory/src/videos/gt01-dominant-strategy.tsx",
+    "source": "assets/source-kits/game-theory/src/videos/gt01-dominant-strategy.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpq3MzR/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 6.0,
+        "reading_seconds": 5.5,
+        "objects": "A 2×2 payoff matrix; two conditional comparison brackets; the same winning row across both columns.",
+        "change": "Café pricing choices and payoff meaning",
+        "cause": "Two competing cafés choose high or low prices; compare Café A's payoff for each fixed Café B price.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 6.0,
+        "end_seconds": 13.0,
+        "reading_seconds": 6.5,
+        "objects": "A 2×2 payoff matrix; two conditional comparison brackets; the same winning row across both columns.",
+        "change": "Compare A when B is High",
+        "cause": "Hold B at High, compare A's two payoffs; repeat with B at Low.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 13.0,
+        "end_seconds": 21.0,
+        "reading_seconds": 7.5,
+        "objects": "A 2×2 payoff matrix; two conditional comparison brackets; the same winning row across both columns.",
+        "change": "Compare B's Low choice, then align the winners",
+        "cause": "Hold B at High, compare A's two payoffs; repeat with B at Low.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 21.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 8.5,
+        "objects": "A 2×2 payoff matrix; two conditional comparison brackets; the same winning row across both columns.",
+        "change": "Conclude dominance is conditional on every opponent choice",
+        "cause": "Hold B at High, compare A's two payoffs; repeat with B at Low.",
+        "result": "Highlight each column maximum before labeling the common row; show why B's payoff is irrelevant to A's dominance test.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/game-theory/src/videos/gt01-dominant-strategy.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "mechanism",
+        "uncertainty": "Do not infer dominance from the largest payoff in the entire matrix.",
+        "expected_observation": "The winning row remains Low in both comparisons, so A has a strictly dominant action."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 17.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "Final-frame review identified timing, text length, label separation or mechanism evidence that needed correction.",
+        "affected_ids": [
+          "C15-A001"
+        ],
+        "status": "resolved",
+        "fix": "Targeted source correction and v2 re-render; preserved all other batch outputs.",
+        "evidence": [
+          "assets/reviews/economics/game-theory/gt01-dominant-strategy/contact-sheet.jpg",
+          "assets/reviews/economics/game-theory/gt01-dominant-strategy/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/game-theory/gt01-dominant-strategy/contact-sheet.jpg",
+      "assets/reviews/economics/game-theory/gt01-dominant-strategy/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt01-dominant-strategy/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "video": "assets/videos/economics/game-theory/gt01-dominant-strategy.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt01-dominant-strategy/contact-sheet.jpg",
+        "assets/reviews/economics/game-theory/gt01-dominant-strategy/risk-sheet.jpg"
+      ],
+      "observations": "16–18s: the Low-row highlight expands from the High column to both columns. The visible first payoffs are 4>3 and 2>1; both fixed-opponent comparisons select Low.",
+      "times_seconds": [
+        16.0,
+        17.0,
+        18.0
+      ],
+      "teaching_requirement": "Distinguish a dominant action from a merely good response.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 16–18s: the Low-row highlight expands from the High column to both columns. The visible first payoffs are 4>3 and 2>1; both fixed-opponent comparisons select Low."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 16–18s: the Low-row highlight expands from the High column to both columns. The visible first payoffs are 4>3 and 2>1; both fixed-opponent comparisons select Low."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/game-theory/gt01-dominant-strategy/risk-sheet.jpg",
+          "times_seconds": [
+            16.0,
+            17.0,
+            18.0
+          ],
+          "observation": "16–18s: the Low-row highlight expands from the High column to both columns. The visible first payoffs are 4>3 and 2>1; both fixed-opponent comparisons select Low."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/game-theory/gt01-dominant-strategy.md",
+      "assets/source-kits/game-theory/src/videos/gt01-dominant-strategy.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "record_id": "recvvJaLpq3MzR",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/a797068e-cca7-4107-a189-82765df51c6a",
+        "comment_id": 6078364963,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078364963",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v2",
+        "video_bytes": 1627506,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/a797068e-cca7-4107-a189-82765df51c6a",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/econ-159.md#c15-a001"
+    }
+  },
+  "feishu_record_id": "recvvJaLpq3MzR",
+  "page": "catalog/economics/econ-159.md",
+  "course_code": "ECON 159",
+  "terminology": {
+    "confirmed": true,
+    "scope": "Two competing cafés choose high or low prices; compare Café A's payoff for each fixed Café B price.",
+    "original_name": "Dominant strategy",
+    "standard_name": "Dominant Strategy",
+    "sources": [
+      {
+        "title": "MIT OCW — Introduction to Game Theory",
+        "url": "https://www.ocw.mit.edu/courses/14-75-political-economy-and-economic-development-fall-2012/bf65c969a9bfd655e50589ba7283cda8_MIT14_75F12_Recitation8.pdf",
+        "scope": "Best responses, dominance and Nash equilibrium terminology"
+      },
+      {
+        "title": "MIT OCW — Backward Induction",
+        "url": "https://www.ocw.mit.edu/courses/15-025-game-theory-for-strategic-advantage-spring-2015/resources/mit15_025s15_lec_7/",
+        "scope": "Sequential decisions and backward induction"
+      },
+      {
+        "title": "MIT OCW — Game Theory lecture notes",
+        "url": "https://ocw.mit.edu/courses/14.126-game-theory-spring-2024/resources/lecture-notes/",
+        "scope": "Equilibrium refinements and signaling games"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/game-theory/gt01-dominant-strategy.jpg",
+      "assets/reviews/economics/game-theory/gt01-dominant-strategy/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpq3MzR",
+      "slug": "gt01-dominant-strategy",
+      "bbox": [
+        258,
+        251,
+        742,
+        649
+      ],
+      "width": 484,
+      "height": 398,
+      "dx": 0.0,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/game-theory/gt01-dominant-strategy.jpg",
+  "prompt_file": "assets/prompts/economics/game-theory/gt01-dominant-strategy.md",
+  "cover_image": "assets/covers/economics/game-theory/gt01-dominant-strategy.jpg",
+  "cover_version": "economics-game-macro-20261009-v2",
+  "feishu": {
+    "record_id": "recvvJaLpq3MzR",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/a797068e-cca7-4107-a189-82765df51c6a",
+  "player_version": "economics-game-macro-20261009-v2"
+}

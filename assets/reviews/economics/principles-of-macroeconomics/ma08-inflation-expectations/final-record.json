@@ -1,0 +1,327 @@
+{
+  "id": "C14-A008",
+  "subject": "Economics",
+  "course": "Principles of Macroeconomics",
+  "textbook": "Macroeconomics, 8e (Blanchard)",
+  "title": "Inflation Expectations: Shift the Phillips Curve",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-macroeconomics/ma08-inflation-expectations.mp4",
+  "tags": [
+    "C14-A008",
+    "14.02",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Inflation Expectations for Principles of Macroeconomics, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #117733, accent #aa4499, result #cc6677, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: Workers revise expected inflation upward after persistent price increases. Learning objective: Show inflation expectations shifting the entire short-run Phillips curve. Use this actual scene timing: 0–6s: Old curve and expectation; 6–13s: Revise wage/price expectation; 13–22s: Shift entire SRPC upward; 22–30s: Compare old and new inflation at same u. Drive objects and values from one state model. Numerical setup: {\"u_natural\":5,\"SRPC\":\"2 - 0.5(u-5)\",\"expected_before\":0,\"expected_after\":1.5,\"inflation_at_u5_before\":2,\"inflation_at_u5_after\":3.5}. Demonstrate Raise expected inflation and negotiated wage growth. Then At each unemployment value, actual inflation rises by the expectation shift; SRPC translates upward while the natural rate stays fixed. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not portray this as a movement along the unchanged SRPC. Reproduce from the supplied source kit principles-of-macroeconomics, src/videos/ma08-inflation-expectations.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v1 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Inflation expectations",
+  "standard_name": "Inflation Expectations",
+  "aliases": [],
+  "final_title": "Inflation Expectations: Shift the Phillips Curve",
+  "learning_objective": "Show inflation expectations shifting the entire short-run Phillips curve.",
+  "core_conclusion": "At each unemployment value, actual inflation rises by the expectation shift; SRPC translates upward while the natural rate stays fixed.",
+  "references": [
+    {
+      "title": "OpenStax — GDP expenditure accounting",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "scope": "GDP and negative net exports"
+    },
+    {
+      "title": "OpenStax — Foreign exchange demand and supply",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+      "scope": "Quoted currency units and supply shifts"
+    },
+    {
+      "title": "MIT OCW — Intermediate Macroeconomics resources",
+      "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+      "scope": "IS–LM and Solow model reference scope"
+    },
+    {
+      "title": "OpenStax — Phillips Curve",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+      "scope": "Short-run tradeoff and inflation expectations"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Inflation expectations” using this visual metaphor: “a single animated economic graph tracing one mechanism for Inflation expectations”. Dynamically demonstrate the core formula or conclusion: Expected inflation shifts wage and price setting before actual inflation arrives..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-macroeconomics/src/videos/ma08-inflation-expectations.tsx",
+    "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma08-inflation-expectations.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpoHqfc/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 6.0,
+        "reading_seconds": 5.5,
+        "objects": "Old dashed SRPC, new solid SRPC, fixed unemployment guide, before/after inflation levels.",
+        "change": "Old curve and expectation",
+        "cause": "Workers revise expected inflation upward after persistent price increases.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 6.0,
+        "end_seconds": 13.0,
+        "reading_seconds": 6.5,
+        "objects": "Old dashed SRPC, new solid SRPC, fixed unemployment guide, before/after inflation levels.",
+        "change": "Revise wage/price expectation",
+        "cause": "Raise expected inflation and negotiated wage growth.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 13.0,
+        "end_seconds": 22.0,
+        "reading_seconds": 8.5,
+        "objects": "Old dashed SRPC, new solid SRPC, fixed unemployment guide, before/after inflation levels.",
+        "change": "Shift entire SRPC upward",
+        "cause": "Raise expected inflation and negotiated wage growth.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 22.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 7.5,
+        "objects": "Old dashed SRPC, new solid SRPC, fixed unemployment guide, before/after inflation levels.",
+        "change": "Compare old and new inflation at same u",
+        "cause": "Raise expected inflation and negotiated wage growth.",
+        "result": "At one fixed u, two vertical values differ by the displayed Δexpected; the whole curve changes, not just the point.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma08-inflation-expectations.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "mechanism",
+        "uncertainty": "Do not portray this as a movement along the unchanged SRPC.",
+        "expected_observation": "At each unemployment value, actual inflation rises by the expectation shift; SRPC translates upward while the natural rate stays fixed."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 17.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "video": "assets/videos/economics/principles-of-macroeconomics/ma08-inflation-expectations.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/risk-sheet.jpg"
+      ],
+      "observations": "16–18s: expected inflation rises approximately 0.6→0.9→1.1; the whole SRPC moves upward against its dashed old position. The u*=5% vertical line remains stationary.",
+      "times_seconds": [
+        16.0,
+        17.0,
+        18.0
+      ],
+      "teaching_requirement": "Show inflation expectations shifting the entire short-run Phillips curve.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 16–18s: expected inflation rises approximately 0.6→0.9→1.1; the whole SRPC moves upward against its dashed old position. The u*=5% vertical line remains stationary."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 16–18s: expected inflation rises approximately 0.6→0.9→1.1; the whole SRPC moves upward against its dashed old position. The u*=5% vertical line remains stationary."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/risk-sheet.jpg",
+          "times_seconds": [
+            16.0,
+            17.0,
+            18.0
+          ],
+          "observation": "16–18s: expected inflation rises approximately 0.6→0.9→1.1; the whole SRPC moves upward against its dashed old position. The u*=5% vertical line remains stationary."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-macroeconomics/ma08-inflation-expectations.md",
+      "assets/source-kits/principles-of-macroeconomics/src/videos/ma08-inflation-expectations.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "record_id": "recvvJaLpoHqfc",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/7f3102f4-fa5d-440c-9e8b-82a5642cfc9c",
+        "comment_id": 6078358411,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078358411",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v1",
+        "video_bytes": 2599531,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/7f3102f4-fa5d-440c-9e8b-82a5642cfc9c",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-02.md#c14-a008"
+    }
+  },
+  "feishu_record_id": "recvvJaLpoHqfc",
+  "page": "catalog/economics/14-02.md",
+  "course_code": "14.02",
+  "terminology": {
+    "confirmed": true,
+    "scope": "Workers revise expected inflation upward after persistent price increases.",
+    "original_name": "Inflation expectations",
+    "standard_name": "Inflation Expectations",
+    "sources": [
+      {
+        "title": "OpenStax — GDP expenditure accounting",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+        "scope": "GDP and negative net exports"
+      },
+      {
+        "title": "OpenStax — Foreign exchange demand and supply",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+        "scope": "Quoted currency units and supply shifts"
+      },
+      {
+        "title": "MIT OCW — Intermediate Macroeconomics resources",
+        "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+        "scope": "IS–LM and Solow model reference scope"
+      },
+      {
+        "title": "OpenStax — Phillips Curve",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+        "scope": "Short-run tradeoff and inflation expectations"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-macroeconomics/ma08-inflation-expectations.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma08-inflation-expectations/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpoHqfc",
+      "slug": "ma08-inflation-expectations",
+      "bbox": [
+        229,
+        171,
+        771,
+        730
+      ],
+      "width": 542,
+      "height": 559,
+      "dx": 0.0,
+      "dy": 0.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-macroeconomics/ma08-inflation-expectations.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-macroeconomics/ma08-inflation-expectations.md",
+  "cover_image": "assets/covers/economics/principles-of-macroeconomics/ma08-inflation-expectations.jpg",
+  "cover_version": "economics-game-macro-20261009-v1",
+  "feishu": {
+    "record_id": "recvvJaLpoHqfc",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/7f3102f4-fa5d-440c-9e8b-82a5642cfc9c",
+  "player_version": "economics-game-macro-20261009-v1"
+}

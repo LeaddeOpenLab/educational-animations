@@ -1,0 +1,338 @@
+{
+  "id": "C14-A005",
+  "subject": "Economics",
+  "course": "Principles of Macroeconomics",
+  "textbook": "Macroeconomics, 8e (Blanchard)",
+  "title": "Balance of Payments: Import and Loan Entries",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-macroeconomics/ma05-balance-of-payments.mp4",
+  "tags": [
+    "C14-A005",
+    "14.02",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Balance of Payments for Principles of Macroeconomics, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #117733, accent #aa4499, result #cc6677, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: A resident imports machinery and pays using a foreign loan. Learning objective: Show that a cross-border transaction has offsetting balance-of-payments entries. Use this actual scene timing: 0–5s: Import transaction; 5–11s: Enter current-account debit; 11–17s: Identify financing source; 17–24s: Enter financial-account credit; 24–30s: Reconcile the two-account balance. Drive objects and values from one state model. Numerical setup: {\"import_current_account\":-100,\"foreign_loan_financial_account\":100,\"net\":0}. Demonstrate Record the machinery import as a current-account debit, then the loan financing as financial-account credit. Then Net temporarily shows the debit, then returns to zero when the matching credit enters. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not claim every individual subaccount balances by itself; statistical discrepancies can exist in real data. Reproduce from the supplied source kit principles-of-macroeconomics, src/videos/ma05-balance-of-payments.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v1 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Balance of payments",
+  "standard_name": "Balance of Payments",
+  "aliases": [],
+  "final_title": "Balance of Payments: Import and Loan Entries",
+  "learning_objective": "Show that a cross-border transaction has offsetting balance-of-payments entries.",
+  "core_conclusion": "Net temporarily shows the debit, then returns to zero when the matching credit enters.",
+  "references": [
+    {
+      "title": "OpenStax — GDP expenditure accounting",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "scope": "GDP and negative net exports"
+    },
+    {
+      "title": "OpenStax — Foreign exchange demand and supply",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+      "scope": "Quoted currency units and supply shifts"
+    },
+    {
+      "title": "MIT OCW — Intermediate Macroeconomics resources",
+      "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+      "scope": "IS–LM and Solow model reference scope"
+    },
+    {
+      "title": "OpenStax — Phillips Curve",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+      "scope": "Short-run tradeoff and inflation expectations"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Balance of payments” using this visual metaphor: “a single animated economic graph tracing one mechanism for Balance of payments”. Dynamically demonstrate the core formula or conclusion: The balance of payments records a country's external transactions..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-macroeconomics/src/videos/ma05-balance-of-payments.tsx",
+    "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma05-balance-of-payments.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpg5DkZ/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": "Current-account debit, financial-account credit, two signed ledgers, running net sum.",
+        "change": "Import transaction",
+        "cause": "A resident imports machinery and pays using a foreign loan.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 5.0,
+        "end_seconds": 11.0,
+        "reading_seconds": 5.5,
+        "objects": "Current-account debit, financial-account credit, two signed ledgers, running net sum.",
+        "change": "Enter current-account debit",
+        "cause": "Record the machinery import as a current-account debit, then the loan financing as financial-account credit.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 11.0,
+        "end_seconds": 17.0,
+        "reading_seconds": 5.5,
+        "objects": "Current-account debit, financial-account credit, two signed ledgers, running net sum.",
+        "change": "Identify financing source",
+        "cause": "Record the machinery import as a current-account debit, then the loan financing as financial-account credit.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 17.0,
+        "end_seconds": 24.0,
+        "reading_seconds": 6.5,
+        "objects": "Current-account debit, financial-account credit, two signed ledgers, running net sum.",
+        "change": "Enter financial-account credit",
+        "cause": "Record the machinery import as a current-account debit, then the loan financing as financial-account credit.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "result",
+        "start_seconds": 24.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 5.5,
+        "objects": "Current-account debit, financial-account credit, two signed ledgers, running net sum.",
+        "change": "Reconcile the two-account balance",
+        "cause": "Record the machinery import as a current-account debit, then the loan financing as financial-account credit.",
+        "result": "Amounts are equal and opposite; both entries refer to the same transaction rather than unrelated data.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma05-balance-of-payments.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "test",
+        "uncertainty": "Do not claim every individual subaccount balances by itself; statistical discrepancies can exist in real data.",
+        "expected_observation": "Net temporarily shows the debit, then returns to zero when the matching credit enters."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 19.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "video": "assets/videos/economics/principles-of-macroeconomics/ma05-balance-of-payments.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/risk-sheet.jpg"
+      ],
+      "observations": "18–20s: a −100 machinery-import debit is present first; a +100 foreign-loan credit is then added in the second account. The sum changes −100 to 0 for the same transaction.",
+      "times_seconds": [
+        18.0,
+        19.0,
+        20.0
+      ],
+      "teaching_requirement": "Show that a cross-border transaction has offsetting balance-of-payments entries.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 18–20s: a −100 machinery-import debit is present first; a +100 foreign-loan credit is then added in the second account. The sum changes −100 to 0 for the same transaction."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 18–20s: a −100 machinery-import debit is present first; a +100 foreign-loan credit is then added in the second account. The sum changes −100 to 0 for the same transaction."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/risk-sheet.jpg",
+          "times_seconds": [
+            18.0,
+            19.0,
+            20.0
+          ],
+          "observation": "18–20s: a −100 machinery-import debit is present first; a +100 foreign-loan credit is then added in the second account. The sum changes −100 to 0 for the same transaction."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-macroeconomics/ma05-balance-of-payments.md",
+      "assets/source-kits/principles-of-macroeconomics/src/videos/ma05-balance-of-payments.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "record_id": "recvvJaLpg5DkZ",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/a7069b03-154b-43d0-99de-cedfdd72ba3a",
+        "comment_id": 6078352620,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078352620",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v1",
+        "video_bytes": 1803306,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/a7069b03-154b-43d0-99de-cedfdd72ba3a",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-02.md#c14-a005"
+    }
+  },
+  "feishu_record_id": "recvvJaLpg5DkZ",
+  "page": "catalog/economics/14-02.md",
+  "course_code": "14.02",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A resident imports machinery and pays using a foreign loan.",
+    "original_name": "Balance of payments",
+    "standard_name": "Balance of Payments",
+    "sources": [
+      {
+        "title": "OpenStax — GDP expenditure accounting",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+        "scope": "GDP and negative net exports"
+      },
+      {
+        "title": "OpenStax — Foreign exchange demand and supply",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+        "scope": "Quoted currency units and supply shifts"
+      },
+      {
+        "title": "MIT OCW — Intermediate Macroeconomics resources",
+        "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+        "scope": "IS–LM and Solow model reference scope"
+      },
+      {
+        "title": "OpenStax — Phillips Curve",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+        "scope": "Short-run tradeoff and inflation expectations"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-macroeconomics/ma05-balance-of-payments.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma05-balance-of-payments/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpg5DkZ",
+      "slug": "ma05-balance-of-payments",
+      "bbox": [
+        284,
+        278,
+        716,
+        622
+      ],
+      "width": 432,
+      "height": 344,
+      "dx": 0.0,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-macroeconomics/ma05-balance-of-payments.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-macroeconomics/ma05-balance-of-payments.md",
+  "cover_image": "assets/covers/economics/principles-of-macroeconomics/ma05-balance-of-payments.jpg",
+  "cover_version": "economics-game-macro-20261009-v1",
+  "feishu": {
+    "record_id": "recvvJaLpg5DkZ",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/a7069b03-154b-43d0-99de-cedfdd72ba3a",
+  "player_version": "economics-game-macro-20261009-v1"
+}

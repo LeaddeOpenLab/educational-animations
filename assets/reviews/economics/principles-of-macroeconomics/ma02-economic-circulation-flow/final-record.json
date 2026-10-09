@@ -1,0 +1,363 @@
+{
+  "id": "C14-A002",
+  "subject": "Economics",
+  "course": "Principles of Macroeconomics",
+  "textbook": "Macroeconomics, 8e (Blanchard)",
+  "title": "Circular Flow: Money and Real Goods",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.mp4",
+  "tags": [
+    "C14-A002",
+    "14.02",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Circular Flow for Principles of Macroeconomics, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #117733, accent #aa4499, result #cc6677, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: Households supply labor to firms; firms pay wages; households buy final goods; taxes and public spending add government. Learning objective: Trace money and real goods in opposite directions around the economy. Use this actual scene timing: 0–4s: Sectors; 4–10s: Labor and wages; 10–15s: Goods and consumption; 15–20s: Follow money and real goods in opposite directions; 20–25s: Taxes and government purchases; 25–30s: Trace one closed money loop. Drive objects and values from one state model. Numerical setup: {\"labor_value\":100,\"wages\":100,\"household_consumption\":80,\"taxes\":20,\"government_purchases\":20}. Demonstrate Send labor to firms, wages to households, consumption to firms, goods to households, then tax and public purchase. Then Each new labeled flow changes a sector's inflow/outflow, while the real counterpart points in the opposite direction. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not imply money and goods travel in the same direction on one transaction. Reproduce from the supplied source kit principles-of-macroeconomics, src/videos/ma02-economic-circulation-flow.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v2 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Economic circulation flow",
+  "standard_name": "Circular Flow",
+  "aliases": [],
+  "final_title": "Circular Flow: Money and Real Goods",
+  "learning_objective": "Trace money and real goods in opposite directions around the economy.",
+  "core_conclusion": "Each new labeled flow changes a sector's inflow/outflow, while the real counterpart points in the opposite direction.",
+  "references": [
+    {
+      "title": "OpenStax — GDP expenditure accounting",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+      "scope": "GDP and negative net exports"
+    },
+    {
+      "title": "OpenStax — Foreign exchange demand and supply",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+      "scope": "Quoted currency units and supply shifts"
+    },
+    {
+      "title": "MIT OCW — Intermediate Macroeconomics resources",
+      "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+      "scope": "IS–LM and Solow model reference scope"
+    },
+    {
+      "title": "OpenStax — Phillips Curve",
+      "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+      "scope": "Short-run tradeoff and inflation expectations"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Economic circulation flow” using this visual metaphor: “a single animated economic graph tracing one mechanism for Economic circulation flow”. Dynamically demonstrate the core formula or conclusion: The circular flow sends goods one way and payments the other way..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F9F1F5); main visual (#15516C); secondary visual (#8F253B); highlight (#6E5300); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-macroeconomics/src/videos/ma02-economic-circulation-flow.tsx",
+    "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma02-economic-circulation-flow.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpaxnXC/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 4.0,
+        "reading_seconds": 3.5,
+        "objects": "Four sector nodes; money flows with values; corresponding real labor/goods flows; balances.",
+        "change": "Sectors",
+        "cause": "Households supply labor to firms; firms pay wages; households buy final goods; taxes and public spending add government.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 4.0,
+        "end_seconds": 10.0,
+        "reading_seconds": 5.5,
+        "objects": "Four sector nodes; money flows with values; corresponding real labor/goods flows; balances.",
+        "change": "Labor and wages",
+        "cause": "Send labor to firms, wages to households, consumption to firms, goods to households, then tax and public purchase.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 10.0,
+        "end_seconds": 15.0,
+        "reading_seconds": 4.5,
+        "objects": "Four sector nodes; money flows with values; corresponding real labor/goods flows; balances.",
+        "change": "Goods and consumption",
+        "cause": "Send labor to firms, wages to households, consumption to firms, goods to households, then tax and public purchase.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 15.0,
+        "end_seconds": 20.0,
+        "reading_seconds": 4.5,
+        "objects": "Four sector nodes; money flows with values; corresponding real labor/goods flows; balances.",
+        "change": "Follow money and real goods in opposite directions",
+        "cause": "Send labor to firms, wages to households, consumption to firms, goods to households, then tax and public purchase.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "result",
+        "start_seconds": 20.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 4.5,
+        "objects": "Four sector nodes; money flows with values; corresponding real labor/goods flows; balances.",
+        "change": "Taxes and government purchases",
+        "cause": "Send labor to firms, wages to households, consumption to firms, goods to households, then tax and public purchase.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "closing",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.5,
+        "objects": "Four sector nodes; money flows with values; corresponding real labor/goods flows; balances.",
+        "change": "Trace one closed money loop",
+        "cause": "Send labor to firms, wages to households, consumption to firms, goods to households, then tax and public purchase.",
+        "result": "At the end, follow one dollar from wages through household spending back to firms, with labor/goods on reversed lanes.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-macroeconomics/src/videos/ma02-economic-circulation-flow.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "result",
+        "uncertainty": "Do not imply money and goods travel in the same direction on one transaction.",
+        "expected_observation": "Each new labeled flow changes a sector's inflow/outflow, while the real counterpart points in the opposite direction."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 22.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Final-frame review identified timing, text length, label separation or mechanism evidence that needed correction.",
+        "affected_ids": [
+          "C14-A002"
+        ],
+        "status": "resolved",
+        "fix": "Targeted source correction and v2 re-render; preserved all other batch outputs.",
+        "evidence": [
+          "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/contact-sheet.jpg",
+          "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v2",
+      "video": "assets/videos/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/risk-sheet.jpg"
+      ],
+      "observations": "21–23s: labor/goods and wages/consumption use separate reversed lanes. A purchases=20 curve is added from government to firms after taxes=20 is present, closing the labeled money route.",
+      "times_seconds": [
+        21.0,
+        22.0,
+        23.0
+      ],
+      "teaching_requirement": "Trace money and real goods in opposite directions around the economy.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 21–23s: labor/goods and wages/consumption use separate reversed lanes. A purchases=20 curve is added from government to firms after taxes=20 is present, closing the labeled money route."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 21–23s: labor/goods and wages/consumption use separate reversed lanes. A purchases=20 curve is added from government to firms after taxes=20 is present, closing the labeled money route."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/risk-sheet.jpg",
+          "times_seconds": [
+            21.0,
+            22.0,
+            23.0
+          ],
+          "observation": "21–23s: labor/goods and wages/consumption use separate reversed lanes. A purchases=20 curve is added from government to firms after taxes=20 is present, closing the labeled money route."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.md",
+      "assets/source-kits/principles-of-macroeconomics/src/videos/ma02-economic-circulation-flow.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "record_id": "recvvJaLpaxnXC",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/f0b63cd1-db9d-4073-af01-4de26d10c249",
+        "comment_id": 6078347826,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078347826",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v2",
+        "video_bytes": 2261939,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/f0b63cd1-db9d-4073-af01-4de26d10c249",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-02.md#c14-a002"
+    }
+  },
+  "feishu_record_id": "recvvJaLpaxnXC",
+  "page": "catalog/economics/14-02.md",
+  "course_code": "14.02",
+  "terminology": {
+    "confirmed": true,
+    "scope": "Households supply labor to firms; firms pay wages; households buy final goods; taxes and public spending add government.",
+    "original_name": "Economic circulation flow",
+    "standard_name": "Circular Flow",
+    "sources": [
+      {
+        "title": "OpenStax — GDP expenditure accounting",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/6-1-measuring-the-size-of-the-economy-gross-domestic-product",
+        "scope": "GDP and negative net exports"
+      },
+      {
+        "title": "OpenStax — Foreign exchange demand and supply",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/29-2-demand-and-supply-shifts-in-foreign-exchange-markets",
+        "scope": "Quoted currency units and supply shifts"
+      },
+      {
+        "title": "MIT OCW — Intermediate Macroeconomics resources",
+        "url": "https://www.ocw.mit.edu/courses/14-05-intermediate-macroeconomics-fall-2025/download/",
+        "scope": "IS–LM and Solow model reference scope"
+      },
+      {
+        "title": "OpenStax — Phillips Curve",
+        "url": "https://openstax.org/books/principles-macroeconomics-3e/pages/12-3-the-phillips-curve",
+        "scope": "Short-run tradeoff and inflation expectations"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v2",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.jpg",
+      "assets/reviews/economics/principles-of-macroeconomics/ma02-economic-circulation-flow/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpaxnXC",
+      "slug": "ma02-economic-circulation-flow",
+      "bbox": [
+        313,
+        291,
+        687,
+        609
+      ],
+      "width": 374,
+      "height": 318,
+      "dx": 0.0,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.md",
+  "cover_image": "assets/covers/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.jpg",
+  "cover_version": "economics-game-macro-20261009-v2",
+  "feishu": {
+    "record_id": "recvvJaLpaxnXC",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/f0b63cd1-db9d-4073-af01-4de26d10c249",
+  "player_version": "economics-game-macro-20261009-v2"
+}

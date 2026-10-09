@@ -455,28 +455,28 @@
 - [C13-A011 · Market welfare](economics/14-01.md#c13-a011) — awaiting production
 ## Principles of Macroeconomics
 
-- [C14-A001 · GDP accounting](economics/14-02.md#c14-a001) — awaiting production
-- [C14-A002 · Economic circulation flow](economics/14-02.md#c14-a002) — awaiting production
-- [C14-A003 · IS–LM model](economics/14-02.md#c14-a003) — awaiting production
-- [C14-A004 · Exchange rate](economics/14-02.md#c14-a004) — awaiting production
-- [C14-A005 · Balance of payments](economics/14-02.md#c14-a005) — awaiting production
-- [C14-A006 · Solow growth model](economics/14-02.md#c14-a006) — awaiting production
-- [C14-A007 · Phillips Curve](economics/14-02.md#c14-a007) — awaiting production
-- [C14-A008 · Inflation expectations](economics/14-02.md#c14-a008) — awaiting production
+- [C14-A001 · GDP Accounting](economics/14-02.md#c14-a001) — video
+- [C14-A002 · Circular Flow](economics/14-02.md#c14-a002) — video
+- [C14-A003 · IS–LM Model](economics/14-02.md#c14-a003) — video
+- [C14-A004 · Exchange Rate](economics/14-02.md#c14-a004) — video
+- [C14-A005 · Balance of Payments](economics/14-02.md#c14-a005) — video
+- [C14-A006 · Solow Growth Model](economics/14-02.md#c14-a006) — video
+- [C14-A007 · Phillips Curve](economics/14-02.md#c14-a007) — video
+- [C14-A008 · Inflation Expectations](economics/14-02.md#c14-a008) — video
 ## Game Theory
 
-- [C15-A001 · Dominant strategy](economics/econ-159.md#c15-a001) — awaiting production
-- [C15-A002 · Iterative deletion](economics/econ-159.md#c15-a002) — awaiting production
-- [C15-A003 · Pure strategy Nash equilibrium](economics/econ-159.md#c15-a003) — awaiting production
-- [C15-A004 · Mixed strategy](economics/econ-159.md#c15-a004) — awaiting production
-- [C15-A005 · Mixed Strategy Nash Equilibrium](economics/econ-159.md#c15-a005) — awaiting production
-- [C15-A006 · Sequential game](economics/econ-159.md#c15-a006) — awaiting production
-- [C15-A007 · Backward induction](economics/econ-159.md#c15-a007) — awaiting production
-- [C15-A008 · Subgame refinement](economics/econ-159.md#c15-a008) — awaiting production
-- [C15-A009 · Credible threat](economics/econ-159.md#c15-a009) — awaiting production
-- [C15-A010 · Asymmetric information](economics/econ-159.md#c15-a010) — awaiting production
-- [C15-A011 · Signaling](economics/econ-159.md#c15-a011) — awaiting production
-- [C15-A012 · Adverse selection](economics/econ-159.md#c15-a012) — awaiting production
+- [C15-A001 · Dominant Strategy](economics/econ-159.md#c15-a001) — video
+- [C15-A002 · Iterative Deletion](economics/econ-159.md#c15-a002) — video
+- [C15-A003 · Pure Strategy Nash Equilibrium](economics/econ-159.md#c15-a003) — video
+- [C15-A004 · Mixed Strategy](economics/econ-159.md#c15-a004) — video
+- [C15-A005 · Mixed Strategy Nash Equilibrium](economics/econ-159.md#c15-a005) — video
+- [C15-A006 · Sequential Game](economics/econ-159.md#c15-a006) — video
+- [C15-A007 · Backward Induction](economics/econ-159.md#c15-a007) — video
+- [C15-A008 · Subgame Refinement](economics/econ-159.md#c15-a008) — video
+- [C15-A009 · Credible Threat](economics/econ-159.md#c15-a009) — video
+- [C15-A010 · Asymmetric Information](economics/econ-159.md#c15-a010) — video
+- [C15-A011 · Signaling](economics/econ-159.md#c15-a011) — video
+- [C15-A012 · Adverse Selection](economics/econ-159.md#c15-a012) — video
 ## Financial Markets
 
 - [C16-A001 · Risk-return relationship](finance/econ-252.md#c16-a001) — awaiting production

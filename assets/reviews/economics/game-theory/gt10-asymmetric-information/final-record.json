@@ -1,0 +1,297 @@
+{
+  "id": "C15-A010",
+  "subject": "Economics",
+  "course": "Game Theory",
+  "textbook": "Strategy and Games (Dutta); Strategy (Watson)",
+  "title": "Asymmetric Information: Hidden Car Quality",
+  "status": "ready",
+  "video": "assets/videos/economics/game-theory/gt10-asymmetric-information.mp4",
+  "tags": [
+    "C15-A010",
+    "ECON 159",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English educational animation about Asymmetric Information for Game Theory, Economics. Render 1920×1080 at 30 fps with no audio using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2. Use background #ffffff, a subtle cool-gray grid and soft glow, strong text #0b1220, and the course roles primary #cc6677, accent #117733, result #aa4499, warning #882255, alternate #332288. Use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif for screen text. Place a small topic kicker at the upper left, a 50px bold scene heading below it, a 30px explanatory caption in the left column, and the mechanism graphic in the right 1050×640 region. Use short staggered entrances and six-frame fade-ins/eight-frame fade-outs around scenes; keep the mechanism state continuous across cuts. Finish with the result graphic and a small Key result chip. Keep topic-specific values and object labels readable; every highlight, path or curve must be supported by the visible numerical example.\n\nTeach this scenario: A seller privately knows a used car's quality; a buyer sees only its posted price. Learning objective: Explain asymmetric information by separating true state from observed state. Use this actual scene timing: 0–5s: Two car qualities; 5–12s: Seller sees it; buyer sees only the price; 12–21s: Join buyer nodes in one information set; 21–30s: Compare full versus partial information choices. Drive objects and values from one state model. Numerical setup: {\"types\":[\"High\",\"Low\"],\"type_probabilities\":[0.5,0.5],\"posted_price\":6,\"buyer_observation\":\"price only\"}. Demonstrate Seller posts a common price that does not reveal type. Then Buyer still faces two possible quality nodes in one information set and must choose without conditioning on hidden quality. Preserve the visible comparison that proves the result. Avoid this pitfall: Do not draw separate buyer decisions for each true type when the buyer cannot distinguish them. Reproduce from the supplied source kit game-theory, src/videos/gt10-asymmetric-information.tsx and its .state.ts plus the course L2 components, theme, fonts and brand asset; use FFmpeg to remove audio after rendering. This card describes the reviewed v1 video; it is a production brief, and exact reproduction requires the supplied code and assets. Clean-machine reproduction has not been verified.",
+  "original_name": "Asymmetric information",
+  "standard_name": "Asymmetric Information",
+  "aliases": [],
+  "final_title": "Asymmetric Information: Hidden Car Quality",
+  "learning_objective": "Explain asymmetric information by separating true state from observed state.",
+  "core_conclusion": "Buyer still faces two possible quality nodes in one information set and must choose without conditioning on hidden quality.",
+  "references": [
+    {
+      "title": "OpenStax — Imperfect and asymmetric information",
+      "url": "https://openstax.org/books/principles-economics-3e/pages/16-1-the-problem-of-imperfect-information-and-asymmetric-information",
+      "scope": "Hidden quality and the adverse-selection feedback example"
+    }
+  ],
+  "artifact_version": "economics-game-macro-20261009-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Asymmetric information” using this visual metaphor: “a single animated economic graph tracing one mechanism for Asymmetric information”. Dynamically demonstrate the core formula or conclusion: Asymmetric information means players know different relevant facts..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F9F1F5); main visual (#15516C); secondary visual (#8F253B); highlight (#6E5300); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "MathJax 3.2.2 (kit formula assets)",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/game-theory/src/videos/gt10-asymmetric-information.tsx",
+    "source": "assets/source-kits/game-theory/src/videos/gt10-asymmetric-information.tsx",
+    "original_l3": ".workbuddy/batch-20261009-economics-game-macro/recvvJaLpN9VGZ/l3.json",
+    "scenes": [
+      {
+        "id": "title",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": "Nature-selected high/low quality cards, seller private panel, buyer information set, two possible payoff branches.",
+        "change": "Two car qualities",
+        "cause": "A seller privately knows a used car's quality; a buyer sees only its posted price.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "setup",
+        "start_seconds": 5.0,
+        "end_seconds": 12.0,
+        "reading_seconds": 6.5,
+        "objects": "Nature-selected high/low quality cards, seller private panel, buyer information set, two possible payoff branches.",
+        "change": "Seller sees it; buyer sees only the price",
+        "cause": "Seller posts a common price that does not reveal type.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "mechanism",
+        "start_seconds": 12.0,
+        "end_seconds": 21.0,
+        "reading_seconds": 8.5,
+        "objects": "Nature-selected high/low quality cards, seller private panel, buyer information set, two possible payoff branches.",
+        "change": "Join buyer nodes in one information set",
+        "cause": "Seller posts a common price that does not reveal type.",
+        "result": "Visible intermediate state in the continuous mechanism model",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      },
+      {
+        "id": "test",
+        "start_seconds": 21.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 8.5,
+        "objects": "Nature-selected high/low quality cards, seller private panel, buyer information set, two possible payoff branches.",
+        "change": "Compare full versus partial information choices",
+        "cause": "Seller posts a common price that does not reveal type.",
+        "result": "When the buyer acts, both high and low possible worlds remain visible behind the same observed price.",
+        "timing_reason": "Allow the numerical/object comparison to be read before the next step"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/game-theory/src/videos/gt10-asymmetric-information.state.ts",
+      "bindings": "One stateAt(globalFrame) drives displayed numeric values, chosen paths, cutoffs and curve positions"
+    },
+    "template_scope": "Course palette, text furniture and L2 graphic primitives are shared; mechanism-specific state, scenario, scene count and timing are independent.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "mechanism",
+        "uncertainty": "Do not draw separate buyer decisions for each true type when the buyer cannot distinguish them.",
+        "expected_observation": "Buyer still faces two possible quality nodes in one information set and must choose without conditioning on hidden quality."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 20.0,
+        "reason": "Final MP4 inspection of the key mechanism change"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+    "evidence": [
+      "assets/reviews/economics/game-theory/gt10-asymmetric-information/contact-sheet.jpg",
+      "assets/reviews/economics/game-theory/gt10-asymmetric-information/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "reviewer": "Codex — executed TypeScript, state and media checks",
+      "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt10-asymmetric-information/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "economics-game-macro-20261009-v1",
+      "video": "assets/videos/economics/game-theory/gt10-asymmetric-information.mp4",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-09T17:22:47.838463+08:00",
+      "evidence": [
+        "assets/reviews/economics/game-theory/gt10-asymmetric-information/contact-sheet.jpg",
+        "assets/reviews/economics/game-theory/gt10-asymmetric-information/risk-sheet.jpg"
+      ],
+      "observations": "19–22s: two buyer decision nodes under High and Low are joined by a dashed information set. Seller knowledge shows High while buyer observation stays Price 6; terminal buyer payoffs differ 7 versus −3.",
+      "times_seconds": [
+        19.0,
+        20.0,
+        22.0
+      ],
+      "teaching_requirement": "Explain asymmetric information by separating true state from observed state.",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "veto_conditions": [
+        {
+          "condition": 1,
+          "triggered": false,
+          "reason": "Topic-specific values and objects make the mechanism recognizable: 19–22s: two buyer decision nodes under High and Low are joined by a dashed information set. Seller knowledge shows High while buyer observation stays Price 6; terminal buyer payoffs differ 7 versus −3."
+        },
+        {
+          "condition": 2,
+          "triggered": false,
+          "reason": "The inspected object state changes causally across the listed times: 19–22s: two buyer decision nodes under High and Low are joined by a dashed information set. Seller knowledge shows High while buyer observation stays Price 6; terminal buyer payoffs differ 7 versus −3."
+        },
+        {
+          "condition": 3,
+          "triggered": false,
+          "reason": "The operation is visible in the actual figure; the result is supported by the compared values/path/curve, as recorded above."
+        }
+      ],
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": "assets/reviews/economics/game-theory/gt10-asymmetric-information/risk-sheet.jpg",
+          "times_seconds": [
+            19.0,
+            20.0,
+            22.0
+          ],
+          "observation": "19–22s: two buyer decision nodes under High and Low are joined by a dashed information set. Seller knowledge shows High while buyer observation stays Price 6; terminal buyer payoffs differ 7 versus −3."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/prompts/economics/game-theory/gt10-asymmetric-information.md",
+      "assets/source-kits/game-theory/src/videos/gt10-asymmetric-information.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Prompt inspected against the actual final scenes; exact source kit is included. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "record_id": "recvvJaLpN9VGZ",
+      "verified_at": "2026-10-09T17:39:45.943889+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "economics-game-macro-20261009-v1",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/48100d6c-f6a1-437e-8660-80d65fab78d3",
+        "comment_id": 6078340770,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124#issuecomment-6078340770",
+        "issue_number": 124,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/124",
+        "video_version": "economics-game-macro-20261009-v1",
+        "video_bytes": 1595253,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/48100d6c-f6a1-437e-8660-80d65fab78d3",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/econ-159.md#c15-a010"
+    }
+  },
+  "feishu_record_id": "recvvJaLpN9VGZ",
+  "page": "catalog/economics/econ-159.md",
+  "course_code": "ECON 159",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A seller privately knows a used car's quality; a buyer sees only its posted price.",
+    "original_name": "Asymmetric information",
+    "standard_name": "Asymmetric Information",
+    "sources": [
+      {
+        "title": "OpenStax — Imperfect and asymmetric information",
+        "url": "https://openstax.org/books/principles-economics-3e/pages/16-1-the-problem-of-imperfect-information-and-asymmetric-information",
+        "scope": "Hidden quality and the adverse-selection feedback example"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "economics-game-macro-20261009-v1",
+    "reviewer": "Codex — direct JPG contact-sheet inspection and pixel geometry audit",
+    "reviewed_at": "2026-10-09T17:34:13.723527+08:00",
+    "evidence": [
+      "assets/covers/economics/game-theory/gt10-asymmetric-information.jpg",
+      "assets/reviews/economics/game-theory/gt10-asymmetric-information/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLpN9VGZ",
+      "slug": "gt10-asymmetric-information",
+      "bbox": [
+        206,
+        260,
+        793,
+        640
+      ],
+      "width": 587,
+      "height": 380,
+      "dx": -0.5,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/game-theory/gt10-asymmetric-information.jpg",
+  "prompt_file": "assets/prompts/economics/game-theory/gt10-asymmetric-information.md",
+  "cover_image": "assets/covers/economics/game-theory/gt10-asymmetric-information.jpg",
+  "cover_version": "economics-game-macro-20261009-v1",
+  "feishu": {
+    "record_id": "recvvJaLpN9VGZ",
+    "verified": true,
+    "verified_at": "2026-10-09T17:39:46.022195+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/48100d6c-f6a1-437e-8660-80d65fab78d3",
+  "player_version": "economics-game-macro-20261009-v1"
+}
