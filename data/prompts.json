@@ -34239,5 +34239,3260 @@
     "textbook": "Primary references listed per concept",
     "prompt_file": "assets/prompts/computer-science/6-006/bellman-ford-algorithm.md",
     "page": "catalog/computer-science/6-006.md"
+  },
+  {
+    "id": "recvw25tEzzqwR",
+    "feishu_record_id": "recvw25tEzzqwR",
+    "original_name": "TypeScript Type Inference Across Functions",
+    "standard_name": "TypeScript Type Inference Across Functions",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A returned object shape becomes the caller's inferred type.",
+    "core_conclusion": "The returned field visibly crosses the function boundary, so the missing id is explained by a real shape change.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzzqwR"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx",
+      "scenes": [
+        {
+          "id": "input-1",
+          "objects": "makeUser receives {id:7, name:'Ada'}; return type has not been written",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.333333333333333,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-1",
+          "objects": "makeUser receives {id:7, name:'Ada'}; return type has not been written",
+          "change": "source field id disappears from the returned record; name remains string; caller's result gains only name:string",
+          "cause": "return {name: input.name}; then caller reads makeUser(source)",
+          "result": "result.name is accessible and result.id is crossed out at caller",
+          "start_seconds": 4.333333333333333,
+          "end_seconds": 21.0,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-1",
+          "objects": "result.name is accessible and result.id is crossed out at caller",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "return {name: input.name}; then caller reads makeUser(source)",
+          "result": "The returned field visibly crosses the function boundary, so the missing id is explained by a real shape change.",
+          "start_seconds": 21.0,
+          "end_seconds": 25.666666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The inference composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-1",
+          "uncertainty": "return {name: input.name}; then caller reads makeUser(source)",
+          "expected_observation": "result.name is accessible and result.id is crossed out at caller"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.266666666666667,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.633333333333334,
+              10.266666666666667,
+              14.866666666666667
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/frames.jpg"
+            ],
+            "observation": "A two-field source record yields only name: Ada; the caller card gains name while result.id is struck through."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 25.67,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzzqwR",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/c8af6bac-74c9-49e2-99e1-1d64b4fdb41f",
+        "issue_number": 107,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "TypeScript Type Inference Across Functions: A Return Shape",
+    "media": {
+      "duration_seconds": 25.67,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.mp4",
+    "title": "TypeScript Type Inference Across Functions: A Return Shape",
+    "prompt": "A 25.7-second silent English computer science animation about TypeScript Type Inference Across Functions: The returned field visibly crosses the function boundary, so the missing id is explained by a real shape change.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 130 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 140 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg",
+    "player": "https://github.com/user-attachments/assets/c8af6bac-74c9-49e2-99e1-1d64b4fdb41f",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzzqwR",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzxY66",
+    "feishu_record_id": "recvw25tEzxY66",
+    "original_name": "Union Type Narrowing with Discriminants",
+    "standard_name": "Union Type Narrowing with Discriminants",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A discriminant selects exactly one union member and unlocks its fields.",
+    "core_conclusion": "The two candidate structures become one before value is read.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzxY66"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx",
+      "scenes": [
+        {
+          "id": "input-2",
+          "objects": "Result contains Ok{kind:'ok',value:42} and Err{kind:'err',message:'timeout'}",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.5,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-2",
+          "objects": "Result contains Ok{kind:'ok',value:42} and Err{kind:'err',message:'timeout'}",
+          "change": "Err candidate is removed from the live type set; value appears only on Ok",
+          "cause": "evaluate result.kind === 'ok'",
+          "result": "value access succeeds in true branch while same access before predicate remains unavailable",
+          "start_seconds": 4.5,
+          "end_seconds": 20.5,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-2",
+          "objects": "value access succeeds in true branch while same access before predicate remains unavailable",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "evaluate result.kind === 'ok'",
+          "result": "The two candidate structures become one before value is read.",
+          "start_seconds": 20.5,
+          "end_seconds": 25.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/narrow-state.ts",
+        "bindings": {
+          "objects": "useCurrentFrame -> narrowState(frame) -> state.branch, state.value, state.comparedErr -> visible SVG branch/value/exclusion. Candidate movement uses the same comparison boundaries. The content change is candidate set reduction and value access, beyond entrance motion.",
+          "values": "frame 44 has Ok|Err and no check; frame 85 compares Ok; frame 125 compares Err; frame 159 has no branch value; frame 160 has Ok only with value 42"
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-2",
+          "uncertainty": "evaluate result.kind === 'ok'",
+          "expected_observation": "value access succeeds in true branch while same access before predicate remains unavailable"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.133333333333333,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.566666666666666,
+              10.133333333333333,
+              14.666666666666666
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/frames.jpg"
+            ],
+            "observation": "Err is excluded after the kind comparison; only Ok moves into the true branch and exposes value 42."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 25.33,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzxY66",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/418da867-cef3-4f03-b8a2-62c6ee242d00",
+        "issue_number": 108,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Union Type Narrowing with Discriminants: Ok Branch Selection",
+    "media": {
+      "duration_seconds": 25.33,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.mp4",
+    "title": "Union Type Narrowing with Discriminants: Ok Branch Selection",
+    "prompt": "A 25.3-second silent English computer science animation about Union Type Narrowing with Discriminants: The two candidate structures become one before value is read.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 135 frames, animate the topic-specific state transition for 480 frames, and hold the conclusion for 145 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.jpg",
+    "player": "https://github.com/user-attachments/assets/418da867-cef3-4f03-b8a2-62c6ee242d00",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzxY66",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzU93I",
+    "feishu_record_id": "recvw25tEzU93I",
+    "original_name": "Generic Constraints and Reusable APIs",
+    "standard_name": "Generic Constraints and Reusable APIs",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A constraint checks capability while the generic keeps the input type.",
+    "core_conclusion": "The same generic constraint checks id without erasing each input’s extra fields.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzU93I"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx",
+      "scenes": [
+        {
+          "id": "input-3",
+          "objects": "User{id:'u1',email:'a@b'} and Order{id:'o1',total:24} enter a generic function",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.666666666666667,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-3",
+          "objects": "User{id:'u1',email:'a@b'} and Order{id:'o1',total:24} enter a generic function",
+          "change": "both objects keep their distinct extra fields; a no-id object is removed",
+          "cause": "T extends {id:string} checks each input; return input unchanged",
+          "result": "returned User still exposes email and Order still exposes total",
+          "start_seconds": 4.666666666666667,
+          "end_seconds": 21.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-3",
+          "objects": "returned User still exposes email and Order still exposes total",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "T extends {id:string} checks each input; return input unchanged",
+          "result": "The same generic constraint checks id without erasing each input’s extra fields.",
+          "start_seconds": 21.333333333333332,
+          "end_seconds": 26.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The generic composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-3",
+          "uncertainty": "T extends {id:string} checks each input; return input unchanged",
+          "expected_observation": "returned User still exposes email and Order still exposes total"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.533333333333333,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.766666666666667,
+              10.533333333333333,
+              15.266666666666667
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/frames.jpg"
+            ],
+            "observation": "User and Order each pass the id constraint, while NoId dims; email and total remain on the returned objects."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 26.33,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzU93I",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/78f20036-024f-4838-bce1-b87e0e429ffe",
+        "issue_number": 109,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Generic Constraints and Reusable APIs: Keep Extra Fields",
+    "media": {
+      "duration_seconds": 26.33,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.mp4",
+    "title": "Generic Constraints and Reusable APIs: Keep Extra Fields",
+    "prompt": "A 26.3-second silent English computer science animation about Generic Constraints and Reusable APIs: The same generic constraint checks id without erasing each input’s extra fields.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 140 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 150 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.jpg",
+    "player": "https://github.com/user-attachments/assets/78f20036-024f-4838-bce1-b87e0e429ffe",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzU93I",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzfQaz",
+    "feishu_record_id": "recvw25tEzfQaz",
+    "original_name": "Runtime Validation at an API Boundary",
+    "standard_name": "Runtime Validation at an API Boundary",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "Unknown JSON crosses a runtime gate before TypeScript trusts it.",
+    "core_conclusion": "Failure and success depend on visibly inspected field values, not a status badge.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzfQaz"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx",
+      "scenes": [
+        {
+          "id": "input-4",
+          "objects": "network JSON is unknown: {id:'7',age:'oops'}",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.333333333333333,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-4",
+          "objects": "network JSON is unknown: {id:'7',age:'oops'}",
+          "change": "id and age become rejected; corrected {id:7,age:21} becomes accepted and only then enters service",
+          "cause": "schema checks id then age one field at a time",
+          "result": "bad payload never appears in service input; corrected typed fields do",
+          "start_seconds": 4.333333333333333,
+          "end_seconds": 25.0,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-4",
+          "objects": "bad payload never appears in service input; corrected typed fields do",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "schema checks id then age one field at a time",
+          "result": "Failure and success depend on visibly inspected field values, not a status badge.",
+          "start_seconds": 25.0,
+          "end_seconds": 30.166666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/validation-state.ts",
+        "bindings": {
+          "objects": "useCurrentFrame -> validationState(frame) -> raw concrete values, check results, reject tray and service parsed record in visible SVG. Service record cannot render until both numeric predicates pass.",
+          "values": "bad strings at frame 0; id rejects at 60, age rejects at 100, no service at 174; corrected numeric fields at 175; second checks at 205/235; service null at 264 and numeric record appears at 265"
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-4",
+          "uncertainty": "schema checks id then age one field at a time",
+          "expected_observation": "bad payload never appears in service input; corrected typed fields do"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 12.066666666666666,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              6.633333333333334,
+              12.066666666666666,
+              17.466666666666665
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/frames.jpg"
+            ],
+            "observation": "The unknown JSON with age \"oops\" fails numeric predicates; corrected age 21 enters the trusted service input."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 30.17,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzfQaz",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/2d429e12-4d55-44c9-a782-a51cb67821a0",
+        "issue_number": 110,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Runtime Validation at an API Boundary: Reject Bad JSON",
+    "media": {
+      "duration_seconds": 30.17,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.mp4",
+    "title": "Runtime Validation at an API Boundary: Reject Bad JSON",
+    "prompt": "A 30.2-second silent English computer science animation about Runtime Validation at an API Boundary: Failure and success depend on visibly inspected field values, not a status badge.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 130 frames, animate the topic-specific state transition for 620 frames, and hold the conclusion for 155 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.jpg",
+    "player": "https://github.com/user-attachments/assets/2d429e12-4d55-44c9-a782-a51cb67821a0",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzfQaz",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzTj61",
+    "feishu_record_id": "recvw25tEzTj61",
+    "original_name": "Typed Request and Response Contracts",
+    "standard_name": "Typed Request and Response Contracts",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A shared contract aligns request and response while the server still validates.",
+    "core_conclusion": "The two wire contracts have different visible field sets and directions.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzTj61"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx",
+      "scenes": [
+        {
+          "id": "input-5",
+          "objects": "browser prepares POST body {itemId:'i7',qty:2}; shared request and response structures are visible",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.5,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-5",
+          "objects": "browser prepares POST body {itemId:'i7',qty:2}; shared request and response structures are visible",
+          "change": "raw bytes become checked request fields, then a separately assembled response record updates browser order view",
+          "cause": "client serializes request; server validates received JSON; server builds {orderId:'o9',total:18}",
+          "result": "browser reads orderId and total from returned object; malformed qty stays outside handler",
+          "start_seconds": 4.5,
+          "end_seconds": 21.166666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-5",
+          "objects": "browser reads orderId and total from returned object; malformed qty stays outside handler",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "client serializes request; server validates received JSON; server builds {orderId:'o9',total:18}",
+          "result": "The two wire contracts have different visible field sets and directions.",
+          "start_seconds": 21.166666666666668,
+          "end_seconds": 25.833333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The contract composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-5",
+          "uncertainty": "client serializes request; server validates received JSON; server builds {orderId:'o9',total:18}",
+          "expected_observation": "browser reads orderId and total from returned object; malformed qty stays outside handler"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.333333333333334,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.666666666666667,
+              10.333333333333334,
+              14.966666666666667
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/frames.jpg"
+            ],
+            "observation": "The browser request with itemId and qty travels to the server; validated fields produce a response with orderId and total."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 25.83,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzTj61",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/e685165d-e6f5-46f6-b4ef-f356d1a1baff",
+        "issue_number": 111,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Typed Request and Response Contracts: Orders Across the Wire",
+    "media": {
+      "duration_seconds": 25.83,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.mp4",
+    "title": "Typed Request and Response Contracts: Orders Across the Wire",
+    "prompt": "A 25.8-second silent English computer science animation about Typed Request and Response Contracts: The two wire contracts have different visible field sets and directions.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 135 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 140 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/typed-request-and-response-contracts/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.jpg",
+    "player": "https://github.com/user-attachments/assets/e685165d-e6f5-46f6-b4ef-f356d1a1baff",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzTj61",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzXQVJ",
+    "feishu_record_id": "recvw25tEzXQVJ",
+    "original_name": "Async Error Propagation in a Server Route",
+    "standard_name": "Async Error Propagation in a Server Route",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A rejected promise travels to the route error handler and becomes a response.",
+    "core_conclusion": "The stack actually unwinds before the final status appears.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzXQVJ"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx",
+      "scenes": [
+        {
+          "id": "input-6",
+          "objects": "route awaits service; service awaits repository; response is not sent",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.666666666666667,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-6",
+          "objects": "route awaits service; service awaits repository; response is not sent",
+          "change": "repository frame vanishes, service await rejects, route frame unwinds, handler receives error and constructs 404 body",
+          "cause": "repository rejects with NotFound('u7')",
+          "result": "response changes from pending to HTTP 404 only after handler classification; unknown error becomes 500",
+          "start_seconds": 4.666666666666667,
+          "end_seconds": 21.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-6",
+          "objects": "response changes from pending to HTTP 404 only after handler classification; unknown error becomes 500",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "repository rejects with NotFound('u7')",
+          "result": "The stack actually unwinds before the final status appears.",
+          "start_seconds": 21.333333333333332,
+          "end_seconds": 26.166666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The error composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-6",
+          "uncertainty": "repository rejects with NotFound('u7')",
+          "expected_observation": "response changes from pending to HTTP 404 only after handler classification; unknown error becomes 500"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.466666666666667,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.733333333333333,
+              10.466666666666667,
+              15.166666666666666
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/frames.jpg"
+            ],
+            "observation": "NotFound rises while repository and service await frames disappear; the error handler receives it and emits HTTP 404."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 26.17,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzXQVJ",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/f482926c-028e-4493-9c0c-b6103a0732d4",
+        "issue_number": 112,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Async Error Propagation in a Server Route: NotFound to 404",
+    "media": {
+      "duration_seconds": 26.17,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route.mp4",
+    "title": "Async Error Propagation in a Server Route: NotFound to 404",
+    "prompt": "A 26.2-second silent English computer science animation about Async Error Propagation in a Server Route: The stack actually unwinds before the final status appears.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 140 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 145 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route.jpg",
+    "player": "https://github.com/user-attachments/assets/f482926c-028e-4493-9c0c-b6103a0732d4",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzXQVJ",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzPUf1",
+    "feishu_record_id": "recvw25tEzPUf1",
+    "original_name": "Database Transaction in a Typed Service",
+    "standard_name": "Database Transaction in a Typed Service",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A transaction either commits debit and credit together or rolls both back.",
+    "core_conclusion": "Rollback and the later atomic commit are separately visible in the ledger.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzPUf1"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx",
+      "scenes": [
+        {
+          "id": "input-7",
+          "objects": "public A=100,B=40; pending write set empty",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.333333333333333,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-7",
+          "objects": "public A=100,B=40; pending write set empty",
+          "change": "on injected failure both pending values vanish and public stays 100/40; on retry commit both pending values replace public together",
+          "cause": "transfer 25 writes A=75 and B=65 into private workspace",
+          "result": "there is no frame in which public is 75/40; final public is 75/65 after commit",
+          "start_seconds": 4.333333333333333,
+          "end_seconds": 28.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-7",
+          "objects": "there is no frame in which public is 75/40; final public is 75/65 after commit",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "transfer 25 writes A=75 and B=65 into private workspace",
+          "result": "Rollback and the later atomic commit are separately visible in the ledger.",
+          "start_seconds": 28.333333333333332,
+          "end_seconds": 33.333333333333336,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/transaction-state.ts",
+        "bindings": {
+          "objects": "TransactionPreview calls transactionState(f); publicA/publicB drive rendered published bars and values, pendingA/pendingB drive private write set, and coinProgress drives five moving units. Commit changes both public values at frame 320.",
+          "values": "frame 0 public 100/40; frame 140 pending changed and public fixed; frame 200 workspace hidden and public fixed; frame 319 public 100/40; frame 320 public 75/65"
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-7",
+          "uncertainty": "transfer 25 writes A=75 and B=65 into private workspace",
+          "expected_observation": "there is no frame in which public is 75/40; final public is 75/65 after commit"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 13.333333333333334,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              7.333333333333333,
+              13.333333333333334,
+              19.333333333333332
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/frames.jpg"
+            ],
+            "observation": "Private balances move from 100/40 toward 75/65 while published balances stay fixed; failure drops the write set, then a retry commits both published balances together."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 33.33,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzPUf1",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/8dab0e2b-f863-449d-882b-0c72bd58bf71",
+        "issue_number": 113,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Database Transaction in a Typed Service: Commit or Rollback",
+    "media": {
+      "duration_seconds": 33.33,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.mp4",
+    "title": "Database Transaction in a Typed Service: Commit or Rollback",
+    "prompt": "A 33.3-second silent English computer science animation about Database Transaction in a Typed Service: Rollback and the later atomic commit are separately visible in the ledger.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 130 frames, animate the topic-specific state transition for 720 frames, and hold the conclusion for 150 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.jpg",
+    "player": "https://github.com/user-attachments/assets/8dab0e2b-f863-449d-882b-0c72bd58bf71",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzPUf1",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzbu9j",
+    "feishu_record_id": "recvw25tEzbu9j",
+    "original_name": "Repository Pattern with Typed Queries",
+    "standard_name": "Repository Pattern with Typed Queries",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A typed repository converts a query row into a domain object.",
+    "core_conclusion": "The row-to-domain field mapping is shown before the result User appears.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzbu9j"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx",
+      "scenes": [
+        {
+          "id": "input-8",
+          "objects": "repository receives id='u7'; database row is {user_id:'u7',display_name:'Ada'} or null",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.5,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-8",
+          "objects": "repository receives id='u7'; database row is {user_id:'u7',display_name:'Ada'} or null",
+          "change": "row fields are renamed into domain User{id:'u7',name:'Ada'}; no-row produces null without a fake User",
+          "cause": "bind id as SQL parameter, query row, map its fields",
+          "result": "service receives User or null and never sees database column names",
+          "start_seconds": 4.5,
+          "end_seconds": 21.166666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-8",
+          "objects": "service receives User or null and never sees database column names",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "bind id as SQL parameter, query row, map its fields",
+          "result": "The row-to-domain field mapping is shown before the result User appears.",
+          "start_seconds": 21.166666666666668,
+          "end_seconds": 26.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The repository composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-8",
+          "uncertainty": "bind id as SQL parameter, query row, map its fields",
+          "expected_observation": "service receives User or null and never sees database column names"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.533333333333333,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.766666666666667,
+              10.533333333333333,
+              15.266666666666667
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/frames.jpg"
+            ],
+            "observation": "The SQL id parameter is bound; storage fields user_id and display_name move into domain fields id and name."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 26.33,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzbu9j",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/63466ffc-453b-4cac-adc7-ece12c200314",
+        "issue_number": 114,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Repository Pattern with Typed Queries: Row to Domain User",
+    "media": {
+      "duration_seconds": 26.33,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.mp4",
+    "title": "Repository Pattern with Typed Queries: Row to Domain User",
+    "prompt": "A 26.3-second silent English computer science animation about Repository Pattern with Typed Queries: The row-to-domain field mapping is shown before the result User appears.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 135 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 155 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.jpg",
+    "player": "https://github.com/user-attachments/assets/63466ffc-453b-4cac-adc7-ece12c200314",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzbu9j",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25tEzem0T",
+    "feishu_record_id": "recvw25tEzem0T",
+    "original_name": "Dependency Injection in a Backend",
+    "standard_name": "Dependency Injection in a Backend",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A service receives its dependency through a constructor and can swap implementations.",
+    "core_conclusion": "The provider’s call log changes while the service call stays constant.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25tEzem0T"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx",
+      "scenes": [
+        {
+          "id": "input-9",
+          "objects": "Checkout service has a PaymentPort; production provider stores a real charge record",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.666666666666667,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-9",
+          "objects": "Checkout service has a PaymentPort; production provider stores a real charge record",
+          "change": "fake provider records one call with amount 18 and returns receipt fake-1; real provider is untouched",
+          "cause": "constructor receives FakePaymentPort for a test; checkout calls charge(18)",
+          "result": "recorded calls show amount=18 and output receipt uses fake-1",
+          "start_seconds": 4.666666666666667,
+          "end_seconds": 21.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-9",
+          "objects": "recorded calls show amount=18 and output receipt uses fake-1",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "constructor receives FakePaymentPort for a test; checkout calls charge(18)",
+          "result": "The provider’s call log changes while the service call stays constant.",
+          "start_seconds": 21.333333333333332,
+          "end_seconds": 26.0,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The injection composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-9",
+          "uncertainty": "constructor receives FakePaymentPort for a test; checkout calls charge(18)",
+          "expected_observation": "recorded calls show amount=18 and output receipt uses fake-1"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.4,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.7,
+              10.4,
+              15.066666666666666
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/frames.jpg"
+            ],
+            "observation": "CheckoutService calls charge(18); switching to FakePaymentPort records 18 and returns fake-1 without adding to the real call log."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 26.0,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25tEzem0T",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/3c5a8caf-41d6-417b-84aa-6a3195ef5126",
+        "issue_number": 115,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Dependency Injection in a Backend: Swap a Fake Provider",
+    "media": {
+      "duration_seconds": 26.0,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend.mp4",
+    "title": "Dependency Injection in a Backend: Swap a Fake Provider",
+    "prompt": "A 26.0-second silent English computer science animation about Dependency Injection in a Backend: The provider’s call log changes while the service call stays constant.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 140 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 140 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend.jpg",
+    "player": "https://github.com/user-attachments/assets/3c5a8caf-41d6-417b-84aa-6a3195ef5126",
+    "player_version": "v3",
+    "tags": [
+      "recvw25tEzem0T",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25utMTw8p",
+    "feishu_record_id": "recvw25utMTw8p",
+    "original_name": "Server-Side Rendering Data Flow",
+    "standard_name": "Server-Side Rendering Data Flow",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "Server data becomes HTML, then the client hydrates the same initial state.",
+    "core_conclusion": "Node identity is retained while the handler and count state change.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25utMTw8p"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx",
+      "scenes": [
+        {
+          "id": "input-10",
+          "objects": "server has product count=2; browser DOM is empty",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.333333333333333,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-10",
+          "objects": "server has product count=2; browser DOM is empty",
+          "change": "DOM rows appear from HTML before JavaScript, then gain handler markers without node replacement; clicking increments displayed count",
+          "cause": "server renders HTML with count 2; browser paints it; hydrate attaches click handler",
+          "result": "node identity marker persists across hydration and count changes only on click",
+          "start_seconds": 4.333333333333333,
+          "end_seconds": 24.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-10",
+          "objects": "node identity marker persists across hydration and count changes only on click",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "server renders HTML with count 2; browser paints it; hydrate attaches click handler",
+          "result": "Node identity is retained while the handler and count state change.",
+          "start_seconds": 24.333333333333332,
+          "end_seconds": 29.166666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/hydration-state.ts",
+        "bindings": {
+          "objects": "useCurrentFrame -> hydrationState(frame) -> browserPainted controls DOM appearance, handlersAttached controls button marker, clicked/count updates the same keyed h1 row after cursor reaches button. Node IDs remain constant in rendered label and data.",
+          "values": "frame 39 no server HTML; 40 HTML ready; 99 no paint; 100 painted; 169 no handler; 170 handler; 234 no click/count2; 235 click/count3; node IDs unchanged"
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-10",
+          "uncertainty": "server renders HTML with count 2; browser paints it; hydrate attaches click handler",
+          "expected_observation": "node identity marker persists across hydration and count changes only on click"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 11.666666666666666,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              6.4,
+              11.666666666666666,
+              16.9
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/frames.jpg"
+            ],
+            "observation": "Server HTML becomes the same browser DOM nodes; a click handler attaches, and clicking Add changes Count 2 to Count 3."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 29.17,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25utMTw8p",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/00fedc88-b74a-4ea2-826f-220a4de9f0f0",
+        "issue_number": 116,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Server-Side Rendering Data Flow: HTML Then Hydration",
+    "media": {
+      "duration_seconds": 29.17,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.mp4",
+    "title": "Server-Side Rendering Data Flow: HTML Then Hydration",
+    "prompt": "A 29.2-second silent English computer science animation about Server-Side Rendering Data Flow: Node identity is retained while the handler and count state change.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 130 frames, animate the topic-specific state transition for 600 frames, and hold the conclusion for 145 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/server-side-rendering-data-flow/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.jpg",
+    "player": "https://github.com/user-attachments/assets/00fedc88-b74a-4ea2-826f-220a4de9f0f0",
+    "player_version": "v3",
+    "tags": [
+      "recvw25utMTw8p",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25utM6wAv",
+    "feishu_record_id": "recvw25utM6wAv",
+    "original_name": "Client Cache Invalidation After Mutation",
+    "standard_name": "Client Cache Invalidation After Mutation",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A successful mutation invalidates stale cache and triggers a refetch.",
+    "core_conclusion": "Cache staleness and propagation are distinguished by visible versioned values.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25utM6wAv"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx",
+      "scenes": [
+        {
+          "id": "input-11",
+          "objects": "server v1 count=2; cache v1 count=2; two consumers show 2",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.5,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-11",
+          "objects": "server v1 count=2; cache v1 count=2; two consumers show 2",
+          "change": "cache stays stale v1 briefly, refetch replaces it with v2, both consumers move from 2 to 3",
+          "cause": "mutation changes server to v2 count=3; invalidate cache key",
+          "result": "both views agree with server v2 after refetch, with stale interval visible",
+          "start_seconds": 4.5,
+          "end_seconds": 22.5,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-11",
+          "objects": "both views agree with server v2 after refetch, with stale interval visible",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "mutation changes server to v2 count=3; invalidate cache key",
+          "result": "Cache staleness and propagation are distinguished by visible versioned values.",
+          "start_seconds": 22.5,
+          "end_seconds": 27.5,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/cache-state.ts",
+        "bindings": {
+          "objects": "useCurrentFrame -> cacheState(frame) -> server, cache and consumer count/version props of visible Box components. A v2:3 payload moves from server to cache; separate 3 payloads move to badge/list. Values change at arrival boundaries, not by title or color alone.",
+          "values": "frame 59 all 2; frame 60 server 3/cache and views 2; frame 119 stale; frame 120 refetch starts; frame 164 cache still 2; frame 165 cache 3; frame 209 views still 2; frame 210 both views 3"
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-11",
+          "uncertainty": "mutation changes server to v2 count=3; invalidate cache key",
+          "expected_observation": "both views agree with server v2 after refetch, with stale interval visible"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 11.0,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              6.033333333333333,
+              11.0,
+              15.933333333333334
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/frames.jpg"
+            ],
+            "observation": "A mutation changes server value/version while cache and both consumers remain stale; invalidation fetches the new version and then both consumers update."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 27.5,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25utM6wAv",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/73a55c26-4822-48e0-bf36-4b2c5fd01b19",
+        "issue_number": 117,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Client Cache Invalidation After Mutation: Stale After Write",
+    "media": {
+      "duration_seconds": 27.5,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.mp4",
+    "title": "Client Cache Invalidation After Mutation: Stale After Write",
+    "prompt": "A 27.5-second silent English computer science animation about Client Cache Invalidation After Mutation: Cache staleness and propagation are distinguished by visible versioned values.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 135 frames, animate the topic-specific state transition for 540 frames, and hold the conclusion for 150 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.jpg",
+    "player": "https://github.com/user-attachments/assets/73a55c26-4822-48e0-bf36-4b2c5fd01b19",
+    "player_version": "v3",
+    "tags": [
+      "recvw25utM6wAv",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25utMLKJz",
+    "feishu_record_id": "recvw25utMLKJz",
+    "original_name": "Form State and Schema Validation",
+    "standard_name": "Form State and Schema Validation",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "Form edits are validated by schema before submit, with field errors kept local.",
+    "core_conclusion": "The form field, schema result, and submitted payload change in causal order.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25utMLKJz"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx",
+      "scenes": [
+        {
+          "id": "input-12",
+          "objects": "form age input is empty, touched=false, dirty=false",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.666666666666667,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-12",
+          "objects": "form age input is empty, touched=false, dirty=false",
+          "change": "raw text and touched/dirty state update, validation error appears then clears, parsed age becomes number 21, saved state resets dirty",
+          "cause": "user types 'abc', blurs, corrects to '21', submits",
+          "result": "submit payload contains age:21 as a number and no payload exists while field invalid",
+          "start_seconds": 4.666666666666667,
+          "end_seconds": 21.333333333333332,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-12",
+          "objects": "submit payload contains age:21 as a number and no payload exists while field invalid",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "user types 'abc', blurs, corrects to '21', submits",
+          "result": "The form field, schema result, and submitted payload change in causal order.",
+          "start_seconds": 21.333333333333332,
+          "end_seconds": 26.5,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The form composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-12",
+          "uncertainty": "user types 'abc', blurs, corrects to '21', submits",
+          "expected_observation": "submit payload contains age:21 as a number and no payload exists while field invalid"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.6,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.8,
+              10.6,
+              15.366666666666667
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/frames.jpg"
+            ],
+            "observation": "Raw age abc remains an invalid string; replacing it with 21 yields a parsed number that alone enters the submit payload."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 26.5,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25utMLKJz",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/8b918fa4-e2df-4934-b9db-f9bd042d3d8a",
+        "issue_number": 118,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Form State and Schema Validation: Parse Before Submit",
+    "media": {
+      "duration_seconds": 26.5,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/form-state-and-schema-validation.mp4",
+    "title": "Form State and Schema Validation: Parse Before Submit",
+    "prompt": "A 26.5-second silent English computer science animation about Form State and Schema Validation: The form field, schema result, and submitted payload change in causal order.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 140 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 155 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/form-state-and-schema-validation.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/form-state-and-schema-validation/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/form-state-and-schema-validation.jpg",
+    "player": "https://github.com/user-attachments/assets/8b918fa4-e2df-4934-b9db-f9bd042d3d8a",
+    "player_version": "v3",
+    "tags": [
+      "recvw25utMLKJz",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/form-state-and-schema-validation.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25utMvGwA",
+    "feishu_record_id": "recvw25utMvGwA",
+    "original_name": "Authentication Middleware in a Full-Stack App",
+    "standard_name": "Authentication Middleware in a Full-Stack App",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "Authentication middleware resolves a session before protected route logic.",
+    "core_conclusion": "Identity creation and owner comparison are separate visible operations.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25utMvGwA"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx",
+      "scenes": [
+        {
+          "id": "input-13",
+          "objects": "request has cookie and protected resource owner u7; identity is absent",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.333333333333333,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-13",
+          "objects": "request has cookie and protected resource owner u7; identity is absent",
+          "change": "valid u7 reveals resource; missing cookie returns 401 before identity; valid u8 returns 403 after owner comparison",
+          "cause": "middleware verifies session, attaches identity u7, route compares owner",
+          "result": "protected record appears only for matching identity; 401 and 403 originate from different checks",
+          "start_seconds": 4.333333333333333,
+          "end_seconds": 21.0,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-13",
+          "objects": "protected record appears only for matching identity; 401 and 403 originate from different checks",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "middleware verifies session, attaches identity u7, route compares owner",
+          "result": "Identity creation and owner comparison are separate visible operations.",
+          "start_seconds": 21.0,
+          "end_seconds": 25.666666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The auth composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-13",
+          "uncertainty": "middleware verifies session, attaches identity u7, route compares owner",
+          "expected_observation": "protected record appears only for matching identity; 401 and 403 originate from different checks"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.266666666666667,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.633333333333334,
+              10.266666666666667,
+              14.866666666666667
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/frames.jpg"
+            ],
+            "observation": "No cookie stops at 401; authenticated u8 fails owner u7 at 403; authenticated u7 reveals the resource with 200."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 25.67,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25utMvGwA",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/685770e9-052a-470d-8c86-444af8fd2c30",
+        "issue_number": 119,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Authentication Middleware in a Full-Stack App: 401 vs 403",
+    "media": {
+      "duration_seconds": 25.67,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app.mp4",
+    "title": "Authentication Middleware in a Full-Stack App: 401 vs 403",
+    "prompt": "A 25.7-second silent English computer science animation about Authentication Middleware in a Full-Stack App: Identity creation and owner comparison are separate visible operations.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 130 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 140 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app.jpg",
+    "player": "https://github.com/user-attachments/assets/685770e9-052a-470d-8c86-444af8fd2c30",
+    "player_version": "v3",
+    "tags": [
+      "recvw25utMvGwA",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25utMZWSs",
+    "feishu_record_id": "recvw25utMZWSs",
+    "original_name": "WebSocket Event Types Across Client and Server",
+    "standard_name": "WebSocket Event Types Across Client and Server",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "An event map constrains both WebSocket sender and receiver payloads.",
+    "core_conclusion": "The event tag selects the shape and runtime parsing gates callback execution.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25utMZWSs"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx",
+      "scenes": [
+        {
+          "id": "input-14",
+          "objects": "event map declares chat:new {roomId:string,text:string}; receiver waits",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.5,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-14",
+          "objects": "event map declares chat:new {roomId:string,text:string}; receiver waits",
+          "change": "valid packet is parsed into callback fields; malformed remote packet is rejected before callback",
+          "cause": "client emits chat:new with {roomId:'r1',text:'hi'}; remote malformed packet omits text",
+          "result": "callback log gains one valid message and none for malformed packet",
+          "start_seconds": 4.5,
+          "end_seconds": 21.166666666666668,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-14",
+          "objects": "callback log gains one valid message and none for malformed packet",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "client emits chat:new with {roomId:'r1',text:'hi'}; remote malformed packet omits text",
+          "result": "The event tag selects the shape and runtime parsing gates callback execution.",
+          "start_seconds": 21.166666666666668,
+          "end_seconds": 26.0,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/remaining-state.ts",
+        "bindings": {
+          "objects": "The socket composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+          "values": null
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-14",
+          "uncertainty": "client emits chat:new with {roomId:'r1',text:'hi'}; remote malformed packet omits text",
+          "expected_observation": "callback log gains one valid message and none for malformed packet"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 10.4,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              5.7,
+              10.4,
+              15.066666666666666
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/frames.jpg"
+            ],
+            "observation": "The chat:new packet carries roomId and text into the callback; a later packet missing text is rejected before the callback log changes."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 26.0,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25utMZWSs",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/2dd2a09c-0d9f-4637-80df-797792d02183",
+        "issue_number": 120,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "WebSocket Event Types Across Client and Server: Packet Gate",
+    "media": {
+      "duration_seconds": 26.0,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server.mp4",
+    "title": "WebSocket Event Types Across Client and Server: Packet Gate",
+    "prompt": "A 26.0-second silent English computer science animation about WebSocket Event Types Across Client and Server: The event tag selects the shape and runtime parsing gates callback execution.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 135 frames, animate the topic-specific state transition for 500 frames, and hold the conclusion for 145 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server.jpg",
+    "player": "https://github.com/user-attachments/assets/2dd2a09c-0d9f-4637-80df-797792d02183",
+    "player_version": "v3",
+    "tags": [
+      "recvw25utMZWSs",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
+  },
+  {
+    "id": "recvw25utM2MDe",
+    "feishu_record_id": "recvw25utM2MDe",
+    "original_name": "Monorepo Shared Types and Package Boundaries",
+    "standard_name": "Monorepo Shared Types and Package Boundaries",
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "artifact_version": "v3",
+    "status": "ready",
+    "learning_objective": "A shared package propagates a type change through a monorepo dependency graph.",
+    "core_conclusion": "The two concrete objects change, showing propagation across package boundaries.",
+    "terminology": {
+      "confirmed": true,
+      "sources": [
+        "Frozen Feishu course record recvw25utM2MDe"
+      ],
+      "scope": "Concept name and teaching objective preserved from the selected course record."
+    },
+    "production": {
+      "workflow_version": 2,
+      "tool": "Remotion",
+      "dependencies": [
+        "Remotion 4.0.410",
+        "React 19",
+        "TypeScript 5.8",
+        "FFmpeg"
+      ],
+      "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx",
+      "scenes": [
+        {
+          "id": "input-15",
+          "objects": "shared User has id/name; API and web each build green",
+          "change": "Reveal the concrete input and relevant data fields.",
+          "cause": "The initial situation must be established before applying the operation.",
+          "result": "Initial state is readable.",
+          "start_seconds": 0,
+          "end_seconds": 4.666666666666667,
+          "reading_seconds": 2,
+          "timing_reason": "Read the concrete input before motion."
+        },
+        {
+          "id": "mechanism-15",
+          "objects": "shared User has id/name; API and web each build green",
+          "change": "API and web each show specific missing-field errors; API mapper and web fixture gain avatarUrl; rebuild turns both green",
+          "cause": "shared User gains required avatarUrl:string",
+          "result": "final exported and consumed objects share same new field and build graph has zero errors",
+          "start_seconds": 4.666666666666667,
+          "end_seconds": 24.0,
+          "reading_seconds": 2,
+          "timing_reason": "The long central interval makes the specific state transition and its result visible."
+        },
+        {
+          "id": "result-15",
+          "objects": "final exported and consumed objects share same new field and build graph has zero errors",
+          "change": "Hold the verified outcome and consequence.",
+          "cause": "shared User gains required avatarUrl:string",
+          "result": "The two concrete objects change, showing propagation across package boundaries.",
+          "start_seconds": 24.0,
+          "end_seconds": 29.0,
+          "reading_seconds": 2,
+          "timing_reason": "Hold the result for comprehension."
+        }
+      ],
+      "state_model": {
+        "source": "assets/source-kits/typescript-full-stack-development/src/previews/build-state.ts",
+        "bindings": {
+          "objects": "useCurrentFrame -> buildState(frame) -> shared required field, API and web concrete object fields, independent compiler errors and per-package build states in visible SVG. Both dependent records acquire avatarUrl at separate frames.",
+          "values": "frame 54 old contract; 55 required field added; 100 two errors; 174 API missing; 175 API has field while web missing; 229 web error; 230 both have fields and build"
+        }
+      },
+      "template_scope": "Course palette, font and L2 drawing primitives; per-topic L3 scenes remain independent.",
+      "critical_processes": [
+        {
+          "id": "mechanism",
+          "scene_id": "mechanism-15",
+          "uncertainty": "shared User gains required avatarUrl:string",
+          "expected_observation": "final exported and consumed objects share same new field and build graph has zero errors"
+        }
+      ],
+      "risk_moments": [
+        {
+          "id": "central-state-change",
+          "time_seconds": 11.6,
+          "reason": "Concrete mechanism object changes or crosses a boundary."
+        }
+      ],
+      "previews": []
+    },
+    "review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/final-review.json",
+        "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/frames.jpg"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true
+      },
+      "technical": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/final-review.json"
+        ],
+        "checks": {
+          "compilation": true,
+          "media": true
+        }
+      },
+      "teaching": {
+        "status": "passed",
+        "version": "v3",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T04:06:36+00:00",
+        "evidence": [
+          "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/final-review.json",
+          "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/frames.jpg"
+        ],
+        "checks": {
+          "causal_motion": true,
+          "state_consistency": true,
+          "pacing": true,
+          "readability": true,
+          "version_match": true
+        },
+        "risk_checks": [
+          {
+            "risk_id": "central-state-change",
+            "times_seconds": [
+              6.366666666666666,
+              11.6,
+              16.8
+            ],
+            "evidence": [
+              "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/frames.jpg"
+            ],
+            "observation": "Adding avatarUrl to the shared User type breaks the API mapper and web fixture; each dependent object gains the field and both builds pass."
+          }
+        ]
+      }
+    },
+    "reuse": {
+      "status": "aligned",
+      "duration_seconds": 29.0,
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/final-review.json"
+      ],
+      "notes": "Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.",
+      "exact_reproduction_verified": false
+    },
+    "publication": {
+      "feishu": {
+        "status": "succeeded",
+        "version": "v3",
+        "record_id": "recvw25utM2MDe",
+        "verified_at": "2026-10-09T12:05:44+0800"
+      },
+      "github": {
+        "status": "succeeded",
+        "version": "v3",
+        "player": "https://github.com/user-attachments/assets/54cf5e6c-f28d-457f-9c74-b9a16d8790d6",
+        "issue_number": 121,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30",
+        "page_status": "included in this publication commit"
+      }
+    },
+    "final_title": "Monorepo Shared Types and Package Boundaries: Type Change",
+    "media": {
+      "duration_seconds": 29.0,
+      "width": 1920,
+      "height": 1080,
+      "format": "mp4",
+      "codec": "h264"
+    },
+    "video": "assets/videos/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.mp4",
+    "title": "Monorepo Shared Types and Package Boundaries: Type Change",
+    "prompt": "A 29.0-second silent English computer science animation about Monorepo Shared Types and Package Boundaries: The two concrete objects change, showing propagation across package boundaries.\n\nDark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the starting objects, accent #ee7733 marks the operation, result #009988 marks the verified outcome, and warn #cc3311 marks a rejected state; use Helvetica Neue with bold headings and monospace values, reveal the concrete input for 140 frames, animate the topic-specific state transition for 580 frames, and hold the conclusion for 150 frames.",
+    "references": [],
+    "cover": "assets/covers/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.jpg",
+    "cover_version": "v3",
+    "cover_review": {
+      "status": "passed",
+      "version": "v3",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T04:06:36+00:00",
+      "evidence": [
+        "assets/reviews/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries/cover-geometry.json"
+      ],
+      "visual": "Dedicated L2 topic figure, source concept name and official icon inspected in cover sheet.",
+      "geometry": "15/15 audited figures fit and fill the 640×620 frame."
+    },
+    "cover_image": "assets/covers/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.jpg",
+    "player": "https://github.com/user-attachments/assets/54cf5e6c-f28d-457f-9c74-b9a16d8790d6",
+    "player_version": "v3",
+    "tags": [
+      "recvw25utM2MDe",
+      "typescript-full-stack-development",
+      "P0"
+    ],
+    "textbook": "Source course record in Feishu",
+    "prompt_file": "assets/prompts/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.md",
+    "page": "catalog/computer-science/typescript-full-stack-development.md"
   }
 ]

@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25tEzTj61",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "The browser request with itemId and qty travels to the server; validated fields produce a response with orderId and total.",
+  "mechanism": "The two wire contracts have different visible field sets and directions.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "The contract composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+    "assertions": null,
+    "assertion_command": "node scripts/assert-remaining-previews.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25tEzbu9j",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "The SQL id parameter is bound; storage fields user_id and display_name move into domain fields id and name.",
+  "mechanism": "The row-to-domain field mapping is shown before the result User appears.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "The repository composition calls its corresponding frame state function and passes concrete state fields into rendered values, records, moving objects, or result branches. Inspected in RemainingPreviews.tsx.",
+    "assertions": null,
+    "assertion_command": "node scripts/assert-remaining-previews.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

@@ -31,6 +31,9 @@ class ProductionReviewTests(unittest.TestCase):
     def test_technical_pass_cannot_replace_teaching(self):
         e=planned();validate_final(e,e['media']);e['review']['teaching']['status']='pending'
         with self.assertRaises(ValueError):validate_final(e,e['media'])
+    def test_final_allows_preview_viewing_waiver(self):
+        e=planned();e['production']['previews']=[]
+        validate_final(e,e['media'])
     def test_timing_follows_short_demonstration(self):
         for duration in [25,30,35]:
             e=planned();e['production']['scenes'][-1]['end_seconds']=duration;e['media']['duration_seconds']=duration;validate_final(e,e['media'])

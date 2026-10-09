@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const ts=require('typescript');const path=require('node:path');
+const file=path.join(__dirname,'../src/previews/hydration-state.ts');const render=path.join(__dirname,'../src/previews/HydrationPreviewV2.tsx');
+const js=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const out={};new Function('exports',js)(out);const at=out.hydrationState;
+assert.equal(at(39).serverHtml,false);assert.equal(at(40).serverHtml,true);
+assert.equal(at(99).browserPainted,false);assert.equal(at(100).browserPainted,true);
+assert.equal(at(169).handlersAttached,false);assert.equal(at(170).handlersAttached,true);
+assert.equal(at(234).clicked,false);assert.equal(at(234).count,2);
+assert.equal(at(235).clicked,true);assert.equal(at(235).count,3);
+assert.deepEqual(at(100).nodeIds,at(235).nodeIds);
+const source=fs.readFileSync(render,'utf8');
+for(const field of ['s.serverHtml','s.browserPainted','s.handlersAttached','s.clicked','s.count','s.nodeIds'])assert.ok(source.includes(field),field);
+console.log('PASS hydration state: HTML, paint, handler attachment, click and persistent node identity');

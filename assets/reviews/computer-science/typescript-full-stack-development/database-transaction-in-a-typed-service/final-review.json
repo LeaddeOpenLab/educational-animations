@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25tEzPUf1",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "Private balances move from 100/40 toward 75/65 while published balances stay fixed; failure drops the write set, then a retry commits both published balances together.",
+  "mechanism": "Rollback and the later atomic commit are separately visible in the ledger.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "TransactionPreview calls transactionState(f); publicA/publicB drive rendered published bars and values, pendingA/pendingB drive private write set, and coinProgress drives five moving units. Commit changes both public values at frame 320.",
+    "assertions": "frame 0 public 100/40; frame 140 pending changed and public fixed; frame 200 workspace hidden and public fixed; frame 319 public 100/40; frame 320 public 75/65",
+    "assertion_command": "node scripts/assert-transaction-preview.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

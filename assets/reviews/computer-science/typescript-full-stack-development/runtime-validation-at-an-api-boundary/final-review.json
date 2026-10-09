@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25tEzfQaz",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "The unknown JSON with age \"oops\" fails numeric predicates; corrected age 21 enters the trusted service input.",
+  "mechanism": "Failure and success depend on visibly inspected field values, not a status badge.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "useCurrentFrame -> validationState(frame) -> raw concrete values, check results, reject tray and service parsed record in visible SVG. Service record cannot render until both numeric predicates pass.",
+    "assertions": "bad strings at frame 0; id rejects at 60, age rejects at 100, no service at 174; corrected numeric fields at 175; second checks at 205/235; service null at 264 and numeric record appears at 265",
+    "assertion_command": "node scripts/assert-validation-preview.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

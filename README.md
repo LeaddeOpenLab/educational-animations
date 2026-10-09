@@ -2,7 +2,7 @@
 
 Short educational animations with concept explanations and versioned reuse materials.
 
-**330 video-ready · 24 recorded review passes · 137 awaiting production · 42 courses · 17 disciplines**
+**345 video-ready · 39 recorded review passes · 137 awaiting production · 43 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -46,7 +46,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#computer-science"><img src="assets/subject-cards/computer-science.png" width="100%" alt="Computer Science"></a><br>
 <a href="#computer-science"><strong>Computer Science</strong></a><br>
-<sub>9 courses · 100 videos · 0 awaiting production</sub>
+<sub>10 courses · 115 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#artificial-intelligence"><img src="assets/subject-cards/artificial-intelligence.png" width="100%" alt="Artificial Intelligence"></a><br>
@@ -145,7 +145,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="computer-science"></a>
 ### Computer Science
 
-100 videos · 0 awaiting production
+115 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -207,6 +207,16 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a href="catalog/computer-science/cybersecurity-and-identity-authentication.md"><strong>Cybersecurity and Identity Authentication</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a id="typescript-full-stack-development"></a>
+<a href="catalog/computer-science/typescript-full-stack-development.md"><img src="assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg" width="100%" alt="TypeScript Full-Stack Development"></a><br>
+<a href="catalog/computer-science/typescript-full-stack-development.md"><strong>TypeScript Full-Stack Development</strong></a><br>
+<sub>15 videos · 0 awaiting production</sub>
+</td>
+<td></td>
+<td></td>
 </tr>
 </table>
 

@@ -1,0 +1,27 @@
+{
+  "name": "typescript-full-stack-development",
+  "label": "TypeScript Full-Stack Development",
+  "mode": "dark",
+  "colors": {
+    "bg0": "#0e0d10",
+    "bg1": "#18181f",
+    "bg2": "#22222d",
+    "grid": "rgba(148,163,184,0.13)",
+    "axis": "rgba(148,163,184,0.45)",
+    "textStrong": "#f8fafc",
+    "textMuted": "#a8b4c4",
+    "textDim": "#94a3b8",
+    "primary": "#33bbee",
+    "accent": "#ee7733",
+    "result": "#009988",
+    "warn": "#cc3311",
+    "alt": "#aa44aa"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 60,
+    "gridOpacity": 0.4,
+    "glowOpacity": 0.14,
+    "glowBlur": 44
+  }
+}

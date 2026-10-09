@@ -54,7 +54,9 @@ def validate_preview(entry):
         if not approved(preview,entry['artifact_version']):raise ValueError('Inspect the critical motion before expanding the batch; a render alone is not approval')
 
 def validate_final(entry,media):
-    validate_preview(entry);p=entry['production'];review=entry.get('review',{});version=entry['artifact_version']
+    # Dynamic mechanism preview viewing is optional under the 2026-10-09 user policy.
+    # The action plan, state assertions and final-video reviews remain required.
+    validate_plan(entry);p=entry['production'];review=entry.get('review',{});version=entry['artifact_version']
     if abs(p['scenes'][-1]['end_seconds']-media['duration_seconds'])>.1:raise ValueError('Storyboard timing must match final video')
     for name,checks in [('technical',TECHNICAL),('teaching',TEACHING)]:
         if not approved(review.get(name,{}),version,checks):raise ValueError(f'Separate {name} review evidence required')

@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25utM2MDe",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "Adding avatarUrl to the shared User type breaks the API mapper and web fixture; each dependent object gains the field and both builds pass.",
+  "mechanism": "The two concrete objects change, showing propagation across package boundaries.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "useCurrentFrame -> buildState(frame) -> shared required field, API and web concrete object fields, independent compiler errors and per-package build states in visible SVG. Both dependent records acquire avatarUrl at separate frames.",
+    "assertions": "frame 54 old contract; 55 required field added; 100 two errors; 174 API missing; 175 API has field while web missing; 229 web error; 230 both have fields and build",
+    "assertion_command": "node scripts/assert-build-preview.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

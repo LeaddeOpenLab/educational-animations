@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const ts=require('typescript');const path=require('node:path');
+const file=path.join(__dirname,'../src/previews/build-state.ts');const render=path.join(__dirname,'../src/previews/BuildPreviewV2.tsx');
+const js=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const out={};new Function('exports',js)(out);const at=out.buildState;
+assert.equal(at(54).sharedRequiresAvatar,false);assert.equal(at(55).sharedRequiresAvatar,true);
+assert.equal(at(99).apiError,false);assert.equal(at(100).apiError,true);assert.equal(at(100).webError,true);
+assert.equal(at(174).apiHasAvatar,false);assert.equal(at(175).apiHasAvatar,true);assert.equal(at(175).webHasAvatar,false);
+assert.equal(at(229).webError,true);assert.equal(at(230).webHasAvatar,true);
+assert.equal(at(230).apiBuilds,true);assert.equal(at(230).webBuilds,true);
+const source=fs.readFileSync(render,'utf8');for(const field of ['s.sharedRequiresAvatar','s.apiError','s.webError','s.apiHasAvatar','s.webHasAvatar','s.apiBuilds','s.webBuilds'])assert.ok(source.includes(field),field);
+console.log('PASS shared build state: contract edit, two failures, independent fixes and rebuild');

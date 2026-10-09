@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const ts=require('typescript');const path=require('node:path');
+const file=path.join(__dirname,'../src/previews/validation-state.ts');const render=path.join(__dirname,'../src/previews/ValidationPreviewV2.tsx');
+const js=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const out={};new Function('exports',js)(out);const at=out.validationState;
+assert.deepEqual(at(0).raw,{id:'7',age:'oops'});assert.equal(at(59).checkedId,false);
+assert.equal(at(60).checkedId,true);assert.equal(at(60).validId,false);
+assert.equal(at(100).checkedAge,true);assert.equal(at(100).validAge,false);
+assert.equal(at(140).rejected,true);assert.equal(at(174).service,null);
+assert.deepEqual(at(175).raw,{id:7,age:21});assert.equal(at(204).checkedId,false);
+assert.equal(at(205).checkedId,true);assert.equal(at(235).checkedAge,true);
+assert.equal(at(264).service,null);assert.deepEqual(at(265).service,{id:7,age:21});
+const source=fs.readFileSync(render,'utf8');for(const field of ['s.raw.id','s.raw.age','s.checkedId','s.checkedAge','s.validId','s.validAge','s.rejected','s.service'])assert.ok(source.includes(field),field);
+console.log('PASS validation state: bad values rejected, corrected values parsed, service gated');

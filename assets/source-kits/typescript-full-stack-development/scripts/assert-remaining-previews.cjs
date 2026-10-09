@@ -1,0 +1,13 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const ts=require('typescript');const path=require('node:path');
+const source=fs.readFileSync(path.join(__dirname,'../src/previews/remaining-state.ts'),'utf8');
+const js=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;const out={};new Function('exports',js)(out);
+assert.deepEqual(out.inferenceState(99).returned,null);assert.deepEqual(out.inferenceState(100).returned,{name:'Ada'});assert.equal(out.inferenceState(205).idReadRejected,true);
+assert.equal(out.genericState(104).noIdRejected,false);assert.equal(out.genericState(105).noIdRejected,true);assert.equal(out.genericState(185).orderReturned.total,24);
+assert.equal(out.contractState(129).serverValidated,false);assert.equal(out.contractState(130).serverValidated,true);assert.equal(out.contractState(225).browserOrder.total,18);
+assert.equal(out.errorState(54).error,null);assert.equal(out.errorState(55).error,'NotFound("u7")');assert.deepEqual(out.errorState(185).frames,[]);assert.equal(out.errorState(210).httpStatus,404);
+assert.equal(out.repositoryState(54).parameter,null);assert.equal(out.repositoryState(110).row.user_id,'u7');assert.deepEqual(out.repositoryState(185).user,{id:'u7',name:'Ada'});
+assert.equal(out.injectionState(109).provider,'real');assert.equal(out.injectionState(110).provider,'fake');assert.deepEqual(out.injectionState(190).fakeCalls,[18]);assert.equal(out.injectionState(210).receipt,'fake-1');
+assert.equal(out.formState(95).error,'age must be a number');assert.equal(out.formState(175).parsed,21);assert.deepEqual(out.formState(205).payload,{age:21});assert.equal(out.formState(235).dirty,false);
+assert.equal(out.authState(50).httpStatus,401);assert.equal(out.authState(135).httpStatus,403);assert.equal(out.authState(215).resourceVisible,true);
+assert.equal(out.socketState(104).callbackLog.length,0);assert.equal(out.socketState(105).callbackLog.length,1);assert.equal(out.socketState(200).invalidRejected,true);assert.equal(out.socketState(200).callbackLog.length,1);
+console.log('PASS 9 mechanism state functions and action boundaries');

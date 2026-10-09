@@ -1,0 +1,16 @@
+{
+  "record_id": "recvw25tEzxY66",
+  "slug": "union-type-narrowing-with-discriminants",
+  "bbox": [
+    198,
+    222,
+    787,
+    656
+  ],
+  "dx": -7.5,
+  "dy": -11.0,
+  "width": 589,
+  "height": 434,
+  "status": "passed",
+  "source": "assets/reviews/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants/cover-audit.png"
+}

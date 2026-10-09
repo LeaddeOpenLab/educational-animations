@@ -1,0 +1,10 @@
+const assert=require('node:assert/strict');const fs=require('node:fs');const ts=require('typescript');const path=require('node:path');
+const file=path.join(__dirname,'../src/previews/transaction-state.ts');const render=path.join(__dirname,'../src/previews/TransactionPreview.tsx');
+const js=ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;const out={};new Function('exports',js)(out);const at=out.transactionState;
+assert.deepEqual([at(0).publicA,at(0).publicB],[100,40]);
+assert.equal(at(140).publicA,100);assert.equal(at(140).publicB,40);assert.ok(at(140).pendingA<100);assert.ok(at(140).pendingB>40);
+assert.equal(at(200).showWorkspace,false);assert.deepEqual([at(200).publicA,at(200).publicB],[100,40]);
+assert.ok(at(300).pendingA<100);assert.ok(at(300).pendingB>40);
+assert.deepEqual([at(319).publicA,at(319).publicB],[100,40]);assert.deepEqual([at(320).publicA,at(320).publicB],[75,65]);
+const source=fs.readFileSync(render,'utf8');for(const field of ['transactionState(f)','coinProgress','pendingA','pendingB','publicA','publicB','showWorkspace'])assert.ok(source.includes(field),field);
+console.log('PASS transaction: private writes, rollback, atomic public commit boundary');

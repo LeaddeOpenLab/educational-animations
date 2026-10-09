@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25utM6wAv",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "A mutation changes server value/version while cache and both consumers remain stale; invalidation fetches the new version and then both consumers update.",
+  "mechanism": "Cache staleness and propagation are distinguished by visible versioned values.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "useCurrentFrame -> cacheState(frame) -> server, cache and consumer count/version props of visible Box components. A v2:3 payload moves from server to cache; separate 3 payloads move to badge/list. Values change at arrival boundaries, not by title or color alone.",
+    "assertions": "frame 59 all 2; frame 60 server 3/cache and views 2; frame 119 stale; frame 120 refetch starts; frame 164 cache still 2; frame 165 cache 3; frame 209 views still 2; frame 210 both views 3",
+    "assertion_command": "node scripts/assert-cache-preview.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

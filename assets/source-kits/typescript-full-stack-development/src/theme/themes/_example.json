@@ -1,0 +1,28 @@
+{
+  "name": "example",
+  "label": "Example course theme (replace via --emit-theme)",
+  "mode": "dark",
+  "note": "Palette source: viridis (matplotlib), the machine-learning entry of the built-in palette library. Its default role sample (primary #3b528b) measures only 2.3:1 against this backdrop, which is too dim to read as a main curve, so the four content roles were resampled upward along the SAME viridis anchor list (#440154 #443983 #31688e #21918c #35b779 #90d743 #fde725). Background layers, grid, axis, text ramp, font and backdrop tokens are kept exactly as the library lists them.",
+  "colors": {
+    "bg0": "#070e13",
+    "bg1": "#0c1a24",
+    "bg2": "#122533",
+    "grid": "rgba(148,163,184,0.13)",
+    "axis": "rgba(148,163,184,0.45)",
+    "primary": "#21918c",
+    "accent": "#fde725",
+    "result": "#35b779",
+    "warn": "#d55e00",
+    "alt": "#90d743",
+    "textStrong": "#f8fafc",
+    "textMuted": "#a8b4c4",
+    "textDim": "#94a3b8"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 58,
+    "gridOpacity": 0.4,
+    "glowOpacity": 0.12,
+    "glowBlur": 46
+  }
+}

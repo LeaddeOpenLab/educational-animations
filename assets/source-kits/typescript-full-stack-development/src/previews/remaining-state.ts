@@ -1,0 +1,9 @@
+export const inferenceState = (f:number) => ({source:{id:7,name:'Ada'},returned:f>=100?{name:'Ada'}:null,caller:f>=165?{name:'Ada'}:null,idReadRejected:f>=205});
+export const genericState = (f:number) => ({user:{id:'u1',email:'a@b'},order:{id:'o1',total:24},noIdRejected:f>=105,userReturned:f>=155?{id:'u1',email:'a@b'}:null,orderReturned:f>=185?{id:'o1',total:24}:null});
+export const contractState = (f:number) => ({request:{itemId:'i7',qty:2},requestInFlight:f>=55&&f<115,serverValidated:f>=130,response:f>=175?{orderId:'o9',total:18}:null,responseInFlight:f>=180&&f<225,browserOrder:f>=225?{orderId:'o9',total:18}:null});
+export const errorState = (f:number) => ({frames:f<55?['route','service','repository']:f<120?['route','service','repository']:f<155?['route','service']:f<185?['route']:[],error:f>=55?'NotFound("u7")':null,httpStatus:f>=210?404:null});
+export const repositoryState = (f:number) => ({parameter:f>=55?'u7':null,row:f>=110?{user_id:'u7',display_name:'Ada'}:null,user:f>=185?{id:'u7',name:'Ada'}:null,nullBranch:f>=230});
+export const injectionState = (f:number) => ({provider:f>=110?'fake':'real',amount:f>=155?18:null,realCalls:f>=70?1:0,fakeCalls:f>=190?[18]:[],receipt:f>=210?'fake-1':f>=90&&f<110?'real-1':null});
+export const formState = (f:number) => ({raw:f<50?'':f<145?'abc':'21',touched:f>=95,dirty:f>=50&&f<235,error:f>=95&&f<145?'age must be a number':null,parsed:f>=175?21:null,payload:f>=205?{age:21}:null,saved:f>=235});
+export const authState = (f:number) => ({attempt:f<80?'missing':f<165?'u8':'u7',identity:f<80?null:f<115?null:f<165?'u8':f<195?null:'u7',httpStatus:f>=50&&f<80?401:f>=135&&f<165?403:null,resourceVisible:f>=215});
+export const socketState = (f:number) => ({packet:f<145?{roomId:'r1',text:'hi'}:{roomId:'r1'},inFlight:f>=45&&f<95||f>=150&&f<195,validReceived:f>=105,invalidRejected:f>=200,callbackLog:f>=105?[{roomId:'r1',text:'hi'}]:[]});

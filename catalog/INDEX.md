@@ -120,6 +120,23 @@
 - [recvw25tEzy3Ho · SAML Service Provider Login Flow](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezy3ho) — video
 - [recvw25tEzxAcY · Mutual TLS Certificate Authentication](computer-science/cybersecurity-and-identity-authentication.md#recvw25tezxacy) — video
 - [recvw25tEz3sOf · Least-Privilege Access Review](computer-science/cybersecurity-and-identity-authentication.md#recvw25tez3sof) — video
+## TypeScript Full-Stack Development
+
+- [recvw25tEzzqwR · TypeScript Type Inference Across Functions](computer-science/typescript-full-stack-development.md#recvw25tezzqwr) — video
+- [recvw25tEzxY66 · Union Type Narrowing with Discriminants](computer-science/typescript-full-stack-development.md#recvw25tezxy66) — video
+- [recvw25tEzU93I · Generic Constraints and Reusable APIs](computer-science/typescript-full-stack-development.md#recvw25tezu93i) — video
+- [recvw25tEzfQaz · Runtime Validation at an API Boundary](computer-science/typescript-full-stack-development.md#recvw25tezfqaz) — video
+- [recvw25tEzTj61 · Typed Request and Response Contracts](computer-science/typescript-full-stack-development.md#recvw25teztj61) — video
+- [recvw25tEzXQVJ · Async Error Propagation in a Server Route](computer-science/typescript-full-stack-development.md#recvw25tezxqvj) — video
+- [recvw25tEzPUf1 · Database Transaction in a Typed Service](computer-science/typescript-full-stack-development.md#recvw25tezpuf1) — video
+- [recvw25tEzbu9j · Repository Pattern with Typed Queries](computer-science/typescript-full-stack-development.md#recvw25tezbu9j) — video
+- [recvw25tEzem0T · Dependency Injection in a Backend](computer-science/typescript-full-stack-development.md#recvw25tezem0t) — video
+- [recvw25utMTw8p · Server-Side Rendering Data Flow](computer-science/typescript-full-stack-development.md#recvw25utmtw8p) — video
+- [recvw25utM6wAv · Client Cache Invalidation After Mutation](computer-science/typescript-full-stack-development.md#recvw25utm6wav) — video
+- [recvw25utMLKJz · Form State and Schema Validation](computer-science/typescript-full-stack-development.md#recvw25utmlkjz) — video
+- [recvw25utMvGwA · Authentication Middleware in a Full-Stack App](computer-science/typescript-full-stack-development.md#recvw25utmvgwa) — video
+- [recvw25utMZWSs · WebSocket Event Types Across Client and Server](computer-science/typescript-full-stack-development.md#recvw25utmzwss) — video
+- [recvw25utM2MDe · Monorepo Shared Types and Package Boundaries](computer-science/typescript-full-stack-development.md#recvw25utm2mde) — video
 ## Introduction to Machine Learning
 
 - [C03-A001 · Decision boundary](artificial-intelligence/6-036.md#c03-a001) — video

@@ -1,0 +1,161 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "typescript-full-stack-development",
+    "label": "TypeScript Full-Stack Development",
+    "subject": "Computer Science",
+    "outputDir": "Computer Science/TypeScript Full-Stack Development"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "typescript-full-stack-development",
+    "file": "src/theme/themes/typescript-full-stack-development.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#0e0d10",
+      "bg1": "#18181f",
+      "bg2": "#22222d",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#33bbee",
+      "accent": "#ee7733",
+      "result": "#009988",
+      "warn": "#cc3311",
+      "alt": "#aa44aa"
+    },
+    "bg1": "#18181f",
+    "contrast": {}
+  },
+  "primitives": [
+    {
+      "name": "TypedNode",
+      "file": "src/components/FullStack.tsx",
+      "summary": "typed stage box",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "TypedWire",
+      "file": "src/components/FullStack.tsx",
+      "summary": "animated value transfer between stages",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "Payload",
+      "file": "src/components/FullStack.tsx",
+      "summary": "visible payload with fields",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "BoundaryGate",
+      "file": "src/components/FullStack.tsx",
+      "summary": "runtime pass/fail boundary",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "CodePanel",
+      "file": "src/components/FullStack.tsx",
+      "summary": "code or inferred type with highlighted line",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "FieldRecord",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "fields with independently changing value/check state",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "TypeSet",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "candidate variants removed by predicate",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "WriteSetLedger",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "pending writes separate from public balances; commit copies or rollback drops",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "VersionedState",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "replica value and version update after invalidation or propagation",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "CallStack",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "frames appear and disappear during async unwinding",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "HydrationDOM",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "server rendered nodes gain handlers without replacement",
+      "signature": "see exported React props"
+    },
+    {
+      "name": "BuildTargets",
+      "file": "src/components/Mechanisms.tsx",
+      "summary": "individual dependent packages show errors and repairs after contract change",
+      "signature": "see exported React props"
+    }
+  ],
+  "shared": {
+    "files": [
+      "src/components/Plot.tsx",
+      "src/components/ui.tsx"
+    ],
+    "note": "L1c shared components from template"
+  },
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": []
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^ts\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "type-safe flow uses primary, validation uses result or warn"
+    ]
+  },
+  "mechanismRevision": "2026-10-09-v2"
+}

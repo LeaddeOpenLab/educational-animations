@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25tEzxY66",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "Err is excluded after the kind comparison; only Ok moves into the true branch and exposes value 42.",
+  "mechanism": "The two candidate structures become one before value is read.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "useCurrentFrame -> narrowState(frame) -> state.branch, state.value, state.comparedErr -> visible SVG branch/value/exclusion. Candidate movement uses the same comparison boundaries. The content change is candidate set reduction and value access, beyond entrance motion.",
+    "assertions": "frame 44 has Ok|Err and no check; frame 85 compares Ok; frame 125 compares Err; frame 159 has no branch value; frame 160 has Ok only with value 42",
+    "assertion_command": "node scripts/assert-narrow-preview.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}

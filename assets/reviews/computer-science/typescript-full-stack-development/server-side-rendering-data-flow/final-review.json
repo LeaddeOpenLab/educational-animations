@@ -1,0 +1,17 @@
+{
+  "record_id": "recvw25utMTw8p",
+  "video_version": "v3",
+  "video_file": "assets/videos/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.mp4",
+  "reviewed_at": "2026-10-09T11:46:46.119273+08:00",
+  "reviewer": "Codex main",
+  "observed": "Server HTML becomes the same browser DOM nodes; a click handler attaches, and clicking Add changes Count 2 to Count 3.",
+  "mechanism": "Node identity is retained while the handler and count state change.",
+  "method": "Six sampled final-MP4 frames and mechanism state assertions; dynamic preview viewing waived by user on 2026-10-09. The v3 media revision only removed an unintended AAC stream; picture frames were copied without re-encoding.",
+  "technical": {
+    "source_check": "useCurrentFrame -> hydrationState(frame) -> browserPainted controls DOM appearance, handlersAttached controls button marker, clicked/count updates the same keyed h1 row after cursor reaches button. Node IDs remain constant in rendered label and data.",
+    "assertions": "frame 39 no server HTML; 40 HTML ready; 99 no paint; 100 painted; 169 no handler; 170 handler; 234 no click/count2; 235 click/count3; node IDs unchanged",
+    "assertion_command": "node scripts/assert-hydration-preview.cjs",
+    "assertion_exit_code": 0,
+    "typecheck_exit_code": 0
+  }
+}
