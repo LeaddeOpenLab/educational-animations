@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Course notes (no required textbook). Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cs50x/cs50x-videos.zip) · 16 videos · bundle-1 · updated 2026-09-30T07:44:42Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-computer-science-cs50x/cs50x-videos.zip) · 16 videos · bundle-1 · updated 2026-09-30T07:44:42Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/a9ee769b-e4b9-4ba0-802c-a1f0b1882b74
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/pointer.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/pointer.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -58,7 +58,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f7906740-9de8-4263-aea9-81cfe31d0612
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/memory-address.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/memory-address.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -93,7 +93,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/df582387-45a6-4bd3-959f-500797126000
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/memory-layout.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/memory-layout.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -128,7 +128,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f696f393-ed21-435b-837c-24bb7da97bc5
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/time-complexity.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/time-complexity.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -163,7 +163,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/c37442f8-d75d-4948-a4b1-856441ea8e9f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/algorithm-growth-rate.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/algorithm-growth-rate.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -198,7 +198,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/bfef7c03-b4fc-4733-aa2f-752c0dcba8de
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/sorting-process.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/sorting-process.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -233,7 +233,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/576a3795-a849-4771-b609-bc4c059d38c6
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/binary-search.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/binary-search.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -268,7 +268,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/37bf24c4-fb37-4526-8aed-abde83e33495
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/linked-list.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/linked-list.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -303,7 +303,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/a7b0fc5e-1590-44dc-863d-962232ff8715
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/tree-structure.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/tree-structure.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -338,7 +338,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f9807c27-b07c-47e5-8026-befe53bd7afe
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/hash-table.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/hash-table.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -373,7 +373,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f40fd811-a599-4397-98ee-88e012f92d57
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/relational-model.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/relational-model.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -408,7 +408,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/afc30eac-0d3f-4d3f-ab69-fa49e929f569
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/sql-join.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/sql-join.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -443,7 +443,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/33445352-333e-4328-9e77-125b8963f78c
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/stack-vs-heap.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/stack-vs-heap.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -478,7 +478,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/29a801d8-8938-4728-8bf9-20d53933db34
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/pointer-dereferencing.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/pointer-dereferencing.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -513,7 +513,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/46afb896-4dea-4dae-8686-c2759dc6619f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/pointer-arithmetic.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/pointer-arithmetic.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -548,7 +548,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/5c275b49-ebab-4f6c-b52f-fe9c62bf07a4
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/recursive-call-stack.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/introduction-to-computer-science/recursive-call-stack.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 

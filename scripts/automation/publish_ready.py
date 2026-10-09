@@ -50,7 +50,7 @@ def feishu_step(entry, save):
 def ensure_native_player(entry, save):
     if entry.get('player') and entry.get('player_version') == entry['artifact_version']:
         return
-    repository='LeaddeOpenLab/leadde-knowledge-in-motion'
+    repository='LeaddeOpenLab/educational-animations'
     issue=os.environ.get('LEADDE_ASSET_ISSUE','5')
     marker=f"{entry['id']} artifact_version={entry['artifact_version']}"
     def comments():
@@ -86,7 +86,7 @@ def github_step(entry):
     command('git','push','origin','HEAD:main')
     remote=command('git','ls-remote','origin','refs/heads/main').split()[0]
     if remote!=command('git','rev-parse','HEAD'): raise RuntimeError('Remote commit verification failed')
-    return {'url':f"https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/{entry['page']}#{entry['id'].lower()}", 'commit':remote}
+    return {'url':f"https://github.com/LeaddeOpenLab/educational-animations/blob/main/{entry['page']}#{entry['id'].lower()}", 'commit':remote}
 
 def package_step(entry):
     subprocess.run([sys.executable,'scripts/publish_course_video_releases.py','--course',entry['course_code']],cwd=REPO,check=True)

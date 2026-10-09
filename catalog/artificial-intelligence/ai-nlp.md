@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Speech and Language Processing (Jurafsky and Martin). Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-nlp/ai-nlp-videos.zip) · 8 videos · bundle-1 · updated 2026-09-30T07:46:05Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-artificial-intelligence-ai-nlp/ai-nlp-videos.zip) · 8 videos · bundle-1 · updated 2026-09-30T07:46:05Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/b4c411de-7896-47dc-ab78-c35f2cb7f4a7
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/text-tokenization.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/text-tokenization.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -58,7 +58,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/5393e249-ae43-4e23-88d1-825f95a88710
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/n-gram-language-model.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/n-gram-language-model.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -93,7 +93,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/663591ad-22ed-48f1-8cd9-6c74882c6283
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/word-embeddings.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/word-embeddings.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -128,7 +128,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/c2e302c0-2f40-40d6-8d1d-c9230484e844
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/positional-encoding.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/positional-encoding.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -163,7 +163,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/e5ea9818-0d29-4b51-b192-6dbe57207607
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/self-attention.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/self-attention.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -198,7 +198,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/0c3a9fad-2fb8-464d-b6f7-616a318c4f8f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/encoder-decoder-architecture.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/encoder-decoder-architecture.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -233,7 +233,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/d37c1a9f-2031-4b91-b65b-707040873fe3
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/beam-search.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/beam-search.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -268,7 +268,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/e2c1f173-e9a8-438e-9753-09a915b66fcd
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/retrieval-augmented-generation.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/natural-language-processing/retrieval-augmented-generation.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 

@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Specific official documentation and research listed per concept. Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-digital-electronics-risc-v-processor-architecture/risc-v-processor-architecture-videos.zip) · 15 videos · bundle-2 · updated 2026-10-09T07:55:21Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-digital-electronics-risc-v-processor-architecture/risc-v-processor-architecture-videos.zip) · 15 videos · bundle-2 · updated 2026-10-09T07:55:21Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/95491bcc-20b1-4022-a061-26eb1471325e
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -40,7 +40,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — RV32I R-type field interpretation. This lesson moves bit slices and decoded indices; register storage timing belongs to the next lesson.
 - [github.com](https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i) — Opcode fields for numeric examples
@@ -59,7 +59,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/c0d285f5-f83e-4f65-b3c7-16d38b99d873
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -76,7 +76,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — Architectural x0 semantics are specified; port count and synchronous write timing are explicitly a teaching implementation. This lesson changes storage and duplicates read values rather than decoding instruction bits.
 - [github.com](https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i) — Opcode fields for numeric examples
@@ -95,7 +95,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/407b3e47-1322-4907-91f5-48afbc5e5549
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -112,7 +112,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — RV32I immediate generation from I/S/B formats, excluding shift-immediate special encodings. This lesson physically rebuilds bit strings; it does not show PC selection or memory address execution.
 - [github.com](https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i) — Opcode fields for numeric examples
@@ -131,7 +131,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/42ea819d-c38c-4059-9624-dd3aaa76a016
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -148,7 +148,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — RV32I R-type ADD/SUB/XOR control examples. Internal ALU-control binary codes are implementation-specific and are not invented; use named ADD/SUB/XOR selections.
 - [github.com](https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i) — Opcode fields for numeric examples
@@ -167,7 +167,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/d705f18d-58b0-455b-84bd-b5e75723c89e
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -184,7 +184,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — LW architectural semantics in an explicitly illustrative single-cycle implementation; stage names are conceptual propagation phases within one cycle, not a pipeline.
 - [github.com](https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i) — Opcode fields for numeric examples
@@ -203,7 +203,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/5c93f712-249d-4804-a496-d94cce704a66
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -220,7 +220,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — Conditional Branches specifies comparison and target relative to the branch instruction; RV32I sequential instructions are four bytes.
 
@@ -238,7 +238,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/ffe9a4bc-2d0f-48d5-9235-eadf144e5290
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -255,7 +255,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv07-load-and-store-address-calculation.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv07-load-and-store-address-calculation.tsx)
 
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — Load and Store Instructions defines EA=rs1+sign-extended offset; loads use rd, stores use rs2.
 
@@ -273,7 +273,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/a07af809-750c-49ff-9d5e-f266482684aa
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -290,7 +290,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx)
 
 - [raw.githubusercontent.com](https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala) — Primary educational implementation defines operand/control/destination pipeline state and clocked EX→MEM→WB transfers.
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — RV32I ADD architectural result is the sum of the two source registers written to rd.
@@ -309,7 +309,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/e8c7b21a-975e-44b2-bb99-e263b0a5020e
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -326,7 +326,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx)
 
 - [raw.githubusercontent.com](https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala) — Sodor implements bypass selection by matching destination/source tags and selecting carried values; exact route placement varies by implementation.
 - [docs.riscv.org](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — ADD, SUB and XOR operate on source register values and write their rd.
@@ -345,7 +345,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/ed2bdf34-e9b5-4ae6-809c-e06193f6061c
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -362,7 +362,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx)
 
 - [raw.githubusercontent.com](https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/cpath.scala) — Sodor fully bypassed control detects load-use dependencies, stalls front end and inserts an EX bubble.
 - [raw.githubusercontent.com](https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala) — Sodor clears EX valid/register-write/memory-write enables on hazard stall while older instructions advance.
@@ -381,7 +381,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/13a6d9c5-ad34-489c-8e25-b6ebc6814ce9
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -398,7 +398,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx)
 
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — BEQ comparison and PC-relative target are ISA semantics. The five-stage pipeline, not-taken predictor, EX resolution, and exact recovery cycles are an illustrative microarchitecture, not ISA requirements.
 
@@ -416,7 +416,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/0def91e6-8b4c-4a85-bce4-dad65d3cd219
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -433,7 +433,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx)
 
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20240411/priv/machine.html) — Machine trap CSRs, ECALL and MRET follow Privileged ISA 1.13. Example has U support, no delegation, mtvec Direct=0x800, fixed 32-bit ECALL, and permitted memory. Older/younger instruction display illustrates precise state.
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — Machine trap CSRs, ECALL and MRET follow Privileged ISA 1.13. Example has U support, no delegation, mtvec Direct=0x800, fixed 32-bit ECALL, and permitted memory. Older/younger instruction display illustrates precise state.
@@ -452,7 +452,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/ebbe07cf-1360-4508-9cd7-d1618a194af0
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.mp4) · 28.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.mp4) · 28.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -469,7 +469,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx)
 
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20240411/priv/machine.html) — Privileged ISA1.13 mstatus stack. Example hart supports M/S/U; no delegation or hypervisor; initial S-mode, MIE=1 and MPP=U. ECALL from S has cause9. Access policies are configured to allow the shown handler and return.
 
@@ -487,7 +487,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/9a074cd4-c090-46da-9690-e38c33f16e61
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.mp4) · 33.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.mp4) · 33.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -504,7 +504,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx)
 
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20240411/priv/supervisor.html) — RV64 Sv39, canonical lower-half address, cold translation and4KiB page; S-mode read with valid accessible tables, U=0,R=1,A=1 leaf. Superpages, faults, TLB behavior and A/D updates are outside this numerical example.
 
@@ -522,7 +522,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 https://github.com/user-attachments/assets/fdb5708f-1197-4f80-b87e-bbd4f4dab43d
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -539,7 +539,7 @@ Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx)
 
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html) — Illustrative platform device map, not a RISC-V standard address: RAM0x80000000..0x80000FFF; GPIO output0x10000000; GPIO status0x10000004. Naturally aligned32-bit accesses; direct permitted physical addresses. Device writes and status reads are ordered here; show FENCE O,I before readback.
 - [docs.riscv.org — supporting reference](https://docs.riscv.org/reference/isa/v20240411/priv/machine.html) — Illustrative platform device map, not a RISC-V standard address: RAM0x80000000..0x80000FFF; GPIO output0x10000000; GPIO status0x10000004. Naturally aligned32-bit accesses; direct permitted physical addresses. Device writes and status reads are ordered here; show FENCE O,I before readback.

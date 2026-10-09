@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Deep Learning (Goodfellow et al.). Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-artificial-intelligence-ai-dl/ai-dl-videos.zip) · 25 videos · bundle-2 · updated 2026-09-30T08:05:42Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-artificial-intelligence-ai-dl/ai-dl-videos.zip) · 25 videos · bundle-2 · updated 2026-09-30T08:05:42Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/6d6bfe7d-d00a-4d9b-8174-f69a6f3d6ec3
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/artificial-neuron.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/artificial-neuron.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -58,7 +58,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/18734cd9-8b46-4748-82be-59beab7d38f8
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/activation-functions.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/activation-functions.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -93,7 +93,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/6fcb644b-e297-4e66-b32a-d1eb6ae06135
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/parameter-initialization.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/parameter-initialization.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -128,7 +128,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/2b8d5a6b-fc27-4f2f-8216-19433d8d8d70
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/batch-normalization.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/batch-normalization.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -163,7 +163,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/759fbeb2-ca17-4148-be56-48092e449e32
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/dropout.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/dropout.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -198,7 +198,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/6b165ff9-a075-4a17-a691-0f6f0e1412df
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/convolutional-neural-network.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/convolutional-neural-network.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -233,7 +233,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/655bc692-e554-43a3-aec5-6b4f7ff9bd45
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/vanishing-gradients-in-recurrent-neural-networks.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/vanishing-gradients-in-recurrent-neural-networks.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -268,7 +268,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/b35ebc51-abcd-4c3e-9479-316f82f007a8
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/attention-mechanism.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/attention-mechanism.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -303,7 +303,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/59318ad9-3a9d-4578-a2d9-e5aef6dbdf42
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/data-loading-optimization.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/data-loading-optimization.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -339,7 +339,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/b44af211-1815-4a1a-b1a4-cc36573dfcfe
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/training-and-evaluation-modes.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/training-and-evaluation-modes.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -375,7 +375,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/b759ab96-2b18-4d7a-b489-61c21fe73916
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/pytorch-tensor-shape-and-broadcasting.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/pytorch-tensor-shape-and-broadcasting.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -411,7 +411,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/8e90352d-5f44-4827-af98-73dea2a96420
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/autograd-computation-graph.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/autograd-computation-graph.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -447,7 +447,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/272bbe9e-d4ed-4eb6-862a-79fe0feaa842
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/gradient-accumulation.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/gradient-accumulation.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -483,7 +483,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/6926ddf7-2063-4b4f-a36b-de6a3885d631
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/zeroing-gradients-before-backpropagation.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/zeroing-gradients-before-backpropagation.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -519,7 +519,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/3264f24e-e8af-4b58-92bb-54384cb58cbe
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/mini-batch-data-loading.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/mini-batch-data-loading.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -555,7 +555,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/5e78e30c-58ac-49bb-a7ae-ce619aaaad82
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/dataset-and-dataloader-pipeline.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/dataset-and-dataloader-pipeline.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -591,7 +591,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/c7c42a7a-1138-434c-8040-189f9efdf208
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/device-placement-across-cpu-and-gpu.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/device-placement-across-cpu-and-gpu.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -627,7 +627,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/36b455f2-677a-4924-8cd5-ab4380ccad61
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/loss-reduction-across-a-batch.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/loss-reduction-across-a-batch.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -663,7 +663,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/56e5b844-a245-4b3f-a49d-ad4536f212b6
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/optimizer-step-and-learning-rate-schedule.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/optimizer-step-and-learning-rate-schedule.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -699,7 +699,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f15983b0-708a-4737-94fb-0f871c06d4f7
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/gradient-clipping.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/gradient-clipping.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -735,7 +735,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/1c51d944-a2b9-4d18-8cac-15ad69f87005
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/mixed-precision-training.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/mixed-precision-training.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -771,7 +771,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/5abcfa0e-9f3c-4e15-8d4d-e59da52c6ec4
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/checkpoint-save-and-restore.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/checkpoint-save-and-restore.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -807,7 +807,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/2477e3f3-70ee-4cad-885c-7cb6a90bc589
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/transfer-learning-with-a-frozen-backbone.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/transfer-learning-with-a-frozen-backbone.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -843,7 +843,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/bdf60fed-6e51-4b78-a36c-4c24ace5f843
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/reproducible-training-with-random-seeds.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/reproducible-training-with-random-seeds.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -879,7 +879,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/ffea3dd2-65be-433d-a3b2-40d3bb7e42da
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/pytorch-validation-loop-and-metric-tracking.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/artificial-intelligence/deep-learning/pytorch-validation-loop-and-metric-tracking.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 

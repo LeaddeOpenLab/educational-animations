@@ -1486,7 +1486,7 @@
         200,
         180
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/intro-algorithms",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/intro-algorithms",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -1524,7 +1524,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/computer-science/6-006.md#c02-a008",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/computer-science/6-006.md#c02-a008",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -1532,13 +1532,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906909983,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906909983",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906909983",
         "published_at": "2026-09-30T08:05:03+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-6-006/6-006-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-computer-science-6-006/6-006-videos.zip",
         "published_at": "2026-09-30T08:05:08Z"
       }
     },
@@ -1627,7 +1627,7 @@
         175,
         150
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/intro-algorithms",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/intro-algorithms",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -1665,7 +1665,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/computer-science/6-006.md#c02-a009",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/computer-science/6-006.md#c02-a009",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -1673,13 +1673,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906873329,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906873329",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906873329",
         "published_at": "2026-09-30T08:02:40+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-6-006/6-006-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-computer-science-6-006/6-006-videos.zip",
         "published_at": "2026-09-30T08:05:08Z"
       }
     },
@@ -9088,7 +9088,7 @@
         "mathjax-full@3.2.2",
         "host fonts listed in source theme"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/linear-algebra",
       "composition_id": "la02-line-space",
       "scene_frames": [
         130,
@@ -9133,7 +9133,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/mathematics/18-06.md#c05-a002",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/mathematics/18-06.md#c05-a002",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -9142,13 +9142,13 @@
         "version": "v2",
         "id": "C05-A002",
         "player": "https://github.com/user-attachments/assets/1bb72ea8-6613-4724-9871-66dc2760f09f",
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906528357",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906528357",
         "comment_id": 5906528357
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
         "published_at": "2026-09-30T08:06:12Z"
       }
     },
@@ -9236,7 +9236,7 @@
         200,
         180
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/linear-algebra",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -9274,7 +9274,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/mathematics/18-06.md#c05-a003",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/mathematics/18-06.md#c05-a003",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -9282,13 +9282,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906876708,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906876708",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906876708",
         "published_at": "2026-09-30T08:02:54+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
         "published_at": "2026-09-30T08:06:12Z"
       }
     },
@@ -9377,7 +9377,7 @@
         170,
         140
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/linear-algebra",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -9415,7 +9415,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/mathematics/18-06.md#c05-a004",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/mathematics/18-06.md#c05-a004",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -9423,13 +9423,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906879947,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906879947",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906879947",
         "published_at": "2026-09-30T08:03:06+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
         "published_at": "2026-09-30T08:06:12Z"
       }
     },
@@ -9517,7 +9517,7 @@
         230,
         180
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/linear-algebra",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/linear-algebra",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -9555,7 +9555,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/mathematics/18-06.md#c05-a005",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/mathematics/18-06.md#c05-a005",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -9563,13 +9563,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906882843,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906882843",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906882843",
         "published_at": "2026-09-30T08:03:18+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-mathematics-18-06/18-06-videos.zip",
         "published_at": "2026-09-30T08:06:12Z"
       }
     },
@@ -15517,7 +15517,7 @@
         140,
         115
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/organic-chemistry-i",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/organic-chemistry-i",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -15555,7 +15555,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/chemistry/5-12.md#c09-a009",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/chemistry/5-12.md#c09-a009",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -15563,13 +15563,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906885982,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906885982",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906885982",
         "published_at": "2026-09-30T08:03:30+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-chemistry-5-12/5-12-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-chemistry-5-12/5-12-videos.zip",
         "published_at": "2026-09-30T08:06:43Z"
       }
     },
@@ -15727,7 +15727,7 @@
         175,
         170
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/tree/main/assets/sources/organic-chemistry-i",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/sources/organic-chemistry-i",
       "revision_reason": "Standard terminology, regenerated matching cover and aligned Prompt; see source/review notes for teaching and layout corrections."
     },
     "review": {
@@ -15765,7 +15765,7 @@
       "github": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/chemistry/5-12.md#c09-a011",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/chemistry/5-12.md#c09-a011",
         "commit": "352689efaaffd961cd5155e2be4ec42e71f2573e",
         "published_at": "2026-09-30T08:24:48+00:00"
       },
@@ -15773,13 +15773,13 @@
         "status": "succeeded",
         "version": "v2",
         "comment_id": 5906889362,
-        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/5#issuecomment-5906889362",
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/5#issuecomment-5906889362",
         "published_at": "2026-09-30T08:03:44+00:00"
       },
       "course_package": {
         "status": "succeeded",
         "version": "v2",
-        "url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-chemistry-5-12/5-12-videos.zip",
+        "url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-chemistry-5-12/5-12-videos.zip",
         "published_at": "2026-09-30T08:06:43Z"
       }
     },
@@ -28090,7 +28090,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -28461,7 +28461,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -28849,7 +28849,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -29231,7 +29231,7 @@
       ],
       "duration_frames": 960,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -29660,7 +29660,7 @@
       ],
       "duration_frames": 930,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -30053,7 +30053,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -30458,7 +30458,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -30880,7 +30880,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -31274,7 +31274,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -31697,7 +31697,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -32092,7 +32092,7 @@
       ],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -32476,7 +32476,7 @@
       "rework": [],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -32835,7 +32835,7 @@
       "rework": [],
       "duration_frames": 930,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -33242,7 +33242,7 @@
       ],
       "duration_frames": 930,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -33661,7 +33661,7 @@
       "rework": [],
       "duration_frames": 900,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip",
       "source_package": "assets/source-kits/cybersecurity-and-identity-authentication.zip"
     },
     "review": {
@@ -34060,7 +34060,7 @@
       ],
       "duration_frames": 960,
       "status": "generated",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/bellman-ford-algorithm.zip",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/bellman-ford-algorithm.zip",
       "source_package": "assets/source-kits/bellman-ford-algorithm.zip"
     },
     "review": {
@@ -34268,7 +34268,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx",
       "scenes": [
         {
           "id": "input-1",
@@ -34485,7 +34485,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx",
       "scenes": [
         {
           "id": "input-2",
@@ -34702,7 +34702,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx",
       "scenes": [
         {
           "id": "input-3",
@@ -34919,7 +34919,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx",
       "scenes": [
         {
           "id": "input-4",
@@ -35136,7 +35136,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx",
       "scenes": [
         {
           "id": "input-5",
@@ -35353,7 +35353,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx",
       "scenes": [
         {
           "id": "input-6",
@@ -35570,7 +35570,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx",
       "scenes": [
         {
           "id": "input-7",
@@ -35787,7 +35787,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx",
       "scenes": [
         {
           "id": "input-8",
@@ -36004,7 +36004,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx",
       "scenes": [
         {
           "id": "input-9",
@@ -36221,7 +36221,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx",
       "scenes": [
         {
           "id": "input-10",
@@ -36438,7 +36438,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx",
       "scenes": [
         {
           "id": "input-11",
@@ -36655,7 +36655,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx",
       "scenes": [
         {
           "id": "input-12",
@@ -36872,7 +36872,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx",
       "scenes": [
         {
           "id": "input-13",
@@ -37089,7 +37089,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx",
       "scenes": [
         {
           "id": "input-14",
@@ -37306,7 +37306,7 @@
         "FFmpeg"
       ],
       "source": "assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx",
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx",
       "scenes": [
         {
           "id": "input-15",
@@ -37764,7 +37764,7 @@
         "TypeScript5.8.2",
         "FFmpeg"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx"
     },
     "review": {
       "status": "passed",
@@ -37883,9 +37883,9 @@
           "video_version": "edge-ai-20261009-v2",
           "video_bytes": 974456,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075627987,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075627987",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075627987",
           "attachment_url": "https://github.com/user-attachments/assets/ea43ac05-0134-4c62-976e-e1ea3954f788",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -38226,7 +38226,7 @@
         "TypeScript5.8.2",
         "FFmpeg"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge02-quantization-from-float32-to-int8.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge02-quantization-from-float32-to-int8.tsx"
     },
     "review": {
       "status": "passed",
@@ -38357,9 +38357,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1136772,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075628887,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075628887",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075628887",
           "attachment_url": "https://github.com/user-attachments/assets/2dd286de-4237-416c-9995-a4758b61a9cd",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -38758,7 +38758,7 @@
         "TypeScript5.8.2",
         "FFmpeg"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge03-calibration-dataset-for-post-training-quantization.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge03-calibration-dataset-for-post-training-quantization.tsx"
     },
     "review": {
       "status": "passed",
@@ -38877,9 +38877,9 @@
           "video_version": "edge-ai-20261009-v2",
           "video_bytes": 1176230,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075629767,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075629767",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075629767",
           "attachment_url": "https://github.com/user-attachments/assets/303a57a5-a77a-48d7-a46c-1d48c49517ed",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -39280,7 +39280,7 @@
         "TypeScript5.8.2",
         "FFmpeg"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx"
     },
     "review": {
       "status": "passed",
@@ -39413,9 +39413,9 @@
           "video_version": "edge-ai-20261009-v2",
           "video_bytes": 1242597,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075630724,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075630724",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075630724",
           "attachment_url": "https://github.com/user-attachments/assets/a770165d-2193-4ece-b511-5d46a0b07a8a",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -39841,7 +39841,7 @@
         "TypeScript5.8.2",
         "FFmpeg"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx"
     },
     "review": {
       "status": "passed",
@@ -39974,9 +39974,9 @@
           "video_version": "edge-ai-20261009-v2",
           "video_bytes": 1107899,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075631728,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075631728",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075631728",
           "attachment_url": "https://github.com/user-attachments/assets/a1c98fae-2d2a-47db-a330-98aec2bb639d",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -40398,7 +40398,7 @@
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx",
       "duration_frames": 900,
       "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx"
     },
     "review": {
       "status": "passed",
@@ -40644,9 +40644,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1144994,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075632663,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075632663",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075632663",
           "attachment_url": "https://github.com/user-attachments/assets/c7fb254d-705d-4157-b37f-da7c86475f2f",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -40947,7 +40947,7 @@
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx",
       "duration_frames": 900,
       "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx"
     },
     "review": {
       "status": "passed",
@@ -41163,9 +41163,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1121887,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075633769,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075633769",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075633769",
           "attachment_url": "https://github.com/user-attachments/assets/9abb1537-b798-4eaf-b037-e42e235eea0f",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -41459,7 +41459,7 @@
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx",
       "duration_frames": 870,
       "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx"
     },
     "review": {
       "status": "passed",
@@ -41690,9 +41690,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1151741,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075634722,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075634722",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075634722",
           "attachment_url": "https://github.com/user-attachments/assets/9501931a-9186-40f7-b83b-317892cc2f95",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -42024,7 +42024,7 @@
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx",
       "duration_frames": 930,
       "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx"
     },
     "review": {
       "status": "passed",
@@ -42285,9 +42285,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1466147,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075635980,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075635980",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075635980",
           "attachment_url": "https://github.com/user-attachments/assets/38a74520-adc0-42db-952b-168ecaab0e81",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -42624,7 +42624,7 @@
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx",
       "duration_frames": 900,
       "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx"
     },
     "review": {
       "status": "passed",
@@ -42870,9 +42870,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1474143,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075636891,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075636891",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075636891",
           "attachment_url": "https://github.com/user-attachments/assets/498aac01-01f1-4c13-87ec-e0748d0ac6da",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -43052,7 +43052,7 @@
         }
       ],
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx"
     },
     "review": {
       "status": "passed",
@@ -43281,9 +43281,9 @@
           "video_version": "edge-ai-20261009-v2",
           "video_bytes": 1753669,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075637824,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075637824",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075637824",
           "attachment_url": "https://github.com/user-attachments/assets/dfe61817-d378-4ca4-a606-1d11da83f4c0",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -43445,7 +43445,7 @@
       ],
       "rework": [],
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx"
     },
     "review": {
       "status": "passed",
@@ -43660,9 +43660,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1905521,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075638987,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075638987",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075638987",
           "attachment_url": "https://github.com/user-attachments/assets/36b263bf-2e30-4f7c-90ca-87cd3196eebd",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -43829,7 +43829,7 @@
       ],
       "rework": [],
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx"
     },
     "review": {
       "status": "passed",
@@ -44058,9 +44058,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1898073,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075639972,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075639972",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075639972",
           "attachment_url": "https://github.com/user-attachments/assets/edc86980-fd78-4140-bb5f-e24a80aaf75a",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -44222,7 +44222,7 @@
       ],
       "rework": [],
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge14-latency-and-energy-measurement-on-device.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge14-latency-and-energy-measurement-on-device.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge14-latency-and-energy-measurement-on-device.tsx"
     },
     "review": {
       "status": "passed",
@@ -44437,9 +44437,9 @@
           "video_version": "edge-ai-20261009-v1",
           "video_bytes": 1865839,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075640837,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075640837",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075640837",
           "attachment_url": "https://github.com/user-attachments/assets/2d32d9fd-b19f-422e-b2dd-ab8f5c43b2cd",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -44614,7 +44614,7 @@
         }
       ],
       "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx",
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx"
     },
     "review": {
       "status": "passed",
@@ -44829,9 +44829,9 @@
           "video_version": "edge-ai-20261009-v2",
           "video_bytes": 1866431,
           "issue_number": 122,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122",
           "comment_id": 6075641819,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075641819",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/122#issuecomment-6075641819",
           "attachment_url": "https://github.com/user-attachments/assets/5c883358-0919-43c5-b11a-23682c1cf29e",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -45231,7 +45231,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv01-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx"
     },
     "review": {
       "status": "passed",
@@ -45448,9 +45448,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 2505685,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076824435,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076824435",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076824435",
           "attachment_url": "https://github.com/user-attachments/assets/95491bcc-20b1-4022-a061-26eb1471325e",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -45459,7 +45459,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmyuhh",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmyuhh",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -45864,7 +45864,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv02-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx"
     },
     "review": {
       "status": "passed",
@@ -46087,9 +46087,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 2306966,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076825546,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076825546",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076825546",
           "attachment_url": "https://github.com/user-attachments/assets/c0d285f5-f83e-4f65-b3c7-16d38b99d873",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -46098,7 +46098,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmymgk",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmymgk",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -46504,7 +46504,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv03-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx"
     },
     "review": {
       "status": "passed",
@@ -46727,9 +46727,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 3282314,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076826696,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076826696",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076826696",
           "attachment_url": "https://github.com/user-attachments/assets/407b3e47-1322-4907-91f5-48afbc5e5549",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -46738,7 +46738,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmtyz5",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmtyz5",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -47123,7 +47123,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv04-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx"
     },
     "review": {
       "status": "passed",
@@ -47346,9 +47346,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 1771516,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076828076,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076828076",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076828076",
           "attachment_url": "https://github.com/user-attachments/assets/42ea819d-c38c-4059-9624-dd3aaa76a016",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -47357,7 +47357,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmlp5p",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmlp5p",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -47784,7 +47784,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv05-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx"
     },
     "review": {
       "status": "passed",
@@ -48007,9 +48007,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 2518016,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076829252,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076829252",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076829252",
           "attachment_url": "https://github.com/user-attachments/assets/d705f18d-58b0-455b-84bd-b5e75723c89e",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -48018,7 +48018,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmjbgr",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmjbgr",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -48361,7 +48361,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv06-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx"
     },
     "review": {
       "status": "passed",
@@ -48559,9 +48559,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 1964299,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076830358,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076830358",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076830358",
           "attachment_url": "https://github.com/user-attachments/assets/5c93f712-249d-4804-a496-d94cce704a66",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -48570,7 +48570,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utm8s8d",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utm8s8d",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -48913,7 +48913,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv07-load-and-store-address-calculation.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv07-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv07-load-and-store-address-calculation.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv07-load-and-store-address-calculation.tsx"
     },
     "review": {
       "status": "passed",
@@ -49126,9 +49126,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 1810940,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076831393,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076831393",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076831393",
           "attachment_url": "https://github.com/user-attachments/assets/ffe9a4bc-2d0f-48d5-9235-eadf144e5290",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -49137,7 +49137,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utm3tfr",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utm3tfr",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -49549,7 +49549,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv08-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx"
     },
     "review": {
       "status": "passed",
@@ -49770,9 +49770,9 @@
           "video_version": "risc-v-20261009-v2",
           "video_bytes": 2317402,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076832473,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076832473",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076832473",
           "attachment_url": "https://github.com/user-attachments/assets/a07af809-750c-49ff-9d5e-f266482684aa",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -49781,7 +49781,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmuzee",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmuzee",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -50150,7 +50150,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv09-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx"
     },
     "review": {
       "status": "passed",
@@ -50398,9 +50398,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 1801294,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076833562,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076833562",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076833562",
           "attachment_url": "https://github.com/user-attachments/assets/e8c7b21a-975e-44b2-bb99-e263b0a5020e",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -50409,7 +50409,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmkyld",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmkyld",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -50812,7 +50812,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv10-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx"
     },
     "review": {
       "status": "passed",
@@ -51060,9 +51060,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 1929383,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076834641,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076834641",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076834641",
           "attachment_url": "https://github.com/user-attachments/assets/ed2bdf34-e9b5-4ae6-809c-e06193f6061c",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -51071,7 +51071,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmtqgj",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmtqgj",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -51325,7 +51325,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv11-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx"
     },
     "review": {
       "status": "passed",
@@ -51530,9 +51530,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 2739671,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076835791,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076835791",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076835791",
           "attachment_url": "https://github.com/user-attachments/assets/13a6d9c5-ad34-489c-8e25-b6ebc6814ce9",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -51541,7 +51541,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmj0nn",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmj0nn",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -51812,7 +51812,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv12-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx"
     },
     "review": {
       "status": "passed",
@@ -52033,9 +52033,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 2522664,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076836896,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076836896",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076836896",
           "attachment_url": "https://github.com/user-attachments/assets/0def91e6-8b4c-4a85-bce4-dad65d3cd219",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -52044,7 +52044,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmdnqx",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmdnqx",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -52287,7 +52287,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv13-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx"
     },
     "review": {
       "status": "passed",
@@ -52477,9 +52477,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 1967250,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076838150,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076838150",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076838150",
           "attachment_url": "https://github.com/user-attachments/assets/ebbe07cf-1360-4508-9cd7-d1618a194af0",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -52488,7 +52488,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmvsco",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmvsco",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -52974,7 +52974,7 @@
         "assets/source-kits/risc-v-processor-architecture/scripts/assert-rv14.cjs",
         "assets/source-kits/risc-v-processor-architecture/scripts/assert-rv14-full.cjs"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx"
     },
     "review": {
       "status": "passed",
@@ -53295,9 +53295,9 @@
           "video_version": "risc-v-20261009-v2",
           "video_bytes": 2958743,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076839313,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076839313",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076839313",
           "attachment_url": "https://github.com/user-attachments/assets/9a074cd4-c090-46da-9690-e38c33f16e61",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -53306,7 +53306,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmxdlz",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmxdlz",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"
@@ -53567,7 +53567,7 @@
         "assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx",
         "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv15-state.ts"
       ],
-      "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx"
+      "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx"
     },
     "review": {
       "status": "passed",
@@ -53773,9 +53773,9 @@
           "video_version": "risc-v-20261009-v1",
           "video_bytes": 2676551,
           "issue_number": 123,
-          "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+          "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123",
           "comment_id": 6076840483,
-          "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076840483",
+          "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/123#issuecomment-6076840483",
           "attachment_url": "https://github.com/user-attachments/assets/fdb5708f-1197-4f80-b87e-bbd4f4dab43d",
           "playback_status": "ACCEPTED_BY_USER_POLICY",
           "policy_date": "2026-09-30"
@@ -53784,7 +53784,7 @@
         "issue_number": 123,
         "playback_status": "ACCEPTED_BY_USER_POLICY",
         "policy_date": "2026-09-30",
-        "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmdkk4",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmdkk4",
         "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
         "verified_at": "2026-10-09T15:57:23.762755+08:00",
         "push_status": "succeeded"

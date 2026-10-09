@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Convex Optimization (Boyd and Vandenberghe). Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-mathematics-math-opt/math-opt-videos.zip) · 8 videos · bundle-1 · updated 2026-09-30T07:47:47Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-mathematics-math-opt/math-opt-videos.zip) · 8 videos · bundle-1 · updated 2026-09-30T07:47:47Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/solutions/math-animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/d2c7703b-8828-41da-afd2-30ed41136efd
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/convex-sets-and-convex-functions.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/convex-sets-and-convex-functions.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -58,7 +58,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/471cdf33-45b9-4475-af54-892e70639edf
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/first-order-optimality-conditions.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/first-order-optimality-conditions.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -93,7 +93,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/86bc0ab1-499f-4880-8ab2-d44527fb9691
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/second-order-optimality-conditions.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/second-order-optimality-conditions.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -128,7 +128,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/a54623cf-0a56-4026-b46e-e623587db154
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/gradient-descent-convergence.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/gradient-descent-convergence.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -163,7 +163,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/ee93891c-ca08-43cf-a6f3-6a81ed652821
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/newton-s-method.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/newton-s-method.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -198,7 +198,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/20efd0cf-6e79-4470-9c44-483ad421f59a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/lagrangian-duality.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/lagrangian-duality.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -233,7 +233,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/25b37a8f-dee7-4686-ad56-38a9b0e37f0f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/kkt-conditions.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/kkt-conditions.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -268,7 +268,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/0052df99-e125-4ffa-ab0d-362fbe85e0ce
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/projected-gradient-method.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/mathematics/optimization-theory/projected-gradient-method.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 

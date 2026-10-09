@@ -54,7 +54,7 @@ for path in learning_paths:
  lesson += ['', '[Browse the full concept index](../INDEX.md)', '']
  (path_dir/filename).write_text('\n'.join(lesson).rstrip()+'\n')
 (root/'catalog/LEARNING-PATHS.md').write_text('\n'.join(path_lines).rstrip()+'\n')
-lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
+lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
 def card(title, href, image, caption, anchor=None):
  escape=html.escape
  parts=['<td width="33%" valign="top">']
@@ -114,7 +114,7 @@ for subject,courses in lib.items():
     if x.get('player'):out += [x['player'],'']
     elif x.get('cover'):out += [f"![{title}](../../{x['cover']})",'']
     media=x.get('media',{})
-    out += [f"[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/{x['video']}) · {media.get('duration_seconds','unknown')} s · {media.get('width','?')}×{media.get('height','?')} · {media.get('format','unknown')}",'']
+    out += [f"[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/{x['video']}) · {media.get('duration_seconds','unknown')} s · {media.get('width','?')}×{media.get('height','?')} · {media.get('format','unknown')}",'']
    reuse=x.get('reuse',{})
    out += [f"**Public prompt:** {reuse.get('status','unverified')}. {reuse.get('notes','')}",'','<details>','<summary>View and copy Prompt</summary>','','````text',x.get('prompt') or 'An aligned final-video prompt is pending.','````','','</details>','']
    prod=x.get('production',{})
@@ -135,7 +135,7 @@ for subject,courses in lib.items():
 changes=json.loads((root/'data/changes.json').read_text()) if (root/'data/changes.json').exists() else []
 lines+=['## Repository layout','','`catalog/` course pages and full index · `assets/` videos, previews, Prompts and source kits · `data/` final records · `docs/` reuse and verification · `scripts/` production, publishing and tests.','','## Recent changes','']
 for c in changes[-8:][::-1]:lines+=[f"- {c['date']} — {c['description']}"]
-lines+=['','## Use and contribute','','See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).','','[Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.','','The static website can be served locally with `python3 -m http.server 8000`. No public site deployment is claimed.']
+lines+=['','## Use and contribute','','See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/educational-animations/issues/new/choose).','','[Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.','','The static website can be served locally with `python3 -m http.server 8000`. No public site deployment is claimed.']
 (root/'README.md').write_text('\n'.join(lines)+'\n');(root/'catalog/INDEX.md').write_text('\n'.join(index)+'\n')
 # page is a stable derived locator stored alongside final metadata for publishers.
 (root/'data/prompts.json').write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n')

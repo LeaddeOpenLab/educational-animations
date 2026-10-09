@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Kubernetes, Docker, and Helm official documentation. Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-cloud-native-kubernetes/cloud-native-kubernetes-videos.zip) · 15 videos · bundle-2 · updated 2026-09-30T08:21:31Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-computer-science-cloud-native-kubernetes/cloud-native-kubernetes-videos.zip) · 15 videos · bundle-2 · updated 2026-09-30T08:21:31Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -24,7 +24,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/731de2f5-4ba1-446d-9aea-2eda1268e8a4
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/container-image-layers-and-build-cache.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/container-image-layers-and-build-cache.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -60,7 +60,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f372de8b-7b38-4193-b52d-0418a4c7944c
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/pod-scheduling-onto-a-node.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/pod-scheduling-onto-a-node.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -96,7 +96,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/08b038df-6cfd-4f2d-be14-90da97452c5b
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/deployment-replica-reconciliation.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/deployment-replica-reconciliation.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -132,7 +132,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/eeaa0296-75d1-443b-977d-ba535103e100
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/rolling-update-and-rollback.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/rolling-update-and-rollback.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -168,7 +168,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/75fbdeb4-9e0b-4959-8917-3ea95b5532db
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/service-discovery-with-clusterip.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/service-discovery-with-clusterip.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -204,7 +204,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/b11852bf-8f6b-49e2-8e2a-7f8f8ee375b6
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/ingress-host-and-path-routing.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/ingress-host-and-path-routing.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -240,7 +240,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/b674a7d7-306c-4db4-8903-9760ba27a8b1
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/configmap-injection-into-a-pod.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/configmap-injection-into-a-pod.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -276,7 +276,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/110c151a-c3c0-4285-9956-830983131a12
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/secret-mounting-and-environment-variables.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/secret-mounting-and-environment-variables.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -312,7 +312,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/74a74e3c-21d5-4d80-ba5d-c14819df823d
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/liveness-and-readiness-probes.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/liveness-and-readiness-probes.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -348,7 +348,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/5a9ab5ee-2744-4795-bf88-0a5423b28c67
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/horizontal-pod-autoscaler-feedback-loop.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/horizontal-pod-autoscaler-feedback-loop.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -384,7 +384,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/52428da1-3829-496c-bde0-3595180149a1
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/persistentvolume-claim-binding.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/persistentvolume-claim-binding.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -420,7 +420,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/e989cc78-f630-4155-a928-7bc61e67963d
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/namespace-resource-quotas.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/namespace-resource-quotas.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -456,7 +456,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/e2bb81b8-7723-434c-accf-97548f7a6c53
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/serviceaccount-and-rbac-authorization.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/serviceaccount-and-rbac-authorization.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -492,7 +492,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/91dc8384-896c-49cc-b23f-b7e62ffd7cc3
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/networkpolicy-traffic-selection.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/networkpolicy-traffic-selection.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -528,7 +528,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/00561097-fd13-4bb6-bdf5-ba2658b6b346
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/helm-values-and-template-rendering.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cloud-native-kubernetes/helm-values-and-template-rendering.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 

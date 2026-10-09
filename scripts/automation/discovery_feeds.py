@@ -10,7 +10,7 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 
-USER_AGENT = "LeaddeKnowledgeDiscovery/0.2 (+https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion)"
+USER_AGENT = "LeaddeKnowledgeDiscovery/0.2 (+https://github.com/LeaddeOpenLab/educational-animations)"
 
 
 def _get(url: str, token: str | None = None) -> bytes:

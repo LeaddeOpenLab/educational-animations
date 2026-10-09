@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Assigned readings by lecture (no single textbook). Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-astronomy-astr-160/astr-160-videos.zip) · 12 videos · bundle-2 · updated 2026-09-30T08:06:53Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-astronomy-astr-160/astr-160-videos.zip) · 12 videos · bundle-2 · updated 2026-09-30T08:06:53Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -24,7 +24,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/458eb308-0f23-4d0a-b085-1620d26d709c
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -60,7 +60,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/dccd4289-c5ea-4540-af69-785b70e83c9f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-radial-velocity-method.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -96,7 +96,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/d5cabd15-6912-42d4-a742-861da67ca6ea
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/observational-selection-effect.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -132,7 +132,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/3649fbc8-0691-4fce-8652-1cc9bacc51b9
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/observation-bias.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -168,7 +168,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f4bf3ce0-0729-45d1-9234-55d602c5eb34
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/schwarzschild-radius.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -204,7 +204,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/bd577598-8870-4183-9317-ab78f12dd8d8
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/curved-space-time.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -240,7 +240,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/fdcacef0-74ab-4ae6-af8b-e93588a305f2
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -276,7 +276,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/2064da11-c8e6-4d06-b8c0-6a83f0bc8878
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/expansion-of-the-universe.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -312,7 +312,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/66e96d81-3a9b-4a62-a222-f51322cadaa1
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -348,7 +348,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/b764994a-1384-442e-86b6-ac58b13adc6a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/dark-matter.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -384,7 +384,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/017479d9-502d-4317-b885-840e2cb9796d
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/dark-energy.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 
@@ -420,7 +420,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/62cbdb67-1ef6-478e-9289-faaa73cb904f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/astronomy/frontiers-and-controversies-in-astrophysics/indirect-observational-evidence.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** unverified. Historical prompt; tool, timing and visual alignment require verification. Source/template/assets are not yet packaged.
 

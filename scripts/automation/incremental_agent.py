@@ -33,7 +33,7 @@ BASE = "https://open.feishu.cn/open-apis"
 APP_TOKEN = os.environ.get("FEISHU_BITABLE_APP_TOKEN", "SamybNgi6aRHH1sVVhEcTxNVnse")
 TABLE_ID = os.environ.get("FEISHU_BITABLE_TABLE_ID", "tblmQdRJPaZlMKL2")
 FIELDS = ["Pipeline Status", "Review Decision", "Source URL", "Source Fetched At", "Candidate Reason", "Agent Key", "Agent Run ID", "GitHub URL"]
-USER_AGENT = "LeaddeKnowledgeDiscovery/0.1 (+https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion)"
+USER_AGENT = "LeaddeKnowledgeDiscovery/0.1 (+https://github.com/LeaddeOpenLab/educational-animations)"
 
 
 def now() -> str:

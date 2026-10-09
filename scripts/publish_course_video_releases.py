@@ -4,7 +4,7 @@ import json,os,subprocess,urllib.request,urllib.error,urllib.parse,zipfile
 from pathlib import Path
 from datetime import datetime,timezone
 from build_course_video_bundles import ROOT,courses,build,inventory,slug
-API='https://api.github.com/repos/LeaddeOpenLab/leadde-knowledge-in-motion'
+API='https://api.github.com/repos/LeaddeOpenLab/educational-animations'
 
 def token():
     if os.environ.get('GITHUB_TOKEN'):return os.environ['GITHUB_TOKEN']
@@ -59,7 +59,7 @@ def main():
             if new['size']!=archive.stat().st_size:raise RuntimeError('Uploaded archive size mismatch')
             if asset:request('DELETE',API+f"/releases/assets/{asset['id']}")
             asset=request('PATCH',API+f"/releases/assets/{new['id']}",{'name':asset_name})
-            body=f'{len(rows)} available videos. ZIP includes stable-ID/version index, Prompt alignment status and reuse instructions. Historical unreviewed files are labelled in the index.\n\n[All course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads)'+marker+json.dumps(signature,separators=(',',':'))+' -->'
+            body=f'{len(rows)} available videos. ZIP includes stable-ID/version index, Prompt alignment status and reuse instructions. Historical unreviewed files are labelled in the index.\n\n[All course packages](https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-video-downloads)'+marker+json.dumps(signature,separators=(',',':'))+' -->'
             request('PATCH',API+f"/releases/{rel['id']}",{'body':body})
             print('Updated',code,len(rows),flush=True)
         revision=index.get(code,{}).get('revision',1)+(0 if unchanged else 1)

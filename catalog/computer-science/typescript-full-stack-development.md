@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Source course record in Feishu. Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-typescript-full-stack-development/typescript-full-stack-development-videos.zip) · 15 videos · bundle-2 · updated 2026-10-09T04:08:15Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-computer-science-typescript-full-stack-development/typescript-full-stack-development-videos.zip) · 15 videos · bundle-2 · updated 2026-10-09T04:08:15Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/c8af6bac-74c9-49e2-99e1-1d64b4fdb41f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.mp4) · 25.67 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.mp4) · 25.67 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -40,7 +40,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts01-typescript-type-inference-across-functions.tsx)
 
 References: pending verification.
 
@@ -58,7 +58,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/418da867-cef3-4f03-b8a2-62c6ee242d00
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.mp4) · 25.33 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.mp4) · 25.33 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -75,7 +75,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts02-union-type-narrowing-with-discriminants.tsx)
 
 References: pending verification.
 
@@ -93,7 +93,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/78f20036-024f-4838-bce1-b87e0e429ffe
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.mp4) · 26.33 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.mp4) · 26.33 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -110,7 +110,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts03-generic-constraints-and-reusable-apis.tsx)
 
 References: pending verification.
 
@@ -128,7 +128,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/2d429e12-4d55-44c9-a782-a51cb67821a0
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.mp4) · 30.17 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/runtime-validation-at-an-api-boundary.mp4) · 30.17 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -145,7 +145,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts04-runtime-validation-at-an-api-boundary.tsx)
 
 References: pending verification.
 
@@ -163,7 +163,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/e685165d-e6f5-46f6-b4ef-f356d1a1baff
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.mp4) · 25.83 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/typed-request-and-response-contracts.mp4) · 25.83 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -180,7 +180,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts05-typed-request-and-response-contracts.tsx)
 
 References: pending verification.
 
@@ -198,7 +198,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/f482926c-028e-4493-9c0c-b6103a0732d4
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route.mp4) · 26.17 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/async-error-propagation-in-a-server-route.mp4) · 26.17 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -215,7 +215,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts06-async-error-propagation-in-a-server-route.tsx)
 
 References: pending verification.
 
@@ -233,7 +233,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/8dab0e2b-f863-449d-882b-0c72bd58bf71
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.mp4) · 33.33 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/database-transaction-in-a-typed-service.mp4) · 33.33 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -250,7 +250,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts07-database-transaction-in-a-typed-service.tsx)
 
 References: pending verification.
 
@@ -268,7 +268,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/63466ffc-453b-4cac-adc7-ece12c200314
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.mp4) · 26.33 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/repository-pattern-with-typed-queries.mp4) · 26.33 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -285,7 +285,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts08-repository-pattern-with-typed-queries.tsx)
 
 References: pending verification.
 
@@ -303,7 +303,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/3c5a8caf-41d6-417b-84aa-6a3195ef5126
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend.mp4) · 26.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/dependency-injection-in-a-backend.mp4) · 26.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -320,7 +320,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts09-dependency-injection-in-a-backend.tsx)
 
 References: pending verification.
 
@@ -338,7 +338,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/00fedc88-b74a-4ea2-826f-220a4de9f0f0
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.mp4) · 29.17 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/server-side-rendering-data-flow.mp4) · 29.17 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -355,7 +355,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts10-server-side-rendering-data-flow.tsx)
 
 References: pending verification.
 
@@ -373,7 +373,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/73a55c26-4822-48e0-bf36-4b2c5fd01b19
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.mp4) · 27.5 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/client-cache-invalidation-after-mutation.mp4) · 27.5 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -390,7 +390,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts11-client-cache-invalidation-after-mutation.tsx)
 
 References: pending verification.
 
@@ -408,7 +408,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/8b918fa4-e2df-4934-b9db-f9bd042d3d8a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/form-state-and-schema-validation.mp4) · 26.5 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/form-state-and-schema-validation.mp4) · 26.5 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -425,7 +425,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts12-form-state-and-schema-validation.tsx)
 
 References: pending verification.
 
@@ -443,7 +443,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/685770e9-052a-470d-8c86-444af8fd2c30
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app.mp4) · 25.67 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/authentication-middleware-in-a-full-stack-app.mp4) · 25.67 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -460,7 +460,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts13-authentication-middleware-in-a-full-stack-app.tsx)
 
 References: pending verification.
 
@@ -478,7 +478,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/2dd2a09c-0d9f-4637-80df-797792d02183
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server.mp4) · 26.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/websocket-event-types-across-client-and-server.mp4) · 26.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -495,7 +495,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts14-websocket-event-types-across-client-and-server.tsx)
 
 References: pending verification.
 
@@ -513,7 +513,7 @@ References: pending verification.
 
 https://github.com/user-attachments/assets/54cf5e6c-f28d-457f-9c74-b9a16d8790d6
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.mp4) · 29.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/typescript-full-stack-development/monorepo-shared-types-and-package-boundaries.mp4) · 29.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt describes the exact final scene durations, concrete input, state transition, palette and tool dependencies. Source kit is provided; clean-machine reproduction has not been verified.
 
@@ -530,7 +530,7 @@ Dark backgrounds #0e0d10, #18181f and #22222d; primary #33bbee marks the startin
 
 **Production:** Remotion; dependencies: Remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/typescript-full-stack-development/src/videos/ts15-monorepo-shared-types-and-package-boundaries.tsx)
 
 References: pending verification.
 

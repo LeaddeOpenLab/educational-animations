@@ -22,7 +22,7 @@ Course download package: not yet published.
 
 https://github.com/user-attachments/assets/e1e12ca3-774b-4c69-ac41-a7f05cb97239
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt follows approved v1 production.scenes and its 30-second timeline. Cover depicts the same core mechanism without introducing a new scenario. Final source mechanism and terminology retained. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -39,7 +39,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html) — Terminology and mechanism grounding
 
@@ -57,7 +57,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 https://github.com/user-attachments/assets/16b28dff-2d4a-461d-a0cb-10154431775d
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/password-hashing-with-salt.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/password-hashing-with-salt.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt follows approved v2 production.scenes and its 30-second timeline. Cover depicts the same core mechanism without introducing a new scenario. Includes salt/verifier database ingress and plaintext disappearance. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -74,7 +74,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) — Terminology and mechanism grounding
 
@@ -92,7 +92,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 https://github.com/user-attachments/assets/a83763cf-e9ec-4022-8784-30d5b2d06ea8
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/public-key-challenge-response-authentication.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/public-key-challenge-response-authentication.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt follows approved v1 production.scenes and its 30-second timeline. Cover depicts the same core mechanism without introducing a new scenario. Final source mechanism and terminology retained. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -109,7 +109,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.w3.org/TR/webauthn-3/#sctn-cryptographic-challenges) — Terminology and mechanism grounding
 
@@ -127,7 +127,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 https://github.com/user-attachments/assets/689010a3-4d3e-4d09-9cf3-754a0174e546
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/oauth-20-authorization-code-flow.mp4) · 32.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/oauth-20-authorization-code-flow.mp4) · 32.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt follows approved v2 production.scenes and its 32-second timeline. Cover depicts the same core mechanism without introducing a new scenario. Includes token delivery to Photo API followed by returning photos. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -144,7 +144,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc6749#section-4.1) — Terminology and mechanism grounding
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc7636) — Terminology and mechanism grounding
@@ -163,7 +163,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 https://github.com/user-attachments/assets/4de20018-fd13-49eb-b2c6-612355ad98fc
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/openid-connect-id-token-validation.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/openid-connect-id-token-validation.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Prompt follows approved v1 production.scenes and its 31-second timeline. Cover depicts the same core mechanism without introducing a new scenario. Final source mechanism and terminology retained. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -180,7 +180,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation) — Terminology and mechanism grounding
 
@@ -198,7 +198,7 @@ Use this literal palette: background #070b12, panels #0d1626 and #142238, primar
 
 https://github.com/user-attachments/assets/a8b368fc-7c52-41ee-9922-79c0b9aa5698
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/webauthn-passkey-registration.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/webauthn-passkey-registration.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Checked final TSX SceneDef durations and frame-derived Stage/Mechanism timing against the approved final record and media duration. Four scenes total 900 frames / 30.0 seconds; the prompt names the actual illustrated objects, state changes, timing, course palette and two-column layout. No generic replacement story was introduced. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -215,7 +215,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.w3.org/TR/webauthn-3/#sctn-registering-a-new-credential) — Terminology and mechanism grounding
 
@@ -233,7 +233,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 https://github.com/user-attachments/assets/ae0ee26f-5062-4b32-91b9-e104130d83da
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/multi-factor-authentication-totp.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/multi-factor-authentication-totp.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Checked final TSX SceneDef durations and frame-derived Stage/Mechanism timing against the approved final record and media duration. Four scenes total 900 frames / 30.0 seconds; the prompt names the actual illustrated objects, state changes, timing, course palette and two-column layout. No generic replacement story was introduced. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -250,7 +250,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc6238) — Terminology and mechanism grounding
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc4226) — Terminology and mechanism grounding
@@ -269,7 +269,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 https://github.com/user-attachments/assets/6a87c327-0f0c-4843-a5ad-15a32d932e9a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/session-cookie-secure-attributes.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/session-cookie-secure-attributes.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Checked final TSX SceneDef durations and frame-derived Stage/Mechanism timing against the approved final record and media duration. Four scenes total 900 frames / 30.0 seconds; the prompt names the actual illustrated objects, state changes, timing, course palette and two-column layout. No generic replacement story was introduced. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -286,7 +286,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Set-Cookie) — Terminology and mechanism grounding
 
@@ -304,7 +304,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 https://github.com/user-attachments/assets/8ec94717-69da-49e9-9b0b-84fd856d2ab5
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/json-web-token-signature-verification.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/json-web-token-signature-verification.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Checked final TSX SceneDef durations and frame-derived Stage/Mechanism timing against the approved final record and media duration. Four scenes total 900 frames / 30.0 seconds; the prompt names the actual illustrated objects, state changes, timing, course palette and two-column layout. No generic replacement story was introduced. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -321,7 +321,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc7515#section-5.2) — Terminology and mechanism grounding
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc8725#section-3.1) — Terminology and mechanism grounding
@@ -340,7 +340,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 https://github.com/user-attachments/assets/8f828773-2f49-467b-93a4-33e178a5160a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/refresh-token-rotation.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/refresh-token-rotation.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Checked final TSX SceneDef durations and frame-derived Stage/Mechanism timing against the approved final record and media duration. Four scenes total 900 frames / 30.0 seconds; the prompt names the actual illustrated objects, state changes, timing, course palette and two-column layout. No generic replacement story was introduced. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -357,7 +357,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc9700#section-4.14.2) — Terminology and mechanism grounding
 
@@ -375,7 +375,7 @@ Use the supplied cybersecurity-identity source kit with Remotion 4.0.410, React 
 
 https://github.com/user-attachments/assets/7f374efb-6696-452f-9ee8-5b0a136a5c40
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/role-based-access-control.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/role-based-access-control.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Aligned to the final reviewed v2 TSX and 30-second scene timeline. Describes concrete graphical changes instead of claiming word-for-word execution of every early L3 detail. Palette and runtime versions read from the actual course kit. Complete kit is supplied; external dependencies and unverified clean-environment exact reproduction are explicitly disclosed. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -392,7 +392,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://csrc.nist.gov/Projects/role-based-access-control/faqs) — Terminology and mechanism grounding
 
@@ -410,7 +410,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 https://github.com/user-attachments/assets/8d018955-73a0-488d-8d99-2cce9bcfa896
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/attribute-based-access-control.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/attribute-based-access-control.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Aligned to the final reviewed v1 TSX and 30-second scene timeline. Describes concrete graphical changes instead of claiming word-for-word execution of every early L3 detail. Palette and runtime versions read from the actual course kit. Complete kit is supplied; external dependencies and unverified clean-environment exact reproduction are explicitly disclosed. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -427,7 +427,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://csrc.nist.gov/pubs/sp/800/162/upd2/final) — Terminology and mechanism grounding
 
@@ -445,7 +445,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 https://github.com/user-attachments/assets/83f4b3ab-d415-421a-bd10-5aa0bfa77c6a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/saml-service-provider-login-flow.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/saml-service-provider-login-flow.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Aligned to the final reviewed v1 TSX and 31-second scene timeline. Describes concrete graphical changes instead of claiming word-for-word execution of every early L3 detail. Palette and runtime versions read from the actual course kit. Complete kit is supplied; external dependencies and unverified clean-environment exact reproduction are explicitly disclosed. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -462,7 +462,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://docs.oasis-open.org/security/saml/Post2.0/sstc-saml-tech-overview-2.0-cd-02.html) — Terminology and mechanism grounding
 
@@ -480,7 +480,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 https://github.com/user-attachments/assets/5b23e5b3-7fa0-4fb7-9a64-cb86b667c617
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/mutual-tls-certificate-authentication.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/mutual-tls-certificate-authentication.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Aligned to the final reviewed v2 TSX and 31-second scene timeline. Describes concrete graphical changes instead of claiming word-for-word execution of every early L3 detail. Palette and runtime versions read from the actual course kit. Complete kit is supplied; external dependencies and unverified clean-environment exact reproduction are explicitly disclosed. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -497,7 +497,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://www.rfc-editor.org/rfc/rfc8446.html) — Terminology and mechanism grounding
 
@@ -515,7 +515,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 https://github.com/user-attachments/assets/cf7b4cb0-f42a-445f-9ddd-d0047949ef7a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/least-privilege-access-review.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/computer-science/cybersecurity-and-identity-authentication/least-privilege-access-review.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Aligned to the final reviewed v1 TSX and 30-second scene timeline. Describes concrete graphical changes instead of claiming word-for-word execution of every early L3 detail. Palette and runtime versions read from the actual course kit. Complete kit is supplied; external dependencies and unverified clean-environment exact reproduction are explicitly disclosed. Source kit is provided; external runtime dependencies and exact-reproduction limits are disclosed in the prompt.
 
@@ -532,7 +532,7 @@ Render a silent English 1920×1080, 16:9 MP4 at 30 fps. Use a left text column a
 
 **Production:** Remotion; dependencies: remotion 4.0.410, React 19, TypeScript 5.8, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/source-kits/cybersecurity-and-identity-authentication.zip)
 
 - [Concept reference](https://csrc.nist.gov/glossary/term/least_privilege) — Terminology and mechanism grounding
 - [Concept reference](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/800-171r3/NIST.SP.800-171r3.html) — Terminology and mechanism grounding

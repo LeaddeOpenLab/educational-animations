@@ -46,7 +46,7 @@ Choose a topic and follow the videos in order.
 ## Watch, download, reuse
 
 - **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.
-- **Download:** [Course packages](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.
+- **Download:** [Course packages](https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.
 - **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.
 
 ## Browse the library
@@ -701,7 +701,7 @@ Choose a topic and follow the videos in order.
 
 ## Use and contribute
 
-See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/new/choose).
+See [reuse instructions](docs/REUSE.md), [rights requiring confirmation](docs/RIGHTS.md), and [contribution instructions](.github/CONTRIBUTING.md). Report a concept error with its stable ID, video version and timestamp, or suggest a topic in [Issues](https://github.com/LeaddeOpenLab/educational-animations/issues/new/choose).
 
 [Leadde animation tools](https://leadde.ai/animation) explains available creation tools. Prompts are copied manually; there is no automatic prompt transfer.
 

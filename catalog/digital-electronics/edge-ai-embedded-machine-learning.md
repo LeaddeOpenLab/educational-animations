@@ -6,7 +6,7 @@
 
 Course bibliography supplied by the source list: Specific official documentation and research listed per concept. Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-digital-electronics-edge-ai-embedded-machine-learning/edge-ai-embedded-machine-learning-videos.zip) · 15 videos · bundle-1 · updated 2026-10-09T06:28:47Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-digital-electronics-edge-ai-embedded-machine-learning/edge-ai-embedded-machine-learning-videos.zip) · 15 videos · bundle-1 · updated 2026-10-09T06:28:47Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -23,7 +23,7 @@ Package status: current. Package membership is recorded in its index.
 
 https://github.com/user-attachments/assets/ea43ac05-0134-4c62-976e-e1ea3954f788
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.mp4) · 29.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.mp4) · 29.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -40,7 +40,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/microcontrollers/get_started) — Official LiteRT microcontroller guide inspected 2026-10-09: supply input tensor, Invoke, retrieve output tensor. Sensor normalization, RMS and two-class softmax are illustrative constructed computations, not claims about a provided model.
 
@@ -58,7 +58,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 https://github.com/user-attachments/assets/2dd286de-4237-416c-9995-a4758b61a9cd
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -75,7 +75,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge02-quantization-from-float32-to-int8.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge02-quantization-from-float32-to-int8.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/quantization/quantization_spec) — Official terminology basis from saved course research; all numerical examples are explicitly illustrative.
 
@@ -93,7 +93,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 https://github.com/user-attachments/assets/303a57a5-a77a-48d7-a46c-1d48c49517ed
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -110,7 +110,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge03-calibration-dataset-for-post-training-quantization.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge03-calibration-dataset-for-post-training-quantization.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/conversion/tensorflow/quantization/post_training_quantization) — Official terminology basis from saved course research; all numerical examples are explicitly illustrative.
 
@@ -128,7 +128,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 https://github.com/user-attachments/assets/a770165d-2193-4ece-b511-5d46a0b07a8a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -145,7 +145,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/quantization/quantization_spec) — Official terminology basis from saved course research; all numerical examples are explicitly illustrative.
 
@@ -163,7 +163,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 https://github.com/user-attachments/assets/a1c98fae-2d2a-47db-a330-98aec2bb639d
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate.mp4) · 33.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate.mp4) · 33.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -180,7 +180,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/quantization/quantization_spec) — Official terminology basis from saved course research; all numerical examples are explicitly illustrative.
 
@@ -198,7 +198,7 @@ Render a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and 
 
 https://github.com/user-attachments/assets/c7fb254d-705d-4157-b37f-da7c86475f2f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -215,7 +215,7 @@ Use four scenes lasting 6, 7, 8, and 9 seconds: resolve requirements, expose the
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx)
 
 - [github.com](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/micro_mutable_op_resolver.h) — MicroMutableOpResolver provides explicit operator registration and FindOp lookup; compatibility includes kernel constraints, so name matching alone is an illustrative prerequisite.
 
@@ -233,7 +233,7 @@ Use four scenes lasting 6, 7, 8, and 9 seconds: resolve requirements, expose the
 
 https://github.com/user-attachments/assets/9abb1537-b798-4eaf-b037-e42e235eea0f
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -250,7 +250,7 @@ Use four scenes lasting 7, 7, 9, and 7 seconds: establish lifetime overlap, plac
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx)
 
 - [github.com](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md) — Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation.
 
@@ -268,7 +268,7 @@ Use four scenes lasting 7, 7, 9, and 7 seconds: establish lifetime overlap, plac
 
 https://github.com/user-attachments/assets/9501931a-9186-40f7-b83b-317892cc2f95
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint.mp4) · 29.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint.mp4) · 29.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -285,7 +285,7 @@ Use four scenes lasting 6, 8, 9, and 6 seconds: distinguish the banks, replace w
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx)
 
 - [github.com](https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md) — Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation.
 
@@ -303,7 +303,7 @@ Use four scenes lasting 6, 8, 9, and 6 seconds: distinguish the banks, replace w
 
 https://github.com/user-attachments/assets/38a74520-adc0-42db-952b-168ecaab0e81
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.mp4) · 31.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.mp4) · 31.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -320,7 +320,7 @@ Use four scenes lasting 6, 6, 10, and 9 seconds: expose channel correspondence, 
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx)
 
 - [arxiv.org](https://arxiv.org/abs/1512.08571) — Structured sparsity can remove channel and kernel structures; retraining compensates for pruning loss.
 
@@ -338,7 +338,7 @@ Use four scenes lasting 6, 6, 10, and 9 seconds: expose channel correspondence, 
 
 https://github.com/user-attachments/assets/498aac01-01f1-4c13-87ec-e0748d0ac6da
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.mp4) · 30.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.mp4) · 30.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -355,7 +355,7 @@ Use four scenes lasting 6, 6, 12, and 6 seconds: establish the frozen teacher, c
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx)
 
 - [keras.io](https://keras.io/examples/vision/knowledge_distillation/) — Teacher predictions and labels train the student; the teacher remains frozen.
 
@@ -373,7 +373,7 @@ Use four scenes lasting 6, 6, 12, and 6 seconds: establish the frozen teacher, c
 
 https://github.com/user-attachments/assets/dfe61817-d378-4ca4-a606-1d11da83f4c0
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction.mp4) · 28.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction.mp4) · 28.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -390,7 +390,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx)
 
 - [docs.edgeimpulse.com — supporting reference](https://docs.edgeimpulse.com/docs/edge-impulse-studio/processing-blocks/spectral-features) — Compute a compact RMS feature from a sensor window, and show the information it discards.
 
@@ -408,7 +408,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 https://github.com/user-attachments/assets/36b263bf-2e30-4f7c-90ca-87cd3196eebd
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows.mp4) · 27.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows.mp4) · 27.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -425,7 +425,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx)
 
 - [docs.edgeimpulse.com — supporting reference](https://docs.edgeimpulse.com/hardware/deployments/run-cpp) — Advance a four-sample inference window by two samples and preserve its overlap.
 
@@ -443,7 +443,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 https://github.com/user-attachments/assets/edc86980-fd78-4140-bb5f-e24a80aaf75a
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning.mp4) · 28.0 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning.mp4) · 28.0 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -460,7 +460,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/performance/implementing_delegate) — Partition supported operators onto a delegate while a CPU-only operation forces two handoffs.
 
@@ -478,7 +478,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 https://github.com/user-attachments/assets/2d32d9fd-b19f-422e-b2dd-ab8f5c43b2cd
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device.mp4) · 27.5 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device.mp4) · 27.5 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -495,7 +495,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge14-latency-and-energy-measurement-on-device.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge14-latency-and-energy-measurement-on-device.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/next/benchmark) — Measure inference latency and integrate sampled power to obtain energy.
 
@@ -513,7 +513,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 https://github.com/user-attachments/assets/5c883358-0919-43c5-b11a-23682c1cf29e
 
-[Download MP4](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification.mp4) · 26.5 s · 1920×1080 · mp4
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification.mp4) · 26.5 s · 1920×1080 · mp4
 
 **Public prompt:** aligned. Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
 
@@ -530,7 +530,7 @@ Dark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs
 
 **Production:** Remotion; dependencies: Remotion4.0.410, React19.0.0, TypeScript5.8.2, FFmpeg. Exact reproduction: not verified.
 
-[Source / reproduction materials](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx)
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx)
 
 - [developers.google.com — supporting reference](https://developers.google.com/edge/litert/libraries/task_library/image_classifier) — Compare a classifier maximum score with a threshold and abstain when confidence is insufficient.
 
