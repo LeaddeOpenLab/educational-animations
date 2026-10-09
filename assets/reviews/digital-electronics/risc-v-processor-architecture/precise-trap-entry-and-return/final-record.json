@@ -476,9 +476,9 @@
       "version": "v1"
     },
     "github": {
-      "status": "pendingpage",
+      "status": "succeeded",
       "version": "v1",
-      "page_status": "pending",
+      "page_status": "published",
       "attachment": {
         "video_version": "risc-v-20261009-v1",
         "video_bytes": 2522664,
@@ -493,7 +493,11 @@
       "player": "https://github.com/user-attachments/assets/0def91e6-8b4c-4a85-bce4-dad65d3cd219",
       "issue_number": 123,
       "playback_status": "ACCEPTED_BY_USER_POLICY",
-      "policy_date": "2026-09-30"
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/catalog/digital-electronics/risc-v-processor-architecture.md#recvw25utmdnqx",
+      "page_commit": "4be2ef9e9a9f3fcf7f5013e9bb37e1851b854ced",
+      "verified_at": "2026-10-09T15:57:23.762755+08:00",
+      "push_status": "succeeded"
     }
   }
 }
