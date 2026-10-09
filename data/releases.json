@@ -1573,5 +1573,76 @@
         "version": "v1"
       }
     ]
+  },
+  "typescript-full-stack-development": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-typescript-full-stack-development/typescript-full-stack-development-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-computer-science-typescript-full-stack-development",
+    "video_count": 15,
+    "version": "bundle-2",
+    "updated_at": "2026-10-09T04:08:15Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "recvw25tEzzqwR",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzxY66",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzU93I",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzfQaz",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzTj61",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzXQVJ",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzPUf1",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzbu9j",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25tEzem0T",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25utMTw8p",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25utM6wAv",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25utMLKJz",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25utMvGwA",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25utMZWSs",
+        "version": "v3"
+      },
+      {
+        "id": "recvw25utM2MDe",
+        "version": "v3"
+      }
+    ]
   }
 }

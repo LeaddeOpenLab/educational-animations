@@ -6,7 +6,8 @@
 
 Course bibliography supplied by the source list: Source course record in Feishu. Specific supporting references are listed per concept; missing references are not inferred.
 
-Course download package: not yet published.
+[Download course ZIP](https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-computer-science-typescript-full-stack-development/typescript-full-stack-development-videos.zip) · 15 videos · bundle-2 · updated 2026-10-09T04:08:15Z
+Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
 
