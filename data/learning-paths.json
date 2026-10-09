@@ -1,0 +1,139 @@
+[
+  {
+    "slug": "pointers-and-memory-explained-visually",
+    "title": "Pointers and Memory Explained Visually",
+    "previous_title": "Pointers and Memory",
+    "summary": "Follow how addresses, pointers and the call stack organize program memory.",
+    "audience": "Students learning C or C++, and programmers who want a visual introduction to addresses, pointer operations and memory lifetimes. Basic variables, arrays and function calls are useful prerequisites.",
+    "introduction": "A pointer stores an address; dereferencing uses that address to access an object. These seven animations connect that distinction to memory layout, array traversal and function calls. Follow the sequence to separate three questions: where a value lives, how code accesses it, and how long it remains valid.",
+    "outcomes": [
+      "Distinguish a stored value from its memory address and a pointer to it.",
+      "Explain dereferencing and why pointer arithmetic depends on element size.",
+      "Trace stack frames and compare stack and heap object lifetimes."
+    ],
+    "steps": [
+      {
+        "id": "C01-A002",
+        "explanation": "An address identifies a location in memory. For a contiguous array, an element's byte offset depends on both its index and its size. Watch how the address spacing changes between differently sized elements."
+      },
+      {
+        "id": "C01-A003",
+        "explanation": "A memory-layout diagram gives context to program code, data, stack frames and heap allocations. Use this animation to locate each region; the simplified arrangement is a teaching model, not a promise about every operating system's layout."
+      },
+      {
+        "id": "C01-A001",
+        "explanation": "A pointer's value is an address, distinct from the value stored at its target. Follow the pointer as its target changes, and distinguish changing the pointer from changing the object it points to."
+      },
+      {
+        "id": "C01-A014",
+        "explanation": "Dereferencing follows a pointer to access its target. Compare reading the pointer with reading or writing through it, then consider why an address is unsafe to use after the target object's lifetime has ended."
+      },
+      {
+        "id": "C01-A015",
+        "explanation": "Within an array, advancing a typed pointer by one moves to the next element rather than necessarily the next byte. Watch the element-sized jumps and relate each move to the array index."
+      },
+      {
+        "id": "C01-A013",
+        "explanation": "A local object's lifetime can end when a function returns, while a dynamically allocated object can outlive that call. Compare the two lifetimes and ask why returning a pointer to an expired local object is a problem."
+      },
+      {
+        "id": "C01-A016",
+        "explanation": "Each recursive call adds a frame with its own local state. Follow the frames until the base case, then trace how return values move back through the waiting calls as the stack unwinds."
+      }
+    ]
+  },
+  {
+    "slug": "neural-network-training-explained-visually",
+    "title": "Neural Network Training Explained Visually",
+    "previous_title": "Neural Network Training",
+    "summary": "Follow a training cycle from neurons and loss to gradients, updates and validation.",
+    "audience": "Students beginning machine learning and developers trying to understand a training loop. Familiarity with functions, basic derivatives and simple Python code will help with the later videos.",
+    "introduction": "Neural network training connects predictions, a loss function, gradient computation and parameter updates. This sequence starts with a single neuron, explains how backpropagation calculates gradients, and separates that calculation from the optimizer's update. The final video shows how validation measures performance without training on the validation examples.",
+    "outcomes": [
+      "Connect neuron outputs and activation functions to a batch loss.",
+      "Distinguish the chain rule, backpropagation and gradient descent.",
+      "Explain the roles of optimizer steps, learning-rate schedules and validation."
+    ],
+    "steps": [
+      {
+        "id": "C26-A001",
+        "explanation": "A neuron combines inputs using weights and a bias, then applies an activation function. Trace the weighted sum to its output before considering how many such units connect into a network."
+      },
+      {
+        "id": "C26-A002",
+        "explanation": "Activation functions introduce nonlinearity and affect how gradients pass through a network. Compare the functions' shapes and slopes, especially where their derivatives become small or zero."
+      },
+      {
+        "id": "C26-A018",
+        "explanation": "Training commonly combines per-example losses into a single sum or mean. Watch how this reduction changes the scale of the loss and gradients, and why unequal batch sizes matter when combining averages."
+      },
+      {
+        "id": "C03-A010",
+        "explanation": "The chain rule connects a change at the start of a composed function to its effect at the end. Follow the product of local derivatives; this is the central calculation used along a path during backpropagation."
+      },
+      {
+        "id": "C03-A009",
+        "explanation": "Backpropagation applies the chain rule backward through the computation to obtain gradients for the parameters. Compare the forward computation with the backward sweep. Computing those gradients is separate from updating the weights."
+      },
+      {
+        "id": "C03-A003",
+        "explanation": "Gradient descent updates parameters in the direction opposite the gradient. Watch how the learning rate changes the step size and why an overly large step can overshoot rather than steadily reduce the loss."
+      },
+      {
+        "id": "C26-A019",
+        "explanation": "The optimizer uses gradients, its state and a learning rate to update parameters. A schedule changes the learning rate over training. Track the parameter movement separately from the curve controlling the scale of future steps."
+      },
+      {
+        "id": "C26-A025",
+        "explanation": "Validation evaluates held-out examples without parameter updates. Observe evaluation mode, disabled gradient recording and accumulated metrics as separate operations, then connect the final metric to model selection."
+      }
+    ]
+  },
+  {
+    "slug": "llms-and-rag-explained-visually",
+    "title": "LLMs and RAG Explained Visually",
+    "previous_title": "LLMs and RAG",
+    "summary": "Connect tokenization and attention to text generation, retrieval and grounded answers.",
+    "audience": "Developers and students who want an introduction to large language models and retrieval-augmented generation. No model-training experience is required; basic familiarity with vectors is helpful.",
+    "introduction": "A large language model processes tokens and predicts a distribution over possible next tokens. Retrieval-augmented generation, or RAG, adds relevant source passages to the model's context before it answers. These eight animations connect the model's text-processing steps to document chunking, semantic search and reranking, so you can follow a question through the full retrieval and generation pipeline.",
+    "outcomes": [
+      "Connect tokenization, embeddings and self-attention to next-token prediction.",
+      "Distinguish document chunking, semantic retrieval and reranking.",
+      "Explain how retrieved passages enter an LLM's context in a RAG pipeline."
+    ],
+    "steps": [
+      {
+        "id": "C27-A001",
+        "explanation": "Tokenization splits text into units and maps them to vocabulary IDs. Watch the sentence become tokens, remembering that a token can be a word, part of a word or punctuation."
+      },
+      {
+        "id": "C27-A003",
+        "explanation": "Embeddings represent words as learned vectors. Use the spatial illustration to build intuition for similarity and relationships; real embedding spaces usually have many more dimensions than the diagram."
+      },
+      {
+        "id": "C27-A005",
+        "explanation": "Self-attention uses queries, keys and values to mix information across tokens. Follow how scores become weights and how those weights determine which token information contributes to a contextual representation."
+      },
+      {
+        "id": "recvw24MaggI13",
+        "explanation": "A language model produces scores for candidate next tokens, and softmax turns those scores into a probability distribution. Compare the candidates and their probabilities; generating a sequence repeats this prediction process."
+      },
+      {
+        "id": "recvw24U8nIXtd",
+        "explanation": "A retrieval pipeline can split long documents into searchable passages. Watch an overlapping window preserve text across a chunk boundary, and weigh that context against the extra storage and duplicated content."
+      },
+      {
+        "id": "recvw24Vlk0V3K",
+        "explanation": "Semantic search compares a query representation with document representations to retrieve related passages. Look for a paraphrase that is relevant despite different wording, and contrast it with a passage that merely shares a keyword."
+      },
+      {
+        "id": "recvw24Wq3ZOpq",
+        "explanation": "Reranking evaluates a retrieved shortlist more closely against the query and changes its order. Follow the strongest passage as it moves upward before a smaller selection is passed onward."
+      },
+      {
+        "id": "recvw24T2zGQI9",
+        "explanation": "RAG retrieves passages, adds them to the model's context and generates an answer using that context. Trace the question through each stage. Retrieval supplies evidence, but the answer still needs to be checked against its sources."
+      }
+    ]
+  }
+]
