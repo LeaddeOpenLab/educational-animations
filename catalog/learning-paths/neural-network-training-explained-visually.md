@@ -4,6 +4,12 @@
 
 Neural network training connects predictions, a loss function, gradient computation and parameter updates. This sequence starts with a single neuron, explains how backpropagation calculates gradients, and separates that calculation from the optimizer's update. The final video shows how validation measures performance without training on the validation examples.
 
+![Animated preview: Backpropagation](../../assets/previews/c03-a009-v1.gif)
+
+Trace the backward flow of gradients, then connect it to loss, parameter updates and validation.
+
+[Watch Backpropagation](../../catalog/artificial-intelligence/6-036.md#c03-a009)
+
 **Who this is for:** Students beginning machine learning and developers trying to understand a training loop. Familiarity with functions, basic derivatives and simple Python code will help with the later videos.
 
 ## What you will learn

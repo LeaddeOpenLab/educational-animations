@@ -4,6 +4,12 @@
 
 A pointer stores an address; dereferencing uses that address to access an object. These seven animations connect that distinction to memory layout, array traversal and function calls. Follow the sequence to separate three questions: where a value lives, how code accesses it, and how long it remains valid.
 
+![Animated preview: Pointer Dereferencing](../../assets/previews/c01-a014-v1.gif)
+
+See how a pointer leads to a memory address, then follow what happens when code reads or writes through it.
+
+[Watch Pointer Dereferencing](../../catalog/computer-science/cs50x.md#c01-a014)
+
 **Who this is for:** Students learning C or C++, and programmers who want a visual introduction to addresses, pointer operations and memory lifetimes. Basic variables, arrays and function calls are useful prerequisites.
 
 ## What you will learn

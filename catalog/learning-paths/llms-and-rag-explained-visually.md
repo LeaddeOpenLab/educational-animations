@@ -4,6 +4,12 @@
 
 A large language model processes tokens and predicts a distribution over possible next tokens. Retrieval-augmented generation, or RAG, adds relevant source passages to the model's context before it answers. These eight animations connect the model's text-processing steps to document chunking, semantic search and reranking, so you can follow a question through the full retrieval and generation pipeline.
 
+![Animated preview: Retrieval-Augmented Generation Pipeline](../../assets/previews/recvw24t2zgqi9-v1.gif)
+
+Follow a question from document retrieval to model context and a grounded answer.
+
+[Watch Retrieval-Augmented Generation Pipeline](../../catalog/artificial-intelligence/ai-gen.md#recvw24t2zgqi9)
+
 **Who this is for:** Developers and students who want an introduction to large language models and retrieval-augmented generation. No model-training experience is required; basic familiarity with vectors is helpful.
 
 ## What you will learn

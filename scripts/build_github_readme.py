@@ -15,20 +15,19 @@ name=lambda x:x.get('standard_name',x['title'])
 summary=lambda rows:f"{sum(bool(ready(x)) for x in rows)} videos · {sum(not ready(x) for x in rows)} awaiting production"
 lib=OrderedDict()
 for x in items: lib.setdefault(x['subject'],OrderedDict()).setdefault(x['course'],[]).append(x)
-lines=['# Educational Animations for Computer Science, AI & Math — Leadde','', 'Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','', '## Featured videos','']
-lines += ['<table>','<tr>']
+lines=['# Educational Animations for Computer Science, AI & Math — Leadde','', 'Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','']
+featured_lines = ['## Featured videos', '', '<table>', '<tr>']
 for x in items:
  if x.get('featured') and ready(x):
   preview=f"assets/previews/{x['id'].lower()}-{x['artifact_version']}.gif"
   if not (root/preview).is_file():raise FileNotFoundError(f'Run scripts/build_featured_previews.py: {preview}')
   href=f"{page(x)}#{x['id'].lower()}"
-  lines += ['<td width="33%" valign="top">',f'<a href="{href}"><img src="{preview}" width="100%" alt="Animated preview: {html.escape(name(x))}"></a><br>',f'<a href="{href}"><strong>{html.escape(name(x))}</strong></a><br>',f'<sub>{html.escape(x["learning_objective"])}</sub><br>',f'<a href="{href}">▶ Watch full video</a> · <a href="{x["featured"]["evidence"]}">Inspection scope</a>','</td>']
-lines += ['</tr>','</table>','','Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.']
+  featured_lines += ['<td width="33%" valign="top">',f'<a href="{href}"><img src="{preview}" width="100%" alt="Animated preview: {html.escape(name(x))}"></a><br>',f'<a href="{href}"><strong>{html.escape(name(x))}</strong></a><br>',f'<sub>{html.escape(x["learning_objective"])}</sub><br>',f'<a href="{href}">▶ Watch full video</a> · <a href="{x["featured"]["evidence"]}">Inspection scope</a>','</td>']
+featured_lines += ['</tr>','</table>','','Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.']
 learning_paths = json.loads((root/'data/learning-paths.json').read_text())
 by_id = {x['id']: x for x in items}
 course_pages = {(subject, course): page(rows[0]) for subject, courses in lib.items() for course, rows in courses.items()}
-lines += ['', '## Start learning', '', 'Choose a topic and follow the videos in order.', '',
-          '| Learning path | What to explore | Videos |', '| --- | --- | ---: |']
+lines += ['## Start learning', '', 'Explore pointers, backpropagation and RAG through short previews, then follow a full learning path.', '', '<table>', '<tr>']
 path_lines = ['# Learning paths', '', '[Back to the library](../README.md)', '',
               'Explore computer science and AI concepts through short animations. Each learning path includes an introduction, learning goals and a suggested viewing order.', '']
 path_dir = root/'catalog/learning-paths'
@@ -36,11 +35,23 @@ path_dir.mkdir(parents=True, exist_ok=True)
 for path in learning_paths:
  title, description, steps = path['title'], path['summary'], path['steps']
  filename = path['slug']+'.md'
- lines += [f'| [{title}](catalog/learning-paths/{filename}) | {description} | {len(steps)} |']
+ preview_entry = by_id[path['preview']['id']]
+ preview = f"assets/previews/{preview_entry['id'].lower()}-{preview_entry['artifact_version']}.gif"
+ if not (root/preview).is_file(): raise FileNotFoundError(f'Run scripts/build_featured_previews.py: {preview}')
+ video_href = f"{course_pages[preview_entry['subject'], preview_entry['course']]}#{preview_entry['id'].lower()}"
+ guide_href = f'catalog/learning-paths/{filename}'
+ lines += ['<td width="33%" valign="top">',
+           f'<a href="{video_href}"><img src="{preview}" width="100%" alt="Animated preview: {html.escape(name(preview_entry))}"></a><br>',
+           f'<a href="{guide_href}"><strong>{html.escape(title)}</strong></a><br>',
+           f'<sub>{html.escape(path["preview"]["caption"])}</sub><br>',
+           f'<a href="{video_href}">▶ Watch {html.escape(name(preview_entry))}</a><br>',
+           f'<a href="{guide_href}">Explore the {len(steps)}-video guide →</a>', '</td>']
  path_lines += [f"## {path['previous_title']}", '', description, '',
                 f'[Open {title}](learning-paths/{filename}) · {len(steps)} videos', '']
  lesson = [f'# {title}', '', '[All learning paths](../LEARNING-PATHS.md) · [Library home](../../README.md)', '',
-           path['introduction'], '', '**Who this is for:** '+path['audience'], '', '## What you will learn', '']
+           path['introduction'], '', f'![Animated preview: {name(preview_entry)}](../../{preview})', '',
+           path['preview']['caption'], '', f'[Watch {name(preview_entry)}](../../{video_href})', '',
+           '**Who this is for:** '+path['audience'], '', '## What you will learn', '']
  lesson += ['- '+outcome for outcome in path['outcomes']]
  lesson += ['', '## Watch in order', '', f"Follow these {len(steps)} videos in sequence. Each link opens the concept on its course page, with the video, download link and animation Prompt.", '']
  for step, details in enumerate(steps, 1):
@@ -53,6 +64,10 @@ for path in learning_paths:
  lesson += [f"- [{other['title']}]({other['slug']}.md)" for other in learning_paths if other['slug'] != path['slug']]
  lesson += ['', '[Browse the full concept index](../INDEX.md)', '']
  (path_dir/filename).write_text('\n'.join(lesson).rstrip()+'\n')
+lines += ['</tr>', '</table>', '', 'GIF excerpts from existing videos. Open a preview to watch the full animation, or follow its guide in learning order.', '',
+          'Use this library to study and revise concepts, find visual examples for classroom explanations, and explore animation prompts for your own projects. Video downloads are available on course pages.', '',
+          '⭐ **Star this library to save it for your next lesson or study session.**', '']
+lines += featured_lines
 (root/'catalog/LEARNING-PATHS.md').write_text('\n'.join(path_lines).rstrip()+'\n')
 lines += ['', '## Watch, download, reuse','', '- **Watch:** [Browse the concept index](catalog/INDEX.md) and play native videos on course pages.', '- **Download:** [Course packages](https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-video-downloads). Each package includes a version index and reuse notes when available.', '- **Reuse:** Open the expandable Prompt on a course page. Check its alignment and source availability before adapting it.','', '## Browse the library','']
 def card(title, href, image, caption, anchor=None):

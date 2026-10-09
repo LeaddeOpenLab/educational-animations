@@ -40,7 +40,12 @@
         "id": "C01-A016",
         "explanation": "Each recursive call adds a frame with its own local state. Follow the frames until the base case, then trace how return values move back through the waiting calls as the stack unwinds."
       }
-    ]
+    ],
+    "preview": {
+      "id": "C01-A014",
+      "start_seconds": 6,
+      "caption": "See how a pointer leads to a memory address, then follow what happens when code reads or writes through it."
+    }
   },
   {
     "slug": "neural-network-training-explained-visually",
@@ -87,7 +92,12 @@
         "id": "C26-A025",
         "explanation": "Validation evaluates held-out examples without parameter updates. Observe evaluation mode, disabled gradient recording and accumulated metrics as separate operations, then connect the final metric to model selection."
       }
-    ]
+    ],
+    "preview": {
+      "id": "C03-A009",
+      "start_seconds": 6,
+      "caption": "Trace the backward flow of gradients, then connect it to loss, parameter updates and validation."
+    }
   },
   {
     "slug": "llms-and-rag-explained-visually",
@@ -134,6 +144,11 @@
         "id": "recvw24T2zGQI9",
         "explanation": "RAG retrieves passages, adds them to the model's context and generates an answer using that context. Trace the question through each stage. Retrieval supplies evidence, but the answer still needs to be checked against its sources."
       }
-    ]
+    ],
+    "preview": {
+      "id": "recvw24T2zGQI9",
+      "start_seconds": 16,
+      "caption": "Follow a question from document retrieval to model context and a grounded answer."
+    }
   }
 ]

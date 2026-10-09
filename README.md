@@ -6,6 +6,42 @@ Short animated explanations of algorithms, data structures, neural networks, mat
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
+## Start learning
+
+Explore pointers, backpropagation and RAG through short previews, then follow a full learning path.
+
+<table>
+<tr>
+<td width="33%" valign="top">
+<a href="catalog/computer-science/cs50x.md#c01-a014"><img src="assets/previews/c01-a014-v1.gif" width="100%" alt="Animated preview: Pointer Dereferencing"></a><br>
+<a href="catalog/learning-paths/pointers-and-memory-explained-visually.md"><strong>Pointers and Memory Explained Visually</strong></a><br>
+<sub>See how a pointer leads to a memory address, then follow what happens when code reads or writes through it.</sub><br>
+<a href="catalog/computer-science/cs50x.md#c01-a014">▶ Watch Pointer Dereferencing</a><br>
+<a href="catalog/learning-paths/pointers-and-memory-explained-visually.md">Explore the 7-video guide →</a>
+</td>
+<td width="33%" valign="top">
+<a href="catalog/artificial-intelligence/6-036.md#c03-a009"><img src="assets/previews/c03-a009-v1.gif" width="100%" alt="Animated preview: Backpropagation"></a><br>
+<a href="catalog/learning-paths/neural-network-training-explained-visually.md"><strong>Neural Network Training Explained Visually</strong></a><br>
+<sub>Trace the backward flow of gradients, then connect it to loss, parameter updates and validation.</sub><br>
+<a href="catalog/artificial-intelligence/6-036.md#c03-a009">▶ Watch Backpropagation</a><br>
+<a href="catalog/learning-paths/neural-network-training-explained-visually.md">Explore the 8-video guide →</a>
+</td>
+<td width="33%" valign="top">
+<a href="catalog/artificial-intelligence/ai-gen.md#recvw24t2zgqi9"><img src="assets/previews/recvw24t2zgqi9-v1.gif" width="100%" alt="Animated preview: Retrieval-Augmented Generation Pipeline"></a><br>
+<a href="catalog/learning-paths/llms-and-rag-explained-visually.md"><strong>LLMs and RAG Explained Visually</strong></a><br>
+<sub>Follow a question from document retrieval to model context and a grounded answer.</sub><br>
+<a href="catalog/artificial-intelligence/ai-gen.md#recvw24t2zgqi9">▶ Watch Retrieval-Augmented Generation Pipeline</a><br>
+<a href="catalog/learning-paths/llms-and-rag-explained-visually.md">Explore the 8-video guide →</a>
+</td>
+</tr>
+</table>
+
+GIF excerpts from existing videos. Open a preview to watch the full animation, or follow its guide in learning order.
+
+Use this library to study and revise concepts, find visual examples for classroom explanations, and explore animation prompts for your own projects. Video downloads are available on course pages.
+
+⭐ **Star this library to save it for your next lesson or study session.**
+
 ## Featured videos
 
 <table>
@@ -32,16 +68,6 @@ Video-ready means a file is available. Review passes require version-specific ev
 </table>
 
 Looping GIF excerpts from the actual videos. Click a card to watch the full video and access its Prompt.
-
-## Start learning
-
-Choose a topic and follow the videos in order.
-
-| Learning path | What to explore | Videos |
-| --- | --- | ---: |
-| [Pointers and Memory Explained Visually](catalog/learning-paths/pointers-and-memory-explained-visually.md) | Follow how addresses, pointers and the call stack organize program memory. | 7 |
-| [Neural Network Training Explained Visually](catalog/learning-paths/neural-network-training-explained-visually.md) | Follow a training cycle from neurons and loss to gradients, updates and validation. | 8 |
-| [LLMs and RAG Explained Visually](catalog/learning-paths/llms-and-rag-explained-visually.md) | Connect tokenization and attention to text generation, retrieval and grounded answers. | 8 |
 
 ## Watch, download, reuse
 
