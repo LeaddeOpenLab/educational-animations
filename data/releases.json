@@ -1348,12 +1348,12 @@
     ]
   },
   "ES-RTOS": {
-    "revision": 1,
+    "revision": 2,
     "download_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-embedded-systems-es-rtos/es-rtos-videos.zip",
     "release_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-videos-embedded-systems-es-rtos",
-    "video_count": 4,
-    "version": "bundle-1",
-    "updated_at": "2026-09-30T07:48:54Z",
+    "video_count": 5,
+    "version": "bundle-2",
+    "updated_at": "2026-10-09T10:59:41Z",
     "status": "current",
     "members": [
       {
@@ -1371,6 +1371,10 @@
       {
         "id": "C37-A004",
         "version": "v1"
+      },
+      {
+        "id": "C37-A005",
+        "version": "micro-semaphore-20261009-v2"
       }
     ]
   },
@@ -1886,6 +1890,61 @@
       {
         "id": "C14-A008",
         "version": "economics-game-macro-20261009-v1"
+      }
+    ]
+  },
+  "14.01": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-economics-14-01/14-01-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-videos-economics-14-01",
+    "video_count": 11,
+    "version": "bundle-2",
+    "updated_at": "2026-10-09T10:59:32Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C13-A001",
+        "version": "micro-semaphore-20261009-v3"
+      },
+      {
+        "id": "C13-A002",
+        "version": "micro-semaphore-20261009-v3"
+      },
+      {
+        "id": "C13-A003",
+        "version": "micro-semaphore-20261009-v3"
+      },
+      {
+        "id": "C13-A004",
+        "version": "micro-semaphore-20261009-v3"
+      },
+      {
+        "id": "C13-A005",
+        "version": "micro-semaphore-20261009-v3"
+      },
+      {
+        "id": "C13-A006",
+        "version": "micro-semaphore-20261009-v2"
+      },
+      {
+        "id": "C13-A007",
+        "version": "micro-semaphore-20261009-v2"
+      },
+      {
+        "id": "C13-A008",
+        "version": "micro-semaphore-20261009-v2"
+      },
+      {
+        "id": "C13-A009",
+        "version": "micro-semaphore-20261009-v2"
+      },
+      {
+        "id": "C13-A010",
+        "version": "micro-semaphore-20261009-v2"
+      },
+      {
+        "id": "C13-A011",
+        "version": "micro-semaphore-20261009-v2"
       }
     ]
   }

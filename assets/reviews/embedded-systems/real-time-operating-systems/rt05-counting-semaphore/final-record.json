@@ -1,0 +1,349 @@
+{
+  "id": "C37-A005",
+  "subject": "Embedded Systems",
+  "course": "Real-Time Operating Systems",
+  "textbook": "Course notes (no required textbook)",
+  "tags": [
+    "C37-A005",
+    "ES-RTOS",
+    "P1"
+  ],
+  "course_code": "ES-RTOS",
+  "page": "catalog/embedded-systems/es-rtos.md",
+  "feishu_record_id": "recvw1Ekn4UOGZ",
+  "original_name": "Counting Semaphore",
+  "standard_name": "Counting Semaphore",
+  "artifact_version": "micro-semaphore-20261009-v2",
+  "final_title": "Counting Semaphore: Take, Wait, and Give",
+  "title": "Counting Semaphore: Take, Wait, and Give",
+  "seo_title": "Counting Semaphore: Take, Wait, and Give",
+  "learning_objective": "The waiting task moves into the running set without count becoming negative; count never exceeds three.",
+  "core_conclusion": "The waiting task moves into the running set without count becoming negative; count never exceeds three.",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A counting semaphore starts at two with limit three; tasks A, B and C request permits.",
+    "original_name": "Counting Semaphore",
+    "standard_name": "Counting Semaphore",
+    "sources": [
+      {
+        "title": "Zephyr: Semaphores",
+        "url": "https://docs.zephyrproject.org/latest/kernel/services/synchronization/semaphores.html"
+      }
+    ]
+  },
+  "references": [
+    {
+      "title": "Zephyr: Semaphores",
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/synchronization/semaphores.html"
+    }
+  ],
+  "requirement_prompt": "",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/real-time-operating-systems/src/videos/rt05-counting-semaphore.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/real-time-operating-systems/src/videos/rt05-counting-semaphore.tsx",
+    "scenes": [
+      {
+        "id": "step1",
+        "start_seconds": 0,
+        "end_seconds": 4.0,
+        "reading_seconds": 3.5,
+        "objects": [
+          "permit slots",
+          "task A",
+          "task B",
+          "task C",
+          "waiting row"
+        ],
+        "change": "Two Permits Available; A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit.",
+        "cause": "take consumes an available permit; give wakes the waiting task or increments count up to limit.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step2",
+        "start_seconds": 4.0,
+        "end_seconds": 9.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "permit slots",
+          "task A",
+          "task B",
+          "task C",
+          "waiting row"
+        ],
+        "change": "A and B Take Permits; A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit.",
+        "cause": "take consumes an available permit; give wakes the waiting task or increments count up to limit.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step3",
+        "start_seconds": 9.0,
+        "end_seconds": 15.0,
+        "reading_seconds": 5.5,
+        "objects": [
+          "permit slots",
+          "task A",
+          "task B",
+          "task C",
+          "waiting row"
+        ],
+        "change": "C Waits at Zero; A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit.",
+        "cause": "take consumes an available permit; give wakes the waiting task or increments count up to limit.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step4",
+        "start_seconds": 15.0,
+        "end_seconds": 21.0,
+        "reading_seconds": 5.5,
+        "objects": [
+          "permit slots",
+          "task A",
+          "task B",
+          "task C",
+          "waiting row"
+        ],
+        "change": "Give Hands a Permit to C; A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit.",
+        "cause": "take consumes an available permit; give wakes the waiting task or increments count up to limit.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step5",
+        "start_seconds": 21.0,
+        "end_seconds": 26.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "permit slots",
+          "task A",
+          "task B",
+          "task C",
+          "waiting row"
+        ],
+        "change": "Refill Up to the Limit; A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit.",
+        "cause": "take consumes an available permit; give wakes the waiting task or increments count up to limit.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step6",
+        "start_seconds": 26.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 3.5,
+        "objects": [
+          "permit slots",
+          "task A",
+          "task B",
+          "task C",
+          "waiting row"
+        ],
+        "change": "Permits Count Events or Resources; A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit.",
+        "cause": "take consumes an available permit; give wakes the waiting task or increments count up to limit.",
+        "result": "The waiting task moves into the running set without count becoming negative; count never exceeds three.",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/real-time-operating-systems/src/videos/rt05-counting-semaphore.state.ts",
+      "bindings": "The same tested stateAt(frame) drives actual curves, numeric markers, areas, bundles, permit count and task membership."
+    },
+    "template_scope": "Shared L1 furniture/theme and registered L2 primitives; no cross-topic shared L3 scene factory. Each topic has its own mechanism state and scenario.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "step4",
+        "uncertainty": "A semaphore has no mutex ownership; a give to a waiter need not increase stored count.",
+        "expected_observation": "A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 20.0,
+        "reason": "Inspect the uncertain state change before, during and after in the final MP4"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Correct actual Unicode glyphs and exact tick labels; replace transition-boundary contact frames.",
+        "affected_ids": [
+          "C37-A005"
+        ],
+        "status": "resolved",
+        "fix": "Bounded curve sampling and separated labels; targeted re-render and final-frame review.",
+        "evidence": [
+          "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/contact-sheet.jpg",
+          "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v2",
+    "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+    "reviewed_at": "2026-10-09T18:54:36.265996+08:00",
+    "evidence": [
+      "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/contact-sheet.jpg",
+      "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v2",
+      "reviewer": "Codex — executed source/state/TypeScript/media checks",
+      "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+      "evidence": [
+        "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v2",
+      "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+      "reviewed_at": "2026-10-09T18:54:36.265996+08:00",
+      "evidence": [
+        "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/contact-sheet.jpg",
+        "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/risk-sheet.jpg"
+      ],
+      "observed": "Permits are consumed2→1→0; A/B enter acquired membership and C waits at zero. At19.5s a yellow permit is visibly in transit with C waiting; at20/20.5s C joins B, A leaves, waiting is empty, and count remains0. Later gives refill1→2→3 and give at limit stays3. The board demonstrates direct handoff and bounded counting, without mutex ownership.",
+      "final_mp4_path": "assets/videos/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.mp4",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "teaching_vetoes": {
+        "main_graph_static": false,
+        "mechanism_only_in_text": false,
+        "inconsistent_visual_state": false
+      },
+      "veto_evidence": "Permits are consumed2→1→0; A/B enter acquired membership and C waits at zero. At19.5s a yellow permit is visibly in transit with C waiting; at20/20.5s C joins B, A leaves, waiting is empty, and count remains0. Later gives refill1→2→3 and give at limit stays3. The board demonstrates direct handoff and bounded counting, without mutex ownership.",
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": [
+            "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/risk-sheet.jpg"
+          ],
+          "times_seconds": [
+            19.5,
+            20.0,
+            20.5
+          ],
+          "observation": "Permits are consumed2→1→0; A/B enter acquired membership and C waits at zero. At19.5s a yellow permit is visibly in transit with C waiting; at20/20.5s C joins B, A leaves, waiting is empty, and count remains0. Later gives refill1→2→3 and give at limit stays3. The board demonstrates direct handoff and bounded counting, without mutex ownership."
+        }
+      ]
+    }
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "prompt": "Create a 30-second silent English concept animation about Counting Semaphore for Real-Time Operating Systems, Embedded Systems, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A counting semaphore starts at two with limit three; tasks A, B and C request permits. Show take consumes an available permit; give wakes the waiting task or increments count up to limit. Then A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit. The visible result must prove: The waiting task moves into the running set without count becoming negative; count never exceeds three. Follow the final scene timing: 0–4s: Two Permits Available; 4–9s: A and B Take Permits; 9–15s: C Waits at Zero; 15–21s: Give Hands a Permit to C; 21–26s: Refill Up to the Limit; 26–30s: Permits Count Events or Resources.\n\nUse background #070b12 → #0d1626 → #142238, primary #60a5fa for the main curve/object, accent #fbbf24 for the changed quantity, result #34d399 for the conclusion, warning #f87171 for loss/waiting and alternate #c084fc for the comparison; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: A semaphore has no mutex ownership; a give to a waiter need not increase stored count. Exact reproduction requires the supplied real-time-operating-systems source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — final scene and Prompt alignment inspection",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/prompts/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.md",
+      "assets/source-kits/real-time-operating-systems/src/videos/rt05-counting-semaphore.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested."
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v2",
+    "reviewer": "Codex — direct cover overview and pixel geometry audit",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/covers/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.jpg",
+      "assets/reviews/embedded-systems/real-time-operating-systems/rt05-counting-semaphore/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvw1Ekn4UOGZ",
+      "bbox": [
+        356,
+        245,
+        653,
+        655
+      ],
+      "width": 297,
+      "height": 410,
+      "dx": 4.5,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "status": "ready",
+  "video": "assets/videos/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.mp4",
+  "cover": "assets/covers/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.jpg",
+  "prompt_file": "assets/prompts/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.md",
+  "cover_image": "assets/covers/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.jpg",
+  "cover_version": "micro-semaphore-20261009-v2",
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v2",
+      "record_id": "recvw1Ekn4UOGZ",
+      "verified_at": "2026-10-09T18:59:04.302784+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/dc3c3fb3-8d14-4a04-9906-166fc00ecd55",
+        "comment_id": 6079524619,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125#issuecomment-6079524619",
+        "issue_number": 125,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125",
+        "video_version": "micro-semaphore-20261009-v2",
+        "video_bytes": 2079698,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/dc3c3fb3-8d14-4a04-9906-166fc00ecd55",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-rtos.md#c37-a005"
+    }
+  },
+  "feishu": {
+    "record_id": "recvw1Ekn4UOGZ",
+    "verified": true,
+    "verified_at": "2026-10-09T18:59:04.302784+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/dc3c3fb3-8d14-4a04-9906-166fc00ecd55",
+  "player_version": "micro-semaphore-20261009-v2"
+}

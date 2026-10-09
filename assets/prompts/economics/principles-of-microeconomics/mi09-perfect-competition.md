@@ -1,0 +1,9 @@
+# C13-A009 · Perfect Competition
+
+Version: micro-semaphore-20261009-v2 · alignment: aligned
+
+Create a 30-second silent English concept animation about Perfect Competition for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A competitive market contains many identical firms with TC=16+2Q+Q². Show Positive economic profits attract entry in the long run. Then Entry increases market supply and lowers market price from 14 to 10; each firm contracts from six to four. The visible result must prove: Price reaches min ATC ten; each firm produces four and economic profit reaches zero. Follow the final scene timing: 0–6s: Positive Profit Attracts Entry; 6–13s: Market Supply Expands; 13–22s: Each Firm Adjusts Output; 22–30s: Long-Run Zero Economic Profit.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Zero economic profit includes normal returns; it is not zero sales. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

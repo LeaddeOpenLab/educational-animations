@@ -2,11 +2,11 @@
 
 [← Embedded Systems](../../README.md#embedded-systems) · [Complete index](../INDEX.md)
 
-4 videos · 0 awaiting production
+5 videos · 0 awaiting production
 
 Course bibliography supplied by the source list: Course notes (no required textbook). Specific supporting references are listed per concept; missing references are not inferred.
 
-[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-embedded-systems-es-rtos/es-rtos-videos.zip) · 4 videos · bundle-1 · updated 2026-09-30T07:48:54Z
+[Download course ZIP](https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-embedded-systems-es-rtos/es-rtos-videos.zip) · 5 videos · bundle-2 · updated 2026-10-09T10:59:41Z
 Package status: current. Package membership is recorded in its index.
 
 [Explore Leadde animation tools](https://leadde.ai/animation). Copy an aligned prompt, open a suitable tool, then adapt it manually; exact reproduction is not promised.
@@ -148,6 +148,41 @@ Dark ground `#070b12` -> `#0d1626` -> `#142238`; primary `#60a5fa` on the main e
 [Reproduction requirements and missing materials](../../docs/REUSE.md)
 
 References: pending verification.
+
+[Back to course top](#real-time-operating-systems)
+
+---
+
+<a id="c37-a005"></a>
+## Counting Semaphore
+
+`C37-A005` · Video available · review: **passed** · version `micro-semaphore-20261009-v2`
+
+**Learn:** The waiting task moves into the running set without count becoming negative; count never exceeds three.
+**Takeaway:** The waiting task moves into the running set without count becoming negative; count never exceeds three.
+
+https://github.com/user-attachments/assets/dc3c3fb3-8d14-4a04-9906-166fc00ecd55
+
+[Download MP4](https://github.com/LeaddeOpenLab/educational-animations/raw/refs/heads/main/assets/videos/embedded-systems/real-time-operating-systems/rt05-counting-semaphore.mp4) · 30.0 s · 1920×1080 · mp4
+
+**Public prompt:** aligned. The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.
+
+<details>
+<summary>View and copy Prompt</summary>
+
+````text
+Create a 30-second silent English concept animation about Counting Semaphore for Real-Time Operating Systems, Embedded Systems, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A counting semaphore starts at two with limit three; tasks A, B and C request permits. Show take consumes an available permit; give wakes the waiting task or increments count up to limit. Then A and B take permits, C blocks at zero; A gives and C receives the permit directly; later gives refill count and stop at limit. The visible result must prove: The waiting task moves into the running set without count becoming negative; count never exceeds three. Follow the final scene timing: 0–4s: Two Permits Available; 4–9s: A and B Take Permits; 9–15s: C Waits at Zero; 15–21s: Give Hands a Permit to C; 21–26s: Refill Up to the Limit; 26–30s: Permits Count Events or Resources.
+
+Use background #070b12 → #0d1626 → #142238, primary #60a5fa for the main curve/object, accent #fbbf24 for the changed quantity, result #34d399 for the conclusion, warning #f87171 for loss/waiting and alternate #c084fc for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: A semaphore has no mutex ownership; a give to a waiter need not increase stored count. Exact reproduction requires the supplied real-time-operating-systems source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.
+````
+
+</details>
+
+**Production:** Remotion + React; dependencies: Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, FFmpeg. Exact reproduction: not verified.
+
+[Source / reproduction materials](https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/real-time-operating-systems/src/videos/rt05-counting-semaphore.tsx)
+
+- [Zephyr: Semaphores](https://docs.zephyrproject.org/latest/kernel/services/synchronization/semaphores.html) — concept reference
 
 [Back to course top](#real-time-operating-systems)
 

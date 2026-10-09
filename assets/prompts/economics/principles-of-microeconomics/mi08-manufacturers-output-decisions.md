@@ -1,0 +1,9 @@
+# C13-A008 · Profit Maximization
+
+Version: micro-semaphore-20261009-v2 · alignment: aligned
+
+Create a 30-second silent English concept animation about Profit Maximization for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A price-taking firm faces P=12 and TC=8+2Q+Q². Show Increase output while comparing marginal revenue with marginal cost. Then Add output one unit at a time; revenue and cost bars change, and profit first rises then falls. The visible result must prove: Continuous optimum Q=5 maximizes profit at seventeen; the sixth unit reduces profit. Follow the final scene timing: 0–5s: A Price-Taking Firm; 5–11s: Add a Profitable Unit; 11–19s: Find the Profit Peak; 19–25s: One Unit Too Many; 25–30s: Use the Marginal Rule.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: MR=MC is the marginal rule; total revenue is not profit. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

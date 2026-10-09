@@ -1,0 +1,308 @@
+{
+  "id": "C13-A005",
+  "subject": "Economics",
+  "course": "Principles of Microeconomics",
+  "textbook": "Microeconomics, 5e (Perloff)",
+  "title": "Deadweight Loss: Exclude Beneficial Trades",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-microeconomics/mi05-deadweight-loss.mp4",
+  "tags": [
+    "C13-A005",
+    "14.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English concept animation about Deadweight Loss for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A quota contracts trade in a market with MB=12-Q and MC=2+Q. Show A binding quantity restriction excludes mutually beneficial trades. Then Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value. The visible result must prove: The triangle reaches area nine at Q=2; lost trades have MB greater than MC. Follow the final scene timing: 0–6s: Efficient Trade at Five; 6–12s: Impose a Quantity Limit; 12–21s: Reveal the Lost Trades; 21–30s: Sum the Foregone Gains.\n\nUse background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Tax revenue is a transfer; the lost gains from trade are the loss. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v3; clean-machine exact reproduction has not been tested.",
+  "original_name": "Deadweight loss",
+  "standard_name": "Deadweight Loss",
+  "aliases": [],
+  "final_title": "Deadweight Loss: Exclude Beneficial Trades",
+  "learning_objective": "The triangle reaches area nine at Q=2; lost trades have MB greater than MC.",
+  "core_conclusion": "The triangle reaches area nine at Q=2; lost trades have MB greater than MC.",
+  "references": [
+    {
+      "title": "OpenStax: Demand, Supply and Equilibrium",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services"
+    }
+  ],
+  "artifact_version": "micro-semaphore-20261009-v3",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Deadweight loss” using this visual metaphor: “a single animated economic graph tracing one mechanism for Deadweight loss”. Dynamically demonstrate the core formula or conclusion: Deadweight loss is surplus destroyed by trades that no longer occur..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F9F1F5); main visual (#15516C); secondary visual (#8F253B); highlight (#6E5300); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/principles-of-microeconomics/src/videos/mi05-deadweight-loss.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-microeconomics/src/videos/mi05-deadweight-loss.tsx",
+    "scenes": [
+      {
+        "id": "step1",
+        "start_seconds": 0,
+        "end_seconds": 6.0,
+        "reading_seconds": 5.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Efficient Trade at Five; Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value.",
+        "cause": "A binding quantity restriction excludes mutually beneficial trades.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step2",
+        "start_seconds": 6.0,
+        "end_seconds": 12.0,
+        "reading_seconds": 5.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Impose a Quantity Limit; Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value.",
+        "cause": "A binding quantity restriction excludes mutually beneficial trades.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step3",
+        "start_seconds": 12.0,
+        "end_seconds": 21.0,
+        "reading_seconds": 8.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Reveal the Lost Trades; Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value.",
+        "cause": "A binding quantity restriction excludes mutually beneficial trades.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step4",
+        "start_seconds": 21.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 8.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Sum the Foregone Gains; Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value.",
+        "cause": "A binding quantity restriction excludes mutually beneficial trades.",
+        "result": "The triangle reaches area nine at Q=2; lost trades have MB greater than MC.",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-microeconomics/src/videos/mi05-deadweight-loss.state.ts",
+      "bindings": "The same tested stateAt(frame) drives actual curves, numeric markers, areas, bundles, permit count and task membership."
+    },
+    "template_scope": "Shared L1 furniture/theme and registered L2 primitives; no cross-topic shared L3 scene factory. Each topic has its own mechanism state and scenario.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "step3",
+        "uncertainty": "Tax revenue is a transfer; the lost gains from trade are the loss.",
+        "expected_observation": "Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 14.0,
+        "reason": "Inspect the uncertain state change before, during and after in the final MP4"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Shared inverse-price plot now samples only the declared domain and separates axis/legend/point labels; preserve readable quantitative evidence. Correct actual Unicode glyphs and exact tick labels; replace transition-boundary contact frames.",
+        "affected_ids": [
+          "C13-A005"
+        ],
+        "status": "resolved",
+        "fix": "Bounded curve sampling and separated labels; targeted re-render and final-frame review.",
+        "evidence": [
+          "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/contact-sheet.jpg",
+          "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v3",
+    "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+    "reviewed_at": "2026-10-09T18:54:36.256276+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v3",
+      "reviewer": "Codex — executed source/state/TypeScript/media checks",
+      "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v3",
+      "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+      "reviewed_at": "2026-10-09T18:54:36.256276+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/risk-sheet.jpg"
+      ],
+      "observed": "The quota marker moves left from efficientQ5 toQ2; the excluded benefit and cost endpoints separate and a lost-gains triangle grows. Its final displayed area is9. At 13.5/14/14.5s the quantity limit contracts and the triangle expands, so the loss is conveyed by actual removed gains.",
+      "final_mp4_path": "assets/videos/economics/principles-of-microeconomics/mi05-deadweight-loss.mp4",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "teaching_vetoes": {
+        "main_graph_static": false,
+        "mechanism_only_in_text": false,
+        "inconsistent_visual_state": false
+      },
+      "veto_evidence": "The quota marker moves left from efficientQ5 toQ2; the excluded benefit and cost endpoints separate and a lost-gains triangle grows. Its final displayed area is9. At 13.5/14/14.5s the quantity limit contracts and the triangle expands, so the loss is conveyed by actual removed gains.",
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": [
+            "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/risk-sheet.jpg"
+          ],
+          "times_seconds": [
+            13.5,
+            14.0,
+            14.5
+          ],
+          "observation": "The quota marker moves left from efficientQ5 toQ2; the excluded benefit and cost endpoints separate and a lost-gains triangle grows. Its final displayed area is9. At 13.5/14/14.5s the quantity limit contracts and the triangle expands, so the loss is conveyed by actual removed gains."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — final scene and Prompt alignment inspection",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-microeconomics/mi05-deadweight-loss.md",
+      "assets/source-kits/principles-of-microeconomics/src/videos/mi05-deadweight-loss.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v3",
+      "record_id": "recvvJaLoSiHv0",
+      "verified_at": "2026-10-09T18:59:04.302784+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v3",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/d5df835f-7eef-4bb5-a24e-32b05c0a4500",
+        "comment_id": 6079516459,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125#issuecomment-6079516459",
+        "issue_number": 125,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125",
+        "video_version": "micro-semaphore-20261009-v3",
+        "video_bytes": 2274153,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/d5df835f-7eef-4bb5-a24e-32b05c0a4500",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-01.md#c13-a005"
+    }
+  },
+  "feishu_record_id": "recvvJaLoSiHv0",
+  "page": "catalog/economics/14-01.md",
+  "course_code": "14.01",
+  "seo_title": "Deadweight Loss: Exclude Beneficial Trades",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A quota contracts trade in a market with MB=12-Q and MC=2+Q.",
+    "original_name": "Deadweight loss",
+    "standard_name": "Deadweight Loss",
+    "sources": [
+      {
+        "title": "OpenStax: Demand, Supply and Equilibrium",
+        "url": "https://openstax.org/books/principles-microeconomics-3e/pages/3-1-demand-supply-and-equilibrium-in-markets-for-goods-and-services"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v3",
+    "reviewer": "Codex — direct cover overview and pixel geometry audit",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-microeconomics/mi05-deadweight-loss.jpg",
+      "assets/reviews/economics/principles-of-microeconomics/mi05-deadweight-loss/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLoSiHv0",
+      "bbox": [
+        218,
+        248,
+        766,
+        649
+      ],
+      "width": 548,
+      "height": 401,
+      "dx": -8.0,
+      "dy": -1.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-microeconomics/mi05-deadweight-loss.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-microeconomics/mi05-deadweight-loss.md",
+  "cover_image": "assets/covers/economics/principles-of-microeconomics/mi05-deadweight-loss.jpg",
+  "cover_version": "micro-semaphore-20261009-v3",
+  "feishu": {
+    "record_id": "recvvJaLoSiHv0",
+    "verified": true,
+    "verified_at": "2026-10-09T18:59:04.302784+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/d5df835f-7eef-4bb5-a24e-32b05c0a4500",
+  "player_version": "micro-semaphore-20261009-v3"
+}

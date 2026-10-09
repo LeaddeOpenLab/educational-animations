@@ -1,0 +1,116 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "real-time-operating-systems",
+    "label": "Real-Time Operating Systems",
+    "subject": "Embedded Systems",
+    "outputDir": "Embedded Systems/Real-Time Operating Systems"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "real-time-operating-systems",
+    "file": "src/theme/themes/real-time-operating-systems.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#070b12",
+      "bg1": "#0d1626",
+      "bg2": "#142238",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "primary": "#60a5fa",
+      "accent": "#fbbf24",
+      "result": "#34d399",
+      "warn": "#f87171",
+      "alt": "#c084fc",
+      "textStrong": "#f8fafc",
+      "textMuted": "#94a3b8",
+      "textDim": "#7a879b"
+    },
+    "bg1": "#0d1626",
+    "contrast": {
+      "primary": 7.2,
+      "accent": 10.8,
+      "result": 8.8,
+      "warn": 6.8,
+      "alt": 6.1
+    }
+  },
+  "primitives": [
+    {
+      "name": "StateMachine",
+      "file": "src/components/Rtos.tsx",
+      "summary": "Task states and animated transitions"
+    },
+    {
+      "name": "Lanes",
+      "file": "src/components/Rtos.tsx",
+      "summary": "Priority scheduling timeline"
+    },
+    {
+      "name": "WaitForGraph",
+      "file": "src/components/Rtos.tsx",
+      "summary": "Tasks and resource dependency graph"
+    },
+    {
+      "name": "SemaphoreBoard",
+      "file": "src/components/Semaphore.tsx",
+      "summary": "Stored permits, holders and waiting tasks change with take/give; handoff moves a permit to a blocked task",
+      "signature": "({count,limit,holders,waiting,handoff,event})"
+    }
+  ],
+  "shared": {
+    "files": [
+      "src/components/Plot.tsx",
+      "src/components/ui.tsx"
+    ],
+    "note": "L1c shared layer"
+  },
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": []
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^rt\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "Embedded Systems L1; RTOS L2"
+    ]
+  },
+  "mechanismRevision": "20261009-micro-semaphore-v1"
+}

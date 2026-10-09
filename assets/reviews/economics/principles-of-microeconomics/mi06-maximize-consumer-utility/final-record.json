@@ -1,0 +1,323 @@
+{
+  "id": "C13-A006",
+  "subject": "Economics",
+  "course": "Principles of Microeconomics",
+  "textbook": "Microeconomics, 5e (Perloff)",
+  "title": "Utility Maximization: Find the Budget Tangency",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.mp4",
+  "tags": [
+    "C13-A006",
+    "14.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English concept animation about Utility Maximization for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A consumer has budget x+y=10 and Cobb-Douglas utility sqrt(xy). Show Reallocate spending between equally priced goods. Then Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls. The visible result must prove: The utility curve touches the budget at (5,5), where MRS equals the price ratio. Follow the final scene timing: 0–5s: A Fixed Budget; 5–12s: Try a Lopsided Bundle; 12–20s: Slide Toward the Tangency; 20–25s: Go Too Far; 25–30s: Balance Marginal Utility.\n\nUse background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: More of one good alone need not raise utility when the other is sacrificed. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.",
+  "original_name": "Maximize consumer utility",
+  "standard_name": "Utility Maximization",
+  "aliases": [],
+  "final_title": "Utility Maximization: Find the Budget Tangency",
+  "learning_objective": "The utility curve touches the budget at (5,5), where MRS equals the price ratio.",
+  "core_conclusion": "The utility curve touches the budget at (5,5), where MRS equals the price ratio.",
+  "references": [
+    {
+      "title": "OpenStax: Consumption Choices",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices"
+    }
+  ],
+  "artifact_version": "micro-semaphore-20261009-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Maximize consumer utility” using this visual metaphor: “a single animated economic graph tracing one mechanism for Maximize consumer utility”. Dynamically demonstrate the core formula or conclusion: Utility maximization occurs where $MRS=P_x/P_y$ on the budget line..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF4F1); main visual (#1E4F4C); secondary visual (#8E2B4E); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/principles-of-microeconomics/src/videos/mi06-maximize-consumer-utility.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-microeconomics/src/videos/mi06-maximize-consumer-utility.tsx",
+    "scenes": [
+      {
+        "id": "step1",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "A Fixed Budget; Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls.",
+        "cause": "Reallocate spending between equally priced goods.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step2",
+        "start_seconds": 5.0,
+        "end_seconds": 12.0,
+        "reading_seconds": 6.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Try a Lopsided Bundle; Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls.",
+        "cause": "Reallocate spending between equally priced goods.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step3",
+        "start_seconds": 12.0,
+        "end_seconds": 20.0,
+        "reading_seconds": 7.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Slide Toward the Tangency; Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls.",
+        "cause": "Reallocate spending between equally priced goods.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step4",
+        "start_seconds": 20.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Go Too Far; Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls.",
+        "cause": "Reallocate spending between equally priced goods.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step5",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Balance Marginal Utility; Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls.",
+        "cause": "Reallocate spending between equally priced goods.",
+        "result": "The utility curve touches the budget at (5,5), where MRS equals the price ratio.",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-microeconomics/src/videos/mi06-maximize-consumer-utility.state.ts",
+      "bindings": "The same tested stateAt(frame) drives actual curves, numeric markers, areas, bundles, permit count and task membership."
+    },
+    "template_scope": "Shared L1 furniture/theme and registered L2 primitives; no cross-topic shared L3 scene factory. Each topic has its own mechanism state and scenario.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "step4",
+        "uncertainty": "More of one good alone need not raise utility when the other is sacrificed.",
+        "expected_observation": "Move the bundle along the budget from (1,9) to (5,5), then to (8,2); the attainable utility rises then falls."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 24.333333333333332,
+        "reason": "Inspect the uncertain state change before, during and after in the final MP4"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Correct actual Unicode glyphs and exact tick labels; replace transition-boundary contact frames.",
+        "affected_ids": [
+          "C13-A006"
+        ],
+        "status": "resolved",
+        "fix": "Bounded curve sampling and separated labels; targeted re-render and final-frame review.",
+        "evidence": [
+          "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/contact-sheet.jpg",
+          "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v2",
+    "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+    "reviewed_at": "2026-10-09T18:54:36.257659+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v2",
+      "reviewer": "Codex — executed source/state/TypeScript/media checks",
+      "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v2",
+      "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+      "reviewed_at": "2026-10-09T18:54:36.257659+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/risk-sheet.jpg"
+      ],
+      "observed": "The bundle travels along the fixed budget from(1,9) toward tangency(5,5), utility rises3→5, then overshoot toward(8,2) lowers utility before returning. At 23.83/24.33/24.83s the dot moves right/down and utility4.44→4.27→4.07; this visibly verifies that more X alone does not improve utility.",
+      "final_mp4_path": "assets/videos/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.mp4",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "teaching_vetoes": {
+        "main_graph_static": false,
+        "mechanism_only_in_text": false,
+        "inconsistent_visual_state": false
+      },
+      "veto_evidence": "The bundle travels along the fixed budget from(1,9) toward tangency(5,5), utility rises3→5, then overshoot toward(8,2) lowers utility before returning. At 23.83/24.33/24.83s the dot moves right/down and utility4.44→4.27→4.07; this visibly verifies that more X alone does not improve utility.",
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": [
+            "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/risk-sheet.jpg"
+          ],
+          "times_seconds": [
+            23.833333333333332,
+            24.333333333333332,
+            24.833333333333332
+          ],
+          "observation": "The bundle travels along the fixed budget from(1,9) toward tangency(5,5), utility rises3→5, then overshoot toward(8,2) lowers utility before returning. At 23.83/24.33/24.83s the dot moves right/down and utility4.44→4.27→4.07; this visibly verifies that more X alone does not improve utility."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — final scene and Prompt alignment inspection",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.md",
+      "assets/source-kits/principles-of-microeconomics/src/videos/mi06-maximize-consumer-utility.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v2",
+      "record_id": "recvvJaLoUuI2l",
+      "verified_at": "2026-10-09T18:59:04.302784+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/9601b7db-3775-444f-a3c4-7b5b0d18e05a",
+        "comment_id": 6079517547,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125#issuecomment-6079517547",
+        "issue_number": 125,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125",
+        "video_version": "micro-semaphore-20261009-v2",
+        "video_bytes": 2636437,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/9601b7db-3775-444f-a3c4-7b5b0d18e05a",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-01.md#c13-a006"
+    }
+  },
+  "feishu_record_id": "recvvJaLoUuI2l",
+  "page": "catalog/economics/14-01.md",
+  "course_code": "14.01",
+  "seo_title": "Utility Maximization: Find the Budget Tangency",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A consumer has budget x+y=10 and Cobb-Douglas utility sqrt(xy).",
+    "original_name": "Maximize consumer utility",
+    "standard_name": "Utility Maximization",
+    "sources": [
+      {
+        "title": "OpenStax: Consumption Choices",
+        "url": "https://openstax.org/books/principles-microeconomics-3e/pages/6-1-consumption-choices"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v2",
+    "reviewer": "Codex — direct cover overview and pixel geometry audit",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.jpg",
+      "assets/reviews/economics/principles-of-microeconomics/mi06-maximize-consumer-utility/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLoUuI2l",
+      "bbox": [
+        230,
+        270,
+        746,
+        646
+      ],
+      "width": 516,
+      "height": 376,
+      "dx": -12.0,
+      "dy": 8.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.md",
+  "cover_image": "assets/covers/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.jpg",
+  "cover_version": "micro-semaphore-20261009-v2",
+  "feishu": {
+    "record_id": "recvvJaLoUuI2l",
+    "verified": true,
+    "verified_at": "2026-10-09T18:59:04.302784+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/9601b7db-3775-444f-a3c4-7b5b0d18e05a",
+  "player_version": "micro-semaphore-20261009-v2"
+}

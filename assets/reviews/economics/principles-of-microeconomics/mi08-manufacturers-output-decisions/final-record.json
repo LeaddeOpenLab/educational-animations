@@ -1,0 +1,323 @@
+{
+  "id": "C13-A008",
+  "subject": "Economics",
+  "course": "Principles of Microeconomics",
+  "textbook": "Microeconomics, 5e (Perloff)",
+  "title": "Profit Maximization: Choose Five Units",
+  "status": "ready",
+  "video": "assets/videos/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.mp4",
+  "tags": [
+    "C13-A008",
+    "14.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English concept animation about Profit Maximization for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A price-taking firm faces P=12 and TC=8+2Q+Q². Show Increase output while comparing marginal revenue with marginal cost. Then Add output one unit at a time; revenue and cost bars change, and profit first rises then falls. The visible result must prove: Continuous optimum Q=5 maximizes profit at seventeen; the sixth unit reduces profit. Follow the final scene timing: 0–5s: A Price-Taking Firm; 5–11s: Add a Profitable Unit; 11–19s: Find the Profit Peak; 19–25s: One Unit Too Many; 25–30s: Use the Marginal Rule.\n\nUse background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: MR=MC is the marginal rule; total revenue is not profit. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.",
+  "original_name": "Manufacturer's output decisions",
+  "standard_name": "Profit Maximization",
+  "aliases": [],
+  "final_title": "Profit Maximization: Choose Five Units",
+  "learning_objective": "Continuous optimum Q=5 maximizes profit at seventeen; the sixth unit reduces profit.",
+  "core_conclusion": "Continuous optimum Q=5 maximizes profit at seventeen; the sixth unit reduces profit.",
+  "references": [
+    {
+      "title": "OpenStax: Competitive Firm Output Decisions",
+      "url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions"
+    }
+  ],
+  "artifact_version": "micro-semaphore-20261009-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Manufacturer's output decisions” using this visual metaphor: “a single animated economic graph tracing one mechanism for Manufacturer's output decisions”. Dynamically demonstrate the core formula or conclusion: A firm chooses the output that maximizes $\\pi(q)=R(q)-C(q)$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/principles-of-microeconomics/src/videos/mi08-manufacturers-output-decisions.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/principles-of-microeconomics/src/videos/mi08-manufacturers-output-decisions.tsx",
+    "scenes": [
+      {
+        "id": "step1",
+        "start_seconds": 0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "A Price-Taking Firm; Add output one unit at a time; revenue and cost bars change, and profit first rises then falls.",
+        "cause": "Increase output while comparing marginal revenue with marginal cost.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step2",
+        "start_seconds": 5.0,
+        "end_seconds": 11.0,
+        "reading_seconds": 5.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Add a Profitable Unit; Add output one unit at a time; revenue and cost bars change, and profit first rises then falls.",
+        "cause": "Increase output while comparing marginal revenue with marginal cost.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step3",
+        "start_seconds": 11.0,
+        "end_seconds": 19.0,
+        "reading_seconds": 7.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Find the Profit Peak; Add output one unit at a time; revenue and cost bars change, and profit first rises then falls.",
+        "cause": "Increase output while comparing marginal revenue with marginal cost.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step4",
+        "start_seconds": 19.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 5.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "One Unit Too Many; Add output one unit at a time; revenue and cost bars change, and profit first rises then falls.",
+        "cause": "Increase output while comparing marginal revenue with marginal cost.",
+        "result": "The visible mechanism state at this stage",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      },
+      {
+        "id": "step5",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.5,
+        "objects": [
+          "demand/supply or marginal curves",
+          "numeric point/area values",
+          "traded units"
+        ],
+        "change": "Use the Marginal Rule; Add output one unit at a time; revenue and cost bars change, and profit first rises then falls.",
+        "cause": "Increase output while comparing marginal revenue with marginal cost.",
+        "result": "Continuous optimum Q=5 maximizes profit at seventeen; the sixth unit reduces profit.",
+        "timing_reason": "Keep numeric comparisons legible while the causal mechanism changes."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/principles-of-microeconomics/src/videos/mi08-manufacturers-output-decisions.state.ts",
+      "bindings": "The same tested stateAt(frame) drives actual curves, numeric markers, areas, bundles, permit count and task membership."
+    },
+    "template_scope": "Shared L1 furniture/theme and registered L2 primitives; no cross-topic shared L3 scene factory. Each topic has its own mechanism state and scenario.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "step3",
+        "uncertainty": "MR=MC is the marginal rule; total revenue is not profit.",
+        "expected_observation": "Add output one unit at a time; revenue and cost bars change, and profit first rises then falls."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 16.666666666666668,
+        "reason": "Inspect the uncertain state change before, during and after in the final MP4"
+      }
+    ],
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Correct actual Unicode glyphs and exact tick labels; replace transition-boundary contact frames.",
+        "affected_ids": [
+          "C13-A008"
+        ],
+        "status": "resolved",
+        "fix": "Bounded curve sampling and separated labels; targeted re-render and final-frame review.",
+        "evidence": [
+          "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/contact-sheet.jpg",
+          "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/risk-sheet.jpg"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v2",
+    "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+    "reviewed_at": "2026-10-09T18:54:36.260240+08:00",
+    "evidence": [
+      "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/contact-sheet.jpg",
+      "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v2",
+      "reviewer": "Codex — executed source/state/TypeScript/media checks",
+      "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "micro-semaphore-20261009-v2",
+      "reviewer": "Codex — direct final MP4 contact/risk image inspection",
+      "reviewed_at": "2026-10-09T18:54:36.260240+08:00",
+      "evidence": [
+        "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/contact-sheet.jpg",
+        "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/risk-sheet.jpg"
+      ],
+      "observed": "Revenue/cost bars grow with output and the green profit dot moves along the plotted alternatives. Q5 gives revenue60 cost43 profit17; Q6 gives72/56/16, then output returns5. At16.17/16.67/17.17s the highlighted alternative moves4→5 and profit16→17. This shows the profit peak rather than a title-only rule.",
+      "final_mp4_path": "assets/videos/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.mp4",
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "teaching_vetoes": {
+        "main_graph_static": false,
+        "mechanism_only_in_text": false,
+        "inconsistent_visual_state": false
+      },
+      "veto_evidence": "Revenue/cost bars grow with output and the green profit dot moves along the plotted alternatives. Q5 gives revenue60 cost43 profit17; Q6 gives72/56/16, then output returns5. At16.17/16.67/17.17s the highlighted alternative moves4→5 and profit16→17. This shows the profit peak rather than a title-only rule.",
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "evidence": [
+            "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/risk-sheet.jpg"
+          ],
+          "times_seconds": [
+            16.166666666666668,
+            16.666666666666668,
+            17.166666666666668
+          ],
+          "observation": "Revenue/cost bars grow with output and the green profit dot moves along the plotted alternatives. Q5 gives revenue60 cost43 profit17; Q6 gives72/56/16, then output returns5. At16.17/16.67/17.17s the highlighted alternative moves4→5 and profit16→17. This shows the profit peak rather than a title-only rule."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — final scene and Prompt alignment inspection",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/prompts/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.md",
+      "assets/source-kits/principles-of-microeconomics/src/videos/mi08-manufacturers-output-decisions.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v2",
+      "record_id": "recvvJaLoYdrJp",
+      "verified_at": "2026-10-09T18:59:04.302784+08:00"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "micro-semaphore-20261009-v2",
+      "page_status": "published",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/2503d88a-9200-428f-ace1-1e0ba328cf00",
+        "comment_id": 6079519862,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125#issuecomment-6079519862",
+        "issue_number": 125,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/125",
+        "video_version": "micro-semaphore-20261009-v2",
+        "video_bytes": 1644702,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/2503d88a-9200-428f-ace1-1e0ba328cf00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/economics/14-01.md#c13-a008"
+    }
+  },
+  "feishu_record_id": "recvvJaLoYdrJp",
+  "page": "catalog/economics/14-01.md",
+  "course_code": "14.01",
+  "seo_title": "Profit Maximization: Choose Five Units",
+  "terminology": {
+    "confirmed": true,
+    "scope": "A price-taking firm faces P=12 and TC=8+2Q+Q².",
+    "original_name": "Manufacturer's output decisions",
+    "standard_name": "Profit Maximization",
+    "sources": [
+      {
+        "title": "OpenStax: Competitive Firm Output Decisions",
+        "url": "https://openstax.org/books/principles-microeconomics-3e/pages/8-2-how-perfectly-competitive-firms-make-output-decisions"
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "micro-semaphore-20261009-v2",
+    "reviewer": "Codex — direct cover overview and pixel geometry audit",
+    "reviewed_at": "2026-10-09T18:57:27.282392+08:00",
+    "evidence": [
+      "assets/covers/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.jpg",
+      "assets/reviews/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLoYdrJp",
+      "bbox": [
+        253,
+        266,
+        763,
+        648
+      ],
+      "width": 510,
+      "height": 382,
+      "dx": 8.0,
+      "dy": 7.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.jpg",
+  "prompt_file": "assets/prompts/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.md",
+  "cover_image": "assets/covers/economics/principles-of-microeconomics/mi08-manufacturers-output-decisions.jpg",
+  "cover_version": "micro-semaphore-20261009-v2",
+  "feishu": {
+    "record_id": "recvvJaLoYdrJp",
+    "verified": true,
+    "verified_at": "2026-10-09T18:59:04.302784+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/2503d88a-9200-428f-ace1-1e0ba328cf00",
+  "player_version": "micro-semaphore-20261009-v2"
+}

@@ -442,17 +442,17 @@
 - [C12-A013 · Situational effects](psychology/9-00.md#c12-a013) — awaiting production
 ## Principles of Microeconomics
 
-- [C13-A001 · Supply and demand balance](economics/14-01.md#c13-a001) — awaiting production
-- [C13-A002 · Relatively static](economics/14-01.md#c13-a002) — awaiting production
-- [C13-A003 · Elasticity of demand](economics/14-01.md#c13-a003) — awaiting production
-- [C13-A004 · Tax burden incidence](economics/14-01.md#c13-a004) — awaiting production
-- [C13-A005 · Deadweight loss](economics/14-01.md#c13-a005) — awaiting production
-- [C13-A006 · Maximize consumer utility](economics/14-01.md#c13-a006) — awaiting production
-- [C13-A007 · Cost curve](economics/14-01.md#c13-a007) — awaiting production
-- [C13-A008 · Manufacturer's output decisions](economics/14-01.md#c13-a008) — awaiting production
-- [C13-A009 · Perfect competition](economics/14-01.md#c13-a009) — awaiting production
-- [C13-A010 · Monopoly pricing](economics/14-01.md#c13-a010) — awaiting production
-- [C13-A011 · Market welfare](economics/14-01.md#c13-a011) — awaiting production
+- [C13-A001 · Market Equilibrium](economics/14-01.md#c13-a001) — video
+- [C13-A002 · Comparative Statics](economics/14-01.md#c13-a002) — video
+- [C13-A003 · Price Elasticity of Demand](economics/14-01.md#c13-a003) — video
+- [C13-A004 · Tax Incidence](economics/14-01.md#c13-a004) — video
+- [C13-A005 · Deadweight Loss](economics/14-01.md#c13-a005) — video
+- [C13-A006 · Utility Maximization](economics/14-01.md#c13-a006) — video
+- [C13-A007 · Cost Curves](economics/14-01.md#c13-a007) — video
+- [C13-A008 · Profit Maximization](economics/14-01.md#c13-a008) — video
+- [C13-A009 · Perfect Competition](economics/14-01.md#c13-a009) — video
+- [C13-A010 · Monopoly Pricing](economics/14-01.md#c13-a010) — video
+- [C13-A011 · Market Welfare](economics/14-01.md#c13-a011) — video
 ## Principles of Macroeconomics
 
 - [C14-A001 · GDP Accounting](economics/14-02.md#c14-a001) — video
@@ -557,6 +557,7 @@
 - [C37-A002 · Priority Preemption](embedded-systems/es-rtos.md#c37-a002) — video
 - [C37-A003 · Mutex and Critical Section](embedded-systems/es-rtos.md#c37-a003) — video
 - [C37-A004 · Priority Inversion](embedded-systems/es-rtos.md#c37-a004) — video
+- [C37-A005 · Counting Semaphore](embedded-systems/es-rtos.md#c37-a005) — video
 ## Digital Logic Design
 
 - [C38-A001 · Combinational Propagation Delay](digital-electronics/de-dld.md#c38-a001) — video

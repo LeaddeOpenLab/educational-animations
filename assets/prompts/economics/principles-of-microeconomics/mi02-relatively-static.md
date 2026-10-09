@@ -1,0 +1,9 @@
+# C13-A002 · Comparative Statics
+
+Version: micro-semaphore-20261009-v3 · alignment: aligned
+
+Create a 30-second silent English concept animation about Comparative Statics for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A population increase shifts apple demand from P=12-Q to P=16-Q with supply fixed. Show A non-price demand determinant changes; supply is held constant. Then Demand moves right while the old equilibrium stays as a reference; the new intersection moves from (5,7) to (7,9). The visible result must prove: Compare both equilibrium coordinates, not a path forecast. Follow the final scene timing: 0–6s: Hold Supply Fixed; 6–12s: More Buyers at Each Price; 12–21s: Find the New Intersection; 21–30s: Compare Two Equilibria.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Comparative statics compares endpoints; it does not predict adjustment speed. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v3; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

@@ -1,0 +1,9 @@
+# C13-A011 · Market Welfare
+
+Version: micro-semaphore-20261009-v2 · alignment: aligned
+
+Create a 30-second silent English concept animation about Market Welfare for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: Consumers and producers trade with demand P=12-Q and supply P=2+Q. Show Trade the next unit only while willingness to pay exceeds marginal cost. Then Accumulate value and cost for units from zero to five, split total gains at P=7, then try a sixth unit with negative gains. The visible result must prove: Consumer and producer surplus are each 12.5; total gains peak at 25. Follow the final scene timing: 0–5s: Trace Gains from Each Trade; 5–12s: Build Total Surplus; 12–20s: Split Gains at the Market Price; 20–26s: A Sixth Trade Destroys Value; 26–30s: Maximize Total Gains.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Market price divides surplus; it is not the entire social value. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

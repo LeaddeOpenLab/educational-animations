@@ -2,7 +2,7 @@
 
 Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.
 
-**395 video-ready · 89 recorded review passes · 117 awaiting production · 45 courses · 17 disciplines**
+**407 video-ready · 101 recorded review passes · 106 awaiting production · 45 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -133,7 +133,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#economics"><img src="assets/subject-cards/economics.png" width="100%" alt="Economics"></a><br>
 <a href="#economics"><strong>Economics</strong></a><br>
-<sub>3 courses · 20 videos · 11 awaiting production</sub>
+<sub>3 courses · 31 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#finance"><img src="assets/subject-cards/finance.png" width="100%" alt="Finance"></a><br>
@@ -167,7 +167,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#embedded-systems"><img src="assets/subject-cards/embedded-systems.png" width="100%" alt="Embedded Systems"></a><br>
 <a href="#embedded-systems"><strong>Embedded Systems</strong></a><br>
-<sub>2 courses · 8 videos · 0 awaiting production</sub>
+<sub>2 courses · 9 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#digital-electronics"><img src="assets/subject-cards/digital-electronics.png" width="100%" alt="Digital Electronics"></a><br>
@@ -515,7 +515,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="economics"></a>
 ### Economics
 
-20 videos · 11 awaiting production
+31 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -523,7 +523,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="principles-of-microeconomics"></a>
 <a href="catalog/economics/14-01.md"><img src="assets/course-covers/14.01.svg" width="100%" alt="Principles of Microeconomics"></a><br>
 <a href="catalog/economics/14-01.md"><strong>Principles of Microeconomics</strong></a><br>
-<sub>0 videos · 11 awaiting production · No finished videos yet</sub>
+<sub>11 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a id="principles-of-macroeconomics"></a>
@@ -651,7 +651,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="embedded-systems"></a>
 ### Embedded Systems
 
-8 videos · 0 awaiting production
+9 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -665,7 +665,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="real-time-operating-systems"></a>
 <a href="catalog/embedded-systems/es-rtos.md"><img src="assets/course-covers/es-rtos.svg" width="100%" alt="Real-Time Operating Systems"></a><br>
 <a href="catalog/embedded-systems/es-rtos.md"><strong>Real-Time Operating Systems</strong></a><br>
-<sub>4 videos · 0 awaiting production</sub>
+<sub>5 videos · 0 awaiting production</sub>
 </td>
 <td></td>
 </tr>

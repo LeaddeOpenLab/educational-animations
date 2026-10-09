@@ -1,0 +1,9 @@
+# C13-A004 · Tax Incidence
+
+Version: micro-semaphore-20261009-v3 · alignment: aligned
+
+Create a 30-second silent English concept animation about Tax Incidence for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A per-unit tax grows from zero to four in a linear apple market. Show Government introduces a four-dollar wedge. Then The supply curve moves up, buyer and seller prices separate to 9 and 5; quantity contracts to three. The visible result must prove: Pc-Pp=4; buyer and seller each bear two per unit in this symmetric example. Follow the final scene timing: 0–6s: Before the Tax; 6–14s: Insert the Tax Wedge; 14–22s: Split the Burden; 22–30s: The Wedge Reduces Trade.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: The statutory taxpayer does not determine economic incidence. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v3; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

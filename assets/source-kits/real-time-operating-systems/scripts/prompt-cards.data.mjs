@@ -1,0 +1,8 @@
+export const COURSE="Real-Time Operating Systems";
+export const CARDS=[
+  {id:"rt01-task-state-transitions",file:"01_Task_State_Transitions",knowledgePoint:"Task State Transitions",task:"Follow dispatch, wait, event wakeup, and preemption through ready, running, and blocked states.",palette:"signals-engineering",motion:['draw-on paths over 50 frames','stagger-in labels every 10 frames','marker-travel through the mechanism'],beats:{title:{},mechanism:{},example:{},failure:{},closing:{}}},
+  {id:"rt02-priority-preemption",file:"02_Priority_Preemption",knowledgePoint:"Priority Preemption",task:"Show an urgent task cutting into a lower-priority CPU interval and the interrupted task resuming later.",palette:"signals-engineering",motion:['draw-on paths over 50 frames','stagger-in labels every 10 frames','marker-travel through the mechanism'],beats:{title:{},mechanism:{},example:{},failure:{},closing:{}}},
+  {id:"rt03-mutex-and-critical-section",file:"03_Mutex_and_Critical_Section",knowledgePoint:"Mutex and Critical Section",task:"Use explicit mutex ownership to serialize access to a shared invariant.",palette:"signals-engineering",motion:['draw-on paths over 50 frames','stagger-in labels every 10 frames','marker-travel through the mechanism'],beats:{title:{},mechanism:{},example:{},failure:{},closing:{}}},
+  {id:"rt04-priority-inversion",file:"04_Priority_Inversion",knowledgePoint:"Priority Inversion",task:"Reveal how a medium task can delay a high task through a low-priority lock owner, then apply inheritance.",palette:"signals-engineering",motion:['draw-on paths over 50 frames','stagger-in labels every 10 frames','marker-travel through the mechanism'],beats:{title:{},mechanism:{},example:{},failure:{},closing:{}}},
+];
+

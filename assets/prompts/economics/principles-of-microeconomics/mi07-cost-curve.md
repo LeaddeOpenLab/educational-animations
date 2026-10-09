@@ -1,0 +1,9 @@
+# C13-A007 · Cost Curves
+
+Version: micro-semaphore-20261009-v2 · alignment: aligned
+
+Create a 30-second silent English concept animation about Cost Curves for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A firm has TC=16+2Q+Q² and averages ATC=16/Q+2+Q, AVC=2+Q. Show An extra unit adds marginal cost and spreads fixed cost. Then Increase Q through four; MC=2+2Q crosses the falling then rising ATC at its minimum. The visible result must prove: At Q=4, MC and ATC both equal ten, while AFC continues falling. Follow the final scene timing: 0–6s: Separate Fixed and Variable Cost; 6–13s: Spread Fixed Cost; 13–21s: Marginal Cost Pulls the Average; 21–30s: The Crossing Is the Minimum.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: MC equals ATC at the average minimum, not everywhere. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

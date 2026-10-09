@@ -1,0 +1,9 @@
+# C13-A005 · Deadweight Loss
+
+Version: micro-semaphore-20261009-v3 · alignment: aligned
+
+Create a 30-second silent English concept animation about Deadweight Loss for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A quota contracts trade in a market with MB=12-Q and MC=2+Q. Show A binding quantity restriction excludes mutually beneficial trades. Then Remove units from Q=5 to Q=2, shade the foregone positive-surplus trades and integrate their value. The visible result must prove: The triangle reaches area nine at Q=2; lost trades have MB greater than MC. Follow the final scene timing: 0–6s: Efficient Trade at Five; 6–12s: Impose a Quantity Limit; 12–21s: Reveal the Lost Trades; 21–30s: Sum the Foregone Gains.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Tax revenue is a transfer; the lost gains from trade are the loss. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v3; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

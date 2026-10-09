@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "reviewed_at": "2026-10-09T18:55:23.453799+08:00",
+  "typechecks": [
+    [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/principles-of-microeconomics-types-final.log",
+      0
+    ],
+    [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/real-time-operating-systems-types-final.log",
+      0
+    ]
+  ],
+  "distinctness": [
+    [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/principles-of-microeconomics-distinctness-final.log",
+      0
+    ],
+    [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/real-time-operating-systems-distinctness-final.log",
+      0
+    ]
+  ],
+  "state_assertions": {
+    "logs": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoPTl58/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoWlkL2/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoYdrJp/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoUuI2l/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoSiHv0/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvw1Ekn4UOGZ/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoNepUt/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoLuHpS/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLp5jNDQ/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLp077SR/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLoJZCd3/b1-final.log",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/recvvJaLp3lRun/b1-final.log"
+    ],
+    "exit_code": 0
+  },
+  "overlap": [
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/principles-of-microeconomics-overlap-final.log",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261009-micro-semaphore/real-time-operating-systems-overlap-final.log"
+  ],
+  "media": [
+    {
+      "record_id": "recvvJaLoJZCd3",
+      "version": "v3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoLuHpS",
+      "version": "v3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoNepUt",
+      "version": "v3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoPTl58",
+      "version": "v3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoSiHv0",
+      "version": "v3",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoUuI2l",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoWlkL2",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLoYdrJp",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLp077SR",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLp3lRun",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvvJaLp5jNDQ",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    },
+    {
+      "record_id": "recvw1Ekn4UOGZ",
+      "version": "v2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "fps": 30,
+      "duration_seconds": 30,
+      "video_only": true
+    }
+  ]
+}

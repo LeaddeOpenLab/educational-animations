@@ -1,0 +1,9 @@
+# C13-A010 · Monopoly Pricing
+
+Version: micro-semaphore-20261009-v2 · alignment: aligned
+
+Create a 30-second silent English concept animation about Monopoly Pricing for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: A single seller faces inverse demand P=14-Q and MC=2+Q. Show One seller recognizes the price cut needed to sell more units. Then Choose Q where MR=14-2Q meets MC, then trace vertically to demand to set price. The visible result must prove: Monopoly Q=4,P=10; competitive benchmark Q=6,P=8; lost surplus is six. Follow the final scene timing: 0–5s: Demand Is Above Marginal Revenue; 5–11s: Choose Quantity at MR = MC; 11–19s: Read Price from Demand; 19–25s: Compare Competitive Trade; 25–30s: A Smaller Quantity at a Higher Price.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Reading price from MR incorrectly gives six rather than ten. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v2; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.

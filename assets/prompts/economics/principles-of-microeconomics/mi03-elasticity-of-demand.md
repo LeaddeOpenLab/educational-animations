@@ -1,0 +1,9 @@
+# C13-A003 · Price Elasticity of Demand
+
+Version: micro-semaphore-20261009-v3 · alignment: aligned
+
+Create a 30-second silent English concept animation about Price Elasticity of Demand for Principles of Microeconomics, Economics, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: Two local demand curves share P=6,Q=6; elastic slope dQ/dP=-2 versus inelastic slope -0.5. Show A price cut on each fixed demand curve. Then Lower P from 6 to 5; quantity and revenue rectangles change in opposite directions across the examples. The visible result must prove: Elastic revenue rises from 36 to 40; inelastic revenue falls to 32.5. Follow the final scene timing: 0–5s: Same Starting Point; 5–12s: Compute the Point Elasticity; 12–19s: Cut Both Prices; 19–25s: Compare Revenue Rectangles; 25–30s: Elasticity Predicts Revenue.
+
+Use background #ffffff → #f6f8fb → #eaeff6, primary #cc6677 for the main curve/object, accent #332288 for the changed quantity, result #117733 for the conclusion, warning #882255 for loss/waiting and alternate #aa4499 for the comparison; use "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif with bold 48px headings, 30px left-column captions and readable mechanism labels in the right figure band. Use marker-travel and state-driven curve/area or permit/task changes, plus stagger-in over 12–16 frames and short scene fades. Keep text fully settled at least 25 frames before each cut. Avoid this misconception: Slope alone is not elasticity; use percent changes and the starting point. Exact reproduction requires the supplied principles-of-microeconomics source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v3; clean-machine exact reproduction has not been tested.
+
+The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested.
