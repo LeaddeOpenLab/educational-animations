@@ -1,0 +1,352 @@
+{
+  "id": "recvw25vjMVXP1",
+  "feishu_record_id": "recvw25vjMVXP1",
+  "original_name": "On-Device Feature Extraction",
+  "standard_name": "On-Device Feature Extraction",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v2",
+  "learning_objective": "Compute a compact RMS feature from a sensor window, and show the information it discards.",
+  "core_conclusion": "A feature summarizes a property rather than retaining the whole signal",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.edgeimpulse.com/docs/edge-impulse-studio/processing-blocks/spectral-features"
+    ],
+    "scope": "Compute a compact RMS feature from a sensor window, and show the information it discards."
+  },
+  "references": [
+    "https://docs.edgeimpulse.com/docs/edge-impulse-studio/processing-blocks/spectral-features"
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "scenes": [
+      {
+        "id": "samples",
+        "objects": "Four acceleration samples: -1, 1, -1, 1; a four-sample window",
+        "change": "Reveal signed stems in chronological order",
+        "cause": "A sensor supplies a short numerical window",
+        "result": "Samples retain their signs and temporal order",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "squares",
+        "objects": "Four signed samples paired with squared contributions",
+        "change": "Move each sample into a square operation; bars become 1, 1, 1, 1",
+        "cause": "RMS accumulates squared amplitudes",
+        "result": "Negative and positive amplitudes contribute equally",
+        "start_seconds": 5,
+        "end_seconds": 12,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "reduce",
+        "objects": "Running squared sum, count, mean square and RMS",
+        "change": "Accumulate 1+1+1+1; divide by 4; take square root",
+        "cause": "RMS equals sqrt(mean(x squared))",
+        "result": "One feature equals 1 for these four samples",
+        "start_seconds": 12,
+        "end_seconds": 22,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "compare",
+        "objects": "Original alternating window and constant +1 window",
+        "change": "Replace alternating stems with positive stems while RMS remains 1 and mean changes 0 to 1",
+        "cause": "Different waveforms may share the same RMS",
+        "result": "A feature summarizes a property rather than retaining the whole signal",
+        "start_seconds": 22,
+        "end_seconds": 28,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "squares",
+        "uncertainty": "Do not imply RMS alone uniquely identifies a waveform.",
+        "expected_observation": "Move each sample into a square operation; bars become 1, 1, 1, 1; One feature equals 1 for these four samples"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "square-input",
+        "time_seconds": 5.666666666666667,
+        "reason": "First signed sample acquires squared contribution"
+      },
+      {
+        "id": "rms-complete",
+        "time_seconds": 17.166666666666668,
+        "reason": "Fourth square completes the RMS reduction"
+      },
+      {
+        "id": "same-rms",
+        "time_seconds": 23.333333333333332,
+        "reason": "Alternating samples become positive without changing RMS"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge11-state.ts",
+      "bindings": {
+        "objects": "Explicit samples, selected indexes, values, memory/device ownership or class membership from one state function",
+        "values": "All displayed numerical values derived from the same state function",
+        "source_binding_review": "Final TSX directly calls same B1 state and passes its samples/values/coordinates into visible primitives and SVG fields."
+      }
+    },
+    "template_scope": "L1 visual theme and L2 primitives only; no shared L3 scenes",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:52:36.330222+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge11-15-core.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge11-state.ts",
+        "source_version": {
+          "state_size": 500,
+          "state_mtime_ns": 1791525123954712287,
+          "core_mtime_ns": 1791525155038141650
+        },
+        "source_check": "featureState maps squared sample arrays to TensorBars and running sum/RMS to numerical outputs; waveform changes preserve equal RMS at the counterexample.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "edge11: square/reduce and equal-RMS counterexample boundaries PASS",
+        "evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/b1-11-15.log",
+        "applicable_record_ids": [
+          "recvw25vjMVXP1"
+        ]
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:58:54.461770+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx",
+        "source_check": "Final source directly binds the B1 state function to topic-specific SVG objects and L2 primitives; SSR verifies full-scene values and transition differences.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "source_version": {
+          "mtime_ns": 1791525483467075348,
+          "size": 4342
+        }
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "V1 has negative-square notation −1²=1 without parentheses; repair to (−1)²=1 required.",
+        "affected_ids": [
+          "recvw25vjMVXP1"
+        ],
+        "fix": "Parenthesize negative base before squared notation.",
+        "status": "resolved",
+        "evidence": [
+          "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/overview.jpg"
+        ]
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge11-on-device-feature-extraction.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:17:32.788664+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/edge11-on-device-feature-extraction/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:32.788664+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/edge11-on-device-feature-extraction/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "square-input",
+          "times_seconds": [
+            5.633333333333334,
+            5.666666666666667,
+            5.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0169.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0170.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0171.png"
+          ],
+          "observation": "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00. At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00. V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+        },
+        {
+          "risk_id": "rms-complete",
+          "times_seconds": [
+            17.133333333333333,
+            17.166666666666668,
+            17.2
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0514.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0515.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0516.png"
+          ],
+          "observation": "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00. At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00. V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+        },
+        {
+          "risk_id": "same-rms",
+          "times_seconds": [
+            23.3,
+            23.333333333333332,
+            23.366666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0699.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0700.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0701.png"
+          ],
+          "observation": "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00. At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00. V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+        }
+      ],
+      "observations": [
+        "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00.",
+        "At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00.",
+        "V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "Do not imply RMS alone uniquely identifies a waveform.",
+  "media": {
+    "duration_seconds": 28.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "On-Device Feature Extraction: RMS Features",
+  "title": "On-Device Feature Extraction: RMS Features",
+  "prompt": "A 28-second silent English digital electronics animation about On-Device Feature Extraction: show signed samples [-1,1,-1,1] becoming four squared contributions, accumulate their sum, divide by four and take the square root to obtain RMS 1, then replace the waveform with [1,1,1,1] so the mean changes from 0 to 1 while RMS stays 1.\n\nDark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs and data, accent #e69f00 highlights the active quantity, result #009e73 marks the computed outcome, warn #d55e00 marks rejected states graphically, and alternate #cc79a7 distinguishes secondary categories; Helvetica Neue with bold headings and readable numerical labels; stagger-in signed stems and square cells over 12-frame entrances, marker-travel into each square over 28 frames, accumulate four contributions between frames 380 and 515, and change the waveform at frame 700, using 30 fps and keeping the final conclusion visible for reading.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 28.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.169392+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/on-device-feature-extraction-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/cover-03.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMVXP1",
+      "slug": "on-device-feature-extraction",
+      "version": "v2",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/on-device-feature-extraction.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:23:12+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        214,
+        194,
+        764,
+        665
+      ],
+      "bbox_width": 550,
+      "bbox_height": 471,
+      "center_offset": [
+        -11.0,
+        -20.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v2"
+}

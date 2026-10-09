@@ -570,3 +570,20 @@
 - [C39-A002 · Clock Domain Crossing](digital-electronics/de-fpga.md#c39-a002) — video
 - [C39-A003 · Pipeline Latency and Throughput](digital-electronics/de-fpga.md#c39-a003) — video
 - [C39-A004 · Resource Sharing vs Parallel Hardware](digital-electronics/de-fpga.md#c39-a004) — video
+## Edge AI and Embedded Machine Learning
+
+- [recvw25vjM9t27 · Edge Inference Pipeline from Sensor to Result](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjm9t27) — video
+- [recvw25vjMkk0g · Quantization from Float32 to Int8](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmkk0g) — video
+- [recvw25vjMaM6A · Calibration Dataset for Post-Training Quantization](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmam6a) — video
+- [recvw25vjM4V2u · Per-Channel Weight Quantization](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjm4v2u) — video
+- [recvw25vjMlEQf · Quantized Multiply and Accumulate](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmleqf) — video
+- [recvw25vjM41mv · Model Operator Compatibility Check](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjm41mv) — video
+- [recvw25vjMwJp0 · Memory Arena Planning for Tensor Lifetimes](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmwjp0) — video
+- [recvw25vjMBlJD · Flash and RAM Model Footprint](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmbljd) — video
+- [recvw25vjM9Ca5 · Structured Pruning for Edge Deployment](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjm9ca5) — video
+- [recvw25vjM2GBi · Knowledge Distillation to a Small Model](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjm2gbi) — video
+- [recvw25vjMVXP1 · On-Device Feature Extraction](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmvxp1) — video
+- [recvw25vjMcsUe · Streaming Inference with Sliding Windows](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmcsue) — video
+- [recvw25vjMKZj2 · Hardware Delegate Operator Partitioning](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmkzj2) — video
+- [recvw25vjMRg6A · Latency and Energy Measurement on Device](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmrg6a) — video
+- [recvw25wapJvFX · Confidence Threshold for Edge Classification](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25wapjvfx) — video

@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "artifact": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.mp4",
+  "artifact_identity": {
+    "bytes": 1144994,
+    "mtime_ns": 1791525691905991806
+  },
+  "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+  "reviewed_at": "2026-10-09T06:12:15.053677+00:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-risks.jpg"
+  ],
+  "checks": {
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true,
+    "version_match": true,
+    "terminology": true
+  },
+  "observations": [
+    "3.00–9.67 s: the MUL requirement has a registered kernel but RELU has an empty orange slot. The later unresolved view shows three empty output cells, so preparation failure has a visible consequence.",
+    "14.967→15.000 s: the RELU registry slot changes from No kernel to RELU kernel. At22.967 s both computation rows are empty; at23.000 s MUL cells become2,−2,3; at26.000 s RELU cells become2,0,3. The concrete negative-to-zero computation is visible.",
+    "Layout keeps registry and tensor data apart from concise copy; sampled settled frames are readable at640×360. Registry requirement lines have the valid relationship-teaching role; computation is also explicitly shown."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "kernel-insertion",
+      "times_seconds": [
+        14.966666666666667,
+        15.0,
+        15.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0449.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0450.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0451.jpg"
+      ],
+      "observation": "At449 RELU reads No kernel; at450 and451 the same slot contains RELU kernel, establishing changed registry membership.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "multiply",
+      "times_seconds": [
+        22.966666666666665,
+        23.0,
+        23.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0689.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0690.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0691.jpg"
+      ],
+      "observation": "At689 the MUL row has dashes; at690 and691 it contains2,−2,3 while the RELU row is still empty.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "relu-output",
+      "times_seconds": [
+        25.966666666666665,
+        26.0,
+        26.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0779.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0780.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0781.jpg"
+      ],
+      "observation": "At779 the RELU row has dashes; at780 and781 it contains2,0,3. The −2 input to RELU is clamped to0.",
+      "status": "passed"
+    }
+  ],
+  "three_veto_checks": {
+    "generic_shapes_without_mechanism": {
+      "triggered": false,
+      "reason": "14.967→15.000 s: the RELU registry slot changes from No kernel to RELU kernel. At22.967 s both computation rows are empty; at23.000 s MUL cells become2,−2,3; at26.000 s RELU cells become2,0,3. The concrete negative-to-zero computation is visible."
+    },
+    "no_explanatory_state_change": {
+      "triggered": false,
+      "reason": "At449 RELU reads No kernel; at450 and451 the same slot contains RELU kernel, establishing changed registry membership."
+    },
+    "operation_only_announced": {
+      "triggered": false,
+      "reason": "Layout keeps registry and tensor data apart from concise copy; sampled settled frames are readable at640×360. Registry requirement lines have the valid relationship-teaching role; computation is also explicitly shown."
+    }
+  },
+  "scope": "Actually inspected six-frame MP4 overview at640×360 per panel and all extracted before/at/after risk frames. Also read source state and plan for terminology/math consistency. This is teaching review; compilation/media/overlap remain separate technical gates.",
+  "repair_required": false,
+  "rework": []
+}

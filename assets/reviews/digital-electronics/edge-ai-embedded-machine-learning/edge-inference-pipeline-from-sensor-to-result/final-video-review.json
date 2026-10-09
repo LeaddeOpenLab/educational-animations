@@ -1,0 +1,76 @@
+{
+  "record_id": "recvw25vjM9t27",
+  "video_id": "edge01-edge-inference-pipeline-from-sensor-to-result",
+  "version": "v2",
+  "video_path": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.mp4",
+  "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+  "reviewed_at": "2026-10-09T06:15:31.533151+00:00",
+  "review_method": "Actually inspected all six v2 overview frames and every v2 risk before/during/after frame from final MP4; compared repaired intervals against v1 observations.",
+  "evidencepaths": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "raw-to-model",
+      "times_seconds": [
+        8.3,
+        8.333333333333334,
+        8.366666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0249.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0250.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0251.png"
+      ],
+      "observation": "Rechecked in v2 final MP4: At f249–251 raw labels and signed normalized bar values correspond correctly. The negative .50 bar extends left; row labeling is compact but readable."
+    },
+    {
+      "risk_id": "feature-to-score",
+      "times_seconds": [
+        23.633333333333333,
+        23.666666666666668,
+        23.7
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0709.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0710.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0711.png"
+      ],
+      "observation": "At v2 f709–711 the chart is partially faded in but both bars already show the normalized computed scores .23 and .77. Final f745 and f825 retain those values; incorrect probability growth is gone."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "passed",
+    "readability_at_640": "Main text and values readable; reviewed targeted v2 frames show no obscured critical labels.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "passed",
+  "observations": [
+    {
+      "times_seconds": [
+        4.0,
+        9.166666666666666,
+        15.666666666666666,
+        19.166666666666668,
+        24.833333333333332,
+        27.5
+      ],
+      "observation": "At 23.633–23.700 s, only opacity changes: score labels remain .23/.77 and sum to1. All v2 overview scenes retain the original sample normalization and RMS computation."
+    }
+  ],
+  "repairs": [],
+  "resolved_v1_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review-v1.json"
+}

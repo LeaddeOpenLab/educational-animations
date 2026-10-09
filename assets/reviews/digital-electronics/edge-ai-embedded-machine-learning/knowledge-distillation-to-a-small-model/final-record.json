@@ -1,0 +1,585 @@
+{
+  "id": "recvw25vjM2GBi",
+  "record_id": "recvw25vjM2GBi",
+  "batch_id": "batch-20261009-edge-ai",
+  "original_name": "Knowledge Distillation to a Small Model",
+  "standard_name": "Knowledge Distillation to a Small Model",
+  "Name": "Knowledge Distillation to a Small Model",
+  "Discipline": "Digital Electronics",
+  "Course": "Edge AI and Embedded Machine Learning",
+  "objective": "Show a fixed teacher probability distribution guiding successive updates of a smaller student, which alone is used at deployment.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "references": [
+      {
+        "topics": [
+          "Knowledge Distillation to a Small Model"
+        ],
+        "url": "https://keras.io/examples/vision/knowledge_distillation/",
+        "verified": "2026-10-09",
+        "basis": "Teacher predictions and labels train the student; the teacher remains frozen."
+      }
+    ],
+    "confirmed": true,
+    "sources": [
+      {
+        "url": "https://keras.io/examples/vision/knowledge_distillation/",
+        "scope": "Teacher predictions and labels train the student; the teacher remains frozen."
+      }
+    ],
+    "scope": "Show a fixed teacher probability distribution guiding successive updates of a smaller student, which alone is used at deployment."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "teacher",
+        "objects": [
+          "teacher 1000 illustrative parameters",
+          "student 100 illustrative parameters",
+          "shared cat/dog/bird input",
+          "teacher scores [0.65,0.25,0.10]"
+        ],
+        "change": "Send the same illustrative input to two different-size model grids; freeze the teacher grid and expose its fixed softened class distribution.",
+        "cause": "A pretrained teacher supplies soft training targets for the student.",
+        "result": "Teacher probabilities sum to one and remain the reference.",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "A pretrained teacher stays fixed.",
+          "Soft targets preserve class similarities."
+        ]
+      },
+      {
+        "id": "mismatch",
+        "objects": [
+          "teacher bars [0.65,0.25,0.10]",
+          "student bars [0.33,0.34,0.33]",
+          "three class correspondence guides"
+        ],
+        "change": "Reveal initially mismatched student bars on the same probability scale and connect corresponding class positions.",
+        "cause": "The student initially assigns probability mass differently from the teacher.",
+        "result": "The gap is visible for each class, not only the winning label.",
+        "start_seconds": 6,
+        "end_seconds": 12,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Teacher: 0.65 / 0.25 / 0.10",
+          "Student: 0.33 / 0.34 / 0.33"
+        ]
+      },
+      {
+        "id": "learn",
+        "objects": [
+          "frozen teacher bars",
+          "student parameter cells",
+          "student probability bars",
+          "step 0–3"
+        ],
+        "change": "Update only student parameter cells and move student probability mass through normalized illustrative steps [0.45,0.30,0.25], [0.55,0.28,0.17], [0.60,0.27,0.13]; teacher bars do not move.",
+        "cause": "Training minimizes disagreement with soft targets, usually combined with the label loss; these are illustrative update states rather than a claimed exact optimizer trace.",
+        "result": "The smaller student distribution approaches the teacher while each distribution stays normalized.",
+        "start_seconds": 12,
+        "end_seconds": 24,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Only the student learns.",
+          "Soft-target loss guides probability updates."
+        ]
+      },
+      {
+        "id": "deploy",
+        "objects": [
+          "student-only device",
+          "final student [0.60,0.27,0.13]",
+          "teacher training reference outside device"
+        ],
+        "change": "Move the trained student model into the device boundary while leaving the teacher outside; compute the final student distribution without a teacher dependency.",
+        "cause": "Deployment runs the smaller learned model on its own.",
+        "result": "The teacher is used during training; the deployed student produces its own prediction.",
+        "start_seconds": 24,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Deploy the student alone.",
+          "Size and probabilities are illustrative."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "student-update",
+        "scene_id": "learn",
+        "uncertainty": "Teacher values and parameters stay fixed while only student parameters and distribution change.",
+        "expected_observation": "The smaller student distribution approaches the teacher while each distribution stays normalized."
+      },
+      {
+        "id": "learning-complete",
+        "scene_id": "learn",
+        "uncertainty": "Remove teacher inference dependency from the deployed student scene.",
+        "expected_observation": "The smaller student distribution approaches the teacher while each distribution stays normalized."
+      },
+      {
+        "id": "student-deployment",
+        "scene_id": "deploy",
+        "uncertainty": "Remove teacher inference dependency from the deployed student scene.",
+        "expected_observation": "The teacher is used during training; the deployed student produces its own prediction."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "student-update",
+        "time_seconds": 15.666666666666666,
+        "reason": "Inspect actual student update at source state transition, including before and after."
+      },
+      {
+        "id": "learning-complete",
+        "time_seconds": 23.0,
+        "reason": "Inspect actual learning complete at source state transition, including before and after."
+      },
+      {
+        "id": "student-deployment",
+        "time_seconds": 25.833333333333332,
+        "reason": "Inspect actual student deployment at source state transition, including before and after."
+      }
+    ],
+    "state_model": {
+      "function": "distillationState(frame)",
+      "inputs": {
+        "teacher": [
+          0.65,
+          0.25,
+          0.1
+        ],
+        "studentSteps": [
+          [
+            0.33,
+            0.34,
+            0.33
+          ],
+          [
+            0.45,
+            0.3,
+            0.25
+          ],
+          [
+            0.55,
+            0.28,
+            0.17
+          ],
+          [
+            0.6,
+            0.27,
+            0.13
+          ]
+        ],
+        "labels": [
+          "cat",
+          "dog",
+          "bird"
+        ],
+        "illustrativeParameters": {
+          "teacher": 1000,
+          "student": 100
+        }
+      },
+      "planned_bindings": [
+        "teacher constant -> ScoreDistribution scores and locked parameter grid",
+        "student distribution from current update -> ScoreDistribution scores and numeric labels",
+        "student update index -> changed student parameter cells",
+        "deployment flag -> device membership, teacher absence from inference path"
+      ],
+      "invariants": [
+        "Teacher is exactly [.65,.25,.1] at all frames.",
+        "Each displayed student vector sums to one.",
+        "L1 disagreement decreases across illustrative training steps.",
+        "Deployed inference contains only student model."
+      ],
+      "b1_samples_seconds": [
+        5,
+        11,
+        12,
+        16,
+        20,
+        23,
+        24,
+        29
+      ],
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge10-distillation-state.tsx",
+      "bindings": [
+        "teacher constant -> ScoreDistribution scores and locked parameter grid",
+        "student distribution from current update -> ScoreDistribution scores and numeric labels",
+        "student update index -> changed student parameter cells",
+        "deployment flag -> device membership, teacher absence from inference path"
+      ]
+    },
+    "scene_rationale": "Four phases establish the fixed teacher, expose distribution mismatch, show student-only probability updates, and separate deployment from training. Bars express moving probability mass; they are not confidence-threshold decisions.",
+    "previews": [],
+    "tsx_path": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:53:02.889839+00:00",
+        "reviewer": "edge_06_10 agent",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning",
+        "assertion_exit_code": 0,
+        "results": {
+          "suite_checks": 113,
+          "suite_status": "PASS",
+          "record_specific": "Teacher constant all sampled frames; all student distributions normalized; L1 gap decreases; final [.6,.27,.13]; deployment boundary frame 720 ±1."
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "distillationState → ScoreDistribution(scores) gives actual bar geometry; studentParameters drives student cell heights while teacher remains constant; student device border binds deployed flag.",
+          "method": "Read actual state-to-component code plus SSR markup checks; same functions are called by assertions and visible core."
+        },
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge10-distillation-state.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge10-distillation-state.tsx",
+        "source_version": {
+          "mtime_ns": 1791525149011776096,
+          "size": 1667
+        },
+        "applicable_record_ids": [
+          "recvw25vjM2GBi"
+        ],
+        "typecheck": {
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes this mechanism for full implementation; does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:58:26.372979+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx",
+        "source_version": {
+          "mtime_ns": 1791525480973069800,
+          "size": 7400
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Independent full scene components draw own core SVG combinations. Full scenes call the B1 state function using absolute timeline offsets. Concrete registry/tensor arrays, lifetime ownership, bank segment sizes, compacted tensor cells, or distribution values bind directly to visible text and geometry. Local useCurrentFrame provides staged title/copy/figure entry. No imported B1 core component wrapper."
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "checks": 113,
+          "mechanism_state_unchanged": true,
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "quality_warning": "Compact source lines below 180. Inspected independently and found complete topic-specific mechanism, not a data wrapper. Final teaching review still required."
+        },
+        "applicable_record_ids": [
+          "recvw25vjM2GBi"
+        ]
+      }
+    ],
+    "key_frames": [
+      90,
+      270,
+      410,
+      550,
+      680,
+      840
+    ],
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "risk_windows": [
+      {
+        "seconds": [
+          12,
+          24
+        ],
+        "risk": "Never interpolate teacher values; student distributions must remain normalized."
+      },
+      {
+        "seconds": [
+          24,
+          30
+        ],
+        "risk": "Do not imply the teacher runs on the edge device or guarantee identical accuracy."
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx",
+    "duration_frames": 900,
+    "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.057535+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+      "reviewed_at": "2026-10-09T06:12:15.057535+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "student-update",
+          "times_seconds": [
+            15.633333333333333,
+            15.666666666666666,
+            15.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0469.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0470.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0471.jpg"
+          ],
+          "observation": "At469–471 teacher remains0.65/0.25/0.10; student is around0.45/0.30/0.25 and the three student parameter bars are changed from their initial state.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "learning-complete",
+          "times_seconds": [
+            22.966666666666665,
+            23.0,
+            23.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0689.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0690.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0691.jpg"
+          ],
+          "observation": "At689–691 the student settles at0.60/0.27/0.13; teacher is still0.65/0.25/0.10.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "student-deployment",
+          "times_seconds": [
+            25.8,
+            25.833333333333332,
+            25.866666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0774.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0775.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/independent-0776.jpg"
+          ],
+          "observation": "At774 student is inside the device but output bars are absent; at775 and776 the device displays its own0.60/0.27/0.13 outputs and teacher stays outside.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3–9 s: the large teacher and smaller student are distinguished; teacher probabilities0.65,0.25,0.10 are fixed while the initial student0.33,0.34,0.33 differs across the same classes.",
+        "13.667→18.333→22.667 s: student Cat probability and bar increase while Dog/Bird decrease; teacher bar heights and values stay fixed. The visible student parameter cells also change. Intermediate rounded labels can sum0.99 from rounding; the source state uses normalized distributions.",
+        "22.967–23.033 s: student reaches0.60,0.27,0.13 with fixed teacher0.65,0.25,0.10. At25.800→25.833 s the student is inside the device and its three output bars appear; teacher remains outside the device."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "tsx": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge10-knowledge-distillation-to-a-small-model.tsx"
+  },
+  "status": "ready",
+  "learning_objective": "Show a fixed teacher probability distribution guiding successive updates of a smaller student, which alone is used at deployment.",
+  "artifact_version": "v1",
+  "feishu_record_id": "recvw25vjM2GBi",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Knowledge Distillation to a Small Model: Train a Student",
+  "title": "Knowledge Distillation to a Small Model: Train a Student",
+  "prompt": "Create a 30-second silent English animation explaining Knowledge Distillation to a Small Model. Keep the teacher’s soft targets fixed at [0.65, 0.25, 0.10], show the smaller student starting at [0.33, 0.34, 0.33], then update only student parameters and probability bars through normalized illustrative states toward [0.60, 0.27, 0.13]. Finish by placing only the student inside the edge device.\n\nUse four scenes lasting 6, 6, 12, and 6 seconds: establish the frozen teacher, compare classwise distributions on equal probability scales, animate student-only learning, and separate deployment from training. State that soft-target loss often combines with label loss, and that shown model sizes and training states are illustrative. Render at 1920×1080, 30 fps, in Helvetica Neue with 1.45 line height; use #0e0e0e, #171b1c, and #212629 backgrounds, #56b4e9 inputs, #e69f00 operations, #009e73 results, #d55e00 warnings, and #cc79a7 stored weights or a second model. Stagger text and figure entrances over 12–15 frames while keeping the mechanism itself numerically exact.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.057535+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "core_conclusion": "A fixed teacher guides a smaller student during training; only the student needs to run on the edge device.",
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/knowledge-distillation-to-a-small-model-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/cover-02.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjM2GBi",
+      "slug": "knowledge-distillation-to-a-small-model",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model/knowledge-distillation-to-a-small-model.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:22:55+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        285,
+        197,
+        715,
+        713
+      ],
+      "bbox_width": 430,
+      "bbox_height": 516,
+      "center_offset": [
+        0.0,
+        5.0
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1",
+  "video": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.mp4",
+  "cover": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.jpg",
+  "cover_image": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.jpg",
+  "player": "https://github.com/user-attachments/assets/498aac01-01f1-4c13-87ec-e0748d0ac6da",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/knowledge-distillation-to-a-small-model.md",
+  "tags": [
+    "recvw25vjM2GBi",
+    "edge-ai-embedded-machine-learning",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "keras.io",
+      "url": "https://keras.io/examples/vision/knowledge_distillation/",
+      "scope": "Teacher predictions and labels train the student; the teacher remains frozen."
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/edge-ai-embedded-machine-learning.md",
+  "feishu": {
+    "record_id": "recvw25vjM2GBi",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T14:26:53.412902+08:00",
+    "selection_fields": {
+      "Name": "Knowledge Distillation to a Small Model",
+      "Discipline": "Digital Electronics",
+      "Course": "Edge AI and Embedded Machine Learning"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25vjM2GBi",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T14:26:53.412902+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "page_status": "included in this publication commit",
+      "attachment": {
+        "video_version": "edge-ai-20261009-v1",
+        "video_bytes": 1474143,
+        "issue_number": 122,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+        "comment_id": 6075636891,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075636891",
+        "attachment_url": "https://github.com/user-attachments/assets/498aac01-01f1-4c13-87ec-e0748d0ac6da",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/498aac01-01f1-4c13-87ec-e0748d0ac6da",
+      "issue_number": 122,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

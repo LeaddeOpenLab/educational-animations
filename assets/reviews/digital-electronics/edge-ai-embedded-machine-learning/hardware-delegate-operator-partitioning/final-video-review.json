@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex main",
+  "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risks.jpg"
+  ],
+  "method": "Viewed actual final MP4-derived6keyframes at640x360 per tile and every risk±1frame; source and state assertions supplementary.",
+  "observations": [
+    "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed.",
+    "At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5].",
+    "Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+  ],
+  "checks": {
+    "terminology": true,
+    "explanation": true,
+    "motion": true,
+    "consistency": true,
+    "layout": true,
+    "small_player": true,
+    "version_match": true,
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true
+  },
+  "veto_checks": {
+    "mechanism_visible": true,
+    "numbers_match_objects": true,
+    "readable_without_collisions": true
+  },
+  "risk_checks": [
+    {
+      "risk_id": "partition",
+      "times_seconds": [
+        5.633333333333334,
+        5.666666666666667,
+        5.7
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0169.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0170.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0171.png"
+      ],
+      "observation": "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed. At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5]. Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+    },
+    {
+      "risk_id": "cpu-receives",
+      "times_seconds": [
+        16.633333333333333,
+        16.666666666666668,
+        16.7
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0499.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0500.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0501.png"
+      ],
+      "observation": "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed. At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5]. Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+    },
+    {
+      "risk_id": "delegate-receives",
+      "times_seconds": [
+        20.3,
+        20.333333333333332,
+        20.366666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0609.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0610.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0611.png"
+      ],
+      "observation": "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed. At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5]. Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+    }
+  ]
+}

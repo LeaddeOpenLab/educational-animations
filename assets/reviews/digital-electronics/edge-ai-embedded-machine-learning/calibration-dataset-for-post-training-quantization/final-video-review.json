@@ -1,0 +1,76 @@
+{
+  "record_id": "recvw25vjMaM6A",
+  "video_id": "edge03-calibration-dataset-for-post-training-quantization",
+  "version": "v2",
+  "video_path": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization.mp4",
+  "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+  "reviewed_at": "2026-10-09T06:15:31.570961+00:00",
+  "review_method": "Actually inspected all six v2 overview frames and every v2 risk before/during/after frame from final MP4; compared repaired intervals against v1 observations.",
+  "evidencepaths": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "max-update",
+      "times_seconds": [
+        4.133333333333334,
+        4.166666666666667,
+        4.2
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/f0124.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/f0125.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/f0126.png"
+      ],
+      "observation": "Rechecked in v2 final MP4: f124→125 visibly appends2.0 and expands the range endpoint only upon sample arrival."
+    },
+    {
+      "risk_id": "same-runtime-probe",
+      "times_seconds": [
+        16.966666666666665,
+        17.0,
+        17.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/f0509.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/f0510.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/f0511.png"
+      ],
+      "observation": "At v2 f509 the moving probe says clipping input instead of claiming an out-of-range stored value. At f510–511 the narrow endpoint reads stored real1.00 and representative endpoint reads stored real2.00."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "passed",
+    "readability_at_640": "Main text and values readable; reviewed targeted v2 frames show no obscured critical labels.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "passed",
+  "observations": [
+    {
+      "times_seconds": [
+        4.0,
+        11.333333333333334,
+        16.333333333333332,
+        17.833333333333332,
+        24.5,
+        28.833333333333332
+      ],
+      "observation": "V2 at16.333s and16.967s labels the moving probe as clipping input; after17.0s only actual reconstructed endpoint values carry stored-real labels. The range-update, scale, and precision visuals are unchanged."
+    }
+  ],
+  "repairs": [],
+  "resolved_v1_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization/final-video-review-v1.json"
+}

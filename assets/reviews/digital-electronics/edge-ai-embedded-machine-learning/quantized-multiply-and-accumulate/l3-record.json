@@ -1,0 +1,508 @@
+{
+  "id": "recvw25vjMlEQf",
+  "feishu_record_id": "recvw25vjMlEQf",
+  "original_name": "Quantized Multiply and Accumulate",
+  "standard_name": "Quantized Multiply and Accumulate",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v2",
+  "status": "designed",
+  "learning_objective": "Subtract the input zero point, multiply int8 operands, accumulate in int32 and convert the accumulated result back to real/output units.",
+  "core_conclusion": "Quantized MAC operates on centered integer codes; the int32 sum represents a real value scaled by the product of input and weight scales.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://developers.google.com/edge/litert/quantization/quantization_spec"
+    ],
+    "scope": "Official terminology basis from saved course research; all numerical examples are explicitly illustrative."
+  },
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx",
+    "scenes": [
+      {
+        "id": "center",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "heading": "Integer codes include an offset",
+        "lines": [
+          "Input zero point = 3; weight zero point = 0."
+        ],
+        "objects": [
+          "input codes5,7,4",
+          "weight codes2,−1,3",
+          "centered inputs"
+        ],
+        "change": "Each input subtracts3, changing5,7,4 into2,4,1; the weight row stays2,−1,3.",
+        "cause": "A zero point encodes real zero, so multiplication uses centered codes.",
+        "result": "The visible operands entering multiplication are centered values.",
+        "reading_seconds": 2.5,
+        "timing_reason": "3.5 seconds for the stated object transformation, then 2.5 seconds to inspect its numerical result."
+      },
+      {
+        "id": "products",
+        "start_seconds": 6,
+        "end_seconds": 12,
+        "heading": "Multiply corresponding entries",
+        "lines": [
+          "Match each input with its weight."
+        ],
+        "objects": [
+          "three centered operand pairs",
+          "products4,−4,3"
+        ],
+        "change": "Each pair descends into a multiplication cell and creates a signed product; the negative weight creates−4.",
+        "cause": "Dot products multiply matching entries before addition.",
+        "result": "Positive and negative product bars are visible.",
+        "reading_seconds": 2.5,
+        "timing_reason": "3.5 seconds for the stated object transformation, then 2.5 seconds to inspect its numerical result."
+      },
+      {
+        "id": "accumulate",
+        "start_seconds": 12,
+        "end_seconds": 21,
+        "heading": "Accumulate in int32",
+        "lines": [
+          "The partial sum changes after each addition."
+        ],
+        "objects": [
+          "int32 accumulator",
+          "product tokens4,−4,3",
+          "partial sum path"
+        ],
+        "change": "Products enter sequentially; accumulator changes0→4→0→3, with the negative term visibly cancelling the first.",
+        "cause": "The wide accumulator sums integer products without narrowing after each term.",
+        "result": "The final accumulator is3, not the largest individual product.",
+        "reading_seconds": 3,
+        "timing_reason": "6 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      },
+      {
+        "id": "units",
+        "start_seconds": 21,
+        "end_seconds": 27,
+        "heading": "Restore the real units",
+        "lines": [
+          "Input scale × weight scale = 0.02."
+        ],
+        "objects": [
+          "accumulator3",
+          "scale product0.2×0.1",
+          "real output0.06"
+        ],
+        "change": "The sum3 passes through the scale product0.02 and becomes0.06; a paired real-valued dot product resolves to the same value.",
+        "cause": "Input and weight scales multiply through the dot product.",
+        "result": "Both computation paths agree for this illustrative no-bias example.",
+        "reading_seconds": 2.5,
+        "timing_reason": "3.5 seconds for the stated object transformation, then 2.5 seconds to inspect its numerical result."
+      },
+      {
+        "id": "requantize",
+        "start_seconds": 27,
+        "end_seconds": 33,
+        "heading": "Encode the output if needed",
+        "lines": [
+          "Output scale = 0.01; zero point = −2."
+        ],
+        "objects": [
+          "real0.06",
+          "output quantizer",
+          "int8 output4"
+        ],
+        "change": "Output0.06 divides by0.01 and adds−2 to produce code4; inverse reconstruction yields0.06.",
+        "cause": "A next integer operator may require its own activation scale and zero point.",
+        "result": "The output code is not the accumulator value:4 versus3.",
+        "reading_seconds": 2.5,
+        "timing_reason": "3.5 seconds for the stated object transformation, then 2.5 seconds to inspect its numerical result."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "centered-mac",
+        "scene_id": "accumulate",
+        "uncertainty": "Naive multiplication of raw codes or unmotivated counter updates could hide the actual arithmetic.",
+        "expected_observation": "Centered operands2,4,1 multiply2,−1,3; products4,−4,3 cause accumulator0→4→0→3."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "zero-point",
+        "time_seconds": 3.33,
+        "reason": "Input subtraction must happen before multiplication."
+      },
+      {
+        "id": "negative-add",
+        "time_seconds": 16.5,
+        "reason": "Adding−4 must visibly cancel4."
+      },
+      {
+        "id": "requantize",
+        "time_seconds": 30,
+        "reason": "Output code4 must remain distinct from accumulator3."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge05-mac.tsx#quantizedMacState",
+      "status": "implemented",
+      "bindings": [
+        "macState(inputs,weights,count,zeroInput,zeroWeight) → product bars, entering token and accumulator",
+        "count → exact number of included products and sum path",
+        "accumulator*inputScale*weightScale → real-output arithmetic",
+        "quantize(real,outputScale,outputZeroPoint) → output code and reconstruction"
+      ],
+      "constants": {
+        "inputs": [
+          5,
+          7,
+          4
+        ],
+        "weights": [
+          2,
+          -1,
+          3
+        ],
+        "zeroInput": 3,
+        "zeroWeight": 0,
+        "inputScale": 0.2,
+        "weightScale": 0.1,
+        "outputScale": 0.01,
+        "outputZeroPoint": -2,
+        "bias": 0
+      }
+    },
+    "template_scope": "Registered EdgeAI course primitives, palette, fonts and L1 layout only. No shared L3 scenes.",
+    "design_audit": {
+      "visualArgument": "Quantized MAC operates on centered integer codes; the int32 sum represents a real value scaled by the product of input and weight scales.",
+      "motion": "Each input subtracts3, changing5,7,4 into2,4,1; the weight row stays2,−1,3.; Each pair descends into a multiplication cell and creates a signed product; the negative weight creates−4.; Products enter sequentially; accumulator changes0→4→0→3, with the negative term visibly cancelling the first.; The sum3 passes through the scale product0.02 and becomes0.06; a paired real-valued dot product resolves to the same value.; Output0.06 divides by0.01 and adds−2 to produce code4; inverse reconstruction yields0.06.",
+      "example": {
+        "inputs": [
+          5,
+          7,
+          4
+        ],
+        "weights": [
+          2,
+          -1,
+          3
+        ],
+        "zeroInput": 3,
+        "zeroWeight": 0,
+        "inputScale": 0.2,
+        "weightScale": 0.1,
+        "outputScale": 0.01,
+        "outputZeroPoint": -2,
+        "bias": 0
+      },
+      "antiTemplate": "Signed products feed a cancelling running sum followed by unit conversion, unlike per-channel scale comparison.",
+      "sceneRationale": "Five scenes are needed because centering, multiplication, accumulation, rescaling and optional output encoding are distinct operations; combining them would obscure why accumulator3 and output code4 differ."
+    },
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "reason": "Raise the product-token destination to y335, leaving clearance above the accumulator label.",
+        "affected_record_ids": [
+          "recvw25vjMlEQf"
+        ],
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx",
+        "previous_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review-v1.json",
+        "from_version": "v1",
+        "to_version": "v2",
+        "status": "resolved",
+        "updated_at": "2026-10-09T06:11:58.261277+00:00",
+        "cause": "Raise the product-token destination to y335, leaving clearance above the accumulator label.",
+        "affected_ids": [
+          "recvw25vjMlEQf"
+        ],
+        "resolution_evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review.json",
+        "observed": "V2 f494 separates product token from accumulator text. f495 shows the real sum4→0 update; overview retains centered inputs, signed products, real output.06 and output code4.",
+        "evidence": [
+          "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review.json"
+        ],
+        "fix": "Raise the product-token destination to y335, leaving clearance above the accumulator label."
+      }
+    ],
+    "duration_frames": 990,
+    "status": "C_TSX_READY",
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:52:52.546423+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge05-mac.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge05-mac.tsx#quantizedMacState",
+        "source_version": {
+          "mtime_ns": 1791525106032830345,
+          "bytes": 1478
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": "Before/mid/after and transition adjacent frames passed; React server-rendered core SVG changes between tested states.",
+        "source_check": "MacCore calls quantizedMacState(frame); centered operands and products feed expressions, signed product widths, accumulator circle cx and sum label. The negative product changes accumulator4 to0 at frame60.",
+        "applicable_record_ids": [
+          "recvw25vjMlEQf"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "teaching_status": "pending"
+      },
+      {
+        "stage": "C_FULL_SOURCE",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:57:41.927695+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx",
+        "source_version": {
+          "mtime_ns": 1791525403405079428,
+          "bytes": 6786
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs && node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05-full.cjs",
+        "assertion_exit_code": 0,
+        "results": "B1 numerical and SVG assertions pass; full scenes also pass actual server-rendered visible value and changing-mark assertions.",
+        "source_check": "Independent full L3 scene functions directly draw objects; imported tested state functions supply numerical values, coordinates and code labels. Each of the full-video samples changed the mechanism SVG and displayed its expected computed result. Layout, scene copy and SVG combinations are local to this file.",
+        "applicable_record_ids": [
+          "recvw25vjMlEQf"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "short_source_review": "Compact JSX formatting yields <180 lines; source contains all designed independent scene mechanisms, arithmetic and distinct final comparisons. No shared scene wrapper or imported B1 core is used. Proceed to actual final-video teaching review; technical check grants no teaching pass."
+      },
+      {
+        "type": "D_V2_MINIMAL_REPAIR",
+        "status": "passed",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge05-quantized-multiply-and-accumulate.tsx",
+        "source_version": {
+          "mtime_ns": 1791526318260272398,
+          "size": 6786
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-v2-review-fixes.cjs",
+        "assertion_exit_code": 0,
+        "results": "Full actual scene SSR assertions passed for normalized scores, truthful storage label, exact code reconstruction, and product token geometry. Existing B1 assertion suite rerun passed. tsc --noEmit exit0.",
+        "source_check": {
+          "status": "passed",
+          "basis": "Minimal display-semantic and token-coordinate updates preserve all scene identifiers, timing, and state calculations. Reviewed actual returned SVG and same-source SSR."
+        },
+        "applicable_record_ids": [
+          "recvw25vjMlEQf"
+        ],
+        "artifact_version": "v2",
+        "reviewed_at": "2026-10-09T06:12:12.926906+00:00"
+      }
+    ],
+    "artifact_version": "v2",
+    "stage": "D_FINAL_VIDEO_REVIEW_PASSED",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+    "reviewed_at": "2026-10-09T06:17:02.443855+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+      "reviewed_at": "2026-10-09T06:17:02.443855+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "zero-point",
+          "times_seconds": [
+            3.3,
+            3.3333333333333335,
+            3.3666666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0099.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0100.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0101.png"
+          ],
+          "observation": "Rechecked in v2 final MP4: f99 has no centered result; f100–101 reveal2/4/1 under subtraction3, before any product scene."
+        },
+        {
+          "risk_id": "negative-add",
+          "times_seconds": [
+            16.466666666666665,
+            16.5,
+            16.533333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0494.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0495.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0496.png"
+          ],
+          "observation": "At v2 f494 the -4 product token is visibly above, and separate from, INT32 SUM=4. At f495–496 the accumulator becomes0 and the third token begins; the critical cancellation remains visible."
+        },
+        {
+          "risk_id": "requantize",
+          "times_seconds": [
+            29.966666666666665,
+            30.0,
+            30.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0899.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0900.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0901.png"
+          ],
+          "observation": "Rechecked in v2 final MP4: f899–901 records output-code reveal beginning; final f930 clearly displays code4 and reconstructed.06. No numerical inconsistency."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            4.0,
+            9.666666666666666,
+            15.0,
+            16.5,
+            24.666666666666668,
+            31.0
+          ],
+          "observation": "V2 f494 separates product token from accumulator text. f495 shows the real sum4→0 update; overview retains centered inputs, signed products, real output.06 and output code4."
+        }
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publication": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "media": {
+    "duration_seconds": 33.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Quantized Multiply and Accumulate: Integer Products to Codes",
+  "title": "Quantized Multiply and Accumulate: Integer Products to Codes",
+  "prompt": "Create a 33-second silent English animation of Quantized Multiply and Accumulate. At 0–6 s, subtract input zero point 3 from codes [5, 7, 4] to obtain [2, 4, 1]. At 6–12 s, multiply by weights [2, −1, 3] to form products [4, −4, 3]. At 12–21 s, move each product into an int32 accumulator whose sum changes 0 to 4 to 0 to 3. At 21–27 s, multiply by scales 0.2 × 0.1 to obtain real output 0.06. At 27–33 s, requantize with output scale 0.01 and zero point −2 to produce int8 code 4; omit bias in this example.\n\nRender a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and line height 1.45. Use background layers #0e0e0e, #171b1c and #212629; input #56b4e9, operations #e69f00, results #009e73, clipping or rejection #d55e00, and secondary weights #cc79a7, with strong text #f8fafc and muted text #a8b4c4. Keep concise copy left and a large numerical SVG diagram right; fade and slide labels over 12–18 frames with 10-frame staggering, and bind moving marks, values and arithmetic to the same mechanism state.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 33.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.095308+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/quantized-multiply-and-accumulate-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/cover-01.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMlEQf",
+      "slug": "quantized-multiply-and-accumulate",
+      "version": "v2",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/quantized-multiply-and-accumulate.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:22:22+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        236,
+        202,
+        750,
+        695
+      ],
+      "bbox_width": 514,
+      "bbox_height": 493,
+      "center_offset": [
+        -7.0,
+        -1.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v2"
+}

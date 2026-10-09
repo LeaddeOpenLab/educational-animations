@@ -1,0 +1,519 @@
+{
+  "id": "recvw25vjMwJp0",
+  "record_id": "recvw25vjMwJp0",
+  "batch_id": "batch-20261009-edge-ai",
+  "original_name": "Memory Arena Planning for Tensor Lifetimes",
+  "standard_name": "Memory Arena Planning for Tensor Lifetimes",
+  "Name": "Memory Arena Planning for Tensor Lifetimes",
+  "Discipline": "Digital Electronics",
+  "Course": "Edge AI and Embedded Machine Learning",
+  "objective": "Show how nonoverlapping tensor lifetimes let different tensors reuse the same arena bytes while simultaneously live tensors retain separate storage.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "references": [
+      {
+        "topics": [
+          "Memory Arena Planning for Tensor Lifetimes",
+          "Flash and RAM Model Footprint"
+        ],
+        "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md",
+        "verified": "2026-10-09",
+        "basis": "Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation."
+      }
+    ],
+    "confirmed": true,
+    "sources": [
+      {
+        "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md",
+        "scope": "Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation."
+      }
+    ],
+    "scope": "Show how nonoverlapping tensor lifetimes let different tensors reuse the same arena bytes while simultaneously live tensors retain separate storage."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "lifetimes",
+        "objects": [
+          "tensor A: 64 B, lifetime [0,2)",
+          "tensor B: 32 B, lifetime [1,4)",
+          "tensor C: 64 B, lifetime [2,4)",
+          "operator time cursor"
+        ],
+        "change": "Reveal the three lifetime intervals on one time axis; move the cursor through A and then overlapping A+B.",
+        "cause": "Tensor storage is needed only while its values remain live.",
+        "result": "A and C never coexist; B overlaps both.",
+        "start_seconds": 0,
+        "end_seconds": 7,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "A and C never live together.",
+          "B overlaps both lifetimes."
+        ]
+      },
+      {
+        "id": "coexist",
+        "objects": [
+          "96 B arena",
+          "A at bytes 0–63",
+          "B at bytes 64–95",
+          "cursor t=1.5"
+        ],
+        "change": "Place A and B into disjoint byte ranges; both remain visible while their lifetime bars intersect the time cursor.",
+        "cause": "Two live tensors must not overwrite each other.",
+        "result": "96 bytes are occupied with no spatial collision.",
+        "start_seconds": 7,
+        "end_seconds": 14,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "At t = 1.5: A + B = 96 B",
+          "Live tensors need separate bytes."
+        ]
+      },
+      {
+        "id": "reuse",
+        "objects": [
+          "A lifetime end at t=2",
+          "C lifetime start at t=2",
+          "same bytes 0–63",
+          "B bytes 64–95"
+        ],
+        "change": "Advance to the lifetime boundary: remove A exactly as it expires, then place C in A’s former offset while B remains unchanged.",
+        "cause": "A is no longer needed when C becomes live.",
+        "result": "C reuses offset 0 and B survives at offset 64; capacity stays 96 B.",
+        "start_seconds": 14,
+        "end_seconds": 23,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "A expires; C reuses offset 0.",
+          "B stays live and untouched."
+        ]
+      },
+      {
+        "id": "footprint",
+        "objects": [
+          "naive sum bar 160 B",
+          "planned arena bar 96 B",
+          "live B+C allocations"
+        ],
+        "change": "Compare three separately reserved blocks totaling 160 B with the compact 96 B arena; preserve C+B in their final offsets.",
+        "cause": "Storage capacity follows simultaneous lifetimes and placement, not the sum of every tensor size.",
+        "result": "The toy plan saves 64 B; real deployments also account for alignment and persistent allocations.",
+        "start_seconds": 23,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Tensor sum: 160 B → planned: 96 B",
+          "Illustration excludes alignment and metadata."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "arena-reuse",
+        "scene_id": "reuse",
+        "uncertainty": "Release A at its end-exclusive lifetime boundary before reusing offset 0 for C.",
+        "expected_observation": "C reuses offset 0 and B survives at offset 64; capacity stays 96 B."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "arena-reuse",
+        "time_seconds": 18.0,
+        "reason": "Inspect actual arena reuse at source state transition, including before and after."
+      }
+    ],
+    "state_model": {
+      "function": "arenaState(frame)",
+      "inputs": {
+        "allocations": [
+          {
+            "name": "A",
+            "offset": 0,
+            "size": 64,
+            "start": 0,
+            "end": 2
+          },
+          {
+            "name": "B",
+            "offset": 64,
+            "size": 32,
+            "start": 1,
+            "end": 4
+          },
+          {
+            "name": "C",
+            "offset": 0,
+            "size": 64,
+            "start": 2,
+            "end": 4
+          }
+        ],
+        "capacity": 96
+      },
+      "planned_bindings": [
+        "time -> lifetime cursor x and TensorMemory time",
+        "same allocations -> lifetime bars and TensorMemory allocations",
+        "memoryState.liveBytes -> live byte label"
+      ],
+      "invariants": [
+        "No two live allocation ranges overlap.",
+        "At time 1.999 A+B are live; at 2 C+B are live.",
+        "B offset and contents do not change during reuse."
+      ],
+      "b1_samples_seconds": [
+        0,
+        9,
+        14,
+        17,
+        18,
+        22,
+        29
+      ],
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge07-arena-state.tsx",
+      "bindings": [
+        "time -> lifetime cursor x and TensorMemory time",
+        "same allocations -> lifetime bars and TensorMemory allocations",
+        "memoryState.liveBytes -> live byte label"
+      ]
+    },
+    "scene_rationale": "Four phases connect temporal lifetimes, spatial coexistence, the exact reuse boundary, and capacity comparison. The byte-range transfer is distinct from the adjacent flash/RAM accounting story.",
+    "previews": [],
+    "tsx_path": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:53:02.887420+00:00",
+        "reviewer": "edge_06_10 agent",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning",
+        "assertion_exit_code": 0,
+        "results": {
+          "suite_checks": 113,
+          "suite_status": "PASS",
+          "record_specific": "At frame 539 A+B coexist; frame 540 removes A and introduces C at offset 0; B remains offset 64. No overlapping live byte ranges; total ≤96 B."
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "arenaState → lifetime cursor x and TensorMemory(time, allocations); TensorMemory calls the same memoryState to select rectangles by actual offset and size.",
+          "method": "Read actual state-to-component code plus SSR markup checks; same functions are called by assertions and visible core."
+        },
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge07-arena-state.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge07-arena-state.tsx",
+        "source_version": {
+          "mtime_ns": 1791525158041312531,
+          "size": 1367
+        },
+        "applicable_record_ids": [
+          "recvw25vjMwJp0"
+        ],
+        "typecheck": {
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes this mechanism for full implementation; does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:58:26.369964+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx",
+        "source_version": {
+          "mtime_ns": 1791525480973268884,
+          "size": 6207
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Independent full scene components draw own core SVG combinations. Full scenes call the B1 state function using absolute timeline offsets. Concrete registry/tensor arrays, lifetime ownership, bank segment sizes, compacted tensor cells, or distribution values bind directly to visible text and geometry. Local useCurrentFrame provides staged title/copy/figure entry. No imported B1 core component wrapper."
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "checks": 113,
+          "mechanism_state_unchanged": true,
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "quality_warning": "Compact source lines below 180. Inspected independently and found complete topic-specific mechanism, not a data wrapper. Final teaching review still required."
+        },
+        "applicable_record_ids": [
+          "recvw25vjMwJp0"
+        ]
+      }
+    ],
+    "key_frames": [
+      105,
+      320,
+      510,
+      570,
+      660,
+      830
+    ],
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "risk_windows": [
+      {
+        "seconds": [
+          14,
+          19
+        ],
+        "risk": "Never render A and C as simultaneously live in the same bytes."
+      },
+      {
+        "seconds": [
+          23,
+          30
+        ],
+        "risk": "96 B is a toy nonpersistent arena example, not the total runtime RAM claim."
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx",
+    "duration_frames": 900,
+    "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.054594+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+      "reviewed_at": "2026-10-09T06:12:15.054594+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "arena-reuse",
+          "times_seconds": [
+            17.966666666666665,
+            18.0,
+            18.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-0539.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-0540.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/independent-0541.jpg"
+          ],
+          "observation": "At539 the arena shows A+B; at540 and541 it shows C+B, with the same segment boundaries and total96. The lifetime cursor is at the shared endpoint.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.50 s: A and C lifetime intervals occupy disjoint time ranges, with B overlapping both. At10.667 s the arena contains A in0–63 and B in64–95.",
+        "17.967→18.000 s: the cursor crosses the A/C boundary and the arena’s first segment changes owner A→C; the B segment retains position and size. Adjacent frames never show A and C occupying the same bytes together.",
+        "27.667 s: separate reservations span160 bytes while the reused C+B arena spans96. The64-byte reduction is reflected in segment lengths, with an explicit toy-example caveat."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "tsx": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge07-memory-arena-planning-for-tensor-lifetimes.tsx"
+  },
+  "status": "ready",
+  "learning_objective": "Show how nonoverlapping tensor lifetimes let different tensors reuse the same arena bytes while simultaneously live tensors retain separate storage.",
+  "artifact_version": "v1",
+  "feishu_record_id": "recvw25vjMwJp0",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Memory Arena Planning for Tensor Lifetimes: Reuse 96 B",
+  "title": "Memory Arena Planning for Tensor Lifetimes: Reuse 96 B",
+  "prompt": "Create a 30-second silent English animation explaining Memory Arena Planning for Tensor Lifetimes. Draw A as 64 B live in [0, 2), B as 32 B live in [1, 4), and C as 64 B live in [2, 4); preserve B at offset 64 while A expires and C takes offset 0, keeping the arena at 96 B instead of separately reserving 160 B.\n\nUse four scenes lasting 7, 7, 9, and 7 seconds: establish lifetime overlap, place live tensors into disjoint byte ranges, show the exact ownership handoff, and compare capacities. Move the time cursor and draw allocations from the same lifetime state; identify this as a toy example excluding alignment and runtime metadata. Render at 1920×1080, 30 fps, in Helvetica Neue with 1.45 line height; use #0e0e0e, #171b1c, and #212629 backgrounds, #56b4e9 inputs, #e69f00 operations, #009e73 results, #d55e00 warnings, and #cc79a7 stored weights or a second model. Stagger text and figure entrances over 12–15 frames while keeping the mechanism itself numerically exact.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.054594+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "core_conclusion": "Non-overlapping tensor lifetimes may reuse the same bytes; peak live storage governs this toy arena capacity.",
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/memory-arena-planning-for-tensor-lifetimes-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/cover-02.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMwJp0",
+      "slug": "memory-arena-planning-for-tensor-lifetimes",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes/memory-arena-planning-for-tensor-lifetimes.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:22:39+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        218,
+        202,
+        781,
+        710
+      ],
+      "bbox_width": 563,
+      "bbox_height": 508,
+      "center_offset": [
+        -0.5,
+        6.0
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1",
+  "video": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.mp4",
+  "cover": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.jpg",
+  "cover_image": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.jpg",
+  "player": "https://github.com/user-attachments/assets/9abb1537-b798-4eaf-b037-e42e235eea0f",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/memory-arena-planning-for-tensor-lifetimes.md",
+  "tags": [
+    "recvw25vjMwJp0",
+    "edge-ai-embedded-machine-learning",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "github.com",
+      "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md",
+      "scope": "Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation."
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/edge-ai-embedded-machine-learning.md",
+  "feishu": {
+    "record_id": "recvw25vjMwJp0",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T14:26:53.412902+08:00",
+    "selection_fields": {
+      "Name": "Memory Arena Planning for Tensor Lifetimes",
+      "Discipline": "Digital Electronics",
+      "Course": "Edge AI and Embedded Machine Learning"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25vjMwJp0",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T14:26:53.412902+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "page_status": "included in this publication commit",
+      "attachment": {
+        "video_version": "edge-ai-20261009-v1",
+        "video_bytes": 1121887,
+        "issue_number": 122,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+        "comment_id": 6075633769,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075633769",
+        "attachment_url": "https://github.com/user-attachments/assets/9abb1537-b798-4eaf-b037-e42e235eea0f",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/9abb1537-b798-4eaf-b037-e42e235eea0f",
+      "issue_number": 122,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

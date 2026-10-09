@@ -1,0 +1,93 @@
+{
+  "record_id": "recvw25vjMaM6A",
+  "video_id": "edge03-calibration-dataset-for-post-training-quantization",
+  "version": "v1",
+  "video_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/edge03-calibration-dataset-for-post-training-quantization.mp4",
+  "reviewer": "edge_06_10 agent; independent of items1\u20135 author",
+  "reviewed_at": "2026-10-09T06:11:05.630618+00:00",
+  "review_method": "Actually inspected final MP4 overview and before/during/after risk contact sheets at 640px-per-frame; no desktop or browser control.",
+  "evidencepaths": [
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/overview.jpg",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "max-update",
+      "times_seconds": [
+        4.133333333333334,
+        4.166666666666667,
+        4.2
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-0124.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-0125.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-0126.png"
+      ],
+      "observation": "f124\u2192125 visibly appends2.0 and expands the range endpoint only upon sample arrival."
+    },
+    {
+      "risk_id": "same-runtime-probe",
+      "times_seconds": [
+        16.966666666666665,
+        17.0,
+        17.033333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-0509.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-0510.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge03-calibration-dataset-for-post-training-quantization/risk-0511.png"
+      ],
+      "observation": "f509 shows narrow stored real1.03 outside the max1 endpoint; f510\u2013511 settles at1.00. The motion is clear, but intermediate storage label is semantically false."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "repair required as listed",
+    "readability_at_640": "Main text and numerical marks readable; edge05 transient overlap noted where applicable.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "repair",
+  "observations": [
+    {
+      "times_seconds": [
+        4.1333,
+        4.1667,
+        4.2
+      ],
+      "observation": "Arrival of activation2 extends the observed range from[0,1] to[0,2] and increases observations3\u21924, while the model is explicitly fixed."
+    },
+    {
+      "times_seconds": [
+        11.3333,
+        16.3333,
+        17.8333
+      ],
+      "observation": "The scale2/255=.00784 follows the observed span. The two branches reach narrow1.00 versus representative2.00, but during the movement the narrow out-of-range point is incorrectly labeled stored real1.67."
+    },
+    {
+      "times_seconds": [
+        24.5,
+        28.8333
+      ],
+      "observation": "Magnified grid spacing visibly differs by a factor2; common input.7 finishes at.7020 and.6980 on the two rulers."
+    }
+  ],
+  "repairs": [
+    {
+      "type": "logic",
+      "time_seconds": 16.3333,
+      "fix": "During the narrow probe motion, label it input/clipping in progress; only use stored real for the actual saturated reconstruction1.00. Keep the existing trajectory."
+    }
+  ]
+}

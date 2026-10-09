@@ -1,0 +1,562 @@
+{
+  "id": "recvw25vjM41mv",
+  "record_id": "recvw25vjM41mv",
+  "batch_id": "batch-20261009-edge-ai",
+  "original_name": "Model Operator Compatibility Check",
+  "standard_name": "Model Operator Compatibility Check",
+  "Name": "Model Operator Compatibility Check",
+  "Discipline": "Digital Electronics",
+  "Course": "Edge AI and Embedded Machine Learning",
+  "objective": "Explain why every model operator needs a compatible registered kernel before inference can produce an output.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "references": [
+      {
+        "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/micro_mutable_op_resolver.h",
+        "verified": "2026-10-09",
+        "basis": "MicroMutableOpResolver provides explicit operator registration and FindOp lookup; compatibility includes kernel constraints, so name matching alone is an illustrative prerequisite."
+      }
+    ],
+    "confirmed": true,
+    "sources": [
+      {
+        "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/micro_mutable_op_resolver.h",
+        "scope": "MicroMutableOpResolver provides explicit operator registration and FindOp lookup; compatibility includes kernel constraints, so name matching alone is an illustrative prerequisite."
+      }
+    ],
+    "scope": "Explain why every model operator needs a compatible registered kernel before inference can produce an output."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "requirements",
+        "objects": [
+          "input tensor [2,-1,3]",
+          "MUL by [1,2,1]",
+          "RELU",
+          "runtime registry: MUL only",
+          "empty output tensor"
+        ],
+        "change": "Match both model operator requirements against the registry; MUL has a kernel slot while RELU has no slot.",
+        "cause": "Preparing the model resolves every required operator.",
+        "result": "MUL matches; RELU remains unmatched, and no model output exists.",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Model requirements meet the runtime.",
+          "Each operator needs a matching kernel."
+        ]
+      },
+      {
+        "id": "unresolved",
+        "objects": [
+          "unmatched RELU requirement",
+          "missing kernel slot",
+          "input tensor",
+          "empty output tensor"
+        ],
+        "change": "Attempt preparation; the unresolved requirement stays outside the registry, the input remains unconsumed, and the output cells remain visibly empty.",
+        "cause": "There is no registered RELU implementation in this illustrative runtime build.",
+        "result": "Inference cannot run; a failure label accompanies, but never replaces, the unchanged empty output.",
+        "start_seconds": 6,
+        "end_seconds": 13,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Missing kernel: RELU",
+          "No inference output is produced."
+        ]
+      },
+      {
+        "id": "register",
+        "objects": [
+          "RELU kernel card",
+          "runtime registry",
+          "MUL and RELU requirement cards"
+        ],
+        "change": "Insert a compatible RELU kernel into the actual registry column; repeat both matches until the two requirements have registered partners.",
+        "cause": "Rebuild the runtime with the required kernel registered.",
+        "result": "The registry contains MUL and RELU and preparation can complete.",
+        "start_seconds": 13,
+        "end_seconds": 21,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Register a compatible RELU kernel.",
+          "Recheck type, shape, and operator version."
+        ]
+      },
+      {
+        "id": "execute",
+        "objects": [
+          "input [2,-1,3]",
+          "product [2,-2,3]",
+          "output [2,0,3]"
+        ],
+        "change": "Consume inputs into MUL products, then replace the negative product with zero through RELU; write the three resulting values into previously empty output cells.",
+        "cause": "The prepared runtime executes the registered kernels in model order.",
+        "result": "Actual output [2,0,3] appears only after the repair and both computations.",
+        "start_seconds": 21,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "MUL: [2, -2, 3]",
+          "RELU output: [2, 0, 3]"
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "kernel-insertion",
+        "scene_id": "register",
+        "uncertainty": "Registry resolution prevents model execution when one required kernel is absent.",
+        "expected_observation": "The registry contains MUL and RELU and preparation can complete."
+      },
+      {
+        "id": "multiply",
+        "scene_id": "execute",
+        "uncertainty": "Registering the missing compatible kernel permits preparation, then input values are multiplied and rectified.",
+        "expected_observation": "Actual output [2,0,3] appears only after the repair and both computations."
+      },
+      {
+        "id": "relu-output",
+        "scene_id": "execute",
+        "uncertainty": "Registering the missing compatible kernel permits preparation, then input values are multiplied and rectified.",
+        "expected_observation": "Actual output [2,0,3] appears only after the repair and both computations."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "kernel-insertion",
+        "time_seconds": 15.0,
+        "reason": "Inspect actual kernel insertion at source state transition, including before and after."
+      },
+      {
+        "id": "multiply",
+        "time_seconds": 23.0,
+        "reason": "Inspect actual multiply at source state transition, including before and after."
+      },
+      {
+        "id": "relu-output",
+        "time_seconds": 26.0,
+        "reason": "Inspect actual relu output at source state transition, including before and after."
+      }
+    ],
+    "state_model": {
+      "function": "operatorState(frame)",
+      "inputs": {
+        "input": [
+          2,
+          -1,
+          3
+        ],
+        "multiplier": [
+          1,
+          2,
+          1
+        ],
+        "initialRegistry": [
+          "MUL"
+        ],
+        "required": [
+          "MUL",
+          "RELU"
+        ]
+      },
+      "planned_bindings": [
+        "registry array -> visible kernel cards and matching membership",
+        "prepared boolean -> whether intermediate and output arrays may populate",
+        "intermediate values -> TensorBars and cell values",
+        "output values -> TensorBars and output cells"
+      ],
+      "invariants": [
+        "When RELU is absent, prepared is false and output is empty.",
+        "Products are [2,-2,3]; rectified output is [2,0,3]."
+      ],
+      "b1_samples_seconds": [
+        5,
+        6,
+        12,
+        13,
+        20,
+        21,
+        25,
+        29
+      ],
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge06-operator-state.tsx",
+      "bindings": [
+        "registry array -> visible kernel cards and matching membership",
+        "prepared boolean -> whether intermediate and output arrays may populate",
+        "intermediate values -> TensorBars and cell values",
+        "output values -> TensorBars and output cells"
+      ]
+    },
+    "scene_rationale": "Four phases are required: declare requirements, expose actual blocked execution, repair registration, and demonstrate computed output. This is a registry/set membership and tensor evaluation story, not a generic pipeline.",
+    "previews": [],
+    "tsx_path": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:53:02.886402+00:00",
+        "reviewer": "edge_06_10 agent",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning",
+        "assertion_exit_code": 0,
+        "results": {
+          "suite_checks": 113,
+          "suite_status": "PASS",
+          "record_specific": "Registry insertion frame 450 ±1; MUL frame 690 and RELU frame 780 ±1; computed tensors [2,-2,3] and [2,0,3]; SSR confirms changed tensor content."
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "operatorState → OperatorCore registry cards and input/intermediate/output numeric cells. Output array stays empty before preparation and before RELU evaluation; no state-label-only proof.",
+          "method": "Read actual state-to-component code plus SSR markup checks; same functions are called by assertions and visible core."
+        },
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge06-operator-state.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge06-operator-state.tsx",
+        "source_version": {
+          "mtime_ns": 1791525149002654525,
+          "size": 1601
+        },
+        "applicable_record_ids": [
+          "recvw25vjM41mv"
+        ],
+        "typecheck": {
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes this mechanism for full implementation; does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:58:26.368470+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx",
+        "source_version": {
+          "mtime_ns": 1791525480970600705,
+          "size": 6100
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Independent full scene components draw own core SVG combinations. Full scenes call the B1 state function using absolute timeline offsets. Concrete registry/tensor arrays, lifetime ownership, bank segment sizes, compacted tensor cells, or distribution values bind directly to visible text and geometry. Local useCurrentFrame provides staged title/copy/figure entry. No imported B1 core component wrapper."
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "checks": 113,
+          "mechanism_state_unchanged": true,
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "quality_warning": "Compact source lines below 180. Inspected independently and found complete topic-specific mechanism, not a data wrapper. Final teaching review still required."
+        },
+        "applicable_record_ids": [
+          "recvw25vjM41mv"
+        ]
+      }
+    ],
+    "key_frames": [
+      90,
+      290,
+      430,
+      560,
+      745,
+      850
+    ],
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "risk_windows": [
+      {
+        "seconds": [
+          6,
+          13
+        ],
+        "risk": "Do not show partial inference output before successful model preparation."
+      },
+      {
+        "seconds": [
+          21,
+          28
+        ],
+        "risk": "Output values must be computed, not only a PASS label."
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx",
+    "duration_frames": 900,
+    "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.053677+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+      "reviewed_at": "2026-10-09T06:12:15.053677+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "kernel-insertion",
+          "times_seconds": [
+            14.966666666666667,
+            15.0,
+            15.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0449.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0450.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0451.jpg"
+          ],
+          "observation": "At449 RELU reads No kernel; at450 and451 the same slot contains RELU kernel, establishing changed registry membership.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "multiply",
+          "times_seconds": [
+            22.966666666666665,
+            23.0,
+            23.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0689.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0690.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0691.jpg"
+          ],
+          "observation": "At689 the MUL row has dashes; at690 and691 it contains2,−2,3 while the RELU row is still empty.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "relu-output",
+          "times_seconds": [
+            25.966666666666665,
+            26.0,
+            26.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0779.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0780.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/independent-0781.jpg"
+          ],
+          "observation": "At779 the RELU row has dashes; at780 and781 it contains2,0,3. The −2 input to RELU is clamped to0.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.00–9.67 s: the MUL requirement has a registered kernel but RELU has an empty orange slot. The later unresolved view shows three empty output cells, so preparation failure has a visible consequence.",
+        "14.967→15.000 s: the RELU registry slot changes from No kernel to RELU kernel. At22.967 s both computation rows are empty; at23.000 s MUL cells become2,−2,3; at26.000 s RELU cells become2,0,3. The concrete negative-to-zero computation is visible.",
+        "Layout keeps registry and tensor data apart from concise copy; sampled settled frames are readable at640×360. Registry requirement lines have the valid relationship-teaching role; computation is also explicitly shown."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "tsx": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge06-model-operator-compatibility-check.tsx"
+  },
+  "status": "ready",
+  "learning_objective": "Explain why every model operator needs a compatible registered kernel before inference can produce an output.",
+  "artifact_version": "v1",
+  "feishu_record_id": "recvw25vjM41mv",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Model Operator Compatibility Check: Register Missing RELU",
+  "title": "Model Operator Compatibility Check: Register Missing RELU",
+  "prompt": "Create a 30-second silent English animation explaining Model Operator Compatibility Check. Match model requirements MUL and RELU against a runtime registry, leave the inference output empty while RELU has no kernel, register the missing compatible kernel, then compute [2, -1, 3] × [1, 2, 1] = [2, -2, 3] and the RELU output [2, 0, 3].\n\nUse four scenes lasting 6, 7, 8, and 9 seconds: resolve requirements, expose the missing implementation, register it, then compute the two tensor operations. Keep numerical output absent until actual evaluation; note that type, shape, and operator version also need compatibility checks. Render at 1920×1080, 30 fps, in Helvetica Neue with 1.45 line height; use #0e0e0e, #171b1c, and #212629 backgrounds, #56b4e9 inputs, #e69f00 operations, #009e73 results, #d55e00 warnings, and #cc79a7 stored weights or a second model. Stagger text and figure entrances over 12–15 frames while keeping the mechanism itself numerically exact.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.053677+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "core_conclusion": "Every required operator needs a compatible kernel before model inference can produce an output.",
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/model-operator-compatibility-check-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/cover-02.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjM41mv",
+      "slug": "model-operator-compatibility-check",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check/model-operator-compatibility-check.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:22:22+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        218,
+        204,
+        781,
+        690
+      ],
+      "bbox_width": 563,
+      "bbox_height": 486,
+      "center_offset": [
+        -0.5,
+        -3.0
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1",
+  "video": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.mp4",
+  "cover": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.jpg",
+  "cover_image": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.jpg",
+  "player": "https://github.com/user-attachments/assets/c7fb254d-705d-4157-b37f-da7c86475f2f",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/model-operator-compatibility-check.md",
+  "tags": [
+    "recvw25vjM41mv",
+    "edge-ai-embedded-machine-learning",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "github.com",
+      "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/micro_mutable_op_resolver.h",
+      "scope": "MicroMutableOpResolver provides explicit operator registration and FindOp lookup; compatibility includes kernel constraints, so name matching alone is an illustrative prerequisite."
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/edge-ai-embedded-machine-learning.md",
+  "feishu": {
+    "record_id": "recvw25vjM41mv",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T14:26:53.412902+08:00",
+    "selection_fields": {
+      "Name": "Model Operator Compatibility Check",
+      "Discipline": "Digital Electronics",
+      "Course": "Edge AI and Embedded Machine Learning"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25vjM41mv",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T14:26:53.412902+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "page_status": "included in this publication commit",
+      "attachment": {
+        "video_version": "edge-ai-20261009-v1",
+        "video_bytes": 1144994,
+        "issue_number": 122,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+        "comment_id": 6075632663,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075632663",
+        "attachment_url": "https://github.com/user-attachments/assets/c7fb254d-705d-4157-b37f-da7c86475f2f",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/c7fb254d-705d-4157-b37f-da7c86475f2f",
+      "issue_number": 122,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

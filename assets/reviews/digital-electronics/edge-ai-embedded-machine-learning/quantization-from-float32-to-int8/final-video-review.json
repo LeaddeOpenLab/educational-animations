@@ -1,0 +1,87 @@
+{
+  "record_id": "recvw25vjMkk0g",
+  "video_id": "edge02-quantization-from-float32-to-int8",
+  "version": "v1",
+  "video_path": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.mp4",
+  "reviewer": "edge_06_10 agent; independent of items1–5 author",
+  "reviewed_at": "2026-10-09T06:11:05.629608+00:00",
+  "review_method": "Actually inspected final MP4 overview and before/during/after risk contact sheets at 640px-per-frame; no desktop or browser control.",
+  "evidencepaths": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "snap",
+      "times_seconds": [
+        9.966666666666667,
+        10.0,
+        10.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0299.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0300.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0301.png"
+      ],
+      "observation": "f299–301 retain correct final code/reconstruction pairs at discrete positions; overview f120/f290 demonstrates the positional change."
+    },
+    {
+      "risk_id": "saturation",
+      "times_seconds": [
+        24.466666666666665,
+        24.5,
+        24.533333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0734.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0735.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0736.png"
+      ],
+      "observation": "f734 moving point reads13.03 just before endpoint; f735–736 reads127→13.00 at the dashed limit. This is a visible approach followed by saturated result, not only a warning label."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "passed",
+    "readability_at_640": "Main text and numerical marks readable; edge05 transient overlap noted where applicable.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "passed",
+  "observations": [
+    {
+      "times_seconds": [
+        4,
+        9.6667
+      ],
+      "observation": "Original markers -.26/.14/.87 occupy non-grid positions; later markers sit at reconstructions -.30/.10/.90 with codes -6/-2/6, visibly illustrating rounding."
+    },
+    {
+      "times_seconds": [
+        17.8333,
+        21.3333
+      ],
+      "observation": "Original .14 hollow marker remains apart from reconstructed .10 solid marker. A separate bracket appears and labels absolute error .04."
+    },
+    {
+      "times_seconds": [
+        24.4667,
+        24.5,
+        25,
+        28.3333
+      ],
+      "observation": "The orange moving point reaches the dashed saturation endpoint, then the final label shows code127→13.00 for input14. Final stored endpoint is maintained; no claim of exact reconstruction."
+    }
+  ],
+  "repairs": []
+}

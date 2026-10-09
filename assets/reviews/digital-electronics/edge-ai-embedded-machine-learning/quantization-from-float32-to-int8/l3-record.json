@@ -1,0 +1,421 @@
+{
+  "id": "recvw25vjMkk0g",
+  "feishu_record_id": "recvw25vjMkk0g",
+  "original_name": "Quantization from Float32 to Int8",
+  "standard_name": "Quantization from Float32 to Int8",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v1",
+  "status": "designed",
+  "learning_objective": "Convert real values into signed int8 codes and reconstruct them, separating rounding error from saturation.",
+  "core_conclusion": "Int8 stores an integer code; scale and zero point recover an approximation, while out-of-range values saturate.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://developers.google.com/edge/litert/quantization/quantization_spec"
+    ],
+    "scope": "Official terminology basis from saved course research; all numerical examples are explicitly illustrative."
+  },
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge02-quantization-from-float32-to-int8.tsx",
+    "scenes": [
+      {
+        "id": "lattice",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "heading": "A real value meets an integer grid",
+        "lines": [
+          "Scale = 0.1; zero point = −3."
+        ],
+        "objects": [
+          "real-axis markers −0.26,0.14,0.87",
+          "quantization lattice",
+          "selected 0.14 marker"
+        ],
+        "change": "Float markers appear between representable positions; the selected marker exposes x/scale+z = −1.6.",
+        "cause": "An affine encoding maps real units to code units.",
+        "result": "The selected float sits between the integer codes −2 and −1.",
+        "reading_seconds": 2,
+        "timing_reason": "4 seconds for the stated object transformation, then 2 seconds to inspect its numerical result."
+      },
+      {
+        "id": "round",
+        "start_seconds": 6,
+        "end_seconds": 14,
+        "heading": "Round to the nearest code",
+        "lines": [
+          "q = round(x / scale) + zero point."
+        ],
+        "objects": [
+          "three float markers",
+          "nearest lattice targets",
+          "q codes"
+        ],
+        "change": "Markers snap to reconstructed positions −0.3,0.1,0.9 as their codes become −6,−2,6.",
+        "cause": "Rounding chooses discrete representable values.",
+        "result": "Dashed residual segments show each original-to-reconstructed distance.",
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      },
+      {
+        "id": "reconstruct",
+        "start_seconds": 14,
+        "end_seconds": 22,
+        "heading": "Recover an approximation",
+        "lines": [
+          "x̂ = (q − zero point) × scale.",
+          "A smaller representation can lose detail."
+        ],
+        "objects": [
+          "selected q=−2",
+          "inverse arithmetic",
+          "original and reconstructed markers"
+        ],
+        "change": "The −2 code subtracts −3 and multiplies by 0.1; the output marker lands at 0.1 while the original stays at 0.14.",
+        "cause": "Dequantization applies the inverse affine map to the rounded code.",
+        "result": "An error bracket measures 0.04, making the loss visible.",
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      },
+      {
+        "id": "saturate",
+        "start_seconds": 22,
+        "end_seconds": 30,
+        "heading": "Outside the range, values clip",
+        "lines": [
+          "Int8 codes stop at 127.",
+          "Clipping is larger than rounding error."
+        ],
+        "objects": [
+          "input14",
+          "unclipped code137",
+          "int8 boundary127",
+          "reconstruction13"
+        ],
+        "change": "An input14 attempts code137; it reaches the code boundary127 and reconstructs to13 instead of14.",
+        "cause": "Signed int8 cannot represent a code above127.",
+        "result": "The endpoint and the lost one-unit segment remain visible.",
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "round-and-clip",
+        "scene_id": "saturate",
+        "uncertainty": "Clipping could be mistaken for ordinary nearest-neighbor rounding.",
+        "expected_observation": "Unclipped code137 becomes127, while reconstruction stops at13 and original input remains14."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "snap",
+        "time_seconds": 10,
+        "reason": "Labels and marker positions must use identical quantization results."
+      },
+      {
+        "id": "saturation",
+        "time_seconds": 24.5,
+        "reason": "Boundary127 is discrete and reconstructed13 must not overshoot."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge02-quantization.tsx#quantizationState",
+      "status": "implemented",
+      "bindings": [
+        "quantize(value,scale,zeroPoint) → lattice marker position, q label, residual bracket",
+        "mix → QuantizedAxis.mix",
+        "clipped → boundary marker and warning mark",
+        "integer,reconstructed,error → numeric cells"
+      ],
+      "constants": {
+        "values": [
+          -0.26,
+          0.14,
+          0.87
+        ],
+        "scale": 0.1,
+        "zeroPoint": -3,
+        "overflowValue": 14
+      }
+    },
+    "template_scope": "Registered EdgeAI course primitives, palette, fonts and L1 layout only. No shared L3 scenes.",
+    "design_audit": {
+      "visualArgument": "Int8 stores an integer code; scale and zero point recover an approximation, while out-of-range values saturate.",
+      "motion": "Float markers appear between representable positions; the selected marker exposes x/scale+z = −1.6.; Markers snap to reconstructed positions −0.3,0.1,0.9 as their codes become −6,−2,6.; The −2 code subtracts −3 and multiplies by 0.1; the output marker lands at 0.1 while the original stays at 0.14.; An input14 attempts code137; it reaches the code boundary127 and reconstructs to13 instead of14.",
+      "example": {
+        "values": [
+          -0.26,
+          0.14,
+          0.87
+        ],
+        "scale": 0.1,
+        "zeroPoint": -3,
+        "overflowValue": 14
+      },
+      "antiTemplate": "Individual values snap onto one affine code lattice, rather than data acquisition or scale estimation.",
+      "sceneRationale": "Four scenes distinguish affine mapping, discrete rounding, inverse reconstruction and clipping; clipping needs a separate example to avoid treating all errors as rounding."
+    },
+    "previews": [],
+    "rework": [],
+    "duration_frames": 900,
+    "status": "C_TSX_READY",
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:52:52.544163+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge02-quantization.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge02-quantization.tsx#quantizationState",
+        "source_version": {
+          "mtime_ns": 1791525106022176384,
+          "bytes": 1028
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": "Before/mid/after and transition adjacent frames passed; React server-rendered core SVG changes between tested states.",
+        "source_check": "QuantizationCore calls quantizationState(frame), passes values, scale, zeroPoint and mix to QuantizedAxis. Its cx uses the same quantize reconstruction and interpolation as tested positions; clipping stops at code127, reconstructed13.",
+        "applicable_record_ids": [
+          "recvw25vjMkk0g"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "teaching_status": "pending"
+      },
+      {
+        "stage": "C_FULL_SOURCE",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:57:41.923992+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge02-quantization-from-float32-to-int8.tsx",
+        "source_version": {
+          "mtime_ns": 1791525403404655926,
+          "bytes": 5930
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs && node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05-full.cjs",
+        "assertion_exit_code": 0,
+        "results": "B1 numerical and SVG assertions pass; full scenes also pass actual server-rendered visible value and changing-mark assertions.",
+        "source_check": "Independent full L3 scene functions directly draw objects; imported tested state functions supply numerical values, coordinates and code labels. Each of the full-video samples changed the mechanism SVG and displayed its expected computed result. Layout, scene copy and SVG combinations are local to this file.",
+        "applicable_record_ids": [
+          "recvw25vjMkk0g"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "short_source_review": "Compact JSX formatting yields <180 lines; source contains all designed independent scene mechanisms, arithmetic and distinct final comparisons. No shared scene wrapper or imported B1 core is used. Proceed to actual final-video teaching review; technical check grants no teaching pass."
+      }
+    ],
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "edge_06_10 agent; independent of items1–5 author",
+    "reviewed_at": "2026-10-09T06:11:05.629608+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "edge_06_10 agent; independent of items1–5 author",
+      "reviewed_at": "2026-10-09T06:11:05.629608+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "snap",
+          "times_seconds": [
+            9.966666666666667,
+            10.0,
+            10.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0299.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0300.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0301.png"
+          ],
+          "observation": "f299–301 retain correct final code/reconstruction pairs at discrete positions; overview f120/f290 demonstrates the positional change."
+        },
+        {
+          "risk_id": "saturation",
+          "times_seconds": [
+            24.466666666666665,
+            24.5,
+            24.533333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0734.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0735.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/risk-0736.png"
+          ],
+          "observation": "f734 moving point reads13.03 just before endpoint; f735–736 reads127→13.00 at the dashed limit. This is a visible approach followed by saturated result, not only a warning label."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            4,
+            9.6667
+          ],
+          "observation": "Original markers -.26/.14/.87 occupy non-grid positions; later markers sit at reconstructions -.30/.10/.90 with codes -6/-2/6, visibly illustrating rounding."
+        },
+        {
+          "times_seconds": [
+            17.8333,
+            21.3333
+          ],
+          "observation": "Original .14 hollow marker remains apart from reconstructed .10 solid marker. A separate bracket appears and labels absolute error .04."
+        },
+        {
+          "times_seconds": [
+            24.4667,
+            24.5,
+            25,
+            28.3333
+          ],
+          "observation": "The orange moving point reaches the dashed saturation endpoint, then the final label shows code127→13.00 for input14. Final stored endpoint is maintained; no claim of exact reconstruction."
+        }
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publication": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Quantization from Float32 to Int8: Rounding and Clipping",
+  "title": "Quantization from Float32 to Int8: Rounding and Clipping",
+  "prompt": "Create a 30-second silent English animation of Quantization from Float32 to Int8. At 0–6 s, place −0.26, 0.14 and 0.87 on a real-value grid with scale 0.1 and zero point −3. At 6–14 s, snap them to int8 codes −6, −2 and 6 and reconstructed values −0.3, 0.1 and 0.9. At 14–22 s, reconstruct code −2 and expose its 0.04 error. At 22–30 s, show input 14 attempting code 137, saturating at 127 and reconstructing to 13.\n\nRender a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and line height 1.45. Use background layers #0e0e0e, #171b1c and #212629; input #56b4e9, operations #e69f00, results #009e73, clipping or rejection #d55e00, and secondary weights #cc79a7, with strong text #f8fafc and muted text #a8b4c4. Keep concise copy left and a large numerical SVG diagram right; fade and slide labels over 12–18 frames with 10-frame staggering, and bind moving marks, values and arithmetic to the same mechanism state.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.055844+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/quantization-from-float32-to-int8-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/cover-01.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMkk0g",
+      "slug": "quantization-from-float32-to-int8",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8/quantization-from-float32-to-int8.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:21:43+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        244,
+        202,
+        755,
+        699
+      ],
+      "bbox_width": 511,
+      "bbox_height": 497,
+      "center_offset": [
+        -0.5,
+        0.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1"
+}

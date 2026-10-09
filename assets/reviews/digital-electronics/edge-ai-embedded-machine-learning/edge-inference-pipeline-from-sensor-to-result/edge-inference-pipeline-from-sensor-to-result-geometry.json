@@ -1,0 +1,41 @@
+{
+  "record_id": "recvw25vjM9t27",
+  "slug": "edge-inference-pipeline-from-sensor-to-result",
+  "version": "v2",
+  "source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/cover-audit-images/edge-inference-pipeline-from-sensor-to-result.png",
+  "canvas": [
+    1000,
+    900
+  ],
+  "figure_frame": [
+    180,
+    140,
+    820,
+    760
+  ],
+  "threshold": "Any RGB channel > 10, every pixel inspected",
+  "tolerances": {
+    "overflow_px": 2,
+    "center_x_px": 20,
+    "center_y_px": 30,
+    "minimum_width_px": 280,
+    "minimum_height_px": 280
+  },
+  "measured_at": "2026-10-09T06:21:43+00:00",
+  "visual_review_status": "PASSED",
+  "status": "PASSED",
+  "errors": [],
+  "bbox": [
+    244,
+    203,
+    755,
+    681
+  ],
+  "bbox_width": 511,
+  "bbox_height": 478,
+  "center_offset": [
+    -0.5,
+    -8.0
+  ],
+  "overflow_px": 0
+}

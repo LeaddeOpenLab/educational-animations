@@ -1,0 +1,333 @@
+{
+  "id": "recvw25wapJvFX",
+  "feishu_record_id": "recvw25wapJvFX",
+  "original_name": "Confidence Threshold for Edge Classification",
+  "standard_name": "Confidence Threshold for Edge Classification",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v2",
+  "learning_objective": "Compare a classifier maximum score with a threshold and abstain when confidence is insufficient.",
+  "core_conclusion": "The equality boundary is accepted; confidence is not a correctness guarantee",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://developers.google.com/edge/litert/libraries/task_library/image_classifier"
+    ],
+    "scope": "Compare a classifier maximum score with a threshold and abstain when confidence is insufficient."
+  },
+  "references": [
+    "https://developers.google.com/edge/litert/libraries/task_library/image_classifier"
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "scenes": [
+      {
+        "id": "scores",
+        "objects": "Class scores [0.60,0.25,0.15] and threshold 0.70",
+        "change": "Grow three probability bars to their actual numerical values",
+        "cause": "The model returns a distribution",
+        "result": "Class A is largest but below the threshold",
+        "start_seconds": 0,
+        "end_seconds": 4.5,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "abstain",
+        "objects": "Winner A score 0.60; threshold line at 0.70; output slot",
+        "change": "Move winner score into comparison; leave class output empty and populate unknown",
+        "cause": "max(score) < threshold",
+        "result": "The device abstains rather than treating the largest score as sufficient",
+        "start_seconds": 4.5,
+        "end_seconds": 12.0,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "newinput",
+        "objects": "New input gives [0.82,0.10,0.08]",
+        "change": "Redistribute class mass, cross threshold and move A into output",
+        "cause": "New evidence raises maximum score to 0.82",
+        "result": "The same decision rule now accepts A",
+        "start_seconds": 12.0,
+        "end_seconds": 21.0,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "boundary",
+        "objects": "Boundary test maximum 0.70 with threshold 0.70",
+        "change": "Move A bar to exact threshold and preserve accepted output",
+        "cause": "Rule is max(score) >= threshold",
+        "result": "The equality boundary is accepted; confidence is not a correctness guarantee",
+        "start_seconds": 21.0,
+        "end_seconds": 26.5,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "abstain",
+        "uncertainty": "Threshold crossing must visibly control output; all score sets sum to one.",
+        "expected_observation": "Move winner score into comparison; leave class output empty and populate unknown; The same decision rule now accepts A"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "threshold-crossing",
+        "time_seconds": 14.533333333333333,
+        "reason": "The interpolated score first satisfies the same threshold"
+      },
+      {
+        "id": "equality",
+        "time_seconds": 22.333333333333332,
+        "reason": "Exactly0.70 is accepted by >= rule"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge15-state.ts",
+      "bindings": {
+        "objects": "Explicit samples, selected indexes, values, memory/device ownership or class membership from one state function",
+        "values": "All displayed numerical values derived from the same state function",
+        "source_binding_review": "Final TSX directly calls same B1 state and passes its samples/values/coordinates into visible primitives and SVG fields."
+      }
+    },
+    "template_scope": "L1 visual theme and L2 primitives only; no shared L3 scenes",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:52:36.332948+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge11-15-core.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge15-state.ts",
+        "source_version": {
+          "state_size": 382,
+          "state_mtime_ns": 1791525123963431406,
+          "core_mtime_ns": 1791525155038141650
+        },
+        "source_check": "confidenceState scores drive bar geometry; threshold drives line; classify on the same scores determines output membership and exact equality.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "edge15: abstention, threshold crossing, equality and conserved mass PASS",
+        "evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/b1-11-15.log",
+        "applicable_record_ids": [
+          "recvw25wapJvFX"
+        ]
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:58:54.464428+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx",
+        "source_check": "Final source directly binds the B1 state function to topic-specific SVG objects and L2 primitives; SSR verifies full-scene values and transition differences.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "source_version": {
+          "mtime_ns": 1791525483474120797,
+          "size": 3817
+        }
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "V1 before crossing displays0.70<0.70 because of two-decimal rounding; repair to3decimals required for barlabels and comparator.",
+        "affected_ids": [
+          "recvw25wapJvFX"
+        ],
+        "fix": "Show3decimal precision for scorebars, threshold and comparison; decision unchanged.",
+        "status": "resolved",
+        "evidence": [
+          "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/overview.jpg"
+        ]
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge15-confidence-threshold-for-edge-classification.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:17:32.790343+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/edge15-confidence-threshold-for-edge-classification/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:32.790343+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/edge15-confidence-threshold-for-edge-classification/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "threshold-crossing",
+          "times_seconds": [
+            14.5,
+            14.533333333333333,
+            14.566666666666666
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0435.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0436.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0437.png"
+          ],
+          "observation": "Max score starts0.60 below0.70; unknown becomesA precisely at decision crossing14.533s. Equality22.333s keepsA accepted and shows>= rule. V2 observed: before crossing14.500s shows0.699<0.700 unknown; at14.533s shows0.701>=0.700 withA; at22.333s equality0.700>=0.700 remainsaccepted; labels readable without collision."
+        },
+        {
+          "risk_id": "equality",
+          "times_seconds": [
+            22.3,
+            22.333333333333332,
+            22.366666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0669.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0670.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0671.png"
+          ],
+          "observation": "Max score starts0.60 below0.70; unknown becomesA precisely at decision crossing14.533s. Equality22.333s keepsA accepted and shows>= rule. V2 observed: before crossing14.500s shows0.699<0.700 unknown; at14.533s shows0.701>=0.700 withA; at22.333s equality0.700>=0.700 remainsaccepted; labels readable without collision."
+        }
+      ],
+      "observations": [
+        "Max score starts0.60 below0.70; unknown becomesA precisely at decision crossing14.533s.",
+        "Equality22.333s keepsA accepted and shows>= rule.",
+        "V2 observed: before crossing14.500s shows0.699<0.700 unknown; at14.533s shows0.701>=0.700 withA; at22.333s equality0.700>=0.700 remainsaccepted; labels readable without collision."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "Threshold crossing must visibly control output; all score sets sum to one.",
+  "media": {
+    "duration_seconds": 26.5,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Confidence Threshold for Edge Classification: Score Gate",
+  "title": "Confidence Threshold for Edge Classification: Score Gate",
+  "prompt": "A 26.5-second silent English digital electronics animation about Confidence Threshold for Edge Classification: compare a maximum class score of 0.600 against a threshold of 0.700, return unknown below the threshold, move the normalized score distribution across that boundary and accept A only when the rule is met, then show that equality at 0.700 is accepted without implying guaranteed correctness.\n\nDark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs and data, accent #e69f00 highlights the active quantity, result #009e73 marks the computed outcome, warn #d55e00 marks rejected states graphically, and alternate #cc79a7 distinguishes secondary categories; Helvetica Neue with bold headings and readable numerical labels; stagger-in class bars and decision output, move normalized scores from frames 390 to 490, change the decision at frame 436, show three-decimal labels near the boundary, and demonstrate exact equality at frame 670, using 30 fps and keeping the final conclusion visible for reading.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 26.5,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.231595+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/confidence-threshold-for-edge-classification-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/cover-03.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25wapJvFX",
+      "slug": "confidence-threshold-for-edge-classification",
+      "version": "v2",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/confidence-threshold-for-edge-classification.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:23:41+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        221,
+        197,
+        744,
+        695
+      ],
+      "bbox_width": 523,
+      "bbox_height": 498,
+      "center_offset": [
+        -17.5,
+        -4.0
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v2"
+}

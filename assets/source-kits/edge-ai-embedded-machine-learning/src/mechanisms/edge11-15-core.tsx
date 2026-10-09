@@ -1,0 +1,13 @@
+import React from 'react';
+import {Axes} from '../components/Plot';
+import {SignalWindow,TensorBars,OperatorPartitions,EnergyTimeline,ScoreDistribution} from '../components/EdgeAI';
+import {featureState} from './edge11-state';
+import {streamState} from './edge12-state';
+import {delegateState} from './edge13-state';
+import {powerState} from './edge14-state';
+import {confidenceState} from './edge15-state';
+export const FeatureCore=({frame}:{frame:number})=>{const v=featureState(frame);return <Axes width={900} height={560} xDomain={[-1,5]} yDomain={[-2,5]}>{s=><>{frame<150?<SignalWindow s={s} samples={v.samples} start={0} size={4}/>:<TensorBars s={s} values={v.squared.slice(0,v.squareCount)} names={['x0²','x1²','x2²','x3²']} x={0} y={3} step={1}/>}<text x={s.px(1)} y={s.py(4)} fill="white">sum {v.sum}; RMS {v.rms??'pending'}</text></>}</Axes>};
+export const StreamCore=({frame}:{frame:number})=>{const v=streamState(frame);return <Axes width={900} height={560} xDomain={[-1,9]} yDomain={[-3,3]}>{s=><><SignalWindow s={s} samples={v.samples} start={v.visualStart} size={4}/><text x={s.px(0)} y={s.py(2.8)} fill="white">{v.indexes.join(',')} → {v.values.join(',')}</text></>}</Axes>};
+export const DelegateCore=({frame}:{frame:number})=>{const v=delegateState(frame);return <Axes width={900} height={560} xDomain={[-1,5]} yDomain={[-2,2]}>{s=><OperatorPartitions s={s} operators={v.operators} current={v.current} handoff={v.handoff} partitioned={v.partitioned}/>}</Axes>};
+export const PowerCore=({frame}:{frame:number})=>{const v=powerState(frame);return <><Axes width={900} height={280} xDomain={[0,11]} yDomain={[0,400]}>{s=><EnergyTimeline s={s} power={v.powerA} dt={1} count={v.count}/>}</Axes><Axes width={900} height={280} xDomain={[0,11]} yDomain={[0,400]}>{s=><EnergyTimeline s={s} power={v.powerB} dt={1} count={Math.min(v.count,5)}/>}</Axes></>};
+export const ConfidenceCore=({frame}:{frame:number})=>{const v=confidenceState(frame);return <Axes width={900} height={560} xDomain={[-1,3]} yDomain={[-.2,1.2]}>{s=><><ScoreDistribution s={s} scores={v.scores} names={['A','B','C']} threshold={v.threshold}/><text x={s.px(0)} y={s.py(1.15)} fill="white">output: {v.output}</text></>}</Axes>};

@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "version": "v2",
+  "reviewer": "Codex main",
+  "reviewed_at": "2026-10-09T14:17:32.788664+08:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/edge11-on-device-feature-extraction/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risks.jpg"
+  ],
+  "method": "Viewed actual final MP4-derived6keyframes at640x360 per tile and every risk±1frame; source and state assertions supplementary.",
+  "observations": [
+    "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00.",
+    "At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00.",
+    "V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+  ],
+  "checks": {
+    "terminology": true,
+    "explanation": true,
+    "motion": true,
+    "consistency": true,
+    "layout": true,
+    "small_player": true,
+    "version_match": true,
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true
+  },
+  "veto_checks": {
+    "mechanism_visible": true,
+    "numbers_match_objects": true,
+    "readable_without_collisions": true
+  },
+  "risk_checks": [
+    {
+      "risk_id": "square-input",
+      "times_seconds": [
+        5.633333333333334,
+        5.666666666666667,
+        5.7
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0169.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0170.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0171.png"
+      ],
+      "observation": "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00. At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00. V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+    },
+    {
+      "risk_id": "rms-complete",
+      "times_seconds": [
+        17.133333333333333,
+        17.166666666666668,
+        17.2
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0514.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0515.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0516.png"
+      ],
+      "observation": "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00. At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00. V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+    },
+    {
+      "risk_id": "same-rms",
+      "times_seconds": [
+        23.3,
+        23.333333333333332,
+        23.366666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0699.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0700.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/on-device-feature-extraction/risk-0701.png"
+      ],
+      "observation": "Signed samples lead to four squared contributions; running sum changes3→4 at17.167s and RMS then appears as1.00. At23.333s alternating waveform becomes all+1; mean0→1 while RMS remains1.00. V2 observed: all negative-square labels explicitly parenthesize the base as (-1)²=1; cells stay readable with no overlap."
+    }
+  ]
+}

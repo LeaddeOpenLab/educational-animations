@@ -2,7 +2,7 @@
 
 Short educational animations with concept explanations and versioned reuse materials.
 
-**345 video-ready · 39 recorded review passes · 137 awaiting production · 43 courses · 17 disciplines**
+**360 video-ready · 54 recorded review passes · 137 awaiting production · 44 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -136,7 +136,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#digital-electronics"><img src="assets/subject-cards/digital-electronics.png" width="100%" alt="Digital Electronics"></a><br>
 <a href="#digital-electronics"><strong>Digital Electronics</strong></a><br>
-<sub>2 courses · 9 videos · 0 awaiting production</sub>
+<sub>3 courses · 24 videos · 0 awaiting production</sub>
 </td>
 <td></td>
 </tr>
@@ -641,7 +641,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="digital-electronics"></a>
 ### Digital Electronics
 
-9 videos · 0 awaiting production
+24 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -657,7 +657,12 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a href="catalog/digital-electronics/de-fpga.md"><strong>FPGA Fundamentals</strong></a><br>
 <sub>4 videos · 0 awaiting production</sub>
 </td>
-<td></td>
+<td width="33%" valign="top">
+<a id="edge-ai-and-embedded-machine-learning"></a>
+<a href="catalog/digital-electronics/edge-ai-embedded-machine-learning.md"><img src="assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg" width="100%" alt="Edge AI and Embedded Machine Learning"></a><br>
+<a href="catalog/digital-electronics/edge-ai-embedded-machine-learning.md"><strong>Edge AI and Embedded Machine Learning</strong></a><br>
+<sub>15 videos · 0 awaiting production</sub>
+</td>
 </tr>
 </table>
 

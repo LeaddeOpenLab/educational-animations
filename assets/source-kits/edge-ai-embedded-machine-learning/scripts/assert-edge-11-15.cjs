@@ -1,0 +1,11 @@
+const assert=require('node:assert/strict');
+const {featureState:f}=require('../src/mechanisms/edge11-state.ts');
+const {streamState:s}=require('../src/mechanisms/edge12-state.ts');
+const {delegateState:d}=require('../src/mechanisms/edge13-state.ts');
+const {powerState:p}=require('../src/mechanisms/edge14-state.ts');
+const {confidenceState:c}=require('../src/mechanisms/edge15-state.ts');
+assert.equal(f(379).sum,0);assert.equal(f(380).sum,1);assert.equal(f(470).sum,3);assert.equal(f(515).rms,1);assert.deepEqual(f(699).samples,[-1,1,-1,1]);assert.deepEqual(f(700).samples,[1,1,1,1]);assert.equal(f(700).mean,1);assert.equal(f(700).rms,f(699).rms);console.log('edge11: square/reduce and equal-RMS counterexample boundaries PASS');
+assert.deepEqual(s(100).indexes,[0,1,2,3]);assert.equal(s(300).start,0);assert.equal(s(300).visualStart,1);assert.equal(s(339).start,0);assert.equal(s(340).start,2);assert.deepEqual(s(340).values,[0,-1,2,-2]);assert.equal(s(579).start,2);assert.equal(s(580).start,4);assert.deepEqual(s(700).outputs,[3,5,7]);console.log('edge12: retained indexes, motion midpoint, end-of-hop +/-1 PASS');
+assert.equal(d(169).partitioned,false);assert.equal(d(170).partitioned,true);assert.deepEqual(d(389).payload,[-2,3]);assert.deepEqual(d(390).payload,[0,3]);assert.deepEqual(d(500).payload,[1,4]);assert.deepEqual(d(610).payload,[5]);assert.equal(d(610).crossings,2);assert.equal(d(475).handoff,.5);console.log('edge13: lane split, ReLU, CPU transform, final handoff PASS');
+assert.equal(p(164).a.energy,0);assert.equal(p(165).a.energy,100);assert.equal(p(245).b.energy,1500);assert.equal(p(345).a.energy,1000);assert.equal(p(500).a.elapsed,10);assert.equal(p(500).b.elapsed,5);console.log('edge14: sampled power areas integrate to 1000/1500 microjoules PASS');
+assert.equal(c(170).output,'unknown');assert.equal(c(435).decision.accepted,false);assert.equal(c(436).decision.accepted,true);assert.equal(c(490).output,'A');assert.equal(c(670).scores[0],.7);assert.equal(c(670).decision.accepted,true);for(const t of [0,390,435,436,490,669,670,794])assert.ok(Math.abs(c(t).scores.reduce((a,b)=>a+b,0)-1)<1e-10);console.log('edge15: abstention, threshold crossing, equality and conserved mass PASS');

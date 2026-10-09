@@ -1,0 +1,320 @@
+{
+  "id": "recvw25vjMcsUe",
+  "feishu_record_id": "recvw25vjMcsUe",
+  "original_name": "Streaming Inference with Sliding Windows",
+  "standard_name": "Streaming Inference with Sliding Windows",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v1",
+  "learning_objective": "Advance a four-sample inference window by two samples and preserve its overlap.",
+  "core_conclusion": "Overlap increases output frequency without shortening the required context",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.edgeimpulse.com/hardware/deployments/run-cpp"
+    ],
+    "scope": "Advance a four-sample inference window by two samples and preserve its overlap."
+  },
+  "references": [
+    "https://docs.edgeimpulse.com/hardware/deployments/run-cpp"
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "scenes": [
+      {
+        "id": "buffer",
+        "objects": "Eight indexed sensor samples and a highlighted window [0,4)",
+        "change": "Reveal first four samples and their selected values",
+        "cause": "Inference requires a complete input window",
+        "result": "First input consists of samples 0 through 3",
+        "start_seconds": 0,
+        "end_seconds": 4,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "advance",
+        "objects": "Persistent eight-sample waveform; window start moves from 0 to 2",
+        "change": "Drop indexes 0,1 and append indexes 4,5; keep indexes 2,3 in the selected buffer",
+        "cause": "Hop size is two, smaller than window size four",
+        "result": "Second window [2,6) reuses two samples",
+        "start_seconds": 4,
+        "end_seconds": 12,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "next",
+        "objects": "Second window and incoming samples 6,7",
+        "change": "Advance start to 4; replace two values and recompute RMS from the new selection",
+        "cause": "A fixed-size window follows the stream",
+        "result": "Third input is samples 4 through 7",
+        "start_seconds": 12,
+        "end_seconds": 21,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "latency",
+        "objects": "Three completed windows on a time axis",
+        "change": "Show output markers after indexes 3,5,7 arrive",
+        "cause": "The first result requires four samples; later results require only a hop",
+        "result": "Overlap increases output frequency without shortening the required context",
+        "start_seconds": 21,
+        "end_seconds": 27,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "advance",
+        "uncertainty": "Retained values must keep identity; do not animate a reset of the whole signal.",
+        "expected_observation": "Drop indexes 0,1 and append indexes 4,5; keep indexes 2,3 in the selected buffer; Third input is samples 4 through 7"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "first-hop",
+        "time_seconds": 11.333333333333334,
+        "reason": "Sample membership changes at the end of the first hop"
+      },
+      {
+        "id": "second-hop",
+        "time_seconds": 19.333333333333332,
+        "reason": "Second retained pair and incoming suffix enter"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge12-state.ts",
+      "bindings": {
+        "objects": "Explicit samples, selected indexes, values, memory/device ownership or class membership from one state function",
+        "values": "All displayed numerical values derived from the same state function",
+        "source_binding_review": "Final TSX directly calls same B1 state and passes its samples/values/coordinates into visible primitives and SVG fields."
+      }
+    },
+    "template_scope": "L1 visual theme and L2 primitives only; no shared L3 scenes",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:52:36.331012+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge11-15-core.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge12-state.ts",
+        "source_version": {
+          "state_size": 538,
+          "state_mtime_ns": 1791525123956859963,
+          "core_mtime_ns": 1791525155038141650
+        },
+        "source_check": "streamState visualStart drives SignalWindow edges; selected indexes and actual sliced values change only at end of each hop.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "edge12: retained indexes, motion midpoint, end-of-hop +/-1 PASS",
+        "evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/b1-11-15.log",
+        "applicable_record_ids": [
+          "recvw25vjMcsUe"
+        ]
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:58:54.462689+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx",
+        "source_check": "Final source directly binds the B1 state function to topic-specific SVG objects and L2 primitives; SSR verifies full-scene values and transition differences.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "source_version": {
+          "mtime_ns": 1791525483469498192,
+          "size": 3823
+        }
+      }
+    ],
+    "rework": [],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge12-streaming-inference-with-sliding-windows.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "first-hop",
+          "times_seconds": [
+            11.3,
+            11.333333333333334,
+            11.366666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0339.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0340.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0341.png"
+          ],
+          "observation": "The fixed waveform preserves all8sample identities. The four-slot input changes0–3→2–5→4–7 and reuses two samples per hop. At11.333s selected indexes and RMS change together to[2,3,4,5] and1.500; at19.333s to[4,5,6,7] and1.581. Final output schedule after samples3,5,7 is readable at640width; transition uses MOVING label while earlier input remains current."
+        },
+        {
+          "risk_id": "second-hop",
+          "times_seconds": [
+            19.3,
+            19.333333333333332,
+            19.366666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0579.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0580.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0581.png"
+          ],
+          "observation": "The fixed waveform preserves all8sample identities. The four-slot input changes0–3→2–5→4–7 and reuses two samples per hop. At11.333s selected indexes and RMS change together to[2,3,4,5] and1.500; at19.333s to[4,5,6,7] and1.581. Final output schedule after samples3,5,7 is readable at640width; transition uses MOVING label while earlier input remains current."
+        }
+      ],
+      "observations": [
+        "The fixed waveform preserves all8sample identities. The four-slot input changes0–3→2–5→4–7 and reuses two samples per hop.",
+        "At11.333s selected indexes and RMS change together to[2,3,4,5] and1.500; at19.333s to[4,5,6,7] and1.581.",
+        "Final output schedule after samples3,5,7 is readable at640width; transition uses MOVING label while earlier input remains current."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "Retained values must keep identity; do not animate a reset of the whole signal.",
+  "media": {
+    "duration_seconds": 27.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Streaming Inference with Sliding Windows: Two-Sample Hops",
+  "title": "Streaming Inference with Sliding Windows: Two-Sample Hops",
+  "prompt": "A 27-second silent English digital electronics animation about Streaming Inference with Sliding Windows: keep an eight-sample waveform fixed while a four-sample selection advances from indexes 0–3 to 2–5 and 4–7, visibly retain two input values per hop, recompute RMS for each selected input and mark output arrivals after samples 3, 5 and 7.\n\nDark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs and data, accent #e69f00 highlights the active quantity, result #009e73 marks the computed outcome, warn #d55e00 marks rejected states graphically, and alternate #cc79a7 distinguishes secondary categories; Helvetica Neue with bold headings and readable numerical labels; stagger-in buffer cells over 12 frames with 10-frame offsets, move the selection by two samples until frames 340 and 580, update input identities and RMS at those boundaries, then hold the output schedule, using 30 fps and keeping the final conclusion visible for reading.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 27.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.193598+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/streaming-inference-with-sliding-windows-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/cover-03.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMcsUe",
+      "slug": "streaming-inference-with-sliding-windows",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/streaming-inference-with-sliding-windows.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:23:12+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        214,
+        189,
+        769,
+        676
+      ],
+      "bbox_width": 555,
+      "bbox_height": 487,
+      "center_offset": [
+        -8.5,
+        -17.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1"
+}

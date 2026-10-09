@@ -1,0 +1,483 @@
+{
+  "id": "recvw25vjM4V2u",
+  "feishu_record_id": "recvw25vjM4V2u",
+  "original_name": "Per-Channel Weight Quantization",
+  "standard_name": "Per-Channel Weight Quantization",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v2",
+  "status": "designed",
+  "learning_objective": "Compare one shared weight scale with a separate scale for each output channel, making loss in a small-range channel visible.",
+  "core_conclusion": "Per-channel scales match different channel ranges and preserve small weights that a large shared scale coarsens.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://developers.google.com/edge/litert/quantization/quantization_spec"
+    ],
+    "scope": "Official terminology basis from saved course research; all numerical examples are explicitly illustrative."
+  },
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx",
+    "scenes": [
+      {
+        "id": "ranges",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "heading": "Channels have different ranges",
+        "lines": [
+          "Two output channels, two scales of magnitude."
+        ],
+        "objects": [
+          "channel A weights0.01,0.02,0.04",
+          "channel B weights0.5,1,2"
+        ],
+        "change": "Two weight rows extend to their own maxima; channel A receives a zoom inset while a common-scale overview retains its much smaller magnitude.",
+        "cause": "Different filters can contain very different weight ranges.",
+        "result": "Both actual maxima and the zoom factor are explicit.",
+        "reading_seconds": 2,
+        "timing_reason": "3 seconds for the stated object transformation, then 2 seconds to inspect its numerical result."
+      },
+      {
+        "id": "shared",
+        "start_seconds": 5,
+        "end_seconds": 13,
+        "heading": "One scale follows the largest weight",
+        "lines": [
+          "Shared scale = 2 / 127."
+        ],
+        "objects": [
+          "shared int8 ruler",
+          "channel A reconstructed weights",
+          "channel B reconstructed weights"
+        ],
+        "change": "All weights quantize using the largest magnitude2; A’s0.01 and0.02 both land at code1 while0.04 lands at3.",
+        "cause": "A tensor-wide scale is set by the largest channel range.",
+        "result": "Distinct small weights collapse onto the same code and reconstruction.",
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      },
+      {
+        "id": "separate",
+        "start_seconds": 13,
+        "end_seconds": 23,
+        "heading": "Give each channel its own ruler",
+        "lines": [
+          "A scale = 0.04 / 127.",
+          "B scale = 2 / 127."
+        ],
+        "objects": [
+          "channel-specific scales",
+          "same channel A original weights",
+          "per-channel reconstructed values"
+        ],
+        "change": "Channel A’s ruler contracts to its own range, spreading codes to32,64,127; B retains its previous ruler.",
+        "cause": "Per-output-channel symmetric scales normalize each channel independently.",
+        "result": "A’s three weights occupy distinct codes and reconstruct near their originals.",
+        "reading_seconds": 3.5,
+        "timing_reason": "6.5 seconds for the stated object transformation, then 3.5 seconds to inspect its numerical result."
+      },
+      {
+        "id": "compare",
+        "start_seconds": 23,
+        "end_seconds": 30,
+        "heading": "Compare the same small channel",
+        "lines": [
+          "Use the same real-value axis.",
+          "Lower error is visible in the residuals."
+        ],
+        "objects": [
+          "original A markers",
+          "shared-scale residuals",
+          "per-channel residuals"
+        ],
+        "change": "The shared and per-channel reconstructions align on identical axes; residual bars extend by absolute reconstruction errors, with per-channel residuals visibly smaller.",
+        "cause": "Only the scale choice changed, so the residual difference isolates its effect.",
+        "result": "A mean-absolute-error pair is computed from the displayed reconstructions.",
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "channel-separation",
+        "scene_id": "separate",
+        "uncertainty": "A zoomed axis might falsely claim better accuracy; labels might imply every channel always benefits.",
+        "expected_observation": "Original A values remain unchanged on shared comparison axes; per-channel codes separate the two previously collapsed small weights."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "code-collapse",
+        "time_seconds": 8,
+        "reason": "Two distinct A values must actually map to one shared code."
+      },
+      {
+        "id": "scale-separation",
+        "time_seconds": 16,
+        "reason": "B scale stays fixed while A scale changes."
+      },
+      {
+        "id": "equal-axis",
+        "time_seconds": 26,
+        "reason": "Before/after residuals must use the same real-value gain."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge04-per-channel.tsx#channelState",
+      "status": "implemented",
+      "bindings": [
+        "channelScales(channels) → per-channel scale labels and quantize calls",
+        "shared scale → baseline reconstructed TensorBars.values",
+        "quantized channel entries → code values and reconstruction markers",
+        "absolute errors → residual widths and mean error cells"
+      ],
+      "constants": {
+        "channels": [
+          [
+            0.01,
+            0.02,
+            0.04
+          ],
+          [
+            0.5,
+            1,
+            2
+          ]
+        ],
+        "zeroPoint": 0
+      }
+    },
+    "template_scope": "Registered EdgeAI course primitives, palette, fonts and L1 layout only. No shared L3 scenes.",
+    "design_audit": {
+      "visualArgument": "Per-channel scales match different channel ranges and preserve small weights that a large shared scale coarsens.",
+      "motion": "Two weight rows extend to their own maxima; channel A receives a zoom inset while a common-scale overview retains its much smaller magnitude.; All weights quantize using the largest magnitude2; A’s0.01 and0.02 both land at code1 while0.04 lands at3.; Channel A’s ruler contracts to its own range, spreading codes to32,64,127; B retains its previous ruler.; The shared and per-channel reconstructions align on identical axes; residual bars extend by absolute reconstruction errors, with per-channel residuals visibly smaller.",
+      "example": {
+        "channels": [
+          [
+            0.01,
+            0.02,
+            0.04
+          ],
+          [
+            0.5,
+            1,
+            2
+          ]
+        ],
+        "zeroPoint": 0
+      },
+      "antiTemplate": "Two channel ranges and a same-axis error comparison, rather than calibration’s sample-driven range selection.",
+      "sceneRationale": "Four scenes first establish unequal ranges, expose an actual code collision, change only the scale assignment, then verify reconstruction errors on equal axes."
+    },
+    "previews": [],
+    "rework": [
+      {
+        "category": "logic",
+        "reason": "Use exact code-derived reconstruction values in labels during moving-marker interpolation.",
+        "affected_record_ids": [
+          "recvw25vjM4V2u"
+        ],
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx",
+        "previous_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review-v1.json",
+        "from_version": "v1",
+        "to_version": "v2",
+        "status": "resolved",
+        "updated_at": "2026-10-09T06:11:58.257760+00:00",
+        "cause": "Use exact code-derived reconstruction values in labels during moving-marker interpolation.",
+        "affected_ids": [
+          "recvw25vjM4V2u"
+        ],
+        "resolution_evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review.json",
+        "observed": "V2 f239–241 retains marker motion but all code-derived values are constant and correct. The per-channel scale boundary and same-axis residual comparison remain clear in the rerender.",
+        "evidence": [
+          "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review.json"
+        ],
+        "fix": "Use exact code-derived reconstruction values in labels during moving-marker interpolation."
+      }
+    ],
+    "duration_frames": 900,
+    "status": "C_TSX_READY",
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:52:52.545708+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge04-per-channel.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge04-per-channel.tsx#channelState",
+        "source_version": {
+          "mtime_ns": 1791525106029919749,
+          "bytes": 1376
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": "Before/mid/after and transition adjacent frames passed; React server-rendered core SVG changes between tested states.",
+        "source_check": "ChannelCore calls channelState(frame). Each original and reconstructed weight binds circle cx and residual line endpoints on one unchanged Axes domain. Separate scales take effect atomically at frame90; B scale remains fixed.",
+        "applicable_record_ids": [
+          "recvw25vjM4V2u"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "teaching_status": "pending"
+      },
+      {
+        "stage": "C_FULL_SOURCE",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:57:41.926576+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx",
+        "source_version": {
+          "mtime_ns": 1791525403404948594,
+          "bytes": 5931
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs && node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05-full.cjs",
+        "assertion_exit_code": 0,
+        "results": "B1 numerical and SVG assertions pass; full scenes also pass actual server-rendered visible value and changing-mark assertions.",
+        "source_check": "Independent full L3 scene functions directly draw objects; imported tested state functions supply numerical values, coordinates and code labels. Each of the full-video samples changed the mechanism SVG and displayed its expected computed result. Layout, scene copy and SVG combinations are local to this file.",
+        "applicable_record_ids": [
+          "recvw25vjM4V2u"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "short_source_review": "Compact JSX formatting yields <180 lines; source contains all designed independent scene mechanisms, arithmetic and distinct final comparisons. No shared scene wrapper or imported B1 core is used. Proceed to actual final-video teaching review; technical check grants no teaching pass."
+      },
+      {
+        "type": "D_V2_MINIMAL_REPAIR",
+        "status": "passed",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge04-per-channel-weight-quantization.tsx",
+        "source_version": {
+          "mtime_ns": 1791526318256447879,
+          "size": 5945
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-v2-review-fixes.cjs",
+        "assertion_exit_code": 0,
+        "results": "Full actual scene SSR assertions passed for normalized scores, truthful storage label, exact code reconstruction, and product token geometry. Existing B1 assertion suite rerun passed. tsc --noEmit exit0.",
+        "source_check": {
+          "status": "passed",
+          "basis": "Minimal display-semantic and token-coordinate updates preserve all scene identifiers, timing, and state calculations. Reviewed actual returned SVG and same-source SSR."
+        },
+        "applicable_record_ids": [
+          "recvw25vjM4V2u"
+        ],
+        "artifact_version": "v2",
+        "reviewed_at": "2026-10-09T06:12:12.926451+00:00"
+      }
+    ],
+    "artifact_version": "v2",
+    "stage": "D_FINAL_VIDEO_REVIEW_PASSED",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+    "reviewed_at": "2026-10-09T06:17:02.438528+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+      "reviewed_at": "2026-10-09T06:17:02.438528+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "code-collapse",
+          "times_seconds": [
+            7.966666666666667,
+            8.0,
+            8.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0239.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0240.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0241.png"
+          ],
+          "observation": "At v2 f239–241 both small weights show the same exact code1→0.0157 while the markers converge; the third code3 consistently maps to.0472. No inconsistent reconstruction labels remain."
+        },
+        {
+          "risk_id": "scale-separation",
+          "times_seconds": [
+            15.966666666666667,
+            16.0,
+            16.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0479.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0480.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0481.png"
+          ],
+          "observation": "Rechecked in v2 final MP4: f479→480 changes A scale.01575→.00031 and codes1/1/3→32/64/127; B scale remains.01575."
+        },
+        {
+          "risk_id": "equal-axis",
+          "times_seconds": [
+            25.966666666666665,
+            26.0,
+            26.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0779.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0780.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0781.png"
+          ],
+          "observation": "Rechecked in v2 final MP4: f779–781 shows parallel orange/green residual bars sharing the same origin and horizontal gain; the green residuals are visibly much smaller."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            3.3333333333333335,
+            9.666666666666666,
+            15.666666666666666,
+            17.0,
+            20.333333333333332,
+            27.0
+          ],
+          "observation": "V2 f239–241 retains marker motion but all code-derived values are constant and correct. The per-channel scale boundary and same-axis residual comparison remain clear in the rerender."
+        }
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publication": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Per-Channel Weight Quantization: Preserving Small Weights",
+  "title": "Per-Channel Weight Quantization: Preserving Small Weights",
+  "prompt": "Create a 30-second silent English animation of Per-Channel Weight Quantization. At 0–5 s, compare channel A weights 0.01, 0.02 and 0.04 against channel B weights 0.5, 1 and 2. At 5–13 s, quantize with shared scale 2/127 so A codes become 1, 1 and 3. At 13–23 s, use A scale 0.04/127 and keep B scale unchanged; A codes separate into 32, 64 and 127. At 23–30 s, compare absolute reconstruction errors on the same real-value scale and show the smaller per-channel error.\n\nRender a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and line height 1.45. Use background layers #0e0e0e, #171b1c and #212629; input #56b4e9, operations #e69f00, results #009e73, clipping or rejection #d55e00, and secondary weights #cc79a7, with strong text #f8fafc and muted text #a8b4c4. Keep concise copy left and a large numerical SVG diagram right; fade and slide labels over 12–18 frames with 10-frame staggering, and bind moving marks, values and arithmetic to the same mechanism state.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.079722+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/per-channel-weight-quantization-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/cover-01.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjM4V2u",
+      "slug": "per-channel-weight-quantization",
+      "version": "v2",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/per-channel-weight-quantization.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:22:03+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        249,
+        200,
+        740,
+        725
+      ],
+      "bbox_width": 491,
+      "bbox_height": 525,
+      "center_offset": [
+        -5.5,
+        12.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v2"
+}

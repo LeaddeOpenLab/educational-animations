@@ -1,0 +1,41 @@
+{
+  "record_id": "recvw25wapJvFX",
+  "slug": "confidence-threshold-for-edge-classification",
+  "version": "v2",
+  "source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/cover-audit-images/confidence-threshold-for-edge-classification.png",
+  "canvas": [
+    1000,
+    900
+  ],
+  "figure_frame": [
+    180,
+    140,
+    820,
+    760
+  ],
+  "threshold": "Any RGB channel > 10, every pixel inspected",
+  "tolerances": {
+    "overflow_px": 2,
+    "center_x_px": 20,
+    "center_y_px": 30,
+    "minimum_width_px": 280,
+    "minimum_height_px": 280
+  },
+  "measured_at": "2026-10-09T06:23:41+00:00",
+  "visual_review_status": "PASSED",
+  "status": "PASSED",
+  "errors": [],
+  "bbox": [
+    221,
+    197,
+    744,
+    695
+  ],
+  "bbox_width": 523,
+  "bbox_height": 498,
+  "center_offset": [
+    -17.5,
+    -4.0
+  ],
+  "overflow_px": 0
+}

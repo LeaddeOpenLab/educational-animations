@@ -1,0 +1,90 @@
+{
+  "record_id": "recvw25vjMlEQf",
+  "video_id": "edge05-quantized-multiply-and-accumulate",
+  "version": "v2",
+  "video_path": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate.mp4",
+  "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+  "reviewed_at": "2026-10-09T06:17:02.443855+00:00",
+  "review_method": "Actually inspected all six v2 overview frames and every v2 risk before/during/after frame from final MP4; compared repaired intervals against v1 observations.",
+  "evidencepaths": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "zero-point",
+      "times_seconds": [
+        3.3,
+        3.3333333333333335,
+        3.3666666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0099.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0100.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0101.png"
+      ],
+      "observation": "Rechecked in v2 final MP4: f99 has no centered result; f100–101 reveal2/4/1 under subtraction3, before any product scene."
+    },
+    {
+      "risk_id": "negative-add",
+      "times_seconds": [
+        16.466666666666665,
+        16.5,
+        16.533333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0494.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0495.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0496.png"
+      ],
+      "observation": "At v2 f494 the -4 product token is visibly above, and separate from, INT32 SUM=4. At f495–496 the accumulator becomes0 and the third token begins; the critical cancellation remains visible."
+    },
+    {
+      "risk_id": "requantize",
+      "times_seconds": [
+        29.966666666666665,
+        30.0,
+        30.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0899.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0900.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/f0901.png"
+      ],
+      "observation": "Rechecked in v2 final MP4: f899–901 records output-code reveal beginning; final f930 clearly displays code4 and reconstructed.06. No numerical inconsistency."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "passed",
+    "readability_at_640": "Main text and values readable; reviewed targeted v2 frames show no obscured critical labels.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "passed",
+  "observations": [
+    {
+      "times_seconds": [
+        4.0,
+        9.666666666666666,
+        15.0,
+        16.5,
+        24.666666666666668,
+        31.0
+      ],
+      "observation": "V2 f494 separates product token from accumulator text. f495 shows the real sum4→0 update; overview retains centered inputs, signed products, real output.06 and output code4."
+    }
+  ],
+  "repairs": [],
+  "resolved_v1_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/quantized-multiply-and-accumulate/final-video-review-v1.json"
+}

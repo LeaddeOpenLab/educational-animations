@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex main",
+  "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risks.jpg"
+  ],
+  "method": "Viewed actual final MP4-derived6keyframes at640x360 per tile and every risk±1frame; source and state assertions supplementary.",
+  "observations": [
+    "The first1ms slice yields100µJ forA and300µJ forB at5.500s. At11.500s A completes1000µJ, while B has already completed1500µJ in5ms.",
+    "Sum-of-slices panels convert to1.00mJ and1.50mJ; final independent latency/energy bars show5vs10ms and1.5vs1mJ.",
+    "Power×time units are correct; illustrative-trace qualifier visible; numerical conclusions and chart positions agree at640width."
+  ],
+  "checks": {
+    "terminology": true,
+    "explanation": true,
+    "motion": true,
+    "consistency": true,
+    "layout": true,
+    "small_player": true,
+    "version_match": true,
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true
+  },
+  "veto_checks": {
+    "mechanism_visible": true,
+    "numbers_match_objects": true,
+    "readable_without_collisions": true
+  },
+  "risk_checks": [
+    {
+      "risk_id": "first-slice",
+      "times_seconds": [
+        5.466666666666667,
+        5.5,
+        5.533333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risk-0164.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risk-0165.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risk-0166.png"
+      ],
+      "observation": "The first1ms slice yields100µJ forA and300µJ forB at5.500s. At11.500s A completes1000µJ, while B has already completed1500µJ in5ms. Sum-of-slices panels convert to1.00mJ and1.50mJ; final independent latency/energy bars show5vs10ms and1.5vs1mJ. Power×time units are correct; illustrative-trace qualifier visible; numerical conclusions and chart positions agree at640width."
+    },
+    {
+      "risk_id": "full-integral",
+      "times_seconds": [
+        11.466666666666667,
+        11.5,
+        11.533333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risk-0344.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risk-0345.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/latency-and-energy-measurement-on-device/risk-0346.png"
+      ],
+      "observation": "The first1ms slice yields100µJ forA and300µJ forB at5.500s. At11.500s A completes1000µJ, while B has already completed1500µJ in5ms. Sum-of-slices panels convert to1.00mJ and1.50mJ; final independent latency/energy bars show5vs10ms and1.5vs1mJ. Power×time units are correct; illustrative-trace qualifier visible; numerical conclusions and chart positions agree at640width."
+    }
+  ]
+}

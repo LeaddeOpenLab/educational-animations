@@ -1,0 +1,339 @@
+{
+  "id": "recvw25vjMKZj2",
+  "feishu_record_id": "recvw25vjMKZj2",
+  "original_name": "Hardware Delegate Operator Partitioning",
+  "standard_name": "Hardware Delegate Operator Partitioning",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v1",
+  "learning_objective": "Partition supported operators onto a delegate while a CPU-only operation forces two handoffs.",
+  "core_conclusion": "Acceleration must include handoff costs, not just supported-operator count",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://developers.google.com/edge/litert/performance/implementing_delegate"
+    ],
+    "scope": "Partition supported operators onto a delegate while a CPU-only operation forces two handoffs."
+  },
+  "references": [
+    "https://developers.google.com/edge/litert/performance/implementing_delegate"
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "scenes": [
+      {
+        "id": "graph",
+        "objects": "Conv, ReLU, custom operation, dense; concrete payload [-2,3]",
+        "change": "Reveal ordered operator graph on CPU",
+        "cause": "The original graph has a fixed dependency order",
+        "result": "Every output feeds the next operation",
+        "start_seconds": 0,
+        "end_seconds": 4.5,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "partition",
+        "objects": "Same operators split across CPU and delegate lanes",
+        "change": "Move Conv and ReLU into partition A; keep custom on CPU; move dense into partition B",
+        "cause": "Support and dependencies determine subgraphs",
+        "result": "A CPU-only gap prevents one continuous delegated partition",
+        "start_seconds": 4.5,
+        "end_seconds": 11.5,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "execute",
+        "objects": "Payload values moving across delegate A, CPU, delegate B",
+        "change": "ReLU changes [-2,3] to [0,3]; CPU custom adds 1 to yield [1,4]; dense sum yields 5",
+        "cause": "Each operator applies its defined operation before handoff",
+        "result": "Transfers preserve actual values and their processing order",
+        "start_seconds": 11.5,
+        "end_seconds": 21.5,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      },
+      {
+        "id": "cost",
+        "objects": "Two crossing paths and final scalar 5",
+        "change": "Retain both device crossings and count them after result appears",
+        "cause": "Multiple partitions introduce transfer boundaries",
+        "result": "Acceleration must include handoff costs, not just supported-operator count",
+        "start_seconds": 21.5,
+        "end_seconds": 28.0,
+        "reading_seconds": 2,
+        "timing_reason": "Show the numerical/object operation, then hold its consequence for at least two seconds."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "partition",
+        "uncertainty": "This is an illustrative support table, not a claim that every real delegate supports the chosen operator set.",
+        "expected_observation": "Move Conv and ReLU into partition A; keep custom on CPU; move dense into partition B; Transfers preserve actual values and their processing order"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "partition",
+        "time_seconds": 5.666666666666667,
+        "reason": "Operations move onto their supported device lane"
+      },
+      {
+        "id": "cpu-receives",
+        "time_seconds": 16.666666666666668,
+        "reason": "CPU result changes actual tensor values"
+      },
+      {
+        "id": "delegate-receives",
+        "time_seconds": 20.333333333333332,
+        "reason": "Final delegated operation produces scalar5"
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge13-state.ts",
+      "bindings": {
+        "objects": "Explicit samples, selected indexes, values, memory/device ownership or class membership from one state function",
+        "values": "All displayed numerical values derived from the same state function",
+        "source_binding_review": "Final TSX directly calls same B1 state and passes its samples/values/coordinates into visible primitives and SVG fields."
+      }
+    },
+    "template_scope": "L1 visual theme and L2 primitives only; no shared L3 scenes",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:52:36.331723+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge11-15-core.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge13-state.ts",
+        "source_version": {
+          "state_size": 751,
+          "state_mtime_ns": 1791525123959067805,
+          "core_mtime_ns": 1791525155038141650
+        },
+        "source_check": "delegateState partitioned drives operator lanes; current/handoff drive payload geometry; receiver numerical arrays show each operation result.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "edge13: lane split, ReLU, CPU transform, final handoff PASS",
+        "evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/b1-11-15.log",
+        "applicable_record_ids": [
+          "recvw25vjMKZj2"
+        ]
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex main",
+        "reviewed_at": "2026-10-09T13:58:54.463302+08:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx",
+        "source_check": "Final source directly binds the B1 state function to topic-specific SVG objects and L2 primitives; SSR verifies full-scene values and transition differences.",
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "source_version": {
+          "mtime_ns": 1791525483471417076,
+          "size": 3583
+        }
+      }
+    ],
+    "rework": [],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge13-hardware-delegate-operator-partitioning.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "partition",
+          "times_seconds": [
+            5.633333333333334,
+            5.666666666666667,
+            5.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0169.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0170.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0171.png"
+          ],
+          "observation": "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed. At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5]. Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+        },
+        {
+          "risk_id": "cpu-receives",
+          "times_seconds": [
+            16.633333333333333,
+            16.666666666666668,
+            16.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0499.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0500.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0501.png"
+          ],
+          "observation": "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed. At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5]. Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+        },
+        {
+          "risk_id": "delegate-receives",
+          "times_seconds": [
+            20.3,
+            20.333333333333332,
+            20.366666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0609.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0610.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/risk-0611.png"
+          ],
+          "observation": "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed. At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5]. Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+        }
+      ],
+      "observations": [
+        "At5.667s Conv/ReLU/Dense move to delegate while Custom+1 staysCPU; graph order remains fixed.",
+        "At16.667s CPU receives[0,3] and updates tensor to[1,4]; at20.333s delegate receives and sums to[5].",
+        "Final device path Delegate→CPU→Delegate explicitly counts2crossings; sample arithmetic labelledillustrative."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "This is an illustrative support table, not a claim that every real delegate supports the chosen operator set.",
+  "media": {
+    "duration_seconds": 28.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Hardware Delegate Operator Partitioning: Two Crossings",
+  "title": "Hardware Delegate Operator Partitioning: Two Crossings",
+  "prompt": "A 28-second silent English digital electronics animation about Hardware Delegate Operator Partitioning: place Conv, ReLU and Dense sum on a delegate lane while Custom +1 remains on CPU, track the actual tensor from [-2,3] through [0,3] and [1,4] to [5], and count the two device crossings.\n\nDark backgrounds #0e0e0e, #171b1c and #212629; primary #56b4e9 identifies inputs and data, accent #e69f00 highlights the active quantity, result #009e73 marks the computed outcome, warn #d55e00 marks rejected states graphically, and alternate #cc79a7 distinguishes secondary categories; Helvetica Neue with bold headings and readable numerical labels; partition the actual operator nodes at frame 170, use marker-travel for tensor handoffs, compute CPU output at frame 500 and the final sum at frame 610, then hold the crossing count, using 30 fps and keeping the final conclusion visible for reading.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 28.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.207119+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/hardware-delegate-operator-partitioning-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/cover-03.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMKZj2",
+      "slug": "hardware-delegate-operator-partitioning",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/hardware-delegate-operator-partitioning/hardware-delegate-operator-partitioning.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:23:29+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        214,
+        199,
+        785,
+        690
+      ],
+      "bbox_width": 571,
+      "bbox_height": 491,
+      "center_offset": [
+        -0.5,
+        -5.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1"
+}

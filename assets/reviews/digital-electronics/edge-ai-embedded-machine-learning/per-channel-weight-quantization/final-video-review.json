@@ -1,0 +1,90 @@
+{
+  "record_id": "recvw25vjM4V2u",
+  "video_id": "edge04-per-channel-weight-quantization",
+  "version": "v2",
+  "video_path": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization.mp4",
+  "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+  "reviewed_at": "2026-10-09T06:17:02.438528+00:00",
+  "review_method": "Actually inspected all six v2 overview frames and every v2 risk before/during/after frame from final MP4; compared repaired intervals against v1 observations.",
+  "evidencepaths": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "code-collapse",
+      "times_seconds": [
+        7.966666666666667,
+        8.0,
+        8.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0239.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0240.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0241.png"
+      ],
+      "observation": "At v2 f239–241 both small weights show the same exact code1→0.0157 while the markers converge; the third code3 consistently maps to.0472. No inconsistent reconstruction labels remain."
+    },
+    {
+      "risk_id": "scale-separation",
+      "times_seconds": [
+        15.966666666666667,
+        16.0,
+        16.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0479.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0480.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0481.png"
+      ],
+      "observation": "Rechecked in v2 final MP4: f479→480 changes A scale.01575→.00031 and codes1/1/3→32/64/127; B scale remains.01575."
+    },
+    {
+      "risk_id": "equal-axis",
+      "times_seconds": [
+        25.966666666666665,
+        26.0,
+        26.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0779.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0780.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/f0781.png"
+      ],
+      "observation": "Rechecked in v2 final MP4: f779–781 shows parallel orange/green residual bars sharing the same origin and horizontal gain; the green residuals are visibly much smaller."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "passed",
+    "readability_at_640": "Main text and values readable; reviewed targeted v2 frames show no obscured critical labels.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "passed",
+  "observations": [
+    {
+      "times_seconds": [
+        3.3333333333333335,
+        9.666666666666666,
+        15.666666666666666,
+        17.0,
+        20.333333333333332,
+        27.0
+      ],
+      "observation": "V2 f239–241 retains marker motion but all code-derived values are constant and correct. The per-channel scale boundary and same-axis residual comparison remain clear in the rerender."
+    }
+  ],
+  "repairs": [],
+  "resolved_v1_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/per-channel-weight-quantization/final-video-review-v1.json"
+}

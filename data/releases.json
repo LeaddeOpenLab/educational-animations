@@ -1644,5 +1644,76 @@
         "version": "v3"
       }
     ]
+  },
+  "edge-ai-embedded-machine-learning": {
+    "revision": 1,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-digital-electronics-edge-ai-embedded-machine-learning/edge-ai-embedded-machine-learning-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-digital-electronics-edge-ai-embedded-machine-learning",
+    "video_count": 15,
+    "version": "bundle-1",
+    "updated_at": "2026-10-09T06:28:47Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "recvw25vjM9t27",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25vjMkk0g",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjMaM6A",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25vjM4V2u",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25vjMlEQf",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25vjM41mv",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjMwJp0",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjMBlJD",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjM9Ca5",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjM2GBi",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjMVXP1",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25vjMcsUe",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjMKZj2",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25vjMRg6A",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25wapJvFX",
+        "version": "v2"
+      }
+    ]
   }
 }

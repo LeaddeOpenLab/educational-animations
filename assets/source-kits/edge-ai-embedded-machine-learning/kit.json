@@ -1,0 +1,146 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "edge-ai-embedded-machine-learning",
+    "label": "Edge AI and Embedded Machine Learning",
+    "subject": "Digital Electronics",
+    "outputDir": "Digital Electronics/Edge AI and Embedded Machine Learning"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "edge-ai-embedded-machine-learning",
+    "file": "src/theme/themes/edge-ai-embedded-machine-learning.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#0e0e0e",
+      "bg1": "#171b1c",
+      "bg2": "#212629",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#56b4e9",
+      "accent": "#e69f00",
+      "result": "#009e73",
+      "warn": "#d55e00",
+      "alt": "#cc79a7"
+    },
+    "bg1": "#171b1c",
+    "contrast": {
+      "primary": 7.52,
+      "accent": 7.71,
+      "result": 5.07,
+      "warn": 4.49,
+      "alt": 5.67,
+      "textStrong": 16.59,
+      "textMuted": 8.26,
+      "textDim": 6.77
+    }
+  },
+  "primitives": [
+    {
+      "name": "QuantizedAxis",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Float values move onto a quantization lattice; mix moves actual locations and saturation changes clipped integer values.",
+      "signature": "({s, values, scale, zeroPoint=0, mix, min=-128, max=127, y=0, progress=1})"
+    },
+    {
+      "name": "TensorBars",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Numerical tensor/channel values set signed bar lengths; active mask removes whole channels and names preserve correspondence.",
+      "signature": "({s, values, names?, active?, x=0, y=0, step=1, gain=1, color?, progress=1})"
+    },
+    {
+      "name": "SignalWindow",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Signal amplitudes determine stems; start/size move a highlighted receptive window over persistent samples; cursor follows consumed samples.",
+      "signature": "({s, samples, start, size, cursor?, progress=1})"
+    },
+    {
+      "name": "TensorMemory",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Tensor allocations use byte offset/size; advancing time releases expired lifetimes and admits newly live tensors at reusable offsets.",
+      "signature": "({s, allocations:[{name,offset,size,start,end,bank?}], time, capacity, row=0, progress=1})"
+    },
+    {
+      "name": "OperatorPartitions",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Supported operator contents and processor membership are explicit; partitioned changes device lane and handoff moves a payload between actual endpoints.",
+      "signature": "({s, operators:[{name,device,supported,values}], current, handoff, partitioned, progress=1})"
+    },
+    {
+      "name": "ScoreDistribution",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Numerical probability scores set bar heights; threshold line intersects scores and changes admitted outcomes.",
+      "signature": "({s, scores, names, threshold?, y=0, progress=1})"
+    },
+    {
+      "name": "EnergyTimeline",
+      "file": "src/components/EdgeAI.tsx",
+      "summary": "Power samples form true rectangular area slices; count advances elapsed-time cursor and accumulated energy from power*dt.",
+      "signature": "({s, power, dt, count, progress=1})"
+    }
+  ],
+  "shared": {
+    "files": [
+      "src/components/Plot.tsx",
+      "src/components/ui.tsx"
+    ],
+    "note": "L1c copied unchanged from edu-video-kit template."
+  },
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "edgeQuantize",
+      "edgeDequantize",
+      "edgeMAC",
+      "edgeRMS",
+      "edgeEnergy"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^edge\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "L2 numerical state is explicit; L3 must bind calculations to marks and assert its concrete mechanism before full video implementation.",
+      "Primary=sensor/tensor input; accent=operation/selected values; result=derived output; warn=clipped/rejected; alt=stored weights or second model."
+    ]
+  }
+}

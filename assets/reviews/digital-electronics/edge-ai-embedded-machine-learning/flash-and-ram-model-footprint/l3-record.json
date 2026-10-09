@@ -1,0 +1,466 @@
+{
+  "id": "edge08-flash-and-ram-model-footprint",
+  "record_id": "recvw25vjMBlJD",
+  "batch_id": "batch-20261009-edge-ai",
+  "original_name": "Flash and RAM Model Footprint",
+  "standard_name": "Flash and RAM Model Footprint",
+  "Name": "Flash and RAM Model Footprint",
+  "Discipline": "Digital Electronics",
+  "Course": "Edge AI and Embedded Machine Learning",
+  "objective": "Separate persistent model storage in flash from runtime working memory in RAM, and show why weight-only quantization does not imply quarter-size total RAM.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "references": [
+      {
+        "topics": [
+          "Memory Arena Planning for Tensor Lifetimes",
+          "Flash and RAM Model Footprint"
+        ],
+        "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md",
+        "verified": "2026-10-09",
+        "basis": "Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation."
+      }
+    ],
+    "confirmed": true,
+    "sources": [
+      {
+        "url": "https://github.com/tensorflow/tflite-micro/blob/main/tensorflow/lite/micro/docs/memory_management.md",
+        "scope": "Tensor arena separates nonpersistent and persistent allocations; temporary tensor lifetimes affect reusable arena allocation."
+      }
+    ],
+    "scope": "Separate persistent model storage in flash from runtime working memory in RAM, and show why weight-only quantization does not imply quarter-size total RAM."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "kit v1 2026-10-09",
+    "duration_seconds": 29,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "banks",
+        "objects": [
+          "flash bank: 256 KiB weights + 32 KiB code/metadata",
+          "RAM bank: input 16, activations 80, scratch 24, persistent 8 KiB"
+        ],
+        "change": "Load labeled numerical segments into two physically separate bank diagrams with independent capacity scales.",
+        "cause": "The device stores parameters and code but allocates working tensors while it runs.",
+        "result": "Flash totals 288 KiB and this illustrative RAM workload totals 128 KiB.",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Flash stores model data and code.",
+          "RAM holds runtime working memory."
+        ]
+      },
+      {
+        "id": "weights",
+        "objects": [
+          "256 KiB Float32 weight segment",
+          "64 KiB Int8 weight segment",
+          "32 KiB unchanged flash segment"
+        ],
+        "change": "Replace groups of four weight byte cells with one byte cell; the weight segment shrinks from 256 to 64 KiB while code/metadata stay at 32 KiB.",
+        "cause": "In this weight-only example, each stored weight changes from four bytes to one.",
+        "result": "Weight storage is one quarter; total flash is 96 KiB, not one quarter of 288.",
+        "start_seconds": 6,
+        "end_seconds": 14,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Stored weights: 256 → 64 KiB",
+          "Other flash data stays at 32 KiB."
+        ]
+      },
+      {
+        "id": "runtime",
+        "objects": [
+          "RAM input 16",
+          "activations 80",
+          "scratch 24",
+          "persistent 8 KiB",
+          "runtime operation cursor"
+        ],
+        "change": "Step through runtime allocations and retain the same four RAM segment sizes before and after the weight-only conversion.",
+        "cause": "This example keeps activation and workspace allocations unchanged; kernels and activation types determine their own memory needs.",
+        "result": "RAM remains 128 KiB despite the weight storage reduction.",
+        "start_seconds": 14,
+        "end_seconds": 23,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Weight-only change: RAM stays 128 KiB.",
+          "Activation and scratch sizes are separate."
+        ]
+      },
+      {
+        "id": "budget",
+        "objects": [
+          "flash before 288 / after 96 KiB",
+          "RAM before 128 / after 128 KiB",
+          "two separate budget rulers"
+        ],
+        "change": "Align the before/after bank bars and calculate both totals directly from their visible segments.",
+        "cause": "A device must satisfy each storage budget independently.",
+        "result": "The smaller model file alone does not prove the RAM budget fits.",
+        "start_seconds": 23,
+        "end_seconds": 29,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Measure flash and peak RAM separately.",
+          "Illustrative allocations; not a device benchmark."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "weight-shrink",
+        "scene_id": "weights",
+        "uncertainty": "Shrink only weight bytes and recompute total flash from its separate parts.",
+        "expected_observation": "Weight storage is one quarter; total flash is 96 KiB, not one quarter of 288."
+      },
+      {
+        "id": "ram-peak",
+        "scene_id": "runtime",
+        "uncertainty": "Preserve runtime allocation sizes in a stated weight-only example rather than scaling all memory by four.",
+        "expected_observation": "RAM remains 128 KiB despite the weight storage reduction."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "weight-shrink",
+        "time_seconds": 10.0,
+        "reason": "Inspect actual weight shrink at source state transition, including before and after."
+      },
+      {
+        "id": "ram-peak",
+        "time_seconds": 18.2,
+        "reason": "Inspect actual ram peak at source state transition, including before and after."
+      }
+    ],
+    "state_model": {
+      "function": "footprintState(frame)",
+      "inputs": {
+        "weightsBefore": 256,
+        "weightsAfter": 64,
+        "flashOther": 32,
+        "ramSegments": {
+          "input": 16,
+          "activations": 80,
+          "scratch": 24,
+          "persistent": 8
+        }
+      },
+      "planned_bindings": [
+        "weight byte count -> weight segment width and byte tiles",
+        "sum of flash segments -> total flash label",
+        "RAM segment sizes -> unchanged segment widths and summed total"
+      ],
+      "invariants": [
+        "Flash totals 288 KiB before and 96 KiB after.",
+        "RAM total is 128 KiB in both example states.",
+        "Only the weight-storage term scales by one quarter."
+      ],
+      "b1_samples_seconds": [
+        0,
+        6,
+        10,
+        14,
+        20,
+        28
+      ],
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge08-footprint-state.tsx",
+      "bindings": [
+        "weight byte count -> weight segment width and byte tiles",
+        "sum of flash segments -> total flash label",
+        "RAM segment sizes -> unchanged segment widths and summed total"
+      ]
+    },
+    "scene_rationale": "Four phases are needed to separate banks, change the one affected term, inspect the unaffected runtime allocations, then compare independent budgets. The visual changes byte density and segment lengths rather than lifetime placement.",
+    "previews": [],
+    "tsx_path": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:53:02.888113+00:00",
+        "reviewer": "edge_06_10 agent",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning",
+        "assertion_exit_code": 0,
+        "results": {
+          "suite_checks": 113,
+          "suite_status": "PASS",
+          "record_specific": "Frame 299 flash 288 KiB; frame 300 flash 96 KiB; RAM remains 128 KiB before/mid/after. SSR weight width shrinks 665.6→166.4."
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "footprintState → bank segment rect widths from part.size and derived total labels. Only weight bytes change; RAM widths are constant.",
+          "method": "Read actual state-to-component code plus SSR markup checks; same functions are called by assertions and visible core."
+        },
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge08-footprint-state.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge08-footprint-state.tsx",
+        "source_version": {
+          "mtime_ns": 1791525149007625170,
+          "size": 1277
+        },
+        "applicable_record_ids": [
+          "recvw25vjMBlJD"
+        ],
+        "typecheck": {
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes this mechanism for full implementation; does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:58:26.371291+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx",
+        "source_version": {
+          "mtime_ns": 1791525480971746877,
+          "size": 6331
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Independent full scene components draw own core SVG combinations. Full scenes call the B1 state function using absolute timeline offsets. Concrete registry/tensor arrays, lifetime ownership, bank segment sizes, compacted tensor cells, or distribution values bind directly to visible text and geometry. Local useCurrentFrame provides staged title/copy/figure entry. No imported B1 core component wrapper."
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "checks": 113,
+          "mechanism_state_unchanged": true,
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "quality_warning": "Compact source lines below 180. Inspected independently and found complete topic-specific mechanism, not a data wrapper. Final teaching review still required."
+        },
+        "applicable_record_ids": [
+          "recvw25vjMBlJD"
+        ]
+      }
+    ],
+    "key_frames": [
+      90,
+      240,
+      330,
+      500,
+      630,
+      800
+    ],
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "risk_windows": [
+      {
+        "seconds": [
+          6,
+          14
+        ],
+        "risk": "Do not equate one-quarter weight bytes with one-quarter total flash."
+      },
+      {
+        "seconds": [
+          14,
+          23
+        ],
+        "risk": "Clearly label a weight-only illustrative workload; other quantization modes may change activation RAM."
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx",
+    "duration_frames": 870,
+    "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes."
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.055072+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+      "reviewed_at": "2026-10-09T06:12:15.055072+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "weight-shrink",
+          "times_seconds": [
+            9.966666666666667,
+            10.0,
+            10.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0299.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0300.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0301.jpg"
+          ],
+          "observation": "At299 there are four byte cells and flash288; at300 and301 there is one cell and flash96. The RAM bar and its128 total do not change.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "ram-peak",
+          "times_seconds": [
+            18.166666666666668,
+            18.2,
+            18.233333333333334
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0545.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0546.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0547.jpg"
+          ],
+          "observation": "At545 the persistent slot is empty and total120; at546 and547 its8-KiB segment appears and the total becomes128.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.00 s: separate flash and RAM bars show288 and128 KiB, with labeled component sizes. The RAM ledger includes16 input,80 activations,24 scratch and8 persistent.",
+        "9.967→10.000 s: four visible8-bit weight cells become one, the weight segment shortens256→64 KiB, and flash total changes288→96; other flash32 and RAM128 remain unchanged.",
+        "18.167→18.200 s: persistent RAM8 KiB fills its separate row and allocated total rises120→128. At26.667 s the comparison shows flash288/96 and RAM128/128 on separate ledgers."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "tsx": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge08-flash-and-ram-model-footprint.tsx"
+  },
+  "status": "IN_PROGRESS",
+  "learning_objective": "Separate persistent model storage in flash from runtime working memory in RAM, and show why weight-only quantization does not imply quarter-size total RAM.",
+  "artifact_version": "v1",
+  "feishu_record_id": "recvw25vjMBlJD",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "media": {
+    "duration_seconds": 29.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Flash and RAM Model Footprint: Separate Budgets",
+  "title": "Flash and RAM Model Footprint: Separate Budgets",
+  "prompt": "Create a 29-second silent English animation explaining Flash and RAM Model Footprint. Separate flash storage from working RAM; change four-byte weights into one-byte weights so stored weights shrink from 256 to 64 KiB while other flash data stays 32 KiB, producing total flash 288 to 96 KiB. Keep the weight-only example’s RAM allocations at input 16, activations 80, scratch 24, and persistent state 8 KiB, totaling 128 KiB.\n\nUse four scenes lasting 6, 8, 9, and 6 seconds: distinguish the banks, replace weight byte cells, accumulate the unchanged RAM allocations, and compare independent before-and-after budgets. Change only the affected segment and label all sizes illustrative; a smaller model file does not prove that RAM fits. Render at 1920×1080, 30 fps, in Helvetica Neue with 1.45 line height; use #0e0e0e, #171b1c, and #212629 backgrounds, #56b4e9 inputs, #e69f00 operations, #009e73 results, #d55e00 warnings, and #cc79a7 stored weights or a second model. Stagger text and figure entrances over 12–15 frames while keeping the mechanism itself numerically exact.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 29.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:22:00.132064+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "core_conclusion": "Smaller stored weights reduce flash use without necessarily reducing working RAM.",
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/flash-and-ram-model-footprint-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/cover-02.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjMBlJD",
+      "slug": "flash-and-ram-model-footprint",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/flash-and-ram-model-footprint.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:24:01+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        233,
+        196,
+        767,
+        715
+      ],
+      "bbox_width": 534,
+      "bbox_height": 519,
+      "center_offset": [
+        0.0,
+        5.5
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1"
+}

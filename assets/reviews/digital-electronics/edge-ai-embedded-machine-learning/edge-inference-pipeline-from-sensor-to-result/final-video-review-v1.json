@@ -1,0 +1,88 @@
+{
+  "record_id": "recvw25vjM9t27",
+  "video_id": "edge01-edge-inference-pipeline-from-sensor-to-result",
+  "version": "v1",
+  "video_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/edge01-edge-inference-pipeline-from-sensor-to-result.mp4",
+  "reviewer": "edge_06_10 agent; independent of items1\u20135 author",
+  "reviewed_at": "2026-10-09T06:11:05.625077+00:00",
+  "review_method": "Actually inspected final MP4 overview and before/during/after risk contact sheets at 640px-per-frame; no desktop or browser control.",
+  "evidencepaths": [
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/overview.jpg",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "raw-to-model",
+      "times_seconds": [
+        8.3,
+        8.333333333333334,
+        8.366666666666667
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-0249.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-0250.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-0251.png"
+      ],
+      "observation": "At f249\u2013251 raw labels and signed normalized bar values correspond correctly. The negative .50 bar extends left; row labeling is compact but readable."
+    },
+    {
+      "risk_id": "feature-to-score",
+      "times_seconds": [
+        23.633333333333333,
+        23.666666666666668,
+        23.7
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-0709.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-0710.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge01-edge-inference-pipeline-from-sensor-to-result/risk-0711.png"
+      ],
+      "observation": "At f709\u2013711 the two growing scores sum to .48/.50/.52 rather than 1. Final f745 shows .23/.77; repair the intermediate semantics."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "repair required as listed",
+    "readability_at_640": "Main text and numerical marks readable; edge05 transient overlap noted where applicable.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "repair",
+  "observations": [
+    {
+      "times_seconds": [
+        4,
+        9.1667,
+        15.6667,
+        19.1667
+      ],
+      "observation": "Four raw samples 128/160/96/192 become signed normalized bars 0/.5/-.5/1, then squared terms accumulate from a partial sum .5 to 1.5; mean square .375 and RMS .612 are visible."
+    },
+    {
+      "times_seconds": [
+        23.6333,
+        23.6667,
+        23.7,
+        24.8333
+      ],
+      "observation": "Score animation displays .11/.37, .11/.39, .12/.40 before final .23/.77. The intermediate softmax scores are not normalized and therefore misrepresent the model probability output."
+    }
+  ],
+  "repairs": [
+    {
+      "type": "logic",
+      "time_seconds": 23.6667,
+      "fix": "Keep displayed softmax scores equal to the normalized computed distribution throughout the reveal, or interpolate from [.5,.5] while preserving sum=1. Do not multiply both score values by entrance progress."
+    }
+  ]
+}

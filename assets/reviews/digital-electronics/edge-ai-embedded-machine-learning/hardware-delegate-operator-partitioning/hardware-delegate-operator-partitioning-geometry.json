@@ -1,0 +1,41 @@
+{
+  "record_id": "recvw25vjMKZj2",
+  "slug": "hardware-delegate-operator-partitioning",
+  "version": "v1",
+  "source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/cover-audit-images/hardware-delegate-operator-partitioning.png",
+  "canvas": [
+    1000,
+    900
+  ],
+  "figure_frame": [
+    180,
+    140,
+    820,
+    760
+  ],
+  "threshold": "Any RGB channel > 10, every pixel inspected",
+  "tolerances": {
+    "overflow_px": 2,
+    "center_x_px": 20,
+    "center_y_px": 30,
+    "minimum_width_px": 280,
+    "minimum_height_px": 280
+  },
+  "measured_at": "2026-10-09T06:23:29+00:00",
+  "visual_review_status": "PASSED",
+  "status": "PASSED",
+  "errors": [],
+  "bbox": [
+    214,
+    199,
+    785,
+    690
+  ],
+  "bbox_width": 571,
+  "bbox_height": 491,
+  "center_offset": [
+    -0.5,
+    -5.5
+  ],
+  "overflow_px": 0
+}

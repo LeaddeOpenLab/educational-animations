@@ -1,0 +1,107 @@
+{
+  "record_id": "recvw25vjMlEQf",
+  "video_id": "edge05-quantized-multiply-and-accumulate",
+  "version": "v1",
+  "video_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/edge05-quantized-multiply-and-accumulate.mp4",
+  "reviewer": "edge_06_10 agent; independent of items1\u20135 author",
+  "reviewed_at": "2026-10-09T06:11:05.633380+00:00",
+  "review_method": "Actually inspected final MP4 overview and before/during/after risk contact sheets at 640px-per-frame; no desktop or browser control.",
+  "evidencepaths": [
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/overview.jpg",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "zero-point",
+      "times_seconds": [
+        3.3,
+        3.3333333333333335,
+        3.3666666666666667
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0099.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0100.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0101.png"
+      ],
+      "observation": "f99 has no centered result; f100\u2013101 reveal2/4/1 under subtraction3, before any product scene."
+    },
+    {
+      "risk_id": "negative-add",
+      "times_seconds": [
+        16.466666666666665,
+        16.5,
+        16.533333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0494.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0495.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0496.png"
+      ],
+      "observation": "f494\u2192495 correctly changes sum4\u21920 and consumed terms1\u21922, but f494 token and sum label intersect, requiring a small path/layout repair."
+    },
+    {
+      "risk_id": "requantize",
+      "times_seconds": [
+        29.966666666666665,
+        30.0,
+        30.033333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0899.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0900.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge05-quantized-multiply-and-accumulate/risk-0901.png"
+      ],
+      "observation": "f899\u2013901 records output-code reveal beginning; final f930 clearly displays code4 and reconstructed.06. No numerical inconsistency."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "passed with layout repair",
+    "readability_at_640": "Main text and numerical marks readable; edge05 transient overlap noted where applicable.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "repair",
+  "observations": [
+    {
+      "times_seconds": [
+        3.3,
+        3.3333,
+        9.6667
+      ],
+      "observation": "Input codes5/7/4 first subtract3 to become2/4/1, then products show4/-4/3 including the leftward negative bar."
+    },
+    {
+      "times_seconds": [
+        16.4667,
+        16.5,
+        16.5333
+      ],
+      "observation": "The -4 term visibly arrives and cancels the accumulator4 to0, with consumed count1\u21922. Immediately before arrival its yellow token overlaps the green INT32 SUM=4 text."
+    },
+    {
+      "times_seconds": [
+        24.6667,
+        31
+      ],
+      "observation": "The final integer sum3 multiplies by.2\u00d7.1 to produce.06; later output quantization produces code4, with inverse reconstruction.06 and explicit distinction from accumulator3."
+    }
+  ],
+  "repairs": [
+    {
+      "type": "layout",
+      "time_seconds": 16.4667,
+      "fix": "Move the falling product token endpoint above the INT32 SUM label or move the label down so token and text do not overlap near arrival. Preserve cancellation timing."
+    }
+  ]
+}

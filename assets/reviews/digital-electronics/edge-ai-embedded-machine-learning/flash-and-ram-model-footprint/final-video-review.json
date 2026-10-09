@@ -1,0 +1,77 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "artifact": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint.mp4",
+  "artifact_identity": {
+    "bytes": 1151741,
+    "mtime_ns": 1791525769860962557
+  },
+  "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+  "reviewed_at": "2026-10-09T06:12:15.055072+00:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-risks.jpg"
+  ],
+  "checks": {
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true,
+    "version_match": true,
+    "terminology": true
+  },
+  "observations": [
+    "3.00 s: separate flash and RAM bars show288 and128 KiB, with labeled component sizes. The RAM ledger includes16 input,80 activations,24 scratch and8 persistent.",
+    "9.967→10.000 s: four visible8-bit weight cells become one, the weight segment shortens256→64 KiB, and flash total changes288→96; other flash32 and RAM128 remain unchanged.",
+    "18.167→18.200 s: persistent RAM8 KiB fills its separate row and allocated total rises120→128. At26.667 s the comparison shows flash288/96 and RAM128/128 on separate ledgers."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "weight-shrink",
+      "times_seconds": [
+        9.966666666666667,
+        10.0,
+        10.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0299.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0300.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0301.jpg"
+      ],
+      "observation": "At299 there are four byte cells and flash288; at300 and301 there is one cell and flash96. The RAM bar and its128 total do not change.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "ram-peak",
+      "times_seconds": [
+        18.166666666666668,
+        18.2,
+        18.233333333333334
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0545.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0546.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/flash-and-ram-model-footprint/independent-0547.jpg"
+      ],
+      "observation": "At545 the persistent slot is empty and total120; at546 and547 its8-KiB segment appears and the total becomes128.",
+      "status": "passed"
+    }
+  ],
+  "three_veto_checks": {
+    "generic_shapes_without_mechanism": {
+      "triggered": false,
+      "reason": "9.967→10.000 s: four visible8-bit weight cells become one, the weight segment shortens256→64 KiB, and flash total changes288→96; other flash32 and RAM128 remain unchanged."
+    },
+    "no_explanatory_state_change": {
+      "triggered": false,
+      "reason": "At299 there are four byte cells and flash288; at300 and301 there is one cell and flash96. The RAM bar and its128 total do not change."
+    },
+    "operation_only_announced": {
+      "triggered": false,
+      "reason": "18.167→18.200 s: persistent RAM8 KiB fills its separate row and allocated total rises120→128. At26.667 s the comparison shows flash288/96 and RAM128/128 on separate ledgers."
+    }
+  },
+  "scope": "Actually inspected six-frame MP4 overview at640×360 per panel and all extracted before/at/after risk frames. Also read source state and plan for terminology/math consistency. This is teaching review; compilation/media/overlap remain separate technical gates.",
+  "repair_required": false,
+  "rework": []
+}

@@ -1,0 +1,107 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "artifact": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.mp4",
+  "artifact_identity": {
+    "bytes": 1466147,
+    "mtime_ns": 1791525837139672004
+  },
+  "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+  "reviewed_at": "2026-10-09T06:12:15.056110+00:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-risks.jpg"
+  ],
+  "checks": {
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true,
+    "version_match": true,
+    "terminology": true
+  },
+  "observations": [
+    "3.333–8.667 s: four feature channels align vertically with both downstream matrix rows. Channelc1 and its whole input column become orange together.",
+    "14.967→15.000 s: c1,0.1 and downstream weights0.2/0.3 disappear together. At18s the three retained columns are moving into the vacant gap; by21s the compact3-vector and2×3 matrix align without a deleted placeholder.",
+    "23.567→23.600 s: enabling the third remaining multiply term changes displayed partial outputs4/1 to7/7. At28s six visible terms replace the original eight, and the prior7.02/7.03 outputs remain in the explicit comparison."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "slice-delete",
+      "times_seconds": [
+        14.966666666666667,
+        15.0,
+        15.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0449.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0450.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0451.jpg"
+      ],
+      "observation": "At449 c1 and its two linked weights are present; at450 and451 the entire paired slice is absent, leaving three live columns.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "compaction-middle",
+      "times_seconds": [
+        17.966666666666665,
+        18.0,
+        18.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0539.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0540.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0541.jpg"
+      ],
+      "observation": "At539,540,541 surviving c2/c3 columns advance left with their linked weights attached; there is no mismatched input slice.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "compact-complete",
+      "times_seconds": [
+        20.966666666666665,
+        21.0,
+        21.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0629.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0630.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0631.jpg"
+      ],
+      "observation": "At629,630,631 the three surviving columns have reached contiguous aligned positions, and the shape reads2×3.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "recompute",
+      "times_seconds": [
+        23.566666666666666,
+        23.6,
+        23.633333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0707.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0708.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0709.jpg"
+      ],
+      "observation": "At707 only two terms contribute and the sums are4/1; at708/709 the third terms contribute and both sums read7.",
+      "status": "passed"
+    }
+  ],
+  "three_veto_checks": {
+    "generic_shapes_without_mechanism": {
+      "triggered": false,
+      "reason": "14.967→15.000 s: c1,0.1 and downstream weights0.2/0.3 disappear together. At18s the three retained columns are moving into the vacant gap; by21s the compact3-vector and2×3 matrix align without a deleted placeholder."
+    },
+    "no_explanatory_state_change": {
+      "triggered": false,
+      "reason": "At449 c1 and its two linked weights are present; at450 and451 the entire paired slice is absent, leaving three live columns."
+    },
+    "operation_only_announced": {
+      "triggered": false,
+      "reason": "23.567→23.600 s: enabling the third remaining multiply term changes displayed partial outputs4/1 to7/7. At28s six visible terms replace the original eight, and the prior7.02/7.03 outputs remain in the explicit comparison."
+    }
+  },
+  "scope": "Actually inspected six-frame MP4 overview at640×360 per panel and all extracted before/at/after risk frames. Also read source state and plan for terminology/math consistency. This is teaching review; compilation/media/overlap remain separate technical gates.",
+  "repair_required": false,
+  "rework": []
+}

@@ -1,0 +1,510 @@
+{
+  "id": "recvw25vjM9t27",
+  "feishu_record_id": "recvw25vjM9t27",
+  "original_name": "Edge Inference Pipeline from Sensor to Result",
+  "standard_name": "Edge Inference Pipeline from Sensor to Result",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "artifact_version": "v2",
+  "status": "ready",
+  "learning_objective": "Trace one sensor sample block through normalization, feature extraction, model evaluation and a local result.",
+  "core_conclusion": "Each edge inference stage consumes the previous stage’s actual data; a local decision appears only after computation.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://developers.google.com/edge/litert/microcontrollers/get_started"
+    ],
+    "scope": "Official LiteRT microcontroller guide inspected 2026-10-09: supply input tensor, Invoke, retrieve output tensor. Sensor normalization, RMS and two-class softmax are illustrative constructed computations, not claims about a provided model."
+  },
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx",
+    "scenes": [
+      {
+        "id": "capture",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "heading": "A sensor fills the input buffer",
+        "lines": [
+          "One block, four samples.",
+          "Inference starts with measured data."
+        ],
+        "objects": [
+          "four sensor samples 128,160,96,192",
+          "empty four-slot input buffer"
+        ],
+        "change": "Samples arrive sequentially and occupy buffer slots; a cursor advances only when a value is stored.",
+        "cause": "Sampling completes a fixed input block.",
+        "result": "All four raw values remain readable in their stored order.",
+        "reading_seconds": 2,
+        "timing_reason": "4 seconds for the stated object transformation, then 2 seconds to inspect its numerical result."
+      },
+      {
+        "id": "normalize",
+        "start_seconds": 6,
+        "end_seconds": 13,
+        "heading": "Convert samples into model units",
+        "lines": [
+          "Subtract the offset, then divide by scale."
+        ],
+        "objects": [
+          "raw buffer",
+          "normalization operator (x−128)/64",
+          "normalized bars"
+        ],
+        "change": "Each raw slot feeds the operator and creates the corresponding signed bar 0,0.5,−0.5,1.",
+        "cause": "Training and inference must use the same input preprocessing.",
+        "result": "The negative raw deviation produces a negative normalized bar, preserving correspondence.",
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      },
+      {
+        "id": "features",
+        "start_seconds": 13,
+        "end_seconds": 21,
+        "heading": "Compress the block into a feature",
+        "lines": [
+          "RMS summarizes signal magnitude.",
+          "This example uses one feature."
+        ],
+        "objects": [
+          "four normalized bars",
+          "squared-value bars",
+          "mean accumulator",
+          "RMS output"
+        ],
+        "change": "Bars square to 0,0.25,0.25,1; they add to 1.5, divide by 4, then sqrt produces sqrt(0.375).",
+        "cause": "RMS measures the block magnitude independent of sign.",
+        "result": "The feature is approximately 0.612 and differs visibly from any individual sample.",
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      },
+      {
+        "id": "infer",
+        "start_seconds": 21,
+        "end_seconds": 29,
+        "heading": "The model produces a local result",
+        "lines": [
+          "Illustrative two-class model.",
+          "Choose the larger output score."
+        ],
+        "objects": [
+          "feature token",
+          "logits [−r,r]",
+          "two probability bars",
+          "result label"
+        ],
+        "change": "The same RMS enters two signed logits; softmax converts them to scores near 0.227 and 0.773; the taller score emits the active result.",
+        "cause": "The model evaluates the feature before selecting its maximum score.",
+        "result": "The winning class is linked to computed values, and every previous stage remains as a compact data trace.",
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for the stated object transformation, then 3 seconds to inspect its numerical result."
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "payload-transform",
+        "scene_id": "normalize",
+        "uncertainty": "Raw data could appear to move unchanged through generic boxes.",
+        "expected_observation": "The input 96 produces −0.5 and the signed bar flips below zero."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "raw-to-model",
+        "time_seconds": 8.33,
+        "reason": "Raw and normalized values must be distinguishable and numerically linked."
+      },
+      {
+        "id": "feature-to-score",
+        "time_seconds": 23.67,
+        "reason": "Model scores must derive from the displayed RMS."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge01-pipeline.tsx#pipelineState",
+      "status": "implemented",
+      "bindings": [
+        "rawCount → occupied input slots and acquisition cursor",
+        "normalized[] → TensorBars.values",
+        "squares[],meanSquare,rms → arithmetic cells and feature magnitude",
+        "softmax([-rms,rms]) → ScoreDistribution.scores and argmax result"
+      ],
+      "constants": {
+        "raw": [
+          128,
+          160,
+          96,
+          192
+        ],
+        "offset": 128,
+        "divisor": 64
+      }
+    },
+    "template_scope": "Registered EdgeAI course primitives, palette, fonts and L1 layout only. No shared L3 scenes.",
+    "design_audit": {
+      "visualArgument": "Each edge inference stage consumes the previous stage’s actual data; a local decision appears only after computation.",
+      "motion": "Samples arrive sequentially and occupy buffer slots; a cursor advances only when a value is stored.; Each raw slot feeds the operator and creates the corresponding signed bar 0,0.5,−0.5,1.; Bars square to 0,0.25,0.25,1; they add to 1.5, divide by 4, then sqrt produces sqrt(0.375).; The same RMS enters two signed logits; softmax converts them to scores near 0.227 and 0.773; the taller score emits the active result.",
+      "example": {
+        "raw": [
+          128,
+          160,
+          96,
+          192
+        ],
+        "offset": 128,
+        "divisor": 64
+      },
+      "antiTemplate": "Data acquisition and a numerical feature-to-score chain; adjacent quantization uses a rounding lattice instead.",
+      "sceneRationale": "Four stages follow the concrete pipeline: acquire, normalize, extract, infer. Each changes the representation and removing one would hide its transformation."
+    },
+    "previews": [],
+    "rework": [
+      {
+        "category": "logic",
+        "reason": "Preserve normalized softmax values throughout appearance; reveal chart opacity instead of multiplying both scores by progress.",
+        "affected_record_ids": [
+          "recvw25vjM9t27"
+        ],
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx",
+        "previous_review": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review-v1.json",
+        "from_version": "v1",
+        "to_version": "v2",
+        "status": "resolved",
+        "updated_at": "2026-10-09T06:11:58.252236+00:00",
+        "cause": "Preserve normalized softmax values throughout appearance; reveal chart opacity instead of multiplying both scores by progress.",
+        "affected_ids": [
+          "recvw25vjM9t27"
+        ],
+        "resolution_evidence": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review.json",
+        "observed": "At 23.633–23.700 s, only opacity changes: score labels remain .23/.77 and sum to1. All v2 overview scenes retain the original sample normalization and RMS computation.",
+        "evidence": [
+          "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review.json"
+        ],
+        "fix": "Preserve normalized softmax values throughout appearance; reveal chart opacity instead of multiplying both scores by progress."
+      }
+    ],
+    "duration_frames": 870,
+    "status": "C_TSX_READY",
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:52:52.542693+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge01-pipeline.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge01-pipeline.tsx#pipelineState",
+        "source_version": {
+          "mtime_ns": 1791525106019360164,
+          "bytes": 1153
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": "Before/mid/after and transition adjacent frames passed; React server-rendered core SVG changes between tested states.",
+        "source_check": "PipelineCore calls pipelineState(frame), passes visible normalized entries to TensorBars.values; signed bar widths/endpoints derive from normalization. Count boundaries change data membership. RMS and scores derive from the same normalized array.",
+        "applicable_record_ids": [
+          "recvw25vjM9t27"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "teaching_status": "pending"
+      },
+      {
+        "stage": "C_FULL_SOURCE",
+        "status": "passed",
+        "reviewer": "edge_01_05",
+        "reviewed_at": "2026-10-09T05:57:41.922316+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx",
+        "source_version": {
+          "mtime_ns": 1791525403404464966,
+          "bytes": 5864
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05.cjs && node -r ./scripts/register-ts.cjs scripts/assert-edge-01-05-full.cjs",
+        "assertion_exit_code": 0,
+        "results": "B1 numerical and SVG assertions pass; full scenes also pass actual server-rendered visible value and changing-mark assertions.",
+        "source_check": "Independent full L3 scene functions directly draw objects; imported tested state functions supply numerical values, coordinates and code labels. Each of the full-video samples changed the mechanism SVG and displayed its expected computed result. Layout, scene copy and SVG combinations are local to this file.",
+        "applicable_record_ids": [
+          "recvw25vjM9t27"
+        ],
+        "compilation": {
+          "status": "passed",
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "short_source_review": "Compact JSX formatting yields <180 lines; source contains all designed independent scene mechanisms, arithmetic and distinct final comparisons. No shared scene wrapper or imported B1 core is used. Proceed to actual final-video teaching review; technical check grants no teaching pass."
+      },
+      {
+        "type": "D_V2_MINIMAL_REPAIR",
+        "status": "passed",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx",
+        "source_version": {
+          "mtime_ns": 1791526318251791647,
+          "size": 5864
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-v2-review-fixes.cjs",
+        "assertion_exit_code": 0,
+        "results": "Full actual scene SSR assertions passed for normalized scores, truthful storage label, exact code reconstruction, and product token geometry. Existing B1 assertion suite rerun passed. tsc --noEmit exit0.",
+        "source_check": {
+          "status": "passed",
+          "basis": "Minimal display-semantic and token-coordinate updates preserve all scene identifiers, timing, and state calculations. Reviewed actual returned SVG and same-source SSR."
+        },
+        "applicable_record_ids": [
+          "recvw25vjM9t27"
+        ],
+        "artifact_version": "v2",
+        "reviewed_at": "2026-10-09T06:12:12.925246+00:00"
+      }
+    ],
+    "artifact_version": "v2",
+    "stage": "D_FINAL_VIDEO_REVIEW_PASSED",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge01-edge-inference-pipeline-from-sensor-to-result.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+    "reviewed_at": "2026-10-09T06:15:31.533151+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+      "reviewed_at": "2026-10-09T06:15:31.533151+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "raw-to-model",
+          "times_seconds": [
+            8.3,
+            8.333333333333334,
+            8.366666666666667
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0249.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0250.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0251.png"
+          ],
+          "observation": "Rechecked in v2 final MP4: At f249–251 raw labels and signed normalized bar values correspond correctly. The negative .50 bar extends left; row labeling is compact but readable."
+        },
+        {
+          "risk_id": "feature-to-score",
+          "times_seconds": [
+            23.633333333333333,
+            23.666666666666668,
+            23.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0709.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0710.png",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/f0711.png"
+          ],
+          "observation": "At v2 f709–711 the chart is partially faded in but both bars already show the normalized computed scores .23 and .77. Final f745 and f825 retain those values; incorrect probability growth is gone."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            4.0,
+            9.166666666666666,
+            15.666666666666666,
+            19.166666666666668,
+            24.833333333333332,
+            27.5
+          ],
+          "observation": "At 23.633–23.700 s, only opacity changes: score labels remain .23/.77 and sum to1. All v2 overview scenes retain the original sample normalization and RMS computation."
+        }
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25vjM9t27",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T14:26:53.412902+08:00",
+      "version": "v2"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "v2",
+      "page_status": "included in this publication commit",
+      "attachment": {
+        "video_version": "edge-ai-20261009-v2",
+        "video_bytes": 974456,
+        "issue_number": 122,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+        "comment_id": 6075627987,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075627987",
+        "attachment_url": "https://github.com/user-attachments/assets/ea43ac05-0134-4c62-976e-e1ea3954f788",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/ea43ac05-0134-4c62-976e-e1ea3954f788",
+      "issue_number": 122,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "media": {
+    "duration_seconds": 29.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Edge Inference Pipeline from Sensor to Result: Local Scores",
+  "title": "Edge Inference Pipeline from Sensor to Result: Local Scores",
+  "prompt": "Create a 29-second silent English animation of Edge Inference Pipeline from Sensor to Result. At 0–6 s, sequentially fill a sensor buffer with 128, 160, 96 and 192; at 6–13 s, subtract 128 and divide by 64 to form signed values 0, 0.5, −0.5 and 1. At 13–21 s, square, average and take the square root to obtain RMS 0.612. At 21–29 s, use the illustrative logits [−RMS, RMS], reveal their normalized softmax scores near 0.227 and 0.773, and select the active class as the local result.\n\nRender a 1920×1080, 16:9 MP4 at 30 fps with no audio, using Helvetica Neue and line height 1.45. Use background layers #0e0e0e, #171b1c and #212629; input #56b4e9, operations #e69f00, results #009e73, clipping or rejection #d55e00, and secondary weights #cc79a7, with strong text #f8fafc and muted text #a8b4c4. Keep concise copy left and a large numerical SVG diagram right; fade and slide labels over 12–18 frames with 10-frame staggering, and bind moving marks, values and arithmetic to the same mechanism state.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 29.0,
+    "reviewer": "edge_06_10 agent; independent original reviewer and bounded repair implementer",
+    "reviewed_at": "2026-10-09T06:15:31.533151+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/edge-inference-pipeline-from-sensor-to-result-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/cover-01.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjM9t27",
+      "slug": "edge-inference-pipeline-from-sensor-to-result",
+      "version": "v2",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result/edge-inference-pipeline-from-sensor-to-result.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:21:43+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        244,
+        203,
+        755,
+        681
+      ],
+      "bbox_width": 511,
+      "bbox_height": 478,
+      "center_offset": [
+        -0.5,
+        -8.0
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v2",
+  "video": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.mp4",
+  "cover": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg",
+  "cover_image": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg",
+  "player": "https://github.com/user-attachments/assets/ea43ac05-0134-4c62-976e-e1ea3954f788",
+  "player_version": "v2",
+  "prompt_file": "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.md",
+  "tags": [
+    "recvw25vjM9t27",
+    "edge-ai-embedded-machine-learning",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "developers.google.com — supporting reference",
+      "url": "https://developers.google.com/edge/litert/microcontrollers/get_started",
+      "scope": "Official LiteRT microcontroller guide inspected 2026-10-09: supply input tensor, Invoke, retrieve output tensor. Sensor normalization, RMS and two-class softmax are illustrative constructed computations, not claims about a provided model."
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/edge-ai-embedded-machine-learning.md",
+  "feishu": {
+    "record_id": "recvw25vjM9t27",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T14:26:53.412902+08:00",
+    "selection_fields": {
+      "Name": "Edge Inference Pipeline from Sensor to Result",
+      "Discipline": "Digital Electronics",
+      "Course": "Edge AI and Embedded Machine Learning"
+    }
+  }
+}

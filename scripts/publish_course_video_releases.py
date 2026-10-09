@@ -33,7 +33,7 @@ def main():
         wanted=inventory(rows);marker='\n<!-- inventory: ';old=None
         if rel and marker in (rel.get('body') or ''):
             old=json.loads(rel['body'].split(marker,1)[1].split(' -->',1)[0])
-        signature=wanted
+        signature=[{k:x[k] for k in ('id','version','bytes')} for x in wanted]
         asset_name=slug(code)+'-videos.zip'
         assets=rel.get('assets',[]) if rel else []
         asset=next((a for a in assets if a['name']==asset_name),None)
@@ -42,7 +42,7 @@ def main():
         local_matches=False
         if asset and local.is_file() and asset['size']==local.stat().st_size:
             with zipfile.ZipFile(local) as z:local_matches=json.loads(z.read('index.json'))==wanted
-        unchanged=bool(asset and (old==signature or (old==legacy_signature and local_matches)))
+        unchanged=bool(asset and (old==signature or old==wanted or (old==legacy_signature and local_matches)))
         if unchanged:
             if old!=signature:
                 body=f'{len(rows)} available videos. ZIP includes stable-ID/version index, Prompts and reuse notes.'+marker+json.dumps(signature,separators=(',',':'))+' -->'

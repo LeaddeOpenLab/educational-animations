@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex main",
+  "reviewed_at": "2026-10-09T14:12:50.810598+08:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risks.jpg"
+  ],
+  "method": "Viewed actual final MP4-derived6keyframes at640x360 per tile and every risk±1frame; source and state assertions supplementary.",
+  "observations": [
+    "The fixed waveform preserves all8sample identities. The four-slot input changes0–3→2–5→4–7 and reuses two samples per hop.",
+    "At11.333s selected indexes and RMS change together to[2,3,4,5] and1.500; at19.333s to[4,5,6,7] and1.581.",
+    "Final output schedule after samples3,5,7 is readable at640width; transition uses MOVING label while earlier input remains current."
+  ],
+  "checks": {
+    "terminology": true,
+    "explanation": true,
+    "motion": true,
+    "consistency": true,
+    "layout": true,
+    "small_player": true,
+    "version_match": true,
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true
+  },
+  "veto_checks": {
+    "mechanism_visible": true,
+    "numbers_match_objects": true,
+    "readable_without_collisions": true
+  },
+  "risk_checks": [
+    {
+      "risk_id": "first-hop",
+      "times_seconds": [
+        11.3,
+        11.333333333333334,
+        11.366666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0339.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0340.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0341.png"
+      ],
+      "observation": "The fixed waveform preserves all8sample identities. The four-slot input changes0–3→2–5→4–7 and reuses two samples per hop. At11.333s selected indexes and RMS change together to[2,3,4,5] and1.500; at19.333s to[4,5,6,7] and1.581. Final output schedule after samples3,5,7 is readable at640width; transition uses MOVING label while earlier input remains current."
+    },
+    {
+      "risk_id": "second-hop",
+      "times_seconds": [
+        19.3,
+        19.333333333333332,
+        19.366666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0579.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0580.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/streaming-inference-with-sliding-windows/risk-0581.png"
+      ],
+      "observation": "The fixed waveform preserves all8sample identities. The four-slot input changes0–3→2–5→4–7 and reuses two samples per hop. At11.333s selected indexes and RMS change together to[2,3,4,5] and1.500; at19.333s to[4,5,6,7] and1.581. Final output schedule after samples3,5,7 is readable at640width; transition uses MOVING label while earlier input remains current."
+    }
+  ]
+}

@@ -1,0 +1,595 @@
+{
+  "id": "recvw25vjM9Ca5",
+  "record_id": "recvw25vjM9Ca5",
+  "batch_id": "batch-20261009-edge-ai",
+  "original_name": "Structured Pruning for Edge Deployment",
+  "standard_name": "Structured Pruning for Edge Deployment",
+  "Name": "Structured Pruning for Edge Deployment",
+  "Discipline": "Digital Electronics",
+  "Course": "Edge AI and Embedded Machine Learning",
+  "objective": "Demonstrate structured channel removal by deleting one output channel and its matching input slice in the next layer, then compact both tensor shapes.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "references": [
+      {
+        "topics": [
+          "Structured Pruning for Edge Deployment"
+        ],
+        "url": "https://arxiv.org/abs/1512.08571",
+        "verified": "2026-10-09",
+        "basis": "Structured sparsity can remove channel and kernel structures; retraining compensates for pruning loss."
+      }
+    ],
+    "confirmed": true,
+    "sources": [
+      {
+        "url": "https://arxiv.org/abs/1512.08571",
+        "scope": "Structured sparsity can remove channel and kernel structures; retraining compensates for pruning loss."
+      }
+    ],
+    "scope": "Demonstrate structured channel removal by deleting one output channel and its matching input slice in the next layer, then compact both tensor shapes."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "kit v1 2026-10-09",
+    "duration_seconds": 31,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "connected",
+        "objects": [
+          "layer A output [2,0.1,1,3] with channels c0–c3",
+          "layer B matrix [[1,0.2,2,1],[0,0.3,1,2]]",
+          "output [7.02,7.03]"
+        ],
+        "change": "Expand a four-channel feature vector beside its two-by-four downstream weight matrix, with matching channel colors and two computed outputs.",
+        "cause": "Each downstream column multiplies one corresponding input channel.",
+        "result": "Four input channels produce two downstream outputs using eight scalar multiply terms.",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Four channels feed two outputs.",
+          "Each channel owns a downstream slice."
+        ]
+      },
+      {
+        "id": "select",
+        "objects": [
+          "c1 activation 0.1",
+          "downstream column [0.2,0.3]",
+          "remaining c0,c2,c3"
+        ],
+        "change": "Select the low-importance illustrative c1 channel and reveal the matching full downstream input column as one removal unit.",
+        "cause": "A channel is a structural dimension, so dependent input slices must be removed consistently.",
+        "result": "Both sides of the dependency are identified before removal.",
+        "start_seconds": 6,
+        "end_seconds": 12,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Choose channel c1 for removal.",
+          "Its matching input slice must go too."
+        ]
+      },
+      {
+        "id": "compact",
+        "objects": [
+          "channel c1",
+          "downstream input column c1",
+          "four-to-three feature dimension",
+          "2×4 to 2×3 weights"
+        ],
+        "change": "Remove c1 and its entire matching column; slide c2 and c3 into contiguous positions, reducing the actual vector length to three and matrix width to three.",
+        "cause": "Structured pruning physically rebuilds compatible dense tensor dimensions.",
+        "result": "The remaining vector [2,1,3] aligns with matrix [[1,2,1],[0,1,2]], with no empty deleted slot.",
+        "start_seconds": 12,
+        "end_seconds": 22,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Remove the channel and its input slice.",
+          "Compact shapes: 4 → 3 and 2×4 → 2×3."
+        ]
+      },
+      {
+        "id": "recompute",
+        "objects": [
+          "new six multiply terms",
+          "new output [7,7]",
+          "previous output [7.02,7.03]"
+        ],
+        "change": "Recompute both outputs using the compact tensors and replace eight multiply tokens with six, then compare outputs before and after.",
+        "cause": "The pruned model executes fewer dense terms in this toy example, but removing information changes its outputs.",
+        "result": "Toy multiply count drops 8 → 6 and outputs shift; accuracy requires validation and usually fine-tuning.",
+        "start_seconds": 22,
+        "end_seconds": 31,
+        "reading_seconds": 2,
+        "timing_reason": "Time includes the visible operation followed by an unobstructed reading hold.",
+        "english_copy": [
+          "Eight multiply terms become six.",
+          "Outputs change: validate and fine-tune."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "slice-delete",
+        "scene_id": "compact",
+        "uncertainty": "Delete matching channel dimension on the producing layer and input slice on the consuming layer.",
+        "expected_observation": "The remaining vector [2,1,3] aligns with matrix [[1,2,1],[0,1,2]], with no empty deleted slot."
+      },
+      {
+        "id": "compaction-middle",
+        "scene_id": "compact",
+        "uncertainty": "Compact tensors and recompute outputs rather than simply dimming a channel.",
+        "expected_observation": "The remaining vector [2,1,3] aligns with matrix [[1,2,1],[0,1,2]], with no empty deleted slot."
+      },
+      {
+        "id": "compact-complete",
+        "scene_id": "compact",
+        "uncertainty": "Compact tensors and recompute outputs rather than simply dimming a channel.",
+        "expected_observation": "The remaining vector [2,1,3] aligns with matrix [[1,2,1],[0,1,2]], with no empty deleted slot."
+      },
+      {
+        "id": "recompute",
+        "scene_id": "recompute",
+        "uncertainty": "Compact tensors and recompute outputs rather than simply dimming a channel.",
+        "expected_observation": "Toy multiply count drops 8 → 6 and outputs shift; accuracy requires validation and usually fine-tuning."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "slice-delete",
+        "time_seconds": 15.0,
+        "reason": "Inspect actual slice delete at source state transition, including before and after."
+      },
+      {
+        "id": "compaction-middle",
+        "time_seconds": 18.0,
+        "reason": "Inspect actual compaction middle at source state transition, including before and after."
+      },
+      {
+        "id": "compact-complete",
+        "time_seconds": 21.0,
+        "reason": "Inspect actual compact complete at source state transition, including before and after."
+      },
+      {
+        "id": "recompute",
+        "time_seconds": 23.6,
+        "reason": "Inspect actual recompute at source state transition, including before and after."
+      }
+    ],
+    "state_model": {
+      "function": "pruningState(frame)",
+      "inputs": {
+        "features": [
+          2,
+          0.1,
+          1,
+          3
+        ],
+        "weights": [
+          [
+            1,
+            0.2,
+            2,
+            1
+          ],
+          [
+            0,
+            0.3,
+            1,
+            2
+          ]
+        ],
+        "removedIndex": 1
+      },
+      "planned_bindings": [
+        "active channel indices -> actual rendered tensor cell arrays",
+        "filtered weight rows -> matrix column count and widths",
+        "compaction progress -> corresponding channel and column x positions",
+        "matrix-vector product -> visible output bars and values",
+        "shape lengths -> dimension labels and multiply count"
+      ],
+      "invariants": [
+        "Both compact shapes have input dimension three.",
+        "Original outputs are [7.02,7.03], compact outputs [7,7].",
+        "Terms decrease from eight to six; two output channels remain."
+      ],
+      "b1_samples_seconds": [
+        5,
+        11,
+        12,
+        16,
+        21,
+        22,
+        30
+      ],
+      "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge09-pruning-state.tsx",
+      "bindings": [
+        "active channel indices -> actual rendered tensor cell arrays",
+        "filtered weight rows -> matrix column count and widths",
+        "compaction progress -> corresponding channel and column x positions",
+        "matrix-vector product -> visible output bars and values",
+        "shape lengths -> dimension labels and multiply count"
+      ]
+    },
+    "scene_rationale": "Four phases expose the dependency, select a matched removal unit, perform physical deletion/compaction, and recompute the changed output. It cannot reuse a masked-bar-only quantization scene.",
+    "previews": [],
+    "tsx_path": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:53:02.888996+00:00",
+        "reviewer": "edge_06_10 agent",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning",
+        "assertion_exit_code": 0,
+        "results": {
+          "suite_checks": 113,
+          "suite_status": "PASS",
+          "record_specific": "Frame 450 removes c1 and matching input column; midpoint positions [0,1.5,2.5]; final [0,1,2]; shape 2×3, 6 terms, recomputed [7,7]."
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "pruningState → actual indices map controls existence of vector and matrix cells; positions move corresponding channels into contiguous slots; output values derive from compact matrix-vector product.",
+          "method": "Read actual state-to-component code plus SSR markup checks; same functions are called by assertions and visible core."
+        },
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge09-pruning-state.tsx",
+        "state_source": "assets/source-kits/edge-ai-embedded-machine-learning/src/mechanisms/edge09-pruning-state.tsx",
+        "source_version": {
+          "mtime_ns": 1791525149009764679,
+          "size": 1634
+        },
+        "applicable_record_ids": [
+          "recvw25vjM9Ca5"
+        ],
+        "typecheck": {
+          "command": "node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes this mechanism for full implementation; does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T05:58:26.372145+00:00",
+        "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx",
+        "source_version": {
+          "mtime_ns": 1791525480972141253,
+          "size": 6084
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Independent full scene components draw own core SVG combinations. Full scenes call the B1 state function using absolute timeline offsets. Concrete registry/tensor arrays, lifetime ownership, bank segment sizes, compacted tensor cells, or distribution values bind directly to visible text and geometry. Local useCurrentFrame provides staged title/copy/figure entry. No imported B1 core component wrapper."
+        },
+        "assertion_command": "node -r ./scripts/register-ts.cjs scripts/assert-edge-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "checks": 113,
+          "mechanism_state_unchanged": true,
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "quality_warning": "Compact source lines below 180. Inspected independently and found complete topic-specific mechanism, not a data wrapper. Final teaching review still required."
+        },
+        "applicable_record_ids": [
+          "recvw25vjM9Ca5"
+        ]
+      }
+    ],
+    "key_frames": [
+      100,
+      260,
+      430,
+      530,
+      645,
+      840
+    ],
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion4.0.410",
+      "React19.0.0",
+      "TypeScript5.8.2",
+      "FFmpeg"
+    ],
+    "risk_windows": [
+      {
+        "seconds": [
+          12,
+          22
+        ],
+        "risk": "No dangling input column or hidden zero placeholder after compaction."
+      },
+      {
+        "seconds": [
+          22,
+          31
+        ],
+        "risk": "Do not promise universal speedup or preserved accuracy from fewer channels."
+      }
+    ],
+    "source": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx",
+    "duration_frames": 930,
+    "template_scope": "Course L1 theme and reusable L2 primitives; independent topic-specific L3 scenes.",
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.056110+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/final-video-review.json",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-overview.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-risks.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T14:17:47.796430+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/render-preflight.log",
+        "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.mp4",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+      "reviewed_at": "2026-10-09T06:12:15.056110+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/final-video-review.json",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-overview.jpg",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-risks.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "slice-delete",
+          "times_seconds": [
+            14.966666666666667,
+            15.0,
+            15.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0449.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0450.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0451.jpg"
+          ],
+          "observation": "At449 c1 and its two linked weights are present; at450 and451 the entire paired slice is absent, leaving three live columns.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "compaction-middle",
+          "times_seconds": [
+            17.966666666666665,
+            18.0,
+            18.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0539.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0540.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0541.jpg"
+          ],
+          "observation": "At539,540,541 surviving c2/c3 columns advance left with their linked weights attached; there is no mismatched input slice.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "compact-complete",
+          "times_seconds": [
+            20.966666666666665,
+            21.0,
+            21.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0629.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0630.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0631.jpg"
+          ],
+          "observation": "At629,630,631 the three surviving columns have reached contiguous aligned positions, and the shape reads2×3.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "recompute",
+          "times_seconds": [
+            23.566666666666666,
+            23.6,
+            23.633333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0707.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0708.jpg",
+            "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/independent-0709.jpg"
+          ],
+          "observation": "At707 only two terms contribute and the sums are4/1; at708/709 the third terms contribute and both sums read7.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.333–8.667 s: four feature channels align vertically with both downstream matrix rows. Channelc1 and its whole input column become orange together.",
+        "14.967→15.000 s: c1,0.1 and downstream weights0.2/0.3 disappear together. At18s the three retained columns are moving into the vacant gap; by21s the compact3-vector and2×3 matrix align without a deleted placeholder.",
+        "23.567→23.600 s: enabling the third remaining multiply term changes displayed partial outputs4/1 to7/7. At28s six visible terms replace the original eight, and the prior7.02/7.03 outputs remain in the explicit comparison."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "tsx": "assets/source-kits/edge-ai-embedded-machine-learning/src/videos/edge09-structured-pruning-for-edge-deployment.tsx"
+  },
+  "status": "ready",
+  "learning_objective": "Demonstrate structured channel removal by deleting one output channel and its matching input slice in the next layer, then compact both tensor shapes.",
+  "artifact_version": "v1",
+  "feishu_record_id": "recvw25vjM9Ca5",
+  "subject": "Digital Electronics",
+  "course": "Edge AI and Embedded Machine Learning",
+  "media": {
+    "duration_seconds": 31.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Structured Pruning for Edge Deployment: Remove a Channel",
+  "title": "Structured Pruning for Edge Deployment: Remove a Channel",
+  "prompt": "Create a 31-second silent English animation explaining Structured Pruning for Edge Deployment. Start with features [2, 0.1, 1, 3] and downstream weights [[1, 0.2, 2, 1], [0, 0.3, 1, 2]], select channel c1 and its matching downstream input column, remove both, compact the features to [2, 1, 3] and weights to [[1, 2, 1], [0, 1, 2]], then recompute outputs from [7.02, 7.03] to [7, 7].\n\nUse four scenes lasting 6, 6, 10, and 9 seconds: expose channel correspondence, select the coupled slice, physically delete and compact tensor cells, and evaluate six remaining multiply terms instead of eight. Preserve original channel names as the cells move; emphasize validation and fine-tuning, without promising universal device speedup. Render at 1920×1080, 30 fps, in Helvetica Neue with 1.45 line height; use #0e0e0e, #171b1c, and #212629 backgrounds, #56b4e9 inputs, #e69f00 operations, #009e73 results, #d55e00 warnings, and #cc79a7 stored weights or a second model. Stagger text and figure entrances over 12–15 frames while keeping the mechanism itself numerically exact.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 31.0,
+    "reviewer": "/root/edge_01_05 (independent of source author edge_06_10)",
+    "reviewed_at": "2026-10-09T06:12:15.056110+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/final-video-review.json",
+      "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "core_conclusion": "Structured pruning removes a channel and its matching downstream input slice; the reduced model still requires validation.",
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T14:24:35.714590+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/structured-pruning-for-edge-deployment-geometry.json",
+      "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.jpg",
+      "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/cover-02.jpg"
+    ],
+    "visual": "Actual fullbatch covercontact sheets inspected; exact knowledge-point name, course eyebrow, representative numerical L2 figure and official icon visible; no copy/figure collisions. Corrected footprint cover inspected full size after measured27px recentering.",
+    "geometry": {
+      "record_id": "recvw25vjM9Ca5",
+      "slug": "structured-pruning-for-edge-deployment",
+      "version": "v1",
+      "source": "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment/structured-pruning-for-edge-deployment.png",
+      "canvas": [
+        1000,
+        900
+      ],
+      "figure_frame": [
+        180,
+        140,
+        820,
+        760
+      ],
+      "threshold": "Any RGB channel > 10, every pixel inspected",
+      "tolerances": {
+        "overflow_px": 2,
+        "center_x_px": 20,
+        "center_y_px": 30,
+        "minimum_width_px": 280,
+        "minimum_height_px": 280
+      },
+      "measured_at": "2026-10-09T06:22:55+00:00",
+      "visual_review_status": "PASSED",
+      "status": "PASSED",
+      "errors": [],
+      "bbox": [
+        289,
+        198,
+        725,
+        706
+      ],
+      "bbox_width": 436,
+      "bbox_height": 508,
+      "center_offset": [
+        7.0,
+        2.0
+      ],
+      "overflow_px": 0
+    },
+    "title_checks": "Exact Name prefix; English scenario derived from final action; total<=60 and scenario<=32; no final period."
+  },
+  "cover_version": "v1",
+  "video": "assets/videos/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.mp4",
+  "cover": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.jpg",
+  "cover_image": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.jpg",
+  "player": "https://github.com/user-attachments/assets/38a74520-adc0-42db-952b-168ecaab0e81",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/edge-ai-embedded-machine-learning/structured-pruning-for-edge-deployment.md",
+  "tags": [
+    "recvw25vjM9Ca5",
+    "edge-ai-embedded-machine-learning",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "arxiv.org",
+      "url": "https://arxiv.org/abs/1512.08571",
+      "scope": "Structured sparsity can remove channel and kernel structures; retraining compensates for pruning loss."
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/edge-ai-embedded-machine-learning.md",
+  "feishu": {
+    "record_id": "recvw25vjM9Ca5",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T14:26:53.412902+08:00",
+    "selection_fields": {
+      "Name": "Structured Pruning for Edge Deployment",
+      "Discipline": "Digital Electronics",
+      "Course": "Edge AI and Embedded Machine Learning"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25vjM9Ca5",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T14:26:53.412902+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "page_status": "included in this publication commit",
+      "attachment": {
+        "video_version": "edge-ai-20261009-v1",
+        "video_bytes": 1466147,
+        "issue_number": 122,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122",
+        "comment_id": 6075635980,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/122#issuecomment-6075635980",
+        "attachment_url": "https://github.com/user-attachments/assets/38a74520-adc0-42db-952b-168ecaab0e81",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/38a74520-adc0-42db-952b-168ecaab0e81",
+      "issue_number": 122,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

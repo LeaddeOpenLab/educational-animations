@@ -1,0 +1,108 @@
+{
+  "record_id": "recvw25vjM4V2u",
+  "video_id": "edge04-per-channel-weight-quantization",
+  "version": "v1",
+  "video_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/edge04-per-channel-weight-quantization.mp4",
+  "reviewer": "edge_06_10 agent; independent of items1\u20135 author",
+  "reviewed_at": "2026-10-09T06:11:05.632378+00:00",
+  "review_method": "Actually inspected final MP4 overview and before/during/after risk contact sheets at 640px-per-frame; no desktop or browser control.",
+  "evidencepaths": [
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/overview.jpg",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-sheet.jpg"
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "code-collapse",
+      "times_seconds": [
+        7.966666666666667,
+        8.0,
+        8.033333333333333
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0239.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0240.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0241.png"
+      ],
+      "observation": "f239\u2013241 shows moving markers, but fixed code1 paired to two different intermediate reconstructed values. Repair numeric labels while retaining motion."
+    },
+    {
+      "risk_id": "scale-separation",
+      "times_seconds": [
+        15.966666666666667,
+        16.0,
+        16.033333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0479.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0480.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0481.png"
+      ],
+      "observation": "f479\u2192480 changes A scale.01575\u2192.00031 and codes1/1/3\u219232/64/127; B scale remains.01575."
+    },
+    {
+      "risk_id": "equal-axis",
+      "times_seconds": [
+        25.966666666666665,
+        26.0,
+        26.033333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0779.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0780.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/edge-ai-embedded-machine-learning/out/review/edge04-per-channel-weight-quantization/risk-0781.png"
+      ],
+      "observation": "f779\u2013781 shows parallel orange/green residual bars sharing the same origin and horizontal gain; the green residuals are visibly much smaller."
+    }
+  ],
+  "checks": {
+    "terminology": "Reviewed; appropriate subject terminology.",
+    "numerical_consistency": "repair required as listed",
+    "readability_at_640": "Main text and numerical marks readable; edge05 transient overlap noted where applicable.",
+    "veto_1": {
+      "triggered": false,
+      "reason": "Numerical objects, geometry, and correspondence remain intelligible without headings: the lesson does not reduce to generic boxes/arrows."
+    },
+    "veto_2": {
+      "triggered": false,
+      "reason": "Observed changes in values, marker positions, range extent, or accumulation beyond entrance decoration."
+    },
+    "veto_3": {
+      "triggered": false,
+      "reason": "Actual computation, relocation, or range change is visible; outcome is not solely declared by a status label."
+    }
+  },
+  "status": "repair",
+  "observations": [
+    {
+      "times_seconds": [
+        3.3333,
+        9.6667
+      ],
+      "observation": "A and B weights visibly differ in magnitude on a shared real axis. ChannelA .01 and.02 both settle at code1/reconstruction.0157; .04 settles at code3/.0472."
+    },
+    {
+      "times_seconds": [
+        7.9667,
+        8,
+        8.0333
+      ],
+      "observation": "During convergence the two rows already say code1, yet their reconstruction labels are .0137/.0172 (and nearby values), contradicting the shared scale. Final values become consistent."
+    },
+    {
+      "times_seconds": [
+        15.9667,
+        16,
+        16.0333,
+        27
+      ],
+      "observation": "At f480 A switches to codes32/64/127 and values near the original while B scale remains.01575. Final error bars on the same horizontal scale visibly shrink, with MAE.00575\u2192.00008."
+    }
+  ],
+  "repairs": [
+    {
+      "type": "logic",
+      "time_seconds": 8,
+      "fix": "While marker coordinates interpolate, show exact quantized reconstruction values from the selected code and scale in code\u2192value labels, or clearly mark the moving coordinate as transitional rather than reconstructed."
+    }
+  ]
+}

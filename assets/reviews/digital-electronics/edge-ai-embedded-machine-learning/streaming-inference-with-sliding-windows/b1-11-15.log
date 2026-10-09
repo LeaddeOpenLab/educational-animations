@@ -1,0 +1,5 @@
+edge11: square/reduce and equal-RMS counterexample boundaries PASS
+edge12: retained indexes, motion midpoint, end-of-hop +/-1 PASS
+edge13: lane split, ReLU, CPU transform, final handoff PASS
+edge14: sampled power areas integrate to 1000/1500 microjoules PASS
+edge15: abstention, threshold crossing, equality and conserved mass PASS

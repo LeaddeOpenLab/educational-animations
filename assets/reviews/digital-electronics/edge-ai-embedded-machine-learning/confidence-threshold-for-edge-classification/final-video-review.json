@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "version": "v2",
+  "reviewer": "Codex main",
+  "reviewed_at": "2026-10-09T14:17:32.790343+08:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/edge15-confidence-threshold-for-edge-classification/overview.jpg",
+    "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risks.jpg"
+  ],
+  "method": "Viewed actual final MP4-derived6keyframes at640x360 per tile and every risk±1frame; source and state assertions supplementary.",
+  "observations": [
+    "Max score starts0.60 below0.70; unknown becomesA precisely at decision crossing14.533s.",
+    "Equality22.333s keepsA accepted and shows>= rule.",
+    "V2 observed: before crossing14.500s shows0.699<0.700 unknown; at14.533s shows0.701>=0.700 withA; at22.333s equality0.700>=0.700 remainsaccepted; labels readable without collision."
+  ],
+  "checks": {
+    "terminology": true,
+    "explanation": true,
+    "motion": true,
+    "consistency": true,
+    "layout": true,
+    "small_player": true,
+    "version_match": true,
+    "causal_motion": true,
+    "state_consistency": true,
+    "pacing": true,
+    "readability": true
+  },
+  "veto_checks": {
+    "mechanism_visible": true,
+    "numbers_match_objects": true,
+    "readable_without_collisions": true
+  },
+  "risk_checks": [
+    {
+      "risk_id": "threshold-crossing",
+      "times_seconds": [
+        14.5,
+        14.533333333333333,
+        14.566666666666666
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0435.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0436.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0437.png"
+      ],
+      "observation": "Max score starts0.60 below0.70; unknown becomesA precisely at decision crossing14.533s. Equality22.333s keepsA accepted and shows>= rule. V2 observed: before crossing14.500s shows0.699<0.700 unknown; at14.533s shows0.701>=0.700 withA; at22.333s equality0.700>=0.700 remainsaccepted; labels readable without collision."
+    },
+    {
+      "risk_id": "equality",
+      "times_seconds": [
+        22.3,
+        22.333333333333332,
+        22.366666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0669.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0670.png",
+        "assets/reviews/digital-electronics/edge-ai-embedded-machine-learning/confidence-threshold-for-edge-classification/risk-0671.png"
+      ],
+      "observation": "Max score starts0.60 below0.70; unknown becomesA precisely at decision crossing14.533s. Equality22.333s keepsA accepted and shows>= rule. V2 observed: before crossing14.500s shows0.699<0.700 unknown; at14.533s shows0.701>=0.700 withA; at22.333s equality0.700>=0.700 remainsaccepted; labels readable without collision."
+    }
+  ]
+}
