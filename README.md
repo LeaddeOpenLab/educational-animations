@@ -2,7 +2,7 @@
 
 Short educational animations with concept explanations and versioned reuse materials.
 
-**360 video-ready · 54 recorded review passes · 137 awaiting production · 44 courses · 17 disciplines**
+**375 video-ready · 69 recorded review passes · 137 awaiting production · 45 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -136,7 +136,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#digital-electronics"><img src="assets/subject-cards/digital-electronics.png" width="100%" alt="Digital Electronics"></a><br>
 <a href="#digital-electronics"><strong>Digital Electronics</strong></a><br>
-<sub>3 courses · 24 videos · 0 awaiting production</sub>
+<sub>4 courses · 39 videos · 0 awaiting production</sub>
 </td>
 <td></td>
 </tr>
@@ -641,7 +641,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="digital-electronics"></a>
 ### Digital Electronics
 
-24 videos · 0 awaiting production
+39 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -663,6 +663,16 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a href="catalog/digital-electronics/edge-ai-embedded-machine-learning.md"><strong>Edge AI and Embedded Machine Learning</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+<a id="risc-v-processor-architecture"></a>
+<a href="catalog/digital-electronics/risc-v-processor-architecture.md"><img src="assets/covers/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.jpg" width="100%" alt="RISC-V Processor Architecture"></a><br>
+<a href="catalog/digital-electronics/risc-v-processor-architecture.md"><strong>RISC-V Processor Architecture</strong></a><br>
+<sub>15 videos · 0 awaiting production</sub>
+</td>
+<td></td>
+<td></td>
 </tr>
 </table>
 

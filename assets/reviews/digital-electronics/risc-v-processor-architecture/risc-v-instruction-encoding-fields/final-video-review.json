@@ -1,0 +1,73 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+  "reviewed_at": "2026-10-09T07:15:07.451786+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.mp4",
+  "video_version": {
+    "size": 2505685,
+    "mtime_ns": 1791529514688053913
+  },
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-sheet.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0749.png",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0750.png",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0751.png",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/f0850.png"
+  ],
+  "observations": [
+    "Viewed v1 overview and six risk panels, then inspected original-resolutionrisk0749,0750,0751 andf0850 to resolve ambiguous tiny bit text.",
+    "At24.9667s originalframe shows rd00101,decodedx5,word0x007302B3. At25/25.0333s originalframes clearly show rd01001,decodedx9,word0x007304B3;rs1=00110/x6 andrs2=00111/x7 stayfixed.28.33s retains that correct newencoding.",
+    "The mainfigure extracts opcode/register/functionroles and then changes the actualdestinationbitfield. Sourcebits anddecodedvalues agree. No observed textcollision. Initial suspected failure fromcontact-sheet bitreading was a reviewer misread and is withdrawn; no videochange was required."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "decode-register-indices",
+      "times_seconds": [
+        12.966666666666667,
+        13.0,
+        13.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0389.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0390.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0391.png"
+      ],
+      "observation": "12.9667–13.0333s showsrs1=00110,rs2=00111,rd=00101 anddecodedx6/x7/x5 in matchingroles. At13s summarycopychanges afterthe visiblefields/tokensarealready present."
+    },
+    {
+      "risk_id": "edit-destination",
+      "times_seconds": [
+        24.966666666666665,
+        25.0,
+        25.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/review-v1-evidence/risk-0749.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/review-v1-evidence/risk-0750.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/review-v1-evidence/risk-0751.png"
+      ],
+      "observation": "Originalframes749/750/751 establish rd00101→01001 exactlyat25s,withdecodedx5→x9 andword0x007302B3→0x007304B3;rs1,rs2,functionbits andopcoderemain unchanged.Originalf0850 confirms finalstate."
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Actualbitfields,bitwidths anddecodedregistertokens identifyencodingwithheadingshidden."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Source rd bitpattern anddecoded destination change together, beyond titles or colors; earlierfields are copiedinto separatedroles."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "The sourcebits themselves become01001, not onlythe destinationlabel; original-resolution evidence corrects the initialthumbnailmisread."
+    }
+  ],
+  "course_comparison": "Viewedrv01–05 together: encodingfielddecoding,registerportstorage,immediatebitassembly,ALUcount/bitoperations,andloadnextstate use distinct main diagrams and stateprocesses; no title-only substitution observed.",
+  "layout": "No visually observed body-text collision in inspectedoverview/riskframes; authoritative full-batch geometry gate is separately recorded bymain controller."
+}

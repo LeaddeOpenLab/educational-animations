@@ -1715,5 +1715,76 @@
         "version": "v2"
       }
     ]
+  },
+  "risc-v-processor-architecture": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/download/course-videos-digital-electronics-risc-v-processor-architecture/risc-v-processor-architecture-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/releases/tag/course-videos-digital-electronics-risc-v-processor-architecture",
+    "video_count": 15,
+    "version": "bundle-2",
+    "updated_at": "2026-10-09T07:55:21Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "recvw25utMYuhh",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMYmGk",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMTyz5",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMLp5p",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMJbgr",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utM8s8D",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utM3TFR",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMuzEE",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25utMKYLD",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMtQGj",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMj0nN",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMdNQX",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMVScO",
+        "version": "v1"
+      },
+      {
+        "id": "recvw25utMxdLZ",
+        "version": "v2"
+      },
+      {
+        "id": "recvw25utMdKk4",
+        "version": "v1"
+      }
+    ]
   }
 }

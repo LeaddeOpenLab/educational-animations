@@ -1,0 +1,9 @@
+# recvw25utMdKk4 · Memory-Mapped I/O Access
+
+Version: v1 · alignment: aligned
+
+A 30-second silent English educational animation for a university digital electronics course on Memory-Mapped I/O Access: use an illustrative platform mapping to route SW data 1 to GPIO output address 0x10000000 rather than RAM; visibly change output and status from zero to one, raise the pin waveform, and light the LED while RAM remains 55; complete FENCE O,I before returning status 1 from address 0x10000004 into x3, then label a separate RAM-store example where the same data and opcode change a memory cell from 55 to 1 instead of a peripheral output.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel decodes the device address over 90 frames and moves the separate RAM comparison payload over 45 frames; change pin and lamp geometry at frame 405 and fill x3 with returned status at frame 675; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.

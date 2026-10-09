@@ -1,0 +1,435 @@
+{
+  "id": "recvw25utMdNQX",
+  "feishu_record_id": "recvw25utMdNQX",
+  "original_name": "Precise Trap Entry and Return",
+  "standard_name": "Precise Trap Entry and Return",
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "artifact_version": "v1",
+  "learning_objective": "Follow a precise U-mode ECALL into a direct M-mode handler, inspect saved PC/cause, and return after an explicit software PC adjustment.",
+  "core_conclusion": "Trap entry records the ECALL address; the handler chooses the resume address, and MRET loads PC from mepc.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.riscv.org/reference/isa/v20240411/priv/machine.html",
+      "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html"
+    ],
+    "scope": "Machine trap CSRs, ECALL and MRET follow Privileged ISA 1.13. Example has U support, no delegation, mtvec Direct=0x800, fixed 32-bit ECALL, and permitted memory. Older/younger instruction display illustrates precise state."
+  },
+  "references": [
+    "https://docs.riscv.org/reference/isa/v20240411/priv/machine.html",
+    "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html"
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx",
+    "scenes": [
+      {
+        "id": "boundary",
+        "start_seconds": 0,
+        "end_seconds": 5.5,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Program rows: 0x100 addi x5,x0,7; 0x104 ecall; 0x108 addi x6,x0,9; x5=0; x6=0.",
+        "initial_state": "An older ADDI precedes ECALL; younger ADDI has not committed.",
+        "trigger": "The older instruction completes before the ECALL trap boundary.",
+        "change": "Move value 7 from the 0x100 row into x5, then stop the execution cursor at 0x104. Keep x6=0.",
+        "cause": "The older instruction completes before the ECALL trap boundary.",
+        "result": "The precise boundary contains the older result and no younger effect.",
+        "english_copy": [
+          "Older work is complete",
+          "Younger work has no effect yet"
+        ]
+      },
+      {
+        "id": "entry",
+        "start_seconds": 5.5,
+        "end_seconds": 12,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "ECALL cursor at 0x104; PC, mepc, mcause, mtvec=0x800; mode U.",
+        "initial_state": "PC=0x104; trap CSR slots are awaiting this event.",
+        "trigger": "U-mode ECALL raises synchronous exception code 8 with no delegation.",
+        "change": "At 8s copy the ECALL address 0x104 into mepc, place interrupt=0/code=8 into mcause, move PC to 0x800 and the mode marker U→M. Keep x5=7 and x6=0.",
+        "cause": "U-mode ECALL raises synchronous exception code 8 with no delegation.",
+        "result": "Handler entry exposes the saved faulting address, not 0x108; the architectural boundary is retained.",
+        "english_copy": [
+          "mepc = 0x104",
+          "mcause = 8; PC = 0x800"
+        ]
+      },
+      {
+        "id": "handle",
+        "start_seconds": 12,
+        "end_seconds": 19,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Handler operation mepc <- mepc + 4; original saved address token 0x104; result slot.",
+        "initial_state": "mepc=0x104 would re-execute the same ECALL if returned unchanged.",
+        "trigger": "This handler chooses to finish the 32-bit ECALL and skip it.",
+        "change": "Move 0x104 and +4 through a visible addition into 0x108, then write the result into mepc at 15.5s. Show a small SOFTWARE tag attached to the actual CSR write.",
+        "cause": "This handler chooses to finish the 32-bit ECALL and skip it.",
+        "result": "The modified mepc is an explicit software decision; hardware trap entry did not automatically advance it.",
+        "english_copy": [
+          "Handler chooses the resume PC",
+          "Software: mepc += 4"
+        ]
+      },
+      {
+        "id": "return",
+        "start_seconds": 19,
+        "end_seconds": 25,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "MRET instruction in handler; mepc=0x108; PC=handler; saved previous mode U.",
+        "initial_state": "The handler has selected the next instruction and finishes its work.",
+        "trigger": "MRET executes at 21s.",
+        "change": "Move the mepc token into PC=0x108; move the active mode marker M→U; place the program cursor on 0x108. Keep x6=0 until that instruction actually executes.",
+        "cause": "MRET executes at 21s.",
+        "result": "Control resumes after ECALL, with older state intact and the younger operation still pending.",
+        "english_copy": [
+          "MRET: PC <- mepc",
+          "Resume U-mode at 0x108"
+        ]
+      },
+      {
+        "id": "resume",
+        "start_seconds": 25,
+        "end_seconds": 31,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Resumed addi x6,x0,9; x5 and x6; trap log mepc=0x108/mcause=8.",
+        "initial_state": "The cursor points to the previously unexecuted younger ADDI; x6=0.",
+        "trigger": "The resumed ADDI completes at 27s.",
+        "change": "Move 9 from the resumed instruction into x6. Retain x5=7 and the CSR evidence from this one trap.",
+        "cause": "The resumed ADDI completes at 27s.",
+        "result": "Younger x6=9 appears only after return, demonstrating the precise boundary across handler execution.",
+        "english_copy": [
+          "Now the younger instruction executes",
+          "Saved PC and program effects stay consistent"
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "precise-entry-return",
+        "scene_id": "entry",
+        "uncertainty": "Do not save PC+4 on ECALL or execute younger x6 early; the software adjustment must be distinct from entry and MRET.",
+        "expected_observation": "At entry mepc=0x104/mcause=8 and x6=0; software changes mepc to0x108; MRET restores PC; only resumed ADDI sets x6=9."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "trap-entry",
+        "time_seconds": 8,
+        "reason": "ECALL saves its own address and leaves x6 untouched.",
+        "frame": 240,
+        "sampling_frames": [
+          239,
+          240,
+          241
+        ]
+      },
+      {
+        "id": "software-adjust",
+        "time_seconds": 15.5,
+        "reason": "Only the handler increments mepc by the known 4-byte instruction size.",
+        "frame": 465,
+        "sampling_frames": [
+          464,
+          465,
+          466
+        ]
+      },
+      {
+        "id": "mret",
+        "time_seconds": 21,
+        "reason": "PC changes to saved adjusted mepc; younger result still absent.",
+        "frame": 630,
+        "sampling_frames": [
+          629,
+          630,
+          631
+        ]
+      },
+      {
+        "id": "resume-write",
+        "time_seconds": 27,
+        "reason": "x6 changes only after control returns.",
+        "frame": 810,
+        "sampling_frames": [
+          809,
+          810,
+          811
+        ]
+      }
+    ],
+    "example": {
+      "older_pc": "0x100",
+      "ecall_pc": "0x104",
+      "younger_pc": "0x108",
+      "handler_pc": "0x800",
+      "exception_code": 8,
+      "interrupt_bit": 0,
+      "ecall_bytes": 4,
+      "older_result": 7,
+      "younger_result": 9
+    },
+    "design_audit": {
+      "visualArgument": "A program cursor and two register cells show exactly which side of the ECALL boundary has executed; address tokens are saved, explicitly adjusted, and restored.",
+      "motion": "Older write, simultaneous trap CSR capture, software address addition, PC restoration and delayed younger write.",
+      "example": "U ECALL at0x104 traps to0x800; handler adds4 to mepc and MRET resumes0x108.",
+      "antiTemplate": "Unlike the privilege lesson, this lesson centers instruction order and the saved/resume PC; MPP and interrupt stack detail remain background.",
+      "sceneRationale": "Five scenes are required to distinguish pre-trap precise state, hardware entry, software handling, architectural return and the first resumed effect. The software step cannot be collapsed into entry."
+    },
+    "state_model": {
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv12-state.ts",
+      "bindings": {
+        "csrs": "MemoryWords words bind PC/mepc/mcause directly to state.",
+        "program": "MemoryWords selectedAddress and DataTokens execution cursor follow state.pc.",
+        "registers": "RegisterBank shows state.x5/x6.",
+        "transfers": "DataTokens positions carry source PC into mepc and later mepc into PC."
+      },
+      "planned_assertions": [
+        "Trap frame239→240 stores0x104, cause8, modeM and x6=0.",
+        "Handler frame464→465 changes only mepc0x104→0x108.",
+        "MRET frame629→630 gives PC0x108/modeU/x6=0.",
+        "Resumed frame809→810 changes x6 from0 to9 while x5=7."
+      ]
+    },
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T06:55:18.675380+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv12-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv12-state.ts",
+        "source_version": {
+          "state_mtime_ns": 1791528883372614729,
+          "probe_mtime_ns": 1791528883372723230,
+          "state_size": 814,
+          "probe_size": 729
+        },
+        "source_check": "rv12State(frame) computes PC/mepc/mcause/x5/x6 and transfer coordinates; probe MemoryWords/RegisterBank/DataTokens consume those exact state fields. SSR proves saved0x104 then return0x108; no independent display constants replace state.",
+        "assertion_command": "'/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv12.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv12 PASS: exact saved ECALL PC, software increment, MRET restoration, delayed younger write and visible CSR bindings",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/b1.log",
+        "applicable_record_ids": [
+          "recvw25utMdNQX"
+        ],
+        "limitations": "Minimal mechanism render binding checked via actual probe SSR; no final-video or teaching approval."
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T07:01:14.709812+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx",
+        "source_version": {
+          "mtime_ns": 1791529212127808958,
+          "size": 4817
+        },
+        "source_check": "Direct state-to-graphic bindings reviewed in final per-topic source; full SCENES SSR checks actual transition output, including removal, CSR transfer, mode token, PTE walk, or device pin geometry. Topic scene bodies compose their own L2/SVG and do not wrap probes.",
+        "assertion_command": "node scripts/assert-rv11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv12 FULL PASS: 5 independent scenes, 930frames, tested real scene state bindings",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/c-source-check.log"
+      }
+    ],
+    "rework": [],
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv12-precise-trap-entry-and-return.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv12-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+    "reviewed_at": "2026-10-09T07:16:18.883941+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/final-video-review.json",
+      "assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+      "reviewed_at": "2026-10-09T07:16:18.883941+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/final-video-review.json",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "trap-entry",
+          "times_seconds": [
+            7.966666666666667,
+            8.0,
+            8.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0239.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0240.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0241.png"
+          ],
+          "observation": "Frames239/240/241 show mepc capture0x104, mcause8, PC0x800 and U→M; no younger register result appears.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "software-adjust",
+          "times_seconds": [
+            15.466666666666667,
+            15.5,
+            15.533333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0464.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0465.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0466.png"
+          ],
+          "observation": "Frames464/465/466: mepc changes0x104→0x108 under the explicit SOFTWARE WRITE/+4 equation, PC remains0x800.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "mret",
+          "times_seconds": [
+            20.966666666666665,
+            21.0,
+            21.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0629.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0630.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0631.png"
+          ],
+          "observation": "Frames629/630/631: PC0x800→0x108, modeM→U, instruction0x108 becomes selected and x6 remains0.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "resume-write",
+          "times_seconds": [
+            26.966666666666665,
+            27.0,
+            27.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0809.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0810.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0811.png"
+          ],
+          "observation": "Frames809/810/811: x6 changes0→9 after return; x5=7 and saved mepc0x108 persist.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.00 s shows older x5=7 completed and x6=0 with ECALL at0x104 selected; the program-order boundary is visible in actual register cells.",
+        "7.967→8.000 s PC0x104 becomes0x800, mepc blank becomes0x104, mcause blank becomes8 and privilegeU becomesM; x5=7/x6=0 persist.",
+        "15.467→15.500 s the visible software+4 equation accompanies mepc0x104→0x108 while handlerPC stays0x800.",
+        "20.967→21.000 s PC becomes0x108 and modeU, with x6 still0;26.967→27.000 s x6 finally becomes9. The older x5 remains7 throughout.",
+        "Core layout stays continuous to make CSR and register updates comparable; the actual numerical states change in separate stages. No sampled text obscures any CSR or result."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "Do not save PC+4 on ECALL or execute younger x6 early; the software adjustment must be distinct from entry and MRET.",
+  "requirement_prompt": "Precise Trap Entry and Return; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 31.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Precise Trap Entry and Return: Save, Adjust, Resume",
+  "title": "Precise Trap Entry and Return: Save, Adjust, Resume",
+  "prompt": "A 31-second silent English educational animation for a university digital electronics course on Precise Trap Entry and Return: establish that the older instruction has completed x5=7 but younger x6 remains zero before a U-mode ECALL at 0x104; capture mepc=0x104 and mcause=8 while entering M-mode handler 0x800, show software explicitly adding four to mepc to choose 0x108, use MRET to restore PC=0x108 and U-mode, and only then let the resumed instruction write x6=9 while preserving x5.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel carries the older result over 50 frames and the resumed result over 45 frames; capture trap state at frame 240, show the software mepc change at 465, return at 630, and write x6 at 810; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 31.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.848911+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/cover-03.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/precise-trap-entry-and-return-geometry.json"
+    ],
+    "observations": [
+      "ECALL0x104 saved inmepc, handler changes to0x108 andMRET resumes.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

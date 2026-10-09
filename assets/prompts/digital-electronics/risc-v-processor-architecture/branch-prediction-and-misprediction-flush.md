@@ -1,0 +1,9 @@
+# recvw25utMj0nN · Branch Prediction and Misprediction Flush
+
+Version: v1 · alignment: aligned
+
+A 30-second silent English educational animation for a university digital electronics course on Branch Prediction and Misprediction Flush: predict a BEQ at 0x100 as not taken and fetch younger ADDI 99 and STORE 99, then resolve 4=4 as taken with target 0x110; invalidate and remove both younger instruction cards and their 99 payload while x5=7 and RAM at 0x200 remains zero, refill from the correct target, and allow only target ADDI 42 to change x5 from 7 to 42 while the discarded store never writes memory.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel brings comparison values together over 60 frames and carries the correct writeback value over 45 frames; cross out younger cards at frame 360 and remove their cards and payloads at 420; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.

@@ -1,0 +1,8 @@
+cwd: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+command: '/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv14.cjs
+exit_code: 0
+rv14 PASS:9/9/9/12 decomposition,3 correct eight-byte indexed reads, leaf stop and offset-preserving PA inSVG
+command: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit
+exit_code: 0
+Source binding review: rv14State extracts VPN/offset, reads table PTEs, decodes leafPPN and formsPA. AddressParts, MemoryWords selectedAddress and DataTokens all bind that state;SSR contains actual PA and retained offset.
+This is technical code-gate evidence only; final teaching review remains pending.

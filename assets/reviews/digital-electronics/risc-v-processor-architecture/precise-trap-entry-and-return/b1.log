@@ -1,0 +1,8 @@
+cwd: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+command: '/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv12.cjs
+exit_code: 0
+rv12 PASS: exact saved ECALL PC, software increment, MRET restoration, delayed younger write and visible CSR bindings
+command: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit
+exit_code: 0
+Source binding review: rv12State(frame) computes PC/mepc/mcause/x5/x6 and transfer coordinates; probe MemoryWords/RegisterBank/DataTokens consume those exact state fields. SSR proves saved0x104 then return0x108; no independent display constants replace state.
+This is technical code-gate evidence only; final teaching review remains pending.

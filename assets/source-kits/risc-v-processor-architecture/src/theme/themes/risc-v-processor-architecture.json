@@ -1,0 +1,27 @@
+{
+  "name": "risc-v-processor-architecture",
+  "label": "Signals & Systems / electrical engineering",
+  "mode": "dark",
+  "colors": {
+    "bg0": "#070b12",
+    "bg1": "#0d1626",
+    "bg2": "#142238",
+    "grid": "rgba(148,163,184,0.13)",
+    "axis": "rgba(148,163,184,0.45)",
+    "primary": "#60a5fa",
+    "accent": "#fbbf24",
+    "result": "#34d399",
+    "warn": "#f87171",
+    "textStrong": "#f8fafc",
+    "textMuted": "#94a3b8",
+    "textDim": "#7a879b",
+    "alt": "#34d399"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 72,
+    "gridOpacity": 0.5,
+    "glowOpacity": 0.13,
+    "glowBlur": 40
+  }
+}

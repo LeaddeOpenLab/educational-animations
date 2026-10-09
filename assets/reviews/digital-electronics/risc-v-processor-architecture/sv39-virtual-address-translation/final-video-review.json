@@ -1,0 +1,209 @@
+{
+  "status": "passed",
+  "version": "v2",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.mp4",
+  "video_version": {
+    "mtime_ns": 1791531726128690011,
+    "size": 2958743
+  },
+  "reviewer": "/root/verify_resume (independent of rv14 v2 repair author)",
+  "reviewed_at": "2026-10-09T07:44:22.114787+00:00",
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-1.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-2.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-3.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-4.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0285.png",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0615.png"
+  ],
+  "observations": [
+    "Viewed the actual v2 final-MP4 overview, all 30 risk panels in four readable crops, and original full-size frames 285 and 615. This is a visual decision based on those images, not on source assertions.",
+    "All three table reads now show pending-to-returned PPN transitions at 8/13.5/19 s; intermediate transfer panels visibly relocate the concrete PPN toward an empty receiver. At 9.5/15/20.5 s arrival consumes the token and fills the same receiver with 0x80001000, 0x80002000 and leaf PPN 0x12345 respectively. This addresses the original failed causal read/handoff mechanism.",
+    "The overview at 3 s shows VPN2/1/0 = 1/2/3 and offset 0x1A8. The subsequent level equations use the prior delivered bases. At 25 s PA becomes 0x123451A8; at 31 s final overview shows physical memory byte 0x5A and x10=0x5A.",
+    "Main-diagram content changes through bit decomposition, three dependent reads with moving returned values, physical-address assembly, and final load. The repeated table layout carries changing causal state rather than repeated titles.",
+    "Full-size arrivals show readable PTE/address/value text, receiver and supporting copy. Receiver caption sits close to its lower border but remains legible; token/receiver overlap immediately before arrival is intentional spatial handoff, not obstruction."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "root-selection",
+      "times_seconds": [
+        7.966666666666667,
+        8.0,
+        8.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0239.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0240.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0241.png"
+      ],
+      "observation": "Frames 239/240/241: the yellow Returned PPN token reads pending before 8 s, then 0x80001 at/after 8 s. The destination is pending before and empty during the departing payload; PTE memory retains 0x20000401 at address 0x80000008. This corrects the v1 premature returned value.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "middle-selection",
+      "times_seconds": [
+        13.466666666666667,
+        13.5,
+        13.533333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0404.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0405.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0406.png"
+      ],
+      "observation": "Frames 404/405/406: base 0x80001000 selects 0x80001010; Returned PPN changes pending to 0x80002 at 13.5 s. Receiver is empty after return while the yellow payload is still at its source. The visible base matches the previously delivered root result.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "leaf-stop",
+      "times_seconds": [
+        18.966666666666665,
+        19.0,
+        19.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0569.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0570.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0571.png"
+      ],
+      "observation": "Frames 569/570/571: Returned PPN changes pending to 0x12345 at 19 s; flag explanation becomes V=1 R=1 A=1 readable leaf and the receiver remains unfilled. Address 0x80002018 derives from the prior delivered 0x80002000 base. The receiver then holds a leaf PPN rather than another table base.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "offset-join",
+      "times_seconds": [
+        24.966666666666665,
+        25.0,
+        25.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0749.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0750.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0751.png"
+      ],
+      "observation": "Frames 749/750/751: Physical address cell is absent at 24.9667 s and appears as 0x123451A8 at/after 25 s. Leaf PPN 0x12345, shift 12 equation, and unchanged offset 0x1A8 remain visible; VA and PA have the same low 12 bits.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "root-handoff-middle",
+      "times_seconds": [
+        8.633333333333333,
+        8.666666666666666,
+        8.7
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0259.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0260.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0261.png"
+      ],
+      "observation": "Frames 259/260/261 (8.6333/8.6667/8.7 s): yellow 0x80001 payload is between its returned-value source and lower-right dashed receiver and moves right/down across these panels. Receiver has no base value yet; offset 0x1A8 remains fixed.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "root-handoff-arrival",
+      "times_seconds": [
+        9.466666666666667,
+        9.5,
+        9.533333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0284.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0285.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0286.png"
+      ],
+      "observation": "Frames 284/285/286 (9.4667/9.5/9.5333 s): yellow 0x80001 reaches and overlaps the receiver slot immediately before arrival; at 285 the travelling token is consumed in that same slot and the solid receiver reads shifted base 0x80001000. At 286 it remains stable. Compared with frame 240, the travel takes 45 frames.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "middle-handoff-middle",
+      "times_seconds": [
+        14.133333333333333,
+        14.166666666666666,
+        14.2
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0424.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0425.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0426.png"
+      ],
+      "observation": "Frames 424/425/426 (14.1333/14.1667/14.2 s): yellow 0x80002 payload advances right/down toward the empty dashed receiver. PTE address/data and offset remain invariant; next base is not displayed in the receiver during transit.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "middle-handoff-arrival",
+      "times_seconds": [
+        14.966666666666667,
+        15.0,
+        15.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0449.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0450.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0451.png"
+      ],
+      "observation": "Frames 449/450/451 (14.9667/15/15.0333 s): yellow 0x80002 is at the receiver just before arrival; at 450 it is replaced there by 0x80002000 in the solid receiver and remains at 451. Compared with return frame 405, delivery occurs after 45 frames.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "leaf-handoff-middle",
+      "times_seconds": [
+        19.633333333333333,
+        19.666666666666668,
+        19.7
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0589.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0590.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0591.png"
+      ],
+      "observation": "Frames 589/590/591 (19.6333/19.6667/19.7 s): yellow 0x12345 payload moves toward the still-empty dashed Leaf PPN ready receiver. It follows the same visible transfer behavior but carries physical page identity rather than a shifted table base.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "leaf-handoff-arrival",
+      "times_seconds": [
+        20.466666666666665,
+        20.5,
+        20.533333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0614.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0615.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0616.png"
+      ],
+      "observation": "Frames 614/615/616 (20.4667/20.5/20.5333 s): travelling 0x12345 occupies the receiver region just before arrival, then is consumed and the solid leaf receiver contains 0x12345 at/after 615. Return-to-delivery span is 45 frames. Original full-size frame 615 confirms legibility and that the receiver is inside the board.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Concrete VPN indexes, PTE addresses/values, pending and delivered PPNs, unchanged offset, and assembled PA identify the table walk without relying on headings."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Read outputs change from pending, returned PPN tokens visibly move into receivers, pointer receivers become shifted bases, and PA/load outputs appear; these exceed colors, arrows or caption substitution."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "Results are not prefilled: each read produces PPN, receiver stays empty during travel, and arrival visibly supplies next base or leaf PPN. Later levels reuse those delivered numerical bases."
+    }
+  ],
+  "checks": {
+    "teaching_correctness": true,
+    "mechanism_visible": true,
+    "pacing": true,
+    "layout": true,
+    "readability": true,
+    "version_match": true
+  },
+  "review_method": "Independent actual-image inspection of final MP4-derived frames via view_image. No desktop/browser control or playback test. Source and L3 were read only to establish intended risk coverage.",
+  "repairs": [],
+  "resolved_from": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/final-video-review-v1.json",
+  "scope_note": "Only rv14 v2 reviewed here; other batch decisions are unchanged."
+}

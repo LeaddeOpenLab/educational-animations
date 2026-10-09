@@ -1,0 +1,5 @@
+Full-scene assertion: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv-full-06-10.cjs
+{"status":"PASS","checks":27,"scope":"Full-scene state→actual SVG semantic bindings; no visual teaching approval"}
+B1 rerun:
+{"status":"PASS","record":"rv09","checks":19,"scope":"State boundaries plus SSR of actual minimal probe; not final teaching approval"}
+TypeScript: node node_modules/typescript/bin/tsc --noEmit; exit 0

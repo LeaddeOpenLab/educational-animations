@@ -1,0 +1,406 @@
+{
+  "id": "recvw25utMj0nN",
+  "feishu_record_id": "recvw25utMj0nN",
+  "original_name": "Branch Prediction and Misprediction Flush",
+  "standard_name": "Branch Prediction and Misprediction Flush",
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "artifact_version": "v1",
+  "learning_objective": "Trace a wrong not-taken prediction through younger instruction removal, fetch redirection, and preservation of architectural state.",
+  "core_conclusion": "A misprediction discards younger wrong-path work; only instructions on the resolved path may change architectural state.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html"
+    ],
+    "scope": "BEQ comparison and PC-relative target are ISA semantics. The five-stage pipeline, not-taken predictor, EX resolution, and exact recovery cycles are an illustrative microarchitecture, not ISA requirements."
+  },
+  "references": [
+    "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html"
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx",
+    "scenes": [
+      {
+        "id": "predict",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Branch B at 0x100; fall-through A at 0x104; next W at 0x108; target T at 0x110; architectural x5=7 and RAM[0x200]=0.",
+        "initial_state": "B is fetched; branch operands are x1=4 and x2=4. Predictor guesses not taken.",
+        "trigger": "Fetch uses predicted next PC=0x104.",
+        "change": "Move A token into IF behind B, then move W into IF as A reaches ID. Keep target token waiting outside the active pipeline.",
+        "cause": "Fetch uses predicted next PC=0x104.",
+        "result": "Wrong-path instructions are visibly present, but x5 and RAM remain unchanged.",
+        "english_copy": [
+          "Predict not taken",
+          "Fetch 0x104 before the branch resolves"
+        ]
+      },
+      {
+        "id": "resolve",
+        "start_seconds": 5,
+        "end_seconds": 11,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "B=beq x1,x2,+16 in EX; A=addi x5,x0,99 in ID; W=sw x5,0(x6) in IF; x6=0x200.",
+        "initial_state": "Fetch is following 0x104/0x108, but neither A nor W has committed.",
+        "trigger": "The EX comparison evaluates 4 == 4.",
+        "change": "Move operand values into the comparator; calculate resolved target 0x100+0x10=0x110. Display predicted 0x104 next to actual 0x110.",
+        "cause": "The EX comparison evaluates 4 == 4.",
+        "result": "The unequal next-PC values identify precisely which instructions are on the wrong path.",
+        "english_copy": [
+          "4 = 4: branch taken",
+          "Predicted 0x104; actual 0x110"
+        ]
+      },
+      {
+        "id": "flush",
+        "start_seconds": 11,
+        "end_seconds": 18,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Younger tokens A and W; architectural x5=7; RAM[0x200]=0; pending values 99 and store 99.",
+        "initial_state": "A and W occupy ID and IF; B has resolved taken.",
+        "trigger": "Resolution invalidates every younger wrong-path pipeline entry.",
+        "change": "At 12.0s set A/W valid=false, draw a brief killed cross, move their pending data to a discard lane, then remove their tokens entirely by 14.0s. Their destination register and memory cells retain 7 and 0.",
+        "cause": "Resolution invalidates every younger wrong-path pipeline entry.",
+        "result": "Two actual instruction objects and their potential writes disappear. B remains valid; no wrong-path write reaches architectural state.",
+        "english_copy": [
+          "Invalidate younger instructions",
+          "x5 stays 7; RAM stays 0"
+        ]
+      },
+      {
+        "id": "redirect",
+        "start_seconds": 18,
+        "end_seconds": 24,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Fetch PC and target T=addi x5,x0,42 at 0x110; empty pipeline slots left by the flush.",
+        "initial_state": "Wrong-path entries are absent and fetch PC is awaiting recovery.",
+        "trigger": "Select the resolved branch target.",
+        "change": "Move 0x110 into fetch PC and insert T into IF. Advance T through otherwise empty stage slots while the discarded instructions remain absent.",
+        "cause": "Select the resolved branch target.",
+        "result": "Correct-path work visibly replaces discarded work; recovery consumes slots without inventing a fixed universal penalty.",
+        "english_copy": [
+          "Redirect fetch to 0x110",
+          "Refill with the correct path"
+        ]
+      },
+      {
+        "id": "commit",
+        "start_seconds": 24,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "T result 42 in WB; x5 cell; RAM[0x200] cell.",
+        "initial_state": "x5=7 and RAM=0 are still the committed state.",
+        "trigger": "The correct-path instruction reaches the writeback event at 26.0s.",
+        "change": "Transfer T result 42 into x5 and replace its old value only on that event. RAM remains 0 and no 99 token reappears.",
+        "cause": "The correct-path instruction reaches the writeback event at 26.0s.",
+        "result": "x5=42 is traceable to T; the wrong-path arithmetic and store left no architectural effect.",
+        "english_copy": [
+          "Commit the correct result",
+          "Prediction changes work, not program meaning"
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "flush-younger",
+        "scene_id": "flush",
+        "uncertainty": "Killed instructions must leave the active set and must never update their destinations; a FLUSH label or tint alone is insufficient.",
+        "expected_observation": "A and W vanish after invalidation while x5 remains 7 and RAM[0x200] remains 0; later only T writes x5=42."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "flush-boundary",
+        "time_seconds": 12,
+        "reason": "Before/at/after invalidation: preserve B and delete younger valid entries; keep all committed values.",
+        "frame": 360,
+        "sampling_frames": [
+          359,
+          360,
+          361
+        ]
+      },
+      {
+        "id": "empty-wrong-path",
+        "time_seconds": 14,
+        "reason": "A and W must be absent, not merely dimmed.",
+        "frame": 420,
+        "sampling_frames": [
+          419,
+          420,
+          421
+        ]
+      },
+      {
+        "id": "correct-commit",
+        "time_seconds": 26,
+        "reason": "Only T changes x5 to 42.",
+        "frame": 780,
+        "sampling_frames": [
+          779,
+          780,
+          781
+        ]
+      }
+    ],
+    "example": {
+      "branch_pc": "0x100",
+      "offset": 16,
+      "predicted_pc": "0x104",
+      "actual_pc": "0x110",
+      "register_before": 7,
+      "wrong_value": 99,
+      "correct_value": 42,
+      "memory_address": "0x200",
+      "memory_before": 0
+    },
+    "design_audit": {
+      "visualArgument": "Two wrong-path instruction cards and their write payloads are physically discarded while committed cells remain unchanged; a fresh target card later writes 42.",
+      "motion": "Stage progression, simultaneous younger-entry invalidation, discarded payload removal, target refill and single writeback.",
+      "example": "BEQ at 0x100 compares 4 and 4, cancelling addi 99 and a store before target addi 42 commits.",
+      "antiTemplate": "Unlike data forwarding or stalls, this scene deletes instruction identities and payloads rather than delaying or rerouting a retained instruction.",
+      "sceneRationale": "Five scenes separate speculative fetch, branch resolution, actual discard, refill, and allowed writeback; merging discard with writeback would hide preservation of committed state."
+    },
+    "state_model": {
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv11-state.ts",
+      "bindings": {
+        "instructions": "PipelineLanes.instructions is the state-derived valid instruction set; brief killed flags precede actual filtering.",
+        "registers": "RegisterBank.values uses architectural x5; only correct writeback changes it.",
+        "memory": "MemoryWords.words displays state.memory200, unchanged by flushed W.",
+        "payloads": "DataTokens.tokens tracks wrong values into discard and correct value into x5.",
+        "pc": "DataTokens value uses state.fetchPc."
+      },
+      "planned_assertions": [
+        "At 11.9667s A/W still exist; at 12s both valid=false and x5=7/RAM=0.",
+        "By 14s A/W are absent from live instructions and cannot generate a write.",
+        "At 25.9667s x5=7; at 26s x5=42 and memory remains 0."
+      ]
+    },
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T06:55:18.670463+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv11-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv11-state.ts",
+        "source_version": {
+          "state_mtime_ns": 1791528883372246435,
+          "probe_mtime_ns": 1791528883372484603,
+          "state_size": 1103,
+          "probe_size": 682
+        },
+        "source_check": "rv11State(frame) supplies PipelineLanes.instructions; killed entries are excluded from liveIds and absent at frame420; RegisterBank receives state.x5 while MemoryWords receives state.memory200. Probe SSR confirms ADDI99 removed and42 appears only after correct writeback.",
+        "assertion_command": "'/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv11.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv11 PASS: killed identities removed, wrong writes suppressed, target PC and correct writeback bound to SVG",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/b1.log",
+        "applicable_record_ids": [
+          "recvw25utMj0nN"
+        ],
+        "limitations": "Minimal mechanism render binding checked via actual probe SSR; no final-video or teaching approval."
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T07:01:14.708705+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx",
+        "source_version": {
+          "mtime_ns": 1791529212127511915,
+          "size": 4959
+        },
+        "source_check": "Direct state-to-graphic bindings reviewed in final per-topic source; full SCENES SSR checks actual transition output, including removal, CSR transfer, mode token, PTE walk, or device pin geometry. Topic scene bodies compose their own L2/SVG and do not wrap probes.",
+        "assertion_command": "node scripts/assert-rv11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv11 FULL PASS: 5 independent scenes, 900frames, tested real scene state bindings",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/c-source-check.log"
+      }
+    ],
+    "rework": [],
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv11-branch-prediction-and-misprediction-flush.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv11-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+    "reviewed_at": "2026-10-09T07:16:18.883240+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/final-video-review.json",
+      "assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+      "reviewed_at": "2026-10-09T07:16:18.883240+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/final-video-review.json",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "flush-boundary",
+          "times_seconds": [
+            11.966666666666667,
+            12.0,
+            12.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0359.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0360.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0361.png"
+          ],
+          "observation": "Frames359/360/361: ADDI99 and STORE99 are valid before, crossed out at/after; BEQ remains in EX; x5=7 and RAM0 remain unchanged.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "empty-wrong-path",
+          "times_seconds": [
+            13.966666666666667,
+            14.0,
+            14.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0419.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0420.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0421.png"
+          ],
+          "observation": "Frames419/420/421: crossed-out A/W and99 payload visible before; all absent at/after, leaving the preserved branch and architectural cells.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "correct-commit",
+          "times_seconds": [
+            25.966666666666665,
+            26.0,
+            26.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0779.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0780.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0781.png"
+          ],
+          "observation": "Frames779/780/781: target ADDI42 at WB before; then its instruction disappears and x5 changes7→42, while RAM0 stays0.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.00→8.00 s overview shows younger ADDI99 and STORE99 behind BEQ4,4; the comparison actually displays4=4 and target0x110 versus fetch0x104.",
+        "11.967→12.000 s the two younger instruction cards gain invalidation crosses;13.967→14.000 s both cards and their99 payload disappear entirely while branch remains and x5=7/RAM0x200=0 remain intact.",
+        "20.50 s a fresh ADDI42 occupies the refilled pipeline, fetchPC=0x110;25.967→26.000 s its WB card disappears as x5 changes7→42 while RAM remains0.",
+        "Overview contains materially different instruction sets and architectural values across phases. Small-player layout and sampled numeric labels are readable without text collisions."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "Killed instructions must leave the active set and must never update their destinations; a FLUSH label or tint alone is insufficient.",
+  "requirement_prompt": "Branch Prediction and Misprediction Flush; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Branch Prediction and Misprediction Flush: Flush Wrong Work",
+  "title": "Branch Prediction and Misprediction Flush: Flush Wrong Work",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Branch Prediction and Misprediction Flush: predict a BEQ at 0x100 as not taken and fetch younger ADDI 99 and STORE 99, then resolve 4=4 as taken with target 0x110; invalidate and remove both younger instruction cards and their 99 payload while x5=7 and RAM at 0x200 remains zero, refill from the correct target, and allow only target ADDI 42 to change x5 from 7 to 42 while the discarded store never writes memory.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel brings comparison values together over 60 frames and carries the correct writeback value over 45 frames; cross out younger cards at frame 360 and remove their cards and payloads at 420; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.836722+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/cover-03.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/branch-prediction-and-misprediction-flush-geometry.json"
+    ],
+    "observations": [
+      "Wrong-pathADDI99 crossed out; targetADDI42 reachesx5.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

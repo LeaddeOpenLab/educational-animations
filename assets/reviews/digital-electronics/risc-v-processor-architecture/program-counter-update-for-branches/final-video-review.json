@@ -1,0 +1,75 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+  "reviewed_at": "2026-10-09T07:15:49.874957+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches.mp4",
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-sheet.jpg"
+  ],
+  "observations": [
+    "4.00s shows branchPC0x100 copied into +4 and+16 lanes, with separate resulting0x104 and0x110 cells. At10.00s registers7/7 and selected-next-PC0x110 coexist with storedPC0x100.",
+    "14.967→15.000s: PC changes0x100→0x110 and the FETCH row moves directly from0x100 to0x110, leaving0x104/0x108 unfetched. At22.967→23.000s the unequal7/9 replay changesPC0x100→0x104 and selects the corresponding FETCH row.",
+    "At28.167s the two actual destination addresses appear side by side. The overview has distinct arithmetic, comparison, fetch-selection and replay views; numeric cells and cursor relocation explain the mechanism even without the headings. No observed text collisions."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "taken-update",
+      "times_seconds": [
+        14.966666666666667,
+        15.0,
+        15.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0449.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0450.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0451.png"
+      ],
+      "observation": "At14.9667s PC/FETCH are0x100 while selected input is0x110. At15.0000s and15.0333s both PC and selected FETCH row are0x110. The intermediate fall-through rows do not become current.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "not-taken-update",
+      "times_seconds": [
+        22.966666666666665,
+        23.0,
+        23.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0689.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0690.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0691.png"
+      ],
+      "observation": "At22.9667s registers show7 and9, PC/FETCH remain0x100 and fall-through input is0x104. At23.0000s/23.0333s PC andFETCH are0x104.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "condition": 1,
+      "triggered": false,
+      "reason": "The numerical candidates, selected input and moving FETCH location identify branch address selection without headings."
+    },
+    {
+      "condition": 2,
+      "triggered": false,
+      "reason": "Actual PC values and memory selection change at the two branch outcomes; motion is not merely a line or color."
+    },
+    {
+      "condition": 3,
+      "triggered": false,
+      "reason": "Both taken and not-taken results are shown as changed storedPC and fetched row, rather than labels announcing a result."
+    }
+  ],
+  "checks": {
+    "teaching_correctness": true,
+    "mechanism_visible": true,
+    "pacing": true,
+    "layout": true,
+    "readability": true,
+    "version_match": true
+  },
+  "issues": [],
+  "cross_topic_comparison": "Compared actual overviews ofrv06–10: branch cursor selection, opposite memory data directions, latch storage, early forwarding and one-cycle hold/bubble have distinct visible mechanisms."
+}

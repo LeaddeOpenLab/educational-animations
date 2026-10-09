@@ -1,0 +1,657 @@
+{
+  "id": "recvw25utMJbgr",
+  "record_id": "recvw25utMJbgr",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Single-Cycle Datapath Instruction Flow",
+  "standard_name": "Single-Cycle Datapath Instruction Flow",
+  "Name": "Single-Cycle Datapath Instruction Flow",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Follow one load through an illustrative single-cycle datapath, then commit the loaded register value and next PC together at the sole completion edge.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "references": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "LW architectural semantics in an explicitly illustrative single-cycle implementation; stage names are conceptual propagation phases within one cycle, not a pipeline."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "verified": "2026-10-09",
+        "basis": "Exact instruction opcode, funct3 and funct7 encodings."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "LW architectural semantics in an explicitly illustrative single-cycle implementation; stage names are conceptual propagation phases within one cycle, not a pipeline."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "scope": "Opcode fields for numeric examples"
+      }
+    ],
+    "scope": "LW architectural semantics in an explicitly illustrative single-cycle implementation; stage names are conceptual propagation phases within one cycle, not a pipeline."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "fetch",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "PC0x200",
+          "instruction memory0x200→0x00832283",
+          "LW x5,8(x6)",
+          "x5=0"
+        ],
+        "initial_state": "PC0x200 and x5=0 are architectural state.",
+        "cause": "Instruction fetch within the current cycle.",
+        "trigger": "Instruction fetch within the current cycle.",
+        "change": "Move PC address to the instruction-memory row and copy the selected instruction word into decode.",
+        "result": "The current instruction is LW x5,8(x6); architectural state is unchanged.",
+        "english_copy": [
+          "One cycle, one load.",
+          "LW x5, 8(x6)"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "readbase",
+        "start_seconds": 5,
+        "end_seconds": 10,
+        "objects": [
+          "x6=0x1000",
+          "imm8",
+          "rdx5",
+          "same cycle progress bar"
+        ],
+        "initial_state": "Decoded load is ready; address output is empty.",
+        "cause": "Read base and generate offset.",
+        "trigger": "Read base and generate offset.",
+        "change": "Copy x6 value into the address adder and route signed8 alongside it.",
+        "result": "Base0x1000 and offset8 are visible simultaneously.",
+        "english_copy": [
+          "Read the base and offset.",
+          "Still the same clock cycle."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "address",
+        "start_seconds": 10,
+        "end_seconds": 15,
+        "objects": [
+          "base0x1000",
+          "offset8",
+          "effective address0x1008"
+        ],
+        "initial_state": "Adder inputs are present.",
+        "cause": "Combinational address addition settles at12s.",
+        "trigger": "Combinational address addition settles at12s.",
+        "change": "Merge base and offset tokens into the effective address0x1008 and send it toward data memory.",
+        "result": "Address0x1008 selects a word; it is not the value to write into x5.",
+        "english_copy": [
+          "0x1000 + 8 = 0x1008"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "memory",
+        "start_seconds": 15,
+        "end_seconds": 20,
+        "objects": [
+          "data words0x1000→7,0x1004→19,0x1008→42",
+          "selected row",
+          "read data42"
+        ],
+        "initial_state": "Memory has multiple unchanged words.",
+        "cause": "Effective address selects0x1008 at17s.",
+        "trigger": "Effective address selects0x1008 at17s.",
+        "change": "Land address token at the matching row and copy42 from that row to memory read output.",
+        "result": "Read data becomes42; memory keeps42 stored.",
+        "english_copy": [
+          "Read the selected memory word.",
+          "Data = 42"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "writeback",
+        "start_seconds": 20,
+        "end_seconds": 25,
+        "objects": [
+          "pendingx5=42",
+          "storedx5=0",
+          "nextPC0x204",
+          "storedPC0x200"
+        ],
+        "initial_state": "Read data42 is available, architectural state is still old.",
+        "cause": "Writeback mux chooses memory data.",
+        "trigger": "Writeback mux chooses memory data.",
+        "change": "Move42 to pending register input and independently compute PC+4=0x204; show both pending values beside unchanged storage.",
+        "result": "Both next-state values are ready before the edge.",
+        "english_copy": [
+          "Prepare both next-state values.",
+          "x5 = 0 and PC = 0x200 remain stored."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "commit",
+        "start_seconds": 25,
+        "end_seconds": 30,
+        "objects": [
+          "clock edge",
+          "x5 old0/new42",
+          "PC old0x200/new0x204",
+          "memory unchanged"
+        ],
+        "initial_state": "Pendingx5=42 andPC=0x204 wait before the edge.",
+        "cause": "Single completion edge at27s.",
+        "trigger": "Single completion edge at27s.",
+        "change": "Replace x5 and PC at the same frame, then remove pending tokens; keep memory unchanged.",
+        "result": "One instruction completes: x5=42 andPC=0x204.",
+        "english_copy": [
+          "One edge commits both updates.",
+          "x5 ← 42   PC ← 0x204"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      }
+    ],
+    "scene_rationale": "Six conceptual views are needed to separate instruction selection, operand read, address arithmetic, memory value selection, pending writeback, and atomic architectural update. The continuous one-cycle indicator prevents confusing these teaching steps with six clock cycles.",
+    "critical_processes": [
+      {
+        "id": "selected-load",
+        "scene_id": "memory",
+        "uncertainty": "A computed address must select a concrete word.",
+        "expected_observation": "0x1008 row copies42 into read output."
+      },
+      {
+        "id": "single-edge-commit",
+        "scene_id": "commit",
+        "uncertainty": "Multiple teaching stages must not imply multiple clock cycles or premature register updates.",
+        "expected_observation": "Only the final edge changesx5 andPC together."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "address-is-not-data",
+        "time_seconds": 12,
+        "reason": "Distinguish address0x1008 from loaded data42."
+      },
+      {
+        "id": "selected-word",
+        "time_seconds": 17,
+        "reason": "Copy actual selected row42, not another word."
+      },
+      {
+        "id": "one-edge-commit",
+        "time_seconds": 27,
+        "reason": "Inspect previous/exact/next frame for simultaneous PC andrd update."
+      }
+    ],
+    "state_model": {
+      "function": "rv05State(frame)",
+      "inputs": {
+        "pc": 512,
+        "instruction": 8594051,
+        "rs1": 6,
+        "base": 4096,
+        "offset": 8,
+        "effectiveAddress": 4104,
+        "rd": 5,
+        "oldRdValue": 0,
+        "loadedValue": 42,
+        "nextPc": 516,
+        "memory": [
+          {
+            "address": "0x1000",
+            "value": 7
+          },
+          {
+            "address": "0x1004",
+            "value": 19
+          },
+          {
+            "address": "0x1008",
+            "value": 42
+          }
+        ],
+        "addressSecond": 12,
+        "readSecond": 17,
+        "commitSecond": 27,
+        "implementation": "Illustrative single-cycle datapath with combinational memory paths; no caches, wait states, faults or pipelining."
+      },
+      "planned_bindings": [
+        "pc state -> visible PC token and instruction-memory address",
+        "base+signed offset -> address token passed to MemoryWords selectedAddress",
+        "memory lookup ->42 DataToken traveling to pending write input",
+        "commit boolean -> simultaneous RegisterBank x5 andPC changes",
+        "cycle progress -> one continuous cycle bar with exactly one completion edge"
+      ],
+      "invariants": [
+        "Effective address is0x1008; loaded data is42.",
+        "x5 stays0 andPC stays0x200 before27s.",
+        "At27s x5=42 andPC=0x204 simultaneously.",
+        "Memory values never change during this load."
+      ],
+      "b1_samples_seconds": [
+        0,
+        11.966667,
+        12,
+        12.033333,
+        16.966667,
+        17,
+        17.033333,
+        26.966667,
+        27,
+        27.033333,
+        29
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv05-state.ts",
+      "bindings": [
+        "pc state -> visible PC token and instruction-memory address",
+        "base+signed offset -> address token passed to MemoryWords selectedAddress",
+        "memory lookup ->42 DataToken traveling to pending write input",
+        "commit boolean -> simultaneous RegisterBank x5 andPC changes",
+        "cycle progress -> one continuous cycle bar with exactly one completion edge"
+      ]
+    },
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T06:55:53.874281+00:00",
+        "reviewer": "rv_design_01_05",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv05.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "assertion_log": "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/b1.log",
+        "results": {
+          "checks": 73,
+          "status": "PASS",
+          "record_specific": "address359/360; selected-word509/510; load42 transfer; simultaneous pc/rd809/810/811 PASS",
+          "render_binding": "SSR comparison confirms corresponding SVG changes."
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Read frame-to-state-to-props chain and execute SSR checks from the same mechanism source.",
+          "basis": "rv05State performs real memory lookup for base+offset. Selected address drives MemoryWords; loaded42 moves through dataToken; committed boolean drives both actual RegisterBank x5 and PC token on the same frame810."
+        },
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv05-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv05-state.ts",
+        "source_version": {
+          "mtime_ns": 1791528851194133733,
+          "size": 613
+        },
+        "state_version": {
+          "mtime_ns": 1791528851192141764,
+          "size": 1103
+        },
+        "applicable_record_ids": [
+          "recvw25utMJbgr"
+        ],
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes full implementation of this mechanism only. Does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T07:04:18.290781+00:00",
+        "reviewer": "rv_design_01_05",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx",
+        "source_version": {
+          "mtime_ns": 1791529376424184866,
+          "size": 6639
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Actual state drives selected memory address, copied42 payload, pending storage and both x5/PC values at frame810; one continuous cycle bar accompanies all conceptual views.",
+          "method": "Inspect full scene composition and state-driven geometry/data; execute actual full SCENES through SSR at each risk previous/exact/next frame."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-full-rv01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_binding_checks": 48,
+          "full_binding_status": "PASS",
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "mechanism_state_unchanged": true,
+          "quality_warning": "Compact source below180 non-comment lines. Independent topic scenes include the complete mechanism; no padding, probe wrapping or shared scene factory. Final video teaching review remains required."
+        },
+        "applicable_record_ids": [
+          "recvw25utMJbgr"
+        ],
+        "scope": "Technical source gate only; not a final-video teaching decision."
+      }
+    ],
+    "previews": [],
+    "design_audit": {
+      "visualArgument": "Follow one load through an illustrative single-cycle datapath, then commit the loaded register value and next PC together at the sole completion edge.",
+      "motion": "Move PC address to the instruction-memory row and copy the selected instruction word into decode. Copy x6 value into the address adder and route signed8 alongside it. Merge base and offset tokens into the effective address0x1008 and send it toward data memory. Land address token at the matching row and copy42 from that row to memory read output. Move42 to pending register input and independently compute PC+4=0x204; show both pending values beside unchanged storage. Replace x5 and PC at the same frame, then remove pending tokens; keep memory unchanged.",
+      "example": {
+        "pc": 512,
+        "instruction": 8594051,
+        "rs1": 6,
+        "base": 4096,
+        "offset": 8,
+        "effectiveAddress": 4104,
+        "rd": 5,
+        "oldRdValue": 0,
+        "loadedValue": 42,
+        "nextPc": 516,
+        "memory": [
+          {
+            "address": "0x1000",
+            "value": 7
+          },
+          {
+            "address": "0x1004",
+            "value": 19
+          },
+          {
+            "address": "0x1008",
+            "value": 42
+          }
+        ],
+        "addressSecond": 12,
+        "readSecond": 17,
+        "commitSecond": 27,
+        "implementation": "Illustrative single-cycle datapath with combinational memory paths; no caches, wait states, faults or pipelining."
+      },
+      "antiTemplate": "LW architectural semantics in an explicitly illustrative single-cycle implementation; stage names are conceptual propagation phases within one cycle, not a pipeline.",
+      "sceneRationale": "Six conceptual views are needed to separate instruction selection, operand read, address arithmetic, memory value selection, pending writeback, and atomic architectural update. The continuous one-cycle indicator prevents confusing these teaching steps with six clock cycles."
+    },
+    "implementation_notes": {
+      "l2": [
+        "RiscBoard",
+        "BitFields",
+        "DataTokens",
+        "RegisterBank",
+        "MemoryWords"
+      ],
+      "coordinate_space": "SVG viewBox 0 0 960 600; group transforms move field copies and actual payload tokens.",
+      "layout": "Split layout A. Keep diagram labels short; instruction bit ranges belong inside board.",
+      "minimal_l2_changes": "None; current primitives expose actual state values and positions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      100,
+      245,
+      405,
+      555,
+      690,
+      850
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv05-state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv05-single-cycle-datapath-instruction-flow.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.456605+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+      "reviewed_at": "2026-10-09T07:15:07.456605+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "address-is-not-data",
+          "times_seconds": [
+            11.966666666666667,
+            12.0,
+            12.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0359.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0360.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0361.png"
+          ],
+          "observation": "11.9667s base0x1000 andoffset8 feed a blankeffective-address slot;12/12.0333s thatslot becomes0x1008, with no loaded42 orregisterwrite implied."
+        },
+        {
+          "risk_id": "selected-word",
+          "times_seconds": [
+            16.966666666666665,
+            17.0,
+            17.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0509.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0510.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0511.png"
+          ],
+          "observation": "16.9667s outputblank;17/17.0333s selected0x1008row retains42 and copiedmemorydata becomes42. Other rowsremain7/19."
+        },
+        {
+          "risk_id": "one-edge-commit",
+          "times_seconds": [
+            26.966666666666665,
+            27.0,
+            27.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0809.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0810.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0811.png"
+          ],
+          "observation": "26.9667s showsstoredx5=0/PC0x200;27/27.0333s bothread42/0x204, whilex6 remains0x1000. Single-cycleprogress/clockedge is consistent with simultaneous architecturalupdates."
+        }
+      ],
+      "observations": [
+        "Viewed v1 overview and nine risk panels. The same-cycle indicator advances across fetch, base/offset, address, memory and pending-write diagrams.13.5s effective address0x1008 is separate from latermemorydata42.",
+        "At16.9667s memoryrow0x1008 contains42 but output isblank;17/17.0333s that row is selected andoutput42 appears while memory stillretains42.23s shows pendingx5=42 andnextPC0x204 beside storedx5=0/PC0x200.",
+        "At26.9667s storedx5=0 andPC0x200;27/27.0333s both change tox5=42 andPC0x204 at the depicted single edge, withx6=0x1000 unchanged. No observed layout collision; source/address/data/architectural-state roles are visually distinct."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publish": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "artifact_version": "v1",
+  "learning_objective": "Follow one load through an illustrative single-cycle datapath, then commit the loaded register value and next PC together at the sole completion edge.",
+  "core_conclusion": "One instruction completes: x5=42 andPC=0x204.",
+  "feishu_record_id": "recvw25utMJbgr",
+  "requirement_prompt": "Single-Cycle Datapath Instruction Flow; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Single-Cycle Datapath Instruction Flow: Commit a Load",
+  "title": "Single-Cycle Datapath Instruction Flow: Commit a Load",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Single-Cycle Datapath Instruction Flow: follow LW x5,8(x6) from instruction fetch at PC 0x200 through base x6=0x1000, effective address 0x1008, and a nondestructive read of memory value 42; distinguish ready x5=42 and next PC=0x204 from stored x5=0 and PC=0x200, then change both stored values together at the single completion edge at 27 seconds while preserving memory and the base register.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel sends the fetch address over 70 frames and copies the base register over 75 frames; progress one continuous cycle rail and change stored x5 and PC together at frame 810; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.456605+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/cover-01.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/single-cycle-datapath-instruction-flow-geometry.json"
+    ],
+    "observations": [
+      "LW effective0x1008 returns42 and one edge commitsx5 andPC0x204.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  },
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "status": "ready",
+  "video": "assets/videos/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.mp4",
+  "cover": "assets/covers/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.jpg",
+  "cover_image": "assets/covers/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/d705f18d-58b0-455b-84bd-b5e75723c89e",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.md",
+  "tags": [
+    "recvw25utMJbgr",
+    "risc-v-processor-architecture",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "docs.riscv.org",
+      "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+      "scope": "LW architectural semantics in an explicitly illustrative single-cycle implementation; stage names are conceptual propagation phases within one cycle, not a pipeline."
+    },
+    {
+      "title": "github.com",
+      "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+      "scope": "Opcode fields for numeric examples"
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/risc-v-processor-architecture.md",
+  "feishu": {
+    "record_id": "recvw25utMJbgr",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T15:53:07.979882+08:00",
+    "selection_fields": {
+      "Name": "Single-Cycle Datapath Instruction Flow",
+      "Discipline": "Digital Electronics",
+      "Course": "RISC-V Processor Architecture"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25utMJbgr",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T15:53:07.979882+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "v1",
+      "page_status": "pending",
+      "attachment": {
+        "video_version": "risc-v-20261009-v1",
+        "video_bytes": 2518016,
+        "issue_number": 123,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+        "comment_id": 6076829252,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076829252",
+        "attachment_url": "https://github.com/user-attachments/assets/d705f18d-58b0-455b-84bd-b5e75723c89e",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/d705f18d-58b0-455b-84bd-b5e75723c89e",
+      "issue_number": 123,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

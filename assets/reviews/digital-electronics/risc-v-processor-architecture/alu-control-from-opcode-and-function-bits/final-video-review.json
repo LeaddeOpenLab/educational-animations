@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+  "reviewed_at": "2026-10-09T07:15:07.456141+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.mp4",
+  "video_version": {
+    "size": 1771516,
+    "mtime_ns": 1791529554820114488
+  },
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-sheet.jpg"
+  ],
+  "observations": [
+    "Viewed v1 overview and nine risk panels. ADD uses12blue+5yellow unit squares with fixed operands12/5. At4s the joined set corresponds to result17.",
+    "At10.9667s funct7=0000000 and17units are visible. At11s funct7 becomes0100000 with subtraction12−5=7; the new12-unit example marks5red units, which are separated below the7blue survivors by13s.",
+    "At18.9667s XOR result cells areblank;19/19.0333s funct3=100,funct7=0000000 and aligned1100 XOR0101 produces1001.22s and27.67s retain correctresult9 and comparison17/7/9. Clear arithmetic-versus-bitwise visual distinction; no observed text collision."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "add-evaluate",
+      "times_seconds": [
+        3.966666666666667,
+        4.0,
+        4.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0119.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0120.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0121.png"
+      ],
+      "observation": "3.9667s shows12blue+5yellow units with result—;4/4.0333s result17 appears beneath the joined17-unit set."
+    },
+    {
+      "risk_id": "sub-select",
+      "times_seconds": [
+        10.966666666666667,
+        11.0,
+        11.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0329.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0330.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0331.png"
+      ],
+      "observation": "10.9667s ADD function bits and17-unit state;11/11.0333s funct7 changes0100000, expression changes12−5=7 and5of12units turnred before moving down.13s overview confirms only7blue units remain in upperrow."
+    },
+    {
+      "risk_id": "xor-evaluate",
+      "times_seconds": [
+        18.966666666666665,
+        19.0,
+        19.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0569.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0570.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0571.png"
+      ],
+      "observation": "18.9667s funct3=000/funct7=0100000 with emptyXOR output.19/19.0333s funct3=100/funct7=0000000 and outputbits1001 align with1100 and0101."
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Countable unit joins/removals and bit-column outputs distinguish the operations without headings."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Subtraction physically separates5units and XOR populates actual resultbits; controlfields and numerical outputs change together."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "Results are supported by counted objects or bit comparisons rather than only announcingADD/SUB/XOR."
+    }
+  ],
+  "course_comparison": "Viewedrv01–05 together: encodingfielddecoding,registerportstorage,immediatebitassembly,ALUcount/bitoperations,andloadnextstate use distinct main diagrams and stateprocesses; no title-only substitution observed.",
+  "layout": "No visually observed body-text collision in inspectedoverview/riskframes; authoritative full-batch geometry gate is separately recorded bymain controller."
+}

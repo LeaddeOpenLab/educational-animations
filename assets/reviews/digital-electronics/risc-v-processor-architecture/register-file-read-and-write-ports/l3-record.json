@@ -1,0 +1,565 @@
+{
+  "id": "rv02-register-file-read-and-write-ports",
+  "record_id": "recvw25utMYmGk",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Register File Read and Write Ports",
+  "standard_name": "Register File Read and Write Ports",
+  "Name": "Register File Read and Write Ports",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Show two selected register values leaving independent read ports and a single destination changing only at the write edge, including x0 write suppression.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "references": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "Architectural x0 semantics are specified; port count and synchronous write timing are explicitly a teaching implementation. This lesson changes storage and duplicates read values rather than decoding instruction bits."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "verified": "2026-10-09",
+        "basis": "Exact instruction opcode, funct3 and funct7 encodings."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "Architectural x0 semantics are specified; port count and synchronous write timing are explicitly a teaching implementation. This lesson changes storage and duplicates read values rather than decoding instruction bits."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "scope": "Opcode fields for numeric examples"
+      }
+    ],
+    "scope": "Architectural x0 semantics are specified; port count and synchronous write timing are explicitly a teaching implementation. This lesson changes storage and duplicates read values rather than decoding instruction bits."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "select",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "register rows x0=0,x5=0,x6=9,x7=4",
+          "readA address6",
+          "readB address7"
+        ],
+        "initial_state": "Read outputs are empty; all register values visible.",
+        "cause": "Apply independent read addresses6 and7.",
+        "trigger": "Apply independent read addresses6 and7.",
+        "change": "Selectors land on different rows; copies of9 and4 appear at their source row locations.",
+        "result": "Both selected values are available concurrently without removing stored values.",
+        "english_copy": [
+          "Two read addresses select two values.",
+          "Illustrative 2-read / 1-write file"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "read",
+        "start_seconds": 5,
+        "end_seconds": 11,
+        "objects": [
+          "payload9",
+          "payload4",
+          "readA/readB ports",
+          "register rows"
+        ],
+        "initial_state": "Two copies sit beside selected cells.",
+        "cause": "Read combinational paths settle.",
+        "trigger": "Read combinational paths settle.",
+        "change": "Move value9 to readA and4 to readB along separate tracks while source cells stay9 and4.",
+        "result": "The two output ports contain9 and4 at the same time.",
+        "english_copy": [
+          "Read A = 9",
+          "Read B = 4"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "pending",
+        "start_seconds": 11,
+        "end_seconds": 18,
+        "objects": [
+          "read values9 and4",
+          "sum13",
+          "write port rd5 data13",
+          "x5 stored0"
+        ],
+        "initial_state": "x5 remains0.",
+        "cause": "Compute9+4 and assert write enable.",
+        "trigger": "Compute9+4 and assert write enable.",
+        "change": "Combine read payloads into13 and move it to the pending write port; do not change the x5 row yet.",
+        "result": "Write data13 is ready but x5 is still0 before the edge.",
+        "english_copy": [
+          "9 + 4 = 13",
+          "Ready to write is not yet stored."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "edge",
+        "start_seconds": 18,
+        "end_seconds": 24,
+        "objects": [
+          "clock edge",
+          "x5 row",
+          "write data13"
+        ],
+        "initial_state": "Pending data13 waits outside x5.",
+        "cause": "Rising write edge at20s.",
+        "trigger": "Rising write edge at20s.",
+        "change": "Move13 into x5 and discretely replace stored0 with13 on the edge; keep other rows fixed.",
+        "result": "Exactly one stored register changes at the write edge.",
+        "english_copy": [
+          "At the clock edge: x5 ← 13"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "zero",
+        "start_seconds": 24,
+        "end_seconds": 30,
+        "objects": [
+          "write targetx0 data13",
+          "x0 stored0",
+          "discarded token"
+        ],
+        "initial_state": "x5 holds13 and x0 holds0.",
+        "cause": "Attempt an enabled write to x0 at27s.",
+        "trigger": "Attempt an enabled write to x0 at27s.",
+        "change": "Route the payload to x0, terminate the write token at a discard marker, and leave x0 visibly0.",
+        "result": "x0 remains zero after an attempted write; x5 retains13.",
+        "english_copy": [
+          "Writes to x0 are discarded.",
+          "Reading x0 still returns zero."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      }
+    ],
+    "scene_rationale": "Five scenes distinguish address selection, concurrent nondestructive reads, pending write data, edge-triggered storage, and the architectural x0 exception. The separation makes readiness versus commitment visible.",
+    "critical_processes": [
+      {
+        "id": "dual-read-copy",
+        "scene_id": "read",
+        "uncertainty": "Reads copy data without consuming register contents.",
+        "expected_observation": "Read ports show9,4 and source rows keep9,4."
+      },
+      {
+        "id": "edge-write",
+        "scene_id": "edge",
+        "uncertainty": "Storage update occurs at exactly one discrete edge.",
+        "expected_observation": "x5 switches0→13 at20s."
+      },
+      {
+        "id": "x0-invariant",
+        "scene_id": "zero",
+        "uncertainty": "Write selection cannot bypass x0 rule.",
+        "expected_observation": "Attempted13 is discarded while row remains0."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "pending-is-not-stored",
+        "time_seconds": 16,
+        "reason": "Pending13 must coexist with storedx5=0."
+      },
+      {
+        "id": "write-edge",
+        "time_seconds": 20,
+        "reason": "Only x5 changes at the edge."
+      },
+      {
+        "id": "zero-write",
+        "time_seconds": 27,
+        "reason": "x0 must not briefly display13."
+      }
+    ],
+    "state_model": {
+      "function": "rv02State(frame)",
+      "inputs": {
+        "registers": [
+          {
+            "index": 0,
+            "value": 0
+          },
+          {
+            "index": 5,
+            "value": 0
+          },
+          {
+            "index": 6,
+            "value": 9
+          },
+          {
+            "index": 7,
+            "value": 4
+          }
+        ],
+        "readIndices": [
+          6,
+          7
+        ],
+        "writeIndex": 5,
+        "sum": 13,
+        "writeSecond": 20,
+        "zeroAttemptSecond": 27,
+        "implementation": "Illustrative two asynchronous reads and one clocked write; ISA does not mandate ports."
+      },
+      "planned_bindings": [
+        "register values -> RegisterBank values",
+        "readIndices -> row selections and two DataTokens copied from actual register values",
+        "write-edge boolean -> x5 value replacement",
+        "x0 attempt -> discarded token path and invariant zero"
+      ],
+      "invariants": [
+        "Read operations preserve stored x6=9 andx7=4.",
+        "x5=0 before20s; x5=13 from20s onward.",
+        "x0=0 for every frame including the attempted write."
+      ],
+      "b1_samples_seconds": [
+        0,
+        15.966667,
+        16,
+        16.033333,
+        19.966667,
+        20,
+        20.033333,
+        26.966667,
+        27,
+        27.033333,
+        29
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv02-state.ts",
+      "bindings": [
+        "register values -> RegisterBank values",
+        "readIndices -> row selections and two DataTokens copied from actual register values",
+        "write-edge boolean -> x5 value replacement",
+        "x0 attempt -> discarded token path and invariant zero"
+      ]
+    },
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T06:55:53.871022+00:00",
+        "reviewer": "rv_design_01_05",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv02.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "assertion_log": "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/b1.log",
+        "results": {
+          "checks": 80,
+          "status": "PASS",
+          "record_specific": "dual-read copies; pending479/480; write599/600/601; x0 discard809/810/811 PASS",
+          "render_binding": "SSR comparison confirms corresponding SVG changes."
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Read frame-to-state-to-props chain and execute SSR checks from the same mechanism source.",
+          "basis": "rv02State drives RegisterBank values/readIndices/writeIndex. Two actual operand values move via s.tokens; x5 storage changes only at frame600. The attempted x0 token is removed at810 while the actual row remains0."
+        },
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv02-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv02-state.ts",
+        "source_version": {
+          "mtime_ns": 1791528851180505281,
+          "size": 606
+        },
+        "state_version": {
+          "mtime_ns": 1791528851177852141,
+          "size": 852
+        },
+        "applicable_record_ids": [
+          "recvw25utMYmGk"
+        ],
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes full implementation of this mechanism only. Does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T07:04:18.286866+00:00",
+        "reviewer": "rv_design_01_05",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx",
+        "source_version": {
+          "mtime_ns": 1791529102292857207,
+          "size": 5576
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Actual frame state drives read copies, pending write data, x5 row at frame600 and x0 discard at810; scenes distinguish pending from stored values.",
+          "method": "Inspect full scene composition and state-driven geometry/data; execute actual full SCENES through SSR at each risk previous/exact/next frame."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-full-rv01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_binding_checks": 48,
+          "full_binding_status": "PASS",
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "mechanism_state_unchanged": true,
+          "quality_warning": "Compact source below180 non-comment lines. Independent topic scenes include the complete mechanism; no padding, probe wrapping or shared scene factory. Final video teaching review remains required."
+        },
+        "applicable_record_ids": [
+          "recvw25utMYmGk"
+        ],
+        "scope": "Technical source gate only; not a final-video teaching decision."
+      }
+    ],
+    "previews": [],
+    "design_audit": {
+      "visualArgument": "Show two selected register values leaving independent read ports and a single destination changing only at the write edge, including x0 write suppression.",
+      "motion": "Selectors land on different rows; copies of9 and4 appear at their source row locations. Move value9 to readA and4 to readB along separate tracks while source cells stay9 and4. Combine read payloads into13 and move it to the pending write port; do not change the x5 row yet. Move13 into x5 and discretely replace stored0 with13 on the edge; keep other rows fixed. Route the payload to x0, terminate the write token at a discard marker, and leave x0 visibly0.",
+      "example": {
+        "registers": [
+          {
+            "index": 0,
+            "value": 0
+          },
+          {
+            "index": 5,
+            "value": 0
+          },
+          {
+            "index": 6,
+            "value": 9
+          },
+          {
+            "index": 7,
+            "value": 4
+          }
+        ],
+        "readIndices": [
+          6,
+          7
+        ],
+        "writeIndex": 5,
+        "sum": 13,
+        "writeSecond": 20,
+        "zeroAttemptSecond": 27,
+        "implementation": "Illustrative two asynchronous reads and one clocked write; ISA does not mandate ports."
+      },
+      "antiTemplate": "Architectural x0 semantics are specified; port count and synchronous write timing are explicitly a teaching implementation. This lesson changes storage and duplicates read values rather than decoding instruction bits.",
+      "sceneRationale": "Five scenes distinguish address selection, concurrent nondestructive reads, pending write data, edge-triggered storage, and the architectural x0 exception. The separation makes readiness versus commitment visible."
+    },
+    "implementation_notes": {
+      "l2": [
+        "RiscBoard",
+        "BitFields",
+        "DataTokens",
+        "RegisterBank",
+        "MemoryWords"
+      ],
+      "coordinate_space": "SVG viewBox 0 0 960 600; group transforms move field copies and actual payload tokens.",
+      "layout": "Split layout A. Keep diagram labels short; instruction bit ranges belong inside board.",
+      "minimal_l2_changes": "None; current primitives expose actual state values and positions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      100,
+      275,
+      495,
+      640,
+      780,
+      850
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv02-register-file-read-and-write-ports.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv02-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.454311+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+      "reviewed_at": "2026-10-09T07:15:07.454311+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "pending-is-not-stored",
+          "times_seconds": [
+            15.966666666666667,
+            16.0,
+            16.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0479.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0480.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0481.png"
+          ],
+          "observation": "15.9667s pending field— becomes13 at16s while bothx5 row and storedx5 statement stay0 through16.0333s."
+        },
+        {
+          "risk_id": "write-edge",
+          "times_seconds": [
+            19.966666666666665,
+            20.0,
+            20.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0599.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0600.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0601.png"
+          ],
+          "observation": "19.9667s showsx5=0 and separatewrite13;20/20.0333s showsx5=13 and no waiting token. x0=0,x6=9,x7=4 remain."
+        },
+        {
+          "risk_id": "zero-write",
+          "times_seconds": [
+            26.966666666666665,
+            27.0,
+            27.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0809.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0810.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0811.png"
+          ],
+          "observation": "26.9667s shows13 outside x0;27/27.0333s that token is removed and a discard cross appears, whilex0 stays0 andx5 stays13."
+        }
+      ],
+      "observations": [
+        "Viewed v1 overview and nine risk panels. The register file containsx6=9/x7=4;9.17s shows independent read output copies9/4 while those stored rows retain9/4. This is recognizably register storage and port data even without title.",
+        "15.9667s pendingwrite is empty;16/16.0333s it contains13 while storedx5 remains0. At19.9667s data13 waits outside;20/20.0333s x5 becomes13 with the clock marker on its high side, other rows remain unchanged.",
+        "26.9667s an attempted13 token reachesx0;27/27.0333s it disappears into the discard cross, x0 remains0 and x5 remains13. No body-text collision observed; intentional payload nearx0 is a data transfer."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publish": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "artifact_version": "v1",
+  "learning_objective": "Show two selected register values leaving independent read ports and a single destination changing only at the write edge, including x0 write suppression.",
+  "core_conclusion": "x0 remains zero after an attempted write; x5 retains13.",
+  "feishu_record_id": "recvw25utMYmGk",
+  "requirement_prompt": "Register File Read and Write Ports; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Register File Read and Write Ports: Keep x0 Zero",
+  "title": "Register File Read and Write Ports: Keep x0 Zero",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Register File Read and Write Ports: select stored x6=9 and x7=4 with two independent read addresses and copy both values into output ports without removing them; produce pending write data 13 while stored x5 remains zero, update only x5 to 13 at the rising edge at 20 seconds, then discard an attempted write of 13 to x0 at 27 seconds while x0 stays zero and x5 retains 13.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #fbbf24 glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel copies the two read values and approaches the write row over 45 frames; update stored x5 at frame 600 and remove the rejected x0 payload at frame 810; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.709010+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/cover-01.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/register-file-read-and-write-ports-geometry.json"
+    ],
+    "observations": [
+      "Register rows9/4 and read outputs feed13, write x5; x0 invariant noted.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

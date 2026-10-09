@@ -1,0 +1,484 @@
+{
+  "id": "rv06-program-counter-update-for-branches",
+  "record_id": "recvw25utM8s8D",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Program Counter Update for Branches",
+  "standard_name": "Program Counter Update for Branches",
+  "Name": "Program Counter Update for Branches",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Compute the two candidate next PCs and show how BEQ selects the actual fetch address.",
+  "learning_objective": "Compute the two candidate next PCs and show how BEQ selects the actual fetch address.",
+  "core_conclusion": "BEQ chooses branch-PC plus offset when equal; otherwise execution continues at PC plus four in RV32I.",
+  "status": "IN_PROGRESS",
+  "artifact_version": "v1",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "scope": "RV32I 32-bit instructions, no compressed extension; branch offsets shown in bytes. The architectural decision is independent of any particular pipeline.",
+    "references": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "Conditional Branches specifies comparison and target relative to the branch instruction; RV32I sequential instructions are four bytes."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "Conditional Branches specifies comparison and target relative to the branch instruction; RV32I sequential instructions are four bytes."
+      }
+    ]
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "candidates",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "PC 0x100",
+          "BEQ x1,x2,+16",
+          "sequential 0x104",
+          "target 0x110"
+        ],
+        "initial_state": "PC points at branch; both candidate slots empty.",
+        "trigger": "Decode the branch displacement and form both additions.",
+        "change": "Copy PC 0x100 into two arithmetic lanes; add 4 and 16; populate candidate address cells.",
+        "cause": "Decode the branch displacement and form both additions.",
+        "result": "Two distinct candidates 0x104 and 0x110 are visible before selection.",
+        "english_copy": [
+          "One branch, two possible next addresses.",
+          "Target = branch PC + byte offset."
+        ]
+      },
+      {
+        "id": "equal",
+        "start_seconds": 6,
+        "end_seconds": 13,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "x1=7",
+          "x2=7",
+          "BEQ comparator",
+          "selected next PC",
+          "fetch cursor"
+        ],
+        "initial_state": "Both register values are 7; PC is still 0x100.",
+        "trigger": "BEQ evaluates equality.",
+        "change": "Carry the two 7 tokens into the comparator; equality selects the target address; move 0x110 into next-PC input while 0x104 remains unselected.",
+        "cause": "BEQ evaluates equality.",
+        "result": "Next-PC input is 0x110 and the architectural PC stays 0x100 until update.",
+        "english_copy": [
+          "7 equals 7: take the branch.",
+          "Select 0x110."
+        ]
+      },
+      {
+        "id": "taken",
+        "start_seconds": 13,
+        "end_seconds": 19,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "PC latch",
+          "instruction memory rows 0x100,0x104,0x108,0x110"
+        ],
+        "initial_state": "PC=0x100; selected input=0x110.",
+        "trigger": "The next fetch updates the PC.",
+        "change": "Replace PC with 0x110 and move the instruction-memory cursor past 0x104 and 0x108 onto 0x110.",
+        "cause": "The next fetch updates the PC.",
+        "result": "The actual fetched address becomes 0x110; skipped rows never become the current PC.",
+        "english_copy": [
+          "PC becomes 0x110.",
+          "The fall-through instructions are skipped."
+        ]
+      },
+      {
+        "id": "unequal",
+        "start_seconds": 19,
+        "end_seconds": 26,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "reset PC=0x100",
+          "x1=7",
+          "x2=9",
+          "sequential address 0x104",
+          "fetch cursor"
+        ],
+        "initial_state": "Replay the same branch with x2=9; PC explicitly resets to 0x100.",
+        "trigger": "BEQ compares 7 and 9.",
+        "change": "Select the 0x104 candidate; carry it into PC; move the cursor exactly one 32-bit instruction forward.",
+        "cause": "BEQ compares 7 and 9.",
+        "result": "PC and fetch cursor both end at 0x104, while target 0x110 stays unselected.",
+        "english_copy": [
+          "7 is not 9: fall through.",
+          "PC becomes 0x104."
+        ]
+      },
+      {
+        "id": "compare",
+        "start_seconds": 26,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "taken trace 0x100→0x110",
+          "not-taken trace 0x100→0x104"
+        ],
+        "initial_state": "Both completed examples are available.",
+        "trigger": "Compare their final architectural PC values.",
+        "change": "Place the two actual resulting fetch positions side by side, with equality operands next to each.",
+        "cause": "Compare their final architectural PC values.",
+        "result": "Changing the comparison changes which computed address is installed.",
+        "english_copy": [
+          "Condition chooses the address.",
+          "The target is not PC + 4 + offset."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "pc-selection",
+        "scene_id": "taken",
+        "uncertainty": "The selected candidate must become the PC, without adding offset to PC+4.",
+        "expected_observation": "PC changes discretely from 0x100 to 0x110, fetch cursor relocates to 0x110."
+      },
+      {
+        "id": "fall-through",
+        "scene_id": "unequal",
+        "uncertainty": "False BEQ must select sequential path.",
+        "expected_observation": "7 != 9 causes next PC=0x104."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "taken-update",
+        "time_seconds": 15,
+        "reason": "Inspect PC and cursor before/at/after update.",
+        "frame": 450,
+        "sample_frames": [
+          449,
+          450,
+          451
+        ]
+      },
+      {
+        "id": "not-taken-update",
+        "time_seconds": 23,
+        "reason": "Inspect replay reset, comparison and PC=0x104.",
+        "frame": 690,
+        "sample_frames": [
+          689,
+          690,
+          691
+        ]
+      }
+    ],
+    "state_model": {
+      "function": "branchState(frame)",
+      "inputs": {
+        "pc": 256,
+        "offset": 16,
+        "rs1": 7,
+        "equalRs2": 7,
+        "unequalRs2": 9
+      },
+      "planned_bindings": [
+        "pc → DataTokens PC value and instruction-memory cursor y",
+        "selectedAddress → moving address token and selected candidate",
+        "operands → RegisterBank values and numeric comparator"
+      ],
+      "invariants": [
+        "Target is 256+16=272, not 260+16.",
+        "PC is constant until update frame.",
+        "Equal case gives 272; unequal case gives 260."
+      ],
+      "b1_samples_seconds": [
+        12,
+        14.9667,
+        15,
+        15.0333,
+        20,
+        22.9667,
+        23,
+        23.0333,
+        28
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv06-state.ts",
+      "bindings": [
+        "pc → DataTokens PC value and instruction-memory cursor y",
+        "selectedAddress → moving address token and selected candidate",
+        "operands → RegisterBank values and numeric comparator"
+      ],
+      "probe_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv06-probe.tsx"
+    },
+    "scene_rationale": "Five scenes separate candidate arithmetic, equality selection, architectural update, false-condition replay, and comparison. The two outcomes need the explicit replay to avoid suggesting one branch executes both paths.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T06:55:52.485293+00:00",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv06.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "results": {
+          "status": "PASS",
+          "record": "rv06",
+          "checks": 19,
+          "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/b1.log",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv06-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv06-state.ts",
+        "source_version": {
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv06-state.ts": {
+            "mtime_ns": 1791528803870301058,
+            "size": 528
+          },
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv06-probe.tsx": {
+            "mtime_ns": 1791528843037747745,
+            "size": 953
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Manual state-to-visible-props source inspection plus React SSR of actual probe at boundaries.",
+          "basis": "branchState(frame) directly feeds RegisterBank operands, DataTokens PC/candidates/carried selected address, and MemoryWords selected fetch row. PC changes at450 and690; address token y depends on actual transfer progress."
+        },
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "applicable_record_ids": [
+          "recvw25utM8s8D"
+        ],
+        "scope": "Technical authorization for full implementation only; final video teaching review remains pending.",
+        "resolved_error": "Initial assertion loader passed undefined Module.filename to Node._compile (exit134); replaced with explicit filename, all checks subsequently passed."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T07:03:55.038243+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx",
+        "source_version": {
+          "mtime_ns": 1791529089042665780,
+          "size": 5812
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Taken/Unequal independently draw PC and memory fetch rows from branchState(globalFrame); moving selected addresses and PC cell/fetch cursor update at450/690. Candidate arithmetic and final outcome comparison have distinct figures.",
+          "method": "Read each full scene plus27 actual SSR boundary/semantic assertions across5 files; full TSX imports state but never probe or a shared L3 implementation."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv-full-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_scene_checks": 27,
+          "b1_rerun": {
+            "status": "PASS",
+            "record": "rv06",
+            "checks": 19,
+            "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+          },
+          "typecheck_exit_code": 0,
+          "quality_warning": "Compact JSX lines below180; reviewed topic-specific mechanism complete. Final visual review required."
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/c-source-check.log",
+        "applicable_record_ids": [
+          "recvw25utM8s8D"
+        ],
+        "scope": "Technical full-source evidence only; no video teaching approval."
+      }
+    ],
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx",
+    "l2_requirements": {
+      "status": "MAPPED",
+      "additional_components_required": false,
+      "basis": "Reviewed actual typed RiscV.tsx: fraction-valued stage, explicit row and value, free DataTokens x/y, numeric RegisterBank and MemoryWords satisfy these actions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      120,
+      300,
+      425,
+      490,
+      720,
+      845
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv06-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+    "reviewed_at": "2026-10-09T07:15:49.874957+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+      "reviewed_at": "2026-10-09T07:15:49.874957+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "taken-update",
+          "times_seconds": [
+            14.966666666666667,
+            15.0,
+            15.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0449.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0450.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0451.png"
+          ],
+          "observation": "At14.9667s PC/FETCH are0x100 while selected input is0x110. At15.0000s and15.0333s both PC and selected FETCH row are0x110. The intermediate fall-through rows do not become current.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "not-taken-update",
+          "times_seconds": [
+            22.966666666666665,
+            23.0,
+            23.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0689.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0690.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/risk-0691.png"
+          ],
+          "observation": "At22.9667s registers show7 and9, PC/FETCH remain0x100 and fall-through input is0x104. At23.0000s/23.0333s PC andFETCH are0x104.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "4.00s shows branchPC0x100 copied into +4 and+16 lanes, with separate resulting0x104 and0x110 cells. At10.00s registers7/7 and selected-next-PC0x110 coexist with storedPC0x100.",
+        "14.967→15.000s: PC changes0x100→0x110 and the FETCH row moves directly from0x100 to0x110, leaving0x104/0x108 unfetched. At22.967→23.000s the unequal7/9 replay changesPC0x100→0x104 and selects the corresponding FETCH row.",
+        "At28.167s the two actual destination addresses appear side by side. The overview has distinct arithmetic, comparison, fetch-selection and replay views; numeric cells and cursor relocation explain the mechanism even without the headings. No observed text collisions."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "l3": "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/l3-record.json",
+    "tsx": "assets/source-kits/risc-v-processor-architecture/src/videos/rv06-program-counter-update-for-branches.tsx"
+  },
+  "feishu_record_id": "recvw25utM8s8D",
+  "requirement_prompt": "Program Counter Update for Branches; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Program Counter Update for Branches: Choose the Next Fetch",
+  "title": "Program Counter Update for Branches: Choose the Next Fetch",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Program Counter Update for Branches: compute fall-through 0x104 and target 0x110 from branch PC 0x100 with displacement 16; compare 7 with 7, install 0x110 in the PC at 15 seconds, and relocate the fetch selection past 0x104 and 0x108; replay the same branch with 7 and 9 so PC and fetch select 0x104 at 23 seconds, then compare the taken and not-taken destinations.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel splits PC candidates over 65 frames and moves the fetch selection at frames 450 and 690; keep selected next-PC and stored-PC cells distinct until each update; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.763354+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/cover-02.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/program-counter-update-for-branches/program-counter-update-for-branches-geometry.json"
+    ],
+    "observations": [
+      "Two candidatePC values0x104/0x110 converge to selected taken destination.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "status": "passed",
+  "version": "v2",
+  "reviewer": "Codex root (resumed task; inspected actual v2 frames)",
+  "reviewed_at": "2026-10-09T15:38:31.533029+08:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.mp4",
+  "video_version": {
+    "size": 2317402,
+    "mtime_ns": 1791531449472696176
+  },
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-sheet.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/rv08-pipeline-register-data-transfer/risk-0239.png"
+  ],
+  "observations": [
+    "At7.9667s the moving7/5/x5 bundle is clearly separated from the captured-destination label in the full-resolution frame239. At8.000/8.0333s the captured cells change from empty to7/5 andx5 without obscuring either label.",
+    "The10.667s overview shows input20/1/x6 while the ID/EX latch retains7/5/x5, visibly proving hold between edges.",
+    "At16.9667→17.0000s the EX/MEM result and destination change together from empty to12/x5. At23.5s MEM/WB contains12/x5.",
+    "At26.9667→27.0000s architecturalx5 changes0→12 whilex6 remains0; the destination-tagged write is shown in the register cells. The six overview frames show distinct bundle assembly, capture/hold, computation, pass-through and writeback states."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "id-ex-capture",
+      "times_seconds": [
+        7.966666666666667,
+        8.0,
+        8.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/rv08-pipeline-register-data-transfer/risk-0239.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0240.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0241.png"
+      ],
+      "observation": "At7.9667s the moving7/5/x5 bundle is clearly separated from the captured-destination label in the full-resolution frame239. At8.000/8.0333s the captured cells change from empty to7/5 andx5 without obscuring either label.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "ex-mem-capture",
+      "times_seconds": [
+        16.966666666666665,
+        17.0,
+        17.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0509.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0510.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0511.png"
+      ],
+      "observation": "At16.9667→17.0000s the EX/MEM result and destination change together from empty to12/x5. At23.5s MEM/WB contains12/x5.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "register-write",
+      "times_seconds": [
+        26.966666666666665,
+        27.0,
+        27.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0809.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0810.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0811.png"
+      ],
+      "observation": "At26.9667→27.0000s architecturalx5 changes0→12 whilex6 remains0; the destination-tagged write is shown in the register cells. The six overview frames show distinct bundle assembly, capture/hold, computation, pass-through and writeback states.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "condition": 1,
+      "triggered": false,
+      "reason": "Concrete operands7/5, destinationx5 and result12 identify pipeline bundle storage and transfer without headings."
+    },
+    {
+      "condition": 2,
+      "triggered": false,
+      "reason": "Capture changes stored cells, the upstream counterexample leaves them unchanged, and writeback changes architecturalx5."
+    },
+    {
+      "condition": 3,
+      "triggered": false,
+      "reason": "Actual payloads populate successive latches and the tagged destination register; labels are not substitutes for these operations."
+    }
+  ],
+  "checks": {
+    "teaching_correctness": true,
+    "mechanism_visible": true,
+    "pacing": true,
+    "layout": true,
+    "readability": true,
+    "version_match": true
+  },
+  "review_method": "Observed final MP4 overview, before/at/after risk sheet and full-resolution capture frame; no desktop control."
+}

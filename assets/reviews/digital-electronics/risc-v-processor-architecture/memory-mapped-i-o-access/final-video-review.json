@@ -1,0 +1,89 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4",
+  "video_version": {
+    "mtime_ns": 1791529886197975750,
+    "size": 2676551
+  },
+  "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+  "reviewed_at": "2026-10-09T07:16:18.885830+00:00",
+  "evidence": [
+    "assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-sheet.jpg"
+  ],
+  "observations": [
+    "3.00/8.00 s overview separates platform-defined RAM55,OUTPUT0 andSTATUS0; decode selectsGPIO while RAM is unchanged.",
+    "13.467→13.500 s actual output/status cells0→1 coincide with a physical pin edge rising and the small unfilled LED becoming a larger lit disk with rays; RAM remains55 and x3 remains0.",
+    "20.00→23.00 s the status1 token travels toward the CPU;22.467→22.500 s x3 changes0→1 after FENCE O,I is marked complete.",
+    "26.967→27.000 s separately labelled RAM-store example changes55→1, while the original GPIO trace and its RAM55 remain visible above. The separate-example label prevents treating these as one inconsistent memory state.",
+    "Physical output geometry, register values and different recipients remain identifiable without the headings. Small-player labels are readable and sampled objects do not obscure the copy."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "device-accept",
+      "times_seconds": [
+        13.466666666666667,
+        13.5,
+        13.533333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0404.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0405.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0406.png"
+      ],
+      "observation": "Frames404/405/406: OUTPUT/STATUS0→1, pin low→high, small outline lamp→filled large lamp with rays, with RAM55 unchanged.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "status-load",
+      "times_seconds": [
+        22.466666666666665,
+        22.5,
+        22.533333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0674.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0675.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0676.png"
+      ],
+      "observation": "Frames674/675/676: x3 changes0→1 only on the status-return boundary; device state1 and RAM55 remain unchanged.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "separate-comparison",
+      "times_seconds": [
+        26.966666666666665,
+        27.0,
+        27.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0809.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0810.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0811.png"
+      ],
+      "observation": "Frames809/810/811: explicit Separate RAM-store example cell changes55→1; top original RAM row stays55 and GPIO remains1.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Address-selected register data and a pin/LED physical consequence remain intelligible without explanatory titles."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Register contents, pin shape, lamp geometry and returned x3 value change as effects of the accesses."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "Device write and status readback are shown as actual cell and physical-state changes rather than result labels."
+    }
+  ],
+  "review_method": "Actual final MP4 overview and cropped before/at/after risk sheets were inspected with view_image. This is frame-based video-content review; no browser/playback test was performed.",
+  "repairs": []
+}

@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+  "reviewed_at": "2026-10-09T07:15:07.454311+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.mp4",
+  "video_version": {
+    "size": 2306966,
+    "mtime_ns": 1791529514811259651
+  },
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-sheet.jpg"
+  ],
+  "observations": [
+    "Viewed v1 overview and nine risk panels. The register file containsx6=9/x7=4;9.17s shows independent read output copies9/4 while those stored rows retain9/4. This is recognizably register storage and port data even without title.",
+    "15.9667s pendingwrite is empty;16/16.0333s it contains13 while storedx5 remains0. At19.9667s data13 waits outside;20/20.0333s x5 becomes13 with the clock marker on its high side, other rows remain unchanged.",
+    "26.9667s an attempted13 token reachesx0;27/27.0333s it disappears into the discard cross, x0 remains0 and x5 remains13. No body-text collision observed; intentional payload nearx0 is a data transfer."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "pending-is-not-stored",
+      "times_seconds": [
+        15.966666666666667,
+        16.0,
+        16.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0479.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0480.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0481.png"
+      ],
+      "observation": "15.9667s pending field— becomes13 at16s while bothx5 row and storedx5 statement stay0 through16.0333s."
+    },
+    {
+      "risk_id": "write-edge",
+      "times_seconds": [
+        19.966666666666665,
+        20.0,
+        20.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0599.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0600.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0601.png"
+      ],
+      "observation": "19.9667s showsx5=0 and separatewrite13;20/20.0333s showsx5=13 and no waiting token. x0=0,x6=9,x7=4 remain."
+    },
+    {
+      "risk_id": "zero-write",
+      "times_seconds": [
+        26.966666666666665,
+        27.0,
+        27.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0809.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0810.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports/risk-0811.png"
+      ],
+      "observation": "26.9667s shows13 outside x0;27/27.0333s that token is removed and a discard cross appears, whilex0 stays0 andx5 stays13."
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Stored indexed rows, two retained read copies, pending data and edge-controlled row update identify the mechanism without titles."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Read copies occupy different locations, a pending value is populated, a stored register changes and a forbidden payload disappears."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "The register and payload objects perform the operations; clock/cross labels supplement actual changes."
+    }
+  ],
+  "course_comparison": "Viewedrv01–05 together: encodingfielddecoding,registerportstorage,immediatebitassembly,ALUcount/bitoperations,andloadnextstate use distinct main diagrams and stateprocesses; no title-only substitution observed.",
+  "layout": "No visually observed body-text collision in inspectedoverview/riskframes; authoritative full-batch geometry gate is separately recorded bymain controller."
+}

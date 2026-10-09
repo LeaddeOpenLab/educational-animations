@@ -1,0 +1,8 @@
+cwd: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+command: '/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv15.cjs
+exit_code: 0
+rv15 PASS: address decode, acceptance-bound device value/pin/lamp geometry, delayed readback and preservedRAM
+command: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit
+exit_code: 0
+Source binding review: rv15State maps address→device, updates output upon acceptance, derives pinY/ledRadius/ledOn and responsex3. Probe MemoryWords/RegisterBank/path/circle consume those fields;SSR verifies r14→32 and rising-pinV260.
+This is technical code-gate evidence only; final teaching review remains pending.

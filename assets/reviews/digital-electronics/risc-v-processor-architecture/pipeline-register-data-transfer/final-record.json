@@ -1,0 +1,640 @@
+{
+  "id": "recvw25utMuzEE",
+  "record_id": "recvw25utMuzEE",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Pipeline Register Data Transfer",
+  "standard_name": "Pipeline Register Data Transfer",
+  "Name": "Pipeline Register Data Transfer",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Track one instruction’s operands, destination and result through clocked pipeline registers.",
+  "learning_objective": "Track one instruction’s operands, destination and result through clocked pipeline registers.",
+  "core_conclusion": "Clocked pipeline registers preserve an instruction’s data and control between stages so the final result reaches its own destination.",
+  "status": "ready",
+  "artifact_version": "v2",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "scope": "Illustrative five-stage IF/ID/EX/MEM/WB in-order datapath. Pipeline depth and latch placement are implementation choices, not RISC-V ISA requirements.",
+    "references": [
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+        "verified": "2026-10-09",
+        "basis": "Primary educational implementation defines operand/control/destination pipeline state and clocked EX→MEM→WB transfers."
+      },
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "RV32I ADD architectural result is the sum of the two source registers written to rd."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+        "scope": "Primary educational implementation defines operand/control/destination pipeline state and clocked EX→MEM→WB transfers."
+      },
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "RV32I ADD architectural result is the sum of the two source registers written to rd."
+      }
+    ]
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "bundle",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "ADD x5,x1,x2",
+          "ID operands 7 and 5",
+          "rd=5",
+          "RegWrite=1",
+          "empty ID/EX latch"
+        ],
+        "initial_state": "Instruction is decoded, but downstream latch is empty.",
+        "trigger": "Decode assembles the operands and control bundle.",
+        "change": "Group values 7,5,rd5,write1 into one visible bundle; keep destination tag attached to payload.",
+        "cause": "Decode assembles the operands and control bundle.",
+        "result": "The bundle contains everything later stages need, including rd.",
+        "english_copy": [
+          "Data and control travel together.",
+          "ADD x5, x1, x2: 7 + 5."
+        ]
+      },
+      {
+        "id": "capture",
+        "start_seconds": 6,
+        "end_seconds": 13,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "ID/EX input bundle",
+          "ID/EX stored bundle",
+          "clock edge",
+          "next instruction ID values 20 and 1"
+        ],
+        "initial_state": "Stored latch empty; input holds 7,5,rd5.",
+        "trigger": "The clock edge captures ID into ID/EX.",
+        "change": "Move the bundle to ID/EX; replace stored contents at the edge; then change upstream inputs to the next instruction while stored 7 and5 remain unchanged.",
+        "cause": "The clock edge captures ID into ID/EX.",
+        "result": "EX still reads 7 and5 even when ID now shows 20 and1.",
+        "english_copy": [
+          "Capture on the edge.",
+          "Stored operands survive changing inputs."
+        ]
+      },
+      {
+        "id": "result-latch",
+        "start_seconds": 13,
+        "end_seconds": 20,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "ID/EX 7,5,rd5",
+          "ALU result12",
+          "EX/MEM result slot",
+          "RegWrite1"
+        ],
+        "initial_state": "Operands stored; EX/MEM slot empty.",
+        "trigger": "ADD computes and the following edge captures EX output.",
+        "change": "Transform operands into result12, retain rd5 and write1; transfer the result bundle into EX/MEM at edge.",
+        "cause": "ADD computes and the following edge captures EX output.",
+        "result": "EX/MEM contains result12,rd5,write1 rather than just an instruction label.",
+        "english_copy": [
+          "7 + 5 becomes 12.",
+          "The destination tag remains x5."
+        ]
+      },
+      {
+        "id": "pass-through",
+        "start_seconds": 20,
+        "end_seconds": 25,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "EX/MEM result12,rd5",
+          "MEM/WB result12,rd5",
+          "no memory access"
+        ],
+        "initial_state": "EX/MEM carries ADD result.",
+        "trigger": "The next pipeline edge advances an ALU instruction through MEM.",
+        "change": "Move result12 and rd5 together into MEM/WB; memory row collection stays unchanged.",
+        "cause": "The next pipeline edge advances an ALU instruction through MEM.",
+        "result": "MEM/WB holds the same12 and destination5.",
+        "english_copy": [
+          "An ADD has no data-memory access.",
+          "Its result still crosses MEM/WB."
+        ]
+      },
+      {
+        "id": "writeback",
+        "start_seconds": 25,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "MEM/WB12,rd5",
+          "register x5=0",
+          "younger bundle rd6"
+        ],
+        "initial_state": "Final bundle waits for register write.",
+        "trigger": "RegWrite and rd choose architectural destination.",
+        "change": "Carry12 into register x5; set x5=12; leave younger instruction destination separate.",
+        "cause": "RegWrite and rd choose architectural destination.",
+        "result": "The value calculated several stages earlier reaches the correct architectural register.",
+        "english_copy": [
+          "Write 12 into x5.",
+          "The carried tag selects the destination."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "latch-hold",
+        "scene_id": "capture",
+        "uncertainty": "Upstream changing values must not alter a captured bundle between edges.",
+        "expected_observation": "ID becomes20,1 while ID/EX remains7,5,rd5."
+      },
+      {
+        "id": "bundle-transfer",
+        "scene_id": "result-latch",
+        "uncertainty": "Result and destination must cross boundary together.",
+        "expected_observation": "EX/MEM transitions from empty to12,rd5,write1 at same edge."
+      },
+      {
+        "id": "write-destination",
+        "scene_id": "writeback",
+        "uncertainty": "Delayed write must use carried rd.",
+        "expected_observation": "Only x5 changes to12."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "id-ex-capture",
+        "time_seconds": 8,
+        "reason": "Compare before/after capture and later upstream input change.",
+        "frame": 240,
+        "sample_frames": [
+          239,
+          240,
+          241
+        ]
+      },
+      {
+        "id": "ex-mem-capture",
+        "time_seconds": 17,
+        "reason": "Inspect result12 plus destination5 together.",
+        "frame": 510,
+        "sample_frames": [
+          509,
+          510,
+          511
+        ]
+      },
+      {
+        "id": "register-write",
+        "time_seconds": 27,
+        "reason": "Inspect x5=12, unrelated registers unchanged.",
+        "frame": 810,
+        "sample_frames": [
+          809,
+          810,
+          811
+        ]
+      }
+    ],
+    "state_model": {
+      "function": "latchState(frame)",
+      "inputs": {
+        "a": 7,
+        "b": 5,
+        "rd": 5,
+        "nextA": 20,
+        "nextB": 1,
+        "nextRd": 6
+      },
+      "planned_bindings": [
+        "latched bundle fields → DataTokens values in boundary-specific groups",
+        "clock edge and latch occupancy → discrete stored arrays",
+        "computed sum → result token; rd tag travels on same progress",
+        "architectural registers → RegisterBank values"
+      ],
+      "invariants": [
+        "ID/EX remains7,5,rd5 after ID changes20,1,rd6.",
+        "ALU result12 and rd5 advance together.",
+        "x5 stays0 until WB, then12."
+      ],
+      "b1_samples_seconds": [
+        7.9667,
+        8,
+        8.0333,
+        10,
+        16.9667,
+        17,
+        17.0333,
+        23,
+        26.9667,
+        27,
+        27.0333
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv08-state.ts",
+      "bindings": [
+        "latched bundle fields → DataTokens values in boundary-specific groups",
+        "clock edge and latch occupancy → discrete stored arrays",
+        "computed sum → result token; rd tag travels on same progress",
+        "architectural registers → RegisterBank values"
+      ],
+      "probe_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv08-probe.tsx"
+    },
+    "scene_rationale": "Five scenes follow bundle construction, edge capture with an input-change test, result capture, pass-through, and architectural writeback. The hold demonstration is essential: mere token motion through five stage names would not establish register semantics.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T06:55:52.690494+00:00",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv08.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "results": {
+          "status": "PASS",
+          "record": "rv08",
+          "checks": 19,
+          "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/b1.log",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv08-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv08-state.ts",
+        "source_version": {
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv08-state.ts": {
+            "mtime_ns": 1791528803875870548,
+            "size": 685
+          },
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv08-probe.tsx": {
+            "mtime_ns": 1791528843042998900,
+            "size": 825
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Manual state-to-visible-props source inspection plus React SSR of actual probe at boundaries.",
+          "basis": "latchState(frame) fields feed ID,ID/EX,EX/MEM,MEM/WB DataTokens and RegisterBank. At frame300 upstream inputs become20,1,rd6 while ID/EX visible contents remain7,5,rd5; later result12 and rd5 populate real latch cells."
+        },
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "applicable_record_ids": [
+          "recvw25utMuzEE"
+        ],
+        "scope": "Technical authorization for full implementation only; final video teaching review remains pending."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T07:03:55.255593+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx",
+        "source_version": {
+          "mtime_ns": 1791529385434148798,
+          "size": 5814
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Five independent scenes show bundle assembly, capture/hold under changed input, ALU result latch, MEM pass-through and tagged register write. Actual latchState drives all stored bundle values and destinations; 240/510/690/810 update visible cells.",
+          "method": "Read each full scene plus27 actual SSR boundary/semantic assertions across5 files; full TSX imports state but never probe or a shared L3 implementation."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv-full-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_scene_checks": 27,
+          "b1_rerun": {
+            "status": "PASS",
+            "record": "rv08",
+            "checks": 19,
+            "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+          },
+          "typecheck_exit_code": 0,
+          "quality_warning": "Compact JSX lines below180; reviewed topic-specific mechanism complete. Final visual review required."
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/c-source-check.log",
+        "applicable_record_ids": [
+          "recvw25utMuzEE"
+        ],
+        "scope": "Technical full-source evidence only; no video teaching approval."
+      },
+      {
+        "type": "D_LAYOUT_REPAIR",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T15:39:15.527268+08:00",
+        "reviewer": "Codex root",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx",
+        "source_version": {
+          "mtime_ns": 1791530081797241402,
+          "size": 5814
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Only bundle y250→225 changed; same latchState bindings retained for input,ID/EX,EX/MEM,MEM/WB and registers."
+        },
+        "assertion_command": "node scripts/assert-rv08.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "checks": 19,
+          "overlap_frames": 6,
+          "fail": 0,
+          "warn": 0
+        },
+        "scope": "layout repair and unchanged mechanism reconfirmed; independent actual final review stored separately"
+      }
+    ],
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx",
+    "l2_requirements": {
+      "status": "MAPPED",
+      "additional_components_required": false,
+      "basis": "Reviewed actual typed RiscV.tsx: fraction-valued stage, explicit row and value, free DataTokens x/y, numeric RegisterBank and MemoryWords satisfy these actions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "At7.97–8.03s the moving bundle bottom intersects captured-destination label; independently observed in original1920x1080 frames.",
+        "affected_ids": [
+          "recvw25utMuzEE"
+        ],
+        "fix": "Move only the transferring bundle25px upward to leave23px separation above the captured-destination label.",
+        "status": "resolved",
+        "evidence": [
+          "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0239.png"
+        ],
+        "resolution_evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/final-video-review.json"
+      }
+    ],
+    "key_frames": [
+      120,
+      320,
+      490,
+      555,
+      705,
+      865
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv08-state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex root (resumed task; inspected actual v2 frames)",
+    "reviewed_at": "2026-10-09T15:38:31.533029+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-sheet.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/rv08-pipeline-register-data-transfer/risk-0239.png"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex root (resumed task; inspected actual v2 frames)",
+      "reviewed_at": "2026-10-09T15:38:31.533029+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-sheet.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/rv08-pipeline-register-data-transfer/risk-0239.png"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "id-ex-capture",
+          "times_seconds": [
+            7.966666666666667,
+            8.0,
+            8.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/rv08-pipeline-register-data-transfer/risk-0239.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0240.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0241.png"
+          ],
+          "observation": "At7.9667s the moving7/5/x5 bundle is clearly separated from the captured-destination label in the full-resolution frame239. At8.000/8.0333s the captured cells change from empty to7/5 andx5 without obscuring either label.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "ex-mem-capture",
+          "times_seconds": [
+            16.966666666666665,
+            17.0,
+            17.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0509.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0510.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0511.png"
+          ],
+          "observation": "At16.9667→17.0000s the EX/MEM result and destination change together from empty to12/x5. At23.5s MEM/WB contains12/x5.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "register-write",
+          "times_seconds": [
+            26.966666666666665,
+            27.0,
+            27.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0809.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0810.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/risk-0811.png"
+          ],
+          "observation": "At26.9667→27.0000s architecturalx5 changes0→12 whilex6 remains0; the destination-tagged write is shown in the register cells. The six overview frames show distinct bundle assembly, capture/hold, computation, pass-through and writeback states.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "At7.9667s the moving7/5/x5 bundle is clearly separated from the captured-destination label in the full-resolution frame239. At8.000/8.0333s the captured cells change from empty to7/5 andx5 without obscuring either label.",
+        "The10.667s overview shows input20/1/x6 while the ID/EX latch retains7/5/x5, visibly proving hold between edges.",
+        "At16.9667→17.0000s the EX/MEM result and destination change together from empty to12/x5. At23.5s MEM/WB contains12/x5.",
+        "At26.9667→27.0000s architecturalx5 changes0→12 whilex6 remains0; the destination-tagged write is shown in the register cells. The six overview frames show distinct bundle assembly, capture/hold, computation, pass-through and writeback states."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "l3": "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/l3-record.json",
+    "tsx": "assets/source-kits/risc-v-processor-architecture/src/videos/rv08-pipeline-register-data-transfer.tsx"
+  },
+  "feishu_record_id": "recvw25utMuzEE",
+  "requirement_prompt": "Pipeline Register Data Transfer; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Pipeline Register Data Transfer: Carry Data and Tags",
+  "title": "Pipeline Register Data Transfer: Carry Data and Tags",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Pipeline Register Data Transfer: assemble ADD operands 7 and 5 with destination x5 and RegWrite=1, capture them together in ID/EX at 8 seconds, and show the latch holding 7/5/x5 after upstream inputs change to 20/1/x6; compute 12, capture result and destination together in EX/MEM at 17 seconds, carry 12/x5 through MEM/WB without a memory access, and use the preserved destination tag to write x5=12 at 27 seconds while x6 stays zero.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel assembles bundle fields over 60 frames, carries result plus tag over 40 frames, and passes the bundle through MEM over 65 frames; preserve destination-label clearance during transfer; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex root (resumed task; inspected actual v2 frames)",
+    "reviewed_at": "2026-10-09T15:38:31.533029+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/cover-02.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer/pipeline-register-data-transfer-geometry.json"
+    ],
+    "observations": [
+      "Concrete7/5/rd5/W1 bundle appears before and afterID/EX capture.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  },
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "video": "assets/videos/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.mp4",
+  "cover": "assets/covers/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.jpg",
+  "cover_image": "assets/covers/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.jpg",
+  "cover_version": "v2",
+  "player": "https://github.com/user-attachments/assets/a07af809-750c-49ff-9d5e-f266482684aa",
+  "player_version": "v2",
+  "prompt_file": "assets/prompts/digital-electronics/risc-v-processor-architecture/pipeline-register-data-transfer.md",
+  "tags": [
+    "recvw25utMuzEE",
+    "risc-v-processor-architecture",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "raw.githubusercontent.com",
+      "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+      "scope": "Primary educational implementation defines operand/control/destination pipeline state and clocked EX→MEM→WB transfers."
+    },
+    {
+      "title": "docs.riscv.org",
+      "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+      "scope": "RV32I ADD architectural result is the sum of the two source registers written to rd."
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/risc-v-processor-architecture.md",
+  "feishu": {
+    "record_id": "recvw25utMuzEE",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T15:53:07.979882+08:00",
+    "selection_fields": {
+      "Name": "Pipeline Register Data Transfer",
+      "Discipline": "Digital Electronics",
+      "Course": "RISC-V Processor Architecture"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25utMuzEE",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T15:53:07.979882+08:00",
+      "version": "v2"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "v2",
+      "page_status": "pending",
+      "attachment": {
+        "video_version": "risc-v-20261009-v2",
+        "video_bytes": 2317402,
+        "issue_number": 123,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+        "comment_id": 6076832473,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076832473",
+        "attachment_url": "https://github.com/user-attachments/assets/a07af809-750c-49ff-9d5e-f266482684aa",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/a07af809-750c-49ff-9d5e-f266482684aa",
+      "issue_number": 123,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

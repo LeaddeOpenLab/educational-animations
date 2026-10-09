@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+  "reviewed_at": "2026-10-09T07:15:07.455276+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.mp4",
+  "video_version": {
+    "size": 3282314,
+    "mtime_ns": 1791529555614971749
+  },
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-sheet.jpg"
+  ],
+  "observations": [
+    "Viewed v1 overview and nine risk panels. I extraction shows111111111100 separated from the instruction. Sign source1 remains above an initially blank upper20 field, then at7s that field fills with20ones; output becomes0xFFFFFFFC=-4.",
+    "S high0000000 andlow01100 occupy adjacent slots at18s, with combined000000001100 and+12; they preserve high/low ordering. At24s B output appends a separateimm0=0 after0|0|000000|1000, giving0000000010000=+16.",
+    "The six scenes use distinct bit transformations and a final I/S/B result comparison; body text and field values are readable in viewed sheets, with no observed overlap."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "sign-replication",
+      "times_seconds": [
+        6.966666666666667,
+        7.0,
+        7.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0209.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0210.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0211.png"
+      ],
+      "observation": "6.9667s upper20 is— while low111111111100 exists;7/7.0333s upper20 is11111111111111111111 and signedresult=-4."
+    },
+    {
+      "risk_id": "s-concatenate",
+      "times_seconds": [
+        17.966666666666665,
+        18.0,
+        18.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0539.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0540.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0541.png"
+      ],
+      "observation": "17.9667–18.0333s high7=0000000 andlow5=01100 sit in correct order; at18s combined000000001100 and0x0000000C/+12 appear."
+    },
+    {
+      "risk_id": "b-reorder",
+      "times_seconds": [
+        23.966666666666665,
+        24.0,
+        24.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0719.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0720.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0721.png"
+      ],
+      "observation": "23.9667s copiedimm12/11/10:5/4:1 fields arepresent with noimm0. At24/24.0333s a newimm0zero cell appears; output0000000010000 is16bytes, not8."
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Named bit fragments, copied sign bits and changing encoded strings convey reconstruction with explanatory copy hidden."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Upper20bits are populated, fragments occupy new assembled positions, and a new low-zero bit cell is added."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "The bits themselves are changed/assembled; signed result statements match the visible patterns."
+    }
+  ],
+  "course_comparison": "Viewedrv01–05 together: encodingfielddecoding,registerportstorage,immediatebitassembly,ALUcount/bitoperations,andloadnextstate use distinct main diagrams and stateprocesses; no title-only substitution observed.",
+  "layout": "No visually observed body-text collision in inspectedoverview/riskframes; authoritative full-batch geometry gate is separately recorded bymain controller."
+}

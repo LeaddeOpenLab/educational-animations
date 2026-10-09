@@ -1,0 +1,9 @@
+# recvw25utMtQGj · Load-Use Pipeline Stall
+
+Version: v1 · alignment: aligned
+
+A 31-second silent English educational animation for a university digital electronics course on Load-Use Pipeline Stall: distinguish load address 0x3000 from unavailable load data 42 in an illustrative five-stage pipeline with one-cycle memory; advance the load from EX to MEM while holding the consumer in ID, the next instruction in IF, and PC=0x108, and insert a non-writing EX bubble; place returned 42 into MEM/WB, resume the consumer and PC=0x10C, forward 42 into its operand, compute 42+3=45, and compare the one-cycle hold with final x5=42 and x6=45.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel carries memory response and forwarded data; hold the front-end cells while the load advances at frame 270, fill MEM/WB at 510, resume stages at 660, and reveal operand 42 and result 45 at 690 and 720; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.

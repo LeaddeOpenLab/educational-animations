@@ -1,0 +1,120 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+  "reviewed_at": "2026-10-09T07:15:49.877669+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall.mp4",
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-sheet.jpg"
+  ],
+  "observations": [
+    "3.333s clearly separates load address0x3000 from memory data42; the consumer operand is waiting. At8.967→9.000sLW movesEX→MEM butADD staysID,NEXT staysIF andPC stays0x108; anEX bubble withwrite0 appears.",
+    "16.967→17.000s memory remains42 while theMEM/WB slot changesempty→42. At21.967→22.000s the heldADD advancesID→EX,thebubble advancesEX→MEM,NEXT movesIF→ID andPC0x108→0x10C.",
+    "22.967→23.000sEX operand changes?→42;23.967→24.000sresult changes?→45. At30.50s the cycle3/4/5 comparison retainsID,ID,EX for the consumer, and register rowsx5=42,x6=45 confirm one held cycle. No layout or text collision observed; the distinct held positions contrast with rv09 no-bubble forwarding."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "stall-edge",
+      "times_seconds": [
+        8.966666666666667,
+        9.0,
+        9.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0269.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0270.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0271.png"
+      ],
+      "observation": "At8.9667sLW isEX,ADDID,NEXTIF andPC0x108. At9.0000s/9.0333sLW isMEM whileADD/NEXT/PC hold, andEX containsBUBBLEwrite0 withvalid0.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "data-ready",
+      "times_seconds": [
+        16.966666666666665,
+        17.0,
+        17.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0509.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0510.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0511.png"
+      ],
+      "observation": "At16.9667sMEM/WB is empty and memory0x3000 holds42. At17.0000s/17.0333s theload-value slot is42 whilememory remains42.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "resume-edge",
+      "times_seconds": [
+        21.966666666666665,
+        22.0,
+        22.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0659.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0660.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0661.png"
+      ],
+      "observation": "At21.9667sLW isMEM,ADDID,NEXTIF andbubbleEX withPC0x108. At22.0000s/22.0333sLW isWB,ADDEX,NEXTID,bubbleMEM andPC0x10C; theconsumer operand correctly remains unknown until forwarding arrives.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "forward-arrival",
+      "times_seconds": [
+        22.966666666666665,
+        23.0,
+        23.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0689.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0690.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0691.png"
+      ],
+      "observation": "At22.9667sEX reads?+3=?; at23.0000s/23.0333sit reads42+3=? whilethe42payload is besideEX.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "consumer-result",
+      "times_seconds": [
+        23.966666666666665,
+        24.0,
+        24.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0719.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0720.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0721.png"
+      ],
+      "observation": "At23.9667s42+3 still hasunknownoutput; at24.0000s/24.0333soutput is45 andtheADD pipeline token also carries45.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "condition": 1,
+      "triggered": false,
+      "reason": "Held instruction locations, advancing olderload, explicit emptyEX bubble and real42 payload identify a load-use stall without headings."
+    },
+    {
+      "condition": 2,
+      "triggered": false,
+      "reason": "The diagram shows selective movement and invariantPC at the stall, then actual data readiness and resumed movement; this is not decorative highlighting."
+    },
+    {
+      "condition": 3,
+      "triggered": false,
+      "reason": "The consumer visibly receives42 andcomputes45; the repeatedID cell andfinal registers show both cost andcorrectness."
+    }
+  ],
+  "checks": {
+    "teaching_correctness": true,
+    "mechanism_visible": true,
+    "pacing": true,
+    "layout": true,
+    "readability": true,
+    "version_match": true
+  },
+  "issues": [],
+  "cross_topic_comparison": "Compared actual overviews ofrv06–10: branch cursor selection, opposite memory data directions, latch storage, early forwarding and one-cycle hold/bubble have distinct visible mechanisms."
+}

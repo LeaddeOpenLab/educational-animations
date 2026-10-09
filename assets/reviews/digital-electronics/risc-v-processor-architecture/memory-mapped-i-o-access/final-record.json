@@ -1,0 +1,474 @@
+{
+  "id": "recvw25utMdKk4",
+  "feishu_record_id": "recvw25utMdKk4",
+  "original_name": "Memory-Mapped I/O Access",
+  "standard_name": "Memory-Mapped I/O Access",
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "artifact_version": "v1",
+  "learning_objective": "Follow the same RISC-V store/load instructions through address decoding into device registers and observe an actual output-device state change.",
+  "core_conclusion": "A load/store targeting a device address transfers data to device state; the platform defines the mapping and register behavior.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+      "https://docs.riscv.org/reference/isa/v20240411/priv/machine.html"
+    ],
+    "scope": "Illustrative platform device map, not a RISC-V standard address: RAM0x80000000..0x80000FFF; GPIO output0x10000000; GPIO status0x10000004. Naturally aligned32-bit accesses; direct permitted physical addresses. Device writes and status reads are ordered here; show FENCE O,I before readback."
+  },
+  "references": [
+    {
+      "title": "docs.riscv.org — supporting reference",
+      "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+      "scope": "Illustrative platform device map, not a RISC-V standard address: RAM0x80000000..0x80000FFF; GPIO output0x10000000; GPIO status0x10000004. Naturally aligned32-bit accesses; direct permitted physical addresses. Device writes and status reads are ordered here; show FENCE O,I before readback."
+    },
+    {
+      "title": "docs.riscv.org — supporting reference",
+      "url": "https://docs.riscv.org/reference/isa/v20240411/priv/machine.html",
+      "scope": "Illustrative platform device map, not a RISC-V standard address: RAM0x80000000..0x80000FFF; GPIO output0x10000000; GPIO status0x10000004. Naturally aligned32-bit accesses; direct permitted physical addresses. Device writes and status reads are ordered here; show FENCE O,I before readback."
+    }
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx",
+    "scenes": [
+      {
+        "id": "map",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "One address space split intoRAM0x80000000..0x80000FFF andGPIO0x10000000..0x10000007; output register0, status0; physical LED off.",
+        "initial_state": "x1=0x10000000, x2=1; RAM[0x80000000]=55; GPIO output=0.",
+        "trigger": "Issue sw x2,0(x1).",
+        "change": "Create one request carrying address0x10000000, write data1 and width32. Move it toward an address decoder with bothRAM and device destinations visible.",
+        "cause": "Issue sw x2,0(x1).",
+        "result": "The request uses ordinarySW but its address identifies a device candidate.",
+        "english_copy": [
+          "Same store instruction",
+          "The address selects the target"
+        ]
+      },
+      {
+        "id": "decode",
+        "start_seconds": 5,
+        "end_seconds": 11,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Request address0x10000000; decoder comparators; RAM andGPIO endpoints.",
+        "initial_state": "Request is in flight; output remains0 andLED remains off.",
+        "trigger": "The address matches the platform GPIO region and offset0.",
+        "change": "Split the request address into region0x10000000 and register offset0; move the request toGPIO output. Leave theRAM branch empty and RAM value55 unchanged.",
+        "cause": "The address matches the platform GPIO region and offset0.",
+        "result": "The selected recipient is the output register; noRAM cell is modified.",
+        "english_copy": [
+          "Decode the region and register",
+          "0x10000000 selects GPIO output"
+        ]
+      },
+      {
+        "id": "write",
+        "start_seconds": 11,
+        "end_seconds": 18,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "GPIO output cell; LED pin and visible lamp; payload1.",
+        "initial_state": "GPIO output0 drivesLED off while payload1 approaches.",
+        "trigger": "The device accepts the32-bit write at13.5s.",
+        "change": "Move data1 into the output cell, replace0 with1, raise the pin line from low to high and expand the lit LED core plus visible rays. KeepRAM55 unchanged.",
+        "cause": "The device accepts the32-bit write at13.5s.",
+        "result": "A concrete peripheral output changes because its register accepted the store.",
+        "english_copy": [
+          "Store1 -> output register",
+          "Pin goes high; LED lights"
+        ]
+      },
+      {
+        "id": "readback",
+        "start_seconds": 18,
+        "end_seconds": 25,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "FENCE O,I; lw x3,4(x1) request0x10000004; status mirror1; x3=0.",
+        "initial_state": "Device output and status are1; x3 is still0.",
+        "trigger": "After device-output/input ordering, issue the status load.",
+        "change": "CompleteFENCE O,I, select offset4 instead of0, move returned status1 from the device toward x3 and commit x3=1 at22.5s.",
+        "cause": "After device-output/input ordering, issue the status load.",
+        "result": "The CPU receives device state through an ordinary load; read and write direction are visibly opposite.",
+        "english_copy": [
+          "FENCE O,I orders the accesses",
+          "Load status1 into x3"
+        ]
+      },
+      {
+        "id": "contrast",
+        "start_seconds": 25,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Device output1/LED on; RAM55; two address request examplesSW1@0x10000000 andSW1@0x80000000.",
+        "initial_state": "Completed device write has changed peripheral state whileRAM remains55.",
+        "trigger": "Contrast a separate ordinaryRAM destination with the completedGPIO destination.",
+        "change": "Add a small separate example row showing aRAM-directed token1 changing a separateRAM comparison cell55→1, while the mainGPIO trace keeps its already-lit output. Clearly label the second row separate example.",
+        "cause": "Contrast a separate ordinaryRAM destination with the completedGPIO destination.",
+        "result": "Data and instruction may match, but address decoding decides whether the effect is memory storage or a device action.",
+        "english_copy": [
+          "Address determines the effect",
+          "The device map is platform-defined"
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "device-write",
+        "scene_id": "write",
+        "uncertainty": "A generic store arrow is insufficient: actual output register and pin/LED geometry must change only when the device accepts the write;RAM must remain unchanged.",
+        "expected_observation": "Payload1 arrives atGPIO, output0→1 and pinlow→high/LED off→lit at13.5s, whileRAM remains55; status then returns1 to x3."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "device-accept",
+        "time_seconds": 13.5,
+        "reason": "No early peripheral effect during request movement; device acceptance changes register and physical output together.",
+        "frame": 405,
+        "sampling_frames": [
+          404,
+          405,
+          406
+        ]
+      },
+      {
+        "id": "status-load",
+        "time_seconds": 22.5,
+        "reason": "Returned status payload changes x3 only upon load completion.",
+        "frame": 675,
+        "sampling_frames": [
+          674,
+          675,
+          676
+        ]
+      },
+      {
+        "id": "separate-comparison",
+        "time_seconds": 27,
+        "reason": "RAM comparison must be visibly separated from the original trace.",
+        "frame": 810,
+        "sampling_frames": [
+          809,
+          810,
+          811
+        ]
+      }
+    ],
+    "example": {
+      "gpio_base": "0x10000000",
+      "output_offset": 0,
+      "status_offset": 4,
+      "ram_address": "0x80000000",
+      "ram_before": 55,
+      "write_data": 1,
+      "output_before": 0,
+      "output_after": 1,
+      "status": 1,
+      "fence": "fence o,i"
+    },
+    "design_audit": {
+      "visualArgument": "One numeric address steers a data payload to a real device register; a pin waveform and lamp geometry change with the accepted write, then a reversed transfer returns status.",
+      "motion": "Address decode and routing, register replacement, pin rising edge and lamp rays, status readback into aCPU register.",
+      "example": "SW1 to illustrativeGPIO0x10000000 turns theLED on; FENCE O,I precedes LW from status0x10000004, returning1.",
+      "antiTemplate": "Unlike load/store address calculation, the core consequence is a physical peripheral output with platform-defined register semantics; aRAM comparison proves address-dependent destination.",
+      "sceneRationale": "Five scenes separate mapping, address selection, device effect, reverse readback and same-instruction/different-target contrast. The physical change needs its own hold so it cannot be mistaken for a normalRAM store."
+    },
+    "state_model": {
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv15-state.ts",
+      "bindings": {
+        "decoder": "Selected endpoint and offset come from address comparison in mmioState.",
+        "transfer": "DataTokens carries state.request.address/data and response value.",
+        "device": "MemoryWords output/status values andSVG pin y/LED radius/rays are derived from state.output.",
+        "register": "RegisterBank x3 uses state.cpuReadback;RAM main trace remains state.ram=55."
+      },
+      "planned_assertions": [
+        "Before frame405 GPIO output0, LEDoff andRAM55; at405 output1/LEDon andRAM55.",
+        "Address0x10000000 decodesGPIO output;0x10000004 decodesstatus;0x80000000 decodesRAM.",
+        "Before675 x3=0; at675 x3=1 after status response.",
+        "ComparisonRAM cell state is distinct from main traceRAM and clearly labeled separate example."
+      ]
+    },
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T06:55:18.677940+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv15-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv15-state.ts",
+        "source_version": {
+          "state_mtime_ns": 1791528883373628943,
+          "probe_mtime_ns": 1791528883373748319,
+          "state_size": 826,
+          "probe_size": 1094
+        },
+        "source_check": "rv15State maps address→device, updates output upon acceptance, derives pinY/ledRadius/ledOn and responsex3. Probe MemoryWords/RegisterBank/path/circle consume those fields;SSR verifies r14→32 and rising-pinV260.",
+        "assertion_command": "'/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv15.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv15 PASS: address decode, acceptance-bound device value/pin/lamp geometry, delayed readback and preservedRAM",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/b1.log",
+        "applicable_record_ids": [
+          "recvw25utMdKk4"
+        ],
+        "limitations": "Minimal mechanism render binding checked via actual probe SSR; no final-video or teaching approval."
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T07:01:14.712390+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx",
+        "source_version": {
+          "mtime_ns": 1791529212127362664,
+          "size": 5768
+        },
+        "source_check": "Direct state-to-graphic bindings reviewed in final per-topic source; full SCENES SSR checks actual transition output, including removal, CSR transfer, mode token, PTE walk, or device pin geometry. Topic scene bodies compose their own L2/SVG and do not wrap probes.",
+        "assertion_command": "node scripts/assert-rv11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv15 FULL PASS: 5 independent scenes, 900frames, tested real scene state bindings",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/c-source-check.log"
+      }
+    ],
+    "rework": [],
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv15-state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv15-memory-mapped-i-o-access.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+    "reviewed_at": "2026-10-09T07:16:18.885830+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/final-video-review.json",
+      "assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+      "reviewed_at": "2026-10-09T07:16:18.885830+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/final-video-review.json",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "device-accept",
+          "times_seconds": [
+            13.466666666666667,
+            13.5,
+            13.533333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0404.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0405.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0406.png"
+          ],
+          "observation": "Frames404/405/406: OUTPUT/STATUS0→1, pin low→high, small outline lamp→filled large lamp with rays, with RAM55 unchanged.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "status-load",
+          "times_seconds": [
+            22.466666666666665,
+            22.5,
+            22.533333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0674.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0675.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0676.png"
+          ],
+          "observation": "Frames674/675/676: x3 changes0→1 only on the status-return boundary; device state1 and RAM55 remain unchanged.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "separate-comparison",
+          "times_seconds": [
+            26.966666666666665,
+            27.0,
+            27.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0809.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0810.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/risk-0811.png"
+          ],
+          "observation": "Frames809/810/811: explicit Separate RAM-store example cell changes55→1; top original RAM row stays55 and GPIO remains1.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.00/8.00 s overview separates platform-defined RAM55,OUTPUT0 andSTATUS0; decode selectsGPIO while RAM is unchanged.",
+        "13.467→13.500 s actual output/status cells0→1 coincide with a physical pin edge rising and the small unfilled LED becoming a larger lit disk with rays; RAM remains55 and x3 remains0.",
+        "20.00→23.00 s the status1 token travels toward the CPU;22.467→22.500 s x3 changes0→1 after FENCE O,I is marked complete.",
+        "26.967→27.000 s separately labelled RAM-store example changes55→1, while the original GPIO trace and its RAM55 remain visible above. The separate-example label prevents treating these as one inconsistent memory state.",
+        "Physical output geometry, register values and different recipients remain identifiable without the headings. Small-player labels are readable and sampled objects do not obscure the copy."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "A generic store arrow is insufficient: actual output register and pin/LED geometry must change only when the device accepts the write;RAM must remain unchanged.",
+  "requirement_prompt": "Memory-Mapped I/O Access; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Memory-Mapped I/O Access: Write, Light, Read Back",
+  "title": "Memory-Mapped I/O Access: Write, Light, Read Back",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Memory-Mapped I/O Access: use an illustrative platform mapping to route SW data 1 to GPIO output address 0x10000000 rather than RAM; visibly change output and status from zero to one, raise the pin waveform, and light the LED while RAM remains 55; complete FENCE O,I before returning status 1 from address 0x10000004 into x3, then label a separate RAM-store example where the same data and opcode change a memory cell from 55 to 1 instead of a peripheral output.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel decodes the device address over 90 frames and moves the separate RAM comparison payload over 45 frames; change pin and lamp geometry at frame 405 and fill x3 with returned status at frame 675; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+    "reviewed_at": "2026-10-09T07:16:18.885830+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/cover-03.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access/memory-mapped-i-o-access-geometry.json"
+    ],
+    "observations": [
+      "Device address0x10000000 carries1 toGPIO output and visible lit lamp.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  },
+  "status": "ready",
+  "video": "assets/videos/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.mp4",
+  "cover": "assets/covers/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.jpg",
+  "cover_image": "assets/covers/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/fdb5708f-1197-4f80-b87e-bbd4f4dab43d",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/risc-v-processor-architecture/memory-mapped-i-o-access.md",
+  "tags": [
+    "recvw25utMdKk4",
+    "risc-v-processor-architecture",
+    "P0"
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/risc-v-processor-architecture.md",
+  "feishu": {
+    "record_id": "recvw25utMdKk4",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T15:53:07.979882+08:00",
+    "selection_fields": {
+      "Name": "Memory-Mapped I/O Access",
+      "Discipline": "Digital Electronics",
+      "Course": "RISC-V Processor Architecture"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25utMdKk4",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T15:53:07.979882+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "v1",
+      "page_status": "pending",
+      "attachment": {
+        "video_version": "risc-v-20261009-v1",
+        "video_bytes": 2676551,
+        "issue_number": 123,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+        "comment_id": 6076840483,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076840483",
+        "attachment_url": "https://github.com/user-attachments/assets/fdb5708f-1197-4f80-b87e-bbd4f4dab43d",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/fdb5708f-1197-4f80-b87e-bbd4f4dab43d",
+      "issue_number": 123,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

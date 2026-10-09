@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+  "reviewed_at": "2026-10-09T07:15:07.456605+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow.mp4",
+  "video_version": {
+    "size": 2518016,
+    "mtime_ns": 1791529599206566257
+  },
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-sheet.jpg"
+  ],
+  "observations": [
+    "Viewed v1 overview and nine risk panels. The same-cycle indicator advances across fetch, base/offset, address, memory and pending-write diagrams.13.5s effective address0x1008 is separate from latermemorydata42.",
+    "At16.9667s memoryrow0x1008 contains42 but output isblank;17/17.0333s that row is selected andoutput42 appears while memory stillretains42.23s shows pendingx5=42 andnextPC0x204 beside storedx5=0/PC0x200.",
+    "At26.9667s storedx5=0 andPC0x200;27/27.0333s both change tox5=42 andPC0x204 at the depicted single edge, withx6=0x1000 unchanged. No observed layout collision; source/address/data/architectural-state roles are visually distinct."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "address-is-not-data",
+      "times_seconds": [
+        11.966666666666667,
+        12.0,
+        12.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0359.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0360.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0361.png"
+      ],
+      "observation": "11.9667s base0x1000 andoffset8 feed a blankeffective-address slot;12/12.0333s thatslot becomes0x1008, with no loaded42 orregisterwrite implied."
+    },
+    {
+      "risk_id": "selected-word",
+      "times_seconds": [
+        16.966666666666665,
+        17.0,
+        17.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0509.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0510.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0511.png"
+      ],
+      "observation": "16.9667s outputblank;17/17.0333s selected0x1008row retains42 and copiedmemorydata becomes42. Other rowsremain7/19."
+    },
+    {
+      "risk_id": "one-edge-commit",
+      "times_seconds": [
+        26.966666666666665,
+        27.0,
+        27.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0809.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0810.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/single-cycle-datapath-instruction-flow/risk-0811.png"
+      ],
+      "observation": "26.9667s showsstoredx5=0/PC0x200;27/27.0333s bothread42/0x204, whilex6 remains0x1000. Single-cycleprogress/clockedge is consistent with simultaneous architecturalupdates."
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Actual address/data tokens, selected memoryrow and separatepending/stored values explain a load without titletext."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "The effectiveaddress, selectedreadoutput and finalregister/PC values change through causally linked phases."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "Concrete42 reaches the pending andstoredregister andPC changes at the samevisibleedge; not only acompletionlabel."
+    }
+  ],
+  "course_comparison": "Viewedrv01–05 together: encodingfielddecoding,registerportstorage,immediatebitassembly,ALUcount/bitoperations,andloadnextstate use distinct main diagrams and stateprocesses; no title-only substitution observed.",
+  "layout": "No visually observed body-text collision in inspectedoverview/riskframes; authoritative full-batch geometry gate is separately recorded bymain controller."
+}

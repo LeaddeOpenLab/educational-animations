@@ -1,0 +1,8 @@
+cwd: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+command: '/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv11.cjs
+exit_code: 0
+rv11 PASS: killed identities removed, wrong writes suppressed, target PC and correct writeback bound to SVG
+command: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit
+exit_code: 0
+Source binding review: rv11State(frame) supplies PipelineLanes.instructions; killed entries are excluded from liveIds and absent at frame420; RegisterBank receives state.x5 while MemoryWords receives state.memory200. Probe SSR confirms ADDI99 removed and42 appears only after correct writeback.
+This is technical code-gate evidence only; final teaching review remains pending.

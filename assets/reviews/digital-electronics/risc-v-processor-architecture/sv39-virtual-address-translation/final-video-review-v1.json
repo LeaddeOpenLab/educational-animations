@@ -1,0 +1,117 @@
+{
+  "status": "failed",
+  "version": "v1",
+  "video_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/rv14-sv39-virtual-address-translation.mp4",
+  "video_version": {
+    "mtime_ns": 1791529849844585269,
+    "size": 3109154
+  },
+  "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+  "reviewed_at": "2026-10-09T07:16:18.885256+00:00",
+  "evidence": [
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/rv14-sv39-virtual-address-translation.mp4",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/overview.jpg",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-sheet.jpg"
+  ],
+  "observations": [
+    "3.00 s visible VA fields areVPN2=1,VPN1=2,VPN0=3,offset0x1A8.8.33/14.00/19.50 s overviews show the three correct address equations and PTE values.",
+    "However7.967\u21928.000,13.467\u219213.500 and18.967\u219219.000 s risk rows show only a blue-to-green row border. The Next table PPN/Leaf PPN outputs already show0x80001/0x80002/0x12345 before their read event and remain identical after. The read-return action is not represented.",
+    "Across the three read scenes the next base is already installed by the scene change; no actual prior PPN-to-base handoff is visible. Numeric formulas are correct but this fails the designed dependent table-walk action.",
+    "24.967\u219225.000 s physical-address cell appears as0x123451A8 while offset0x1A8 stays fixed;31.00 s x10=0x5A is visible. These valid later actions do not establish the missing three table-read mechanisms.",
+    "Observed table text is readable with no blocking collision; requested repair is mechanism design/logic, not typography."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "root-selection",
+      "times_seconds": [
+        7.966666666666667,
+        8.0,
+        8.033333333333333
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0239.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0240.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0241.png"
+      ],
+      "observation": "Frames239/240/241 already contain both PTE0x20000401 and outputPPN0x80001 before the selection. Only row color changes at240, so the output cannot be observed as caused by the read.",
+      "status": "failed"
+    },
+    {
+      "risk_id": "middle-selection",
+      "times_seconds": [
+        13.466666666666667,
+        13.5,
+        13.533333333333333
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0404.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0405.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0406.png"
+      ],
+      "observation": "Frames404/405/406 already contain outputPPN0x80002 in all three frames. Only row border changes at405; there is no prior-returned-PPN-to-next-base transfer.",
+      "status": "failed"
+    },
+    {
+      "risk_id": "leaf-stop",
+      "times_seconds": [
+        18.966666666666665,
+        19.0,
+        19.033333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0569.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0570.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0571.png"
+      ],
+      "observation": "Frames569/570/571 already show Leaf PPN0x12345 and readable-leaf result before the event. Only the row border changes, so the leaf decode/result is not demonstrated at its declared event.",
+      "status": "failed"
+    },
+    {
+      "risk_id": "offset-join",
+      "times_seconds": [
+        24.966666666666665,
+        25.0,
+        25.033333333333335
+      ],
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0749.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0750.png",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/review/rv14-sv39-virtual-address-translation/risk-0751.png"
+      ],
+      "observation": "Frames749/750/751: physical-address box absent before and appears with0x123451A8 at/after; unchanged offset0x1A8 remains visible. This individual step passes.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Sv39 indexes/PTEs and PA are identifiable numerical objects, so the picture is more than anonymous boxes."
+    },
+    {
+      "id": 2,
+      "triggered": true,
+      "reason": "The three declared PTE-read events change only highlight; the next-PPN output is already present. The core dependent read mechanism is unproven."
+    },
+    {
+      "id": 3,
+      "triggered": true,
+      "reason": "Next-table/leaf decode results are displayed in advance rather than produced by their visible reads; subsequent base handoff is skipped by scene replacement."
+    }
+  ],
+  "review_method": "Actual final MP4 overview and cropped before/at/after risk sheets were inspected with view_image. This is frame-based video-content review; no browser/playback test was performed.",
+  "repairs": [
+    {
+      "type": "logic",
+      "frames": [
+        239,
+        240,
+        404,
+        405,
+        569,
+        570
+      ],
+      "required": "Before each read, keep returned PPN/leaf result pending; upon actual PTE read populate it. Carry the returned PPN into the next table base as a visible data handoff, rather than merely switching a prefilled scene."
+    }
+  ]
+}

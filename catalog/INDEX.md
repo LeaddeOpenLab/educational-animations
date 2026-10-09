@@ -587,3 +587,20 @@
 - [recvw25vjMKZj2 · Hardware Delegate Operator Partitioning](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmkzj2) — video
 - [recvw25vjMRg6A · Latency and Energy Measurement on Device](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25vjmrg6a) — video
 - [recvw25wapJvFX · Confidence Threshold for Edge Classification](digital-electronics/edge-ai-embedded-machine-learning.md#recvw25wapjvfx) — video
+## RISC-V Processor Architecture
+
+- [recvw25utMYuhh · RISC-V Instruction Encoding Fields](digital-electronics/risc-v-processor-architecture.md#recvw25utmyuhh) — video
+- [recvw25utMYmGk · Register File Read and Write Ports](digital-electronics/risc-v-processor-architecture.md#recvw25utmymgk) — video
+- [recvw25utMTyz5 · Immediate Generation from Instruction Bits](digital-electronics/risc-v-processor-architecture.md#recvw25utmtyz5) — video
+- [recvw25utMLp5p · ALU Control from Opcode and Function Bits](digital-electronics/risc-v-processor-architecture.md#recvw25utmlp5p) — video
+- [recvw25utMJbgr · Single-Cycle Datapath Instruction Flow](digital-electronics/risc-v-processor-architecture.md#recvw25utmjbgr) — video
+- [recvw25utM8s8D · Program Counter Update for Branches](digital-electronics/risc-v-processor-architecture.md#recvw25utm8s8d) — video
+- [recvw25utM3TFR · Load and Store Address Calculation](digital-electronics/risc-v-processor-architecture.md#recvw25utm3tfr) — video
+- [recvw25utMuzEE · Pipeline Register Data Transfer](digital-electronics/risc-v-processor-architecture.md#recvw25utmuzee) — video
+- [recvw25utMKYLD · Data Hazard Forwarding Paths](digital-electronics/risc-v-processor-architecture.md#recvw25utmkyld) — video
+- [recvw25utMtQGj · Load-Use Pipeline Stall](digital-electronics/risc-v-processor-architecture.md#recvw25utmtqgj) — video
+- [recvw25utMj0nN · Branch Prediction and Misprediction Flush](digital-electronics/risc-v-processor-architecture.md#recvw25utmj0nn) — video
+- [recvw25utMdNQX · Precise Trap Entry and Return](digital-electronics/risc-v-processor-architecture.md#recvw25utmdnqx) — video
+- [recvw25utMVScO · Privilege Mode Transition](digital-electronics/risc-v-processor-architecture.md#recvw25utmvsco) — video
+- [recvw25utMxdLZ · Sv39 Virtual Address Translation](digital-electronics/risc-v-processor-architecture.md#recvw25utmxdlz) — video
+- [recvw25utMdKk4 · Memory-Mapped I/O Access](digital-electronics/risc-v-processor-architecture.md#recvw25utmdkk4) — video

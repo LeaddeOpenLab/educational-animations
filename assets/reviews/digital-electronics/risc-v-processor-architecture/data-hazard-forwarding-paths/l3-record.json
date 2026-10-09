@@ -1,0 +1,555 @@
+{
+  "id": "rv09-data-hazard-forwarding-paths",
+  "record_id": "recvw25utMKYLD",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Data Hazard Forwarding Paths",
+  "standard_name": "Data Hazard Forwarding Paths",
+  "Name": "Data Hazard Forwarding Paths",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Show how bypassed values replace stale register operands before dependent instructions execute.",
+  "learning_objective": "Show how bypassed values replace stale register operands before dependent instructions execute.",
+  "core_conclusion": "Forwarding sends a producer’s newest result directly to a dependent operand, avoiding waits for register writeback when that result is ready.",
+  "status": "IN_PROGRESS",
+  "artifact_version": "v1",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "scope": "Illustrative five-stage pipeline with EX/MEM-to-EX and MEM/WB-to-EX forwarding, one-cycle ALU, operand selection before EX computation. RISC-V specifies results, not these forwarding routes.",
+    "references": [
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+        "verified": "2026-10-09",
+        "basis": "Sodor implements bypass selection by matching destination/source tags and selecting carried values; exact route placement varies by implementation."
+      },
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "ADD, SUB and XOR operate on source register values and write their rd."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+        "scope": "Sodor implements bypass selection by matching destination/source tags and selecting carried values; exact route placement varies by implementation."
+      },
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "ADD, SUB and XOR operate on source register values and write their rd."
+      }
+    ]
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "dependency",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "I1 ADD x5,x1,x2",
+          "I2 SUB x6,x5,x3",
+          "I3 XOR x7,x5,x4",
+          "x1=7,x2=5,x3=10,x4=15",
+          "old x5=0"
+        ],
+        "initial_state": "I1 in EX, I2 in ID, I3 in IF.",
+        "trigger": "I1 evaluates its ALU operands.",
+        "change": "Combine7 and5 into12 while register x5 visibly remains0; show source tag x5 on younger consumers.",
+        "cause": "I1 evaluates its ALU operands.",
+        "result": "The newest value12 exists in the pipeline before register writeback.",
+        "english_copy": [
+          "The register still holds an old value.",
+          "The producer already computed 12."
+        ]
+      },
+      {
+        "id": "near-bypass",
+        "start_seconds": 6,
+        "end_seconds": 14,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "I1 MEM result12",
+          "I2 EX operandA old0",
+          "EX/MEM value12",
+          "rs1=5,rd=5"
+        ],
+        "initial_state": "Producer moves to MEM while consumer enters EX; operandA would be0 from earlier register read.",
+        "trigger": "Matching destination and source select EX/MEM forwarding.",
+        "change": "Carry token12 from EX/MEM into I2 operandA; replace visible0 with12; compute SUB12−10=2.",
+        "cause": "Matching destination and source select EX/MEM forwarding.",
+        "result": "SUB result2 appears while architectural x5 is still0.",
+        "english_copy": [
+          "EX/MEM forwards 12 to EX.",
+          "12 − 10 = 2."
+        ]
+      },
+      {
+        "id": "far-bypass",
+        "start_seconds": 14,
+        "end_seconds": 23,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "I1 WB result12",
+          "I3 EX operandA old0",
+          "MEM/WB value12",
+          "x4=15"
+        ],
+        "initial_state": "I1 reaches WB and I3 reaches EX one cycle later.",
+        "trigger": "The second consumer matches the older MEM/WB producer.",
+        "change": "Move token12 along the longer bypass route to XOR operandA; replace stale0 and evaluate binary1100 XOR1111=0011.",
+        "cause": "The second consumer matches the older MEM/WB producer.",
+        "result": "XOR result3 is visible; the route carries an actual value rather than only highlighting a wire.",
+        "english_copy": [
+          "MEM/WB supplies the same 12.",
+          "1100 XOR 1111 = 0011."
+        ]
+      },
+      {
+        "id": "commit-results",
+        "start_seconds": 23,
+        "end_seconds": 30,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "x5=0 or12 at WB",
+          "x6=0",
+          "x7=0",
+          "pending results12,2,3"
+        ],
+        "initial_state": "Dependent ALU results exist with their destination tags.",
+        "trigger": "Writeback advances in program order.",
+        "change": "Write12 to x5, then2 to x6, then3 to x7; retain the earlier operand snapshot to show bypass acted before those writes.",
+        "cause": "Writeback advances in program order.",
+        "result": "Final registers are x5=12,x6=2,x7=3 with no bubble inserted.",
+        "english_copy": [
+          "Forwarding feeds operands early.",
+          "Writeback still updates the register file."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "near-value-replacement",
+        "scene_id": "near-bypass",
+        "uncertainty": "A highlighted route must actually replace stale operand0 with12.",
+        "expected_observation": "x5 still0; EX input changes0→12; SUB produces2."
+      },
+      {
+        "id": "far-value-replacement",
+        "scene_id": "far-bypass",
+        "uncertainty": "Second route must carry12 from MEM/WB and feed XOR.",
+        "expected_observation": "I3 input changes0→12 and XOR outputs3."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "exmem-arrival",
+        "time_seconds": 10,
+        "reason": "Check carried12, architectural x5 still0, result2.",
+        "frame": 300,
+        "sample_frames": [
+          299,
+          300,
+          301
+        ]
+      },
+      {
+        "id": "memwb-arrival",
+        "time_seconds": 18,
+        "reason": "Check second route source, carried12 and XOR3.",
+        "frame": 540,
+        "sample_frames": [
+          539,
+          540,
+          541
+        ]
+      },
+      {
+        "id": "writeback",
+        "time_seconds": 26,
+        "reason": "Check final destinations and results.",
+        "frame": 780,
+        "sample_frames": [
+          779,
+          780,
+          781
+        ]
+      },
+      {
+        "id": "sub-result",
+        "time_seconds": 11,
+        "frame": 330,
+        "sample_frames": [
+          329,
+          330,
+          331
+        ],
+        "reason": "Actual SUB result becomes2."
+      },
+      {
+        "id": "xor-result",
+        "time_seconds": 19,
+        "frame": 570,
+        "sample_frames": [
+          569,
+          570,
+          571
+        ],
+        "reason": "Actual XOR result becomes3."
+      }
+    ],
+    "state_model": {
+      "function": "forwardState(frame)",
+      "inputs": {
+        "initialX5": 0,
+        "a": 7,
+        "b": 5,
+        "subtrahend": 10,
+        "xorMask": 15
+      },
+      "planned_bindings": [
+        "producer stage → PipelineLanes stage and payload12",
+        "bypass token position → DataTokens x/y",
+        "selected operand → EX operand value and arithmetic result",
+        "registerWrites → RegisterBank values"
+      ],
+      "invariants": [
+        "Forwarded operand=12 before x5 is written.",
+        "SUB result2 and XOR result3 use same producer12.",
+        "No forwarded x0 value; selection assumes RegWrite true and rd nonzero.",
+        "All three instructions advance without a stall."
+      ],
+      "b1_samples_seconds": [
+        5,
+        9.9667,
+        10,
+        10.0333,
+        13,
+        17.9667,
+        18,
+        18.0333,
+        26,
+        29
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv09-state.ts",
+      "bindings": [
+        "producer stage → PipelineLanes stage and payload12",
+        "bypass token position → DataTokens x/y",
+        "selected operand → EX operand value and arithmetic result",
+        "registerWrites → RegisterBank values"
+      ],
+      "probe_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv09-probe.tsx"
+    },
+    "scene_rationale": "Four scenes establish the stale/new value split, demonstrate the near route, demonstrate the older route with a different operation, and reconcile forwarding with eventual register writes. Two paths need actual payload substitutions rather than two decorative arrows.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T06:55:52.796232+00:00",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv09.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "results": {
+          "status": "PASS",
+          "record": "rv09",
+          "checks": 19,
+          "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/b1.log",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv09-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv09-state.ts",
+        "source_version": {
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv09-state.ts": {
+            "mtime_ns": 1791528803878479021,
+            "size": 966
+          },
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv09-probe.tsx": {
+            "mtime_ns": 1791528843045598915,
+            "size": 742
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Manual state-to-visible-props source inspection plus React SSR of actual probe at boundaries.",
+          "basis": "forwardState(frame) supplies PipelineLanes stage/payload, token12 travel coordinates and actual selected EX operand/result text. Operand changes0→12 at300/540 while architectural x5 remains0 until690, proving bypassed data rather than route highlighting."
+        },
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "applicable_record_ids": [
+          "recvw25utMKYLD"
+        ],
+        "scope": "Technical authorization for full implementation only; final video teaching review remains pending."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T07:03:55.371703+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx",
+        "source_version": {
+          "mtime_ns": 1791529315757592908,
+          "size": 4872
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Continuous instruction identity/stage and concrete payload12 are drawn through two distinct bypass paths. forwardState drives selected operand values, SUB2/XOR3 and eventual register writes; actual full SVG verified at300/540.",
+          "method": "Read each full scene plus27 actual SSR boundary/semantic assertions across5 files; full TSX imports state but never probe or a shared L3 implementation."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv-full-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_scene_checks": 27,
+          "b1_rerun": {
+            "status": "PASS",
+            "record": "rv09",
+            "checks": 19,
+            "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+          },
+          "typecheck_exit_code": 0,
+          "quality_warning": "Compact JSX lines below180; reviewed topic-specific mechanism complete. Final visual review required."
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/c-source-check.log",
+        "applicable_record_ids": [
+          "recvw25utMKYLD"
+        ],
+        "scope": "Technical full-source evidence only; no video teaching approval."
+      }
+    ],
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx",
+    "l2_requirements": {
+      "status": "MAPPED",
+      "additional_components_required": false,
+      "basis": "Reviewed actual typed RiscV.tsx: fraction-valued stage, explicit row and value, free DataTokens x/y, numeric RegisterBank and MemoryWords satisfy these actions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      140,
+      285,
+      360,
+      520,
+      600,
+      865
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv09-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+    "reviewed_at": "2026-10-09T07:15:49.877264+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+      "reviewed_at": "2026-10-09T07:15:49.877264+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "exmem-arrival",
+          "times_seconds": [
+            9.966666666666667,
+            10.0,
+            10.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0299.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0300.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0301.png"
+          ],
+          "observation": "At9.9667s the EX calculation reads0−10=? besideRegisterx5=0. At10.0000s/10.0333s it reads12−10=? whilex5 still0; carried payload12 has reachedEX.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "memwb-arrival",
+          "times_seconds": [
+            17.966666666666665,
+            18.0,
+            18.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0539.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0540.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0541.png"
+          ],
+          "observation": "At17.9667s XOR input is0000 with unknown output. At18.0000s/18.0333s input becomes1100 anddecimal12 while the output remains unknown until the later result event.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "writeback",
+          "times_seconds": [
+            25.966666666666665,
+            26.0,
+            26.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0779.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0780.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0781.png"
+          ],
+          "observation": "At25.9667s registers are12,0,0. At26.0000s/26.0333s thex6 row changes to2 whilex5 remains12 andx7 remains0; overview28.833s additionally showsx7=3.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "sub-result",
+          "times_seconds": [
+            10.966666666666667,
+            11.0,
+            11.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0329.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0330.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0331.png"
+          ],
+          "observation": "At10.9667sSUB output is?; at11.0000s/11.0333s the calculation is12−10=2 andtheSUB pipeline token carries2, whilearchitecturalx5=0.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "xor-result",
+          "times_seconds": [
+            18.966666666666665,
+            19.0,
+            19.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0569.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0570.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0571.png"
+          ],
+          "observation": "At18.9667s output is????; at19.0000s/19.0333s it becomes0011 anddecimal3, with3 also on theXOR token.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "4.667s showsADD inEX with12 while architecturalx5=0. At9.50sADD is inMEM,SUB inEX and a12 payload is traveling backward; the operand is still0. At12.00s the operand is12 andSUB result is2 whilex5 remains0.",
+        "17.333→20.00s:ADD reachesWB andXOR reachesEX. The longerMEM/WB path carries12; the displayed binary operand changes0000→1100, then output becomes0011 anddecimal3.",
+        "25.967→26.000s x6 changes0→2 whilex5 already12 andx7 still0. At28.833s registers readx5=12,x6=2,x7=3. Although the diagram has pipeline lanes, concrete carried values, stale operand replacement and computations make the process visible. No text collision observed."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "l3": "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/l3-record.json",
+    "tsx": "assets/source-kits/risc-v-processor-architecture/src/videos/rv09-data-hazard-forwarding-paths.tsx"
+  },
+  "feishu_record_id": "recvw25utMKYLD",
+  "requirement_prompt": "Data Hazard Forwarding Paths; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Data Hazard Forwarding Paths: Use the Newest Value",
+  "title": "Data Hazard Forwarding Paths: Use the Newest Value",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Data Hazard Forwarding Paths: produce 12 with ADD while architectural x5 still holds zero; carry the EX/MEM result backward to replace the next SUB operand with 12 before computing 12-10=2, then route the older MEM/WB value to a later XOR so its input changes from 0000 to 1100 and 1100 XOR 1111 yields 0011, or 3; finish with normal writes x5=12, x6=2, and x7=3 without inserting a bubble.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel carries the producer value along the near and older bypass paths; replace operands at frames 300 and 540, then populate results at 330 and 570 before normal writeback; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.799817+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/cover-02.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/data-hazard-forwarding-paths-geometry.json"
+    ],
+    "observations": [
+      "Stale architectural0 contrasted withEX/MEM12 forwarded toEX, SUB result2.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

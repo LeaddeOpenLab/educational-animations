@@ -1,0 +1,566 @@
+{
+  "id": "rv03-immediate-generation-from-instruction-bits",
+  "record_id": "recvw25utMTyz5",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Immediate Generation from Instruction Bits",
+  "standard_name": "Immediate Generation from Instruction Bits",
+  "Name": "Immediate Generation from Instruction Bits",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Reconstruct signed immediates from I, S and B instruction fields, making sign extension, split-field concatenation and the fixed branch low zero visible.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "references": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "RV32I immediate generation from I/S/B formats, excluding shift-immediate special encodings. This lesson physically rebuilds bit strings; it does not show PC selection or memory address execution."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "verified": "2026-10-09",
+        "basis": "Exact instruction opcode, funct3 and funct7 encodings."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "RV32I immediate generation from I/S/B formats, excluding shift-immediate special encodings. This lesson physically rebuilds bit strings; it does not show PC selection or memory address execution."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "scope": "Opcode fields for numeric examples"
+      }
+    ],
+    "scope": "RV32I immediate generation from I/S/B formats, excluding shift-immediate special encodings. This lesson physically rebuilds bit strings; it does not show PC selection or memory address execution."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "islice",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "ADDI x5,x6,-4",
+          "word0xFFC30293",
+          "inst[31:20]=111111111100"
+        ],
+        "initial_state": "Immediate bits are embedded in an I-type word.",
+        "cause": "Extract inst[31:20].",
+        "trigger": "Extract inst[31:20].",
+        "change": "Lift the12-bit slice into an initially empty immediate row without changing its bit order.",
+        "result": "The extracted12-bit pattern is0xFFC.",
+        "english_copy": [
+          "I-type: take bits 31:20."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "sign",
+        "start_seconds": 5,
+        "end_seconds": 11,
+        "objects": [
+          "sign bit1",
+          "12-bit0xFFC",
+          "20 extension bits",
+          "32-bit0xFFFFFFFC"
+        ],
+        "initial_state": "Only12 low bits exist in the output row.",
+        "cause": "Replicate the sign bit inst31 at7s.",
+        "trigger": "Replicate the sign bit inst31 at7s.",
+        "change": "Fill20 upper positions with ones from the sign-bit source, then join the32-bit value.",
+        "result": "0xFFFFFFFC represents −4, not4092.",
+        "english_copy": [
+          "Copy the sign bit into the upper bits.",
+          "0xFFFFFFFC = −4"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "split",
+        "start_seconds": 11,
+        "end_seconds": 16,
+        "objects": [
+          "SW x5,12(x6)",
+          "word0x00532623",
+          "inst31:25=0000000",
+          "inst11:7=01100"
+        ],
+        "initial_state": "Two immediate fragments are separated by register and function fields.",
+        "cause": "Select the S-type mapping.",
+        "trigger": "Select the S-type mapping.",
+        "change": "Lift both fragments from opposite regions of the instruction while leaving rs1 andrs2 in place.",
+        "result": "The two pieces are isolated in their correct high/low roles.",
+        "english_copy": [
+          "S-type: the immediate is split."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "join",
+        "start_seconds": 16,
+        "end_seconds": 21,
+        "objects": [
+          "imm11:5=0000000",
+          "imm4:0=01100",
+          "12-bit output000000001100"
+        ],
+        "initial_state": "High and low fragments remain separated.",
+        "cause": "Concatenate at18s.",
+        "trigger": "Concatenate at18s.",
+        "change": "Slide the7-bit high fragment beside the5-bit low fragment; fill upper20 bits with zeros.",
+        "result": "The generated signed32-bit offset is+12.",
+        "english_copy": [
+          "Join high bits with low bits.",
+          "The byte offset is +12."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "branch",
+        "start_seconds": 21,
+        "end_seconds": 27,
+        "objects": [
+          "BEQ x1,x2,+16",
+          "word0x00208863",
+          "inst31,7,30:25,11:8",
+          "fixed low0"
+        ],
+        "initial_state": "Branch immediate bits are in instruction order.",
+        "cause": "Select B-type mapping.",
+        "trigger": "Select B-type mapping.",
+        "change": "Reorder copied fields into imm12,imm11,imm10:5,imm4:1 and append a visible literal0 at imm0.",
+        "result": "The13-bit signed offset is0000000010000, or+16bytes.",
+        "english_copy": [
+          "B-type: rearrange, then append zero.",
+          "imm[0] is always zero."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "values",
+        "start_seconds": 27,
+        "end_seconds": 30,
+        "objects": [
+          "I result−4",
+          "S result+12",
+          "B result+16"
+        ],
+        "initial_state": "Three generated outputs are available.",
+        "cause": "Collect the completed conversions.",
+        "trigger": "Collect the completed conversions.",
+        "change": "Move the three final32-bit offset tokens into aligned I/S/B result slots, retaining miniature source-fragment shapes above them.",
+        "result": "Different encodings produce usable signed byte offsets.",
+        "english_copy": [
+          "I: −4   S: +12   B: +16"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      }
+    ],
+    "scene_rationale": "Six scenes are needed because extraction and sign replication differ from S concatenation and B rearrangement. Each mapping has its own actual field movement; the final compact comparison avoids repeating explanations.",
+    "critical_processes": [
+      {
+        "id": "signed-extension",
+        "scene_id": "sign",
+        "uncertainty": "Negative value must be sign extended, not zero extended.",
+        "expected_observation": "Upper20 ones produce0xFFFFFFFC=−4."
+      },
+      {
+        "id": "s-reassembly",
+        "scene_id": "join",
+        "uncertainty": "Nonadjacent encoding slices become adjacent immediate bits.",
+        "expected_observation": "7+5bits form000000001100."
+      },
+      {
+        "id": "b-reassembly",
+        "scene_id": "branch",
+        "uncertainty": "Branch permutation includes an implicit low zero.",
+        "expected_observation": "0|0|000000|1000|0 becomes+16."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "sign-replication",
+        "time_seconds": 7,
+        "reason": "Upper20 bits must become ones for negative I immediate."
+      },
+      {
+        "id": "s-concatenate",
+        "time_seconds": 18,
+        "reason": "High7 and low5 bits must preserve order."
+      },
+      {
+        "id": "b-reorder",
+        "time_seconds": 24,
+        "reason": "inst7 is imm11, not the low bit; appended bit0 is0."
+      }
+    ],
+    "state_model": {
+      "function": "rv03State(frame)",
+      "inputs": {
+        "iWord": 4290970259,
+        "sWord": 5449251,
+        "bWord": 2132067,
+        "iRaw": 4092,
+        "iSigned": -4,
+        "sSigned": 12,
+        "bSigned": 16,
+        "signSecond": 7,
+        "joinSecond": 18,
+        "branchAssembleSecond": 24,
+        "bMapping": [
+          "inst31→imm12",
+          "inst7→imm11",
+          "inst30:25→imm10:5",
+          "inst11:8→imm4:1",
+          "0→imm0"
+        ]
+      },
+      "planned_bindings": [
+        "instruction extraction functions -> actual BitFields value strings",
+        "sign bit -> upper20 output bits",
+        "S fragment progress -> positions of7+5-bit fields",
+        "B mapping -> ordered parts values and fixed low-zero cell"
+      ],
+      "invariants": [
+        "Sign extending0xFFC from12bits gives−4/0xFFFFFFFC.",
+        "S concatenate0000000+01100 gives12.",
+        "B decode0x00208863 gives16 with bit0=0.",
+        "The branch offset is not shifted twice."
+      ],
+      "b1_samples_seconds": [
+        0,
+        6.966667,
+        7,
+        7.033333,
+        17.966667,
+        18,
+        18.033333,
+        23.966667,
+        24,
+        24.033333,
+        29
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv03-state.ts",
+      "bindings": [
+        "instruction extraction functions -> actual BitFields value strings",
+        "sign bit -> upper20 output bits",
+        "S fragment progress -> positions of7+5-bit fields",
+        "B mapping -> ordered parts values and fixed low-zero cell"
+      ]
+    },
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T06:55:53.872050+00:00",
+        "reviewer": "rv_design_01_05",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv03.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "assertion_log": "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/b1.log",
+        "results": {
+          "checks": 65,
+          "status": "PASS",
+          "record_specific": "I sign209/210/211; S join539/540/541; B permutation719/720/721; computed outputs -4,12,16 PASS",
+          "render_binding": "SSR comparison confirms corresponding SVG changes."
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Read frame-to-state-to-props chain and execute SSR checks from the same mechanism source.",
+          "basis": "rv03State computes I/S/B fields from words. I upperBits feed actual BitFields. S fragment coordinates feed DataTokens. B fragment coordinates reorder and the imm0 token appears only at frame720. All shown numeric outputs use decode functions."
+        },
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv03-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv03-state.ts",
+        "source_version": {
+          "mtime_ns": 1791528913529507744,
+          "size": 556
+        },
+        "state_version": {
+          "mtime_ns": 1791528913529154451,
+          "size": 1819
+        },
+        "applicable_record_ids": [
+          "recvw25utMTyz5"
+        ],
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes full implementation of this mechanism only. Does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T07:04:18.288211+00:00",
+        "reviewer": "rv_design_01_05",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx",
+        "source_version": {
+          "mtime_ns": 1791529177418285796,
+          "size": 6623
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "I upper bits, S fragment positions, B permutation positions and fixed zero all come from the verified state; final numeric offsets use actual decode functions.",
+          "method": "Inspect full scene composition and state-driven geometry/data; execute actual full SCENES through SSR at each risk previous/exact/next frame."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-full-rv01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_binding_checks": 48,
+          "full_binding_status": "PASS",
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "mechanism_state_unchanged": true,
+          "quality_warning": "Compact source below180 non-comment lines. Independent topic scenes include the complete mechanism; no padding, probe wrapping or shared scene factory. Final video teaching review remains required."
+        },
+        "applicable_record_ids": [
+          "recvw25utMTyz5"
+        ],
+        "scope": "Technical source gate only; not a final-video teaching decision."
+      }
+    ],
+    "previews": [],
+    "design_audit": {
+      "visualArgument": "Reconstruct signed immediates from I, S and B instruction fields, making sign extension, split-field concatenation and the fixed branch low zero visible.",
+      "motion": "Lift the12-bit slice into an initially empty immediate row without changing its bit order. Fill20 upper positions with ones from the sign-bit source, then join the32-bit value. Lift both fragments from opposite regions of the instruction while leaving rs1 andrs2 in place. Slide the7-bit high fragment beside the5-bit low fragment; fill upper20 bits with zeros. Reorder copied fields into imm12,imm11,imm10:5,imm4:1 and append a visible literal0 at imm0. Move the three final32-bit offset tokens into aligned I/S/B result slots, retaining miniature source-fragment shapes above them.",
+      "example": {
+        "iWord": 4290970259,
+        "sWord": 5449251,
+        "bWord": 2132067,
+        "iRaw": 4092,
+        "iSigned": -4,
+        "sSigned": 12,
+        "bSigned": 16,
+        "signSecond": 7,
+        "joinSecond": 18,
+        "branchAssembleSecond": 24,
+        "bMapping": [
+          "inst31→imm12",
+          "inst7→imm11",
+          "inst30:25→imm10:5",
+          "inst11:8→imm4:1",
+          "0→imm0"
+        ]
+      },
+      "antiTemplate": "RV32I immediate generation from I/S/B formats, excluding shift-immediate special encodings. This lesson physically rebuilds bit strings; it does not show PC selection or memory address execution.",
+      "sceneRationale": "Six scenes are needed because extraction and sign replication differ from S concatenation and B rearrangement. Each mapping has its own actual field movement; the final compact comparison avoids repeating explanations."
+    },
+    "implementation_notes": {
+      "l2": [
+        "RiscBoard",
+        "BitFields",
+        "DataTokens",
+        "RegisterBank",
+        "MemoryWords"
+      ],
+      "coordinate_space": "SVG viewBox 0 0 960 600; group transforms move field copies and actual payload tokens.",
+      "layout": "Split layout A. Keep diagram labels short; instruction bit ranges belong inside board.",
+      "minimal_l2_changes": "None; current primitives expose actual state values and positions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      100,
+      270,
+      430,
+      580,
+      760,
+      865
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv03-immediate-generation-from-instruction-bits.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv03-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.455276+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+      "reviewed_at": "2026-10-09T07:15:07.455276+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "sign-replication",
+          "times_seconds": [
+            6.966666666666667,
+            7.0,
+            7.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0209.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0210.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0211.png"
+          ],
+          "observation": "6.9667s upper20 is— while low111111111100 exists;7/7.0333s upper20 is11111111111111111111 and signedresult=-4."
+        },
+        {
+          "risk_id": "s-concatenate",
+          "times_seconds": [
+            17.966666666666665,
+            18.0,
+            18.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0539.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0540.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0541.png"
+          ],
+          "observation": "17.9667–18.0333s high7=0000000 andlow5=01100 sit in correct order; at18s combined000000001100 and0x0000000C/+12 appear."
+        },
+        {
+          "risk_id": "b-reorder",
+          "times_seconds": [
+            23.966666666666665,
+            24.0,
+            24.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0719.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0720.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/risk-0721.png"
+          ],
+          "observation": "23.9667s copiedimm12/11/10:5/4:1 fields arepresent with noimm0. At24/24.0333s a newimm0zero cell appears; output0000000010000 is16bytes, not8."
+        }
+      ],
+      "observations": [
+        "Viewed v1 overview and nine risk panels. I extraction shows111111111100 separated from the instruction. Sign source1 remains above an initially blank upper20 field, then at7s that field fills with20ones; output becomes0xFFFFFFFC=-4.",
+        "S high0000000 andlow01100 occupy adjacent slots at18s, with combined000000001100 and+12; they preserve high/low ordering. At24s B output appends a separateimm0=0 after0|0|000000|1000, giving0000000010000=+16.",
+        "The six scenes use distinct bit transformations and a final I/S/B result comparison; body text and field values are readable in viewed sheets, with no observed overlap."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publish": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "artifact_version": "v1",
+  "learning_objective": "Reconstruct signed immediates from I, S and B instruction fields, making sign extension, split-field concatenation and the fixed branch low zero visible.",
+  "core_conclusion": "Different encodings produce usable signed byte offsets.",
+  "feishu_record_id": "recvw25utMTyz5",
+  "requirement_prompt": "Immediate Generation from Instruction Bits; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Immediate Generation from Instruction Bits: Assemble Offsets",
+  "title": "Immediate Generation from Instruction Bits: Assemble Offsets",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on Immediate Generation from Instruction Bits: extract the I-type immediate 111111111100 and replicate its sign bit into twenty upper positions to obtain 0xFFFFFFFC, or -4; join the separated S-type high and low fields into 000000001100, or +12; rearrange B-type fragments and append a fixed low zero to obtain +16 bytes, then compare the three completed signed offsets.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel lifts the I-type slice over 70 frames and separates S-type fields over 75 frames; populate sign bits, assembled fields, and the fixed branch low-zero cell at their state boundaries; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.721217+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/cover-01.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits/immediate-generation-from-instruction-bits-geometry.json"
+    ],
+    "observations": [
+      "12-bit negative immediate flows to sign-extended0xFFFFFFFC.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

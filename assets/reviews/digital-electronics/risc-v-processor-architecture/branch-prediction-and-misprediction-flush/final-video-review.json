@@ -1,0 +1,88 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4",
+  "video_version": {
+    "mtime_ns": 1791529779689502635,
+    "size": 2739671
+  },
+  "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+  "reviewed_at": "2026-10-09T07:16:18.883240+00:00",
+  "evidence": [
+    "assets/videos/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush.mp4",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-sheet.jpg"
+  ],
+  "observations": [
+    "3.00→8.00 s overview shows younger ADDI99 and STORE99 behind BEQ4,4; the comparison actually displays4=4 and target0x110 versus fetch0x104.",
+    "11.967→12.000 s the two younger instruction cards gain invalidation crosses;13.967→14.000 s both cards and their99 payload disappear entirely while branch remains and x5=7/RAM0x200=0 remain intact.",
+    "20.50 s a fresh ADDI42 occupies the refilled pipeline, fetchPC=0x110;25.967→26.000 s its WB card disappears as x5 changes7→42 while RAM remains0.",
+    "Overview contains materially different instruction sets and architectural values across phases. Small-player layout and sampled numeric labels are readable without text collisions."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "flush-boundary",
+      "times_seconds": [
+        11.966666666666667,
+        12.0,
+        12.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0359.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0360.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0361.png"
+      ],
+      "observation": "Frames359/360/361: ADDI99 and STORE99 are valid before, crossed out at/after; BEQ remains in EX; x5=7 and RAM0 remain unchanged.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "empty-wrong-path",
+      "times_seconds": [
+        13.966666666666667,
+        14.0,
+        14.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0419.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0420.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0421.png"
+      ],
+      "observation": "Frames419/420/421: crossed-out A/W and99 payload visible before; all absent at/after, leaving the preserved branch and architectural cells.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "correct-commit",
+      "times_seconds": [
+        25.966666666666665,
+        26.0,
+        26.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0779.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0780.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/branch-prediction-and-misprediction-flush/risk-0781.png"
+      ],
+      "observation": "Frames779/780/781: target ADDI42 at WB before; then its instruction disappears and x5 changes7→42, while RAM0 stays0.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "Even without headings, concrete younger instructions disappear while committed cells persist and target42 later reaches x5."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "Instruction-set deletion and register7→42 are semantic changes beyond color and entrance effects."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "Wrong writes are removed and the correct writeback updates a visible register; outcome is not just a success label."
+    }
+  ],
+  "review_method": "Actual final MP4 overview and cropped before/at/after risk sheets were inspected with view_image. This is frame-based video-content review; no browser/playback test was performed.",
+  "repairs": []
+}

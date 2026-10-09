@@ -1,0 +1,41 @@
+{
+  "record_id": "recvw25utMuzEE",
+  "slug": "pipeline-register-data-transfer",
+  "version": "v2",
+  "source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/cover-audit-images/pipeline-register-data-transfer.png",
+  "canvas": [
+    1000,
+    900
+  ],
+  "figure_frame": [
+    180,
+    140,
+    820,
+    760
+  ],
+  "threshold": "Any RGB channel > 10, every pixel inspected",
+  "tolerances": {
+    "overflow_px": 2,
+    "center_x_px": 20,
+    "center_y_px": 30,
+    "minimum_width_px": 280,
+    "minimum_height_px": 280
+  },
+  "measured_at": "2026-10-09T07:48:30+00:00",
+  "visual_review_status": "PENDING",
+  "status": "PASSED",
+  "errors": [],
+  "bbox": [
+    269,
+    204,
+    730,
+    685
+  ],
+  "bbox_width": 461,
+  "bbox_height": 481,
+  "center_offset": [
+    -0.5,
+    -5.5
+  ],
+  "overflow_px": 0
+}

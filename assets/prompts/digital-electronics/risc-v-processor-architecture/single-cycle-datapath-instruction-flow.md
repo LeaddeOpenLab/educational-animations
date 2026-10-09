@@ -1,0 +1,9 @@
+# recvw25utMJbgr · Single-Cycle Datapath Instruction Flow
+
+Version: v1 · alignment: aligned
+
+A 30-second silent English educational animation for a university digital electronics course on Single-Cycle Datapath Instruction Flow: follow LW x5,8(x6) from instruction fetch at PC 0x200 through base x6=0x1000, effective address 0x1008, and a nondestructive read of memory value 42; distinguish ready x5=42 and next PC=0x204 from stored x5=0 and PC=0x200, then change both stored values together at the single completion edge at 27 seconds while preserving memory and the base register.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel sends the fetch address over 70 frames and copies the base register over 75 frames; progress one continuous cycle rail and change stored x5 and PC together at frame 810; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.

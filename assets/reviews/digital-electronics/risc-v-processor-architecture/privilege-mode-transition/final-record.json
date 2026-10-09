@@ -1,0 +1,440 @@
+{
+  "id": "recvw25utMVScO",
+  "feishu_record_id": "recvw25utMVScO",
+  "original_name": "Privilege Mode Transition",
+  "standard_name": "Privilege Mode Transition",
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "artifact_version": "v1",
+  "learning_objective": "Read MPP as saved privilege and demonstrate S→M trap entry followed by an MRET restoration of mode and interrupt-enable stack.",
+  "core_conclusion": "Current privilege and saved MPP are different state: trap entry saves the old mode, and MRET consumes that saved mode.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.riscv.org/reference/isa/v20240411/priv/machine.html"
+    ],
+    "scope": "Privileged ISA1.13 mstatus stack. Example hart supports M/S/U; no delegation or hypervisor; initial S-mode, MIE=1 and MPP=U. ECALL from S has cause9. Access policies are configured to allow the shown handler and return."
+  },
+  "references": [
+    {
+      "title": "docs.riscv.org — supporting reference",
+      "url": "https://docs.riscv.org/reference/isa/v20240411/priv/machine.html",
+      "scope": "Privileged ISA1.13 mstatus stack. Example hart supports M/S/U; no delegation or hypervisor; initial S-mode, MIE=1 and MPP=U. ECALL from S has cause9. Access policies are configured to allow the shown handler and return."
+    }
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx",
+    "scenes": [
+      {
+        "id": "separate",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Three privilege lanes U(00),S(01),M(11); active hart marker at S; mstatus.MPP=00; MIE=1; MPIE=0.",
+        "initial_state": "The hart runs S-mode while the saved previous-mode field reads U.",
+        "trigger": "Read current mode and saved MPP as two different quantities.",
+        "change": "Place the active hart in S and unfold MPP bits00 in a separate CSR area. The two markers deliberately occupy different rows.",
+        "cause": "Read current mode and saved MPP as two different quantities.",
+        "result": "MPP is visibly not a display of current privilege.",
+        "english_copy": [
+          "Current mode: S",
+          "MPP stores a previous mode"
+        ]
+      },
+      {
+        "id": "save",
+        "start_seconds": 6,
+        "end_seconds": 13,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Active S marker; MPP bits00; MIE=1/MPIE=0; S ECALL.",
+        "initial_state": "S is current, MPP=00, MIE=1 and MPIE=0.",
+        "trigger": "An undelegated S-mode ECALL enters M at8s.",
+        "change": "Copy S code01 into MPP; shift MIE value1 into MPIE; set MIE=0; move the active hart marker up to M. Show cause9 beside the entry.",
+        "cause": "An undelegated S-mode ECALL enters M at8s.",
+        "result": "Current mode is M while MPP remains S(01); interrupt state was saved rather than lost.",
+        "english_copy": [
+          "Trap saves S in MPP",
+          "MIE -> MPIE; MIE <- 0"
+        ]
+      },
+      {
+        "id": "consume",
+        "start_seconds": 13,
+        "end_seconds": 21,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "MRET in M lane; MPP=01; MIE=0; MPIE=1; saved PC prepared by handler.",
+        "initial_state": "The active hart is M but MPP still records S.",
+        "trigger": "MRET executes at16s after the handler has selected its return PC.",
+        "change": "Move the MPP01 token to the S lane and relocate the hart M→S; restore MIE from MPIE1; reset MPIE to1 and MPP to00, the least supported privilege.",
+        "cause": "MRET executes at16s after the handler has selected its return PC.",
+        "result": "The restored active mode S differs from the reset MPP U; restoration uses the old MPP, not its new reset value.",
+        "english_copy": [
+          "MRET restores S from old MPP",
+          "Then MPP resets to U"
+        ]
+      },
+      {
+        "id": "compare",
+        "start_seconds": 21,
+        "end_seconds": 28,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Three snapshots: before trap / in handler / after MRET, containing active mode, MPP, MIE, MPIE.",
+        "initial_state": "The completed round trip is S→M→S.",
+        "trigger": "Lay out the actual saved states in event order.",
+        "change": "Move snapshots into adjacent columns: (S,U,1,0), (M,S,0,1), (S,U,1,1). Trace the active marker path separately from the MPP values.",
+        "cause": "Lay out the actual saved states in event order.",
+        "result": "Two S-mode snapshots have MPP=U; the M-mode handler snapshot has MPP=S. State transfer explains the transitions.",
+        "english_copy": [
+          "Active mode: S -> M -> S",
+          "Saved MPP: U -> S -> U"
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "mpp-stack",
+        "scene_id": "consume",
+        "uncertainty": "MRET must choose S from pre-reset MPP01 before resetting MPP00; treating MPP as the active mode would incorrectly return to U.",
+        "expected_observation": "On MRET active marker lands in S, MPP becomes U, MIE restores1 and MPIE becomes1."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "privilege-entry",
+        "time_seconds": 8,
+        "reason": "All entry stack values and mode change together.",
+        "frame": 240,
+        "sampling_frames": [
+          239,
+          240,
+          241
+        ]
+      },
+      {
+        "id": "mpp-consume",
+        "time_seconds": 16,
+        "reason": "Use pre-event MPP01 to choose S; reset MPP00 afterward in the same event.",
+        "frame": 480,
+        "sampling_frames": [
+          479,
+          480,
+          481
+        ]
+      }
+    ],
+    "example": {
+      "supported_modes": [
+        "U",
+        "S",
+        "M"
+      ],
+      "mode_codes": {
+        "U": "00",
+        "S": "01",
+        "M": "11"
+      },
+      "before": {
+        "mode": "S",
+        "MPP": "U",
+        "MIE": 1,
+        "MPIE": 0
+      },
+      "handler": {
+        "mode": "M",
+        "MPP": "S",
+        "MIE": 0,
+        "MPIE": 1
+      },
+      "returned": {
+        "mode": "S",
+        "MPP": "U",
+        "MIE": 1,
+        "MPIE": 1
+      }
+    },
+    "design_audit": {
+      "visualArgument": "An active-hart token moves between privilege lanes while independent saved-state bit cells copy, restore and reset; their differing values disprove the common MPP=current-mode misconception.",
+      "motion": "Mode-token transfer plus discrete stack-field copies at trap and return.",
+      "example": "Undelegated S ECALL with MIE1 enters M and saves MPP01; MRET returns S while MPP resets00.",
+      "antiTemplate": "This is a privilege-state stack, not a PC-address timeline or generic trap flow. The decisive picture shows active S alongside saved U.",
+      "sceneRationale": "Four scenes suffice: distinguish active/saved state, save on entry, consume on return, and compare the three actual snapshots. More handler detail would obscure MPP."
+    },
+    "state_model": {
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv13-state.ts",
+      "bindings": {
+        "bits": "BitFields fields bind MPP/MIE/MPIE to one privilegeState(frame).",
+        "hart": "DataTokens x/y comes from state.currentMode lane.",
+        "snapshots": "MemoryWords rows use exact state snapshots rather than independent labels."
+      },
+      "planned_assertions": [
+        "At entry239→240 modeS→M, MPPU→S, MIE1→0, MPIE0→1.",
+        "At return479→480 modeM→S, MPPS→U, MIE0→1, MPIE1 unchanged.",
+        "After return currentMode=S and MPP=U simultaneously."
+      ]
+    },
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T06:55:18.676275+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv13-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv13-state.ts",
+        "source_version": {
+          "state_mtime_ns": 1791528883372813105,
+          "probe_mtime_ns": 1791528883373265024,
+          "state_size": 595,
+          "probe_size": 799
+        },
+        "source_check": "rv13State(frame) saves old mode then consumes pre-resetMPP; probe hart translate y uses hartY and BitFields uses mppBits/mie/mpie. SSR confirms M y80 becomes S y220 whileMPP renders00.",
+        "assertion_command": "'/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv13.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv13 PASS: saved MPP consumed before reset, mode S restored, interrupt fields and token coordinates bound",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/b1.log",
+        "applicable_record_ids": [
+          "recvw25utMVScO"
+        ],
+        "limitations": "Minimal mechanism render binding checked via actual probe SSR; no final-video or teaching approval."
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T07:01:14.710635+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx",
+        "source_version": {
+          "mtime_ns": 1791529212126807077,
+          "size": 4605
+        },
+        "source_check": "Direct state-to-graphic bindings reviewed in final per-topic source; full SCENES SSR checks actual transition output, including removal, CSR transfer, mode token, PTE walk, or device pin geometry. Topic scene bodies compose their own L2/SVG and do not wrap probes.",
+        "assertion_command": "node scripts/assert-rv11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv13 FULL PASS: 4 independent scenes, 840frames, tested real scene state bindings",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/c-source-check.log"
+      }
+    ],
+    "rework": [],
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv13-state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv13-privilege-mode-transition.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+    "reviewed_at": "2026-10-09T07:16:18.884596+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/final-video-review.json",
+      "assets/videos/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.mp4",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+      "reviewed_at": "2026-10-09T07:16:18.884596+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/final-video-review.json",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "privilege-entry",
+          "times_seconds": [
+            7.966666666666667,
+            8.0,
+            8.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-0239.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-0240.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-0241.png"
+          ],
+          "observation": "Frames239/240/241: activeS/MPP00/MIE1/MPIE0 changes to activeM/MPP01/MIE0/MPIE1, and remains stable after.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "mpp-consume",
+          "times_seconds": [
+            15.966666666666667,
+            16.0,
+            16.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-0479.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-0480.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/risk-0481.png"
+          ],
+          "observation": "Frames479/480/481: activeM and MPP01 before; activeS with MPP00/MIE1/MPIE1 after. The moving saved-mode token readsS, preserving the old-state meaning.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.00 s active-hart token sits in the S lane while MPP00 says U;9.00 s token occupies M with MPP01,MIE0,MPIE1.",
+        "7.967→8.000 s the active token movesS→M and saved fields simultaneously change00/1/0→01/0/1.",
+        "15.967→16.000 s token movesM→S; MPP becomes00, MIE1 and MPIE1. The retained Consume old MPP token still carriesS, visibly distinguishing consumed old state from reset state.",
+        "23.33/26.67 s three-column before/in-handler/after comparison shows active S/M/S and MPP U/S/U. Layout and bit cells remain legible; no sampled collisions."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "MRET must choose S from pre-reset MPP01 before resetting MPP00; treating MPP as the active mode would incorrectly return to U.",
+  "requirement_prompt": "Privilege Mode Transition; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 28.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Privilege Mode Transition: Save and Restore the Mode",
+  "title": "Privilege Mode Transition: Save and Restore the Mode",
+  "prompt": "A 28-second silent English educational animation for a university digital electronics course on Privilege Mode Transition: distinguish the active hart in S-mode from saved MPP=00 for U-mode; move the hart to M on an undelegated trap while MPP becomes 01, MIE clears from 1 to 0, and MPIE receives 1; use the old saved S-mode during MRET to restore active S and MIE=1 while MPP resets to 00 and MPIE remains 1, then compare active S/M/S against saved U/S/U across the three snapshots.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel carries saved-mode and interrupt-enable tokens over 45 frames; update active and saved state separately at frames 240 and 480 and stagger final state columns by 12 frames; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 28.0,
+    "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+    "reviewed_at": "2026-10-09T07:16:18.884596+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/cover-03.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/privilege-mode-transition/privilege-mode-transition-geometry.json"
+    ],
+    "observations": [
+      "Active S→M and savedMPP←S are separate tokens; return restoresS.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  },
+  "status": "ready",
+  "video": "assets/videos/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.mp4",
+  "cover": "assets/covers/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.jpg",
+  "cover_image": "assets/covers/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/ebbe07cf-1360-4508-9cd7-d1618a194af0",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/risc-v-processor-architecture/privilege-mode-transition.md",
+  "tags": [
+    "recvw25utMVScO",
+    "risc-v-processor-architecture",
+    "P0"
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/risc-v-processor-architecture.md",
+  "feishu": {
+    "record_id": "recvw25utMVScO",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T15:53:07.979882+08:00",
+    "selection_fields": {
+      "Name": "Privilege Mode Transition",
+      "Discipline": "Digital Electronics",
+      "Course": "RISC-V Processor Architecture"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25utMVScO",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T15:53:07.979882+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "v1",
+      "page_status": "pending",
+      "attachment": {
+        "video_version": "risc-v-20261009-v1",
+        "video_bytes": 1967250,
+        "issue_number": 123,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+        "comment_id": 6076838150,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076838150",
+        "attachment_url": "https://github.com/user-attachments/assets/ebbe07cf-1360-4508-9cd7-d1618a194af0",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/ebbe07cf-1360-4508-9cd7-d1618a194af0",
+      "issue_number": 123,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

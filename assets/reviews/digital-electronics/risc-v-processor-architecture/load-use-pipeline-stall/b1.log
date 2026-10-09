@@ -1,0 +1,4 @@
+COMMAND: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv10.cjs
+CWD: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+EXIT: 0
+{"status":"PASS","record":"rv10","checks":32,"scope":"State boundaries plus SSR of actual minimal probe; not final teaching approval"}

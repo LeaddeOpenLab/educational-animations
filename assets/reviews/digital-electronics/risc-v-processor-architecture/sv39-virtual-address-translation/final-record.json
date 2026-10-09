@@ -1,0 +1,814 @@
+{
+  "id": "recvw25utMxdLZ",
+  "feishu_record_id": "recvw25utMxdLZ",
+  "original_name": "Sv39 Virtual Address Translation",
+  "standard_name": "Sv39 Virtual Address Translation",
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "artifact_version": "v2",
+  "learning_objective": "Decompose an Sv39 virtual address and follow three eight-byte PTE reads to a4KiB leaf, preserving the12-bit offset.",
+  "core_conclusion": "The page walk replaces the VPN with a leaf PPN while the page offset is copied unchanged.",
+  "terminology": {
+    "confirmed": true,
+    "sources": [
+      "https://docs.riscv.org/reference/isa/v20240411/priv/supervisor.html"
+    ],
+    "scope": "RV64 Sv39, canonical lower-half address, cold translation and4KiB page; S-mode read with valid accessible tables, U=0,R=1,A=1 leaf. Superpages, faults, TLB behavior and A/D updates are outside this numerical example."
+  },
+  "references": [
+    {
+      "title": "docs.riscv.org — supporting reference",
+      "url": "https://docs.riscv.org/reference/isa/v20240411/priv/supervisor.html",
+      "scope": "RV64 Sv39, canonical lower-half address, cold translation and4KiB page; S-mode read with valid accessible tables, U=0,R=1,A=1 leaf. Superpages, faults, TLB behavior and A/D updates are outside this numerical example."
+    }
+  ],
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx",
+    "scenes": [
+      {
+        "id": "slice",
+        "start_seconds": 0,
+        "end_seconds": 5.5,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "VA0x00000000404031A8; bit fields VPN[2]38:30,VPN[1]29:21,VPN[0]20:12,offset11:0.",
+        "initial_state": "The virtual address is a single64-bit value with bits63:39 equal to bit38=0.",
+        "trigger": "The Sv39 walker extracts three9-bit indexes and one12-bit offset.",
+        "change": "Split the displayed VA into grouped fields; populate VPN2=1,VPN1=2,VPN0=3,offset=0x1A8. Keep the offset token in a protected side lane.",
+        "cause": "The Sv39 walker extracts three9-bit indexes and one12-bit offset.",
+        "result": "The visual bit slicing yields indexes1/2/3 and an unchanged424-byte offset.",
+        "english_copy": [
+          "Sv39: 9 + 9 + 9 + 12 bits",
+          "Indexes1,2,3; offset0x1A8"
+        ]
+      },
+      {
+        "id": "root",
+        "start_seconds": 5.5,
+        "end_seconds": 11,
+        "reading_seconds": 1.5,
+        "timing_reason": "Read output changes at the read boundary, then a 45-frame spatial handoff demonstrates the causal receiver update before the next scene.",
+        "objects": "satp.PPN0x80000; root base0x80000000; VPN2=1; 8-byte PTE stride; table entry0x80000008.",
+        "initial_state": "The indexed table entry is visible in memory, but Returned PPN and its receiver remain pending until the PTE read.",
+        "trigger": "At frame 240, the indexed PTE read returns and its PPN field becomes 0x80001.",
+        "change": "The Returned PPN token changes from pending to 0x80001 at frame 240, then moves from (60,395) to receiver (555,505) over 45 frames. The receiver stays empty during transfer. At frame 285, arrival replaces the travelling token with 0x80001000 in that same slot.",
+        "cause": "The read supplies the PPN; only delivered pointer PPN supplies the next table base. A readable leaf supplies the physical page instead.",
+        "result": "At frame 285, receiver contains 0x80001000; offset 0x1A8 is retained. Subsequent table address derives from the delivered base, never from an anticipated PTE value.",
+        "english_copy": [
+          "L2: base + 1 x 8",
+          "Pointer -> table0x80001000"
+        ]
+      },
+      {
+        "id": "middle",
+        "start_seconds": 11,
+        "end_seconds": 16,
+        "reading_seconds": 1.0,
+        "timing_reason": "Read output changes at the read boundary, then a 45-frame spatial handoff demonstrates the causal receiver update before the next scene.",
+        "objects": "L1 base0x80001000; VPN1=2; selected entry0x80001010; PTE0x20000801.",
+        "initial_state": "The indexed table entry is visible in memory, but Returned PPN and its receiver remain pending until the PTE read.",
+        "trigger": "At frame 405, the indexed PTE read returns and its PPN field becomes 0x80002.",
+        "change": "The Returned PPN token changes from pending to 0x80002 at frame 405, then moves from (60,395) to receiver (555,505) over 45 frames. The receiver stays empty during transfer. At frame 450, arrival replaces the travelling token with 0x80002000 in that same slot.",
+        "cause": "The read supplies the PPN; only delivered pointer PPN supplies the next table base. A readable leaf supplies the physical page instead.",
+        "result": "At frame 450, receiver contains 0x80002000; offset 0x1A8 is retained. Subsequent table address derives from the delivered base, never from an anticipated PTE value.",
+        "english_copy": [
+          "L1: base + 2 x 8",
+          "Pointer -> table0x80002000"
+        ]
+      },
+      {
+        "id": "leaf",
+        "start_seconds": 16,
+        "end_seconds": 22,
+        "reading_seconds": 1.5,
+        "timing_reason": "Read output changes at the read boundary, then a 45-frame spatial handoff demonstrates the causal receiver update before the next scene.",
+        "objects": "L0 base0x80002000; VPN0=3; entry0x80002018; PTE0x048D1443.",
+        "initial_state": "The indexed table entry is visible in memory, but Returned PPN and its receiver remain pending until the PTE read.",
+        "trigger": "At frame 570, the indexed PTE read returns and its PPN field becomes 0x12345.",
+        "change": "The Returned PPN token changes from pending to 0x12345 at frame 570, then moves from (60,395) to receiver (555,505) over 45 frames. The receiver stays empty during transfer. At frame 615, arrival replaces the travelling token with leaf PPN 0x12345 in that same slot.",
+        "cause": "The read supplies the PPN; only delivered pointer PPN supplies the next table base. A readable leaf supplies the physical page instead.",
+        "result": "At frame 615, receiver contains leaf PPN 0x12345; offset 0x1A8 is retained. Subsequent table address derives from the delivered base, never from an anticipated PTE value.",
+        "english_copy": [
+          "L0: base + 3 x 8",
+          "Readable leaf: PPN0x12345"
+        ]
+      },
+      {
+        "id": "join",
+        "start_seconds": 22,
+        "end_seconds": 28,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "Leaf PPN0x12345; saved offset0x1A8; PA output slot.",
+        "initial_state": "The PPN and original offset are separate tokens.",
+        "trigger": "Complete translation after permission checks.",
+        "change": "Shift the PPN left12 to0x12345000, carry the unchanged offset token into the low12-bit slot, and assemble PA0x123451A8 at25s.",
+        "cause": "Complete translation after permission checks.",
+        "result": "The low12 bits match the original VA exactly; the physical page number comes from the PTE.",
+        "english_copy": [
+          "PA = (PPN << 12) | offset",
+          "0x12345000 + 0x1A8"
+        ]
+      },
+      {
+        "id": "read",
+        "start_seconds": 28,
+        "end_seconds": 33,
+        "reading_seconds": 2,
+        "timing_reason": "Animate the causal object operation, then keep its numerical consequence legible for at least two seconds.",
+        "objects": "PA0x123451A8 selected in physical memory; byte0x5A; destination registerx10.",
+        "initial_state": "Translation is complete and x10 has no new value yet.",
+        "trigger": "The permitted load reads the translated physical location.",
+        "change": "Move thePA token to the selected memory row, then carry byte0x5A into x10. Retain compactVA/PA fields with matching offset1A8.",
+        "cause": "The permitted load reads the translated physical location.",
+        "result": "The final value originates from the physical address derived by all three table reads.",
+        "english_copy": [
+          "Read physical0x123451A8",
+          "Page changes; offset stays1A8"
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "three-level-walk",
+        "scene_id": "leaf",
+        "uncertainty": "Each next base must come from the selected PTE PPN;9-bit index times8 is a byte offset, and only the leaf PPN becomes the physical page.",
+        "expected_observation": "Three distinct selected addresses0x80000008,0x80001010,0x80002018 yield leafPPN0x12345; unchanged offset1A8 joins intoPA0x123451A8."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "root-selection",
+        "time_seconds": 8,
+        "reason": "Inspect pending-to-returned PPN boundary, moving payload mid-flight, and receiver before/at/after arrival; new base must become available only at arrival.",
+        "frame": 240,
+        "sampling_frames": [
+          239,
+          240,
+          241,
+          260,
+          284,
+          285,
+          286
+        ]
+      },
+      {
+        "id": "middle-selection",
+        "time_seconds": 13.5,
+        "reason": "Inspect pending-to-returned PPN boundary, moving payload mid-flight, and receiver before/at/after arrival; new base must become available only at arrival.",
+        "frame": 405,
+        "sampling_frames": [
+          404,
+          405,
+          406,
+          425,
+          449,
+          450,
+          451
+        ]
+      },
+      {
+        "id": "leaf-stop",
+        "time_seconds": 19,
+        "reason": "Inspect pending-to-returned PPN boundary, moving payload mid-flight, and receiver before/at/after arrival; new base must become available only at arrival.",
+        "frame": 570,
+        "sampling_frames": [
+          569,
+          570,
+          571,
+          590,
+          614,
+          615,
+          616
+        ]
+      },
+      {
+        "id": "offset-join",
+        "time_seconds": 25,
+        "reason": "Low12bits remain0x1A8 in finalPA.",
+        "frame": 750,
+        "sampling_frames": [
+          749,
+          750,
+          751
+        ]
+      },
+      {
+        "id": "root-handoff-middle",
+        "time_seconds": 8.666666666666666,
+        "frame": 260,
+        "sampling_frames": [
+          259,
+          260,
+          261
+        ],
+        "reason": "Track actual PPN payload position midway to receiver."
+      },
+      {
+        "id": "root-handoff-arrival",
+        "time_seconds": 9.5,
+        "frame": 285,
+        "sampling_frames": [
+          284,
+          285,
+          286
+        ],
+        "reason": "Receiver must remain empty at previous frame, then fill with derived next-base/leaf on arrival; travelling token is consumed at the same location."
+      },
+      {
+        "id": "middle-handoff-middle",
+        "time_seconds": 14.166666666666666,
+        "frame": 425,
+        "sampling_frames": [
+          424,
+          425,
+          426
+        ],
+        "reason": "Track actual PPN payload position midway to receiver."
+      },
+      {
+        "id": "middle-handoff-arrival",
+        "time_seconds": 15.0,
+        "frame": 450,
+        "sampling_frames": [
+          449,
+          450,
+          451
+        ],
+        "reason": "Receiver must remain empty at previous frame, then fill with derived next-base/leaf on arrival; travelling token is consumed at the same location."
+      },
+      {
+        "id": "leaf-handoff-middle",
+        "time_seconds": 19.666666666666668,
+        "frame": 590,
+        "sampling_frames": [
+          589,
+          590,
+          591
+        ],
+        "reason": "Track actual PPN payload position midway to receiver."
+      },
+      {
+        "id": "leaf-handoff-arrival",
+        "time_seconds": 20.5,
+        "frame": 615,
+        "sampling_frames": [
+          614,
+          615,
+          616
+        ],
+        "reason": "Receiver must remain empty at previous frame, then fill with derived next-base/leaf on arrival; travelling token is consumed at the same location."
+      }
+    ],
+    "example": {
+      "va": "0x00000000404031A8",
+      "vpn": [
+        1,
+        2,
+        3
+      ],
+      "offset": "0x1A8",
+      "satp_ppn": "0x80000",
+      "pte_size": 8,
+      "pte_addresses": [
+        "0x80000008",
+        "0x80001010",
+        "0x80002018"
+      ],
+      "pte_values": [
+        "0x20000401",
+        "0x20000801",
+        "0x048D1443"
+      ],
+      "leaf_ppn": "0x12345",
+      "pa": "0x123451A8",
+      "loaded_byte": "0x5A"
+    },
+    "design_audit": {
+      "visualArgument": "Colored bit groups become numerical indexes that select actual table rows; returned PPN values become the next base until a readable leaf replaces the VPN.",
+      "motion": "Pending read output becomes decoded PPN, traverses a continuous path to its receiver, and only arrival supplies the shifted next base or leaf PPN; then the original offset joins the physical page.",
+      "example": "VA0x404031A8 selects indexes1/2/3 and maps viaPPN0x12345 toPA0x123451A8.",
+      "antiTemplate": "Unlike load/store address addition, this changes address identity through three data-dependent table reads and a preserved offset lane.",
+      "sceneRationale": "Six scenes allocate one slice, three dependentPTE reads, one address join and one data read. Combining the middle levels would conceal the data-dependent base handoff;33seconds leaves time to read each hexadecimal result."
+    },
+    "state_model": {
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts",
+      "bindings": {
+        "address": "AddressParts.parts binds vpn2/vpn1/vpn0/offset extracted from one VA constant.",
+        "tables": "MemoryWords selectedAddress is base+vpn[level]*8; words contain PTE values from the same table model.",
+        "ppn": "row.nextPpn is null before returned; row.tokenX/tokenY are the actual DataTokens SVG position. Destination (555,505) fills from row.nextBase/nextPpn only when row.delivered. Next walk.base comes exclusively from nextBase.",
+        "output": "PA token is (leafPpn<<12)|offset; memory selectedAddress uses that same result."
+      },
+      "planned_assertions": [
+        "VA shifts30/21/12 yield1/2/3; offset mask0xfff yields0x1A8.",
+        "Selected PTE byte addresses equal0x80000008/0x80001010/0x80002018.",
+        "Pointer flagsR/W/X0 continue; finalR1 stops at level0.",
+        "Before joinPA unset; at25s PA=0x123451A8 and PA&0xfff=VA&0xfff.",
+        "Each PPN is null at read-1 and decoded at read/read+1.",
+        "At read+44 the receiver and next base remain pending; at read+45 token position matches the receiver and the derived next base becomes usable.",
+        "Probe and complete SCENES SSR both bind pending values, moving coordinates and final receiver text to rv14State."
+      ]
+    },
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "stage": "B1",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T06:55:18.677173+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts",
+        "source_version": {
+          "state_mtime_ns": 1791528883373401734,
+          "probe_mtime_ns": 1791528883373522651,
+          "state_size": 920,
+          "probe_size": 870
+        },
+        "source_check": "rv14State extracts VPN/offset, reads table PTEs, decodes leafPPN and formsPA. AddressParts, MemoryWords selectedAddress and DataTokens all bind that state;SSR contains actual PA and retained offset.",
+        "assertion_command": "'/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv14.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv14 PASS:9/9/9/12 decomposition,3 correct eight-byte indexed reads, leaf stop and offset-preserving PA inSVG",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/b1.log",
+        "applicable_record_ids": [
+          "recvw25utMxdLZ"
+        ],
+        "limitations": "Minimal mechanism render binding checked via actual probe SSR; no final-video or teaching approval."
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "reviewer": "Codex agent rv_design_11_15",
+        "reviewed_at": "2026-10-09T07:01:14.711407+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx",
+        "source_version": {
+          "mtime_ns": 1791529212127192538,
+          "size": 6091
+        },
+        "source_check": "Direct state-to-graphic bindings reviewed in final per-topic source; full SCENES SSR checks actual transition output, including removal, CSR transfer, mode token, PTE walk, or device pin geometry. Topic scene bodies compose their own L2/SVG and do not wrap probes.",
+        "assertion_command": "node scripts/assert-rv11-15-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_exit_code": 0,
+        "assertions": "rv14 FULL PASS: 6 independent scenes, 990frames, tested real scene state bindings",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/c-source-check.log"
+      },
+      {
+        "stage": "B1",
+        "status": "passed",
+        "artifact_version": "v2",
+        "reviewer": "Codex repair_sv39",
+        "reviewed_at": "2026-10-09T07:40:29.449034+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts",
+        "source_version": {
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts": {
+            "size": 1869,
+            "mtime_ns": 1791531456527693498
+          },
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv14-probe.tsx": {
+            "size": 1371,
+            "mtime_ns": 1791531623523205032
+          }
+        },
+        "source_check": "PTE read controls nextPpn, transfer controls tokenX/tokenY, delivered controls receiver contents and downstream base. Both actual probe and complete-scene SVG bind the same state. Travelling token ends at receiver (555,505); next base stays unavailable until that arrival.",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv14.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_command": "node node_modules/typescript/bin/tsc --noEmit",
+        "typecheck_exit_code": 0,
+        "assertions": "rv14 v2 PASS: all3reads return noPPN before boundary, decodedPPN at boundary, actualtoken transfer, delivery-derived nextbase, leaf stop and preservedoffset",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/b1-v2.log",
+        "typecheck_evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/tsc-v2.log",
+        "applicable_record_ids": [
+          "recvw25utMxdLZ"
+        ],
+        "limitations": "Technical source/SSR evidence only. New final MP4 and teaching review remain pending.",
+        "layout_note": "Receiver label baseline moved from y601 to y593 to keep glyph bounds inside the 600px board. Full SSR assertion and tsc rerun exited0."
+      },
+      {
+        "stage": "C",
+        "status": "passed",
+        "artifact_version": "v2",
+        "reviewer": "Codex repair_sv39",
+        "reviewed_at": "2026-10-09T07:40:29.449034+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts",
+        "source_version": {
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts": {
+            "size": 1869,
+            "mtime_ns": 1791531456527693498
+          },
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx": {
+            "size": 6748,
+            "mtime_ns": 1791531623523849245
+          }
+        },
+        "source_check": "PTE read controls nextPpn, transfer controls tokenX/tokenY, delivered controls receiver contents and downstream base. Both actual probe and complete-scene SVG bind the same state. Travelling token ends at receiver (555,505); next base stays unavailable until that arrival.",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv14-full.cjs",
+        "assertion_exit_code": 0,
+        "typecheck_command": "node node_modules/typescript/bin/tsc --noEmit",
+        "typecheck_exit_code": 0,
+        "assertions": "rv14 FULL v2 PASS: pending read output; all 3 PPNs move from (60,395) through (280,443.89) into receiver (555,505); delivery supplies next base/leaf; offset-preserving PA and load retained.",
+        "evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/c-source-check-v2.log",
+        "typecheck_evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/tsc-v2.log",
+        "applicable_record_ids": [
+          "recvw25utMxdLZ"
+        ],
+        "limitations": "Technical source/SSR evidence only. New final MP4 and teaching review remain pending.",
+        "layout_note": "Receiver label baseline moved from y601 to y593 to keep glyph bounds inside the 600px board. Full SSR assertion and tsc rerun exited0."
+      }
+    ],
+    "rework": [
+      {
+        "type": "logic",
+        "from_version": "v1",
+        "to_version": "v2",
+        "reason": "Final MP4 v1 revealed PPN before read and skipped the next-base transfer. Existing partial v2 moved a token away from the receiver.",
+        "changes": "Gate PPN by read; gate downstream base by delivery; token now physically arrives at receiver and becomes the shifted base. Updated all three walks without changing shared L2.",
+        "old_evidence_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/out/rejected-v1/rv14-sv39-virtual-address-translation",
+        "completed_at": "2026-10-09T07:39:11.378919+00:00",
+        "status": "resolved",
+        "evidence": [
+          "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/b1-v2.log",
+          "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/c-source-check-v2.log",
+          "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/tsc-v2.log"
+        ],
+        "category": "logic",
+        "cause": "Final MP4 v1 revealed PPN before read and skipped the next-base transfer. Existing partial v2 moved a token away from the receiver.",
+        "affected_ids": [
+          "recvw25utMxdLZ"
+        ],
+        "fix": "Gate PPN by read; gate downstream base by delivery; token now physically arrives at receiver and becomes the shifted base. Updated all three walks without changing shared L2.",
+        "resolution_evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/final-video-review.json"
+      },
+      {
+        "type": "layout",
+        "from_version": "v2-intermediate",
+        "to_version": "v2",
+        "reason": "Overlap gate reported receiver-label bottom overflowing board by6px in three table-walk scenes.",
+        "changes": "Moved receiver label baseline y601 to y593 in probe and fullTSX only.",
+        "completed_at": "2026-10-09T07:40:29.449034+00:00",
+        "status": "resolved",
+        "evidence": [
+          "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/c-source-check-v2.log",
+          "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/tsc-v2.log"
+        ],
+        "category": "layout",
+        "cause": "Overlap gate reported receiver-label bottom overflowing board by6px in three table-walk scenes.",
+        "affected_ids": [
+          "recvw25utMxdLZ"
+        ],
+        "fix": "Moved receiver label baseline y601 to y593 in probe and fullTSX only.",
+        "resolution_evidence": "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/final-video-review.json"
+      }
+    ],
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-state.ts",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv14-probe.tsx",
+      "assets/source-kits/risc-v-processor-architecture/scripts/assert-rv14.cjs",
+      "assets/source-kits/risc-v-processor-architecture/scripts/assert-rv14-full.cjs"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv14-sv39-virtual-address-translation.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "/root/verify_resume (independent of rv14 v2 repair author)",
+    "reviewed_at": "2026-10-09T07:44:22.114787+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-1.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-2.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-3.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-4.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0285.png",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0615.png"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v2",
+      "reviewer": "/root/verify_resume (independent of rv14 v2 repair author)",
+      "reviewed_at": "2026-10-09T07:44:22.114787+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-1.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-2.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-3.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-sheet-part-4.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0285.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0615.png"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "root-selection",
+          "times_seconds": [
+            7.966666666666667,
+            8.0,
+            8.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0239.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0240.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0241.png"
+          ],
+          "observation": "Frames 239/240/241: the yellow Returned PPN token reads pending before 8 s, then 0x80001 at/after 8 s. The destination is pending before and empty during the departing payload; PTE memory retains 0x20000401 at address 0x80000008. This corrects the v1 premature returned value.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "middle-selection",
+          "times_seconds": [
+            13.466666666666667,
+            13.5,
+            13.533333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0404.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0405.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0406.png"
+          ],
+          "observation": "Frames 404/405/406: base 0x80001000 selects 0x80001010; Returned PPN changes pending to 0x80002 at 13.5 s. Receiver is empty after return while the yellow payload is still at its source. The visible base matches the previously delivered root result.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "leaf-stop",
+          "times_seconds": [
+            18.966666666666665,
+            19.0,
+            19.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0569.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0570.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0571.png"
+          ],
+          "observation": "Frames 569/570/571: Returned PPN changes pending to 0x12345 at 19 s; flag explanation becomes V=1 R=1 A=1 readable leaf and the receiver remains unfilled. Address 0x80002018 derives from the prior delivered 0x80002000 base. The receiver then holds a leaf PPN rather than another table base.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "offset-join",
+          "times_seconds": [
+            24.966666666666665,
+            25.0,
+            25.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0749.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0750.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0751.png"
+          ],
+          "observation": "Frames 749/750/751: Physical address cell is absent at 24.9667 s and appears as 0x123451A8 at/after 25 s. Leaf PPN 0x12345, shift 12 equation, and unchanged offset 0x1A8 remain visible; VA and PA have the same low 12 bits.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "root-handoff-middle",
+          "times_seconds": [
+            8.633333333333333,
+            8.666666666666666,
+            8.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0259.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0260.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0261.png"
+          ],
+          "observation": "Frames 259/260/261 (8.6333/8.6667/8.7 s): yellow 0x80001 payload is between its returned-value source and lower-right dashed receiver and moves right/down across these panels. Receiver has no base value yet; offset 0x1A8 remains fixed.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "root-handoff-arrival",
+          "times_seconds": [
+            9.466666666666667,
+            9.5,
+            9.533333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0284.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0285.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0286.png"
+          ],
+          "observation": "Frames 284/285/286 (9.4667/9.5/9.5333 s): yellow 0x80001 reaches and overlaps the receiver slot immediately before arrival; at 285 the travelling token is consumed in that same slot and the solid receiver reads shifted base 0x80001000. At 286 it remains stable. Compared with frame 240, the travel takes 45 frames.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "middle-handoff-middle",
+          "times_seconds": [
+            14.133333333333333,
+            14.166666666666666,
+            14.2
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0424.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0425.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0426.png"
+          ],
+          "observation": "Frames 424/425/426 (14.1333/14.1667/14.2 s): yellow 0x80002 payload advances right/down toward the empty dashed receiver. PTE address/data and offset remain invariant; next base is not displayed in the receiver during transit.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "middle-handoff-arrival",
+          "times_seconds": [
+            14.966666666666667,
+            15.0,
+            15.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0449.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0450.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0451.png"
+          ],
+          "observation": "Frames 449/450/451 (14.9667/15/15.0333 s): yellow 0x80002 is at the receiver just before arrival; at 450 it is replaced there by 0x80002000 in the solid receiver and remains at 451. Compared with return frame 405, delivery occurs after 45 frames.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "leaf-handoff-middle",
+          "times_seconds": [
+            19.633333333333333,
+            19.666666666666668,
+            19.7
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0589.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0590.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0591.png"
+          ],
+          "observation": "Frames 589/590/591 (19.6333/19.6667/19.7 s): yellow 0x12345 payload moves toward the still-empty dashed Leaf PPN ready receiver. It follows the same visible transfer behavior but carries physical page identity rather than a shifted table base.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "leaf-handoff-arrival",
+          "times_seconds": [
+            20.466666666666665,
+            20.5,
+            20.533333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0614.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0615.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/risk-0616.png"
+          ],
+          "observation": "Frames 614/615/616 (20.4667/20.5/20.5333 s): travelling 0x12345 occupies the receiver region just before arrival, then is consumed and the solid leaf receiver contains 0x12345 at/after 615. Return-to-delivery span is 45 frames. Original full-size frame 615 confirms legibility and that the receiver is inside the board.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "Viewed the actual v2 final-MP4 overview, all 30 risk panels in four readable crops, and original full-size frames 285 and 615. This is a visual decision based on those images, not on source assertions.",
+        "All three table reads now show pending-to-returned PPN transitions at 8/13.5/19 s; intermediate transfer panels visibly relocate the concrete PPN toward an empty receiver. At 9.5/15/20.5 s arrival consumes the token and fills the same receiver with 0x80001000, 0x80002000 and leaf PPN 0x12345 respectively. This addresses the original failed causal read/handoff mechanism.",
+        "The overview at 3 s shows VPN2/1/0 = 1/2/3 and offset 0x1A8. The subsequent level equations use the prior delivered bases. At 25 s PA becomes 0x123451A8; at 31 s final overview shows physical memory byte 0x5A and x10=0x5A.",
+        "Main-diagram content changes through bit decomposition, three dependent reads with moving returned values, physical-address assembly, and final load. The repeated table layout carries changing causal state rather than repeated titles.",
+        "Full-size arrivals show readable PTE/address/value text, receiver and supporting copy. Receiver caption sits close to its lower border but remains legible; token/receiver overlap immediately before arrival is intentional spatial handoff, not obstruction."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "design_status": "READY",
+  "design_review_focus": "Each next base must come from the selected PTE PPN;9-bit index times8 is a byte offset, and only the leaf PPN becomes the physical page.",
+  "requirement_prompt": "Sv39 Virtual Address Translation; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 33.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Sv39 Virtual Address Translation: Walk Three Tables",
+  "title": "Sv39 Virtual Address Translation: Walk Three Tables",
+  "prompt": "A 33-second silent English educational animation for a university digital electronics course on Sv39 Virtual Address Translation: split virtual address 0x404031A8 into VPN indexes 1/2/3 and offset 0x1A8; read PTEs at 0x80000008, 0x80001010, and 0x80002018 with returned PPNs pending until 8, 13.5, and 19 seconds respectively, then move each returned PPN into an empty receiver over 45 frames before filling it with next base 0x80001000, next base 0x80002000, or leaf PPN 0x12345; form physical address 0x123451A8 at 25 seconds with the original offset unchanged and load physical byte 0x5A into x10.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 24 in 12-frame steps with 12-frame fades and 16px rises; marker-travel moves each returned PPN from (60,395) into receiver (555,505) over exactly 45 frames; only arrival fills that receiver with the shifted next base or leaf PPN, then an unchanged offset travels into address assembly over 90 frames; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 33.0,
+    "reviewer": "/root/verify_resume (independent of rv14 v2 repair author)",
+    "reviewed_at": "2026-10-09T07:44:22.114787+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v2",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/cover-03.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation/sv39-virtual-address-translation-geometry.json"
+    ],
+    "observations": [
+      "Three table results0x80001000/0x80002000/0x12345 lead toPA0x123451A8, offset retained.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  },
+  "status": "ready",
+  "video": "assets/videos/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.mp4",
+  "cover": "assets/covers/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.jpg",
+  "cover_image": "assets/covers/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.jpg",
+  "cover_version": "v2",
+  "player": "https://github.com/user-attachments/assets/9a074cd4-c090-46da-9690-e38c33f16e61",
+  "player_version": "v2",
+  "prompt_file": "assets/prompts/digital-electronics/risc-v-processor-architecture/sv39-virtual-address-translation.md",
+  "tags": [
+    "recvw25utMxdLZ",
+    "risc-v-processor-architecture",
+    "P0"
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/risc-v-processor-architecture.md",
+  "feishu": {
+    "record_id": "recvw25utMxdLZ",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T15:53:07.979882+08:00",
+    "selection_fields": {
+      "Name": "Sv39 Virtual Address Translation",
+      "Discipline": "Digital Electronics",
+      "Course": "RISC-V Processor Architecture"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25utMxdLZ",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T15:53:07.979882+08:00",
+      "version": "v2"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "v2",
+      "page_status": "pending",
+      "attachment": {
+        "video_version": "risc-v-20261009-v2",
+        "video_bytes": 2958743,
+        "issue_number": 123,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+        "comment_id": 6076839313,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076839313",
+        "attachment_url": "https://github.com/user-attachments/assets/9a074cd4-c090-46da-9690-e38c33f16e61",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/9a074cd4-c090-46da-9690-e38c33f16e61",
+      "issue_number": 123,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

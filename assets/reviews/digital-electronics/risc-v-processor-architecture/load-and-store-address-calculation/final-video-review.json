@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+  "reviewed_at": "2026-10-09T07:15:49.876019+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation.mp4",
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-sheet.jpg"
+  ],
+  "observations": [
+    "3.3000→3.3333s: the upper extension cell changes from ellipsis toFFFFF while the lowFF8 remains; the effective-address cell becomes0x2000 beside base0x2008 and signed−8. The numeric negative displacement is explicit.",
+    "9.50→12.333s: the42 payload moves left from selected memory toward registers. At11.000s x5 switches0→42 and memory0x2000 remains42.",
+    "18.167s separates base/offset address generation0x200C from the99 store-data token. At25.000s only memory0x200C changes0→99; x6 stays99 and memory0x2000/0x2004 remain42/17. The opposite data directions are clear in the overview; text and cells are readable without observed collision."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "address-result",
+      "times_seconds": [
+        3.3,
+        3.3333333333333335,
+        3.3666666666666667
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0099.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0100.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0101.png"
+      ],
+      "observation": "At3.3000s sign extension andEA are ellipses. At3.3333s/3.3667s upper20bits are represented byFFFFF, low12bitsFF8 persist andEA reads0x2000, beside0x2008 and−8.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "load-arrival",
+      "times_seconds": [
+        10.966666666666667,
+        11.0,
+        11.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0329.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0330.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0331.png"
+      ],
+      "observation": "At10.9667s x5=0 while the traveling loaded word is42. At11.0000s/11.0333s x5=42; memory0x2000=42,0x2004=17,0x200C=0 remain unchanged.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "store-arrival",
+      "times_seconds": [
+        24.966666666666665,
+        25.0,
+        25.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0749.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0750.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-and-store-address-calculation/risk-0751.png"
+      ],
+      "observation": "At24.9667s selected memory0x200C still contains0 and x6=99. At25.0000s/25.0333s that word contains99 whilex6 and the other words retain their values.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "condition": 1,
+      "triggered": false,
+      "reason": "Sign-extension fragments, concrete register/memory addresses and payload directions identify address-and-data separation without headings."
+    },
+    {
+      "condition": 2,
+      "triggered": false,
+      "reason": "There is an actual42 register write and99 memory write, not only a selected-row highlight."
+    },
+    {
+      "condition": 3,
+      "triggered": false,
+      "reason": "Load and store visibly replace the respective destination value while retaining their source values."
+    }
+  ],
+  "checks": {
+    "teaching_correctness": true,
+    "mechanism_visible": true,
+    "pacing": true,
+    "layout": true,
+    "readability": true,
+    "version_match": true
+  },
+  "issues": [],
+  "cross_topic_comparison": "Compared actual overviews ofrv06–10: branch cursor selection, opposite memory data directions, latch storage, early forwarding and one-cycle hold/bubble have distinct visible mechanisms."
+}

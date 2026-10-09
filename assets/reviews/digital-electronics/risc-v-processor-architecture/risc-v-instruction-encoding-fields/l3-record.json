@@ -1,0 +1,549 @@
+{
+  "id": "rv01-risc-v-instruction-encoding-fields",
+  "record_id": "recvw25utMYuhh",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "RISC-V Instruction Encoding Fields",
+  "standard_name": "RISC-V Instruction Encoding Fields",
+  "Name": "RISC-V Instruction Encoding Fields",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Decode a concrete R-type word into operation and register indices, then show that editing rd redirects the destination without changing operands.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "references": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "RV32I R-type field interpretation. This lesson moves bit slices and decoded indices; register storage timing belongs to the next lesson."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "verified": "2026-10-09",
+        "basis": "Exact instruction opcode, funct3 and funct7 encodings."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "RV32I R-type field interpretation. This lesson moves bit slices and decoded indices; register storage timing belongs to the next lesson."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "scope": "Opcode fields for numeric examples"
+      }
+    ],
+    "scope": "RV32I R-type field interpretation. This lesson moves bit slices and decoded indices; register storage timing belongs to the next lesson."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "word",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "ADD x5,x6,x7",
+          "instruction 0x007302B3",
+          "32 ordered bit cells"
+        ],
+        "initial_state": "One undivided instruction word.",
+        "cause": "Expose numbered bit positions.",
+        "trigger": "Expose numbered bit positions.",
+        "change": "Separate the word into six width-proportional fields while retaining the exact encoded bits.",
+        "result": "R fields occupy 31:25,24:20,19:15,14:12,11:7,6:0.",
+        "english_copy": [
+          "One word carries several jobs.",
+          "ADD x5, x6, x7"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "opcode",
+        "start_seconds": 5,
+        "end_seconds": 10,
+        "objects": [
+          "opcode inst[6:0]=0110011",
+          "operation-class slot"
+        ],
+        "initial_state": "Opcode is still inside the instruction.",
+        "cause": "Decode bits 6:0.",
+        "trigger": "Decode bits 6:0.",
+        "change": "Copy the seven opcode bits down into an initially empty register-register class slot.",
+        "result": "0110011 selects the register-register arithmetic class.",
+        "english_copy": [
+          "Bits 6:0 select the instruction class."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "registers",
+        "start_seconds": 10,
+        "end_seconds": 17,
+        "objects": [
+          "rs2=00111",
+          "rs1=00110",
+          "rd=00101",
+          "three decoded slots"
+        ],
+        "initial_state": "Three five-bit fields remain embedded in the word.",
+        "cause": "Decode source and destination indices.",
+        "trigger": "Decode source and destination indices.",
+        "change": "Move copies from bit ranges 24:20,19:15,11:7 into distinct rs2,rs1,rd slots; convert them to x7,x6,x5.",
+        "result": "Two source indices and one destination index appear in their correct roles.",
+        "english_copy": [
+          "rs1: x6   rs2: x7",
+          "rd: x5"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "function",
+        "start_seconds": 17,
+        "end_seconds": 23,
+        "objects": [
+          "funct7=0000000",
+          "funct3=000",
+          "ALU op slot"
+        ],
+        "initial_state": "Register indices are decoded but operation slot is blank.",
+        "cause": "Decode function bits together with opcode.",
+        "trigger": "Decode function bits together with opcode.",
+        "change": "Move funct7 and funct3 copies into a joined operation decoder; populate ADD and visible operand relation x6+x7.",
+        "result": "The same instruction now has a complete decoded operation and operand mapping.",
+        "english_copy": [
+          "Function bits select ADD.",
+          "Register fields select its operands."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "redirect",
+        "start_seconds": 23,
+        "end_seconds": 30,
+        "objects": [
+          "rd old 00101",
+          "rd new 01001",
+          "destination x5 then x9",
+          "word 0x007304B3"
+        ],
+        "initial_state": "Destination slot holds x5.",
+        "cause": "Edit only inst[11:7] at 25 s.",
+        "trigger": "Edit only inst[11:7] at 25 s.",
+        "change": "Replace rd field bits and route the decoded destination token to x9; keep opcode,rs1,rs2,funct3,funct7 stationary and unchanged.",
+        "result": "ADD x9,x6,x7 has the same inputs and operation but a changed destination.",
+        "english_copy": [
+          "Change rd: x5 → x9",
+          "The operands stay the same."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      }
+    ],
+    "scene_rationale": "Five scenes separate bit partition, opcode class, three register roles, operation decode, and one controlled field edit. Removing the last scene would reduce encoding to a static labeled diagram.",
+    "critical_processes": [
+      {
+        "id": "field-extraction",
+        "scene_id": "registers",
+        "uncertainty": "Encoded fields must populate the correct register roles.",
+        "expected_observation": "rs1 x6,rs2 x7,rd x5 emerge from their bit ranges."
+      },
+      {
+        "id": "destination-change",
+        "scene_id": "redirect",
+        "uncertainty": "A bit edit must change actual decoded destination.",
+        "expected_observation": "rd bits01001 and destination x9 replace00101/x5."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "decode-register-indices",
+        "time_seconds": 13,
+        "reason": "Verify indices originate in the correct instruction ranges."
+      },
+      {
+        "id": "edit-destination",
+        "time_seconds": 25,
+        "reason": "Read one frame before and after rd change; inputs must remain6 and7."
+      }
+    ],
+    "state_model": {
+      "function": "rv01State(frame)",
+      "inputs": {
+        "word": 7537331,
+        "changedWord": 7537843,
+        "fieldWidths": [
+          7,
+          5,
+          5,
+          3,
+          5,
+          7
+        ],
+        "fieldLabels": [
+          "funct7 31:25",
+          "rs2 24:20",
+          "rs1 19:15",
+          "funct3 14:12",
+          "rd 11:7",
+          "opcode 6:0"
+        ],
+        "initialRd": 5,
+        "changedRd": 9,
+        "rs1": 6,
+        "rs2": 7,
+        "redirectSecond": 25
+      },
+      "planned_bindings": [
+        "word bit extraction -> BitFields values and exact widths",
+        "decode progress -> DataTokens coordinates and populated decoded slots",
+        "rd state -> encoded rd bits, destination token and assembly text"
+      ],
+      "invariants": [
+        "Field widths sum to 32.",
+        "Instruction extraction returns rs1=6,rs2=7,rd=5 then9.",
+        "Only inst[11:7] changes at25s; XOR of old/new words is 0x600."
+      ],
+      "b1_samples_seconds": [
+        0,
+        12.966667,
+        13,
+        13.033333,
+        24.966667,
+        25,
+        25.033333,
+        29
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv01-state.ts",
+      "bindings": [
+        "word bit extraction -> BitFields values and exact widths",
+        "decode progress -> DataTokens coordinates and populated decoded slots",
+        "rd state -> encoded rd bits, destination token and assembly text"
+      ]
+    },
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T06:55:53.869927+00:00",
+        "reviewer": "rv_design_01_05",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv01.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "assertion_log": "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/b1.log",
+        "results": {
+          "checks": 59,
+          "status": "PASS",
+          "record_specific": "field extraction 300→390; rd change749/750/751; exact R fields and rendered bit-string changes PASS",
+          "render_binding": "SSR comparison confirms corresponding SVG changes."
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Read frame-to-state-to-props chain and execute SSR checks from the same mechanism source.",
+          "basis": "rv01State extracts every field from the actual instruction word. BitFields receives s.fields; DataTokens receives s.tokens with state-driven positions. The displayed decoded destination is s.rd. Field-only edit changes visible rd bits and destination."
+        },
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv01-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv01-state.ts",
+        "source_version": {
+          "mtime_ns": 1791528851174755706,
+          "size": 400
+        },
+        "state_version": {
+          "mtime_ns": 1791528851172034358,
+          "size": 1027
+        },
+        "applicable_record_ids": [
+          "recvw25utMYuhh"
+        ],
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes full implementation of this mechanism only. Does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T07:04:18.285150+00:00",
+        "reviewer": "rv_design_01_05",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx",
+        "source_version": {
+          "mtime_ns": 1791529102289593521,
+          "size": 5057
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Actual instruction-derived fields populate BitFields, decoded indices move via DataTokens, rd edit updates both encoded bits and actual decoded destination.",
+          "method": "Inspect full scene composition and state-driven geometry/data; execute actual full SCENES through SSR at each risk previous/exact/next frame."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-full-rv01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_binding_checks": 48,
+          "full_binding_status": "PASS",
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "mechanism_state_unchanged": true,
+          "quality_warning": "Compact source below180 non-comment lines. Independent topic scenes include the complete mechanism; no padding, probe wrapping or shared scene factory. Final video teaching review remains required."
+        },
+        "applicable_record_ids": [
+          "recvw25utMYuhh"
+        ],
+        "scope": "Technical source gate only; not a final-video teaching decision."
+      },
+      {
+        "type": "RV01_PRECISE_TOP_FIELD_RECHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T07:16:10.994979+00:00",
+        "reviewer": "rv_design_01_05",
+        "assertion_command": "node scripts/assert-rv01.cjs && node scripts/assert-full-rv01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "rv01_checks": 63,
+          "full_binding_checks": 52,
+          "exact_top_rd": "749→00101;750/751/850→01001",
+          "state_and_media_unchanged": true
+        },
+        "basis": "Explicitly assert fields.find(label=rd) and the top rd text node from actual full-scene SVG. Actual finalMP4 frames750 and850 separately viewed at full resolution; both show01001, consistent withx9. Prior suspected bug was a reading error; no logic rework performed."
+      }
+    ],
+    "previews": [],
+    "design_audit": {
+      "visualArgument": "Decode a concrete R-type word into operation and register indices, then show that editing rd redirects the destination without changing operands.",
+      "motion": "Separate the word into six width-proportional fields while retaining the exact encoded bits. Copy the seven opcode bits down into an initially empty register-register class slot. Move copies from bit ranges 24:20,19:15,11:7 into distinct rs2,rs1,rd slots; convert them to x7,x6,x5. Move funct7 and funct3 copies into a joined operation decoder; populate ADD and visible operand relation x6+x7. Replace rd field bits and route the decoded destination token to x9; keep opcode,rs1,rs2,funct3,funct7 stationary and unchanged.",
+      "example": {
+        "word": 7537331,
+        "changedWord": 7537843,
+        "fieldWidths": [
+          7,
+          5,
+          5,
+          3,
+          5,
+          7
+        ],
+        "fieldLabels": [
+          "funct7 31:25",
+          "rs2 24:20",
+          "rs1 19:15",
+          "funct3 14:12",
+          "rd 11:7",
+          "opcode 6:0"
+        ],
+        "initialRd": 5,
+        "changedRd": 9,
+        "rs1": 6,
+        "rs2": 7,
+        "redirectSecond": 25
+      },
+      "antiTemplate": "RV32I R-type field interpretation. This lesson moves bit slices and decoded indices; register storage timing belongs to the next lesson.",
+      "sceneRationale": "Five scenes separate bit partition, opcode class, three register roles, operation decode, and one controlled field edit. Removing the last scene would reduce encoding to a static labeled diagram."
+    },
+    "implementation_notes": {
+      "l2": [
+        "RiscBoard",
+        "BitFields",
+        "DataTokens",
+        "RegisterBank",
+        "MemoryWords"
+      ],
+      "coordinate_space": "SVG viewBox 0 0 960 600; group transforms move field copies and actual payload tokens.",
+      "layout": "Split layout A. Keep diagram labels short; instruction bit ranges belong inside board.",
+      "minimal_l2_changes": "None; current primitives expose actual state values and positions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      90,
+      240,
+      425,
+      590,
+      735,
+      850
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv01-risc-v-instruction-encoding-fields.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv01-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.451786+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-sheet.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0749.png",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0750.png",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0751.png",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/f0850.png"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+      "reviewed_at": "2026-10-09T07:15:07.451786+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-sheet.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0749.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0750.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0751.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/f0850.png"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "decode-register-indices",
+          "times_seconds": [
+            12.966666666666667,
+            13.0,
+            13.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0389.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0390.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risk-0391.png"
+          ],
+          "observation": "12.9667–13.0333s showsrs1=00110,rs2=00111,rd=00101 anddecodedx6/x7/x5 in matchingroles. At13s summarycopychanges afterthe visiblefields/tokensarealready present."
+        },
+        {
+          "risk_id": "edit-destination",
+          "times_seconds": [
+            24.966666666666665,
+            25.0,
+            25.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/review-v1-evidence/risk-0749.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/review-v1-evidence/risk-0750.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/review-v1-evidence/risk-0751.png"
+          ],
+          "observation": "Originalframes749/750/751 establish rd00101→01001 exactlyat25s,withdecodedx5→x9 andword0x007302B3→0x007304B3;rs1,rs2,functionbits andopcoderemain unchanged.Originalf0850 confirms finalstate."
+        }
+      ],
+      "observations": [
+        "Viewed v1 overview and six risk panels, then inspected original-resolutionrisk0749,0750,0751 andf0850 to resolve ambiguous tiny bit text.",
+        "At24.9667s originalframe shows rd00101,decodedx5,word0x007302B3. At25/25.0333s originalframes clearly show rd01001,decodedx9,word0x007304B3;rs1=00110/x6 andrs2=00111/x7 stayfixed.28.33s retains that correct newencoding.",
+        "The mainfigure extracts opcode/register/functionroles and then changes the actualdestinationbitfield. Sourcebits anddecodedvalues agree. No observed textcollision. Initial suspected failure fromcontact-sheet bitreading was a reviewer misread and is withdrawn; no videochange was required."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publish": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "artifact_version": "v1",
+  "learning_objective": "Decode a concrete R-type word into operation and register indices, then show that editing rd redirects the destination without changing operands.",
+  "core_conclusion": "ADD x9,x6,x7 has the same inputs and operation but a changed destination.",
+  "feishu_record_id": "recvw25utMYuhh",
+  "requirement_prompt": "RISC-V Instruction Encoding Fields; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "RISC-V Instruction Encoding Fields: Redirect the Destination",
+  "title": "RISC-V Instruction Encoding Fields: Redirect the Destination",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on RISC-V Instruction Encoding Fields: decode the 32-bit R-type word 0x007302B3 into opcode, source registers x6 and x7, destination x5, and ADD function fields; move the extracted fields into their decoded roles, then change only rd from 00101 to 01001 at 25 seconds so the word becomes 0x007304B3 and destination x9 while both sources and the operation remain unchanged.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel extracts the opcode over 65 frames and combines function fields over 70 frames; update the actual rd bit cells at frame 750; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.694939+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/cover-01.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields/risc-v-instruction-encoding-fields-geometry.json"
+    ],
+    "observations": [
+      "Instruction bit fields decode0x007302B3 intoADD x5,x6,x7; actual word/fields correspond.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

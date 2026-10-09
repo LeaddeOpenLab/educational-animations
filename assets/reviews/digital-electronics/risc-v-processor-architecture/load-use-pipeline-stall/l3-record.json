@@ -1,0 +1,589 @@
+{
+  "id": "rv10-load-use-pipeline-stall",
+  "record_id": "recvw25utMtQGj",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "Load-Use Pipeline Stall",
+  "standard_name": "Load-Use Pipeline Stall",
+  "Name": "Load-Use Pipeline Stall",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Explain why a dependent ALU instruction must wait one cycle for a load result in the illustrated pipeline.",
+  "learning_objective": "Explain why a dependent ALU instruction must wait one cycle for a load result in the illustrated pipeline.",
+  "core_conclusion": "When load data arrives too late for the next EX stage, hold the consumer and front end, let the load advance, and resume with the returned data.",
+  "status": "IN_PROGRESS",
+  "artifact_version": "v1",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "scope": "Illustrative five-stage pipeline with forwarding, one-cycle memory, load data available at end of MEM and dependent operand needed at start of EX. One stall follows from these assumptions, not from the ISA alone.",
+    "references": [
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/cpath.scala",
+        "verified": "2026-10-09",
+        "basis": "Sodor fully bypassed control detects load-use dependencies, stalls front end and inserts an EX bubble."
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+        "verified": "2026-10-09",
+        "basis": "Sodor clears EX valid/register-write/memory-write enables on hazard stall while older instructions advance."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/cpath.scala",
+        "scope": "Sodor fully bypassed control detects load-use dependencies, stalls front end and inserts an EX bubble."
+      },
+      {
+        "url": "https://raw.githubusercontent.com/ucb-bar/riscv-sodor/master/src/main/scala/sodor/rv32_5stage/dpath.scala",
+        "scope": "Sodor clears EX valid/register-write/memory-write enables on hazard stall while older instructions advance."
+      }
+    ]
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 31,
+    "duration_frames": 930,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "too-early",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "I1 LW x5,0(x1)",
+          "I2 ADD x6,x5,x2",
+          "x1=0x3000",
+          "x2=3",
+          "memory0x3000=42",
+          "x5 old0"
+        ],
+        "initial_state": "Load in EX computes address; ADD in ID needs x5 next cycle.",
+        "trigger": "The dependency detector compares load rd5 with consumer rs1=5.",
+        "change": "Expose the timeline mismatch: address0x3000 exists now, but data42 is still inside memory; show consumer operand slot waiting rather than feeding it the address.",
+        "cause": "The dependency detector compares load rd5 with consumer rs1=5.",
+        "result": "Forwarding the address would be wrong; the actual load value is unavailable.",
+        "english_copy": [
+          "The load has an address, not data yet.",
+          "The next ADD needs the data."
+        ]
+      },
+      {
+        "id": "hold-and-bubble",
+        "start_seconds": 6,
+        "end_seconds": 14,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "LW MEM",
+          "ADD held ID",
+          "younger instruction held IF",
+          "PC=0x108",
+          "EX bubble valid0/write0"
+        ],
+        "initial_state": "Cycle3 has LW EX, ADD ID, younger IF.",
+        "trigger": "Load-use hazard blocks the next ID→EX transfer.",
+        "change": "At clock boundary advance LW to MEM; keep ADD in ID and younger instruction in IF; retain PC0x108; insert empty EX bubble with all write enables0.",
+        "cause": "Load-use hazard blocks the next ID→EX transfer.",
+        "result": "Older load progresses while front-end positions and PC remain identical for one extra cycle.",
+        "english_copy": [
+          "Hold PC and IF/ID.",
+          "Insert one EX bubble."
+        ]
+      },
+      {
+        "id": "memory-ready",
+        "start_seconds": 14,
+        "end_seconds": 20,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "memory0x3000=42",
+          "load MEM result slot",
+          "MEM/WB value42",
+          "ADD still ID"
+        ],
+        "initial_state": "Load has reached memory, ADD remains held.",
+        "trigger": "Memory read returns at the end of the stalled cycle.",
+        "change": "Copy42 out of selected memory word into load result latch; keep memory unchanged; mark the carrying bundle rd5,42.",
+        "cause": "Memory read returns at the end of the stalled cycle.",
+        "result": "42 is now available to feed the consumer next cycle.",
+        "english_copy": [
+          "Memory returns 42.",
+          "Now the value can be forwarded."
+        ]
+      },
+      {
+        "id": "resume",
+        "start_seconds": 20,
+        "end_seconds": 26,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "LW WB42",
+          "ADD EX",
+          "bubble MEM",
+          "operand42",
+          "operand3"
+        ],
+        "initial_state": "Ready load data42 in MEM/WB; ADD still in ID just before release.",
+        "trigger": "Hazard clears and next clock advances the held instruction.",
+        "change": "Move ADD into EX, move bubble into MEM, advance front end; send42 to ADD operand and compute42+3=45.",
+        "cause": "Hazard clears and next clock advances the held instruction.",
+        "result": "The consumer produces45 after exactly one held cycle, never 0+3 or address+3.",
+        "english_copy": [
+          "Resume with the returned value.",
+          "42 + 3 = 45."
+        ]
+      },
+      {
+        "id": "drain",
+        "start_seconds": 26,
+        "end_seconds": 31,
+        "reading_seconds": 2,
+        "timing_reason": "Mechanism motion followed by at least two seconds to inspect the settled numerical state.",
+        "objects": [
+          "cycle columns3,4,5",
+          "held ADD ID twice",
+          "bubble diagonal",
+          "x5=42",
+          "x6=45"
+        ],
+        "initial_state": "ADD result45 progressing toward WB.",
+        "trigger": "Remaining writeback steps complete.",
+        "change": "Write42 to x5 and45 to x6 while a compact stage timeline retains the repeated ID cell and bubble cell.",
+        "cause": "Remaining writeback steps complete.",
+        "result": "Register result45 and the explicit extra cycle explain the stall cost.",
+        "english_copy": [
+          "One bubble preserves correctness.",
+          "This timing depends on the pipeline."
+        ]
+      }
+    ],
+    "critical_processes": [
+      {
+        "id": "simultaneous-hold-and-drain",
+        "scene_id": "hold-and-bubble",
+        "uncertainty": "Stall must not freeze the producer or accidentally advance the consumer.",
+        "expected_observation": "LW EX→MEM; ADD remains ID; PC remains0x108; EX contains invalid bubble."
+      },
+      {
+        "id": "load-data-availability",
+        "scene_id": "memory-ready",
+        "uncertainty": "Load address must not be treated as loaded value.",
+        "expected_observation": "42 arrives from memory only at end of MEM."
+      },
+      {
+        "id": "resume-with-data",
+        "scene_id": "resume",
+        "uncertainty": "Consumer resumes only with actual data and bubble stays non-writing.",
+        "expected_observation": "ADD enters EX with42,3 and yields45; bubble advances without a register write."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "stall-edge",
+        "time_seconds": 9,
+        "reason": "Check all stage positions and PC immediately before and after.",
+        "frame": 270,
+        "sample_frames": [
+          269,
+          270,
+          271
+        ]
+      },
+      {
+        "id": "data-ready",
+        "time_seconds": 17,
+        "reason": "Check actual42 arrives from memory, not0x3000.",
+        "frame": 510,
+        "sample_frames": [
+          509,
+          510,
+          511
+        ]
+      },
+      {
+        "id": "resume-edge",
+        "time_seconds": 22,
+        "reason": "Check ADD moves, bubble moves, PC unfreezes and45 computes.",
+        "frame": 660,
+        "sample_frames": [
+          659,
+          660,
+          661
+        ]
+      },
+      {
+        "id": "forward-arrival",
+        "time_seconds": 23,
+        "frame": 690,
+        "sample_frames": [
+          689,
+          690,
+          691
+        ],
+        "reason": "Actual consumer operand becomes42."
+      },
+      {
+        "id": "consumer-result",
+        "time_seconds": 24,
+        "frame": 720,
+        "sample_frames": [
+          719,
+          720,
+          721
+        ],
+        "reason": "Actual ALU result becomes45."
+      }
+    ],
+    "state_model": {
+      "function": "loadUseState(frame)",
+      "inputs": {
+        "base": 12288,
+        "loadValue": 42,
+        "addend": 3,
+        "heldPc": 264
+      },
+      "planned_bindings": [
+        "stage positions → PipelineLanes stage values with stable row identity",
+        "stall → PC value and repeated IF/ID positions",
+        "bubble valid/RegWrite/MemWrite → explicit empty stage and enable values",
+        "memory response → token42 transfer and MEM/WB payload",
+        "consumer result → visible42+3 computation and x6 register update"
+      ],
+      "invariants": [
+        "At stall edge LW advances but ADD, younger instruction and PC hold.",
+        "Bubble writes no register or memory.",
+        "42 appears only after memory response;0x3000 is never used as ADD data.",
+        "Exactly one held cycle for this assumed latency; final x6=45."
+      ],
+      "b1_samples_seconds": [
+        8.9667,
+        9,
+        9.0333,
+        13,
+        16.9667,
+        17,
+        17.0333,
+        21.9667,
+        22,
+        22.0333,
+        30
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv10-state.ts",
+      "bindings": [
+        "stage positions → PipelineLanes stage values with stable row identity",
+        "stall → PC value and repeated IF/ID positions",
+        "bubble valid/RegWrite/MemWrite → explicit empty stage and enable values",
+        "memory response → token42 transfer and MEM/WB payload",
+        "consumer result → visible42+3 computation and x6 register update"
+      ],
+      "probe_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv10-probe.tsx"
+    },
+    "scene_rationale": "Five scenes isolate unavailable load data, simultaneous hold/bubble/drain, memory completion, correct resumption, and the extra-cycle consequence. The timing mismatch and held positions are the key argument, unlike the continuously advancing forwarding lesson.",
+    "previews": [],
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T06:55:52.899089+00:00",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv10.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "results": {
+          "status": "PASS",
+          "record": "rv10",
+          "checks": 32,
+          "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/b1.log",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv10-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv10-state.ts",
+        "source_version": {
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv10-state.ts": {
+            "mtime_ns": 1791528803884828349,
+            "size": 1074
+          },
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture/src/mechanisms/rv10-probe.tsx": {
+            "mtime_ns": 1791528843047737135,
+            "size": 793
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Manual state-to-visible-props source inspection plus React SSR of actual probe at boundaries.",
+          "basis": "loadUseState(frame) directly supplies PipelineLanes positions; at270 producer advances, consumer/younger hold, bubble appears with write0 and PC stays0x108. At510 actual load data appears42; resume at660 advances ADD, and operand42 produces45."
+        },
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "applicable_record_ids": [
+          "recvw25utMtQGj"
+        ],
+        "scope": "Technical authorization for full implementation only; final video teaching review remains pending."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewer": "rv_design_06_10",
+        "reviewed_at": "2026-10-09T07:03:55.486634+00:00",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx",
+        "source_version": {
+          "mtime_ns": 1791529315760191632,
+          "size": 5921
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Front-end hold and older-load drain use actual stage positions; bubble carries write0; memory response42, resumed operand42 and result45 bind to loadUseState. Full scene SVG verified at270/510/660/690/720.",
+          "method": "Read each full scene plus27 actual SSR boundary/semantic assertions across5 files; full TSX imports state but never probe or a shared L3 implementation."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv-full-06-10.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_scene_checks": 27,
+          "b1_rerun": {
+            "status": "PASS",
+            "record": "rv10",
+            "checks": 32,
+            "scope": "State boundaries plus SSR of actual minimal probe; not final teaching approval"
+          },
+          "typecheck_exit_code": 0,
+          "quality_warning": "Compact JSX lines below180; reviewed topic-specific mechanism complete. Final visual review required."
+        },
+        "log": "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/c-source-check.log",
+        "applicable_record_ids": [
+          "recvw25utMtQGj"
+        ],
+        "scope": "Technical full-source evidence only; no video teaching approval."
+      }
+    ],
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx",
+    "l2_requirements": {
+      "status": "MAPPED",
+      "additional_components_required": false,
+      "basis": "Reviewed actual typed RiscV.tsx: fraction-valued stage, explicit row and value, free DataTokens x/y, numeric RegisterBank and MemoryWords satisfy these actions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      100,
+      300,
+      540,
+      675,
+      735,
+      915
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv10-state.ts"
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+    "reviewed_at": "2026-10-09T07:15:49.877669+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+      "reviewed_at": "2026-10-09T07:15:49.877669+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "stall-edge",
+          "times_seconds": [
+            8.966666666666667,
+            9.0,
+            9.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0269.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0270.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0271.png"
+          ],
+          "observation": "At8.9667sLW isEX,ADDID,NEXTIF andPC0x108. At9.0000s/9.0333sLW isMEM whileADD/NEXT/PC hold, andEX containsBUBBLEwrite0 withvalid0.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "data-ready",
+          "times_seconds": [
+            16.966666666666665,
+            17.0,
+            17.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0509.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0510.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0511.png"
+          ],
+          "observation": "At16.9667sMEM/WB is empty and memory0x3000 holds42. At17.0000s/17.0333s theload-value slot is42 whilememory remains42.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "resume-edge",
+          "times_seconds": [
+            21.966666666666665,
+            22.0,
+            22.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0659.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0660.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0661.png"
+          ],
+          "observation": "At21.9667sLW isMEM,ADDID,NEXTIF andbubbleEX withPC0x108. At22.0000s/22.0333sLW isWB,ADDEX,NEXTID,bubbleMEM andPC0x10C; theconsumer operand correctly remains unknown until forwarding arrives.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "forward-arrival",
+          "times_seconds": [
+            22.966666666666665,
+            23.0,
+            23.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0689.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0690.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0691.png"
+          ],
+          "observation": "At22.9667sEX reads?+3=?; at23.0000s/23.0333sit reads42+3=? whilethe42payload is besideEX.",
+          "status": "passed"
+        },
+        {
+          "risk_id": "consumer-result",
+          "times_seconds": [
+            23.966666666666665,
+            24.0,
+            24.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0719.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0720.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/risk-0721.png"
+          ],
+          "observation": "At23.9667s42+3 still hasunknownoutput; at24.0000s/24.0333soutput is45 andtheADD pipeline token also carries45.",
+          "status": "passed"
+        }
+      ],
+      "observations": [
+        "3.333s clearly separates load address0x3000 from memory data42; the consumer operand is waiting. At8.967→9.000sLW movesEX→MEM butADD staysID,NEXT staysIF andPC stays0x108; anEX bubble withwrite0 appears.",
+        "16.967→17.000s memory remains42 while theMEM/WB slot changesempty→42. At21.967→22.000s the heldADD advancesID→EX,thebubble advancesEX→MEM,NEXT movesIF→ID andPC0x108→0x10C.",
+        "22.967→23.000sEX operand changes?→42;23.967→24.000sresult changes?→45. At30.50s the cycle3/4/5 comparison retainsID,ID,EX for the consumer, and register rowsx5=42,x6=45 confirm one held cycle. No layout or text collision observed; the distinct held positions contrast with rv09 no-bubble forwarding."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "artifacts": {
+    "l3": "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/l3-record.json",
+    "tsx": "assets/source-kits/risc-v-processor-architecture/src/videos/rv10-load-use-pipeline-stall.tsx"
+  },
+  "feishu_record_id": "recvw25utMtQGj",
+  "requirement_prompt": "Load-Use Pipeline Stall; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 31.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "Load-Use Pipeline Stall: Wait One Cycle for Data",
+  "title": "Load-Use Pipeline Stall: Wait One Cycle for Data",
+  "prompt": "A 31-second silent English educational animation for a university digital electronics course on Load-Use Pipeline Stall: distinguish load address 0x3000 from unavailable load data 42 in an illustrative five-stage pipeline with one-cycle memory; advance the load from EX to MEM while holding the consumer in ID, the next instruction in IF, and PC=0x108, and insert a non-writing EX bubble; place returned 42 into MEM/WB, resume the consumer and PC=0x10C, forward 42 into its operand, compute 42+3=45, and compare the one-cycle hold with final x5=42 and x6=45.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel carries memory response and forwarded data; hold the front-end cells while the load advances at frame 270, fill MEM/WB at 510, resume stages at 660, and reveal operand 42 and result 45 at 690 and 720; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 31.0,
+    "reviewer": "Codex main",
+    "reviewed_at": "2026-10-09T15:48:20.810295+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall.md"
+    ],
+    "notes": "Prompt checked against actual final video observations, numerical state and scene timing. Source kit supplied; clean-machine reproduction unverified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/cover-02.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/load-use-pipeline-stall/load-use-pipeline-stall-geometry.json"
+    ],
+    "observations": [
+      "Held consumer andEX bubble contrasted with older load42 advancing throughMEM.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  }
+}

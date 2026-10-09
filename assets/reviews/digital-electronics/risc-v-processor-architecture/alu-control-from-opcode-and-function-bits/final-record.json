@@ -1,0 +1,615 @@
+{
+  "id": "recvw25utMLp5p",
+  "record_id": "recvw25utMLp5p",
+  "batch_id": "batch-20261009-risc-v",
+  "original_name": "ALU Control from Opcode and Function Bits",
+  "standard_name": "ALU Control from Opcode and Function Bits",
+  "Name": "ALU Control from Opcode and Function Bits",
+  "Discipline": "Digital Electronics",
+  "Course": "RISC-V Processor Architecture",
+  "objective": "Use fixed operands and three R-type encodings to show that opcode plus function fields select the actual ALU operation and therefore its result.",
+  "terminology": {
+    "status": "VERIFIED_FOR_DESIGN",
+    "confirmed": true,
+    "references": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "verified": "2026-10-09",
+        "basis": "RV32I R-type ADD/SUB/XOR control examples. Internal ALU-control binary codes are implementation-specific and are not invented; use named ADD/SUB/XOR selections."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "verified": "2026-10-09",
+        "basis": "Exact instruction opcode, funct3 and funct7 encodings."
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+        "scope": "RV32I R-type ADD/SUB/XOR control examples. Internal ALU-control binary codes are implementation-specific and are not invented; use named ADD/SUB/XOR selections."
+      },
+      {
+        "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+        "scope": "Opcode fields for numeric examples"
+      }
+    ],
+    "scope": "RV32I R-type ADD/SUB/XOR control examples. Internal ALU-control binary codes are implementation-specific and are not invented; use named ADD/SUB/XOR selections."
+  },
+  "production": {
+    "stage": "C_TSX_READY",
+    "l1_l2_version": "risc-v-processor-architecture kit v1 2026-10-09",
+    "duration_seconds": 30,
+    "duration_frames": 900,
+    "fps": 30,
+    "resolution": "1920x1080",
+    "language": "en",
+    "silent": true,
+    "scenes": [
+      {
+        "id": "add",
+        "start_seconds": 0,
+        "end_seconds": 8,
+        "objects": [
+          "A=12",
+          "B=5",
+          "opcode0110011",
+          "funct3=000",
+          "funct7=0000000",
+          "result17"
+        ],
+        "initial_state": "Operation result is empty while A andB are fixed.",
+        "cause": "Decode ADD at4s.",
+        "trigger": "Decode ADD at4s.",
+        "change": "Function fields converge into the ADD selector; operand tokens enter an addition and produce17.",
+        "result": "12+5=17 follows from the decoded ADD operation.",
+        "english_copy": [
+          "Same operands: 12 and 5",
+          "000 / 0000000 selects ADD"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "subtract",
+        "start_seconds": 8,
+        "end_seconds": 16,
+        "objects": [
+          "fixedA12/B5",
+          "funct7 old0000000/new0100000",
+          "result old17/new7"
+        ],
+        "initial_state": "ADD result17 is visible.",
+        "cause": "Set funct7=0100000 at11s with opcode/funct3 unchanged.",
+        "trigger": "Set funct7=0100000 at11s with opcode/funct3 unchanged.",
+        "change": "Flip the function field, replace plus with minus, pull five units out of the12-unit quantity and recompute7.",
+        "result": "SUB uses the same operands but result changes17→7.",
+        "english_copy": [
+          "Change funct7: select SUB.",
+          "12 − 5 = 7"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "xor",
+        "start_seconds": 16,
+        "end_seconds": 24,
+        "objects": [
+          "funct3=100",
+          "funct7=0000000",
+          "A lowbits1100",
+          "B lowbits0101",
+          "XOR result1001"
+        ],
+        "initial_state": "SUB result7 remains from prior operation.",
+        "cause": "Select XOR at19s.",
+        "trigger": "Select XOR at19s.",
+        "change": "Update the function fields; align the low4 operand bits and evaluate each column, producing1001=9.",
+        "result": "Bitwise XOR creates9 from12 and5 without treating XOR as arithmetic subtraction.",
+        "english_copy": [
+          "Change funct3: select XOR.",
+          "1100 XOR 0101 = 1001"
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      },
+      {
+        "id": "compare",
+        "start_seconds": 24,
+        "end_seconds": 30,
+        "objects": [
+          "ADD result17",
+          "SUB result7",
+          "XOR result9",
+          "common opcode0110011"
+        ],
+        "initial_state": "All three operations have been demonstrated.",
+        "cause": "Compare completed operation-specific result tokens.",
+        "trigger": "Compare completed operation-specific result tokens.",
+        "change": "Move computed17,7,9 into three result rows under their exact funct3/funct7 pairs while the common opcode stays joined to every row.",
+        "result": "Opcode identifies the class; function fields distinguish these operations.",
+        "english_copy": [
+          "Opcode gives the class.",
+          "Function bits choose the operation."
+        ],
+        "reading_seconds": 1.5,
+        "timing_reason": "Animate the specific data operation, then hold the completed object state for reading."
+      }
+    ],
+    "scene_rationale": "Four scenes support one controlled ADD/SUB contrast, a visibly different bitwise XOR mechanism, and a compact encoding/result comparison. No separate register-write scene is needed because control-to-result causality is the target.",
+    "critical_processes": [
+      {
+        "id": "alu-decode-evaluate",
+        "scene_id": "subtract",
+        "uncertainty": "A function-bit change must alter actual ALU behavior.",
+        "expected_observation": "Fixed12/5 with ADD17 becomes SUB7."
+      },
+      {
+        "id": "xor-columns",
+        "scene_id": "xor",
+        "uncertainty": "Bitwise operation must have a correct bit-level output.",
+        "expected_observation": "1100 XOR0101 gives1001."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "add-evaluate",
+        "time_seconds": 4,
+        "reason": "Output17 must come from12+5."
+      },
+      {
+        "id": "sub-select",
+        "time_seconds": 11,
+        "reason": "funct7 change and numeric recomputation must agree."
+      },
+      {
+        "id": "xor-evaluate",
+        "time_seconds": 19,
+        "reason": "Show bitwise result1001=9."
+      }
+    ],
+    "state_model": {
+      "function": "rv04State(frame)",
+      "inputs": {
+        "a": 12,
+        "b": 5,
+        "opcode": 51,
+        "operations": [
+          {
+            "name": "ADD",
+            "funct3": 0,
+            "funct7": 0,
+            "word": 7537331,
+            "result": 17
+          },
+          {
+            "name": "SUB",
+            "funct3": 0,
+            "funct7": 32,
+            "word": 1081279155,
+            "result": 7
+          },
+          {
+            "name": "XOR",
+            "funct3": 4,
+            "funct7": 0,
+            "word": 7553715,
+            "result": 9
+          }
+        ],
+        "addSecond": 4,
+        "subSecond": 11,
+        "xorSecond": 19
+      },
+      "planned_bindings": [
+        "decoded funct fields -> BitFields labels and active operator symbol",
+        "fixedA/fixedB -> operand tokens and bit-cell rows",
+        "operation function -> numeric result and bitwise column output"
+      ],
+      "invariants": [
+        "ADD(12,5)=17; SUB(12,5)=7; XOR(12,5)=9.",
+        "Opcode remains0x33 in every comparison.",
+        "SUB requires funct7=0x20 with funct3=0; XOR requires funct3=4 andfunct7=0."
+      ],
+      "b1_samples_seconds": [
+        0,
+        3.966667,
+        4,
+        4.033333,
+        10.966667,
+        11,
+        11.033333,
+        18.966667,
+        19,
+        19.033333,
+        29
+      ],
+      "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv04-state.ts",
+      "bindings": [
+        "decoded funct fields -> BitFields labels and active operator symbol",
+        "fixedA/fixedB -> operand tokens and bit-cell rows",
+        "operation function -> numeric result and bitwise column output"
+      ]
+    },
+    "tsx_path": "assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx",
+    "technical_reviews": [
+      {
+        "type": "B1_MECHANISM_CODE_GATE",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T06:55:53.873502+00:00",
+        "reviewer": "rv_design_01_05",
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv04.cjs",
+        "working_directory": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture",
+        "assertion_exit_code": 0,
+        "assertion_log": "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/b1.log",
+        "results": {
+          "checks": 54,
+          "status": "PASS",
+          "record_specific": "ADD119/120/121; SUB329/330/331; XOR569/570/571; fixed12/5 produce17/7/9 PASS",
+          "render_binding": "SSR comparison confirms corresponding SVG changes."
+        },
+        "source_check": {
+          "status": "passed",
+          "method": "Read frame-to-state-to-props chain and execute SSR checks from the same mechanism source.",
+          "basis": "rv04State invokes aluDecode on instruction fields. The probe binds decoded fields, operator, result, unit count and XOR bit arrays to concrete SVG cells and tokens. Result changes alter actual quantity and bit rows."
+        },
+        "source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv04-probe.tsx",
+        "state_source": "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv04-state.ts",
+        "source_version": {
+          "mtime_ns": 1791528851190036835,
+          "size": 752
+        },
+        "state_version": {
+          "mtime_ns": 1791528851187950615,
+          "size": 1270
+        },
+        "applicable_record_ids": [
+          "recvw25utMLp5p"
+        ],
+        "typecheck": {
+          "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit",
+          "exit_code": 0
+        },
+        "scope": "Authorizes full implementation of this mechanism only. Does not establish teaching review."
+      },
+      {
+        "type": "C_FULL_IMPLEMENTATION_SOURCE_CHECK",
+        "status": "passed",
+        "reviewed_at": "2026-10-09T07:04:18.289580+00:00",
+        "reviewer": "rv_design_01_05",
+        "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx",
+        "source_version": {
+          "mtime_ns": 1791529423820419913,
+          "size": 5676
+        },
+        "source_check": {
+          "status": "passed",
+          "basis": "Actual decoder output drives arithmetic symbol, quantity counts, removal behavior and bit-column output. Comparison computes all result rows from aluDecode.",
+          "method": "Inspect full scene composition and state-driven geometry/data; execute actual full SCENES through SSR at each risk previous/exact/next frame."
+        },
+        "assertion_command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-full-rv01-05.cjs",
+        "assertion_exit_code": 0,
+        "results": {
+          "full_binding_checks": 48,
+          "full_binding_status": "PASS",
+          "typecheck_exit_code": 0,
+          "distinctness_exit_code": 0,
+          "mechanism_state_unchanged": true,
+          "quality_warning": "Compact source below180 non-comment lines. Independent topic scenes include the complete mechanism; no padding, probe wrapping or shared scene factory. Final video teaching review remains required."
+        },
+        "applicable_record_ids": [
+          "recvw25utMLp5p"
+        ],
+        "scope": "Technical source gate only; not a final-video teaching decision."
+      }
+    ],
+    "previews": [],
+    "design_audit": {
+      "visualArgument": "Use fixed operands and three R-type encodings to show that opcode plus function fields select the actual ALU operation and therefore its result.",
+      "motion": "Function fields converge into the ADD selector; operand tokens enter an addition and produce17. Flip the function field, replace plus with minus, pull five units out of the12-unit quantity and recompute7. Update the function fields; align the low4 operand bits and evaluate each column, producing1001=9. Move computed17,7,9 into three result rows under their exact funct3/funct7 pairs while the common opcode stays joined to every row.",
+      "example": {
+        "a": 12,
+        "b": 5,
+        "opcode": 51,
+        "operations": [
+          {
+            "name": "ADD",
+            "funct3": 0,
+            "funct7": 0,
+            "word": 7537331,
+            "result": 17
+          },
+          {
+            "name": "SUB",
+            "funct3": 0,
+            "funct7": 32,
+            "word": 1081279155,
+            "result": 7
+          },
+          {
+            "name": "XOR",
+            "funct3": 4,
+            "funct7": 0,
+            "word": 7553715,
+            "result": 9
+          }
+        ],
+        "addSecond": 4,
+        "subSecond": 11,
+        "xorSecond": 19
+      },
+      "antiTemplate": "RV32I R-type ADD/SUB/XOR control examples. Internal ALU-control binary codes are implementation-specific and are not invented; use named ADD/SUB/XOR selections.",
+      "sceneRationale": "Four scenes support one controlled ADD/SUB contrast, a visibly different bitwise XOR mechanism, and a compact encoding/result comparison. No separate register-write scene is needed because control-to-result causality is the target."
+    },
+    "implementation_notes": {
+      "l2": [
+        "RiscBoard",
+        "BitFields",
+        "DataTokens",
+        "RegisterBank",
+        "MemoryWords"
+      ],
+      "coordinate_space": "SVG viewBox 0 0 960 600; group transforms move field copies and actual payload tokens.",
+      "layout": "Split layout A. Keep diagram labels short; instruction bit ranges belong inside board.",
+      "minimal_l2_changes": "None; current primitives expose actual state values and positions."
+    },
+    "workflow_version": 2,
+    "tool": "Remotion",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "template_scope": "Only course L1/L2 primitives; independent L3 causal scenes.",
+    "rework": [],
+    "key_frames": [
+      160,
+      290,
+      390,
+      525,
+      660,
+      830
+    ],
+    "source": "assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx",
+    "source_files": [
+      "assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx",
+      "assets/source-kits/risc-v-processor-architecture/src/mechanisms/rv04-state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/blob/main/assets/source-kits/risc-v-processor-architecture/src/videos/rv04-alu-control-from-opcode-and-function-bits.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.456141+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/final-video-review.json",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/overview.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex main",
+      "reviewed_at": "2026-10-09T15:45:05.901958+08:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/render-preflight.log",
+        "assets/videos/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.mp4",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/media-probe.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      },
+      "observations": [
+        "Final source TypeScript compilation and distinctness pass before render.",
+        "ffprobe confirms actual final MP4 duration,1920x1080,H264,30fps and zero audio streams."
+      ]
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+      "reviewed_at": "2026-10-09T07:15:07.456141+00:00",
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/final-video-review.json",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/overview.jpg",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "add-evaluate",
+          "times_seconds": [
+            3.966666666666667,
+            4.0,
+            4.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0119.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0120.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0121.png"
+          ],
+          "observation": "3.9667s shows12blue+5yellow units with result—;4/4.0333s result17 appears beneath the joined17-unit set."
+        },
+        {
+          "risk_id": "sub-select",
+          "times_seconds": [
+            10.966666666666667,
+            11.0,
+            11.033333333333333
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0329.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0330.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0331.png"
+          ],
+          "observation": "10.9667s ADD function bits and17-unit state;11/11.0333s funct7 changes0100000, expression changes12−5=7 and5of12units turnred before moving down.13s overview confirms only7blue units remain in upperrow."
+        },
+        {
+          "risk_id": "xor-evaluate",
+          "times_seconds": [
+            18.966666666666665,
+            19.0,
+            19.033333333333335
+          ],
+          "evidence": [
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0569.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0570.png",
+            "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/risk-0571.png"
+          ],
+          "observation": "18.9667s funct3=000/funct7=0100000 with emptyXOR output.19/19.0333s funct3=100/funct7=0000000 and outputbits1001 align with1100 and0101."
+        }
+      ],
+      "observations": [
+        "Viewed v1 overview and nine risk panels. ADD uses12blue+5yellow unit squares with fixed operands12/5. At4s the joined set corresponds to result17.",
+        "At10.9667s funct7=0000000 and17units are visible. At11s funct7 becomes0100000 with subtraction12−5=7; the new12-unit example marks5red units, which are separated below the7blue survivors by13s.",
+        "At18.9667s XOR result cells areblank;19/19.0333s funct3=100,funct7=0000000 and aligned1100 XOR0101 produces1001.22s and27.67s retain correctresult9 and comparison17/7/9. Clear arithmetic-versus-bitwise visual distinction; no observed text collision."
+      ],
+      "basis": "Standardized fields from the separately recorded actual visual-review decision; see cited raw review."
+    }
+  },
+  "publish": {
+    "feishu": {
+      "status": "pending"
+    },
+    "github": {
+      "status": "pending"
+    }
+  },
+  "artifact_version": "v1",
+  "learning_objective": "Use fixed operands and three R-type encodings to show that opcode plus function fields select the actual ALU operation and therefore its result.",
+  "core_conclusion": "Opcode identifies the class; function fields distinguish these operations.",
+  "feishu_record_id": "recvw25utMLp5p",
+  "requirement_prompt": "ALU Control from Opcode and Function Bits; 30s silent English educational animation",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "final_title": "ALU Control from Opcode and Function Bits: Select Operations",
+  "title": "ALU Control from Opcode and Function Bits: Select Operations",
+  "prompt": "A 30-second silent English educational animation for a university digital electronics course on ALU Control from Opcode and Function Bits: keep operands 12 and 5 fixed while opcode and function bits select three actual ALU behaviors; join twelve blue and five yellow units for ADD result 17, change funct7 from 0000000 to 0100000 and separate five removed units for SUB result 7, then use funct3=100 with funct7=0000000 to fill the bitwise XOR result 1100 XOR 0101 = 1001, or 9, and compare the three control/result rows.\n\nUse a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #34d399 glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel joins the five ADD units over 80 frames and lowers the five removed SUB units over 65 frames; fill XOR output bits at frame 570 and stagger the final comparison rows by 10 frames; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex independent reviewer rv_design_11_15 (not implementation author forrv01–05)",
+    "reviewed_at": "2026-10-09T07:15:07.456141+00:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/final-video-review.json",
+      "assets/prompts/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.md"
+    ],
+    "notes": "Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.",
+    "exact_reproduction_verified": false
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "v1",
+    "reviewer": "Codex root",
+    "reviewed_at": "2026-10-09T15:50:47.051221+08:00",
+    "evidence": [
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/cover-01.jpg",
+      "assets/covers/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.jpg",
+      "assets/reviews/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits/alu-control-from-opcode-and-function-bits-geometry.json"
+    ],
+    "observations": [
+      "Fixed12/5 operands compare ADD17 versusSUB7 under changed function bits.",
+      "Observed cover text is readable, with the complete concept name, course eyebrow and official icon; the topic figure occupies the right area without overlap or clipping."
+    ],
+    "checks": {
+      "semantic_alignment": true,
+      "layout": true,
+      "readability": true,
+      "version_match": true,
+      "geometry": true
+    },
+    "uniqueness": "All15 JPG contents differ by direct byte comparison; no hashes used."
+  },
+  "subject": "Digital Electronics",
+  "course": "RISC-V Processor Architecture",
+  "status": "ready",
+  "video": "assets/videos/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.mp4",
+  "cover": "assets/covers/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.jpg",
+  "cover_image": "assets/covers/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/42ea819d-c38c-4059-9624-dd3aaa76a016",
+  "player_version": "v1",
+  "prompt_file": "assets/prompts/digital-electronics/risc-v-processor-architecture/alu-control-from-opcode-and-function-bits.md",
+  "tags": [
+    "recvw25utMLp5p",
+    "risc-v-processor-architecture",
+    "P0"
+  ],
+  "references": [
+    {
+      "title": "docs.riscv.org",
+      "url": "https://docs.riscv.org/reference/isa/v20260120/unpriv/rv32.html",
+      "scope": "RV32I R-type ADD/SUB/XOR control examples. Internal ALU-control binary codes are implementation-specific and are not invented; use named ADD/SUB/XOR selections."
+    },
+    {
+      "title": "github.com",
+      "url": "https://github.com/riscv/riscv-opcodes/blob/master/extensions/rv_i",
+      "scope": "Opcode fields for numeric examples"
+    }
+  ],
+  "textbook": "Specific official documentation and research listed per concept",
+  "page": "catalog/digital-electronics/risc-v-processor-architecture.md",
+  "feishu": {
+    "record_id": "recvw25utMLp5p",
+    "verified": true,
+    "status": "verified",
+    "verified_at": "2026-10-09T15:53:07.979882+08:00",
+    "selection_fields": {
+      "Name": "ALU Control from Opcode and Function Bits",
+      "Discipline": "Digital Electronics",
+      "Course": "RISC-V Processor Architecture"
+    }
+  },
+  "publication": {
+    "feishu": {
+      "record_id": "recvw25utMLp5p",
+      "verified": true,
+      "status": "succeeded",
+      "verified_at": "2026-10-09T15:53:07.979882+08:00",
+      "version": "v1"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "v1",
+      "page_status": "pending",
+      "attachment": {
+        "video_version": "risc-v-20261009-v1",
+        "video_bytes": 1771516,
+        "issue_number": 123,
+        "issue_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123",
+        "comment_id": 6076828076,
+        "comment_url": "https://github.com/LeaddeOpenLab/leadde-knowledge-in-motion/issues/123#issuecomment-6076828076",
+        "attachment_url": "https://github.com/user-attachments/assets/42ea819d-c38c-4059-9624-dd3aaa76a016",
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/42ea819d-c38c-4059-9624-dd3aaa76a016",
+      "issue_number": 123,
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  }
+}

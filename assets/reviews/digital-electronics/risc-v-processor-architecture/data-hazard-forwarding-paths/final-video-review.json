@@ -1,0 +1,120 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "reviewer": "/root/rv_design_01_05 (independent of items6–10 implementation)",
+  "reviewed_at": "2026-10-09T07:15:49.877264+00:00",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths.mp4",
+  "evidence": [
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-sheet.jpg"
+  ],
+  "observations": [
+    "4.667s showsADD inEX with12 while architecturalx5=0. At9.50sADD is inMEM,SUB inEX and a12 payload is traveling backward; the operand is still0. At12.00s the operand is12 andSUB result is2 whilex5 remains0.",
+    "17.333→20.00s:ADD reachesWB andXOR reachesEX. The longerMEM/WB path carries12; the displayed binary operand changes0000→1100, then output becomes0011 anddecimal3.",
+    "25.967→26.000s x6 changes0→2 whilex5 already12 andx7 still0. At28.833s registers readx5=12,x6=2,x7=3. Although the diagram has pipeline lanes, concrete carried values, stale operand replacement and computations make the process visible. No text collision observed."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "exmem-arrival",
+      "times_seconds": [
+        9.966666666666667,
+        10.0,
+        10.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0299.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0300.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0301.png"
+      ],
+      "observation": "At9.9667s the EX calculation reads0−10=? besideRegisterx5=0. At10.0000s/10.0333s it reads12−10=? whilex5 still0; carried payload12 has reachedEX.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "memwb-arrival",
+      "times_seconds": [
+        17.966666666666665,
+        18.0,
+        18.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0539.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0540.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0541.png"
+      ],
+      "observation": "At17.9667s XOR input is0000 with unknown output. At18.0000s/18.0333s input becomes1100 anddecimal12 while the output remains unknown until the later result event.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "writeback",
+      "times_seconds": [
+        25.966666666666665,
+        26.0,
+        26.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0779.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0780.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0781.png"
+      ],
+      "observation": "At25.9667s registers are12,0,0. At26.0000s/26.0333s thex6 row changes to2 whilex5 remains12 andx7 remains0; overview28.833s additionally showsx7=3.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "sub-result",
+      "times_seconds": [
+        10.966666666666667,
+        11.0,
+        11.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0329.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0330.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0331.png"
+      ],
+      "observation": "At10.9667sSUB output is?; at11.0000s/11.0333s the calculation is12−10=2 andtheSUB pipeline token carries2, whilearchitecturalx5=0.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "xor-result",
+      "times_seconds": [
+        18.966666666666665,
+        19.0,
+        19.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0569.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0570.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/data-hazard-forwarding-paths/risk-0571.png"
+      ],
+      "observation": "At18.9667s output is????; at19.0000s/19.0333s it becomes0011 anddecimal3, with3 also on theXOR token.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "condition": 1,
+      "triggered": false,
+      "reason": "The stale0 operand, producer12, backward value transfer and computed2/3 identify forwarding without headings."
+    },
+    {
+      "condition": 2,
+      "triggered": false,
+      "reason": "The actual operand and later result change while architectural storage is still old; lane highlights alone are not the evidence."
+    },
+    {
+      "condition": 3,
+      "triggered": false,
+      "reason": "EX/MEM andMEM/WB payloads visibly become consumer operands, and actual arithmetic and final register values establish the consequence."
+    }
+  ],
+  "checks": {
+    "teaching_correctness": true,
+    "mechanism_visible": true,
+    "pacing": true,
+    "layout": true,
+    "readability": true,
+    "version_match": true
+  },
+  "issues": [],
+  "cross_topic_comparison": "Compared actual overviews ofrv06–10: branch cursor selection, opposite memory data directions, latch storage, early forwarding and one-cycle hold/bubble have distinct visible mechanisms."
+}

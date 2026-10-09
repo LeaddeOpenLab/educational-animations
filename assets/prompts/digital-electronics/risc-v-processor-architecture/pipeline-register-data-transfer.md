@@ -1,0 +1,9 @@
+# recvw25utMuzEE · Pipeline Register Data Transfer
+
+Version: v2 · alignment: aligned
+
+A 30-second silent English educational animation for a university digital electronics course on Pipeline Register Data Transfer: assemble ADD operands 7 and 5 with destination x5 and RegWrite=1, capture them together in ID/EX at 8 seconds, and show the latch holding 7/5/x5 after upstream inputs change to 20/1/x6; compute 12, capture result and destination together in EX/MEM at 17 seconds, carry 12/x5 through MEM/WB without a memory access, and use the preserved destination tag to write x5=12 at 27 seconds while x6 stays zero.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel assembles bundle fields over 60 frames, carries result plus tag over 40 frames, and passes the bundle through MEM over 65 frames; preserve destination-label clearance during transfer; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.

@@ -1,0 +1,8 @@
+cwd: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+command: '/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node' scripts/assert-rv13.cjs
+exit_code: 0
+rv13 PASS: saved MPP consumed before reset, mode S restored, interrupt fields and token coordinates bound
+command: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node node_modules/typescript/bin/tsc --noEmit
+exit_code: 0
+Source binding review: rv13State(frame) saves old mode then consumes pre-resetMPP; probe hart translate y uses hartY and BitFields uses mppBits/mie/mpie. SSR confirms M y80 becomes S y220 whileMPP renders00.
+This is technical code-gate evidence only; final teaching review remains pending.

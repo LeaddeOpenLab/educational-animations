@@ -1,0 +1,129 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "risc-v-processor-architecture",
+    "label": "RISC-V Processor Architecture",
+    "subject": "Digital Electronics",
+    "outputDir": "Digital Electronics/RISC-V Processor Architecture"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "risc-v-processor-architecture",
+    "file": "src/theme/themes/risc-v-processor-architecture.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#070b12",
+      "bg1": "#0d1626",
+      "bg2": "#142238",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "primary": "#60a5fa",
+      "accent": "#fbbf24",
+      "result": "#34d399",
+      "warn": "#f87171",
+      "textStrong": "#f8fafc",
+      "textMuted": "#94a3b8",
+      "textDim": "#7a879b",
+      "alt": "#34d399"
+    },
+    "bg1": "#0d1626"
+  },
+  "primitives": [
+    {
+      "name": "RiscBoard",
+      "file": "src/components/RiscV.tsx",
+      "summary": "Logical 960x600 SVG board for architecture objects.",
+      "signature": "See exported typed props in RiscV.tsx"
+    },
+    {
+      "name": "BitFields",
+      "file": "src/components/RiscV.tsx",
+      "summary": "bits determine width; numeric/binary value sets visible instruction fields; positions permit recomposition.",
+      "signature": "See exported typed props in RiscV.tsx"
+    },
+    {
+      "name": "RegisterBank",
+      "file": "src/components/RiscV.tsx",
+      "summary": "values replace actual architectural register contents; readIndices/writeIndex identify selected ports; x0 invariants enforced by state model.",
+      "signature": "See exported typed props in RiscV.tsx"
+    },
+    {
+      "name": "DataTokens",
+      "file": "src/components/RiscV.tsx",
+      "summary": "x/y move actual named payload values between ports, latches and destinations.",
+      "signature": "See exported typed props in RiscV.tsx"
+    },
+    {
+      "name": "PipelineLanes",
+      "file": "src/components/RiscV.tsx",
+      "summary": "stage advances each instruction position; row keeps identity; killed marks wrong-path instruction then state removes it; value carries payload.",
+      "signature": "See exported typed props in RiscV.tsx"
+    },
+    {
+      "name": "AddressParts",
+      "file": "src/components/RiscV.tsx",
+      "summary": "bit widths and numeric values split a virtual or effective address into actual fields.",
+      "signature": "See exported typed props in RiscV.tsx"
+    },
+    {
+      "name": "MemoryWords",
+      "file": "src/components/RiscV.tsx",
+      "summary": "address selects actual stored word; values replace memory contents after stores or device register writes.",
+      "signature": "See exported typed props in RiscV.tsx"
+    }
+  ],
+  "shared": {
+    "files": [
+      "src/components/Plot.tsx",
+      "src/components/ui.tsx"
+    ],
+    "note": "L1c copied unchanged from edu-video-kit template."
+  },
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": []
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^rv\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "L1 unchanged; L2 explicit values, bit fields, payload ownership and pipeline positions."
+    ]
+  }
+}

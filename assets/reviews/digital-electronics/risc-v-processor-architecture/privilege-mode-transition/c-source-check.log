@@ -1,0 +1,6 @@
+command: node scripts/assert-rv11-15-full.cjs
+exit_code: 0
+rv13 FULL PASS: 4 independent scenes, 840frames, tested real scene state bindings
+command: node node_modules/typescript/bin/tsc --noEmit
+exit_code: 0
+Source review: source directly imports its own B1 state and composes RISC-V L2 plus topic-specific SVG; no probe wrapper. Each literal scene uses correct global start + local frame. No cross-topic L3 import. Technical evidence only; teaching review pending.

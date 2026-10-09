@@ -1,0 +1,6 @@
+Command: /Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node scripts/assert-rv01.cjs
+Working directory: /Users/zhoutianshuo/Desktop/leadde motion/.kits/risc-v-processor-architecture
+field extraction 300→390; rd change749/750/751; exact R fields and rendered bit-string changes PASS
+{"id": "rv01", "checks": 59, "status": "PASS", "scope": "technical mechanism only"}
+Exit code: 0
+TypeScript: tsc --noEmit; exit 0

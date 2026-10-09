@@ -1,0 +1,104 @@
+{
+  "status": "passed",
+  "version": "v1",
+  "video_path": "assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4",
+  "video_version": {
+    "mtime_ns": 1791529780252728426,
+    "size": 2522664
+  },
+  "reviewer": "/root/rv_design_06_10 (independent of rv_design_11_15 source author)",
+  "reviewed_at": "2026-10-09T07:16:18.883941+00:00",
+  "evidence": [
+    "assets/videos/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return.mp4",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/overview.jpg",
+    "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-sheet.jpg"
+  ],
+  "observations": [
+    "3.00 s shows older x5=7 completed and x6=0 with ECALL at0x104 selected; the program-order boundary is visible in actual register cells.",
+    "7.967→8.000 s PC0x104 becomes0x800, mepc blank becomes0x104, mcause blank becomes8 and privilegeU becomesM; x5=7/x6=0 persist.",
+    "15.467→15.500 s the visible software+4 equation accompanies mepc0x104→0x108 while handlerPC stays0x800.",
+    "20.967→21.000 s PC becomes0x108 and modeU, with x6 still0;26.967→27.000 s x6 finally becomes9. The older x5 remains7 throughout.",
+    "Core layout stays continuous to make CSR and register updates comparable; the actual numerical states change in separate stages. No sampled text obscures any CSR or result."
+  ],
+  "risk_checks": [
+    {
+      "risk_id": "trap-entry",
+      "times_seconds": [
+        7.966666666666667,
+        8.0,
+        8.033333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0239.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0240.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0241.png"
+      ],
+      "observation": "Frames239/240/241 show mepc capture0x104, mcause8, PC0x800 and U→M; no younger register result appears.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "software-adjust",
+      "times_seconds": [
+        15.466666666666667,
+        15.5,
+        15.533333333333333
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0464.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0465.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0466.png"
+      ],
+      "observation": "Frames464/465/466: mepc changes0x104→0x108 under the explicit SOFTWARE WRITE/+4 equation, PC remains0x800.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "mret",
+      "times_seconds": [
+        20.966666666666665,
+        21.0,
+        21.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0629.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0630.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0631.png"
+      ],
+      "observation": "Frames629/630/631: PC0x800→0x108, modeM→U, instruction0x108 becomes selected and x6 remains0.",
+      "status": "passed"
+    },
+    {
+      "risk_id": "resume-write",
+      "times_seconds": [
+        26.966666666666665,
+        27.0,
+        27.033333333333335
+      ],
+      "evidence": [
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0809.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0810.png",
+        "assets/reviews/digital-electronics/risc-v-processor-architecture/precise-trap-entry-and-return/risk-0811.png"
+      ],
+      "observation": "Frames809/810/811: x6 changes0→9 after return; x5=7 and saved mepc0x108 persist.",
+      "status": "passed"
+    }
+  ],
+  "veto_checks": [
+    {
+      "id": 1,
+      "triggered": false,
+      "reason": "The PC/CSR/register values independently identify precise trap capture and delayed younger execution."
+    },
+    {
+      "id": 2,
+      "triggered": false,
+      "reason": "PC, mepc, cause, mode and delayed register contents change at four distinct observed events."
+    },
+    {
+      "id": 3,
+      "triggered": false,
+      "reason": "Entry, handler adjustment, return and resumed effect are enacted in visible fields, not only announced."
+    }
+  ],
+  "review_method": "Actual final MP4 overview and cropped before/at/after risk sheets were inspected with view_image. This is frame-based video-content review; no browser/playback test was performed.",
+  "repairs": []
+}

@@ -1,0 +1,5 @@
+import React from 'react';
+import {RiscBoard,MemoryWords,RegisterBank,DataTokens} from '../components/RiscV';
+import {COLORS} from '../theme';
+import {rv15State} from './rv15-state';
+export const Rv15Probe=({frame}:{frame:number})=>{const s=rv15State(frame);return <RiscBoard><MemoryWords x={470} y={60} width={440} words={[{address:'GPIO output',value:s.output},{address:'GPIO status',value:s.status},{address:'RAM',value:s.ram}]} selectedAddress={s.decoded}/><RegisterBank x={40} y={60} width={300} values={[{index:3,value:s.x3}]}/><DataTokens tokens={[{label:s.readPhase?'Read status':'Write data',value:s.data,x:s.requestX,y:400}]}/><path d={`M470 330 H620 V${s.pinY} H760`} stroke={COLORS.primary} strokeWidth={8} fill="none"/><circle cx={820} cy={s.pinY} r={s.ledRadius} stroke={COLORS.result} strokeWidth={4} fill={s.ledOn?COLORS.result:'none'}/>{s.ledOn&&[0,1,2,3].map(i=><line key={i} x1={820+Math.cos(i*Math.PI/2)*43} y1={s.pinY+Math.sin(i*Math.PI/2)*43} x2={820+Math.cos(i*Math.PI/2)*62} y2={s.pinY+Math.sin(i*Math.PI/2)*62} stroke={COLORS.result} strokeWidth={5}/>)}</RiscBoard>;};

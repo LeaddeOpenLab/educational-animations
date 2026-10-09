@@ -1,0 +1,9 @@
+# recvw25utMLp5p · ALU Control from Opcode and Function Bits
+
+Version: v1 · alignment: aligned
+
+A 30-second silent English educational animation for a university digital electronics course on ALU Control from Opcode and Function Bits: keep operands 12 and 5 fixed while opcode and function bits select three actual ALU behaviors; join twelve blue and five yellow units for ADD result 17, change funct7 from 0000000 to 0100000 and separate five removed units for SUB result 7, then use funct3=100 with funct7=0000000 to fill the bitwise XOR result 1100 XOR 0101 = 1001, or 9, and compare the three control/result rows.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #34d399 glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel joins the five ADD units over 80 frames and lowers the five removed SUB units over 65 frames; fill XOR output bits at frame 570 and stagger the final comparison rows by 10 frames; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.

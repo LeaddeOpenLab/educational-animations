@@ -1,0 +1,9 @@
+# recvw25utMTyz5 · Immediate Generation from Instruction Bits
+
+Version: v1 · alignment: aligned
+
+A 30-second silent English educational animation for a university digital electronics course on Immediate Generation from Instruction Bits: extract the I-type immediate 111111111100 and replicate its sign bit into twenty upper positions to obtain 0xFFFFFFFC, or -4; join the separated S-type high and low fields into 000000001100, or +12; rearrange B-type fragments and append a fixed low zero to obtain +16 bytes, then compare the three completed signed offsets.
+
+Use a radial dark background from #142238 through #0d1626 to #070b12 with a 72px grid and a #60a5fa glow; primary #60a5fa marks main fields, registers, or paths, accent #fbbf24 marks carried values and selected quantities, result #34d399 marks completed values or valid selections, and warn #f87171 marks discarded or unavailable work; use Helvetica Neue with Helvetica, Arial, Segoe UI, and sans-serif fallbacks, 50px headings at weight 700, 30px body copy, and 21px uppercase kickers with 5px tracking; at 30 fps, slide-up headings 22px over 16 frames from frame 8 and stagger-in copy from frame 20 in 11-frame steps with 12-frame fades and 16px rises; marker-travel lifts the I-type slice over 70 frames and separates S-type fields over 75 frames; populate sign bits, assembled fields, and the fixed branch low-zero cell at their state boundaries; provide the Remotion source and course kit with Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2, Node.js, a Chromium render environment, and FFmpeg, with 1920x1080 H264 MP4 output and no audio; exact reproduction on a clean machine has not been verified.
+
+Final approved Prompt, exact source kit and version-matched review evidence supplied; clean-machine reproduction has not been verified.
