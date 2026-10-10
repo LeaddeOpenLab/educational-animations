@@ -1,18 +1,12 @@
 #!/usr/bin/env python3
 """Create repository-owned SVG art for the GitHub README card navigation."""
 import html
-import json
 import re
-from collections import OrderedDict
 from pathlib import Path
-from render_subject_cards import SUBJECTS
 
 ROOT = Path(__file__).resolve().parents[1]
-ITEMS = json.loads((ROOT / "data/prompts.json").read_text(encoding="utf-8"))
 ICON_DIR = ROOT / "assets" / "subject-icons"
-COVER_DIR = ROOT / "assets" / "course-covers"
 ICON_DIR.mkdir(parents=True, exist_ok=True)
-COVER_DIR.mkdir(parents=True, exist_ok=True)
 
 def slug(value):
     return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
@@ -44,77 +38,5 @@ ICONS = {
 for subject, drawing in ICONS.items():
     (ICON_DIR / f"{slug(subject)}.svg").write_text(svg(f'<g {STYLE}>{drawing}</g>', 96, 96), encoding="utf-8")
 
-library = OrderedDict()
-for item in ITEMS:
-    library.setdefault((item["subject"], item["course"]), item)
-
-# Keep course cards tied to the same subject colors as the library navigation.
-PALETTES = {title: accent for _, title, accent, _ in SUBJECTS}
-# Centers of the existing subject glyphs, including their strokes. These are
-# subject symbols, not a single knowledge-point figure reused across a course.
-FIGURE_CENTERS = {
-    "Computer Science": (48, 51.5), "Artificial Intelligence": (48, 41),
-    "Mathematics": (43, 46), "Mathematics & Statistics": (48, 53),
-    "Physics": (48, 46), "Chemistry": (48, 49),
-    "Life Sciences": (48.5, 45), "Neuroscience": (48, 49),
-    "Psychology": (48, 47.5), "Economics": (48.5, 53.5),
-    "Finance": (48, 42), "Political Science": (48, 50),
-    "Philosophy": (48, 46), "Literature": (48, 47),
-    "Astronomy": (48, 45), "Embedded Systems": (48, 48),
-    "Digital Electronics": (48, 47),
-}
-BRAND = (ROOT / "assets/leadde-icon.svg").read_text(encoding="utf-8")
-BRAND = re.sub(r'<svg[^>]*>', '<svg x="1756" y="980" width="56" height="56" viewBox="0 0 120 120">', BRAND, count=1)
-
-def title_lines(title, size):
-    words, lines, current = title.split(), [], ""
-    for word in words:
-        candidate = f"{current} {word}".strip()
-        # Conservative character widths keep long names inside the 1010px block.
-        if current and len(candidate) * size * .60 > 970:
-            lines.append(current)
-            current = word
-        else:
-            current = candidate
-    lines.append(current)
-    return lines
-
-for (subject, course), first in library.items():
-    color = PALETTES[subject]
-    size = 116 if len(course) <= 18 else 96 if len(course) <= 30 else 78 if len(course) <= 44 else 66
-    lines = title_lines(course, size)
-    line_height = size * 1.08
-    block_height = 27 + 30 + len(lines) * line_height + 36 + 7 + 30 + 23
-    top = (1080 - block_height) / 2
-    title_top = top + 57
-    rule_top = title_top + len(lines) * line_height + 36
-    text = "".join(
-        f'<text x="150" y="{title_top + size * .83 + line_index * line_height:.2f}" fill="#F4F7FF" font-size="{size}" font-weight="800" letter-spacing="-1.4">{html.escape(line)}</text>'
-        for line_index, line in enumerate(lines)
-    )
-    cx, cy = FIGURE_CENTERS[subject]
-    scale = 9 if subject == "Mathematics & Statistics" else 8 if subject == "Digital Electronics" else 6
-    figure = ICONS[subject].replace("#24292f", color).replace('stroke-width="7"', 'stroke-width="2.4"')
-    art = f'''<title>{html.escape(course)} — {html.escape(subject)}</title>
-<defs>
-  <radialGradient id="glow"><stop stop-color="{color}" stop-opacity=".18"/><stop offset="1" stop-color="{color}" stop-opacity="0"/></radialGradient>
-  <linearGradient id="mask" x1="0" y1="0" x2="1" y2=".09"><stop stop-color="#07101F" stop-opacity=".94"/><stop offset=".4" stop-color="#07101F" stop-opacity=".84"/><stop offset=".62" stop-color="#07101F" stop-opacity=".3"/><stop offset=".78" stop-color="#07101F" stop-opacity="0"/></linearGradient>
-  <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0H0V72" stroke="#93A4C5" stroke-opacity=".1"/></pattern>
-</defs>
-<rect width="1920" height="1080" fill="#07101F"/>
-<ellipse cx="1492" cy="542" rx="640" ry="640" fill="url(#glow)"/>
-<rect width="1920" height="1080" fill="url(#grid)"/>
-<rect width="1920" height="1080" fill="url(#mask)"/>
-<g id="course-figure" opacity=".96" transform="translate({1492 - cx * scale:.2f} {542 - cy * scale:.2f}) scale({scale})" stroke="{color}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">{figure}</g>
-<g font-family="Arial, Helvetica, sans-serif">
-<text x="150" y="{top + 23:.2f}" fill="{color}" font-size="27" font-weight="700" letter-spacing="5.5">COURSE COLLECTION</text>
-{text}
-<rect x="150" y="{rule_top:.2f}" width="196" height="7" rx="7" fill="{color}"/>
-<text x="150" y="{rule_top + 60:.2f}" fill="#93A4C5" font-size="23" letter-spacing="2.4">{html.escape(subject.upper())} · COURSE COLLECTION</text>
-</g>
-{BRAND}'''
-    code = first.get("course_code", first["tags"][1]).lower()
-    cover = COVER_DIR / f"{code}.svg"
-    cover.write_text(svg(art, 1920, 1080), encoding="utf-8")
-
-print(f"Created {len(ICONS)} subject icons and {len(library)} course covers.")
+# Course covers use dedicated Remotion stills: scripts/course-covers/render.mjs.
+print(f"Created {len(ICONS)} subject icons.")

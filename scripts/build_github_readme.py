@@ -88,7 +88,7 @@ def card_table(cards):
 def course_cover(first):
  code=first.get('course_code',first['tags'][1])
  for base in [code.lower(),slug(first['course'])]:
-  for ext in ['.svg','.jpg','.png']:
+  for ext in ['.jpg','.png']:
    path=f'assets/course-covers/{base}{ext}'
    if (root/path).is_file():return path
  return first.get('cover')

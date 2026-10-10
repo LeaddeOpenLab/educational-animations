@@ -1,0 +1,767 @@
+[
+  {
+    "subject": "Computer Science",
+    "course": "Introduction to Computer Science",
+    "code": "cs50x",
+    "id": "C01-A001",
+    "name": "Pointer",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cs50x.png",
+    "output": "assets/course-covers/cs50x.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Computer Science/Introduction to Computer Science/pointer.jpg",
+      "knowledge_id": "C01-A001"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Introduction to Algorithms",
+    "code": "6.006",
+    "id": "recvw1Efv8Vc3v",
+    "name": "Bellman-Ford Algorithm",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/6.006.png",
+    "output": "assets/course-covers/6.006.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/computer-science/6-006/bellman-ford-algorithm.jpg",
+      "knowledge_id": "recvw1Efv8Vc3v"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Computer Organization and Architecture",
+    "code": "cs-coa",
+    "id": "C21-A002",
+    "name": "Floating-Point Representation",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cs-coa.png",
+    "output": "assets/course-covers/cs-coa.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Computer Science/Computer Organization and Architecture/floating-point-representation.jpg",
+      "knowledge_id": "C21-A002"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Operating Systems",
+    "code": "cs-os",
+    "id": "C22-A002",
+    "name": "Process State Transitions",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cs-os.png",
+    "output": "assets/course-covers/cs-os.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Computer Science/Operating Systems/process-state-transitions.jpg",
+      "knowledge_id": "C22-A002"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Computer Networks",
+    "code": "cs-net",
+    "id": "C23-A001",
+    "name": "OSI and TCP/IP Layers",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cs-net.png",
+    "output": "assets/course-covers/cs-net.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Computer Science/Computer Networks/osi-and-tcp-ip-layers.jpg",
+      "knowledge_id": "C23-A001"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Database Systems",
+    "code": "cs-db",
+    "id": "C24-A001",
+    "name": "Entity-Relationship Model",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cs-db.png",
+    "output": "assets/course-covers/cs-db.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Computer Science/Database Systems/entity-relationship-model.jpg",
+      "knowledge_id": "C24-A001"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Compiler Design",
+    "code": "cs-comp",
+    "id": "C25-A001",
+    "name": "Lexical Analysis and Tokens",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cs-comp.png",
+    "output": "assets/course-covers/cs-comp.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Computer Science/Compiler Design/lexical-analysis-and-tokens.jpg",
+      "knowledge_id": "C25-A001"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "Introduction to Machine Learning",
+    "code": "6.036",
+    "id": "C03-A001",
+    "name": "Decision Boundary",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/6.036.png",
+    "output": "assets/course-covers/6.036.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Artificial Intelligence/Introduction to Machine Learning/decision-boundary.jpg",
+      "knowledge_id": "C03-A001"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "Deep Learning",
+    "code": "ai-dl",
+    "id": "C26-A001",
+    "name": "Artificial Neuron",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/ai-dl.png",
+    "output": "assets/course-covers/ai-dl.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Artificial Intelligence/Deep Learning/artificial-neuron.jpg",
+      "knowledge_id": "C26-A001"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "Natural Language Processing",
+    "code": "ai-nlp",
+    "id": "C27-A002",
+    "name": "N-Gram Language Model",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/ai-nlp.png",
+    "output": "assets/course-covers/ai-nlp.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Artificial Intelligence/Natural Language Processing/n-gram-language-model.jpg",
+      "knowledge_id": "C27-A002"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "Computer Vision",
+    "code": "ai-cv",
+    "id": "C28-A001",
+    "name": "Image Convolution",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/ai-cv.png",
+    "output": "assets/course-covers/ai-cv.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Artificial Intelligence/Computer Vision/image-convolution.jpg",
+      "knowledge_id": "C28-A001"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "Reinforcement Learning",
+    "code": "ai-rl",
+    "id": "C29-A001",
+    "name": "States, Actions, and Rewards",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/ai-rl.png",
+    "output": "assets/course-covers/ai-rl.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/featured/C29-A001.jpg",
+      "knowledge_id": "C29-A001"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "Generative Artificial Intelligence",
+    "code": "ai-gen",
+    "id": "recvw24KNremp6",
+    "name": "Byte-Pair Encoding Tokenization",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/ai-gen.png",
+    "output": "assets/course-covers/ai-gen.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.jpg",
+      "knowledge_id": "recvw24KNremp6"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Single-Variable Calculus",
+    "code": "18.01",
+    "id": "C04-A004",
+    "name": "Fundamental Theorem of Calculus",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/18.01.png",
+    "output": "assets/course-covers/18.01.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Mathematics/Single-Variable Calculus/fundamental-theorem-of-calculus.jpg",
+      "knowledge_id": "C04-A004"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Linear Algebra",
+    "code": "18.06",
+    "id": "C05-A002",
+    "name": "Row Space",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/18.06.png",
+    "output": "assets/course-covers/18.06.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/mathematics/linear-algebra/line-space.jpg",
+      "knowledge_id": "C05-A002"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Multivariable Calculus",
+    "code": "math-mvc",
+    "id": "C31-A001",
+    "name": "Partial Derivatives",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/math-mvc.png",
+    "output": "assets/course-covers/math-mvc.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Mathematics/Multivariable Calculus/partial-derivatives.jpg",
+      "knowledge_id": "C31-A001"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Ordinary Differential Equations",
+    "code": "math-ode",
+    "id": "C32-A001",
+    "name": "Separable Differential Equations",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/math-ode.png",
+    "output": "assets/course-covers/math-ode.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Mathematics/Ordinary Differential Equations/separable-differential-equations.jpg",
+      "knowledge_id": "C32-A001"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Discrete Mathematics",
+    "code": "math-dm",
+    "id": "C33-A005",
+    "name": "Permutations and Combinations",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/math-dm.png",
+    "output": "assets/course-covers/math-dm.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Mathematics/Discrete Mathematics/permutations-and-combinations.jpg",
+      "knowledge_id": "C33-A005"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Abstract Algebra",
+    "code": "math-aa",
+    "id": "C34-A003",
+    "name": "Cyclic Groups",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/math-aa.png",
+    "output": "assets/course-covers/math-aa.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Mathematics/Abstract Algebra/cyclic-groups.jpg",
+      "knowledge_id": "C34-A003"
+    }
+  },
+  {
+    "subject": "Mathematics",
+    "course": "Optimization Theory",
+    "code": "math-opt",
+    "id": "C35-A001",
+    "name": "Convex Sets and Convex Functions",
+    "foot": "30 seconds",
+    "primary": "#4ADE80",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/math-opt.png",
+    "output": "assets/course-covers/math-opt.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "Mathematics/Optimization Theory/convex-sets-and-convex-functions.jpg",
+      "knowledge_id": "C35-A001"
+    }
+  },
+  {
+    "subject": "Mathematics & Statistics",
+    "course": "Applied Probability",
+    "code": "6.041",
+    "id": "C06-A001",
+    "name": "Conditional Probability",
+    "foot": "30 seconds",
+    "primary": "#22D3EE",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/6.041.png",
+    "output": "assets/course-covers/6.041.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/mathematics-statistics/applied-probability/conditional-probability.jpg",
+      "knowledge_id": "C06-A001"
+    }
+  },
+  {
+    "subject": "Physics",
+    "course": "Classical Mechanics",
+    "code": "8.01",
+    "id": "C07-A001",
+    "name": "Location-Time Graph",
+    "foot": "concept preview",
+    "primary": "#60A5FA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/8.01.png",
+    "output": "assets/course-covers/8.01.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "classical-mechanics/Mech.SlopeMark",
+      "knowledge_id": "C07-A001"
+    }
+  },
+  {
+    "subject": "Physics",
+    "course": "Electromagnetism",
+    "code": "8.02",
+    "id": "C08-A001",
+    "name": "Electric Field",
+    "foot": "concept preview",
+    "primary": "#60A5FA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/8.02.png",
+    "output": "assets/course-covers/8.02.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "electromagnetism/Em.FieldLines + Charge",
+      "knowledge_id": "C08-A001"
+    }
+  },
+  {
+    "subject": "Chemistry",
+    "course": "Organic Chemistry I",
+    "code": "5.12",
+    "id": "C09-A001",
+    "name": "Resonance Structure",
+    "foot": "30 seconds",
+    "primary": "#F59E0B",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/5.12.png",
+    "output": "assets/course-covers/5.12.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/chemistry/organic-chemistry-i/resonance-structure.jpg",
+      "knowledge_id": "C09-A001"
+    }
+  },
+  {
+    "subject": "Life Sciences",
+    "course": "Introduction to Biology",
+    "code": "7.013",
+    "id": "C10-A001",
+    "name": "Protein Structure",
+    "foot": "concept preview",
+    "primary": "#34D399",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/7.013.png",
+    "output": "assets/course-covers/7.013.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "introduction-to-biology/Bio.ProteinLevels",
+      "knowledge_id": "C10-A001"
+    }
+  },
+  {
+    "subject": "Neuroscience",
+    "course": "Introduction to Neuroscience",
+    "code": "9.01",
+    "id": "C11-A001",
+    "name": "Resting Potential",
+    "foot": "concept preview",
+    "primary": "#F472B6",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/9.01.png",
+    "output": "assets/course-covers/9.01.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "introduction-to-neuroscience/Neuro.IonChannel",
+      "knowledge_id": "C11-A001"
+    }
+  },
+  {
+    "subject": "Psychology",
+    "course": "Introduction to Psychology",
+    "code": "9.00",
+    "id": "C12-A001",
+    "name": "Experimental Design",
+    "foot": "concept preview",
+    "primary": "#C084FC",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/9.00.png",
+    "output": "assets/course-covers/9.00.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "Experimental design: random assignment and controlled comparison",
+      "knowledge_id": "C12-A001"
+    }
+  },
+  {
+    "subject": "Economics",
+    "course": "Principles of Microeconomics",
+    "code": "14.01",
+    "id": "C13-A001",
+    "name": "Market Equilibrium",
+    "foot": "30 seconds",
+    "primary": "#FBBF24",
+    "accent": "#6CBDD9",
+    "figure": "assets/course-cover-figures/14.01.png",
+    "output": "assets/course-covers/14.01.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/economics/principles-of-microeconomics/mi01-supply-and-demand-balance.jpg",
+      "knowledge_id": "C13-A001"
+    }
+  },
+  {
+    "subject": "Economics",
+    "course": "Principles of Macroeconomics",
+    "code": "14.02",
+    "id": "C14-A001",
+    "name": "GDP Accounting",
+    "foot": "30 seconds",
+    "primary": "#FBBF24",
+    "accent": "#6CBDD9",
+    "figure": "assets/course-cover-figures/14.02.png",
+    "output": "assets/course-covers/14.02.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/economics/principles-of-macroeconomics/ma01-gdp-accounting.jpg",
+      "knowledge_id": "C14-A001"
+    }
+  },
+  {
+    "subject": "Economics",
+    "course": "Game Theory",
+    "code": "econ 159",
+    "id": "C15-A001",
+    "name": "Dominant Strategy",
+    "foot": "30 seconds",
+    "primary": "#FBBF24",
+    "accent": "#6CBDD9",
+    "figure": "assets/course-cover-figures/econ 159.png",
+    "output": "assets/course-covers/econ 159.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/economics/game-theory/gt01-dominant-strategy.jpg",
+      "knowledge_id": "C15-A001"
+    }
+  },
+  {
+    "subject": "Finance",
+    "course": "Financial Markets",
+    "code": "econ 252",
+    "id": "C16-A001",
+    "name": "Risk-Return Relationship",
+    "foot": "concept preview",
+    "primary": "#2DD4BF",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/econ 252.png",
+    "output": "assets/course-covers/econ 252.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "financial-markets/Fin.RiskReturn",
+      "knowledge_id": "C16-A001"
+    }
+  },
+  {
+    "subject": "Political Science",
+    "course": "Introduction to Political Philosophy",
+    "code": "plsc 114",
+    "id": "C17-A001",
+    "name": "Plato's Justice",
+    "foot": "concept preview",
+    "primary": "#FB7185",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/plsc 114.png",
+    "output": "assets/course-covers/plsc 114.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "Plato: correspondence between parts of the soul and classes of the city",
+      "knowledge_id": "C17-A001"
+    }
+  },
+  {
+    "subject": "Philosophy",
+    "course": "Philosophy of Death",
+    "code": "phil 176",
+    "id": "C18-A001",
+    "name": "Mind-Body Dualism",
+    "foot": "concept preview",
+    "primary": "#A3A3A3",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/phil 176.png",
+    "output": "assets/course-covers/phil 176.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "philosophy-of-death/Death.MindBody",
+      "knowledge_id": "C18-A001"
+    }
+  },
+  {
+    "subject": "Literature",
+    "course": "American Modernist Literature",
+    "code": "amst 246",
+    "id": "C19-A001",
+    "name": "Hemingway Style Omission",
+    "foot": "concept preview",
+    "primary": "#F0ABFC",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/amst 246.png",
+    "output": "assets/course-covers/amst 246.jpg",
+    "provenance": {
+      "kind": "static_course_primitive",
+      "source": "american-modernist-literature/Lit.Iceberg",
+      "knowledge_id": "C19-A001"
+    }
+  },
+  {
+    "subject": "Astronomy",
+    "course": "Frontiers and Controversies in Astrophysics",
+    "code": "astr 160",
+    "id": "C20-A001",
+    "name": "Exoplanet Transit Method",
+    "foot": "30 seconds",
+    "primary": "#818CF8",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/astr 160.png",
+    "output": "assets/course-covers/astr 160.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.jpg",
+      "knowledge_id": "C20-A001"
+    }
+  },
+  {
+    "subject": "Embedded Systems",
+    "course": "Microcontroller Fundamentals",
+    "code": "es-mcu",
+    "id": "C36-A001",
+    "name": "Interrupt Entry and Return",
+    "foot": "30 seconds",
+    "primary": "#60A5FA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/es-mcu.png",
+    "output": "assets/course-covers/es-mcu.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/video-covers/embedded-systems/microcontroller-fundamentals/interrupt-entry-and-return.jpg",
+      "knowledge_id": "C36-A001"
+    }
+  },
+  {
+    "subject": "Embedded Systems",
+    "course": "Real-Time Operating Systems",
+    "code": "es-rtos",
+    "id": "C37-A001",
+    "name": "Task State Transitions",
+    "foot": "30 seconds",
+    "primary": "#60A5FA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/es-rtos.png",
+    "output": "assets/course-covers/es-rtos.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/video-covers/embedded-systems/real-time-operating-systems/task-state-transitions.jpg",
+      "knowledge_id": "C37-A001"
+    }
+  },
+  {
+    "subject": "Digital Electronics",
+    "course": "Digital Logic Design",
+    "code": "de-dld",
+    "id": "C38-A001",
+    "name": "Combinational Propagation Delay",
+    "foot": "30 seconds",
+    "primary": "#33BBEE",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/de-dld.png",
+    "output": "assets/course-covers/de-dld.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/video-covers/digital-electronics/digital-logic-design/combinational-propagation-delay.jpg",
+      "knowledge_id": "C38-A001"
+    }
+  },
+  {
+    "subject": "Digital Electronics",
+    "course": "FPGA Fundamentals",
+    "code": "de-fpga",
+    "id": "C39-A001",
+    "name": "Setup and Hold Time",
+    "foot": "30 seconds",
+    "primary": "#33BBEE",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/de-fpga.png",
+    "output": "assets/course-covers/de-fpga.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/video-covers/digital-electronics/fpga-fundamentals/setup-and-hold-time.jpg",
+      "knowledge_id": "C39-A001"
+    }
+  },
+  {
+    "subject": "Artificial Intelligence",
+    "course": "AI Agent Systems",
+    "code": "ai-agent-systems",
+    "id": "recvw253eEvb3X",
+    "name": "Agent Observe-Plan-Act Loop",
+    "foot": "30 seconds",
+    "primary": "#A78BFA",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/ai-agent-systems.png",
+    "output": "assets/course-covers/ai-agent-systems.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg",
+      "knowledge_id": "recvw253eEvb3X"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Cloud Native and Kubernetes",
+    "code": "cloud-native-kubernetes",
+    "id": "recvw25sP7BJsk",
+    "name": "Container Image Layers and Build Cache",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cloud-native-kubernetes.png",
+    "output": "assets/course-covers/cloud-native-kubernetes.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/computer-science/cloud-native-kubernetes/container-image-layers-and-build-cache.jpg",
+      "knowledge_id": "recvw25sP7BJsk"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "Cybersecurity and Identity Authentication",
+    "code": "cybersecurity-and-identity-authentication",
+    "id": "recvw25tEzjpUx",
+    "name": "Authentication and Authorization Boundary",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/cybersecurity-and-identity-authentication.png",
+    "output": "assets/course-covers/cybersecurity-and-identity-authentication.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.jpg",
+      "knowledge_id": "recvw25tEzjpUx"
+    }
+  },
+  {
+    "subject": "Computer Science",
+    "course": "TypeScript Full-Stack Development",
+    "code": "typescript-full-stack-development",
+    "id": "recvw25tEzzqwR",
+    "name": "TypeScript Type Inference Across Functions",
+    "foot": "30 seconds",
+    "primary": "#36C5F0",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/typescript-full-stack-development.png",
+    "output": "assets/course-covers/typescript-full-stack-development.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg",
+      "knowledge_id": "recvw25tEzzqwR"
+    }
+  },
+  {
+    "subject": "Digital Electronics",
+    "course": "Edge AI and Embedded Machine Learning",
+    "code": "edge-ai-embedded-machine-learning",
+    "id": "recvw25vjM9t27",
+    "name": "Edge Inference Pipeline From Sensor to Result",
+    "foot": "30 seconds",
+    "primary": "#33BBEE",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/edge-ai-embedded-machine-learning.png",
+    "output": "assets/course-covers/edge-ai-embedded-machine-learning.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg",
+      "knowledge_id": "recvw25vjM9t27"
+    }
+  },
+  {
+    "subject": "Digital Electronics",
+    "course": "RISC-V Processor Architecture",
+    "code": "risc-v-processor-architecture",
+    "id": "recvw25utMYuhh",
+    "name": "RISC-V Instruction Encoding Fields",
+    "foot": "30 seconds",
+    "primary": "#33BBEE",
+    "accent": "#F4C542",
+    "figure": "assets/course-cover-figures/risc-v-processor-architecture.png",
+    "output": "assets/course-covers/risc-v-processor-architecture.jpg",
+    "provenance": {
+      "kind": "existing_dedicated_cover_figure",
+      "source": "assets/covers/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.jpg",
+      "knowledge_id": "recvw25utMYuhh"
+    }
+  }
+]

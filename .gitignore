@@ -5,4 +5,4 @@ __pycache__/
 *.pyc
 .workbuddy/
 .env*
-node_modules/
+node_modules

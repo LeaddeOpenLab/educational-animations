@@ -1,0 +1,677 @@
+[
+  {
+    "code": "cs50x",
+    "id": "C01-A001",
+    "bbox": [
+      196,
+      254,
+      803,
+      646
+    ],
+    "width": 608,
+    "height": 393,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "6.006",
+    "id": "recvw1Efv8Vc3v",
+    "bbox": [
+      207,
+      156,
+      792,
+      743
+    ],
+    "width": 586,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cs-coa",
+    "id": "C21-A002",
+    "bbox": [
+      196,
+      241,
+      803,
+      659
+    ],
+    "width": 608,
+    "height": 419,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "cs-os",
+    "id": "C22-A002",
+    "bbox": [
+      196,
+      262,
+      803,
+      638
+    ],
+    "width": 608,
+    "height": 377,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "cs-net",
+    "id": "C23-A001",
+    "bbox": [
+      196,
+      176,
+      803,
+      723
+    ],
+    "width": 608,
+    "height": 548,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cs-db",
+    "id": "C24-A001",
+    "bbox": [
+      196,
+      242,
+      803,
+      657
+    ],
+    "width": 608,
+    "height": 416,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cs-comp",
+    "id": "C25-A001",
+    "bbox": [
+      196,
+      253,
+      803,
+      647
+    ],
+    "width": 608,
+    "height": 395,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "6.036",
+    "id": "C03-A001",
+    "bbox": [
+      196,
+      158,
+      803,
+      741
+    ],
+    "width": 608,
+    "height": 584,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "ai-dl",
+    "id": "C26-A001",
+    "bbox": [
+      196,
+      220,
+      803,
+      679
+    ],
+    "width": 608,
+    "height": 460,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "ai-nlp",
+    "id": "C27-A002",
+    "bbox": [
+      196,
+      245,
+      803,
+      655
+    ],
+    "width": 608,
+    "height": 411,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "ai-cv",
+    "id": "C28-A001",
+    "bbox": [
+      216,
+      156,
+      784,
+      743
+    ],
+    "width": 569,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "ai-rl",
+    "id": "C29-A001",
+    "bbox": [
+      192,
+      309,
+      807,
+      590
+    ],
+    "width": 616,
+    "height": 282,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "ai-gen",
+    "id": "recvw24KNremp6",
+    "bbox": [
+      196,
+      156,
+      803,
+      743
+    ],
+    "width": 608,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "18.01",
+    "id": "C04-A004",
+    "bbox": [
+      199,
+      156,
+      800,
+      743
+    ],
+    "width": 602,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "18.06",
+    "id": "C05-A002",
+    "bbox": [
+      196,
+      185,
+      803,
+      715
+    ],
+    "width": 608,
+    "height": 531,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "math-mvc",
+    "id": "C31-A001",
+    "bbox": [
+      220,
+      156,
+      780,
+      743
+    ],
+    "width": 561,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "math-ode",
+    "id": "C32-A001",
+    "bbox": [
+      198,
+      156,
+      801,
+      743
+    ],
+    "width": 604,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "math-dm",
+    "id": "C33-A005",
+    "bbox": [
+      212,
+      156,
+      788,
+      743
+    ],
+    "width": 577,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "math-aa",
+    "id": "C34-A003",
+    "bbox": [
+      224,
+      156,
+      775,
+      743
+    ],
+    "width": 552,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "math-opt",
+    "id": "C35-A001",
+    "bbox": [
+      199,
+      156,
+      800,
+      743
+    ],
+    "width": 602,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "6.041",
+    "id": "C06-A001",
+    "bbox": [
+      196,
+      198,
+      803,
+      701
+    ],
+    "width": 608,
+    "height": 504,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "8.02",
+    "id": "C08-A001",
+    "bbox": [
+      234,
+      156,
+      766,
+      743
+    ],
+    "width": 533,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "5.12",
+    "id": "C09-A001",
+    "bbox": [
+      232,
+      156,
+      768,
+      743
+    ],
+    "width": 537,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "7.013",
+    "id": "C10-A001",
+    "bbox": [
+      196,
+      188,
+      803,
+      712
+    ],
+    "width": 608,
+    "height": 525,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "9.01",
+    "id": "C11-A001",
+    "bbox": [
+      196,
+      182,
+      803,
+      718
+    ],
+    "width": 608,
+    "height": 537,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "9.00",
+    "id": "C12-A001",
+    "bbox": [
+      285,
+      156,
+      715,
+      743
+    ],
+    "width": 431,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "14.01",
+    "id": "C13-A001",
+    "bbox": [
+      196,
+      173,
+      803,
+      726
+    ],
+    "width": 608,
+    "height": 554,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "14.02",
+    "id": "C14-A001",
+    "bbox": [
+      196,
+      176,
+      803,
+      724
+    ],
+    "width": 608,
+    "height": 549,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "econ 159",
+    "id": "C15-A001",
+    "bbox": [
+      215,
+      156,
+      784,
+      743
+    ],
+    "width": 570,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "astr 160",
+    "id": "C20-A001",
+    "bbox": [
+      196,
+      161,
+      803,
+      738
+    ],
+    "width": 608,
+    "height": 578,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "es-mcu",
+    "id": "C36-A001",
+    "bbox": [
+      206,
+      156,
+      793,
+      743
+    ],
+    "width": 588,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "es-rtos",
+    "id": "C37-A001",
+    "bbox": [
+      196,
+      218,
+      803,
+      681
+    ],
+    "width": 608,
+    "height": 464,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "de-dld",
+    "id": "C38-A001",
+    "bbox": [
+      196,
+      227,
+      803,
+      672
+    ],
+    "width": 608,
+    "height": 446,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "de-fpga",
+    "id": "C39-A001",
+    "bbox": [
+      196,
+      169,
+      803,
+      731
+    ],
+    "width": 608,
+    "height": 563,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "ai-agent-systems",
+    "id": "recvw253eEvb3X",
+    "bbox": [
+      196,
+      232,
+      803,
+      667
+    ],
+    "width": 608,
+    "height": 436,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cloud-native-kubernetes",
+    "id": "recvw25sP7BJsk",
+    "bbox": [
+      196,
+      179,
+      803,
+      721
+    ],
+    "width": 608,
+    "height": 543,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "cybersecurity-and-identity-authentication",
+    "id": "recvw25tEzjpUx",
+    "bbox": [
+      196,
+      189,
+      803,
+      710
+    ],
+    "width": 608,
+    "height": 522,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "typescript-full-stack-development",
+    "id": "recvw25tEzzqwR",
+    "bbox": [
+      196,
+      196,
+      803,
+      704
+    ],
+    "width": 608,
+    "height": 509,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "edge-ai-embedded-machine-learning",
+    "id": "recvw25vjM9t27",
+    "bbox": [
+      196,
+      164,
+      803,
+      735
+    ],
+    "width": 608,
+    "height": 572,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "risc-v-processor-architecture",
+    "id": "recvw25utMYuhh",
+    "bbox": [
+      196,
+      205,
+      803,
+      694
+    ],
+    "width": 608,
+    "height": 490,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "plsc 114",
+    "id": "C17-A001",
+    "bbox": [
+      241,
+      156,
+      758,
+      743
+    ],
+    "width": 518,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "8.01",
+    "id": "C07-A001",
+    "bbox": [
+      196,
+      168,
+      803,
+      732
+    ],
+    "width": 608,
+    "height": 565,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "econ 252",
+    "id": "C16-A001",
+    "bbox": [
+      196,
+      172,
+      803,
+      728
+    ],
+    "width": 608,
+    "height": 557,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "phil 176",
+    "id": "C18-A001",
+    "bbox": [
+      238,
+      156,
+      761,
+      743
+    ],
+    "width": 524,
+    "height": 588,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "amst 246",
+    "id": "C19-A001",
+    "bbox": [
+      200,
+      156,
+      800,
+      743
+    ],
+    "width": 601,
+    "height": 588,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  }
+]
