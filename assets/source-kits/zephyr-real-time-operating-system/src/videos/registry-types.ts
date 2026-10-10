@@ -1,0 +1,1 @@
+import {SceneDef} from '../Video';export type VideoEntry={id:string;title:string;file:string;scenes:SceneDef[];keyFrames:number[]};

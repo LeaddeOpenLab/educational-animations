@@ -1,0 +1,311 @@
+{
+  "id": "recvw25utMrNGn",
+  "subject": "Embedded Systems",
+  "course": "Zephyr Real-Time Operating System",
+  "textbook": "Zephyr Project documentation",
+  "tags": [
+    "recvw25utMrNGn",
+    "ES-ZEPHYR",
+    "P1"
+  ],
+  "course_code": "ES-ZEPHYR",
+  "page": "catalog/embedded-systems/es-zephyr.md",
+  "feishu_record_id": "recvw25utMrNGn",
+  "original_name": "Thread Priority and Preemption",
+  "standard_name": "Thread Priority and Preemption",
+  "artifact_version": "zephyr-20261010-v1",
+  "final_title": "Thread Priority and Preemption: Higher Priority Runs",
+  "title": "Thread Priority and Preemption: Higher Priority Runs",
+  "seo_title": "Thread Priority and Preemption: Higher Priority Runs",
+  "learning_objective": "Show a higher-priority ready thread displacing a preemptible thread.",
+  "core_conclusion": "Preemption preserves the displaced thread for later resumption.",
+  "terminology": {
+    "confirmed": true,
+    "scope": "Low runs alone with high unready.",
+    "original_name": "Thread Priority and Preemption",
+    "standard_name": "Thread Priority and Preemption",
+    "sources": [
+      {
+        "title": "Zephyr documentation: Thread Priority and Preemption",
+        "url": "https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html",
+        "scope": "Show a higher-priority ready thread displacing a preemptible thread."
+      }
+    ]
+  },
+  "references": [
+    {
+      "title": "Zephyr documentation: Thread Priority and Preemption",
+      "url": "https://docs.zephyrproject.org/latest/kernel/services/scheduling/index.html",
+      "scope": "Show a higher-priority ready thread displacing a preemptible thread."
+    }
+  ],
+  "requirement_prompt": "",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/zephyr-real-time-operating-system/src/videos/z02-thread-priority-and-preemption.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/zephyr-real-time-operating-system/src/videos/z02-thread-priority-and-preemption.tsx",
+    "scenes": [
+      {
+        "id": "step1",
+        "start_seconds": 0.0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.0,
+        "objects": [
+          "low thread priority 5",
+          "high thread priority 1",
+          "CPU ownership"
+        ],
+        "change": "Low runs alone with high unready.",
+        "cause": "The scheduler chooses the numerically lower ready priority.",
+        "result": "Low runs alone with high unready.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step2",
+        "start_seconds": 5.0,
+        "end_seconds": 13.0,
+        "reading_seconds": 7.0,
+        "objects": [
+          "low thread priority 5",
+          "high thread priority 1",
+          "CPU ownership"
+        ],
+        "change": "High priority 1 wakes while low priority 5 runs.",
+        "cause": "The scheduler chooses the numerically lower ready priority.",
+        "result": "High priority 1 wakes while low priority 5 runs.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step3",
+        "start_seconds": 13.0,
+        "end_seconds": 20.0,
+        "reading_seconds": 6.0,
+        "objects": [
+          "low thread priority 5",
+          "high thread priority 1",
+          "CPU ownership"
+        ],
+        "change": "High takes the CPU and low remains in the ready set.",
+        "cause": "The scheduler chooses the numerically lower ready priority.",
+        "result": "High takes the CPU and low remains in the ready set.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step4",
+        "start_seconds": 20.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 9.0,
+        "objects": [
+          "low thread priority 5",
+          "high thread priority 1",
+          "CPU ownership"
+        ],
+        "change": "High blocks, so low resumes its unfinished work.",
+        "cause": "The scheduler chooses the numerically lower ready priority.",
+        "result": "Preemption preserves the displaced thread for later resumption.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/zephyr-real-time-operating-system/src/videos/z02-thread-priority-and-preemption.state.ts",
+      "bindings": "The same tested topic-specific stateAt(frame) drives mechanism geometry, ownership, eligibility, values, counts, deadlines and revisions."
+    },
+    "template_scope": "Shared L1 furniture/theme and registered L2 primitives; no cross-topic shared L3 scene factory. Each topic has its own mechanism state and scenario.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "step3",
+        "uncertainty": "This example uses preemptible threads and an unlocked scheduler. Cooperative threads have different behavior.",
+        "expected_observation": "Low runs alone with high unready. High priority 1 wakes while low priority 5 runs. High takes the CPU and low remains in the ready set. High blocks, so low resumes its unfinished work."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 14.333333333333334,
+        "reason": "Inspect the uncertain state change before, during and after in the final MP4"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "zephyr-20261010-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-10T17:34:53.147953+08:00",
+    "evidence": [
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/review-sheet.jpg",
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/risk-sheet.jpg",
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "zephyr-20261010-v1",
+      "reviewer": "Codex — executed source/state/TypeScript/media checks",
+      "reviewed_at": "2026-10-10T17:36:36.274036+08:00",
+      "evidence": [
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "zephyr-20261010-v1",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-10T17:34:53.147953+08:00",
+      "evidence": [
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/review-sheet.jpg",
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/risk-sheet.jpg",
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/samples.json"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "times_seconds": [
+            13.833333333333334,
+            14.333333333333334,
+            14.833333333333334
+          ],
+          "evidence": [
+            "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/risk-sheet.jpg"
+          ],
+          "observation": "Priority-1 High enters CPU while priority-5 Low moves to Ready. Low work stays at 40 while preempted, then grows after resumption. The transition samples retain the same priorities and work count."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Only text or status changes, with no visible mechanism",
+          "triggered": false,
+          "reason": "Priority-1 High enters CPU while priority-5 Low moves to Ready. Low work stays at 40 while preempted, then grows after resumption. The transition samples retain the same priorities and work count."
+        },
+        {
+          "condition": "Visual quantities contradict the tested state model",
+          "triggered": false,
+          "reason": "Final values and sampled changes agree with executed stateAt assertions."
+        },
+        {
+          "condition": "Unreadable or overlapping text obscures the explanation",
+          "triggered": false,
+          "reason": "Direct overview inspection and 90-frame overlap gate passed; consistent left caption/right mechanism layout."
+        }
+      ]
+    }
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "prompt": "Create a 30-second silent English concept animation about Thread Priority and Preemption for Zephyr Real-Time Operating System, Embedded Systems, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: Low runs alone with high unready. Show The scheduler chooses the numerically lower ready priority. Then Low runs alone with high unready. High priority 1 wakes while low priority 5 runs. High takes the CPU and low remains in the ready set. High blocks, so low resumes its unfinished work. The visible result must prove: Preemption preserves the displaced thread for later resumption. Follow the final scene timing: 0–5s: Low-Priority Thread Runs; 5–13s: High-Priority Thread Becomes Ready; 13–20s: Save Low, Run High; 20–30s: Blocking Returns the CPU.\n\nUse background #0e0d10 → #18181f → #22222d, primary #33bbee for the main curve/object, accent #ee7733 for the changed quantity, result #009988 for the conclusion, warning #cc3311 for loss/waiting and alternate #ee3377 for the comparison; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif with bold 54px headings, 31px left-column captions and readable mechanism labels in the right figure band. Animate the actual thread eligibility, ownership, copied payload, property values, deadlines or module revisions described in the topic state model. Preserve mechanism continuity between scenes with no scene fade. Use the supplied stateAt(frame) timing and allow each resulting state to settle for reading. Avoid this misconception: This example uses preemptible threads and an unlocked scheduler. Cooperative threads have different behavior. Exact reproduction requires the supplied zephyr-real-time-operating-system source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v1; clean-machine exact reproduction has not been tested.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — final scene and Prompt alignment inspection",
+    "reviewed_at": "2026-10-10T17:36:36.274036+08:00",
+    "evidence": [
+      "assets/prompts/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption.md",
+      "assets/source-kits/zephyr-real-time-operating-system/src/videos/z02-thread-priority-and-preemption.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested."
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "zephyr-20261010-v1",
+    "reviewer": "Codex — direct cover overview and pixel geometry audit",
+    "reviewed_at": "2026-10-10T17:36:36.274036+08:00",
+    "evidence": [
+      "assets/covers/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption.jpg",
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvw25utMrNGn",
+      "bbox": [
+        196,
+        250,
+        797,
+        648
+      ],
+      "width": 601,
+      "height": 398,
+      "dx": -3.5,
+      "dy": -1.0,
+      "passed": true
+    }
+  },
+  "status": "ready",
+  "video": "assets/videos/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption.mp4",
+  "cover": "assets/covers/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption.jpg",
+  "prompt_file": "assets/prompts/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption.md",
+  "cover_image": "assets/covers/embedded-systems/zephyr-real-time-operating-system/z02-thread-priority-and-preemption.jpg",
+  "cover_version": "zephyr-20261010-v1",
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "zephyr-20261010-v1",
+      "record_id": "recvw25utMrNGn",
+      "verified_at": "2026-10-10T17:38:32.270656+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "zephyr-20261010-v1",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/2ef13ba3-708a-472e-8b79-8e4fc6bb6f96",
+        "comment_id": 6096188462,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/126#issuecomment-6096188462",
+        "issue_number": 126,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/126",
+        "video_version": "zephyr-20261010-v1",
+        "video_bytes": 1328786,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/2ef13ba3-708a-472e-8b79-8e4fc6bb6f96",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu": {
+    "record_id": "recvw25utMrNGn",
+    "verified": true,
+    "verified_at": "2026-10-10T17:38:32.270656+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/2ef13ba3-708a-472e-8b79-8e4fc6bb6f96",
+  "player_version": "zephyr-20261010-v1"
+}

@@ -1,0 +1,1773 @@
+[
+  {
+    "record_id": "recvw25utMSfqM",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "238164",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/01_Zephyr_Thread_Lifecycle_and_Scheduling.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "904612",
+        "bit_rate": "241229",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25utMSfqM/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z01-zephyr-thread-lifecycle-and-scheduling.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z01-zephyr-thread-lifecycle-and-scheduling.tsx",
+      "assertions": "assert.equal(at(179).started,false);assert.equal(at(180).started,true);assert(at(230).x>45);assert.equal(at(390).sleeping,true);assert.equal(at(629).running,false);assert.equal(at(630).running,true);assert.equal(at(720).x,655);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ThreadLanes tasks={[{label:\"A\",value:st.sleeping?`sleep: ${st.remaining}f`:st.started?\"ready = true\":\"not started\",x:st.x,y:190}]} running={st.running?\"A\":\"idle\"} trace=\"Start → sleep → timeout → ready\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25utMSfqM"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25utMrNGn",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "351347",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/02_Thread_Priority_and_Preemption.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "1328786",
+        "bit_rate": "354342",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25utMrNGn/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z02-thread-priority-and-preemption.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z02-thread-priority-and-preemption.tsx",
+      "assertions": "assert.equal(at(389).current,\"Low\");assert.equal(at(390).current,\"High\");assert(at(430).lowX<655);assert.equal(at(465).highX,655);assert.equal(at(630).current,\"Low\");assert.equal(at(720).lowX,655);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ThreadLanes tasks={[{label:\"Low · priority 5\",value:`work ${st.lowWork.toFixed(0)}`,x:st.lowX,y:190},{label:\"High · priority 1\",value:st.highReady?\"ready\":\"unready\",x:st.highX,y:350,color:C.accent}]} running={st.current} trace=\"Preemptible threads · scheduler unlocked\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25utMrNGn"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25utMFVMU",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "186195",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/03_Kconfig_Feature_Selection.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "710426",
+        "bit_rate": "189446",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25utMFVMU/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z03-kconfig-feature-selection.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z03-kconfig-feature-selection.tsx",
+      "assertions": "assert.equal(at(449).logger,false);assert.equal(at(450).logger,true);assert.equal(at(689).compiled,false);assert.equal(at(690).compiled,true);assert.equal(at(690).bytes,2400);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<PropertyTable caption=\"Conceptual depends-on example\" rows={[{key:\"Request: LOGGER\",value:st.request,active:true},{key:\"Dependency: UART\",value:st.uart?\"y\":\"n\",active:st.uart},{key:\"Resolved LOGGER\",value:st.logger?\"y\":\"n\",active:st.logger},{key:\"autoconf.h\",value:st.logger?\"CONFIG_LOGGER=1\":\"LOGGER undefined\",active:st.logger},{key:\"logger object\",value:st.compiled?\"included\":\"absent\",active:st.compiled}]} result={`Included example bytes: ${st.bytes}`}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25utMFVMU"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25utMsZwd",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "190087",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/04_Devicetree_Hardware_Description.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "725005",
+        "bit_rate": "193334",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25utMsZwd/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z04-devicetree-hardware-description.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z04-devicetree-hardware-description.tsx",
+      "assertions": "assert.equal(at(449).speed,9600);assert.equal(at(450).speed,115200);assert.equal(at(450).status,\"okay\");assert.equal(at(689).generated,false);assert.equal(at(690).generated,true);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<PropertyTable caption=\"Board UART node + application overlay\" rows={[{key:\"reg address\",value:`0x${st.address.toString(16)}`,active:true},{key:\"overlay speed\",value:st.overlay?\"115200\":\"not applied\",active:st.overlay},{key:\"merged status\",value:st.status,active:st.merged},{key:\"merged current-speed\",value:String(st.speed),active:st.merged},{key:\"generated speed macro\",value:st.generated?String(st.speed):\"pending\",active:st.generated}]} result=\"Hardware data is resolved at build time\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25utMsZwd"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMvTMl",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "186914",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/05_Device_Driver_Initialization_Order.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "713105",
+        "bit_rate": "190161",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMvTMl/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z05-device-driver-initialization-order.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z05-device-driver-initialization-order.tsx",
+      "assertions": "assert.equal(at(239).init,0);assert.equal(at(240).clock,true);assert.equal(at(449).bus,false);assert.equal(at(450).bus,true);assert.equal(at(629).sensor,false);assert.equal(at(630).sensor,true);assert.equal(at(720).read,true);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<InitTimeline clock={st.clock} bus={st.bus} sensor={st.sensor} read={st.read}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMvTMl"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjM0yLl",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "171831",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/06_GPIO_Callback_and_Interrupt_Handling.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "656561",
+        "bit_rate": "175082",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjM0yLl/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z06-gpio-callback-and-interrupt-handling.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z06-gpio-callback-and-interrupt-handling.tsx",
+      "assertions": "assert.equal(at(389).level,0);assert.equal(at(390).level,1);assert(at(480).callback>0&&at(480).callback<1);assert.equal(at(569).count,0);assert.equal(at(570).count,1);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<PinTrace {...st}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjM0yLl"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMxZT9",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "244292",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/07_Work_Queue_Deferred_Processing.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "927888",
+        "bit_rate": "247436",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMxZT9/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z07-work-queue-deferred-processing.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z07-work-queue-deferred-processing.tsx",
+      "assertions": "assert.deepEqual(at(270).slots,[\"A\",\"B\",\"\"]);assert.equal(at(330).source,\"ISR: returned\");assert.equal(at(479).done,0);assert(at(555).moving[0].x>35);assert.equal(at(630).done,1);assert.equal(at(780).done,2);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<PacketQueue slots={st.slots} moving={st.moving} source={st.source} target={st.target} detail={`Completed handlers: ${st.done}`}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMxZT9"
+        ]
+      },
+      "updated_binding": "Second work token starts when B dequeues at frame 630"
+    }
+  },
+  {
+    "record_id": "recvw25vjMFyW6",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "228382",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/08_Message_Queue_Thread_Communication.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "868299",
+        "bit_rate": "231546",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMFyW6/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z08-message-queue-thread-communication.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z08-message-queue-thread-communication.tsx",
+      "assertions": "assert.equal(at(419).producer,42);assert.equal(at(420).producer,99);assert.equal(at(420).slots[0],\"42\");assert(at(615).moving[0].x>35);assert.equal(at(689).received,null);assert.equal(at(690).received,42);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<PacketQueue slots={st.slots} moving={st.moving} source={`Producer buffer: ${st.producer}`} target={`Receiver: ${st.received===null?\"empty\":st.received}`} detail=\"put copies bytes · get receives oldest message\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMFyW6"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjM9JeC",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "206382",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/09_Semaphore_Synchronization.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "785814",
+        "bit_rate": "209550",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjM9JeC/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z09-semaphore-synchronization.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z09-semaphore-synchronization.tsx",
+      "assertions": "assert.equal(at(180).waiting,\"Consumer blocked in take\");assert(at(495).token.x<630);assert.equal(at(569).awake,false);assert.equal(at(570).awake,true);assert.equal(at(570).count,0);assert.equal(at(630).processed,1);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ResourcePool values={st.values} count={st.count} waiting={st.waiting} token={st.token} caption={st.awake?`Consumer resumed · events handled ${st.processed}`:\"Binary semaphore · direct waiter handoff\"}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjM9JeC"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMM3KG",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "284931",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/10_Mutex_Priority_Inheritance.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "1080221",
+        "bit_rate": "288058",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMM3KG/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z10-mutex-priority-inheritance.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z10-mutex-priority-inheritance.tsx",
+      "assertions": "assert.equal(at(359).priority,5);assert.equal(at(360).priority,1);assert.equal(at(360).current,\"Low\");assert.equal(at(629).owner,\"Low\");assert.equal(at(630).owner,\"High\");assert.equal(at(630).priority,5);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ThreadLanes tasks={[{label:`Low · effective ${st.priority}`,value:`base 5 · ${st.owner===\"Low\"?\"owns mutex\":\"unlocked\"}`,x:st.lowX,y:150},{label:\"High · priority 1\",value:st.owner===\"High\"?\"owns mutex\":\"waiting for lock\",x:st.highX,y:320,color:C.accent},{label:\"Medium · priority 3\",value:\"ready\",x:350,y:430,color:C.alt}]} running={st.current} trace=\"Inheritance changes effective priority, not base\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMM3KG"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMCy4T",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "225614",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/11_Timer_Callback_and_Deadline.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "858191",
+        "bit_rate": "228850",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMCy4T/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z11-timer-callback-and-deadline.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z11-timer-callback-and-deadline.tsx",
+      "assertions": "assert.equal(at(359).count,0);assert.equal(at(360).count,1);assert.equal(at(360).deadline,50);assert.equal(at(480).count,2);assert.equal(at(720).count,4);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ClockTrace time={st.time} deadline={st.deadline} callbacks={st.callbacks} ticks={st.ticks} sleep={null} description=\"Initial delay 30 · period 20 · illustrative time units\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMCy4T"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMle3G",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "220177",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/12_Kernel_Tickless_Idle.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "837793",
+        "bit_rate": "223411",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMle3G/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z12-kernel-tickless-idle.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z12-kernel-tickless-idle.tsx",
+      "assertions": "assert.equal(at(630).accounted,80);assert.equal(at(629).accounted,20);assert.deepEqual(at(500).ticks,[0,10,20]);assert.deepEqual(at(630).ticks,[0,10,20,80]);assert.equal(at(500).callbacks.length,0);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ClockTrace time={st.time} deadline={st.deadline} ticks={st.ticks} callbacks={st.callbacks} sleep={st.sleep} description={`Accounted logical time: ${st.accounted}`}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMle3G"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMvj9W",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "186085",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/13_Memory_Slab_Allocation.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "709892",
+        "bit_rate": "189304",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMvj9W/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z13-memory-slab-allocation.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z13-memory-slab-allocation.tsx",
+      "assertions": "assert.equal(at(0).free,3);assert.equal(at(360).free,0);assert.equal(at(629).owners[1],\"B\");assert.equal(at(630).owners[1],\"free\");assert.equal(at(630).free,1);assert.equal(at(720).owners[1],\"D\");assert.equal(at(720).free,0);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ResourcePool values={st.owners} count={st.free} waiting={st.request} token={st.transfer>0&&st.transfer<1?{label:\"D allocates\",x:600-260*st.transfer,y:290-190*st.transfer}:null} caption=\"Fixed-size blocks · 64 bytes each\"/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMvj9W"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjM1WMw",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "224091",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/14_Logging_Backend_Configuration.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "852288",
+        "bit_rate": "227276",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjM1WMw/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z14-logging-backend-configuration.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z14-logging-backend-configuration.tsx",
+      "assertions": "assert.equal(at(0).debug,false);assert.equal(at(360).slots[0],\"ERROR\");assert(at(615).moving[0].x>35);assert.equal(at(689).output,\"UART: no output\");assert.equal(at(690).output,\"UART: ERROR\");assert.equal(at(690).buffered,false);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<PacketQueue slots={st.slots} moving={st.moving} source=\"INFO filter · DEBUG discarded\" target={st.output} detail={st.buffered?\"ERROR buffered · caller has returned\":\"Enabled UART backend · deferred logging\"}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjM1WMw"
+        ]
+      }
+    }
+  },
+  {
+    "record_id": "recvw25vjMF5u5",
+    "version": "v1",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "189273",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Embedded Systems/Zephyr Real-Time Operating System/15_West_Manifest_and_Module_Resolution.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "721921",
+        "bit_rate": "192512",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "type_log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/types.log",
+    "b1": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261010-zephyr/recvw25vjMF5u5/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "state_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/videos/z15-west-manifest-and-module-resolution.state.ts",
+      "minimal_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/zephyr-real-time-operating-system/src/probes/z15-west-manifest-and-module-resolution.tsx",
+      "assertions": "assert.equal(at(239).modules[1].included,false);assert.equal(at(240).modules[1].included,true);assert.equal(at(539).updated,false);assert.equal(at(540).modules[1].revision,\"checkout: v2\");assert.equal(at(720).discovered,true);assert.equal(at(899).modules[2].included,false);",
+      "stdout": "PASS before/during/after; relevant event boundaries\n",
+      "source_check": {
+        "passed": true,
+        "binding": "<ModuleGraph modules={st.modules} progress={st.progress} resolved={st.resolved}/>",
+        "conclusion": "Frame → topic stateAt → concrete visible positions, stored values, ownership, copied payloads or clock events. Not a title/color-only transition.",
+        "applies_to": [
+          "recvw25vjMF5u5"
+        ]
+      }
+    }
+  }
+]

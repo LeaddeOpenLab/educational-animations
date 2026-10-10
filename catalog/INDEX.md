@@ -558,6 +558,23 @@
 - [C37-A003 · Mutex and Critical Section](embedded-systems/es-rtos.md#c37-a003) — video
 - [C37-A004 · Priority Inversion](embedded-systems/es-rtos.md#c37-a004) — video
 - [C37-A005 · Counting Semaphore](embedded-systems/es-rtos.md#c37-a005) — video
+## Zephyr Real-Time Operating System
+
+- [recvw25utMSfqM · Zephyr Thread Lifecycle and Scheduling](embedded-systems/es-zephyr.md#recvw25utmsfqm) — video
+- [recvw25utMrNGn · Thread Priority and Preemption](embedded-systems/es-zephyr.md#recvw25utmrngn) — video
+- [recvw25utMFVMU · Kconfig Feature Selection](embedded-systems/es-zephyr.md#recvw25utmfvmu) — video
+- [recvw25utMsZwd · Devicetree Hardware Description](embedded-systems/es-zephyr.md#recvw25utmszwd) — video
+- [recvw25vjMvTMl · Device Driver Initialization Order](embedded-systems/es-zephyr.md#recvw25vjmvtml) — video
+- [recvw25vjM0yLl · GPIO Callback and Interrupt Handling](embedded-systems/es-zephyr.md#recvw25vjm0yll) — video
+- [recvw25vjMxZT9 · Work Queue Deferred Processing](embedded-systems/es-zephyr.md#recvw25vjmxzt9) — video
+- [recvw25vjMFyW6 · Message Queue Thread Communication](embedded-systems/es-zephyr.md#recvw25vjmfyw6) — video
+- [recvw25vjM9JeC · Semaphore Synchronization](embedded-systems/es-zephyr.md#recvw25vjm9jec) — video
+- [recvw25vjMM3KG · Mutex Priority Inheritance](embedded-systems/es-zephyr.md#recvw25vjmm3kg) — video
+- [recvw25vjMCy4T · Timer Callback and Deadline](embedded-systems/es-zephyr.md#recvw25vjmcy4t) — video
+- [recvw25vjMle3G · Kernel Tickless Idle](embedded-systems/es-zephyr.md#recvw25vjmle3g) — video
+- [recvw25vjMvj9W · Memory Slab Allocation](embedded-systems/es-zephyr.md#recvw25vjmvj9w) — video
+- [recvw25vjM1WMw · Logging Backend Configuration](embedded-systems/es-zephyr.md#recvw25vjm1wmw) — video
+- [recvw25vjMF5u5 · West Manifest and Module Resolution](embedded-systems/es-zephyr.md#recvw25vjmf5u5) — video
 ## Digital Logic Design
 
 - [C38-A001 · Combinational Propagation Delay](digital-electronics/de-dld.md#c38-a001) — video

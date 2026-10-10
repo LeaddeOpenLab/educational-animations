@@ -1,0 +1,1 @@
+{"name":"zephyr-real-time-operating-system","private":true,"dependencies":{"@remotion/cli":"4.0.410","react":"19.0.0","react-dom":"19.0.0","remotion":"4.0.410"},"devDependencies":{"@types/react":"19.0.0","@types/react-dom":"19.0.0","typescript":"5.8.2","mathjax-full":"3.2.2"}}

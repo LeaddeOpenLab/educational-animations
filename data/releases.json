@@ -1947,5 +1947,76 @@
         "version": "micro-semaphore-20261009-v2"
       }
     ]
+  },
+  "ES-ZEPHYR": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-embedded-systems-es-zephyr/es-zephyr-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-videos-embedded-systems-es-zephyr",
+    "video_count": 15,
+    "version": "bundle-2",
+    "updated_at": "2026-10-10T09:37:22Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "recvw25utMSfqM",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25utMrNGn",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25utMFVMU",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25utMsZwd",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMvTMl",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjM0yLl",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMxZT9",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMFyW6",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjM9JeC",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMM3KG",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMCy4T",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMle3G",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMvj9W",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjM1WMw",
+        "version": "zephyr-20261010-v1"
+      },
+      {
+        "id": "recvw25vjMF5u5",
+        "version": "zephyr-20261010-v1"
+      }
+    ]
   }
 }

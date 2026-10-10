@@ -1,0 +1,144 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "zephyr-real-time-operating-system",
+    "label": "Zephyr Real-Time Operating System",
+    "subject": "Embedded Systems",
+    "outputDir": "Embedded Systems/Zephyr Real-Time Operating System"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "zephyr-real-time-operating-system",
+    "file": "src/theme/themes/zephyr-real-time-operating-system.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#0e0d10",
+      "bg1": "#18181f",
+      "bg2": "#22222d",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#33bbee",
+      "accent": "#ee7733",
+      "result": "#009988",
+      "warn": "#cc3311",
+      "alt": "#ee3377"
+    },
+    "bg1": "#18181f",
+    "contrast": {
+      "primary": 7.97,
+      "accent": 6.16,
+      "result": 4.97,
+      "warn": 3.4,
+      "alt": 4.52
+    }
+  },
+  "primitives": [
+    {
+      "name": "ThreadLanes",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "tasks xy move between unready/ready/CPU; running assignment and effective priority change",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "PropertyTable",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "actual configuration or hardware fields resolve and compiled features change",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "PacketQueue",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "payload copies move from producer into FIFO slots then into receiver",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "ResourcePool",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "memory block ownership, free-count and waiter handoff; stored semaphore credits",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "ClockTrace",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "clock position, scheduled interrupts, expiry count and idle interval change",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "PinTrace",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "electrical rising edge, callback payload delivery and callback count",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "ModuleGraph",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "manifest revisions and included module checkout content change",
+      "signature": "See typed props in Zephyr.tsx; stateAt(frame) supplies all mechanism inputs"
+    },
+    {
+      "name": "InitTimeline",
+      "file": "src/components/Zephyr.tsx",
+      "summary": "Driver initialization completion fills separate level rows; read enabled only after clock, bus and sensor are ready",
+      "signature": "({clock,bus,sensor,read})"
+    }
+  ],
+  "shared": {
+    "files": [
+      "src/components/Plot.tsx",
+      "src/components/ui.tsx",
+      "src/components/MotionActions.tsx"
+    ],
+    "note": "L1c shared layer"
+  },
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": []
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^z\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "Embedded Systems L1; RTOS L2"
+    ]
+  },
+  "mechanismRevision": "20261010-zephyr-v1"
+}

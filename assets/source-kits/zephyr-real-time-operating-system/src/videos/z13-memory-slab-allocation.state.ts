@@ -1,0 +1,2 @@
+export const ramp=(f:number,s:number,d:number)=>Math.max(0,Math.min(1,(f-s)/d));
+export const stateAt=(f:number)=>{const owners=f<180?['free','free','free']:f<270?['A','free','free']:f<360?['A','B','free']:f<630?['A','B','C']:f<720?['A','free','C']:['A','D','C'];return {owners,free:owners.filter(x=>x==='free').length,request:f>=450&&f<630?'D: K_NO_WAIT → no free block':f>=630&&f<720?'B frees block 1':'',transfer:ramp(f,660,60)};};

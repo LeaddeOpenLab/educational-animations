@@ -1,0 +1,331 @@
+{
+  "id": "recvw25vjMvj9W",
+  "subject": "Embedded Systems",
+  "course": "Zephyr Real-Time Operating System",
+  "textbook": "Zephyr Project documentation",
+  "tags": [
+    "recvw25vjMvj9W",
+    "ES-ZEPHYR",
+    "P1"
+  ],
+  "course_code": "ES-ZEPHYR",
+  "page": "catalog/embedded-systems/es-zephyr.md",
+  "feishu_record_id": "recvw25vjMvj9W",
+  "original_name": "Memory Slab Allocation",
+  "standard_name": "Memory Slab Allocation",
+  "artifact_version": "zephyr-20261010-v1",
+  "final_title": "Memory Slab Allocation: Free and Reuse a Block",
+  "title": "Memory Slab Allocation: Free and Reuse a Block",
+  "seo_title": "Memory Slab Allocation: Free and Reuse a Block",
+  "learning_objective": "Show fixed-size block ownership, exhaustion and immediate reuse.",
+  "core_conclusion": "A returned block is reused without changing block size.",
+  "terminology": {
+    "confirmed": true,
+    "scope": "Three fixed-size blocks are free.",
+    "original_name": "Memory Slab Allocation",
+    "standard_name": "Memory Slab Allocation",
+    "sources": [
+      {
+        "title": "Zephyr documentation: Memory Slab Allocation",
+        "url": "https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html",
+        "scope": "Show fixed-size block ownership, exhaustion and immediate reuse."
+      }
+    ]
+  },
+  "references": [
+    {
+      "title": "Zephyr documentation: Memory Slab Allocation",
+      "url": "https://docs.zephyrproject.org/latest/kernel/memory_management/slabs.html",
+      "scope": "Show fixed-size block ownership, exhaustion and immediate reuse."
+    }
+  ],
+  "requirement_prompt": "",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/zephyr-real-time-operating-system/src/videos/z13-memory-slab-allocation.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/zephyr-real-time-operating-system/src/videos/z13-memory-slab-allocation.tsx",
+    "scenes": [
+      {
+        "id": "step1",
+        "start_seconds": 0.0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.0,
+        "objects": [
+          "three equal blocks",
+          "tasks A B C D",
+          "free block count",
+          "allocation failure"
+        ],
+        "change": "Three fixed-size blocks are free.",
+        "cause": "Slab allocation and free update fixed block ownership.",
+        "result": "Three fixed-size blocks are free.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step2",
+        "start_seconds": 5.0,
+        "end_seconds": 12.0,
+        "reading_seconds": 6.0,
+        "objects": [
+          "three equal blocks",
+          "tasks A B C D",
+          "free block count",
+          "allocation failure"
+        ],
+        "change": "A, B and C each acquire one whole block.",
+        "cause": "Slab allocation and free update fixed block ownership.",
+        "result": "A, B and C each acquire one whole block.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step3",
+        "start_seconds": 12.0,
+        "end_seconds": 19.0,
+        "reading_seconds": 6.0,
+        "objects": [
+          "three equal blocks",
+          "tasks A B C D",
+          "free block count",
+          "allocation failure"
+        ],
+        "change": "D requests without waiting while free count is zero and cannot allocate.",
+        "cause": "Slab allocation and free update fixed block ownership.",
+        "result": "D requests without waiting while free count is zero and cannot allocate.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step4",
+        "start_seconds": 19.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 5.0,
+        "objects": [
+          "three equal blocks",
+          "tasks A B C D",
+          "free block count",
+          "allocation failure"
+        ],
+        "change": "B frees its block; D acquires the exact same slot.",
+        "cause": "Slab allocation and free update fixed block ownership.",
+        "result": "B frees its block; D acquires the exact same slot.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      },
+      {
+        "id": "step5",
+        "start_seconds": 25.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 4.0,
+        "objects": [
+          "three equal blocks",
+          "tasks A B C D",
+          "free block count",
+          "allocation failure"
+        ],
+        "change": "A, D and C own the three slots; free count is zero.",
+        "cause": "Slab allocation and free update fixed block ownership.",
+        "result": "A returned block is reused without changing block size.",
+        "timing_reason": "Allow the causal operation to settle and the viewer to read its resulting state."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/zephyr-real-time-operating-system/src/videos/z13-memory-slab-allocation.state.ts",
+      "bindings": "The same tested topic-specific stateAt(frame) drives mechanism geometry, ownership, eligibility, values, counts, deadlines and revisions."
+    },
+    "template_scope": "Shared L1 furniture/theme and registered L2 primitives; no cross-topic shared L3 scene factory. Each topic has its own mechanism state and scenario.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "step4",
+        "uncertainty": "Allocation consumes an entire fixed-size block; a freed block can be reused without heap splitting.",
+        "expected_observation": "Three fixed-size blocks are free. A, B and C each acquire one whole block. D requests without waiting while free count is zero and cannot allocate. B frees its block; D acquires the exact same slot. A, D and C own the three slots; free count is zero."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 21.0,
+        "reason": "Inspect the uncertain state change before, during and after in the final MP4"
+      }
+    ],
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "zephyr-20261010-v1",
+    "reviewer": "Codex — direct final MP4 frame inspection",
+    "reviewed_at": "2026-10-10T17:34:53.153183+08:00",
+    "evidence": [
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/review-sheet.jpg",
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/risk-sheet.jpg",
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "zephyr-20261010-v1",
+      "reviewer": "Codex — executed source/state/TypeScript/media checks",
+      "reviewed_at": "2026-10-10T17:36:36.274036+08:00",
+      "evidence": [
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/technical-final.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "zephyr-20261010-v1",
+      "reviewer": "Codex — direct final MP4 frame inspection",
+      "reviewed_at": "2026-10-10T17:34:53.153183+08:00",
+      "evidence": [
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/review-sheet.jpg",
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/risk-sheet.jpg",
+        "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/samples.json"
+      ],
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "version_match": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "times_seconds": [
+            20.5,
+            21.0,
+            21.5
+          ],
+          "evidence": [
+            "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/risk-sheet.jpg"
+          ],
+          "observation": "Three equal 64-byte blocks become owned A/B/C. A fourth nonwaiting request fails at free count zero. Risk frames show B becoming free and count zero toone; later D owns that exact slot, with A/C preserved and free count zero."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Only text or status changes, with no visible mechanism",
+          "triggered": false,
+          "reason": "Three equal 64-byte blocks become owned A/B/C. A fourth nonwaiting request fails at free count zero. Risk frames show B becoming free and count zero toone; later D owns that exact slot, with A/C preserved and free count zero."
+        },
+        {
+          "condition": "Visual quantities contradict the tested state model",
+          "triggered": false,
+          "reason": "Final values and sampled changes agree with executed stateAt assertions."
+        },
+        {
+          "condition": "Unreadable or overlapping text obscures the explanation",
+          "triggered": false,
+          "reason": "Direct overview inspection and 90-frame overlap gate passed; consistent left caption/right mechanism layout."
+        }
+      ]
+    }
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "prompt": "Create a 30-second silent English concept animation about Memory Slab Allocation for Zephyr Real-Time Operating System, Embedded Systems, using Remotion 4.0.410, React 19.0.0 and TypeScript 5.8.2 at 1920×1080 and 30 fps. Teach this numerical scenario: Three fixed-size blocks are free. Show Slab allocation and free update fixed block ownership. Then Three fixed-size blocks are free. A, B and C each acquire one whole block. D requests without waiting while free count is zero and cannot allocate. B frees its block; D acquires the exact same slot. A, D and C own the three slots; free count is zero. The visible result must prove: A returned block is reused without changing block size. Follow the final scene timing: 0–5s: Three Equal Free Blocks; 5–12s: Allocate Blocks to A, B, C; 12–19s: A Fourth Request Finds No Free Block; 19–25s: Free B, Then Reuse Its Block; 25–30s: Track Ownership and Free Count.\n\nUse background #0e0d10 → #18181f → #22222d, primary #33bbee for the main curve/object, accent #ee7733 for the changed quantity, result #009988 for the conclusion, warning #cc3311 for loss/waiting and alternate #ee3377 for the comparison; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif with bold 54px headings, 31px left-column captions and readable mechanism labels in the right figure band. Animate the actual thread eligibility, ownership, copied payload, property values, deadlines or module revisions described in the topic state model. Preserve mechanism continuity between scenes with no scene fade. Use the supplied stateAt(frame) timing and allow each resulting state to settle for reading. Avoid this misconception: Allocation consumes an entire fixed-size block; a freed block can be reused without heap splitting. Exact reproduction requires the supplied zephyr-real-time-operating-system source kit, topic TSX and .state.ts, L2 components, theme, fonts and brand assets; use FFmpeg to remove audio. The card describes final v1; clean-machine exact reproduction has not been tested.",
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30,
+    "reviewer": "Codex — final scene and Prompt alignment inspection",
+    "reviewed_at": "2026-10-10T17:36:36.274036+08:00",
+    "evidence": [
+      "assets/prompts/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation.md",
+      "assets/source-kits/zephyr-real-time-operating-system/src/videos/z13-memory-slab-allocation.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "The source kit and brand assets are included; system fonts may fall back. Clean-machine reproduction has not been tested."
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "zephyr-20261010-v1",
+    "reviewer": "Codex — direct cover overview and pixel geometry audit",
+    "reviewed_at": "2026-10-10T17:36:36.274036+08:00",
+    "evidence": [
+      "assets/covers/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation.jpg",
+      "assets/reviews/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvw25vjMvj9W",
+      "bbox": [
+        201,
+        257,
+        784,
+        633
+      ],
+      "width": 583,
+      "height": 376,
+      "dx": -7.5,
+      "dy": -5.0,
+      "passed": true
+    }
+  },
+  "status": "ready",
+  "video": "assets/videos/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation.mp4",
+  "cover": "assets/covers/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation.jpg",
+  "prompt_file": "assets/prompts/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation.md",
+  "cover_image": "assets/covers/embedded-systems/zephyr-real-time-operating-system/z13-memory-slab-allocation.jpg",
+  "cover_version": "zephyr-20261010-v1",
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "zephyr-20261010-v1",
+      "record_id": "recvw25vjMvj9W",
+      "verified_at": "2026-10-10T17:38:32.270656+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "zephyr-20261010-v1",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
+        "comment_id": 6096194566,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/126#issuecomment-6096194566",
+        "issue_number": 126,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/126",
+        "video_version": "zephyr-20261010-v1",
+        "video_bytes": 709892,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu": {
+    "record_id": "recvw25vjMvj9W",
+    "verified": true,
+    "verified_at": "2026-10-10T17:38:32.270656+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
+  "player_version": "zephyr-20261010-v1"
+}

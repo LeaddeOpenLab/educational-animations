@@ -2,7 +2,7 @@
 
 Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.
 
-**407 video-ready · 101 recorded review passes · 106 awaiting production · 45 courses · 17 disciplines**
+**422 video-ready · 116 recorded review passes · 106 awaiting production · 46 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -167,7 +167,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#embedded-systems"><img src="assets/subject-cards/embedded-systems.png" width="100%" alt="Embedded Systems"></a><br>
 <a href="#embedded-systems"><strong>Embedded Systems</strong></a><br>
-<sub>2 courses · 9 videos · 0 awaiting production</sub>
+<sub>3 courses · 24 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#digital-electronics"><img src="assets/subject-cards/digital-electronics.png" width="100%" alt="Digital Electronics"></a><br>
@@ -651,7 +651,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="embedded-systems"></a>
 ### Embedded Systems
 
-9 videos · 0 awaiting production
+24 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -667,7 +667,12 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a href="catalog/embedded-systems/es-rtos.md"><strong>Real-Time Operating Systems</strong></a><br>
 <sub>5 videos · 0 awaiting production</sub>
 </td>
-<td></td>
+<td width="33%" valign="top">
+<a id="zephyr-real-time-operating-system"></a>
+<a href="catalog/embedded-systems/es-zephyr.md"><img src="assets/covers/embedded-systems/zephyr-real-time-operating-system/z01-zephyr-thread-lifecycle-and-scheduling.jpg" width="100%" alt="Zephyr Real-Time Operating System"></a><br>
+<a href="catalog/embedded-systems/es-zephyr.md"><strong>Zephyr Real-Time Operating System</strong></a><br>
+<sub>15 videos · 0 awaiting production</sub>
+</td>
 </tr>
 </table>
 
