@@ -62968,9 +62968,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/9ad42441-469e-4441-a940-5ea10e0ed4c7",
           "comment_id": 6096187836,
@@ -62984,7 +62984,10 @@
         },
         "player": "https://github.com/user-attachments/assets/9ad42441-469e-4441-a940-5ea10e0ed4c7",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25utmsfqm",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -63279,9 +63282,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/2ef13ba3-708a-472e-8b79-8e4fc6bb6f96",
           "comment_id": 6096188462,
@@ -63295,7 +63298,10 @@
         },
         "player": "https://github.com/user-attachments/assets/2ef13ba3-708a-472e-8b79-8e4fc6bb6f96",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25utmrngn",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -63598,9 +63604,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/3c69812c-15dc-4a30-87d3-185380974741",
           "comment_id": 6096189027,
@@ -63614,7 +63620,10 @@
         },
         "player": "https://github.com/user-attachments/assets/3c69812c-15dc-4a30-87d3-185380974741",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25utmfvmu",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -63917,9 +63926,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/bc336a66-d8f5-4c57-a5d9-fc2c4c258290",
           "comment_id": 6096189629,
@@ -63933,7 +63942,10 @@
         },
         "player": "https://github.com/user-attachments/assets/bc336a66-d8f5-4c57-a5d9-fc2c4c258290",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25utmszwd",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -64236,9 +64248,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/9a1bb534-1233-44c9-b3e4-466a0873894e",
           "comment_id": 6096190202,
@@ -64252,7 +64264,10 @@
         },
         "player": "https://github.com/user-attachments/assets/9a1bb534-1233-44c9-b3e4-466a0873894e",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmvtml",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -64551,9 +64566,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/fa1c5e50-1aed-42c1-a37e-cdc34bdf5406",
           "comment_id": 6096190743,
@@ -64567,7 +64582,10 @@
         },
         "player": "https://github.com/user-attachments/assets/fa1c5e50-1aed-42c1-a37e-cdc34bdf5406",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjm0yll",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -64882,9 +64900,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/aea4cf06-8e6a-4f7f-b802-e8f80d99f516",
           "comment_id": 6096191306,
@@ -64898,7 +64916,10 @@
         },
         "player": "https://github.com/user-attachments/assets/aea4cf06-8e6a-4f7f-b802-e8f80d99f516",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmxzt9",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -65197,9 +65218,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/2801b4e8-167f-42fa-bc17-8b67927f66f2",
           "comment_id": 6096191896,
@@ -65213,7 +65234,10 @@
         },
         "player": "https://github.com/user-attachments/assets/2801b4e8-167f-42fa-bc17-8b67927f66f2",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmfyw6",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -65512,9 +65536,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/6b669d52-9177-4707-b96a-9a53453e0035",
           "comment_id": 6096192459,
@@ -65528,7 +65552,10 @@
         },
         "player": "https://github.com/user-attachments/assets/6b669d52-9177-4707-b96a-9a53453e0035",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjm9jec",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -65843,9 +65870,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/4f8d4f1a-0919-4d8b-86a9-e5ea5d6d9f6a",
           "comment_id": 6096193014,
@@ -65859,7 +65886,10 @@
         },
         "player": "https://github.com/user-attachments/assets/4f8d4f1a-0919-4d8b-86a9-e5ea5d6d9f6a",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmm3kg",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -66162,9 +66192,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/1a0b8d55-e110-40a6-8687-e80ce4d10992",
           "comment_id": 6096193520,
@@ -66178,7 +66208,10 @@
         },
         "player": "https://github.com/user-attachments/assets/1a0b8d55-e110-40a6-8687-e80ce4d10992",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmcy4t",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -66477,9 +66510,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/eb699754-5dab-4cf1-bb25-f520e9170af5",
           "comment_id": 6096194034,
@@ -66493,7 +66526,10 @@
         },
         "player": "https://github.com/user-attachments/assets/eb699754-5dab-4cf1-bb25-f520e9170af5",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmle3g",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -66808,9 +66844,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
           "comment_id": 6096194566,
@@ -66824,7 +66860,10 @@
         },
         "player": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmvj9w",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -67127,9 +67166,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/876a55c2-d0bf-4216-a15b-a6a05f2adea6",
           "comment_id": 6096195181,
@@ -67143,7 +67182,10 @@
         },
         "player": "https://github.com/user-attachments/assets/876a55c2-d0bf-4216-a15b-a6a05f2adea6",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjm1wmw",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {
@@ -67446,9 +67488,9 @@
         "verified_at": "2026-10-10T17:38:32.270656+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "zephyr-20261010-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/6d225014-9806-4bd4-972b-8ec7dce0b9aa",
           "comment_id": 6096195687,
@@ -67462,7 +67504,10 @@
         },
         "player": "https://github.com/user-attachments/assets/6d225014-9806-4bd4-972b-8ec7dce0b9aa",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmf5u5",
+        "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+        "verified_at": "2026-10-10T17:41:17.538974+08:00"
       }
     },
     "feishu": {

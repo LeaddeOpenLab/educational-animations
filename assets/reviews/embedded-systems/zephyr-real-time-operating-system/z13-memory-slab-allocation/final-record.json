@@ -302,9 +302,9 @@
       "verified_at": "2026-10-10T17:38:32.270656+08:00"
     },
     "github": {
-      "status": "pendingpage",
+      "status": "succeeded",
       "version": "zephyr-20261010-v1",
-      "page_status": "pending",
+      "page_status": "published",
       "attachment": {
         "attachment_url": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
         "comment_id": 6096194566,
@@ -318,7 +318,10 @@
       },
       "player": "https://github.com/user-attachments/assets/412c5e5c-bf23-4069-af99-24323a00d1bd",
       "playback_status": "ACCEPTED_BY_USER_POLICY",
-      "policy_date": "2026-09-30"
+      "policy_date": "2026-09-30",
+      "page_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/embedded-systems/es-zephyr.md#recvw25vjmvj9w",
+      "page_commit": "e5ae8261142805faa0e46c7f3a408d787844c248",
+      "verified_at": "2026-10-10T17:41:17.538974+08:00"
     }
   },
   "feishu": {
