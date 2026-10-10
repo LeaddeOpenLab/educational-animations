@@ -1,15 +1,25 @@
 # Course navigation covers
 
-Each course card uses a specific concept illustration, rendered as a dedicated
-1920×1080 JPEG still at quality 88. `manifest.json` maps the course code and
-knowledge-point ID to its title, figure export, provenance, and subject palette.
-These navigation images do not change the individual videos or their records.
+The main heading is the **course name**. Each illustration combines three
+knowledge points from that course, with short labels; knowledge-point names
+never replace the course heading. `manifest.json` preserves all three catalog
+IDs and diagram sources for each of the 45 courses.
 
-The figure assets retain diagrams from the original dedicated cover renders or
-static exports of the course's L2 primitives. They are not frames from MP4s.
-Courses awaiting production use “concept preview” in the footer.
+`subject-themes.json` selects one existing course-kit theme per discipline.
+Courses within a discipline share its background, text ramp and semantic colors.
+The existing light themes stay light (including AI, mathematics, economics and
+humanities); existing dark themes stay dark. These navigation covers do not
+modify individual video covers, videos or catalog records.
 
-From this directory:
+The self-contained SVG composites in `assets/course-cover-figures` combine
+static course-kit illustrations and diagrams from dedicated concept covers.
+They are not frames extracted from MP4s. Source diagrams are recolored into the
+selected subject theme before composition. Their PNG layers are embedded in the
+SVGs, so rendering does not require the original local kits.
+
+The course layout uses an 810px title column and a 780×756 composite illustration
+on a 1920×1080 canvas. The wider figure accommodates three concepts. This is the
+user-requested course-level adaptation of the concept-cover layout.
 
 ```sh
 pnpm install
@@ -20,12 +30,12 @@ pnpm run render
 python3 ../build_github_readme.py
 ```
 
-Render an individual course with `node render.mjs cs50x`. Every requested figure
-first renders on the skill's black 1000×900 audit canvas. The renderer checks
-overflow, centering and minimum fill before creating its final JPEG. Measurements
-are saved under `.workbuddy/course-cover-checks.json`; `--resume` can continue a
-failed batch from the same inputs. Omit that flag after changing a figure or the
-manifest so the changed outputs are rendered again.
+Render one course with `node render.mjs cs50x`. Every figure first renders on the
+black 1000×900 audit canvas in the fixed 640×620 audit frame. The renderer checks
+overflow, centering and minimum fill before creating a dedicated JPEG still at
+quality 88. Measurements are saved to `.workbuddy/course-cover-checks.json`.
+`--resume` continues a failed batch with unchanged inputs; omit it after editing
+a figure, theme or manifest. `geometry.json` records the delivered measurements.
 
-`generate_card_assets.py` now generates subject icons only. It cannot overwrite
-these images with the retired generic SVG course cards.
+`generate_card_assets.py` generates subject icons only and cannot overwrite the
+course covers with generic SVG cards.

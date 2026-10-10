@@ -3,765 +3,2745 @@
     "subject": "Computer Science",
     "course": "Introduction to Computer Science",
     "code": "cs50x",
-    "id": "C01-A001",
-    "name": "Pointer",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cs50x.png",
-    "output": "assets/course-covers/cs50x.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Computer Science/Introduction to Computer Science/pointer.jpg",
-      "knowledge_id": "C01-A001"
-    }
+    "topics": [
+      {
+        "id": "C01-A001",
+        "name": "Pointer",
+        "label": "Pointers & memory",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Introduction to Computer Science/pointer.jpg"
+        }
+      },
+      {
+        "id": "C01-A009",
+        "name": "Tree structure",
+        "label": "Tree structures",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "intro-computer-science/Memory.Tree"
+        }
+      },
+      {
+        "id": "C01-A005",
+        "name": "Algorithm growth rate",
+        "label": "Algorithm growth",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Introduction to Computer Science/algorithm-growth-rate.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cs50x.svg",
+    "output": "assets/course-covers/cs50x.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Introduction to Algorithms",
     "code": "6.006",
-    "id": "recvw1Efv8Vc3v",
-    "name": "Bellman-Ford Algorithm",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/6.006.png",
-    "output": "assets/course-covers/6.006.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/computer-science/6-006/bellman-ford-algorithm.jpg",
-      "knowledge_id": "recvw1Efv8Vc3v"
-    }
+    "topics": [
+      {
+        "id": "C02-A003",
+        "name": "Heap structure",
+        "label": "Heap structures",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Introduction to Algorithms/heap-structure.jpg"
+        }
+      },
+      {
+        "id": "C02-A008",
+        "name": "Dynamic Programming State",
+        "label": "Dynamic programming",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/revisions/C02-A008-v2.jpg"
+        }
+      },
+      {
+        "id": "C02-A013",
+        "name": "Topological Sorting",
+        "label": "Topological sorting",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Introduction to Algorithms/topological-sorting.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/6.006.svg",
+    "output": "assets/course-covers/6.006.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Computer Organization and Architecture",
     "code": "cs-coa",
-    "id": "C21-A002",
-    "name": "Floating-Point Representation",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cs-coa.png",
-    "output": "assets/course-covers/cs-coa.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Computer Science/Computer Organization and Architecture/floating-point-representation.jpg",
-      "knowledge_id": "C21-A002"
-    }
+    "topics": [
+      {
+        "id": "C21-A003",
+        "name": "Boolean Logic Gates",
+        "label": "Logic gates",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Computer Organization and Architecture/boolean-logic-gates.jpg"
+        }
+      },
+      {
+        "id": "C21-A007",
+        "name": "Pipeline Hazards",
+        "label": "Pipeline hazards",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Computer Organization and Architecture/pipeline-hazards.jpg"
+        }
+      },
+      {
+        "id": "C21-A008",
+        "name": "Cache Locality",
+        "label": "Cache locality",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Computer Organization and Architecture/cache-locality.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cs-coa.svg",
+    "output": "assets/course-covers/cs-coa.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Operating Systems",
     "code": "cs-os",
-    "id": "C22-A002",
-    "name": "Process State Transitions",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cs-os.png",
-    "output": "assets/course-covers/cs-os.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Computer Science/Operating Systems/process-state-transitions.jpg",
-      "knowledge_id": "C22-A002"
-    }
+    "topics": [
+      {
+        "id": "C22-A002",
+        "name": "Process State Transitions",
+        "label": "Process states",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Operating Systems/process-state-transitions.jpg"
+        }
+      },
+      {
+        "id": "C22-A005",
+        "name": "Virtual Memory Paging",
+        "label": "Virtual memory",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Operating Systems/virtual-memory-paging.jpg"
+        }
+      },
+      {
+        "id": "C22-A007",
+        "name": "Page Replacement",
+        "label": "Page replacement",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Operating Systems/page-replacement.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cs-os.svg",
+    "output": "assets/course-covers/cs-os.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Computer Networks",
     "code": "cs-net",
-    "id": "C23-A001",
-    "name": "OSI and TCP/IP Layers",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cs-net.png",
-    "output": "assets/course-covers/cs-net.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Computer Science/Computer Networks/osi-and-tcp-ip-layers.jpg",
-      "knowledge_id": "C23-A001"
-    }
+    "topics": [
+      {
+        "id": "C23-A001",
+        "name": "OSI and TCP/IP Layers",
+        "label": "Protocol layers",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Computer Networks/osi-and-tcp-ip-layers.jpg"
+        }
+      },
+      {
+        "id": "C23-A007",
+        "name": "DNS Resolution",
+        "label": "DNS resolution",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Computer Networks/dns-resolution.jpg"
+        }
+      },
+      {
+        "id": "C23-A006",
+        "name": "TCP Congestion Window",
+        "label": "TCP congestion",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Computer Networks/tcp-congestion-window.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cs-net.svg",
+    "output": "assets/course-covers/cs-net.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Database Systems",
     "code": "cs-db",
-    "id": "C24-A001",
-    "name": "Entity-Relationship Model",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cs-db.png",
-    "output": "assets/course-covers/cs-db.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Computer Science/Database Systems/entity-relationship-model.jpg",
-      "knowledge_id": "C24-A001"
-    }
+    "topics": [
+      {
+        "id": "C24-A001",
+        "name": "Entity-Relationship Model",
+        "label": "Entity relationships",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Database Systems/entity-relationship-model.jpg"
+        }
+      },
+      {
+        "id": "C24-A002",
+        "name": "Primary and Foreign Keys",
+        "label": "Relational keys",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Database Systems/primary-and-foreign-keys.jpg"
+        }
+      },
+      {
+        "id": "C24-A006",
+        "name": "ACID Transactions",
+        "label": "ACID transactions",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Database Systems/acid-transactions.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cs-db.svg",
+    "output": "assets/course-covers/cs-db.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Compiler Design",
     "code": "cs-comp",
-    "id": "C25-A001",
-    "name": "Lexical Analysis and Tokens",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cs-comp.png",
-    "output": "assets/course-covers/cs-comp.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Computer Science/Compiler Design/lexical-analysis-and-tokens.jpg",
-      "knowledge_id": "C25-A001"
-    }
+    "topics": [
+      {
+        "id": "C25-A001",
+        "name": "Lexical Analysis and Tokens",
+        "label": "Lexical analysis",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Computer Science/Compiler Design/lexical-analysis-and-tokens.jpg"
+        }
+      },
+      {
+        "id": "C25-A002",
+        "name": "Regular Expression to Finite Automaton",
+        "label": "Finite automata",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Finite automaton recognizing ab"
+        }
+      },
+      {
+        "id": "C25-A003",
+        "name": "Context-Free Grammar",
+        "label": "Grammar & parsing",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Parse tree for id + id * id"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cs-comp.svg",
+    "output": "assets/course-covers/cs-comp.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "Introduction to Machine Learning",
     "code": "6.036",
-    "id": "C03-A001",
-    "name": "Decision Boundary",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/6.036.png",
-    "output": "assets/course-covers/6.036.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Artificial Intelligence/Introduction to Machine Learning/decision-boundary.jpg",
-      "knowledge_id": "C03-A001"
-    }
+    "topics": [
+      {
+        "id": "C03-A001",
+        "name": "Decision boundary",
+        "label": "Decision boundary",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Introduction to Machine Learning/decision-boundary.jpg"
+        }
+      },
+      {
+        "id": "C03-A003",
+        "name": "Gradient descent",
+        "label": "Gradient descent",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Introduction to Machine Learning/gradient-descent.jpg"
+        }
+      },
+      {
+        "id": "C03-A005",
+        "name": "Overfitting",
+        "label": "Overfitting",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Introduction to Machine Learning/overfitting.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/6.036.svg",
+    "output": "assets/course-covers/6.036.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "Deep Learning",
     "code": "ai-dl",
-    "id": "C26-A001",
-    "name": "Artificial Neuron",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/ai-dl.png",
-    "output": "assets/course-covers/ai-dl.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Artificial Intelligence/Deep Learning/artificial-neuron.jpg",
-      "knowledge_id": "C26-A001"
-    }
+    "topics": [
+      {
+        "id": "C26-A001",
+        "name": "Artificial Neuron",
+        "label": "Artificial Neuron",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Deep Learning/artificial-neuron.jpg"
+        }
+      },
+      {
+        "id": "C26-A006",
+        "name": "Convolutional Neural Network",
+        "label": "Convolutional networks",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Deep Learning/convolutional-neural-network.jpg"
+        }
+      },
+      {
+        "id": "C26-A012",
+        "name": "Autograd Computation Graph",
+        "label": "Autograd graph",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Deep Learning/autograd-computation-graph.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/ai-dl.svg",
+    "output": "assets/course-covers/ai-dl.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "Natural Language Processing",
     "code": "ai-nlp",
-    "id": "C27-A002",
-    "name": "N-Gram Language Model",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/ai-nlp.png",
-    "output": "assets/course-covers/ai-nlp.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Artificial Intelligence/Natural Language Processing/n-gram-language-model.jpg",
-      "knowledge_id": "C27-A002"
-    }
+    "topics": [
+      {
+        "id": "C27-A003",
+        "name": "Word Embeddings",
+        "label": "Word Embeddings",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Natural Language Processing/word-embeddings.jpg"
+        }
+      },
+      {
+        "id": "C27-A004",
+        "name": "Positional Encoding",
+        "label": "Positional Encoding",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Natural Language Processing/positional-encoding.jpg"
+        }
+      },
+      {
+        "id": "C27-A006",
+        "name": "Encoder-Decoder Architecture",
+        "label": "Encoder-Decoder Architecture",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Natural Language Processing/encoder-decoder-architecture.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/ai-nlp.svg",
+    "output": "assets/course-covers/ai-nlp.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "Computer Vision",
     "code": "ai-cv",
-    "id": "C28-A001",
-    "name": "Image Convolution",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/ai-cv.png",
-    "output": "assets/course-covers/ai-cv.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Artificial Intelligence/Computer Vision/image-convolution.jpg",
-      "knowledge_id": "C28-A001"
-    }
+    "topics": [
+      {
+        "id": "C28-A001",
+        "name": "Image Convolution",
+        "label": "Image Convolution",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Computer Vision/image-convolution.jpg"
+        }
+      },
+      {
+        "id": "C28-A006",
+        "name": "Intersection over Union and Non-Maximum Suppression",
+        "label": "IoU & suppression",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Computer Vision/intersection-over-union-and-non-maximum-suppression.jpg"
+        }
+      },
+      {
+        "id": "C28-A007",
+        "name": "Semantic Segmentation",
+        "label": "Semantic Segmentation",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Computer Vision/semantic-segmentation.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/ai-cv.svg",
+    "output": "assets/course-covers/ai-cv.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "Reinforcement Learning",
     "code": "ai-rl",
-    "id": "C29-A001",
-    "name": "States, Actions, and Rewards",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/ai-rl.png",
-    "output": "assets/course-covers/ai-rl.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/featured/C29-A001.jpg",
-      "knowledge_id": "C29-A001"
-    }
+    "topics": [
+      {
+        "id": "C29-A001",
+        "name": "States, Actions, and Rewards",
+        "label": "States, actions & rewards",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/featured/C29-A001.jpg"
+        }
+      },
+      {
+        "id": "C29-A003",
+        "name": "Bellman Optimality Equation",
+        "label": "Bellman optimality",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Reinforcement Learning/bellman-optimality-equation.jpg"
+        }
+      },
+      {
+        "id": "C29-A006",
+        "name": "Policy Gradient",
+        "label": "Policy Gradient",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Reinforcement Learning/policy-gradient.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/ai-rl.svg",
+    "output": "assets/course-covers/ai-rl.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "Generative Artificial Intelligence",
     "code": "ai-gen",
-    "id": "recvw24KNremp6",
-    "name": "Byte-Pair Encoding Tokenization",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/ai-gen.png",
-    "output": "assets/course-covers/ai-gen.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/artificial-intelligence/generative-artificial-intelligence/byte-pair-encoding-tokenization.jpg",
-      "knowledge_id": "recvw24KNremp6"
-    }
+    "topics": [
+      {
+        "id": "C30-A001",
+        "name": "Autoencoder",
+        "label": "Autoencoder",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Generative Artificial Intelligence/autoencoder.jpg"
+        }
+      },
+      {
+        "id": "C30-A003",
+        "name": "Latent-Space Interpolation",
+        "label": "Latent-Space Interpolation",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Generative Artificial Intelligence/latent-space-interpolation.jpg"
+        }
+      },
+      {
+        "id": "C30-A007",
+        "name": "Diffusion Reverse Denoising",
+        "label": "Diffusion denoising",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Artificial Intelligence/Generative Artificial Intelligence/diffusion-reverse-denoising.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/ai-gen.svg",
+    "output": "assets/course-covers/ai-gen.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Single-Variable Calculus",
     "code": "18.01",
-    "id": "C04-A004",
-    "name": "Fundamental Theorem of Calculus",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/18.01.png",
-    "output": "assets/course-covers/18.01.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Mathematics/Single-Variable Calculus/fundamental-theorem-of-calculus.jpg",
-      "knowledge_id": "C04-A004"
-    }
+    "topics": [
+      {
+        "id": "C04-A004",
+        "name": "Fundamental Theorem of Calculus",
+        "label": "Calculus fundamentals",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Single-Variable Calculus/fundamental-theorem-of-calculus.jpg"
+        }
+      },
+      {
+        "id": "C04-A011",
+        "name": "Chain Rule",
+        "label": "Chain rule",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Single-Variable Calculus/chain-rule.jpg"
+        }
+      },
+      {
+        "id": "C04-A005",
+        "name": "Volume of rotation",
+        "label": "Solids of revolution",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Single-Variable Calculus/volume-of-rotation.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/18.01.svg",
+    "output": "assets/course-covers/18.01.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Linear Algebra",
     "code": "18.06",
-    "id": "C05-A002",
-    "name": "Row Space",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/18.06.png",
-    "output": "assets/course-covers/18.06.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/mathematics/linear-algebra/line-space.jpg",
-      "knowledge_id": "C05-A002"
-    }
+    "topics": [
+      {
+        "id": "C05-A009",
+        "name": "Eigenvalue",
+        "label": "Eigenvalue",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "linear-algebra/La.Vec with Av = 2v, A = diag(2, 1)"
+        }
+      },
+      {
+        "id": "C05-A005",
+        "name": "Orthogonal Projection",
+        "label": "Orthogonal Projection",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/revisions/C05-A005-v2.jpg"
+        }
+      },
+      {
+        "id": "C05-A012",
+        "name": "Singular value decomposition",
+        "label": "Singular values",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Linear Algebra/singular-value-decomposition.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/18.06.svg",
+    "output": "assets/course-covers/18.06.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Multivariable Calculus",
     "code": "math-mvc",
-    "id": "C31-A001",
-    "name": "Partial Derivatives",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/math-mvc.png",
-    "output": "assets/course-covers/math-mvc.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Mathematics/Multivariable Calculus/partial-derivatives.jpg",
-      "knowledge_id": "C31-A001"
-    }
+    "topics": [
+      {
+        "id": "C31-A001",
+        "name": "Partial Derivatives",
+        "label": "Partial Derivatives",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Multivariable Calculus/partial-derivatives.jpg"
+        }
+      },
+      {
+        "id": "C31-A004",
+        "name": "Jacobian Matrix",
+        "label": "Jacobian matrix",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Multivariable Calculus/jacobian-matrix.jpg"
+        }
+      },
+      {
+        "id": "C31-A007",
+        "name": "Double Integral",
+        "label": "Double Integral",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Multivariable Calculus/double-integral.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/math-mvc.svg",
+    "output": "assets/course-covers/math-mvc.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Ordinary Differential Equations",
     "code": "math-ode",
-    "id": "C32-A001",
-    "name": "Separable Differential Equations",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/math-ode.png",
-    "output": "assets/course-covers/math-ode.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Mathematics/Ordinary Differential Equations/separable-differential-equations.jpg",
-      "knowledge_id": "C32-A001"
-    }
+    "topics": [
+      {
+        "id": "C32-A001",
+        "name": "Separable Differential Equations",
+        "label": "Separable equations",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Ordinary Differential Equations/separable-differential-equations.jpg"
+        }
+      },
+      {
+        "id": "C32-A003",
+        "name": "Phase Line",
+        "label": "Phase Line",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Ordinary Differential Equations/phase-line.jpg"
+        }
+      },
+      {
+        "id": "C32-A005",
+        "name": "Second-Order Homogeneous Equations",
+        "label": "Second-order equations",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Ordinary Differential Equations/second-order-homogeneous-equations.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/math-ode.svg",
+    "output": "assets/course-covers/math-ode.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Discrete Mathematics",
     "code": "math-dm",
-    "id": "C33-A005",
-    "name": "Permutations and Combinations",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/math-dm.png",
-    "output": "assets/course-covers/math-dm.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Mathematics/Discrete Mathematics/permutations-and-combinations.jpg",
-      "knowledge_id": "C33-A005"
-    }
+    "topics": [
+      {
+        "id": "C33-A005",
+        "name": "Permutations and Combinations",
+        "label": "Permutations and Combinations",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Discrete Mathematics/permutations-and-combinations.jpg"
+        }
+      },
+      {
+        "id": "C33-A007",
+        "name": "Recurrence Relations",
+        "label": "Recurrence Relations",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Discrete Mathematics/recurrence-relations.jpg"
+        }
+      },
+      {
+        "id": "C33-A008",
+        "name": "Graph Connectivity",
+        "label": "Graph Connectivity",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Paths in a connected graph"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/math-dm.svg",
+    "output": "assets/course-covers/math-dm.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Abstract Algebra",
     "code": "math-aa",
-    "id": "C34-A003",
-    "name": "Cyclic Groups",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/math-aa.png",
-    "output": "assets/course-covers/math-aa.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Mathematics/Abstract Algebra/cyclic-groups.jpg",
-      "knowledge_id": "C34-A003"
-    }
+    "topics": [
+      {
+        "id": "C34-A003",
+        "name": "Cyclic Groups",
+        "label": "Cyclic Groups",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Abstract Algebra/cyclic-groups.jpg"
+        }
+      },
+      {
+        "id": "C34-A006",
+        "name": "Group Homomorphisms",
+        "label": "Group Homomorphisms",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Abstract Algebra/group-homomorphisms.jpg"
+        }
+      },
+      {
+        "id": "C34-A008",
+        "name": "Finite Fields",
+        "label": "Finite Fields",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Abstract Algebra/finite-fields.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/math-aa.svg",
+    "output": "assets/course-covers/math-aa.jpg"
   },
   {
     "subject": "Mathematics",
     "course": "Optimization Theory",
     "code": "math-opt",
-    "id": "C35-A001",
-    "name": "Convex Sets and Convex Functions",
-    "foot": "30 seconds",
-    "primary": "#4ADE80",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/math-opt.png",
-    "output": "assets/course-covers/math-opt.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "Mathematics/Optimization Theory/convex-sets-and-convex-functions.jpg",
-      "knowledge_id": "C35-A001"
-    }
+    "topics": [
+      {
+        "id": "C35-A001",
+        "name": "Convex Sets and Convex Functions",
+        "label": "Convex Sets and Convex Functions",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Optimization Theory/convex-sets-and-convex-functions.jpg"
+        }
+      },
+      {
+        "id": "C35-A007",
+        "name": "KKT Conditions",
+        "label": "KKT Conditions",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Optimization Theory/kkt-conditions.jpg"
+        }
+      },
+      {
+        "id": "C35-A008",
+        "name": "Projected Gradient Method",
+        "label": "Projected Gradient Method",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "Mathematics/Optimization Theory/projected-gradient-method.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#4477aa",
+        "accent": "#228833",
+        "result": "#aa3377",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/math-opt.svg",
+    "output": "assets/course-covers/math-opt.jpg"
   },
   {
     "subject": "Mathematics & Statistics",
     "course": "Applied Probability",
     "code": "6.041",
-    "id": "C06-A001",
-    "name": "Conditional Probability",
-    "foot": "30 seconds",
-    "primary": "#22D3EE",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/6.041.png",
-    "output": "assets/course-covers/6.041.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/mathematics-statistics/applied-probability/conditional-probability.jpg",
-      "knowledge_id": "C06-A001"
-    }
+    "topics": [
+      {
+        "id": "C06-A002",
+        "name": "Bayesian formula",
+        "label": "Bayesian formula",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/mathematics-statistics/applied-probability/bayesian-formula.jpg"
+        }
+      },
+      {
+        "id": "C06-A004",
+        "name": "Joint distribution",
+        "label": "Joint distribution",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/mathematics-statistics/applied-probability/joint-distribution.jpg"
+        }
+      },
+      {
+        "id": "C06-A009",
+        "name": "Central limit theorem",
+        "label": "Central limit theorem",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/mathematics-statistics/applied-probability/central-limit-theorem.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "applied-probability/src/theme/themes/applied-probability.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#332288",
+        "accent": "#117733",
+        "result": "#aa4499",
+        "warn": "#882255",
+        "alt": "#cc6677"
+      },
+      "backdrop": {
+        "gridSize": 48,
+        "gridOpacity": 0.9,
+        "glowOpacity": 0.05,
+        "glowBlur": 70
+      }
+    },
+    "figure": "assets/course-cover-figures/6.041.svg",
+    "output": "assets/course-covers/6.041.jpg"
   },
   {
     "subject": "Physics",
     "course": "Classical Mechanics",
     "code": "8.01",
-    "id": "C07-A001",
-    "name": "Location-Time Graph",
-    "foot": "concept preview",
-    "primary": "#60A5FA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/8.01.png",
-    "output": "assets/course-covers/8.01.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "classical-mechanics/Mech.SlopeMark",
-      "knowledge_id": "C07-A001"
-    }
+    "topics": [
+      {
+        "id": "C07-A001",
+        "name": "Location-time graph",
+        "label": "Position & velocity",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "classical-mechanics/Mech.SlopeMark"
+        }
+      },
+      {
+        "id": "C07-A005",
+        "name": "Free body diagram",
+        "label": "Forces & free bodies",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "classical-mechanics/Mech.FreeBody"
+        }
+      },
+      {
+        "id": "C07-A006",
+        "name": "Conservation of momentum",
+        "label": "Momentum conservation",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "classical-mechanics/Mech.Collision"
+        }
+      }
+    ],
+    "theme": {
+      "source": "classical-mechanics/src/theme/themes/classical-mechanics.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#aa3377",
+        "accent": "#882255",
+        "result": "#117733",
+        "warn": "#bb5566",
+        "alt": "#4477aa"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/8.01.svg",
+    "output": "assets/course-covers/8.01.jpg"
   },
   {
     "subject": "Physics",
     "course": "Electromagnetism",
     "code": "8.02",
-    "id": "C08-A001",
-    "name": "Electric Field",
-    "foot": "concept preview",
-    "primary": "#60A5FA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/8.02.png",
-    "output": "assets/course-covers/8.02.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "electromagnetism/Em.FieldLines + Charge",
-      "knowledge_id": "C08-A001"
-    }
+    "topics": [
+      {
+        "id": "C08-A001",
+        "name": "Electric field",
+        "label": "Electric fields",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "electromagnetism/Em.FieldLines + Charge"
+        }
+      },
+      {
+        "id": "C08-A006",
+        "name": "RC circuit transients",
+        "label": "RC circuits",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "electromagnetism/Em.Circuit"
+        }
+      },
+      {
+        "id": "C08-A012",
+        "name": "Electromagnetic wave propagation",
+        "label": "Electromagnetic waves",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "electromagnetism/Em.WaveProp"
+        }
+      }
+    ],
+    "theme": {
+      "source": "classical-mechanics/src/theme/themes/classical-mechanics.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#aa3377",
+        "accent": "#882255",
+        "result": "#117733",
+        "warn": "#bb5566",
+        "alt": "#4477aa"
+      },
+      "backdrop": {
+        "gridSize": 52,
+        "gridOpacity": 0.88,
+        "glowOpacity": 0.06,
+        "glowBlur": 64
+      }
+    },
+    "figure": "assets/course-cover-figures/8.02.svg",
+    "output": "assets/course-covers/8.02.jpg"
   },
   {
     "subject": "Chemistry",
     "course": "Organic Chemistry I",
     "code": "5.12",
-    "id": "C09-A001",
-    "name": "Resonance Structure",
-    "foot": "30 seconds",
-    "primary": "#F59E0B",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/5.12.png",
-    "output": "assets/course-covers/5.12.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/chemistry/organic-chemistry-i/resonance-structure.jpg",
-      "knowledge_id": "C09-A001"
-    }
+    "topics": [
+      {
+        "id": "C09-A001",
+        "name": "Resonance structure",
+        "label": "Resonance structure",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/chemistry/organic-chemistry-i/resonance-structure.jpg"
+        }
+      },
+      {
+        "id": "C09-A006",
+        "name": "Chirality",
+        "label": "Chirality",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/chemistry/organic-chemistry-i/chirality.jpg"
+        }
+      },
+      {
+        "id": "C09-A010",
+        "name": "SN2 reaction",
+        "label": "SN2 reaction",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/chemistry/organic-chemistry-i/sn2-reaction.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "organic-chemistry-i/src/theme/themes/organic-chemistry-i.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#070b12",
+        "bg1": "#0d1626",
+        "bg2": "#142238",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "primary": "#60a5fa",
+        "accent": "#fbbf24",
+        "result": "#34d399",
+        "warn": "#f87171",
+        "textStrong": "#f8fafc",
+        "textMuted": "#94a3b8",
+        "textDim": "#94a3b8",
+        "alt": "#fbbf24"
+      },
+      "backdrop": {
+        "gridSize": 72,
+        "gridOpacity": 0.5,
+        "glowOpacity": 0.13,
+        "glowBlur": 40
+      }
+    },
+    "figure": "assets/course-cover-figures/5.12.svg",
+    "output": "assets/course-covers/5.12.jpg"
   },
   {
     "subject": "Life Sciences",
     "course": "Introduction to Biology",
     "code": "7.013",
-    "id": "C10-A001",
-    "name": "Protein Structure",
-    "foot": "concept preview",
-    "primary": "#34D399",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/7.013.png",
-    "output": "assets/course-covers/7.013.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "introduction-to-biology/Bio.ProteinLevels",
-      "knowledge_id": "C10-A001"
-    }
+    "topics": [
+      {
+        "id": "C10-A001",
+        "name": "Protein structure",
+        "label": "Protein structure",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "introduction-to-biology/Bio.ProteinLevels"
+        }
+      },
+      {
+        "id": "C10-A008",
+        "name": "DNA replication",
+        "label": "DNA replication",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "introduction-to-biology/Bio.DnaHelix"
+        }
+      },
+      {
+        "id": "C10-A003",
+        "name": "Cell membrane transport",
+        "label": "Membrane transport",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "introduction-to-biology/Bio.Membrane"
+        }
+      }
+    ],
+    "theme": {
+      "source": "introduction-to-biology/src/theme/themes/introduction-to-biology.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0e0e",
+        "bg1": "#171b1c",
+        "bg2": "#212629",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#56b4e9",
+        "accent": "#e69f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#cc79a7"
+      },
+      "backdrop": {
+        "gridSize": 64,
+        "gridOpacity": 0.42,
+        "glowOpacity": 0.12,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/7.013.svg",
+    "output": "assets/course-covers/7.013.jpg"
   },
   {
     "subject": "Neuroscience",
     "course": "Introduction to Neuroscience",
     "code": "9.01",
-    "id": "C11-A001",
-    "name": "Resting Potential",
-    "foot": "concept preview",
-    "primary": "#F472B6",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/9.01.png",
-    "output": "assets/course-covers/9.01.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "introduction-to-neuroscience/Neuro.IonChannel",
-      "knowledge_id": "C11-A001"
-    }
+    "topics": [
+      {
+        "id": "C11-A001",
+        "name": "Resting potential",
+        "label": "Resting potential",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "introduction-to-neuroscience/Neuro.IonChannel"
+        }
+      },
+      {
+        "id": "C11-A002",
+        "name": "Action potential",
+        "label": "Action potential",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "introduction-to-neuroscience/Neuro.MembranePotential"
+        }
+      },
+      {
+        "id": "C11-A003",
+        "name": "Chemical synaptic transmission",
+        "label": "Synaptic transmission",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "introduction-to-neuroscience/Neuro.Synapse"
+        }
+      }
+    ],
+    "theme": {
+      "source": "introduction-to-neuroscience/src/theme/themes/introduction-to-neuroscience.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0e0e",
+        "bg1": "#171b1c",
+        "bg2": "#212629",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#cc79a7",
+        "accent": "#f0e442",
+        "result": "#56b4e9",
+        "warn": "#d55e00",
+        "alt": "#0072b2"
+      },
+      "backdrop": {
+        "gridSize": 64,
+        "gridOpacity": 0.42,
+        "glowOpacity": 0.12,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/9.01.svg",
+    "output": "assets/course-covers/9.01.jpg"
   },
   {
     "subject": "Psychology",
     "course": "Introduction to Psychology",
     "code": "9.00",
-    "id": "C12-A001",
-    "name": "Experimental Design",
-    "foot": "concept preview",
-    "primary": "#C084FC",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/9.00.png",
-    "output": "assets/course-covers/9.00.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "Experimental design: random assignment and controlled comparison",
-      "knowledge_id": "C12-A001"
-    }
+    "topics": [
+      {
+        "id": "C12-A001",
+        "name": "Experimental design",
+        "label": "Experimental design",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Random assignment, control and treatment comparison"
+        }
+      },
+      {
+        "id": "C12-A006",
+        "name": "Classical conditioning",
+        "label": "Classical conditioning",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Bell and food pairing followed by a conditioned response"
+        }
+      },
+      {
+        "id": "C12-A008",
+        "name": "Working memory",
+        "label": "Working memory",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Attention, working memory, rehearsal and long-term storage"
+        }
+      }
+    ],
+    "theme": {
+      "source": "introduction-to-psychology/src/theme/themes/introduction-to-psychology.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#aa4499",
+        "accent": "#cc6677",
+        "result": "#332288",
+        "warn": "#882255",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 48,
+        "gridOpacity": 0.9,
+        "glowOpacity": 0.05,
+        "glowBlur": 70
+      }
+    },
+    "figure": "assets/course-cover-figures/9.00.svg",
+    "output": "assets/course-covers/9.00.jpg"
   },
   {
     "subject": "Economics",
     "course": "Principles of Microeconomics",
     "code": "14.01",
-    "id": "C13-A001",
-    "name": "Market Equilibrium",
-    "foot": "30 seconds",
-    "primary": "#FBBF24",
-    "accent": "#6CBDD9",
-    "figure": "assets/course-cover-figures/14.01.png",
-    "output": "assets/course-covers/14.01.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/economics/principles-of-microeconomics/mi01-supply-and-demand-balance.jpg",
-      "knowledge_id": "C13-A001"
-    }
+    "topics": [
+      {
+        "id": "C13-A001",
+        "name": "Market Equilibrium",
+        "label": "Market Equilibrium",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/principles-of-microeconomics/mi01-supply-and-demand-balance.jpg"
+        }
+      },
+      {
+        "id": "C13-A006",
+        "name": "Utility Maximization",
+        "label": "Utility Maximization",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/principles-of-microeconomics/mi06-maximize-consumer-utility.jpg"
+        }
+      },
+      {
+        "id": "C13-A010",
+        "name": "Monopoly Pricing",
+        "label": "Monopoly Pricing",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/principles-of-microeconomics/mi10-monopoly-pricing.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "principles-of-microeconomics/src/theme/themes/principles-of-microeconomics.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#cc6677",
+        "accent": "#332288",
+        "result": "#117733",
+        "warn": "#882255",
+        "alt": "#aa4499"
+      },
+      "backdrop": {
+        "gridSize": 48,
+        "gridOpacity": 0.9,
+        "glowOpacity": 0.05,
+        "glowBlur": 70
+      }
+    },
+    "figure": "assets/course-cover-figures/14.01.svg",
+    "output": "assets/course-covers/14.01.jpg"
   },
   {
     "subject": "Economics",
     "course": "Principles of Macroeconomics",
     "code": "14.02",
-    "id": "C14-A001",
-    "name": "GDP Accounting",
-    "foot": "30 seconds",
-    "primary": "#FBBF24",
-    "accent": "#6CBDD9",
-    "figure": "assets/course-cover-figures/14.02.png",
-    "output": "assets/course-covers/14.02.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/economics/principles-of-macroeconomics/ma01-gdp-accounting.jpg",
-      "knowledge_id": "C14-A001"
-    }
+    "topics": [
+      {
+        "id": "C14-A002",
+        "name": "Circular Flow",
+        "label": "Circular Flow",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/principles-of-macroeconomics/ma02-economic-circulation-flow.jpg"
+        }
+      },
+      {
+        "id": "C14-A003",
+        "name": "IS\u2013LM Model",
+        "label": "IS\u2013LM Model",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/principles-of-macroeconomics/ma03-is-lm-model.jpg"
+        }
+      },
+      {
+        "id": "C14-A006",
+        "name": "Solow Growth Model",
+        "label": "Solow Growth Model",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/principles-of-macroeconomics/ma06-solow-growth-model.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "principles-of-microeconomics/src/theme/themes/principles-of-microeconomics.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#cc6677",
+        "accent": "#332288",
+        "result": "#117733",
+        "warn": "#882255",
+        "alt": "#aa4499"
+      },
+      "backdrop": {
+        "gridSize": 48,
+        "gridOpacity": 0.9,
+        "glowOpacity": 0.05,
+        "glowBlur": 70
+      }
+    },
+    "figure": "assets/course-cover-figures/14.02.svg",
+    "output": "assets/course-covers/14.02.jpg"
   },
   {
     "subject": "Economics",
     "course": "Game Theory",
     "code": "econ 159",
-    "id": "C15-A001",
-    "name": "Dominant Strategy",
-    "foot": "30 seconds",
-    "primary": "#FBBF24",
-    "accent": "#6CBDD9",
-    "figure": "assets/course-cover-figures/econ 159.png",
-    "output": "assets/course-covers/econ 159.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/economics/game-theory/gt01-dominant-strategy.jpg",
-      "knowledge_id": "C15-A001"
-    }
+    "topics": [
+      {
+        "id": "C15-A003",
+        "name": "Pure Strategy Nash Equilibrium",
+        "label": "Pure Strategy Nash Equilibrium",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/game-theory/gt03-pure-strategy-nash-equilibrium.jpg"
+        }
+      },
+      {
+        "id": "C15-A006",
+        "name": "Sequential Game",
+        "label": "Sequential Game",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/game-theory/gt06-sequential-game.jpg"
+        }
+      },
+      {
+        "id": "C15-A011",
+        "name": "Signaling",
+        "label": "Signaling",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/economics/game-theory/gt11-signaling.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "principles-of-microeconomics/src/theme/themes/principles-of-microeconomics.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#cc6677",
+        "accent": "#332288",
+        "result": "#117733",
+        "warn": "#882255",
+        "alt": "#aa4499"
+      },
+      "backdrop": {
+        "gridSize": 48,
+        "gridOpacity": 0.9,
+        "glowOpacity": 0.05,
+        "glowBlur": 70
+      }
+    },
+    "figure": "assets/course-cover-figures/econ 159.svg",
+    "output": "assets/course-covers/econ 159.jpg"
   },
   {
     "subject": "Finance",
     "course": "Financial Markets",
     "code": "econ 252",
-    "id": "C16-A001",
-    "name": "Risk-Return Relationship",
-    "foot": "concept preview",
-    "primary": "#2DD4BF",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/econ 252.png",
-    "output": "assets/course-covers/econ 252.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "financial-markets/Fin.RiskReturn",
-      "knowledge_id": "C16-A001"
-    }
+    "topics": [
+      {
+        "id": "C16-A001",
+        "name": "Risk-return relationship",
+        "label": "Risk-return relationship",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "financial-markets/Fin.RiskReturn"
+        }
+      },
+      {
+        "id": "C16-A002",
+        "name": "Portfolio diversification",
+        "label": "Portfolio diversification",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "financial-markets/Fin.Diversification"
+        }
+      },
+      {
+        "id": "C16-A003",
+        "name": "Present value",
+        "label": "Present value",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "financial-markets/Fin.CashFlowTimeline"
+        }
+      }
+    ],
+    "theme": {
+      "source": "financial-markets/src/theme/themes/financial-markets.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0e0e",
+        "bg1": "#181a1d",
+        "bg2": "#22252a",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#ef4444",
+        "accent": "#f59e0b",
+        "result": "#22c55e",
+        "warn": "#38bdf8",
+        "alt": "#a78bfa"
+      },
+      "backdrop": {
+        "gridSize": 68,
+        "gridOpacity": 0.34,
+        "glowOpacity": 0.12,
+        "glowBlur": 46
+      }
+    },
+    "figure": "assets/course-cover-figures/econ 252.svg",
+    "output": "assets/course-covers/econ 252.jpg"
   },
   {
     "subject": "Political Science",
     "course": "Introduction to Political Philosophy",
     "code": "plsc 114",
-    "id": "C17-A001",
-    "name": "Plato's Justice",
-    "foot": "concept preview",
-    "primary": "#FB7185",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/plsc 114.png",
-    "output": "assets/course-covers/plsc 114.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "Plato: correspondence between parts of the soul and classes of the city",
-      "knowledge_id": "C17-A001"
-    }
+    "topics": [
+      {
+        "id": "C17-A001",
+        "name": "Plato's justice",
+        "label": "Justice & the city",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Plato: soul-city correspondence and justice as harmony"
+        }
+      },
+      {
+        "id": "C17-A004",
+        "name": "Aristotle's Classification of Governments",
+        "label": "Forms of government",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Aristotle: one/few/many rulers, common/private interest"
+        }
+      },
+      {
+        "id": "C17-A009",
+        "name": "Natural rights",
+        "label": "Natural rights",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Life, liberty and property protected by limited government"
+        }
+      }
+    ],
+    "theme": {
+      "source": "introduction-to-political-philosophy/src/theme/themes/introduction-to-political-philosophy.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#004488",
+        "accent": "#117733",
+        "result": "#882255",
+        "warn": "#bb5566",
+        "alt": "#332288"
+      },
+      "backdrop": {
+        "gridSize": 0,
+        "gridOpacity": 0,
+        "glowOpacity": 0.04,
+        "glowBlur": 80
+      }
+    },
+    "figure": "assets/course-cover-figures/plsc 114.svg",
+    "output": "assets/course-covers/plsc 114.jpg"
   },
   {
     "subject": "Philosophy",
     "course": "Philosophy of Death",
     "code": "phil 176",
-    "id": "C18-A001",
-    "name": "Mind-Body Dualism",
-    "foot": "concept preview",
-    "primary": "#A3A3A3",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/phil 176.png",
-    "output": "assets/course-covers/phil 176.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "philosophy-of-death/Death.MindBody",
-      "knowledge_id": "C18-A001"
-    }
+    "topics": [
+      {
+        "id": "C18-A001",
+        "name": "Mind-body dualism",
+        "label": "Mind & body",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "philosophy-of-death/Death.MindBody"
+        }
+      },
+      {
+        "id": "C18-A004",
+        "name": "Personal identity across time",
+        "label": "Personal identity",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "philosophy-of-death/Death.IdentityThread"
+        }
+      },
+      {
+        "id": "C18-A008",
+        "name": "Death deprivation theory",
+        "label": "Deprivation theory",
+        "provenance": {
+          "kind": "static_course_diagram",
+          "source": "Future goods lost at death"
+        }
+      }
+    ],
+    "theme": {
+      "source": "philosophy-of-death/src/theme/themes/philosophy-of-death.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#332288",
+        "accent": "#aa3377",
+        "result": "#004488",
+        "warn": "#bb5566",
+        "alt": "#117733"
+      },
+      "backdrop": {
+        "gridSize": 0,
+        "gridOpacity": 0,
+        "glowOpacity": 0.04,
+        "glowBlur": 80
+      }
+    },
+    "figure": "assets/course-cover-figures/phil 176.svg",
+    "output": "assets/course-covers/phil 176.jpg"
   },
   {
     "subject": "Literature",
     "course": "American Modernist Literature",
     "code": "amst 246",
-    "id": "C19-A001",
-    "name": "Hemingway Style Omission",
-    "foot": "concept preview",
-    "primary": "#F0ABFC",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/amst 246.png",
-    "output": "assets/course-covers/amst 246.jpg",
-    "provenance": {
-      "kind": "static_course_primitive",
-      "source": "american-modernist-literature/Lit.Iceberg",
-      "knowledge_id": "C19-A001"
-    }
+    "topics": [
+      {
+        "id": "C19-A002",
+        "name": "Iceberg theory",
+        "label": "The iceberg theory",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "american-modernist-literature/Lit.Iceberg"
+        }
+      },
+      {
+        "id": "C19-A003",
+        "name": "The time structure of The Great Gatsby",
+        "label": "Narrative time",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "american-modernist-literature/Lit.TimeStructure"
+        }
+      },
+      {
+        "id": "C19-A007",
+        "name": "The narrative voice of \"As I Lay Dying\"",
+        "label": "Multiple voices",
+        "provenance": {
+          "kind": "static_course_primitive",
+          "source": "american-modernist-literature/Lit.VoiceStack"
+        }
+      }
+    ],
+    "theme": {
+      "source": "american-modernist-literature/src/theme/themes/american-modernist-literature.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#882255",
+        "accent": "#aa3377",
+        "result": "#117733",
+        "warn": "#bb5566",
+        "alt": "#332288"
+      },
+      "backdrop": {
+        "gridSize": 0,
+        "gridOpacity": 0,
+        "glowOpacity": 0.04,
+        "glowBlur": 80
+      }
+    },
+    "figure": "assets/course-cover-figures/amst 246.svg",
+    "output": "assets/course-covers/amst 246.jpg"
   },
   {
     "subject": "Astronomy",
     "course": "Frontiers and Controversies in Astrophysics",
     "code": "astr 160",
-    "id": "C20-A001",
-    "name": "Exoplanet Transit Method",
-    "foot": "30 seconds",
-    "primary": "#818CF8",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/astr 160.png",
-    "output": "assets/course-covers/astr 160.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.jpg",
-      "knowledge_id": "C20-A001"
-    }
+    "topics": [
+      {
+        "id": "C20-A001",
+        "name": "Exoplanet transit method",
+        "label": "Exoplanet transit method",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/exoplanet-transit-method.jpg"
+        }
+      },
+      {
+        "id": "C20-A007",
+        "name": "Black hole event horizon",
+        "label": "Black hole event horizon",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/black-hole-event-horizon.jpg"
+        }
+      },
+      {
+        "id": "C20-A009",
+        "name": "Hubble's law",
+        "label": "Hubble's law",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/astronomy/frontiers-and-controversies-in-astrophysics/hubbles-law.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "frontiers-and-controversies-in-astrophysics/src/theme/themes/frontiers-and-controversies-in-astrophysics.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0b0d0f",
+        "bg1": "#13191f",
+        "bg2": "#1c242c",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#828231",
+        "accent": "#d29343",
+        "result": "#fdac9e",
+        "warn": "#d55e00",
+        "alt": "#faccfa"
+      },
+      "backdrop": {
+        "gridSize": 50,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.12,
+        "glowBlur": 50
+      }
+    },
+    "figure": "assets/course-cover-figures/astr 160.svg",
+    "output": "assets/course-covers/astr 160.jpg"
   },
   {
     "subject": "Embedded Systems",
     "course": "Microcontroller Fundamentals",
     "code": "es-mcu",
-    "id": "C36-A001",
-    "name": "Interrupt Entry and Return",
-    "foot": "30 seconds",
-    "primary": "#60A5FA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/es-mcu.png",
-    "output": "assets/course-covers/es-mcu.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/video-covers/embedded-systems/microcontroller-fundamentals/interrupt-entry-and-return.jpg",
-      "knowledge_id": "C36-A001"
-    }
+    "topics": [
+      {
+        "id": "C36-A001",
+        "name": "Interrupt Entry and Return",
+        "label": "Interrupt Entry and Return",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/embedded-systems/microcontroller-fundamentals/interrupt-entry-and-return.jpg"
+        }
+      },
+      {
+        "id": "C36-A002",
+        "name": "Timer Overflow and Compare Match",
+        "label": "Timer Overflow and Compare Match",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/embedded-systems/microcontroller-fundamentals/timer-overflow-and-compare-match.jpg"
+        }
+      },
+      {
+        "id": "C36-A003",
+        "name": "DMA Data Transfer",
+        "label": "DMA Data Transfer",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/embedded-systems/microcontroller-fundamentals/dma-data-transfer.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "microcontroller-fundamentals/src/theme/themes/microcontroller-fundamentals.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#070b12",
+        "bg1": "#0d1626",
+        "bg2": "#142238",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "primary": "#60a5fa",
+        "accent": "#fbbf24",
+        "result": "#34d399",
+        "warn": "#f87171",
+        "alt": "#c084fc",
+        "textStrong": "#f8fafc",
+        "textMuted": "#94a3b8",
+        "textDim": "#7a879b"
+      },
+      "backdrop": {
+        "gridSize": 72,
+        "gridOpacity": 0.5,
+        "glowOpacity": 0.13,
+        "glowBlur": 40
+      }
+    },
+    "figure": "assets/course-cover-figures/es-mcu.svg",
+    "output": "assets/course-covers/es-mcu.jpg"
   },
   {
     "subject": "Embedded Systems",
     "course": "Real-Time Operating Systems",
     "code": "es-rtos",
-    "id": "C37-A001",
-    "name": "Task State Transitions",
-    "foot": "30 seconds",
-    "primary": "#60A5FA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/es-rtos.png",
-    "output": "assets/course-covers/es-rtos.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/video-covers/embedded-systems/real-time-operating-systems/task-state-transitions.jpg",
-      "knowledge_id": "C37-A001"
-    }
+    "topics": [
+      {
+        "id": "C37-A001",
+        "name": "Task State Transitions",
+        "label": "Task State Transitions",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/embedded-systems/real-time-operating-systems/task-state-transitions.jpg"
+        }
+      },
+      {
+        "id": "C37-A002",
+        "name": "Priority Preemption",
+        "label": "Priority Preemption",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/embedded-systems/real-time-operating-systems/priority-preemption.jpg"
+        }
+      },
+      {
+        "id": "C37-A003",
+        "name": "Mutex and Critical Section",
+        "label": "Mutex and Critical Section",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/embedded-systems/real-time-operating-systems/mutex-and-critical-section.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "microcontroller-fundamentals/src/theme/themes/microcontroller-fundamentals.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#070b12",
+        "bg1": "#0d1626",
+        "bg2": "#142238",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "primary": "#60a5fa",
+        "accent": "#fbbf24",
+        "result": "#34d399",
+        "warn": "#f87171",
+        "alt": "#c084fc",
+        "textStrong": "#f8fafc",
+        "textMuted": "#94a3b8",
+        "textDim": "#7a879b"
+      },
+      "backdrop": {
+        "gridSize": 72,
+        "gridOpacity": 0.5,
+        "glowOpacity": 0.13,
+        "glowBlur": 40
+      }
+    },
+    "figure": "assets/course-cover-figures/es-rtos.svg",
+    "output": "assets/course-covers/es-rtos.jpg"
   },
   {
     "subject": "Digital Electronics",
     "course": "Digital Logic Design",
     "code": "de-dld",
-    "id": "C38-A001",
-    "name": "Combinational Propagation Delay",
-    "foot": "30 seconds",
-    "primary": "#33BBEE",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/de-dld.png",
-    "output": "assets/course-covers/de-dld.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/video-covers/digital-electronics/digital-logic-design/combinational-propagation-delay.jpg",
-      "knowledge_id": "C38-A001"
-    }
+    "topics": [
+      {
+        "id": "C38-A001",
+        "name": "Combinational Propagation Delay",
+        "label": "Combinational Propagation Delay",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/digital-electronics/digital-logic-design/combinational-propagation-delay.jpg"
+        }
+      },
+      {
+        "id": "C38-A002",
+        "name": "Edge-Triggered Flip-Flop",
+        "label": "Edge-Triggered Flip-Flop",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/digital-electronics/digital-logic-design/edge-triggered-flip-flop.jpg"
+        }
+      },
+      {
+        "id": "C38-A003",
+        "name": "Finite State Machine Transition",
+        "label": "Finite State Machine Transition",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/digital-electronics/digital-logic-design/finite-state-machine-transition.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "digital-logic-design/src/theme/themes/digital-logic-design.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/de-dld.svg",
+    "output": "assets/course-covers/de-dld.jpg"
   },
   {
     "subject": "Digital Electronics",
     "course": "FPGA Fundamentals",
     "code": "de-fpga",
-    "id": "C39-A001",
-    "name": "Setup and Hold Time",
-    "foot": "30 seconds",
-    "primary": "#33BBEE",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/de-fpga.png",
-    "output": "assets/course-covers/de-fpga.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/video-covers/digital-electronics/fpga-fundamentals/setup-and-hold-time.jpg",
-      "knowledge_id": "C39-A001"
-    }
+    "topics": [
+      {
+        "id": "C39-A001",
+        "name": "Setup and Hold Time",
+        "label": "Setup and Hold Time",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/digital-electronics/fpga-fundamentals/setup-and-hold-time.jpg"
+        }
+      },
+      {
+        "id": "C39-A002",
+        "name": "Clock Domain Crossing",
+        "label": "Clock Domain Crossing",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/digital-electronics/fpga-fundamentals/clock-domain-crossing.jpg"
+        }
+      },
+      {
+        "id": "C39-A003",
+        "name": "Pipeline Latency and Throughput",
+        "label": "Pipeline Latency and Throughput",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/video-covers/digital-electronics/fpga-fundamentals/pipeline-latency-and-throughput.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "digital-logic-design/src/theme/themes/digital-logic-design.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/de-fpga.svg",
+    "output": "assets/course-covers/de-fpga.jpg"
   },
   {
     "subject": "Artificial Intelligence",
     "course": "AI Agent Systems",
     "code": "ai-agent-systems",
-    "id": "recvw253eEvb3X",
-    "name": "Agent Observe-Plan-Act Loop",
-    "foot": "30 seconds",
-    "primary": "#A78BFA",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/ai-agent-systems.png",
-    "output": "assets/course-covers/ai-agent-systems.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg",
-      "knowledge_id": "recvw253eEvb3X"
-    }
+    "topics": [
+      {
+        "id": "recvw253eEvb3X",
+        "name": "Agent Observe-Plan-Act Loop",
+        "label": "Agent loop",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg"
+        }
+      },
+      {
+        "id": "recvw254kdt8Gm",
+        "name": "Tool Registry and Tool Selection",
+        "label": "Tool selection",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/artificial-intelligence/ai-agent-systems/tool-registry-and-tool-selection.jpg"
+        }
+      },
+      {
+        "id": "recvw255ufAgzt",
+        "name": "Function Calling Schema Validation",
+        "label": "Schema validation",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/artificial-intelligence/ai-agent-systems/function-calling-schema-validation.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+      "mode": "light",
+      "colors": {
+        "bg0": "#ffffff",
+        "bg1": "#f6f8fb",
+        "bg2": "#eaeff6",
+        "grid": "rgba(15,23,42,0.10)",
+        "axis": "rgba(15,23,42,0.42)",
+        "textStrong": "#0b1220",
+        "textMuted": "#475569",
+        "textDim": "#5a6675",
+        "primary": "#0072b2",
+        "accent": "#b87f00",
+        "result": "#009e73",
+        "warn": "#d55e00",
+        "alt": "#c0729d"
+      },
+      "backdrop": {
+        "gridSize": 56,
+        "gridOpacity": 0.85,
+        "glowOpacity": 0.06,
+        "glowBlur": 60
+      }
+    },
+    "figure": "assets/course-cover-figures/ai-agent-systems.svg",
+    "output": "assets/course-covers/ai-agent-systems.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Cloud Native and Kubernetes",
     "code": "cloud-native-kubernetes",
-    "id": "recvw25sP7BJsk",
-    "name": "Container Image Layers and Build Cache",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cloud-native-kubernetes.png",
-    "output": "assets/course-covers/cloud-native-kubernetes.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/computer-science/cloud-native-kubernetes/container-image-layers-and-build-cache.jpg",
-      "knowledge_id": "recvw25sP7BJsk"
-    }
+    "topics": [
+      {
+        "id": "recvw25sP7BJsk",
+        "name": "Container Image Layers and Build Cache",
+        "label": "Container layers",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/cloud-native-kubernetes/container-image-layers-and-build-cache.jpg"
+        }
+      },
+      {
+        "id": "recvw25sP7ks8S",
+        "name": "Pod Scheduling onto a Node",
+        "label": "Pod scheduling",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/cloud-native-kubernetes/pod-scheduling-onto-a-node.jpg"
+        }
+      },
+      {
+        "id": "recvw25sP7NFVs",
+        "name": "Deployment Replica Reconciliation",
+        "label": "Replica reconciliation",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/cloud-native-kubernetes/deployment-replica-reconciliation.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cloud-native-kubernetes.svg",
+    "output": "assets/course-covers/cloud-native-kubernetes.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "Cybersecurity and Identity Authentication",
     "code": "cybersecurity-and-identity-authentication",
-    "id": "recvw25tEzjpUx",
-    "name": "Authentication and Authorization Boundary",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/cybersecurity-and-identity-authentication.png",
-    "output": "assets/course-covers/cybersecurity-and-identity-authentication.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.jpg",
-      "knowledge_id": "recvw25tEzjpUx"
-    }
+    "topics": [
+      {
+        "id": "recvw25tEzjpUx",
+        "name": "Authentication and Authorization Boundary",
+        "label": "Identity & permissions",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.jpg"
+        }
+      },
+      {
+        "id": "recvw25tEzEbVA",
+        "name": "Password Hashing with Salt",
+        "label": "Salted passwords",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/cybersecurity-and-identity-authentication/password-hashing-with-salt.jpg"
+        }
+      },
+      {
+        "id": "recvw25tEzxx6p",
+        "name": "Public-Key Challenge-Response Authentication",
+        "label": "Public-key challenges",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/cybersecurity-and-identity-authentication/public-key-challenge-response-authentication.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/cybersecurity-and-identity-authentication.svg",
+    "output": "assets/course-covers/cybersecurity-and-identity-authentication.jpg"
   },
   {
     "subject": "Computer Science",
     "course": "TypeScript Full-Stack Development",
     "code": "typescript-full-stack-development",
-    "id": "recvw25tEzzqwR",
-    "name": "TypeScript Type Inference Across Functions",
-    "foot": "30 seconds",
-    "primary": "#36C5F0",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/typescript-full-stack-development.png",
-    "output": "assets/course-covers/typescript-full-stack-development.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg",
-      "knowledge_id": "recvw25tEzzqwR"
-    }
+    "topics": [
+      {
+        "id": "recvw25tEzzqwR",
+        "name": "TypeScript Type Inference Across Functions",
+        "label": "Type inference",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg"
+        }
+      },
+      {
+        "id": "recvw25tEzxY66",
+        "name": "Union Type Narrowing with Discriminants",
+        "label": "Union narrowing",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/typescript-full-stack-development/union-type-narrowing-with-discriminants.jpg"
+        }
+      },
+      {
+        "id": "recvw25tEzU93I",
+        "name": "Generic Constraints and Reusable APIs",
+        "label": "Generic APIs",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/computer-science/typescript-full-stack-development/generic-constraints-and-reusable-apis.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/typescript-full-stack-development.svg",
+    "output": "assets/course-covers/typescript-full-stack-development.jpg"
   },
   {
     "subject": "Digital Electronics",
     "course": "Edge AI and Embedded Machine Learning",
     "code": "edge-ai-embedded-machine-learning",
-    "id": "recvw25vjM9t27",
-    "name": "Edge Inference Pipeline From Sensor to Result",
-    "foot": "30 seconds",
-    "primary": "#33BBEE",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/edge-ai-embedded-machine-learning.png",
-    "output": "assets/course-covers/edge-ai-embedded-machine-learning.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg",
-      "knowledge_id": "recvw25vjM9t27"
-    }
+    "topics": [
+      {
+        "id": "recvw25vjM9t27",
+        "name": "Edge Inference Pipeline from Sensor to Result",
+        "label": "Edge inference",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg"
+        }
+      },
+      {
+        "id": "recvw25vjMkk0g",
+        "name": "Quantization from Float32 to Int8",
+        "label": "Int8 quantization",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/quantization-from-float32-to-int8.jpg"
+        }
+      },
+      {
+        "id": "recvw25vjMaM6A",
+        "name": "Calibration Dataset for Post-Training Quantization",
+        "label": "Calibration",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/digital-electronics/edge-ai-embedded-machine-learning/calibration-dataset-for-post-training-quantization.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "digital-logic-design/src/theme/themes/digital-logic-design.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/edge-ai-embedded-machine-learning.svg",
+    "output": "assets/course-covers/edge-ai-embedded-machine-learning.jpg"
   },
   {
     "subject": "Digital Electronics",
     "course": "RISC-V Processor Architecture",
     "code": "risc-v-processor-architecture",
-    "id": "recvw25utMYuhh",
-    "name": "RISC-V Instruction Encoding Fields",
-    "foot": "30 seconds",
-    "primary": "#33BBEE",
-    "accent": "#F4C542",
-    "figure": "assets/course-cover-figures/risc-v-processor-architecture.png",
-    "output": "assets/course-covers/risc-v-processor-architecture.jpg",
-    "provenance": {
-      "kind": "existing_dedicated_cover_figure",
-      "source": "assets/covers/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.jpg",
-      "knowledge_id": "recvw25utMYuhh"
-    }
+    "topics": [
+      {
+        "id": "recvw25utMYuhh",
+        "name": "RISC-V Instruction Encoding Fields",
+        "label": "Instruction encoding",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.jpg"
+        }
+      },
+      {
+        "id": "recvw25utMYmGk",
+        "name": "Register File Read and Write Ports",
+        "label": "Register file",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/digital-electronics/risc-v-processor-architecture/register-file-read-and-write-ports.jpg"
+        }
+      },
+      {
+        "id": "recvw25utMTyz5",
+        "name": "Immediate Generation from Instruction Bits",
+        "label": "Immediate generation",
+        "provenance": {
+          "kind": "dedicated_cover_diagram",
+          "source": "assets/covers/digital-electronics/risc-v-processor-architecture/immediate-generation-from-instruction-bits.jpg"
+        }
+      }
+    ],
+    "theme": {
+      "source": "digital-logic-design/src/theme/themes/digital-logic-design.json",
+      "mode": "dark",
+      "colors": {
+        "bg0": "#0e0d10",
+        "bg1": "#18181f",
+        "bg2": "#22222d",
+        "grid": "rgba(148,163,184,0.13)",
+        "axis": "rgba(148,163,184,0.45)",
+        "textStrong": "#f8fafc",
+        "textMuted": "#a8b4c4",
+        "textDim": "#94a3b8",
+        "primary": "#33bbee",
+        "accent": "#ee7733",
+        "result": "#009988",
+        "warn": "#cc3311",
+        "alt": "#bbbbbb"
+      },
+      "backdrop": {
+        "gridSize": 60,
+        "gridOpacity": 0.4,
+        "glowOpacity": 0.14,
+        "glowBlur": 44
+      }
+    },
+    "figure": "assets/course-cover-figures/risc-v-processor-architecture.svg",
+    "output": "assets/course-covers/risc-v-processor-architecture.jpg"
   }
 ]

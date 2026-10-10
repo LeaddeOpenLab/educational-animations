@@ -1,675 +1,855 @@
 [
   {
     "code": "cs50x",
-    "id": "C01-A001",
-    "bbox": [
-      196,
-      254,
-      803,
-      646
+    "topic_ids": [
+      "C01-A001",
+      "C01-A009",
+      "C01-A005"
     ],
-    "width": 608,
-    "height": 393,
-    "dx": 0,
-    "dy": 0.5,
+    "bbox": [
+      246,
+      170,
+      754,
+      729
+    ],
+    "width": 509,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
     "passed": true
   },
   {
     "code": "6.006",
-    "id": "recvw1Efv8Vc3v",
-    "bbox": [
-      207,
-      156,
-      792,
-      743
+    "topic_ids": [
+      "C02-A003",
+      "C02-A008",
+      "C02-A013"
     ],
-    "width": 586,
-    "height": 588,
+    "bbox": [
+      249,
+      170,
+      750,
+      729
+    ],
+    "width": 502,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "cs-coa",
-    "id": "C21-A002",
-    "bbox": [
-      196,
-      241,
-      803,
-      659
+    "topic_ids": [
+      "C21-A003",
+      "C21-A007",
+      "C21-A008"
     ],
-    "width": 608,
-    "height": 419,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "cs-os",
-    "id": "C22-A002",
     "bbox": [
-      196,
-      262,
-      803,
-      638
+      229,
+      170,
+      770,
+      729
     ],
-    "width": 608,
-    "height": 377,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "cs-net",
-    "id": "C23-A001",
-    "bbox": [
-      196,
-      176,
-      803,
-      723
-    ],
-    "width": 608,
-    "height": 548,
+    "width": 542,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
-    "code": "cs-db",
-    "id": "C24-A001",
-    "bbox": [
-      196,
-      242,
-      803,
-      657
+    "code": "cs-os",
+    "topic_ids": [
+      "C22-A002",
+      "C22-A005",
+      "C22-A007"
     ],
-    "width": 608,
-    "height": 416,
+    "bbox": [
+      250,
+      170,
+      750,
+      729
+    ],
+    "width": 501,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cs-net",
+    "topic_ids": [
+      "C23-A001",
+      "C23-A007",
+      "C23-A006"
+    ],
+    "bbox": [
+      263,
+      170,
+      737,
+      729
+    ],
+    "width": 475,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cs-db",
+    "topic_ids": [
+      "C24-A001",
+      "C24-A002",
+      "C24-A006"
+    ],
+    "bbox": [
+      224,
+      170,
+      775,
+      729
+    ],
+    "width": 552,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "cs-comp",
-    "id": "C25-A001",
-    "bbox": [
-      196,
-      253,
-      803,
-      647
+    "topic_ids": [
+      "C25-A001",
+      "C25-A002",
+      "C25-A003"
     ],
-    "width": 608,
-    "height": 395,
+    "bbox": [
+      206,
+      170,
+      793,
+      729
+    ],
+    "width": 588,
+    "height": 560,
     "dx": 0,
-    "dy": 0.5,
+    "dy": 0,
     "passed": true
   },
   {
     "code": "6.036",
-    "id": "C03-A001",
-    "bbox": [
-      196,
-      158,
-      803,
-      741
+    "topic_ids": [
+      "C03-A001",
+      "C03-A003",
+      "C03-A005"
     ],
-    "width": 608,
-    "height": 584,
+    "bbox": [
+      252,
+      170,
+      747,
+      729
+    ],
+    "width": 496,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "ai-dl",
-    "id": "C26-A001",
-    "bbox": [
-      196,
-      220,
-      803,
-      679
+    "topic_ids": [
+      "C26-A001",
+      "C26-A006",
+      "C26-A012"
     ],
-    "width": 608,
-    "height": 460,
+    "bbox": [
+      240,
+      170,
+      759,
+      729
+    ],
+    "width": 520,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "ai-nlp",
-    "id": "C27-A002",
-    "bbox": [
-      196,
-      245,
-      803,
-      655
+    "topic_ids": [
+      "C27-A003",
+      "C27-A004",
+      "C27-A006"
     ],
-    "width": 608,
-    "height": 411,
+    "bbox": [
+      234,
+      160,
+      765,
+      740
+    ],
+    "width": 532,
+    "height": 581,
     "dx": 0,
     "dy": 0.5,
     "passed": true
   },
   {
     "code": "ai-cv",
-    "id": "C28-A001",
-    "bbox": [
-      216,
-      156,
-      784,
-      743
+    "topic_ids": [
+      "C28-A001",
+      "C28-A006",
+      "C28-A007"
     ],
-    "width": 569,
-    "height": 588,
+    "bbox": [
+      247,
+      170,
+      753,
+      729
+    ],
+    "width": 507,
+    "height": 560,
     "dx": 0.5,
     "dy": 0,
     "passed": true
   },
   {
     "code": "ai-rl",
-    "id": "C29-A001",
-    "bbox": [
-      192,
-      309,
-      807,
-      590
+    "topic_ids": [
+      "C29-A001",
+      "C29-A003",
+      "C29-A006"
     ],
-    "width": 616,
-    "height": 282,
+    "bbox": [
+      245,
+      170,
+      754,
+      729
+    ],
+    "width": 510,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "ai-gen",
-    "id": "recvw24KNremp6",
-    "bbox": [
-      196,
-      156,
-      803,
-      743
+    "topic_ids": [
+      "C30-A001",
+      "C30-A003",
+      "C30-A007"
     ],
-    "width": 608,
-    "height": 588,
+    "bbox": [
+      213,
+      170,
+      786,
+      729
+    ],
+    "width": 574,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "18.01",
-    "id": "C04-A004",
-    "bbox": [
-      199,
-      156,
-      800,
-      743
+    "topic_ids": [
+      "C04-A004",
+      "C04-A011",
+      "C04-A005"
     ],
-    "width": 602,
-    "height": 588,
-    "dx": 0,
+    "bbox": [
+      265,
+      172,
+      735,
+      727
+    ],
+    "width": 471,
+    "height": 556,
+    "dx": 0.5,
     "dy": 0,
     "passed": true
   },
   {
-    "code": "18.06",
-    "id": "C05-A002",
-    "bbox": [
-      196,
-      185,
-      803,
-      715
-    ],
-    "width": 608,
-    "height": 531,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
     "code": "math-mvc",
-    "id": "C31-A001",
-    "bbox": [
-      220,
-      156,
-      780,
-      743
+    "topic_ids": [
+      "C31-A001",
+      "C31-A004",
+      "C31-A007"
     ],
-    "width": 561,
-    "height": 588,
+    "bbox": [
+      249,
+      170,
+      751,
+      729
+    ],
+    "width": 503,
+    "height": 560,
     "dx": 0.5,
     "dy": 0,
     "passed": true
   },
   {
     "code": "math-ode",
-    "id": "C32-A001",
-    "bbox": [
-      198,
-      156,
-      801,
-      743
+    "topic_ids": [
+      "C32-A001",
+      "C32-A003",
+      "C32-A005"
     ],
-    "width": 604,
-    "height": 588,
+    "bbox": [
+      243,
+      170,
+      756,
+      729
+    ],
+    "width": 514,
+    "height": 560,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "math-dm",
-    "id": "C33-A005",
-    "bbox": [
-      212,
-      156,
-      788,
-      743
+    "topic_ids": [
+      "C33-A005",
+      "C33-A007",
+      "C33-A008"
     ],
-    "width": 577,
-    "height": 588,
-    "dx": 0.5,
+    "bbox": [
+      249,
+      170,
+      750,
+      729
+    ],
+    "width": 502,
+    "height": 560,
+    "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "math-aa",
-    "id": "C34-A003",
-    "bbox": [
-      224,
-      156,
-      775,
-      743
+    "topic_ids": [
+      "C34-A003",
+      "C34-A006",
+      "C34-A008"
     ],
-    "width": 552,
-    "height": 588,
-    "dx": 0,
+    "bbox": [
+      239,
+      170,
+      761,
+      729
+    ],
+    "width": 523,
+    "height": 560,
+    "dx": 0.5,
     "dy": 0,
     "passed": true
   },
   {
     "code": "math-opt",
-    "id": "C35-A001",
-    "bbox": [
-      199,
-      156,
-      800,
-      743
+    "topic_ids": [
+      "C35-A001",
+      "C35-A007",
+      "C35-A008"
     ],
-    "width": 602,
-    "height": 588,
-    "dx": 0,
+    "bbox": [
+      229,
+      170,
+      771,
+      729
+    ],
+    "width": 543,
+    "height": 560,
+    "dx": 0.5,
     "dy": 0,
     "passed": true
   },
   {
     "code": "6.041",
-    "id": "C06-A001",
-    "bbox": [
-      196,
-      198,
-      803,
-      701
+    "topic_ids": [
+      "C06-A002",
+      "C06-A004",
+      "C06-A009"
     ],
-    "width": 608,
-    "height": 504,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "8.02",
-    "id": "C08-A001",
     "bbox": [
-      234,
-      156,
-      766,
-      743
+      253,
+      172,
+      746,
+      727
     ],
-    "width": 533,
-    "height": 588,
-    "dx": 0.5,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "5.12",
-    "id": "C09-A001",
-    "bbox": [
-      232,
-      156,
-      768,
-      743
-    ],
-    "width": 537,
-    "height": 588,
-    "dx": 0.5,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "7.013",
-    "id": "C10-A001",
-    "bbox": [
-      196,
-      188,
-      803,
-      712
-    ],
-    "width": 608,
-    "height": 525,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "9.01",
-    "id": "C11-A001",
-    "bbox": [
-      196,
-      182,
-      803,
-      718
-    ],
-    "width": 608,
-    "height": 537,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "9.00",
-    "id": "C12-A001",
-    "bbox": [
-      285,
-      156,
-      715,
-      743
-    ],
-    "width": 431,
-    "height": 588,
-    "dx": 0.5,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "14.01",
-    "id": "C13-A001",
-    "bbox": [
-      196,
-      173,
-      803,
-      726
-    ],
-    "width": 608,
-    "height": 554,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "14.02",
-    "id": "C14-A001",
-    "bbox": [
-      196,
-      176,
-      803,
-      724
-    ],
-    "width": 608,
-    "height": 549,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "econ 159",
-    "id": "C15-A001",
-    "bbox": [
-      215,
-      156,
-      784,
-      743
-    ],
-    "width": 570,
-    "height": 588,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "astr 160",
-    "id": "C20-A001",
-    "bbox": [
-      196,
-      161,
-      803,
-      738
-    ],
-    "width": 608,
-    "height": 578,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "es-mcu",
-    "id": "C36-A001",
-    "bbox": [
-      206,
-      156,
-      793,
-      743
-    ],
-    "width": 588,
-    "height": 588,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "es-rtos",
-    "id": "C37-A001",
-    "bbox": [
-      196,
-      218,
-      803,
-      681
-    ],
-    "width": 608,
-    "height": 464,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "de-dld",
-    "id": "C38-A001",
-    "bbox": [
-      196,
-      227,
-      803,
-      672
-    ],
-    "width": 608,
-    "height": 446,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "de-fpga",
-    "id": "C39-A001",
-    "bbox": [
-      196,
-      169,
-      803,
-      731
-    ],
-    "width": 608,
-    "height": 563,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "ai-agent-systems",
-    "id": "recvw253eEvb3X",
-    "bbox": [
-      196,
-      232,
-      803,
-      667
-    ],
-    "width": 608,
-    "height": 436,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "cloud-native-kubernetes",
-    "id": "recvw25sP7BJsk",
-    "bbox": [
-      196,
-      179,
-      803,
-      721
-    ],
-    "width": 608,
-    "height": 543,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "cybersecurity-and-identity-authentication",
-    "id": "recvw25tEzjpUx",
-    "bbox": [
-      196,
-      189,
-      803,
-      710
-    ],
-    "width": 608,
-    "height": 522,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "typescript-full-stack-development",
-    "id": "recvw25tEzzqwR",
-    "bbox": [
-      196,
-      196,
-      803,
-      704
-    ],
-    "width": 608,
-    "height": 509,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "edge-ai-embedded-machine-learning",
-    "id": "recvw25vjM9t27",
-    "bbox": [
-      196,
-      164,
-      803,
-      735
-    ],
-    "width": 608,
-    "height": 572,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "risc-v-processor-architecture",
-    "id": "recvw25utMYuhh",
-    "bbox": [
-      196,
-      205,
-      803,
-      694
-    ],
-    "width": 608,
-    "height": 490,
-    "dx": 0,
-    "dy": 0,
-    "passed": true
-  },
-  {
-    "code": "plsc 114",
-    "id": "C17-A001",
-    "bbox": [
-      241,
-      156,
-      758,
-      743
-    ],
-    "width": 518,
-    "height": 588,
+    "width": 494,
+    "height": 556,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
     "code": "8.01",
-    "id": "C07-A001",
-    "bbox": [
-      196,
-      168,
-      803,
-      732
+    "topic_ids": [
+      "C07-A001",
+      "C07-A005",
+      "C07-A006"
     ],
-    "width": 608,
-    "height": 565,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "econ 252",
-    "id": "C16-A001",
     "bbox": [
-      196,
+      226,
       172,
-      803,
-      728
+      773,
+      727
     ],
-    "width": 608,
-    "height": 557,
-    "dx": 0,
-    "dy": 0.5,
-    "passed": true
-  },
-  {
-    "code": "phil 176",
-    "id": "C18-A001",
-    "bbox": [
-      238,
-      156,
-      761,
-      743
-    ],
-    "width": 524,
-    "height": 588,
+    "width": 548,
+    "height": 556,
     "dx": 0,
     "dy": 0,
     "passed": true
   },
   {
-    "code": "amst 246",
-    "id": "C19-A001",
-    "bbox": [
-      200,
-      156,
-      800,
-      743
+    "code": "8.02",
+    "topic_ids": [
+      "C08-A001",
+      "C08-A006",
+      "C08-A012"
     ],
-    "width": 601,
-    "height": 588,
+    "bbox": [
+      233,
+      170,
+      766,
+      729
+    ],
+    "width": 534,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "5.12",
+    "topic_ids": [
+      "C09-A001",
+      "C09-A006",
+      "C09-A010"
+    ],
+    "bbox": [
+      243,
+      170,
+      756,
+      729
+    ],
+    "width": 514,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "7.013",
+    "topic_ids": [
+      "C10-A001",
+      "C10-A008",
+      "C10-A003"
+    ],
+    "bbox": [
+      231,
+      170,
+      769,
+      729
+    ],
+    "width": 539,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "9.01",
+    "topic_ids": [
+      "C11-A001",
+      "C11-A002",
+      "C11-A003"
+    ],
+    "bbox": [
+      209,
+      170,
+      791,
+      729
+    ],
+    "width": 583,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "9.00",
+    "topic_ids": [
+      "C12-A001",
+      "C12-A006",
+      "C12-A008"
+    ],
+    "bbox": [
+      235,
+      170,
+      766,
+      729
+    ],
+    "width": 532,
+    "height": 560,
+    "dx": 1,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "14.01",
+    "topic_ids": [
+      "C13-A001",
+      "C13-A006",
+      "C13-A010"
+    ],
+    "bbox": [
+      250,
+      170,
+      749,
+      729
+    ],
+    "width": 500,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "14.02",
+    "topic_ids": [
+      "C14-A002",
+      "C14-A003",
+      "C14-A006"
+    ],
+    "bbox": [
+      246,
+      172,
+      753,
+      727
+    ],
+    "width": 508,
+    "height": 556,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "econ 159",
+    "topic_ids": [
+      "C15-A003",
+      "C15-A006",
+      "C15-A011"
+    ],
+    "bbox": [
+      243,
+      170,
+      757,
+      729
+    ],
+    "width": 515,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "econ 252",
+    "topic_ids": [
+      "C16-A001",
+      "C16-A002",
+      "C16-A003"
+    ],
+    "bbox": [
+      217,
+      172,
+      782,
+      727
+    ],
+    "width": 566,
+    "height": 556,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "plsc 114",
+    "topic_ids": [
+      "C17-A001",
+      "C17-A004",
+      "C17-A009"
+    ],
+    "bbox": [
+      245,
+      170,
+      755,
+      729
+    ],
+    "width": 511,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "phil 176",
+    "topic_ids": [
+      "C18-A001",
+      "C18-A004",
+      "C18-A008"
+    ],
+    "bbox": [
+      224,
+      170,
+      776,
+      729
+    ],
+    "width": 553,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "amst 246",
+    "topic_ids": [
+      "C19-A002",
+      "C19-A003",
+      "C19-A007"
+    ],
+    "bbox": [
+      226,
+      170,
+      774,
+      729
+    ],
+    "width": 549,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "astr 160",
+    "topic_ids": [
+      "C20-A001",
+      "C20-A007",
+      "C20-A009"
+    ],
+    "bbox": [
+      228,
+      172,
+      771,
+      727
+    ],
+    "width": 544,
+    "height": 556,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "es-mcu",
+    "topic_ids": [
+      "C36-A001",
+      "C36-A002",
+      "C36-A003"
+    ],
+    "bbox": [
+      216,
+      160,
+      784,
+      740
+    ],
+    "width": 569,
+    "height": 581,
+    "dx": 0.5,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "es-rtos",
+    "topic_ids": [
+      "C37-A001",
+      "C37-A002",
+      "C37-A003"
+    ],
+    "bbox": [
+      230,
+      170,
+      769,
+      729
+    ],
+    "width": 540,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "de-dld",
+    "topic_ids": [
+      "C38-A001",
+      "C38-A002",
+      "C38-A003"
+    ],
+    "bbox": [
+      238,
+      160,
+      761,
+      740
+    ],
+    "width": 524,
+    "height": 581,
+    "dx": 0,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "de-fpga",
+    "topic_ids": [
+      "C39-A001",
+      "C39-A002",
+      "C39-A003"
+    ],
+    "bbox": [
+      235,
+      158,
+      765,
+      742
+    ],
+    "width": 531,
+    "height": 585,
+    "dx": 0.5,
+    "dy": 0.5,
+    "passed": true
+  },
+  {
+    "code": "ai-agent-systems",
+    "topic_ids": [
+      "recvw253eEvb3X",
+      "recvw254kdt8Gm",
+      "recvw255ufAgzt"
+    ],
+    "bbox": [
+      264,
+      172,
+      735,
+      727
+    ],
+    "width": 472,
+    "height": 556,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cloud-native-kubernetes",
+    "topic_ids": [
+      "recvw25sP7BJsk",
+      "recvw25sP7ks8S",
+      "recvw25sP7NFVs"
+    ],
+    "bbox": [
+      244,
+      170,
+      755,
+      729
+    ],
+    "width": 512,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "cybersecurity-and-identity-authentication",
+    "topic_ids": [
+      "recvw25tEzjpUx",
+      "recvw25tEzEbVA",
+      "recvw25tEzxx6p"
+    ],
+    "bbox": [
+      245,
+      170,
+      754,
+      729
+    ],
+    "width": 510,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "typescript-full-stack-development",
+    "topic_ids": [
+      "recvw25tEzzqwR",
+      "recvw25tEzxY66",
+      "recvw25tEzU93I"
+    ],
+    "bbox": [
+      240,
+      170,
+      760,
+      729
+    ],
+    "width": 521,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "edge-ai-embedded-machine-learning",
+    "topic_ids": [
+      "recvw25vjM9t27",
+      "recvw25vjMkk0g",
+      "recvw25vjMaM6A"
+    ],
+    "bbox": [
+      254,
+      170,
+      745,
+      729
+    ],
+    "width": 492,
+    "height": 560,
+    "dx": 0,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "risc-v-processor-architecture",
+    "topic_ids": [
+      "recvw25utMYuhh",
+      "recvw25utMYmGk",
+      "recvw25utMTyz5"
+    ],
+    "bbox": [
+      239,
+      170,
+      761,
+      729
+    ],
+    "width": 523,
+    "height": 560,
+    "dx": 0.5,
+    "dy": 0,
+    "passed": true
+  },
+  {
+    "code": "18.06",
+    "topic_ids": [
+      "C05-A009",
+      "C05-A005",
+      "C05-A012"
+    ],
+    "bbox": [
+      249,
+      170,
+      751,
+      729
+    ],
+    "width": 503,
+    "height": 560,
     "dx": 0.5,
     "dy": 0,
     "passed": true

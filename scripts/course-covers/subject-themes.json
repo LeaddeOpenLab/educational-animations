@@ -1,0 +1,427 @@
+{
+  "Computer Science": {
+    "source": "intro-computer-science/src/theme/themes/intro-computer-science.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#0e0d10",
+      "bg1": "#18181f",
+      "bg2": "#22222d",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#33bbee",
+      "accent": "#ee7733",
+      "result": "#009988",
+      "warn": "#cc3311",
+      "alt": "#bbbbbb"
+    },
+    "backdrop": {
+      "gridSize": 60,
+      "gridOpacity": 0.4,
+      "glowOpacity": 0.14,
+      "glowBlur": 44
+    }
+  },
+  "Artificial Intelligence": {
+    "source": "intro-machine-learning/src/theme/themes/intro-machine-learning.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#0072b2",
+      "accent": "#b87f00",
+      "result": "#009e73",
+      "warn": "#d55e00",
+      "alt": "#c0729d"
+    },
+    "backdrop": {
+      "gridSize": 56,
+      "gridOpacity": 0.85,
+      "glowOpacity": 0.06,
+      "glowBlur": 60
+    }
+  },
+  "Mathematics": {
+    "source": "single-variable-calculus/src/theme/themes/single-variable-calculus.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#4477aa",
+      "accent": "#228833",
+      "result": "#aa3377",
+      "warn": "#bb5566",
+      "alt": "#117733"
+    },
+    "backdrop": {
+      "gridSize": 52,
+      "gridOpacity": 0.88,
+      "glowOpacity": 0.06,
+      "glowBlur": 64
+    }
+  },
+  "Mathematics & Statistics": {
+    "source": "applied-probability/src/theme/themes/applied-probability.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#332288",
+      "accent": "#117733",
+      "result": "#aa4499",
+      "warn": "#882255",
+      "alt": "#cc6677"
+    },
+    "backdrop": {
+      "gridSize": 48,
+      "gridOpacity": 0.9,
+      "glowOpacity": 0.05,
+      "glowBlur": 70
+    }
+  },
+  "Physics": {
+    "source": "classical-mechanics/src/theme/themes/classical-mechanics.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#aa3377",
+      "accent": "#882255",
+      "result": "#117733",
+      "warn": "#bb5566",
+      "alt": "#4477aa"
+    },
+    "backdrop": {
+      "gridSize": 52,
+      "gridOpacity": 0.88,
+      "glowOpacity": 0.06,
+      "glowBlur": 64
+    }
+  },
+  "Chemistry": {
+    "source": "organic-chemistry-i/src/theme/themes/organic-chemistry-i.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#070b12",
+      "bg1": "#0d1626",
+      "bg2": "#142238",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "primary": "#60a5fa",
+      "accent": "#fbbf24",
+      "result": "#34d399",
+      "warn": "#f87171",
+      "textStrong": "#f8fafc",
+      "textMuted": "#94a3b8",
+      "textDim": "#94a3b8",
+      "alt": "#fbbf24"
+    },
+    "backdrop": {
+      "gridSize": 72,
+      "gridOpacity": 0.5,
+      "glowOpacity": 0.13,
+      "glowBlur": 40
+    }
+  },
+  "Life Sciences": {
+    "source": "introduction-to-biology/src/theme/themes/introduction-to-biology.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#0e0e0e",
+      "bg1": "#171b1c",
+      "bg2": "#212629",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#56b4e9",
+      "accent": "#e69f00",
+      "result": "#009e73",
+      "warn": "#d55e00",
+      "alt": "#cc79a7"
+    },
+    "backdrop": {
+      "gridSize": 64,
+      "gridOpacity": 0.42,
+      "glowOpacity": 0.12,
+      "glowBlur": 44
+    }
+  },
+  "Neuroscience": {
+    "source": "introduction-to-neuroscience/src/theme/themes/introduction-to-neuroscience.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#0e0e0e",
+      "bg1": "#171b1c",
+      "bg2": "#212629",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#cc79a7",
+      "accent": "#f0e442",
+      "result": "#56b4e9",
+      "warn": "#d55e00",
+      "alt": "#0072b2"
+    },
+    "backdrop": {
+      "gridSize": 64,
+      "gridOpacity": 0.42,
+      "glowOpacity": 0.12,
+      "glowBlur": 44
+    }
+  },
+  "Psychology": {
+    "source": "introduction-to-psychology/src/theme/themes/introduction-to-psychology.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#aa4499",
+      "accent": "#cc6677",
+      "result": "#332288",
+      "warn": "#882255",
+      "alt": "#117733"
+    },
+    "backdrop": {
+      "gridSize": 48,
+      "gridOpacity": 0.9,
+      "glowOpacity": 0.05,
+      "glowBlur": 70
+    }
+  },
+  "Economics": {
+    "source": "principles-of-microeconomics/src/theme/themes/principles-of-microeconomics.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#cc6677",
+      "accent": "#332288",
+      "result": "#117733",
+      "warn": "#882255",
+      "alt": "#aa4499"
+    },
+    "backdrop": {
+      "gridSize": 48,
+      "gridOpacity": 0.9,
+      "glowOpacity": 0.05,
+      "glowBlur": 70
+    }
+  },
+  "Finance": {
+    "source": "financial-markets/src/theme/themes/financial-markets.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#0e0e0e",
+      "bg1": "#181a1d",
+      "bg2": "#22252a",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#ef4444",
+      "accent": "#f59e0b",
+      "result": "#22c55e",
+      "warn": "#38bdf8",
+      "alt": "#a78bfa"
+    },
+    "backdrop": {
+      "gridSize": 68,
+      "gridOpacity": 0.34,
+      "glowOpacity": 0.12,
+      "glowBlur": 46
+    }
+  },
+  "Political Science": {
+    "source": "introduction-to-political-philosophy/src/theme/themes/introduction-to-political-philosophy.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#004488",
+      "accent": "#117733",
+      "result": "#882255",
+      "warn": "#bb5566",
+      "alt": "#332288"
+    },
+    "backdrop": {
+      "gridSize": 0,
+      "gridOpacity": 0,
+      "glowOpacity": 0.04,
+      "glowBlur": 80
+    }
+  },
+  "Philosophy": {
+    "source": "philosophy-of-death/src/theme/themes/philosophy-of-death.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#332288",
+      "accent": "#aa3377",
+      "result": "#004488",
+      "warn": "#bb5566",
+      "alt": "#117733"
+    },
+    "backdrop": {
+      "gridSize": 0,
+      "gridOpacity": 0,
+      "glowOpacity": 0.04,
+      "glowBlur": 80
+    }
+  },
+  "Literature": {
+    "source": "american-modernist-literature/src/theme/themes/american-modernist-literature.json",
+    "mode": "light",
+    "colors": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#882255",
+      "accent": "#aa3377",
+      "result": "#117733",
+      "warn": "#bb5566",
+      "alt": "#332288"
+    },
+    "backdrop": {
+      "gridSize": 0,
+      "gridOpacity": 0,
+      "glowOpacity": 0.04,
+      "glowBlur": 80
+    }
+  },
+  "Astronomy": {
+    "source": "frontiers-and-controversies-in-astrophysics/src/theme/themes/frontiers-and-controversies-in-astrophysics.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#0b0d0f",
+      "bg1": "#13191f",
+      "bg2": "#1c242c",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#828231",
+      "accent": "#d29343",
+      "result": "#fdac9e",
+      "warn": "#d55e00",
+      "alt": "#faccfa"
+    },
+    "backdrop": {
+      "gridSize": 50,
+      "gridOpacity": 0.4,
+      "glowOpacity": 0.12,
+      "glowBlur": 50
+    }
+  },
+  "Embedded Systems": {
+    "source": "microcontroller-fundamentals/src/theme/themes/microcontroller-fundamentals.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#070b12",
+      "bg1": "#0d1626",
+      "bg2": "#142238",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "primary": "#60a5fa",
+      "accent": "#fbbf24",
+      "result": "#34d399",
+      "warn": "#f87171",
+      "alt": "#c084fc",
+      "textStrong": "#f8fafc",
+      "textMuted": "#94a3b8",
+      "textDim": "#7a879b"
+    },
+    "backdrop": {
+      "gridSize": 72,
+      "gridOpacity": 0.5,
+      "glowOpacity": 0.13,
+      "glowBlur": 40
+    }
+  },
+  "Digital Electronics": {
+    "source": "digital-logic-design/src/theme/themes/digital-logic-design.json",
+    "mode": "dark",
+    "colors": {
+      "bg0": "#0e0d10",
+      "bg1": "#18181f",
+      "bg2": "#22222d",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#33bbee",
+      "accent": "#ee7733",
+      "result": "#009988",
+      "warn": "#cc3311",
+      "alt": "#bbbbbb"
+    },
+    "backdrop": {
+      "gridSize": 60,
+      "gridOpacity": 0.4,
+      "glowOpacity": 0.14,
+      "glowBlur": 44
+    }
+  }
+}

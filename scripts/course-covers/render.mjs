@@ -34,13 +34,13 @@ try {
     }
     const width=right-left+1,height=bottom-top+1,dx=(left+right+1)/2-500,dy=(top+bottom+1)/2-450;
     const passed=left>=178&&right<=822&&top>=138&&bottom<=762&&width>=280&&height>=280&&Math.abs(dx)<=20&&Math.abs(dy)<=30;
-    const check={code:row.code,id:row.id,bbox:[left,top,right,bottom],width,height,dx,dy,passed};
+    const check={code:row.code,topic_ids:row.topics.map(x=>x.id),bbox:[left,top,right,bottom],width,height,dx,dy,passed};
     const previous=checks.findIndex(x=>x.code===row.code);
     if(previous>=0)checks.splice(previous,1);
     checks.push(check);
     if(!passed)throw new Error(`Figure geometry: ${JSON.stringify(check)}`);
     await renderStill({serveUrl,composition:{id:'cover',width:1920,height:1080,fps:30,durationInFrames:1,props:inputProps},inputProps,output:path.join(root,row.output),imageFormat:'jpeg',jpegQuality:88,puppeteerInstance:browser,logLevel:'error'});
-    console.log(`Rendered ${row.code}: ${row.name}`);
+    console.log(`Rendered ${row.code}: ${row.course}`);
   }
 } finally {
   await browser.close({silent:true});
