@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none"><title>FPGA Fundamentals — Digital Electronics</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" fill="none"><title>Cybersecurity and Identity Authentication — Computer Science</title>
 <defs>
-  <radialGradient id="glow"><stop stop-color="#33BBEE" stop-opacity=".18"/><stop offset="1" stop-color="#33BBEE" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glow"><stop stop-color="#36C5F0" stop-opacity=".18"/><stop offset="1" stop-color="#36C5F0" stop-opacity="0"/></radialGradient>
   <linearGradient id="mask" x1="0" y1="0" x2="1" y2=".09"><stop stop-color="#07101F" stop-opacity=".94"/><stop offset=".4" stop-color="#07101F" stop-opacity=".84"/><stop offset=".62" stop-color="#07101F" stop-opacity=".3"/><stop offset=".78" stop-color="#07101F" stop-opacity="0"/></linearGradient>
   <pattern id="grid" width="72" height="72" patternUnits="userSpaceOnUse"><path d="M72 0H0V72" stroke="#93A4C5" stroke-opacity=".1"/></pattern>
 </defs>
@@ -8,12 +8,12 @@
 <ellipse cx="1492" cy="542" rx="640" ry="640" fill="url(#glow)"/>
 <rect width="1920" height="1080" fill="url(#grid)"/>
 <rect width="1920" height="1080" fill="url(#mask)"/>
-<g id="course-figure" opacity=".96" transform="translate(1108.00 166.00) scale(8)" stroke="#33BBEE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 62h16V32h20v30h20V32h16" stroke="#33BBEE" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="32" r="4" fill="#33BBEE"/><circle cx="48" cy="62" r="4" fill="#33BBEE"/><circle cx="68" cy="32" r="4" fill="#33BBEE"/></g>
+<g id="course-figure" opacity=".96" transform="translate(1204.00 233.00) scale(6)" stroke="#36C5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="21" width="64" height="43" rx="4" stroke="#36C5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M39 82h18M48 64v18" stroke="#36C5F0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></g>
 <g font-family="Arial, Helvetica, sans-serif">
-<text x="150" y="361.22" fill="#33BBEE" font-size="27" font-weight="700" letter-spacing="5.5">COURSE COLLECTION</text>
-<text x="150" y="491.50" fill="#F4F7FF" font-size="116" font-weight="800" letter-spacing="-1.4">FPGA</text><text x="150" y="616.78" fill="#F4F7FF" font-size="116" font-weight="800" letter-spacing="-1.4">Fundamentals</text>
-<rect x="150" y="681.78" width="196" height="7" rx="7" fill="#33BBEE"/>
-<text x="150" y="741.78" fill="#93A4C5" font-size="23" letter-spacing="2.4">DIGITAL ELECTRONICS · COURSE COLLECTION</text>
+<text x="150" y="360.14" fill="#36C5F0" font-size="27" font-weight="700" letter-spacing="5.5">COURSE COLLECTION</text>
+<text x="150" y="458.88" fill="#F4F7FF" font-size="78" font-weight="800" letter-spacing="-1.4">Cybersecurity and</text><text x="150" y="543.12" fill="#F4F7FF" font-size="78" font-weight="800" letter-spacing="-1.4">Identity</text><text x="150" y="627.36" fill="#F4F7FF" font-size="78" font-weight="800" letter-spacing="-1.4">Authentication</text>
+<rect x="150" y="682.86" width="196" height="7" rx="7" fill="#36C5F0"/>
+<text x="150" y="742.86" fill="#93A4C5" font-size="23" letter-spacing="2.4">COMPUTER SCIENCE · COURSE COLLECTION</text>
 </g>
 <svg x="1756" y="980" width="56" height="56" viewBox="0 0 120 120">
 <path d="M0 32C0 14.3269 14.3269 0 32 0H88C105.673 0 120 14.3269 120 32V88C120 105.673 105.673 120 88 120H32C14.3269 120 0 105.673 0 88V32Z" fill="url(#paint0_radial_3803_20895)"/>

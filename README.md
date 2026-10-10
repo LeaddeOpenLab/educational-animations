@@ -233,13 +233,13 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 </td>
 <td width="33%" valign="top">
 <a id="cloud-native-and-kubernetes"></a>
-<a href="catalog/computer-science/cloud-native-kubernetes.md"><img src="assets/course-covers/cloud-native-kubernetes.jpg" width="100%" alt="Cloud Native and Kubernetes"></a><br>
+<a href="catalog/computer-science/cloud-native-kubernetes.md"><img src="assets/course-covers/cloud-native-kubernetes.svg" width="100%" alt="Cloud Native and Kubernetes"></a><br>
 <a href="catalog/computer-science/cloud-native-kubernetes.md"><strong>Cloud Native and Kubernetes</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a id="cybersecurity-and-identity-authentication"></a>
-<a href="catalog/computer-science/cybersecurity-and-identity-authentication.md"><img src="assets/covers/computer-science/cybersecurity-and-identity-authentication/authentication-and-authorization-boundary.jpg" width="100%" alt="Cybersecurity and Identity Authentication"></a><br>
+<a href="catalog/computer-science/cybersecurity-and-identity-authentication.md"><img src="assets/course-covers/cybersecurity-and-identity-authentication.svg" width="100%" alt="Cybersecurity and Identity Authentication"></a><br>
 <a href="catalog/computer-science/cybersecurity-and-identity-authentication.md"><strong>Cybersecurity and Identity Authentication</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
@@ -247,7 +247,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <tr>
 <td width="33%" valign="top">
 <a id="typescript-full-stack-development"></a>
-<a href="catalog/computer-science/typescript-full-stack-development.md"><img src="assets/covers/computer-science/typescript-full-stack-development/typescript-type-inference-across-functions.jpg" width="100%" alt="TypeScript Full-Stack Development"></a><br>
+<a href="catalog/computer-science/typescript-full-stack-development.md"><img src="assets/course-covers/typescript-full-stack-development.svg" width="100%" alt="TypeScript Full-Stack Development"></a><br>
 <a href="catalog/computer-science/typescript-full-stack-development.md"><strong>TypeScript Full-Stack Development</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
@@ -308,7 +308,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <tr>
 <td width="33%" valign="top">
 <a id="ai-agent-systems"></a>
-<a href="catalog/artificial-intelligence/ai-agent-systems.md"><img src="assets/covers/artificial-intelligence/ai-agent-systems/agent-observe-plan-act-loop.jpg" width="100%" alt="AI Agent Systems"></a><br>
+<a href="catalog/artificial-intelligence/ai-agent-systems.md"><img src="assets/course-covers/ai-agent-systems.svg" width="100%" alt="AI Agent Systems"></a><br>
 <a href="catalog/artificial-intelligence/ai-agent-systems.md"><strong>AI Agent Systems</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
@@ -695,7 +695,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 </td>
 <td width="33%" valign="top">
 <a id="edge-ai-and-embedded-machine-learning"></a>
-<a href="catalog/digital-electronics/edge-ai-embedded-machine-learning.md"><img src="assets/covers/digital-electronics/edge-ai-embedded-machine-learning/edge-inference-pipeline-from-sensor-to-result.jpg" width="100%" alt="Edge AI and Embedded Machine Learning"></a><br>
+<a href="catalog/digital-electronics/edge-ai-embedded-machine-learning.md"><img src="assets/course-covers/edge-ai-embedded-machine-learning.svg" width="100%" alt="Edge AI and Embedded Machine Learning"></a><br>
 <a href="catalog/digital-electronics/edge-ai-embedded-machine-learning.md"><strong>Edge AI and Embedded Machine Learning</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
@@ -703,7 +703,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <tr>
 <td width="33%" valign="top">
 <a id="risc-v-processor-architecture"></a>
-<a href="catalog/digital-electronics/risc-v-processor-architecture.md"><img src="assets/covers/digital-electronics/risc-v-processor-architecture/risc-v-instruction-encoding-fields.jpg" width="100%" alt="RISC-V Processor Architecture"></a><br>
+<a href="catalog/digital-electronics/risc-v-processor-architecture.md"><img src="assets/course-covers/risc-v-processor-architecture.svg" width="100%" alt="RISC-V Processor Architecture"></a><br>
 <a href="catalog/digital-electronics/risc-v-processor-architecture.md"><strong>RISC-V Processor Architecture</strong></a><br>
 <sub>15 videos · 0 awaiting production</sub>
 </td>
