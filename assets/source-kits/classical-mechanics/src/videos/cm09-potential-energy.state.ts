@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const h=f<45?f/15:f<70?3:Math.max(0,3-(f-70)/7);const ref=f>=50?1:0;const m=2,g=10,U=m*g*(h-ref),deltaU=m*g*h,K=m*g*(3-h);return {h,ref,m,g,U,deltaU,K,bodyY:760-110*h,referenceY:760-110*ref};};

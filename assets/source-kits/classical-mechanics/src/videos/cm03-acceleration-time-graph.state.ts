@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const t=Math.max(0,Math.min(3,f/30));const a=t<1?1:t<2?0:-1;const deltaV=t<1?t:t<2?1:1-(t-2);const v=2+deltaV;const x=t<1?2*t+.5*t*t:t<2?2.5+3*(t-1):5.5+3*(t-2)-.5*(t-2)*(t-2);return {t,a,deltaV,v,x,cartX:900+120*x};};

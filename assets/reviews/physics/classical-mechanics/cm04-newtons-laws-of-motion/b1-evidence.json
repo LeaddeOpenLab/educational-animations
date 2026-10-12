@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "-r",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/register.cjs",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLlYxwrZ/assertions.cjs"
+  ],
+  "exit_code": 0,
+  "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.state.ts\");assert.equal(at(14).acceleration,0);assert.equal(at(15).acceleration,3);assert(at(50).bodyX>at(29).bodyX);assert(at(50).acceleration<at(30).acceleration);assert.equal(at(70).pair.onA,-at(70).pair.onB);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+  "result": "PASS: before/during/after, boundary states and visible parameters",
+  "source_check": {
+    "minimal_probe": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/probes/cm04-newtons-laws-of-motion.tsx",
+    "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.state.ts",
+    "visible_state_parameters": [
+      "acceleration",
+      "bodyX",
+      "netForce"
+    ],
+    "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+    "scope": [
+      "recvvJaLlYxwrZ"
+    ]
+  },
+  "checked_at": "2026-10-12T08:48:58.488958+00:00"
+}

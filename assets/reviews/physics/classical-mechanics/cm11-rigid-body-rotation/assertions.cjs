@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm11-rigid-body-rotation.state.ts");assert.equal(at(0).angle,0);assert(at(45).angle>0);assert.equal(at(45).vOuter,2*at(45).vInner);assert(at(75).omega>at(69).omega);assert(at(90).vOuter>at(45).vOuter);
+console.log("PASS: before/during/after, boundary states and visible parameters");

@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "-r",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/register.cjs",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLm6nN3h/assertions.cjs"
+  ],
+  "exit_code": 0,
+  "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm08-work-energy-theorem.state.ts\");assert.equal(at(0).work,0);assert(at(45).work>0);assert.equal(at(45).kinetic-at(45).initialK,at(45).work);assert.equal(at(69).opposing,0);assert(at(80).opposing>0);assert(at(90).kinetic<at(69).kinetic);assert.equal(at(90).kinetic-at(90).initialK,at(90).work);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+  "result": "PASS: before/during/after, boundary states and visible parameters",
+  "source_check": {
+    "minimal_probe": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/probes/cm08-work-energy-theorem.tsx",
+    "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm08-work-energy-theorem.state.ts",
+    "visible_state_parameters": [
+      "cartX",
+      "kinetic",
+      "work"
+    ],
+    "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+    "scope": [
+      "recvvJaLm6nN3h"
+    ]
+  },
+  "checked_at": "2026-10-12T08:32:25.821342+00:00"
+}

@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const r=2,theta=Math.max(0,f/30);const noSlipX=r*theta;const slip=f>=75?(f-75)/15:0;const centerX=900+90*(noSlipX+slip);const contactVelocity=slip>0?2:0;return {r,theta,noSlipX,slip,centerX,contactVelocity,spokeAngle:theta,contactX:centerX};};

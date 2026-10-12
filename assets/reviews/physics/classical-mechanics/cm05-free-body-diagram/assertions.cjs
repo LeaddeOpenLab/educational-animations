@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm05-free-body-diagram.state.ts");assert.equal(at(14).isolated,false);assert.equal(at(15).isolated,true);assert.equal(at(39).components,false);assert.equal(at(40).components,true);assert(Math.abs(at(50).gravityParallel-10)<1e-9);assert(at(70).netAlong<at(69).netAlong);
+console.log("PASS: before/during/after, boundary states and visible parameters");

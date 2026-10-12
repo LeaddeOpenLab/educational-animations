@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "-r",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/register.cjs",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLm42ygG/assertions.cjs"
+  ],
+  "exit_code": 0,
+  "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm07-collision-process.state.ts\");assert.equal(at(14).contact,false);assert.equal(at(15).contact,true);assert(at(45).progress>0&&at(45).progress<1);assert.equal(at(55).contact,false);assert.equal(at(55).elastic.kNow,4.5);assert(at(35).elastic.kNow<at(35).elastic.kBefore);assert.equal(at(35).elastic.kNow+at(35).elastic.stored,4.5);assert.equal(at(70).elastic.kNow,at(70).elastic.kBefore);assert.equal(at(60).choice,\"inelastic\");assert(at(67).sticky.kNow<at(60).sticky.kNow);assert.equal(at(75).sticky.kNow,at(75).sticky.kAfter);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+  "result": "PASS: before/during/after, boundary states and visible parameters",
+  "source_check": {
+    "minimal_probe": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/probes/cm07-collision-process.tsx",
+    "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm07-collision-process.state.ts",
+    "visible_state_parameters": [
+      "choice",
+      "elastic",
+      "separation",
+      "sticky"
+    ],
+    "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+    "scope": [
+      "recvvJaLm42ygG"
+    ]
+  },
+  "checked_at": "2026-10-12T08:48:58.488958+00:00"
+}

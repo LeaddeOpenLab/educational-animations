@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const torque=f<30?2:0;const L=f<30?2+2*f/30:4;const r=f<55?1:1+(f-55)/35;const mass=1,I=2*mass*r*r,omega=L/I;return {torque,L,r,mass,I,omega,massRadiusPx:90*r,angle:f*omega/30};};

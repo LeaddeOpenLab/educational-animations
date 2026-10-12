@@ -1,0 +1,25 @@
+{
+  "command": [
+    "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "-r",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/register.cjs",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLmfN39b/assertions.cjs"
+  ],
+  "exit_code": 0,
+  "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm12-angular-momentum.state.ts\");assert(at(20).L>at(0).L);assert.equal(at(29).torque,2);assert.equal(at(30).torque,0);assert.equal(at(54).I,2);assert(at(80).I>at(54).I);assert(at(80).omega<at(54).omega);assert.equal(at(80).I*at(80).omega,at(54).L);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+  "result": "PASS: before/during/after, boundary states and visible parameters",
+  "source_check": {
+    "minimal_probe": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/probes/cm12-angular-momentum.tsx",
+    "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm12-angular-momentum.state.ts",
+    "visible_state_parameters": [
+      "I",
+      "massRadiusPx",
+      "omega"
+    ],
+    "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+    "scope": [
+      "recvvJaLmfN39b"
+    ]
+  },
+  "checked_at": "2026-10-12T08:32:25.821342+00:00"
+}

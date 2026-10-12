@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const theta=Math.PI/6,m=2,g=10,mg=m*g;const gravityParallel=mg*Math.sin(theta),gravityNormal=mg*Math.cos(theta);const isolated=f>=15,components=f>=40,friction=f>=70?4:0;return {theta,m,g,mg,gravityParallel,gravityNormal,isolated,components,friction,netAlong:gravityParallel-friction};};

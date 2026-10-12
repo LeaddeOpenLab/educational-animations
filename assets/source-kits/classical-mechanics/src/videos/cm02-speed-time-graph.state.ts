@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const t=Math.max(0,Math.min(3,f/30));const speed=t<1?4*t:t<2?4:4*(3-t);const distance=t<1?2*t*t:t<2?2+4*(t-1):6+4*(t-2)-2*(t-2)*(t-2);return {t,speed,distance,cartX:920+90*distance,areaWidth:Math.max(0,t)*170};};

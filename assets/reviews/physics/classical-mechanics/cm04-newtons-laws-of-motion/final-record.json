@@ -1,0 +1,451 @@
+{
+  "id": "C07-A004",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Newton's Laws of Motion: Force and Acceleration",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm04-newtons-laws-of-motion.mp4",
+  "tags": [
+    "C07-A004",
+    "8.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Newton's Laws of Motion. Show the actual mechanism, not just its result: 0–5s force arrows cancel and cart keeps constant velocity; 5–13s cart shifts right as the net-force arrow appears and acceleration readout becomes positive; 13–19s mass label changes from 2 to 4 kg under the same 6 N push; 19–24s equal and opposite force arrows appear on two separate visible bodies; 24–27s the force arrows remain attached to A and B respectively; 27–30s hold the two-body force pair and its equality. Conclude that Net force determines acceleration; interaction forces are equal and opposite on different objects. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Newton's laws of motion",
+  "standard_name": "Newton's Laws of Motion",
+  "aliases": [],
+  "final_title": "Newton's Laws of Motion: Force and Acceleration",
+  "learning_objective": "Connect net force to acceleration and distinguish action–reaction forces on different bodies.",
+  "core_conclusion": "Net force determines acceleration; interaction forces are equal and opposite on different objects.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law",
+      "scope": "Connect net force to acceleration and distinguish action–reaction forces on different bodies."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v5",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Newton's laws of motion” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Newton's laws of motion”. Dynamically demonstrate the core formula or conclusion: Newton's second law is $\\sum F=ma$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF7EE); main visual (#145A56); secondary visual (#8F2B2B); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.tsx",
+    "scenes": [
+      {
+        "id": "balanced",
+        "objects": [
+          "cart",
+          "opposing forces"
+        ],
+        "initial_state": "equal opposing forces on one cart",
+        "trigger": "release cart",
+        "change": "force arrows cancel and cart keeps constant velocity",
+        "cause": "release cart",
+        "result": "ΣF=0 and acceleration readout remains zero",
+        "screen_copy": "Balanced forces: no acceleration",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "unbalanced",
+        "objects": [
+          "cart",
+          "two unequal force arrows",
+          "motion ticks"
+        ],
+        "initial_state": "same cart and equal forces",
+        "trigger": "increase rightward push",
+        "change": "cart shifts right as the net-force arrow appears and acceleration readout becomes positive",
+        "cause": "increase rightward push",
+        "result": "A six-newton net push produces 3 m/s² for the two-kilogram cart",
+        "screen_copy": "Net force changes motion",
+        "start_seconds": 5,
+        "end_seconds": 13,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "mass",
+        "objects": [
+          "heavy cart",
+          "light cart",
+          "same applied force"
+        ],
+        "initial_state": "two carts share initial velocity",
+        "trigger": "apply equal pushes",
+        "change": "mass label changes from 2 to 4 kg under the same 6 N push",
+        "cause": "apply equal pushes",
+        "result": "acceleration falls from 3 to 1.5 m/s²",
+        "screen_copy": "a = F/m",
+        "start_seconds": 13,
+        "end_seconds": 19,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "interaction",
+        "objects": [
+          "two carts",
+          "paired contact arrows"
+        ],
+        "initial_state": "carts touch",
+        "trigger": "one pushes the other",
+        "change": "equal and opposite force arrows appear on two separate visible bodies",
+        "cause": "one pushes the other",
+        "result": "the third-law pair acts on different bodies",
+        "screen_copy": "Third-law pair: different bodies",
+        "start_seconds": 19,
+        "end_seconds": 24,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "different-bodies",
+        "objects": [
+          "cart A force diagram",
+          "cart B force diagram"
+        ],
+        "initial_state": "paired contact forces visible",
+        "trigger": "separate the two body diagrams",
+        "change": "the force arrows remain attached to A and B respectively",
+        "cause": "separate the two body diagrams",
+        "result": "the two arrows do not cancel as forces on one body",
+        "screen_copy": "Third-law forces belong to different bodies",
+        "start_seconds": 24,
+        "end_seconds": 27,
+        "reading_seconds": 1.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "close",
+        "objects": [
+          "force balance",
+          "acceleration"
+        ],
+        "initial_state": "four states visible",
+        "trigger": "compare",
+        "change": "hold the two-body force pair and its equality",
+        "cause": "compare",
+        "result": "F(A on B) = −F(B on A)",
+        "screen_copy": "Sum forces per body",
+        "start_seconds": 27,
+        "end_seconds": 30,
+        "reading_seconds": 1.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Six states separate balanced and unbalanced motion, mass comparison, contact event and the cross-body third-law comparison.",
+    "l3_interface": {
+      "primitives": [
+        "FreeBody",
+        "Force"
+      ],
+      "state_parameters": "mass, perBodyForces, netForce, acceleration, position",
+      "review_misconception": "Action–reaction arrows belong on separate bodies and must not cancel on one diagram."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.state.ts",
+      "bindings": [
+        "mass",
+        "perBodyForces",
+        "netForce",
+        "acceleration",
+        "position"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "mass",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "acceleration readouts scale inversely with mass"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 19.333333333333332,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm04-newtons-laws-of-motion.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLlYxwrZ/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLlYxwrZ"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "The force diagram occupies a tiny central patch; balanced scene has no opposing arrows, and the third-law scene lacks a second visible body.",
+        "affected_ids": [
+          "C07-A004"
+        ],
+        "status": "resolved",
+        "fix": "Opposing 3 N arrows yield zero acceleration, then a 6 N net push yields 3.0 m/s²; changing mass 2 to 4 kg halves the shown acceleration. The final two-body view holds equal opposite arrows on separate boxes without overlap.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:48:58.488958+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.state.ts\");assert.equal(at(14).acceleration,0);assert.equal(at(15).acceleration,3);assert(at(50).bodyX>at(29).bodyX);assert(at(50).acceleration<at(30).acceleration);assert.equal(at(70).pair.onA,-at(70).pair.onB);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm04-newtons-laws-of-motion.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.state.ts",
+        "visible_state_parameters": [
+          "acceleration",
+          "bodyX",
+          "netForce"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLlYxwrZ"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLlYxwrZ"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v5",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v5",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v5",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/samples.json"
+      ],
+      "observation": "Opposing 3 N arrows yield zero acceleration, then a 6 N net push yields 3.0 m/s²; changing mass 2 to 4 kg halves the shown acceleration. The final two-body view holds equal opposite arrows on separate boxes without overlap.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            18.333333333333332,
+            19.333333333333332,
+            20.333333333333332
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/risk-sheet.jpg"
+          ],
+          "observation": "Opposing 3 N arrows yield zero acceleration, then a 6 N net push yields 3.0 m/s²; changing mass 2 to 4 kg halves the shown acceleration. The final two-body view holds equal opposite arrows on separate boxes without overlap."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "Opposing 3 N arrows yield zero acceleration, then a 6 N net push yields 3.0 m/s²; changing mass 2 to 4 kg halves the shown acceleration. The final two-body view holds equal opposite arrows on separate boxes without overlap."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "Opposing 3 N arrows yield zero acceleration, then a 6 N net push yields 3.0 m/s²; changing mass 2 to 4 kg halves the shown acceleration. The final two-body view holds equal opposite arrows on separate boxes without overlap."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "Opposing 3 N arrows yield zero acceleration, then a 6 N net push yields 3.0 m/s²; changing mass 2 to 4 kg halves the shown acceleration. The final two-body view holds equal opposite arrows on separate boxes without overlap."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm04-newtons-laws-of-motion.md",
+      "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v5",
+      "record_id": "recvvJaLlYxwrZ",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v5",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/46902ddf-0f0c-4621-87b4-3bd0581b748a",
+        "comment_id": 6121041745,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121041745",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v5",
+        "video_bytes": 2303213,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/46902ddf-0f0c-4621-87b4-3bd0581b748a",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLlYxwrZ",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Newton's Laws of Motion: Force and Acceleration",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Newton's laws of motion",
+    "standard_name": "Newton's Laws of Motion",
+    "scope": "Connect net force to acceleration and distinguish action–reaction forces on different bodies.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/5-3-newtons-second-law",
+        "scope": "Connect net force to acceleration and distinguish action–reaction forces on different bodies."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v5",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm04-newtons-laws-of-motion.jpg",
+      "assets/reviews/physics/classical-mechanics/cm04-newtons-laws-of-motion/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLlYxwrZ",
+      "slug": "cm04-newtons-laws-of-motion",
+      "bbox": [
+        240,
+        298,
+        764,
+        612
+      ],
+      "width": 524,
+      "height": 314,
+      "dx": 2.0,
+      "dy": 5.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm04-newtons-laws-of-motion.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm04-newtons-laws-of-motion.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm04-newtons-laws-of-motion.jpg",
+  "cover_version": "classical-mechanics-20261012-v5",
+  "feishu": {
+    "record_id": "recvvJaLlYxwrZ",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/46902ddf-0f0c-4621-87b4-3bd0581b748a",
+  "player_version": "classical-mechanics-20261012-v5"
+}

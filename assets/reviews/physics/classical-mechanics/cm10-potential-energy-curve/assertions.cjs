@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm10-potential-energy-curve.state.ts");assert.equal(at(20).x,2);assert(at(45).K>0);assert(at(74).K>0);assert.equal(at(75).K,0);assert(at(90).x<at(75).x);assert.equal(at(75).rightTurn,3);
+console.log("PASS: before/during/after, boundary states and visible parameters");

@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.state.ts");assert.equal(at(0).centerX,900);assert(at(45).centerX>at(0).centerX);assert.equal(at(74).contactVelocity,0);assert.equal(at(75).contactVelocity,0);assert(at(90).contactVelocity>0);assert(at(90).centerX>900+90*at(90).noSlipX);
+console.log("PASS: before/during/after, boundary states and visible parameters");

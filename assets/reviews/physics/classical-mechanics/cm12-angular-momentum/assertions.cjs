@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm12-angular-momentum.state.ts");assert(at(20).L>at(0).L);assert.equal(at(29).torque,2);assert.equal(at(30).torque,0);assert.equal(at(54).I,2);assert(at(80).I>at(54).I);assert(at(80).omega<at(54).omega);assert.equal(at(80).I*at(80).omega,at(54).L);
+console.log("PASS: before/during/after, boundary states and visible parameters");

@@ -1,0 +1,420 @@
+{
+  "id": "C07-A002",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Speed-Time Graph: Area Gives Distance",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm02-speed-time-graph.mp4",
+  "tags": [
+    "C07-A002",
+    "8.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Speed–Time Graph. Show the actual mechanism, not just its result: 0–5s speed curve rises from zero and cart tick spacing grows; 5–13s slope marker shows positive change of speed; 13–20s curve flattens while area and cart distance keep growing; 20–30s speed curve falls to zero, cart slows, shaded area still increases Then compare: hold nonnegative shaded area and total path. Conclude that The area under speed versus time is distance traveled; a falling speed graph shows slowing, not backward motion. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Speed-time graph",
+  "standard_name": "Speed–Time Graph",
+  "aliases": [],
+  "final_title": "Speed-Time Graph: Area Gives Distance",
+  "learning_objective": "Read speed changes and calculate distance traveled from the nonnegative area under a speed–time graph.",
+  "core_conclusion": "The area under speed versus time is distance traveled; a falling speed graph shows slowing, not backward motion.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/3-2-instantaneous-velocity-and-speed",
+      "scope": "Read speed changes and calculate distance traveled from the nonnegative area under a speed–time graph."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v4",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Speed-time graph” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Speed-time graph”. Dynamically demonstrate the core formula or conclusion: The area under a velocity-time graph is displacement..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm02-speed-time-graph.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "cart",
+          "speed–time axes"
+        ],
+        "initial_state": "cart starts at rest",
+        "trigger": "accelerate forward",
+        "change": "speed curve rises from zero and cart tick spacing grows",
+        "cause": "accelerate forward",
+        "result": "speed remains nonnegative",
+        "screen_copy": "Speed is a magnitude",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "accelerate",
+        "objects": [
+          "rising speed curve",
+          "cart",
+          "slope marker"
+        ],
+        "initial_state": "speed positive and increasing",
+        "trigger": "move time probe through rising segment",
+        "change": "slope marker shows positive change of speed",
+        "cause": "move time probe through rising segment",
+        "result": "cart covers more distance each second",
+        "screen_copy": "Steeper graph: speeding up",
+        "start_seconds": 5,
+        "end_seconds": 13,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "cruise",
+        "objects": [
+          "flat speed segment",
+          "cart",
+          "distance area"
+        ],
+        "initial_state": "cart at cruise speed",
+        "trigger": "hold speed constant",
+        "change": "curve flattens while area and cart distance keep growing",
+        "cause": "hold speed constant",
+        "result": "zero slope does not mean zero distance",
+        "screen_copy": "Flat speed still covers distance",
+        "start_seconds": 13,
+        "end_seconds": 20,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "brake",
+        "objects": [
+          "falling speed curve",
+          "cart",
+          "accumulated area",
+          "distance counter",
+          "full shaded area"
+        ],
+        "initial_state": "cart still moving forward",
+        "trigger": "brake to rest",
+        "change": "speed curve falls to zero, cart slows, shaded area still increases Then compare: hold nonnegative shaded area and total path",
+        "cause": "brake to rest",
+        "result": "cart never reverses and final area equals path length distance equals the accumulated area",
+        "screen_copy": "Area = ∫speed dt; Slope changes speed; area gives distance",
+        "start_seconds": 20,
+        "end_seconds": 30,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Four states follow speed-up, cruise and braking; a separate conclusion would repeat the final accumulated-area picture.",
+    "l3_interface": {
+      "primitives": [
+        "Axes",
+        "Curve",
+        "AreaShade"
+      ],
+      "state_parameters": "speed(t)>=0, distance(t)=integral(speed), cartX",
+      "review_misconception": "Speed cannot be negative; a falling curve does not indicate reverse travel."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm02-speed-time-graph.state.ts",
+      "bindings": [
+        "speed(t)>=0",
+        "distance(t)=integral(speed)",
+        "cartX"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "cruise",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "zero slope does not mean zero distance"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 21.666666666666668,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm02-speed-time-graph.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLlTj2kp/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLlTj2kp"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "AreaShade shows 2.53 m while the distance readout shows 2.67 m; both must derive from the same visible integration state.",
+        "affected_ids": [
+          "C07-A002"
+        ],
+        "status": "resolved",
+        "fix": "The nonnegative speed trace and shaded area advance together; at 11.67 s both area and distance read 2.67 m. During braking the cart still moves and the accumulated distance increases from 6.26 to 6.92 m.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm02-speed-time-graph.state.ts\");assert.equal(at(0).speed,0);assert(at(30).speed>0);assert.equal(at(45).speed,at(60).speed);assert(at(80).speed<at(60).speed);assert.equal(at(90).speed,0);assert(at(90).distance>at(60).distance);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm02-speed-time-graph.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm02-speed-time-graph.state.ts",
+        "visible_state_parameters": [
+          "areaWidth",
+          "cartX",
+          "distance",
+          "speed"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLlTj2kp"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLlTj2kp"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm02-speed-time-graph.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v4",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v4",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v4",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/samples.json"
+      ],
+      "observation": "The nonnegative speed trace and shaded area advance together; at 11.67 s both area and distance read 2.67 m. During braking the cart still moves and the accumulated distance increases from 6.26 to 6.92 m.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            20.666666666666668,
+            21.666666666666668,
+            22.666666666666668
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/risk-sheet.jpg"
+          ],
+          "observation": "The nonnegative speed trace and shaded area advance together; at 11.67 s both area and distance read 2.67 m. During braking the cart still moves and the accumulated distance increases from 6.26 to 6.92 m."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "The nonnegative speed trace and shaded area advance together; at 11.67 s both area and distance read 2.67 m. During braking the cart still moves and the accumulated distance increases from 6.26 to 6.92 m."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "The nonnegative speed trace and shaded area advance together; at 11.67 s both area and distance read 2.67 m. During braking the cart still moves and the accumulated distance increases from 6.26 to 6.92 m."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "The nonnegative speed trace and shaded area advance together; at 11.67 s both area and distance read 2.67 m. During braking the cart still moves and the accumulated distance increases from 6.26 to 6.92 m."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm02-speed-time-graph.md",
+      "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v4",
+      "record_id": "recvvJaLlTj2kp",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v4",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/af7a1404-3ce5-4e54-9114-e33c4e8de0c6",
+        "comment_id": 6121039306,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121039306",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v4",
+        "video_bytes": 2084661,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/af7a1404-3ce5-4e54-9114-e33c4e8de0c6",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLlTj2kp",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Speed-Time Graph: Area Gives Distance",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Speed-time graph",
+    "standard_name": "Speed–Time Graph",
+    "scope": "Read speed changes and calculate distance traveled from the nonnegative area under a speed–time graph.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/3-2-instantaneous-velocity-and-speed",
+        "scope": "Read speed changes and calculate distance traveled from the nonnegative area under a speed–time graph."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v4",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm02-speed-time-graph.jpg",
+      "assets/reviews/physics/classical-mechanics/cm02-speed-time-graph/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLlTj2kp",
+      "slug": "cm02-speed-time-graph",
+      "bbox": [
+        222,
+        146,
+        785,
+        714
+      ],
+      "width": 563,
+      "height": 568,
+      "dx": 3.5,
+      "dy": -20.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm02-speed-time-graph.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm02-speed-time-graph.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm02-speed-time-graph.jpg",
+  "cover_version": "classical-mechanics-20261012-v4",
+  "feishu": {
+    "record_id": "recvvJaLlTj2kp",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/af7a1404-3ce5-4e54-9114-e33c4e8de0c6",
+  "player_version": "classical-mechanics-20261012-v4"
+}

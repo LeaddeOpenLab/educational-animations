@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const t=Math.max(0,f/30),omega=f<70?1:1+(f-70)/20;const angle=t*omega,rInner=1,rOuter=2;return {t,omega,angle,rInner,rOuter,vInner:rInner*omega,vOuter:rOuter*omega,innerX:1200+90*Math.cos(angle),outerX:1200+180*Math.cos(angle)};};

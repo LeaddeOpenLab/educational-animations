@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm02-speed-time-graph.state.ts");assert.equal(at(0).speed,0);assert(at(30).speed>0);assert.equal(at(45).speed,at(60).speed);assert(at(80).speed<at(60).speed);assert.equal(at(90).speed,0);assert(at(90).distance>at(60).distance);
+console.log("PASS: before/during/after, boundary states and visible parameters");

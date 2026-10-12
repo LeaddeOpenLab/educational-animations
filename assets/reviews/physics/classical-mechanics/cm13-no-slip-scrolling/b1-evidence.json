@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+    "-r",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/register.cjs",
+    "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLmhOCHD/assertions.cjs"
+  ],
+  "exit_code": 0,
+  "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.state.ts\");assert.equal(at(0).centerX,900);assert(at(45).centerX>at(0).centerX);assert.equal(at(74).contactVelocity,0);assert.equal(at(75).contactVelocity,0);assert(at(90).contactVelocity>0);assert(at(90).centerX>900+90*at(90).noSlipX);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+  "result": "PASS: before/during/after, boundary states and visible parameters",
+  "source_check": {
+    "minimal_probe": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/probes/cm13-no-slip-scrolling.tsx",
+    "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.state.ts",
+    "visible_state_parameters": [
+      "centerX",
+      "contactVelocity",
+      "noSlipX",
+      "spokeAngle"
+    ],
+    "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+    "scope": [
+      "recvvJaLmhOCHD"
+    ]
+  },
+  "checked_at": "2026-10-12T08:32:25.821342+00:00"
+}

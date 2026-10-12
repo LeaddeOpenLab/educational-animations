@@ -1,0 +1,419 @@
+{
+  "id": "C07-A008",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Work-Energy Theorem: Positive and Negative Work",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm08-work-energy-theorem.mp4",
+  "tags": [
+    "C07-A008",
+    "8.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Work–Energy Theorem. Show the actual mechanism, not just its result: 0–5s cart and displacement marker start moving; 5–14s area under F(x) fills and cart speeds up; 14–22s K bar grows as speed readout changes; 22–30s negative area appears and cart slows Then compare: align values. Conclude that Net work is the change in kinetic energy, including for variable force. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Work-Energy Theorem",
+  "standard_name": "Work–Energy Theorem",
+  "aliases": [],
+  "final_title": "Work-Energy Theorem: Positive and Negative Work",
+  "learning_objective": "Connect force along displacement to accumulated work and kinetic-energy change.",
+  "core_conclusion": "Net work is the change in kinetic energy, including for variable force.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/7-3-work-energy-theorem",
+      "scope": "Connect force along displacement to accumulated work and kinetic-energy change."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v4",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Work-Energy Theorem” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Work-Energy Theorem”. Dynamically demonstrate the core formula or conclusion: The work-energy theorem is $W_{net}=\\Delta K$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF4F1); main visual (#1E4F4C); secondary visual (#8E2B4E); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm08-work-energy-theorem.tsx",
+    "scenes": [
+      {
+        "id": "force-and-path",
+        "objects": [
+          "cart",
+          "applied force",
+          "x markers"
+        ],
+        "initial_state": "cart moving with known initial speed",
+        "trigger": "apply force along path",
+        "change": "cart and displacement marker start moving",
+        "cause": "apply force along path",
+        "result": "force component parallel to path is visible",
+        "screen_copy": "Work needs displacement",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "work-area",
+        "objects": [
+          "F(x) graph",
+          "swept area",
+          "cart"
+        ],
+        "initial_state": "work counter zero",
+        "trigger": "advance through varying force",
+        "change": "area under F(x) fills and cart speeds up",
+        "cause": "advance through varying force",
+        "result": "work counter is integral of force over displacement",
+        "screen_copy": "W = ∫F dx",
+        "start_seconds": 5,
+        "end_seconds": 14,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "energy",
+        "objects": [
+          "speed readout",
+          "kinetic-energy bar"
+        ],
+        "initial_state": "initial K shown",
+        "trigger": "continue sweep",
+        "change": "K bar grows as speed readout changes",
+        "cause": "continue sweep",
+        "result": "K_final − K_initial equals accumulated work",
+        "screen_copy": "W_net = ΔK",
+        "start_seconds": 14,
+        "end_seconds": 22,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "opposing-force",
+        "objects": [
+          "opposite force",
+          "negative area",
+          "cart",
+          "work and ΔK"
+        ],
+        "initial_state": "cart moving",
+        "trigger": "reverse force direction",
+        "change": "negative area appears and cart slows Then compare: align values",
+        "cause": "reverse force direction",
+        "result": "kinetic energy drops with negative net work same numerical result from area and speed",
+        "screen_copy": "Negative work removes kinetic energy; Force over distance changes K",
+        "start_seconds": 22,
+        "end_seconds": 30,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Four states show applied force, swept work area, speed/energy change and opposing work; the equality is checked within the last state.",
+    "l3_interface": {
+      "primitives": [
+        "Force",
+        "AreaShade"
+      ],
+      "state_parameters": "F(x), displacement, accumulatedWork, mass, speed",
+      "review_misconception": "Area uses force against displacement, not force against time."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm08-work-energy-theorem.state.ts",
+      "bindings": [
+        "F(x)",
+        "displacement",
+        "accumulatedWork",
+        "mass",
+        "speed"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "energy",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "K_final − K_initial equals accumulated work"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 25.0,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm08-work-energy-theorem.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLm6nN3h/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLm6nN3h"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "The negative-work scene still sweeps positive force area and the shown kinetic energy keeps rising; the claimed decrease is not performed.",
+        "affected_ids": [
+          "C07-A008"
+        ],
+        "status": "resolved",
+        "fix": "The positive F(x) area increases work and kinetic energy; in the final negative-force segment a shaded region appears below zero while W and K both fall between 24 and 26 s, and W equals ΔK in the readout.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm08-work-energy-theorem.state.ts\");assert.equal(at(0).work,0);assert(at(45).work>0);assert.equal(at(45).kinetic-at(45).initialK,at(45).work);assert.equal(at(69).opposing,0);assert(at(80).opposing>0);assert(at(90).kinetic<at(69).kinetic);assert.equal(at(90).kinetic-at(90).initialK,at(90).work);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm08-work-energy-theorem.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm08-work-energy-theorem.state.ts",
+        "visible_state_parameters": [
+          "cartX",
+          "kinetic",
+          "work"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLm6nN3h"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLm6nN3h"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm08-work-energy-theorem.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v4",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v4",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v4",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/samples.json"
+      ],
+      "observation": "The positive F(x) area increases work and kinetic energy; in the final negative-force segment a shaded region appears below zero while W and K both fall between 24 and 26 s, and W equals ΔK in the readout.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            24.0,
+            25.0,
+            26.0
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/risk-sheet.jpg"
+          ],
+          "observation": "The positive F(x) area increases work and kinetic energy; in the final negative-force segment a shaded region appears below zero while W and K both fall between 24 and 26 s, and W equals ΔK in the readout."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "The positive F(x) area increases work and kinetic energy; in the final negative-force segment a shaded region appears below zero while W and K both fall between 24 and 26 s, and W equals ΔK in the readout."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "The positive F(x) area increases work and kinetic energy; in the final negative-force segment a shaded region appears below zero while W and K both fall between 24 and 26 s, and W equals ΔK in the readout."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "The positive F(x) area increases work and kinetic energy; in the final negative-force segment a shaded region appears below zero while W and K both fall between 24 and 26 s, and W equals ΔK in the readout."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm08-work-energy-theorem.md",
+      "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v4",
+      "record_id": "recvvJaLm6nN3h",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v4",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/ea191bf3-7c91-49c5-9320-a6a7de623d50",
+        "comment_id": 6121047248,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121047248",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v4",
+        "video_bytes": 2081921,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/ea191bf3-7c91-49c5-9320-a6a7de623d50",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLm6nN3h",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Work-Energy Theorem: Positive and Negative Work",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Work-Energy Theorem",
+    "standard_name": "Work–Energy Theorem",
+    "scope": "Connect force along displacement to accumulated work and kinetic-energy change.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/7-3-work-energy-theorem",
+        "scope": "Connect force along displacement to accumulated work and kinetic-energy change."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v4",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm08-work-energy-theorem.jpg",
+      "assets/reviews/physics/classical-mechanics/cm08-work-energy-theorem/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLm6nN3h",
+      "slug": "cm08-work-energy-theorem",
+      "bbox": [
+        214,
+        150,
+        785,
+        714
+      ],
+      "width": 571,
+      "height": 564,
+      "dx": -0.5,
+      "dy": -18.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm08-work-energy-theorem.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm08-work-energy-theorem.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm08-work-energy-theorem.jpg",
+  "cover_version": "classical-mechanics-20261012-v4",
+  "feishu": {
+    "record_id": "recvvJaLm6nN3h",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/ea191bf3-7c91-49c5-9320-a6a7de623d50",
+  "player_version": "classical-mechanics-20261012-v4"
+}

@@ -1,0 +1,337 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "classical-mechanics",
+    "label": "Classical Mechanics",
+    "subject": "Physics",
+    "outputDir": "Physics/Classical Mechanics"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "classical-mechanics",
+    "file": "src/theme/themes/classical-mechanics.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#ffffff",
+      "bg1": "#f6f8fb",
+      "bg2": "#eaeff6",
+      "grid": "rgba(15,23,42,0.10)",
+      "axis": "rgba(15,23,42,0.42)",
+      "textStrong": "#0b1220",
+      "textMuted": "#475569",
+      "textDim": "#5a6675",
+      "primary": "#aa3377",
+      "accent": "#882255",
+      "result": "#117733",
+      "warn": "#bb5566",
+      "alt": "#4477aa"
+    },
+    "bg1": "#f6f8fb",
+    "contrast": {
+      "primary": 5.72,
+      "accent": 8.2,
+      "result": 5.32,
+      "warn": 4.29,
+      "alt": 4.42
+    }
+  },
+  "primitives": [
+    {
+      "name": "Kicker",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Heading",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Caption",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Lines",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Hi",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Arrow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Block",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Verdict",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Chip",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Rule",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Flow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Axes",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "sampleFn",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "rectPts",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "shifted",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Curve",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Stems",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Impulse",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Band",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "VLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "HLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Dot",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "PoleMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "ZeroMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Tag",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Formula",
+      "file": "src/components/Formula.tsx",
+      "summary": "渲染 render-mathjax.cjs 烘出的 MathJax SVG（字形内嵌，不依赖外部字体）"
+    },
+    {
+      "name": "Backdrop",
+      "file": "src/components/Backdrop.tsx",
+      "summary": "整幅背景：底色渐变 + 网格 + 辉光，取主题包 token"
+    },
+    {
+      "name": "Force",
+      "file": "src/components/Mech.tsx",
+      "summary": "一根力矢量：沿 angle 方向按 progress 长出，末端箭头 + 标签 + 由调用方算出的大小（如 m·g）",
+      "signature": "({ x, y, angle, length, label, magnitude, unit, color, width, progress, dashed, labelGap })"
+    },
+    {
+      "name": "FreeBody",
+      "file": "src/components/Mech.tsx",
+      "summary": "受力分析图：box/circle/wedge 三种承载体 + 一组从质心发散的力矢量，可选把某个力沿斜面/法向分解（虚线分量 + 直角框），覆盖牛顿定律、斜面重力分解",
+      "signature": "({ cx, cy, body, size, incline, forces: [{label, angle, mag, color, magnitude}], scale, decompose: {index, axes, color}, progress })"
+    },
+    {
+      "name": "SlopeMark",
+      "file": "src/components/Mech.tsx",
+      "summary": "曲线上一点的切线 + rise/run 直角三角形，斜率数值由导数函数 df 算出（x-t / v-t / a-t 三图的互为斜率关系全靠它说清）",
+      "signature": "({ s, f, df, x0, run, color, label, progress })"
+    },
+    {
+      "name": "AreaShade",
+      "file": "src/components/Mech.tsx",
+      "summary": "曲线到基线的面积填充，按 progress 从左向右扫过，末端标注由 integral 函数算出的累积值（位移 = ∫v dt、功 = ∫F dx）",
+      "signature": "({ s, pts, integral, base, color, label, unit, progress })"
+    },
+    {
+      "name": "Collision",
+      "file": "src/components/Mech.tsx",
+      "summary": "两体碰撞：两球按 progress 由碰前位置运动到碰后位置，各带速度箭头与动量标注，支持 sticky（完全非弹性贴在一起）",
+      "signature": "({ y, cx, left: {r, mass, v0, v1, color, label}, right: {...}, progress, sticky, vScale })"
+    },
+    {
+      "name": "MomentumBars",
+      "file": "src/components/Mech.tsx",
+      "summary": "碰撞前后的动量/动能条形对比：一行一个物体，上条 = 碰前、下条 = 碰后，底部给出总量守恒结论",
+      "signature": "({ rows: [{label, before, after, color}], x, y, w, rowH, progress, title })"
+    },
+    {
+      "name": "EnergyLandscape",
+      "file": "src/components/Mech.tsx",
+      "summary": "势能曲线 U(x) + 总能量水平线 E：着色允许区、数值求解转折点 U(x_t)=E、在 probeX 处标出动能 K = E − U",
+      "signature": "({ s, U, E, probeX, color, progress })"
+    },
+    {
+      "name": "RollingBody",
+      "file": "src/components/Mech.tsx",
+      "summary": "无滑滚动：轮子沿地面滚过 angle 弧度，轮辐随之转动，同时画出轮缘一点的摆线轨迹并标注 s = rθ",
+      "signature": "({ x0, groundY, r, angle, spokes, color, progress, showTrail })"
+    },
+    {
+      "name": "RigidRotation",
+      "file": "src/components/Mech.tsx",
+      "summary": "刚体绕轴转动：角位移扇形 + ω 弧箭头 + 半径扫过线，可挂点质量分布并标出 I = Σ mᵢrᵢ²",
+      "signature": "({ cx, cy, r, from, to, masses: [{frac, m, label}], color, omegaLabel, progress })"
+    },
+    {
+      "name": "fieldSeeds",
+      "file": "src/components/Mech.tsx",
+      "summary": "按网格 + 确定性抖动生成场线/流线的种子点（seed 固定不重排），供场图类原语采样",
+      "signature": "(xDomain, yDomain, nx, ny, seed) => [number, number][]"
+    }
+  ],
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "cm01Title",
+      "cm01Slope",
+      "cm01Uniform",
+      "cm01Rest",
+      "cm02Title",
+      "cm02Area",
+      "cm02Mean",
+      "cm02Sign",
+      "cm03Title",
+      "cm03Const",
+      "cm03Area",
+      "cm03Zero",
+      "cm04Title",
+      "cm04First",
+      "cm04Third",
+      "cm04Weight",
+      "cm05Title",
+      "cm05Normal",
+      "cm05Along",
+      "cm05Friction",
+      "cm06Title",
+      "cm06Def",
+      "cm06Two",
+      "cm06Impulse",
+      "cm07Title",
+      "cm07Elastic",
+      "cm07Restitution",
+      "cm07Stick",
+      "cm08Title",
+      "cm08Work",
+      "cm08Kinetic",
+      "cm08Power",
+      "cm09Title",
+      "cm09Spring",
+      "cm09Conserve",
+      "cm09Force",
+      "cm10Title",
+      "cm10Kinetic",
+      "cm10Turning",
+      "cm10Equilibrium",
+      "cm11Title",
+      "cm11Inertia",
+      "cm11Kinetic",
+      "cm11Arc",
+      "cm12Title",
+      "cm12Conserve",
+      "cm12Rate",
+      "cm12Point",
+      "cm13Title",
+      "cm13Distance",
+      "cm13Energy",
+      "cm13Contact"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^cm\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "配色族 tol-bright：Paul Tol bright 中通过门禁的 8 色",
+      "primary #aa3377 / accent #882255 / result #117733 / warn #bb5566 / alt #4477aa",
+      "所有显示的数字必须由函数产出，不要在场景里写字面量"
+    ]
+  }
+}

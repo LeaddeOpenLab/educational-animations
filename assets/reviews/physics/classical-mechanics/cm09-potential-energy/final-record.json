@@ -1,0 +1,415 @@
+{
+  "id": "C07-A009",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Potential Energy: Lift and Reference Level",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm09-potential-energy.mp4",
+  "tags": [
+    "C07-A009",
+    "8.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Potential Energy. Show the actual mechanism, not just its result: 0–5s zero line and height appear; 5–14s height marker rises on the U(h) graph and the potential-energy readout grows; 14–22s reference level shifts and the U graph translates while the ΔU readout stays fixed; 22–27s height and ΔU fall as the K readout and K bar rise; 27–30s hold equal ΔU despite shifted labels. Conclude that Only ΔU=m g Δh affects motion; changing the zero level shifts U values without changing ΔU. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Potential energy",
+  "standard_name": "Potential Energy",
+  "aliases": [],
+  "final_title": "Potential Energy: Lift and Reference Level",
+  "learning_objective": "Demonstrate gravitational potential change and the arbitrary reference level.",
+  "core_conclusion": "Only ΔU=m g Δh affects motion; changing the zero level shifts U values without changing ΔU.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/8-1-potential-energy-of-a-system",
+      "scope": "Demonstrate gravitational potential change and the arbitrary reference level."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v3",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Potential energy” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Potential energy”. Dynamically demonstrate the core formula or conclusion: Potential energy stores the capacity to perform mechanical work..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F7F3EA); main visual (#0B4F6C); secondary visual (#8B1E3F); highlight (#795500); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm09-potential-energy.tsx",
+    "scenes": [
+      {
+        "id": "reference",
+        "objects": [
+          "mass",
+          "height ruler",
+          "zero line"
+        ],
+        "initial_state": "mass at ground reference",
+        "trigger": "choose U=0 line",
+        "change": "zero line and height appear",
+        "cause": "choose U=0 line",
+        "result": "initial U is calculated from chosen reference",
+        "screen_copy": "Choose a reference",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "lift",
+        "objects": [
+          "mass",
+          "height marker",
+          "U bar"
+        ],
+        "initial_state": "mass at h0",
+        "trigger": "lift it by Δh",
+        "change": "height marker rises on the U(h) graph and the potential-energy readout grows",
+        "cause": "lift it by Δh",
+        "result": "ΔU follows m g Δh",
+        "screen_copy": "Lifting stores energy",
+        "start_seconds": 5,
+        "end_seconds": 14,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "change-zero",
+        "objects": [
+          "zero line",
+          "absolute U labels",
+          "ΔU bracket"
+        ],
+        "initial_state": "two heights and their U values visible",
+        "trigger": "move zero line upward",
+        "change": "reference level shifts and the U graph translates while the ΔU readout stays fixed",
+        "cause": "move zero line upward",
+        "result": "absolute U changes by 20 J but ΔU stays 60 J",
+        "screen_copy": "Zero is arbitrary",
+        "start_seconds": 14,
+        "end_seconds": 22,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "descent",
+        "objects": [
+          "descending mass",
+          "U/K bars"
+        ],
+        "initial_state": "mass high",
+        "trigger": "release under gravity",
+        "change": "height and ΔU fall as the K readout and K bar rise",
+        "cause": "release under gravity",
+        "result": "ΔU plus K stays 60 J in the illustrated ideal descent",
+        "screen_copy": "Potential becomes kinetic",
+        "start_seconds": 22,
+        "end_seconds": 27,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "close",
+        "objects": [
+          "two reference choices"
+        ],
+        "initial_state": "same two physical heights",
+        "trigger": "compare",
+        "change": "hold equal ΔU despite shifted labels",
+        "cause": "compare",
+        "result": "only differences determine exchange",
+        "screen_copy": "ΔU, not absolute U",
+        "start_seconds": 27,
+        "end_seconds": 30,
+        "reading_seconds": 1.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Five states are needed to expose the reference-level distinction as well as lift, potential-to-kinetic exchange and comparison.",
+    "l3_interface": {
+      "primitives": [
+        "EnergyLandscape",
+        "Force"
+      ],
+      "state_parameters": "mass,g,height,referenceHeight,U,K",
+      "review_misconception": "Changing reference shifts absolute U values but cannot change ΔU."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm09-potential-energy.state.ts",
+      "bindings": [
+        "mass,g,height,referenceHeight,U,K"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "change-zero",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "motion and energy change are unchanged"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 16.666666666666668,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm09-potential-energy.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm09-potential-energy/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLm8WJuN/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLm8WJuN"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm09-potential-energy.state.ts\");assert.equal(at(0).h,0);assert(at(40).deltaU>0);assert.equal(at(49).ref,0);assert.equal(at(50).ref,1);assert.equal(at(49).deltaU,at(50).deltaU);assert(at(50).U<at(49).U);assert(at(85).K>at(70).K);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm09-potential-energy.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm09-potential-energy.state.ts",
+        "visible_state_parameters": [
+          "U",
+          "bodyY",
+          "deltaU",
+          "referenceY"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLm8WJuN"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLm8WJuN"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm09-potential-energy.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm09-potential-energy/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm09-potential-energy/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm09-potential-energy/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm09-potential-energy/samples.json"
+      ],
+      "observation": "Lifting raises the height marker and U. Shifting the reference changes U from 60 to 40 J while ΔU remains 60 J; descent then shortens the ΔU bar and lengthens the K bar.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            15.666666666666666,
+            16.666666666666668,
+            17.666666666666668
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm09-potential-energy/risk-sheet.jpg"
+          ],
+          "observation": "Lifting raises the height marker and U. Shifting the reference changes U from 60 to 40 J while ΔU remains 60 J; descent then shortens the ΔU bar and lengthens the K bar."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "Lifting raises the height marker and U. Shifting the reference changes U from 60 to 40 J while ΔU remains 60 J; descent then shortens the ΔU bar and lengthens the K bar."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "Lifting raises the height marker and U. Shifting the reference changes U from 60 to 40 J while ΔU remains 60 J; descent then shortens the ΔU bar and lengthens the K bar."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "Lifting raises the height marker and U. Shifting the reference changes U from 60 to 40 J while ΔU remains 60 J; descent then shortens the ΔU bar and lengthens the K bar."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm09-potential-energy.md",
+      "assets/reviews/physics/classical-mechanics/cm09-potential-energy/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm09-potential-energy/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v3",
+      "record_id": "recvvJaLm8WJuN",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v3",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/61b5f00d-d6ae-4f79-bd0b-a803d63bd56e",
+        "comment_id": 6121048490,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121048490",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v3",
+        "video_bytes": 2193962,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/61b5f00d-d6ae-4f79-bd0b-a803d63bd56e",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLm8WJuN",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Potential Energy: Lift and Reference Level",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Potential energy",
+    "standard_name": "Potential Energy",
+    "scope": "Demonstrate gravitational potential change and the arbitrary reference level.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/8-1-potential-energy-of-a-system",
+        "scope": "Demonstrate gravitational potential change and the arbitrary reference level."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm09-potential-energy.jpg",
+      "assets/reviews/physics/classical-mechanics/cm09-potential-energy/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLm8WJuN",
+      "slug": "cm09-potential-energy",
+      "bbox": [
+        222,
+        146,
+        785,
+        714
+      ],
+      "width": 563,
+      "height": 568,
+      "dx": 3.5,
+      "dy": -20.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm09-potential-energy.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm09-potential-energy.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm09-potential-energy.jpg",
+  "cover_version": "classical-mechanics-20261012-v3",
+  "feishu": {
+    "record_id": "recvvJaLm8WJuN",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/61b5f00d-d6ae-4f79-bd0b-a803d63bd56e",
+  "player_version": "classical-mechanics-20261012-v3"
+}

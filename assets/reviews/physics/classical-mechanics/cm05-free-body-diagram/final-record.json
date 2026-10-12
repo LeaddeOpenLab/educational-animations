@@ -1,0 +1,422 @@
+{
+  "id": "C07-A005",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Free Body Diagram: Forces on a Slope",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm05-free-body-diagram.mp4",
+  "tags": [
+    "C07-A005",
+    "8.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Free-Body Diagram. Show the actual mechanism, not just its result: 0–5s other scenery dims while block stays; 5–12s mg points vertically down and normal points perpendicular to plane; 12–21s dashed components grow from mg and right-angle marker appears; 21–30s friction arrow points uphill and net parallel force updates Then compare: hold only selected block and forces. Conclude that Isolate one object; draw only forces on it and resolve gravity along chosen axes. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Free body diagram",
+  "standard_name": "Free-Body Diagram",
+  "aliases": [],
+  "final_title": "Free Body Diagram: Forces on a Slope",
+  "learning_objective": "Construct a correct free-body diagram for a block on an incline.",
+  "core_conclusion": "Isolate one object; draw only forces on it and resolve gravity along chosen axes.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-7-drawing-free-body-diagrams",
+      "scope": "Construct a correct free-body diagram for a block on an incline."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v3",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Free body diagram” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Free body diagram”. Dynamically demonstrate the core formula or conclusion: A free-body diagram shows only forces acting on one chosen body..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm05-free-body-diagram.tsx",
+    "scenes": [
+      {
+        "id": "situation",
+        "objects": [
+          "incline",
+          "block",
+          "Earth/contact"
+        ],
+        "initial_state": "block resting on an inclined surface",
+        "trigger": "select block",
+        "change": "other scenery dims while block stays",
+        "cause": "select block",
+        "result": "system boundary identifies one object",
+        "screen_copy": "Isolate the block",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "replace-contacts",
+        "objects": [
+          "isolated block",
+          "mg",
+          "normal"
+        ],
+        "initial_state": "block isolated without force arrows",
+        "trigger": "replace Earth/contact interactions",
+        "change": "mg points vertically down and normal points perpendicular to plane",
+        "cause": "replace Earth/contact interactions",
+        "result": "arrows originate on selected block",
+        "screen_copy": "Forces act on the block",
+        "start_seconds": 5,
+        "end_seconds": 12,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "resolve",
+        "objects": [
+          "mg",
+          "parallel/perpendicular components",
+          "axes"
+        ],
+        "initial_state": "mg vertical",
+        "trigger": "choose axes parallel and normal to slope",
+        "change": "dashed components grow from mg and right-angle marker appears",
+        "cause": "choose axes parallel and normal to slope",
+        "result": "mg sinθ and mg cosθ align with axes",
+        "screen_copy": "Resolve gravity along slope",
+        "start_seconds": 12,
+        "end_seconds": 21,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "friction-check",
+        "objects": [
+          "friction arrow",
+          "force sum",
+          "completed FBD"
+        ],
+        "initial_state": "down-slope component visible",
+        "trigger": "add friction if contact resists sliding",
+        "change": "friction arrow points uphill and net parallel force updates Then compare: hold only selected block and forces",
+        "cause": "add friction if contact resists sliding",
+        "result": "parallel sum predicts sliding or rest no force from block on ramp is included",
+        "screen_copy": "Friction opposes relative motion; One diagram, one body",
+        "start_seconds": 21,
+        "end_seconds": 30,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Four states move from physical situation to isolation, components and the friction/check result without a redundant closing diagram.",
+    "l3_interface": {
+      "primitives": [
+        "FreeBody",
+        "Force"
+      ],
+      "state_parameters": "mass, g, inclineAngle, normal, friction, gravityComponents",
+      "review_misconception": "Normal is perpendicular to the plane; friction direction depends on tendency to slip."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm05-free-body-diagram.state.ts",
+      "bindings": [
+        "mass",
+        "g",
+        "inclineAngle",
+        "normal",
+        "friction",
+        "gravityComponents"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "resolve",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "mg sinθ and mg cosθ align with axes"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 13.5,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm05-free-body-diagram.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLm0aDYw/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLm0aDYw"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "The block and force arrows are too small to read at the contact-sheet scale.",
+        "affected_ids": [
+          "C07-A005"
+        ],
+        "status": "resolved",
+        "fix": "The enlarged inclined block shows mg=20.0 N, N=17.3 N and a downhill gravity component; the dashed components appear across 12.5–14.5 s and the friction arrow points uphill.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:40:53.969504+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm05-free-body-diagram.state.ts\");assert.equal(at(14).isolated,false);assert.equal(at(15).isolated,true);assert.equal(at(39).components,false);assert.equal(at(40).components,true);assert(Math.abs(at(50).gravityParallel-10)<1e-9);assert(at(70).netAlong<at(69).netAlong);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm05-free-body-diagram.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm05-free-body-diagram.state.ts",
+        "visible_state_parameters": [
+          "components",
+          "gravityParallel",
+          "isolated",
+          "mg",
+          "netAlong"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLm0aDYw"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 3,
+      "applicability": [
+        "recvvJaLm0aDYw"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm05-free-body-diagram.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/samples.json"
+      ],
+      "observation": "The enlarged inclined block shows mg=20.0 N, N=17.3 N and a downhill gravity component; the dashed components appear across 12.5–14.5 s and the friction arrow points uphill.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            12.5,
+            13.5,
+            14.5
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/risk-sheet.jpg"
+          ],
+          "observation": "The enlarged inclined block shows mg=20.0 N, N=17.3 N and a downhill gravity component; the dashed components appear across 12.5–14.5 s and the friction arrow points uphill."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "The enlarged inclined block shows mg=20.0 N, N=17.3 N and a downhill gravity component; the dashed components appear across 12.5–14.5 s and the friction arrow points uphill."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "The enlarged inclined block shows mg=20.0 N, N=17.3 N and a downhill gravity component; the dashed components appear across 12.5–14.5 s and the friction arrow points uphill."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "The enlarged inclined block shows mg=20.0 N, N=17.3 N and a downhill gravity component; the dashed components appear across 12.5–14.5 s and the friction arrow points uphill."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm05-free-body-diagram.md",
+      "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v3",
+      "record_id": "recvvJaLm0aDYw",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v3",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/df4d1e0d-8cce-420d-8b55-7385a59be5f9",
+        "comment_id": 6121043062,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121043062",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v3",
+        "video_bytes": 1753231,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/df4d1e0d-8cce-420d-8b55-7385a59be5f9",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLm0aDYw",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Free Body Diagram: Forces on a Slope",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Free body diagram",
+    "standard_name": "Free-Body Diagram",
+    "scope": "Construct a correct free-body diagram for a block on an incline.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/5-7-drawing-free-body-diagrams",
+        "scope": "Construct a correct free-body diagram for a block on an incline."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm05-free-body-diagram.jpg",
+      "assets/reviews/physics/classical-mechanics/cm05-free-body-diagram/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLm0aDYw",
+      "slug": "cm05-free-body-diagram",
+      "bbox": [
+        188,
+        264,
+        811,
+        690
+      ],
+      "width": 623,
+      "height": 426,
+      "dx": -0.5,
+      "dy": 27.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm05-free-body-diagram.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm05-free-body-diagram.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm05-free-body-diagram.jpg",
+  "cover_version": "classical-mechanics-20261012-v3",
+  "feishu": {
+    "record_id": "recvvJaLm0aDYw",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/df4d1e0d-8cce-420d-8b55-7385a59be5f9",
+  "player_version": "classical-mechanics-20261012-v3"
+}

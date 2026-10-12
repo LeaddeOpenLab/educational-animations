@@ -1,0 +1,421 @@
+{
+  "id": "C07-A003",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Acceleration-Time Graph: Signed Area Changes Velocity",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm03-acceleration-time-graph.mp4",
+  "tags": [
+    "C07-A003",
+    "8.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Acceleration–Time Graph. Show the actual mechanism, not just its result: 0–5s acceleration trace is above zero; 5–14s shaded area expands, v increases, cart spacing between ticks grows; 14–20s area stops growing and cart continues at constant speed; 20–27s signed area subtracts from v and cart slows; 27–30s hold velocity difference. Conclude that The signed area under a(t) is Δv, not position or velocity itself. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Acceleration-time graph",
+  "standard_name": "Acceleration–Time Graph",
+  "aliases": [],
+  "final_title": "Acceleration-Time Graph: Signed Area Changes Velocity",
+  "learning_objective": "Show that area under acceleration changes velocity and then position.",
+  "core_conclusion": "The signed area under a(t) is Δv, not position or velocity itself.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/3-3-average-and-instantaneous-acceleration",
+      "scope": "Show that area under acceleration changes velocity and then position."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v3",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Acceleration-time graph” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Acceleration-time graph”. Dynamically demonstrate the core formula or conclusion: The slope of a velocity-time graph is acceleration..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F4EEF8); main visual (#214E75); secondary visual (#8A2356); highlight (#725400); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm03-acceleration-time-graph.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "a(t) graph",
+          "cart",
+          "v readout"
+        ],
+        "initial_state": "cart already moving at v0",
+        "trigger": "start positive acceleration interval",
+        "change": "acceleration trace is above zero",
+        "cause": "start positive acceleration interval",
+        "result": "v starts at the separately shown initial value",
+        "screen_copy": "Acceleration changes velocity",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "integrate",
+        "objects": [
+          "a(t) shaded area",
+          "v readout",
+          "cart"
+        ],
+        "initial_state": "Δv=0",
+        "trigger": "sweep a positive interval",
+        "change": "shaded area expands, v increases, cart spacing between ticks grows",
+        "cause": "sweep a positive interval",
+        "result": "Δv equals displayed accumulated area",
+        "screen_copy": "Δv = ∫a dt",
+        "start_seconds": 5,
+        "end_seconds": 14,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "zero-a",
+        "objects": [
+          "zero a line",
+          "v readout",
+          "cart"
+        ],
+        "initial_state": "cart moving faster",
+        "trigger": "set acceleration to zero",
+        "change": "area stops growing and cart continues at constant speed",
+        "cause": "set acceleration to zero",
+        "result": "a=0 does not imply v=0",
+        "screen_copy": "Zero acceleration can mean constant speed",
+        "start_seconds": 14,
+        "end_seconds": 20,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "negative-a",
+        "objects": [
+          "negative a region",
+          "v readout",
+          "cart"
+        ],
+        "initial_state": "v positive",
+        "trigger": "sweep negative interval",
+        "change": "signed area subtracts from v and cart slows",
+        "cause": "sweep negative interval",
+        "result": "readout matches area sum plus v0",
+        "screen_copy": "Negative area reduces velocity",
+        "start_seconds": 20,
+        "end_seconds": 27,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "close",
+        "objects": [
+          "a area",
+          "v history"
+        ],
+        "initial_state": "before/after velocity visible",
+        "trigger": "compare",
+        "change": "hold velocity difference",
+        "cause": "compare",
+        "result": "v_final − v_initial equals signed area",
+        "screen_copy": "Area changes v; v moves x",
+        "start_seconds": 27,
+        "end_seconds": 30,
+        "reading_seconds": 1.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Five states distinguish initial velocity, positive integral, zero acceleration and negative integral before the final check.",
+    "l3_interface": {
+      "primitives": [
+        "Axes",
+        "Curve",
+        "AreaShade",
+        "Dot"
+      ],
+      "state_parameters": "a(t), deltaV(t)=integral(a), v0, cartX(t)",
+      "review_misconception": "At a=0 the cart can still have nonzero constant velocity."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm03-acceleration-time-graph.state.ts",
+      "bindings": [
+        "a(t)",
+        "deltaV(t)=integral(a)",
+        "v0",
+        "cartX(t)"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "zero-a",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "a=0 does not imply v=0"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 22.0,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm03-acceleration-time-graph.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLlVzcKf/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLlVzcKf"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm03-acceleration-time-graph.state.ts\");assert.equal(at(0).deltaV,0);assert(at(20).deltaV>0);assert.equal(at(30).v,at(60).v);assert(at(80).v<at(60).v);assert(at(90).v>0);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm03-acceleration-time-graph.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm03-acceleration-time-graph.state.ts",
+        "visible_state_parameters": [
+          "cartX",
+          "deltaV",
+          "v"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLlVzcKf"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLlVzcKf"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm03-acceleration-time-graph.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/samples.json"
+      ],
+      "observation": "Positive acceleration area raises v to 3.00 m/s, the zero-acceleration interval keeps the cart moving at that velocity, and negative area lowers v from 2.90 to 2.70 m/s across the risk triplet.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            21.0,
+            22.0,
+            23.0
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/risk-sheet.jpg"
+          ],
+          "observation": "Positive acceleration area raises v to 3.00 m/s, the zero-acceleration interval keeps the cart moving at that velocity, and negative area lowers v from 2.90 to 2.70 m/s across the risk triplet."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "Positive acceleration area raises v to 3.00 m/s, the zero-acceleration interval keeps the cart moving at that velocity, and negative area lowers v from 2.90 to 2.70 m/s across the risk triplet."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "Positive acceleration area raises v to 3.00 m/s, the zero-acceleration interval keeps the cart moving at that velocity, and negative area lowers v from 2.90 to 2.70 m/s across the risk triplet."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "Positive acceleration area raises v to 3.00 m/s, the zero-acceleration interval keeps the cart moving at that velocity, and negative area lowers v from 2.90 to 2.70 m/s across the risk triplet."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm03-acceleration-time-graph.md",
+      "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v3",
+      "record_id": "recvvJaLlVzcKf",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v3",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/61c48659-c3fa-49f3-ba2f-0b31e5311989",
+        "comment_id": 6121040525,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121040525",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v3",
+        "video_bytes": 1945988,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/61c48659-c3fa-49f3-ba2f-0b31e5311989",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLlVzcKf",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Acceleration-Time Graph: Signed Area Changes Velocity",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Acceleration-time graph",
+    "standard_name": "Acceleration–Time Graph",
+    "scope": "Show that area under acceleration changes velocity and then position.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/3-3-average-and-instantaneous-acceleration",
+        "scope": "Show that area under acceleration changes velocity and then position."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm03-acceleration-time-graph.jpg",
+      "assets/reviews/physics/classical-mechanics/cm03-acceleration-time-graph/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLlVzcKf",
+      "slug": "cm03-acceleration-time-graph",
+      "bbox": [
+        214,
+        146,
+        785,
+        714
+      ],
+      "width": 571,
+      "height": 568,
+      "dx": -0.5,
+      "dy": -20.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm03-acceleration-time-graph.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm03-acceleration-time-graph.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm03-acceleration-time-graph.jpg",
+  "cover_version": "classical-mechanics-20261012-v3",
+  "feishu": {
+    "record_id": "recvvJaLlVzcKf",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/61c48659-c3fa-49f3-ba2f-0b31e5311989",
+  "player_version": "classical-mechanics-20261012-v3"
+}

@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm08-work-energy-theorem.state.ts");assert.equal(at(0).work,0);assert(at(45).work>0);assert.equal(at(45).kinetic-at(45).initialK,at(45).work);assert.equal(at(69).opposing,0);assert(at(80).opposing>0);assert(at(90).kinetic<at(69).kinetic);assert.equal(at(90).kinetic-at(90).initialK,at(90).work);
+console.log("PASS: before/during/after, boundary states and visible parameters");

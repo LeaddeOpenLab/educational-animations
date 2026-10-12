@@ -1,0 +1,1 @@
+const ts=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/node_modules/typescript");for(const ext of [".ts",".tsx"])require.extensions[ext]=(m,f)=>m._compile(ts.transpileModule(require("fs").readFileSync(f,"utf8"),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.React,esModuleInterop:true}}).outputText,f);

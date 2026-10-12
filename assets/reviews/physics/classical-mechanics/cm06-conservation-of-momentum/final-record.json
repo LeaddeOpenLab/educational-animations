@@ -1,0 +1,416 @@
+{
+  "id": "C07-A006",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Conservation of Momentum: Internal Exchange",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm06-conservation-of-momentum.mp4",
+  "tags": [
+    "C07-A006",
+    "8.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Conservation of Momentum. Show the actual mechanism, not just its result: 0–5s individual momentum bars and total appear; 5–14s equal opposite impulses act; one p bar shrinks while the other grows; 14–22s carts separate at computed speeds; 22–30s total bar changes only when external force enters Then compare: hold equal isolated totals. Conclude that Equal opposite impulses redistribute momentum while the system total remains fixed. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Conservation of momentum",
+  "standard_name": "Conservation of Momentum",
+  "aliases": [],
+  "final_title": "Conservation of Momentum: Internal Exchange",
+  "learning_objective": "Track individual and total momentum through an isolated two-body interaction.",
+  "core_conclusion": "Equal opposite impulses redistribute momentum while the system total remains fixed.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/9-3-conservation-of-linear-momentum",
+      "scope": "Track individual and total momentum through an isolated two-body interaction."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Conservation of momentum” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Conservation of momentum”. Dynamically demonstrate the core formula or conclusion: For an isolated system, $\\sum p_{before}=\\sum p_{after}$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F0F3FB); main visual (#253D75); secondary visual (#9B2447); highlight (#6A5600); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm06-conservation-of-momentum.tsx",
+    "scenes": [
+      {
+        "id": "before",
+        "objects": [
+          "two carts",
+          "velocity arrows",
+          "momentum bars"
+        ],
+        "initial_state": "two carts approach at known masses and speeds",
+        "trigger": "compute p=m v",
+        "change": "individual momentum bars and total appear",
+        "cause": "compute p=m v",
+        "result": "sum is the baseline total",
+        "screen_copy": "Measure momentum before",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "interaction",
+        "objects": [
+          "contact pair",
+          "force/impulse arrows",
+          "bars"
+        ],
+        "initial_state": "carts apart",
+        "trigger": "carts collide",
+        "change": "equal opposite impulses act; one p bar shrinks while the other grows",
+        "cause": "carts collide",
+        "result": "bar changes cancel algebraically",
+        "screen_copy": "Internal forces exchange momentum",
+        "start_seconds": 5,
+        "end_seconds": 14,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "after",
+        "objects": [
+          "separating carts",
+          "momentum bars"
+        ],
+        "initial_state": "contact ends",
+        "trigger": "use collision end velocities",
+        "change": "carts separate at computed speeds",
+        "cause": "use collision end velocities",
+        "result": "after total equals before total",
+        "screen_copy": "p_before = p_after",
+        "start_seconds": 14,
+        "end_seconds": 22,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "external-force",
+        "objects": [
+          "system boundary",
+          "outside force",
+          "before/after totals"
+        ],
+        "initial_state": "isolated system result visible",
+        "trigger": "add outside impulse",
+        "change": "total bar changes only when external force enters Then compare: hold equal isolated totals",
+        "cause": "add outside impulse",
+        "result": "boundary explains when conservation fails individual changes differ but sum agrees",
+        "screen_copy": "Conservation requires an isolated system; Track the whole system",
+        "start_seconds": 22,
+        "end_seconds": 30,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Four states track before, internal exchange, after and an external-force counterexample; the totals remain in the last state.",
+    "l3_interface": {
+      "primitives": [
+        "Collision",
+        "MomentumBars"
+      ],
+      "state_parameters": "m1,m2,v1Before,v2Before,v1After,v2After,totalP",
+      "review_misconception": "Conservation applies to the chosen isolated system, not each object separately."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm06-conservation-of-momentum.state.ts",
+      "bindings": [
+        "m1,m2,v1Before,v2Before,v1After,v2After,totalP"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "after",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "after total equals before total"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 16.0,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm06-conservation-of-momentum.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLm2cu15/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLm2cu15"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "The collision and momentum bars are too small; the interaction scene initially looks identical to before.",
+        "affected_ids": [
+          "C07-A006"
+        ],
+        "status": "resolved",
+        "fix": "Two bodies approach while their individual momentum labels and bars exchange values; the total stays 5.0 kg·m/s through the internal interaction, then an external arrow accompanies the total changing to 6.0.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm06-conservation-of-momentum.state.ts\");assert.equal(at(14).p1,6);assert.equal(at(14).p2,-1);assert(at(29).p1<6);assert(at(45).p1<6&&at(45).p2>-1);assert.equal(at(65).total,5);assert.equal(at(79).external,0);assert.equal(at(80).total,6);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm06-conservation-of-momentum.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm06-conservation-of-momentum.state.ts",
+        "visible_state_parameters": [
+          "ball1X",
+          "ball2X",
+          "p1",
+          "p2",
+          "total"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLm2cu15"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLm2cu15"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm06-conservation-of-momentum.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v2",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v2",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v2",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/samples.json"
+      ],
+      "observation": "Two bodies approach while their individual momentum labels and bars exchange values; the total stays 5.0 kg·m/s through the internal interaction, then an external arrow accompanies the total changing to 6.0.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            15.0,
+            16.0,
+            17.0
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/risk-sheet.jpg"
+          ],
+          "observation": "Two bodies approach while their individual momentum labels and bars exchange values; the total stays 5.0 kg·m/s through the internal interaction, then an external arrow accompanies the total changing to 6.0."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "Two bodies approach while their individual momentum labels and bars exchange values; the total stays 5.0 kg·m/s through the internal interaction, then an external arrow accompanies the total changing to 6.0."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "Two bodies approach while their individual momentum labels and bars exchange values; the total stays 5.0 kg·m/s through the internal interaction, then an external arrow accompanies the total changing to 6.0."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "Two bodies approach while their individual momentum labels and bars exchange values; the total stays 5.0 kg·m/s through the internal interaction, then an external arrow accompanies the total changing to 6.0."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm06-conservation-of-momentum.md",
+      "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v2",
+      "record_id": "recvvJaLm2cu15",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v2",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/c60e172e-6ea2-407e-8af4-dc4c9c548436",
+        "comment_id": 6121044338,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121044338",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v2",
+        "video_bytes": 2167265,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/c60e172e-6ea2-407e-8af4-dc4c9c548436",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLm2cu15",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Conservation of Momentum: Internal Exchange",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Conservation of momentum",
+    "standard_name": "Conservation of Momentum",
+    "scope": "Track individual and total momentum through an isolated two-body interaction.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/9-3-conservation-of-linear-momentum",
+        "scope": "Track individual and total momentum through an isolated two-body interaction."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v2",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm06-conservation-of-momentum.jpg",
+      "assets/reviews/physics/classical-mechanics/cm06-conservation-of-momentum/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLm2cu15",
+      "slug": "cm06-conservation-of-momentum",
+      "bbox": [
+        180,
+        294,
+        820,
+        665
+      ],
+      "width": 640,
+      "height": 371,
+      "dx": 0.0,
+      "dy": 29.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm06-conservation-of-momentum.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm06-conservation-of-momentum.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm06-conservation-of-momentum.jpg",
+  "cover_version": "classical-mechanics-20261012-v2",
+  "feishu": {
+    "record_id": "recvvJaLm2cu15",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/c60e172e-6ea2-407e-8af4-dc4c9c548436",
+  "player_version": "classical-mechanics-20261012-v2"
+}

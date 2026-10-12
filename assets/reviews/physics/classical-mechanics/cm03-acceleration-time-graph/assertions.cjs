@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm03-acceleration-time-graph.state.ts");assert.equal(at(0).deltaV,0);assert(at(20).deltaV>0);assert.equal(at(30).v,at(60).v);assert(at(80).v<at(60).v);assert(at(90).v>0);
+console.log("PASS: before/during/after, boundary states and visible parameters");

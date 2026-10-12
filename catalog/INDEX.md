@@ -356,19 +356,19 @@
 - [C06-A012 · Poisson Process](mathematics-statistics/6-041.md#c06-a012) — video
 ## Classical Mechanics
 
-- [C07-A001 · Location-time graph](physics/8-01.md#c07-a001) — awaiting production
-- [C07-A002 · Speed-time graph](physics/8-01.md#c07-a002) — awaiting production
-- [C07-A003 · Acceleration-time graph](physics/8-01.md#c07-a003) — awaiting production
-- [C07-A004 · Newton's laws of motion](physics/8-01.md#c07-a004) — awaiting production
-- [C07-A005 · Free body diagram](physics/8-01.md#c07-a005) — awaiting production
-- [C07-A006 · Conservation of momentum](physics/8-01.md#c07-a006) — awaiting production
-- [C07-A007 · Collision process](physics/8-01.md#c07-a007) — awaiting production
-- [C07-A008 · Work-Energy Theorem](physics/8-01.md#c07-a008) — awaiting production
-- [C07-A009 · Potential energy](physics/8-01.md#c07-a009) — awaiting production
-- [C07-A010 · Potential energy curve](physics/8-01.md#c07-a010) — awaiting production
-- [C07-A011 · Rigid body rotation](physics/8-01.md#c07-a011) — awaiting production
-- [C07-A012 · Angular momentum](physics/8-01.md#c07-a012) — awaiting production
-- [C07-A013 · No slip scrolling](physics/8-01.md#c07-a013) — awaiting production
+- [C07-A001 · Position–Time Graph](physics/8-01.md#c07-a001) — video
+- [C07-A002 · Speed–Time Graph](physics/8-01.md#c07-a002) — video
+- [C07-A003 · Acceleration–Time Graph](physics/8-01.md#c07-a003) — video
+- [C07-A004 · Newton's Laws of Motion](physics/8-01.md#c07-a004) — video
+- [C07-A005 · Free-Body Diagram](physics/8-01.md#c07-a005) — video
+- [C07-A006 · Conservation of Momentum](physics/8-01.md#c07-a006) — video
+- [C07-A007 · Collision Process](physics/8-01.md#c07-a007) — video
+- [C07-A008 · Work–Energy Theorem](physics/8-01.md#c07-a008) — video
+- [C07-A009 · Potential Energy](physics/8-01.md#c07-a009) — video
+- [C07-A010 · Potential Energy Curve](physics/8-01.md#c07-a010) — video
+- [C07-A011 · Rigid-Body Rotation](physics/8-01.md#c07-a011) — video
+- [C07-A012 · Angular Momentum](physics/8-01.md#c07-a012) — video
+- [C07-A013 · Rolling Without Slipping](physics/8-01.md#c07-a013) — video
 ## Electromagnetism
 
 - [C08-A001 · Electric field](physics/8-02.md#c08-a001) — awaiting production

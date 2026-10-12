@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm04-newtons-laws-of-motion.state.ts");assert.equal(at(14).acceleration,0);assert.equal(at(15).acceleration,3);assert(at(50).bodyX>at(29).bodyX);assert(at(50).acceleration<at(30).acceleration);assert.equal(at(70).pair.onA,-at(70).pair.onB);
+console.log("PASS: before/during/after, boundary states and visible parameters");

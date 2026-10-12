@@ -1,0 +1,226 @@
+{
+  "checked_at": "2026-10-12T08:50:45.105210+00:00",
+  "items": [
+    {
+      "record_id": "recvvJaLlR48Ya",
+      "version": "v2",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/01_Location_time_graph.mp4",
+      "bytes": 2433074,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLlTj2kp",
+      "version": "v4",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/02_Speed_time_graph.mp4",
+      "bytes": 2084661,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLlVzcKf",
+      "version": "v3",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/03_Acceleration_time_graph.mp4",
+      "bytes": 1945988,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLlYxwrZ",
+      "version": "v5",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/04_Newtons_laws_of_motion.mp4",
+      "bytes": 2303213,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLm0aDYw",
+      "version": "v3",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/05_Free_body_diagram.mp4",
+      "bytes": 1753231,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLm2cu15",
+      "version": "v2",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/06_Conservation_of_momentum.mp4",
+      "bytes": 2167265,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLm42ygG",
+      "version": "v4",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/07_Collision_process.mp4",
+      "bytes": 2269258,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLm6nN3h",
+      "version": "v4",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/08_Work_Energy_Theorem.mp4",
+      "bytes": 2081921,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLm8WJuN",
+      "version": "v3",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/09_Potential_energy.mp4",
+      "bytes": 2193962,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLmbCRDy",
+      "version": "v3",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/10_Potential_energy_curve.mp4",
+      "bytes": 1909294,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLmd82b9",
+      "version": "v2",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/11_Rigid_body_rotation.mp4",
+      "bytes": 1931163,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLmfN39b",
+      "version": "v2",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/12_Angular_momentum.mp4",
+      "bytes": 2284383,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    },
+    {
+      "record_id": "recvvJaLmhOCHD",
+      "version": "v2",
+      "path": "/Users/zhoutianshuo/Desktop/leadde motion/Physics/Classical Mechanics/13_No_slip_scrolling.mp4",
+      "bytes": 2533048,
+      "duration": "30.000000",
+      "streams": [
+        {
+          "codec_type": "video",
+          "width": 1920,
+          "height": 1080,
+          "side_data_list": [
+            {}
+          ]
+        }
+      ]
+    }
+  ]
+}

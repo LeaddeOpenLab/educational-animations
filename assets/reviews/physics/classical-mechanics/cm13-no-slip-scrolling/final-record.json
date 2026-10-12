@@ -1,0 +1,414 @@
+{
+  "id": "C07-A013",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "No Slip Scrolling: Rolling vs. Sliding",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm13-no-slip-scrolling.mp4",
+  "tags": [
+    "C07-A013",
+    "8.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Rolling Without Slipping. Show the actual mechanism, not just its result: 0–5s center and spoke become trackable; 5–14s center translates rθ while spoke rotates θ; rim point draws cycloid; 14–22s contact marker touches ground and its ground-relative arrow shrinks to zero; 22–30s ghost contact slides along ground Then compare: hold s=rθ and zero contact-speed cue. Conclude that A no-slip wheel travels s=rθ and its contact point has zero ground-relative speed at the instant of contact. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "No slip scrolling",
+  "standard_name": "Rolling Without Slipping",
+  "aliases": [],
+  "final_title": "No Slip Scrolling: Rolling vs. Sliding",
+  "learning_objective": "Show the geometric no-slip constraint and the instantaneous rest of the contact point.",
+  "core_conclusion": "A no-slip wheel travels s=rθ and its contact point has zero ground-relative speed at the instant of contact.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion",
+      "scope": "Show the geometric no-slip constraint and the instantaneous rest of the contact point."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “No slip scrolling” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for No slip scrolling”. Dynamically demonstrate the core formula or conclusion: Pure rolling satisfies $v_{cm}=\\omega R$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "wheel",
+          "ground",
+          "spoke marker"
+        ],
+        "initial_state": "wheel at x0 and θ=0",
+        "trigger": "start rolling",
+        "change": "center and spoke become trackable",
+        "cause": "start rolling",
+        "result": "radius and ground line establish geometry",
+        "screen_copy": "Track translation and rotation",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "roll",
+        "objects": [
+          "wheel",
+          "center trail",
+          "contact trail"
+        ],
+        "initial_state": "wheel at initial pose",
+        "trigger": "advance angle θ",
+        "change": "center translates rθ while spoke rotates θ; rim point draws cycloid",
+        "cause": "advance angle θ",
+        "result": "distance ruler equals rθ",
+        "screen_copy": "No slip: s=rθ",
+        "start_seconds": 5,
+        "end_seconds": 14,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "contact",
+        "objects": [
+          "ground contact point",
+          "velocity arrows"
+        ],
+        "initial_state": "marked rim point nearing ground",
+        "trigger": "reach contact instant",
+        "change": "contact marker touches ground and its ground-relative arrow shrinks to zero",
+        "cause": "reach contact instant",
+        "result": "center velocity and rotation contribution cancel at contact",
+        "screen_copy": "Contact point is instantaneously still",
+        "start_seconds": 14,
+        "end_seconds": 22,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "slip-contrast",
+        "objects": [
+          "slipping wheel ghost",
+          "ground trace",
+          "distance and angle measures"
+        ],
+        "initial_state": "no-slip path visible",
+        "trigger": "advance center without matching angle",
+        "change": "ghost contact slides along ground Then compare: hold s=rθ and zero contact-speed cue",
+        "cause": "advance center without matching angle",
+        "result": "mismatched s and rθ exposes slip both constraints describe same rolling motion",
+        "screen_copy": "Slip breaks s=rθ; Translation plus rotation",
+        "start_seconds": 22,
+        "end_seconds": 30,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Four states compare translation, instantaneous contact rest and a deliberately slipping counterexample.",
+    "l3_interface": {
+      "primitives": [
+        "RollingBody"
+      ],
+      "state_parameters": "radius,theta,centerX,contactVelocity,slipOffset",
+      "review_misconception": "A rolling contact point is instantaneously still relative to the ground only under no slip."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.state.ts",
+      "bindings": [
+        "radius,theta,centerX,contactVelocity,slipOffset"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "contact",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "center velocity and rotation contribution cancel at contact"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 27.0,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm13-no-slip-scrolling.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLmhOCHD/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLmhOCHD"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "The slip contrast labels a nonzero contact velocity while the only wheel still follows the no-slip RollingBody path; a separate slipping state is needed.",
+        "affected_ids": [
+          "C07-A013"
+        ],
+        "status": "resolved",
+        "fix": "The no-slip wheel translates by rθ with a stationary contact marker. In the slip contrast a red wheel separates from the faded no-slip path while contact velocity reads 2.0 m/s.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.state.ts\");assert.equal(at(0).centerX,900);assert(at(45).centerX>at(0).centerX);assert.equal(at(74).contactVelocity,0);assert.equal(at(75).contactVelocity,0);assert(at(90).contactVelocity>0);assert(at(90).centerX>900+90*at(90).noSlipX);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm13-no-slip-scrolling.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.state.ts",
+        "visible_state_parameters": [
+          "centerX",
+          "contactVelocity",
+          "noSlipX",
+          "spokeAngle"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLmhOCHD"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 4,
+      "applicability": [
+        "recvvJaLmhOCHD"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm13-no-slip-scrolling.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v2",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v2",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v2",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/samples.json"
+      ],
+      "observation": "The no-slip wheel translates by rθ with a stationary contact marker. In the slip contrast a red wheel separates from the faded no-slip path while contact velocity reads 2.0 m/s.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            26.0,
+            27.0,
+            28.0
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/risk-sheet.jpg"
+          ],
+          "observation": "The no-slip wheel translates by rθ with a stationary contact marker. In the slip contrast a red wheel separates from the faded no-slip path while contact velocity reads 2.0 m/s."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "The no-slip wheel translates by rθ with a stationary contact marker. In the slip contrast a red wheel separates from the faded no-slip path while contact velocity reads 2.0 m/s."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "The no-slip wheel translates by rθ with a stationary contact marker. In the slip contrast a red wheel separates from the faded no-slip path while contact velocity reads 2.0 m/s."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "The no-slip wheel translates by rθ with a stationary contact marker. In the slip contrast a red wheel separates from the faded no-slip path while contact velocity reads 2.0 m/s."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm13-no-slip-scrolling.md",
+      "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v2",
+      "record_id": "recvvJaLmhOCHD",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v2",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/f7ac02c3-7106-4fbc-b600-8206eb405cde",
+        "comment_id": 6121054069,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121054069",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v2",
+        "video_bytes": 2533048,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/f7ac02c3-7106-4fbc-b600-8206eb405cde",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLmhOCHD",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "No Slip Scrolling: Rolling vs. Sliding",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "No slip scrolling",
+    "standard_name": "Rolling Without Slipping",
+    "scope": "Show the geometric no-slip constraint and the instantaneous rest of the contact point.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/11-1-rolling-motion",
+        "scope": "Show the geometric no-slip constraint and the instantaneous rest of the contact point."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v2",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm13-no-slip-scrolling.jpg",
+      "assets/reviews/physics/classical-mechanics/cm13-no-slip-scrolling/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLmhOCHD",
+      "slug": "cm13-no-slip-scrolling",
+      "bbox": [
+        270,
+        276,
+        737,
+        623
+      ],
+      "width": 467,
+      "height": 347,
+      "dx": 3.5,
+      "dy": -0.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm13-no-slip-scrolling.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm13-no-slip-scrolling.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm13-no-slip-scrolling.jpg",
+  "cover_version": "classical-mechanics-20261012-v2",
+  "feishu": {
+    "record_id": "recvvJaLmhOCHD",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/f7ac02c3-7106-4fbc-b600-8206eb405cde",
+  "player_version": "classical-mechanics-20261012-v2"
+}

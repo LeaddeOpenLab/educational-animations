@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const q=Math.max(0,Math.min(1,(f-15)/50));const m1=2,m2=1,v1=3-2*q,v2=-1+4*q;const external=f>=80?1:0;return {m1,m2,v1,v2,p1:m1*v1,p2:m2*v2,total:m1*v1+m2*v2+external,exchange:q,external,ball1X:990+75*q,ball2X:1230-50*q};};

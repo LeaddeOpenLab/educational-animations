@@ -1,0 +1,1 @@
+export const stateAt=(f:number)=>{const p=Math.max(0,Math.min(1,(f-20)/55));const x=f<75?2+p:3-Math.min(1,(f-75)/15);const U=(x-2)*(x-2),E=1,K=Math.max(0,E-U),force=-2*(x-2);return {x,U,E,K,force,leftTurn:1,rightTurn:3,allowedLeft:1,allowedRight:3,markerX:1000+160*x};};

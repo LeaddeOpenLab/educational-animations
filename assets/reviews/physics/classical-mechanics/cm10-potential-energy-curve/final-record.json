@@ -1,0 +1,413 @@
+{
+  "id": "C07-A010",
+  "subject": "Physics",
+  "course": "Classical Mechanics",
+  "textbook": "Classical Mechanics: MIT 8.01 Course Notes (Dourmashkin)",
+  "title": "Potential Energy Curve: Turning Points",
+  "status": "ready",
+  "video": "assets/videos/physics/classical-mechanics/cm10-potential-energy-curve.mp4",
+  "tags": [
+    "C07-A010",
+    "8.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080, 30 fps concept animation for a university Classical Mechanics course in Physics: Potential Energy Curve. Show the actual mechanism, not just its result: 0–5s horizontal E line crosses curve; 5–13s region with U≤E fills; U>E dims; 13–22s particle slows and reverses at intersection; 22–30s force direction points back toward minimum Then compare: hold allowed band and turning points. Conclude that A particle can occupy U(x)≤E; it turns where U=E because K=0. Use Remotion 4.0.410, React 19, TypeScript 5.8.2 and FFmpeg with the Classical Mechanics source kit and the per-topic TSX/state source.\n\nUse the paper-light ground #ffffff → #f6f8fb → #eaeff6, primary #aa3377, accent #882255, result #117733, warn #bb5566 and alternate #4477aa; use \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif and directly animate the topic-specific L2 mechanics geometry and numeric readouts. Exact reproduction requires the included course kit, source, formula assets and Leadde icon; system-font fallback may differ, and exact clean-machine reproduction has not been tested.",
+  "original_name": "Potential energy curve",
+  "standard_name": "Potential Energy Curve",
+  "aliases": [],
+  "final_title": "Potential Energy Curve: Turning Points",
+  "learning_objective": "Read allowed motion, turning points and kinetic energy from U(x) and total E.",
+  "core_conclusion": "A particle can occupy U(x)≤E; it turns where U=E because K=0.",
+  "references": [
+    {
+      "title": "OpenStax University Physics Volume 1",
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/8-4-potential-energy-diagrams-and-stability",
+      "scope": "Read allowed motion, turning points and kinetic energy from U(x) and total E."
+    }
+  ],
+  "artifact_version": "classical-mechanics-20261012-v3",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Potential energy curve” using this visual metaphor: “a minimal virtual laboratory showing one visible physical change for Potential energy curve”. Dynamically demonstrate the core formula or conclusion: Force follows a potential curve through $F=-dU/dx$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion 4.0.410 + React 19",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/classical-mechanics/src/videos/cm10-potential-energy-curve.tsx",
+    "scenes": [
+      {
+        "id": "landscape",
+        "objects": [
+          "U(x) curve",
+          "particle",
+          "E line"
+        ],
+        "initial_state": "particle in potential well",
+        "trigger": "set total energy",
+        "change": "horizontal E line crosses curve",
+        "cause": "set total energy",
+        "result": "vertical gap reads K=E−U",
+        "screen_copy": "Compare U with total E",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "reading_seconds": 2,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "allowed",
+        "objects": [
+          "allowed region",
+          "forbidden region",
+          "particle"
+        ],
+        "initial_state": "E line fixed",
+        "trigger": "scan x values",
+        "change": "region with U≤E fills; U>E dims",
+        "cause": "scan x values",
+        "result": "K readout never negative on allowed path",
+        "screen_copy": "Motion needs K≥0",
+        "start_seconds": 5,
+        "end_seconds": 13,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "turning",
+        "objects": [
+          "moving particle",
+          "turning-point markers"
+        ],
+        "initial_state": "particle moving toward rising U",
+        "trigger": "approach U=E intersection",
+        "change": "particle slows and reverses at intersection",
+        "cause": "approach U=E intersection",
+        "result": "K=0 at reversal and root U(x)=E is marked",
+        "screen_copy": "Turning point: U=E",
+        "start_seconds": 13,
+        "end_seconds": 22,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      },
+      {
+        "id": "stability",
+        "objects": [
+          "well minimum",
+          "small displacement",
+          "E and U summary"
+        ],
+        "initial_state": "particle near minimum",
+        "trigger": "nudge particle",
+        "change": "force direction points back toward minimum Then compare: hold allowed band and turning points",
+        "cause": "nudge particle",
+        "result": "slope F=−dU/dx changes sign across minimum energy line predicts reachable positions",
+        "screen_copy": "Minimum is stable; Read the curve as motion",
+        "start_seconds": 22,
+        "end_seconds": 30,
+        "reading_seconds": 2.5,
+        "timing_reason": "Action and resulting state remain visible long enough to follow the physical cause."
+      }
+    ],
+    "scene_rationale": "Four states show landscape, allowed interval, turning point and local stability; the final state retains all energy markers.",
+    "l3_interface": {
+      "primitives": [
+        "EnergyLandscape"
+      ],
+      "state_parameters": "U(x),E,probeX,turningRoots,force=-dUdx",
+      "review_misconception": "A turning point has K=0; allowed region is U<=E."
+    },
+    "state_model": {
+      "source": "assets/source-kits/classical-mechanics/src/videos/cm10-potential-energy-curve.state.ts",
+      "bindings": [
+        "U(x),E,probeX,turningRoots,force=-dUdx"
+      ],
+      "render_chain": "local scene frame + scene offset → modelFrame → stateAt → L2 primitive props and visible SVG labels"
+    },
+    "template_scope": [
+      "kit theme",
+      "fonts",
+      "L1c axes/layout",
+      "L2 mechanics primitives"
+    ],
+    "critical_processes": [
+      {
+        "id": "core",
+        "scene_id": "turning",
+        "uncertainty": "The state transition must visibly match the stated mechanics.",
+        "expected_observation": "K=0 at reversal and root U(x)=E is marked"
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-transition",
+        "time_seconds": 19.0,
+        "reason": "Inspect the object, numerical and annotation state around the main change."
+      }
+    ],
+    "previews": [
+      {
+        "process_id": "core",
+        "artifact": "assets/source-kits/classical-mechanics/src/probes/cm10-potential-energy-curve.tsx",
+        "version": "b1-minimal",
+        "reviewer": "Codex main conversation",
+        "reviewed_at": "2026-10-12T08:13:57.365628+00:00",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/b1-evidence.json",
+          ".workbuddy/batch-20261012-physics-classical-mechanics/recvvJaLmbCRDy/probe-markup-evidence.json"
+        ],
+        "observed": "Actual probe markup changes across the mechanism frames; state assertions pass. This is a code gate, not final teaching approval.",
+        "applicability": [
+          "recvvJaLmbCRDy"
+        ],
+        "status": "code-gate-passed"
+      }
+    ],
+    "rework": [
+      {
+        "category": "logic",
+        "cause": "The turning-point heading arrives long before the moving marker reaches U=E; the marker reaches the root under the later stability heading.",
+        "affected_ids": [
+          "C07-A010"
+        ],
+        "status": "resolved",
+        "fix": "The moving point stays inside the shaded U≤E region, reaches the right root at 19 s with U=E and K=0, then returns toward the potential minimum.",
+        "evidence": [
+          "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/previous-v1.mp4",
+          "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/contact-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/risk-sheet.jpg",
+          "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/samples.json"
+        ]
+      }
+    ],
+    "code_gate": {
+      "status": "passed",
+      "checked_at": "2026-10-12T08:32:25.821342+00:00",
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/register.cjs",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "assertions": "const assert=require(\"node:assert/strict\");const {stateAt:at}=require(\"/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm10-potential-energy-curve.state.ts\");assert.equal(at(20).x,2);assert(at(45).K>0);assert(at(74).K>0);assert.equal(at(75).K,0);assert(at(90).x<at(75).x);assert.equal(at(75).rightTurn,3);\nconsole.log(\"PASS: before/during/after, boundary states and visible parameters\");\n",
+      "source_check": {
+        "minimal_probe": "assets/source-kits/classical-mechanics/src/probes/cm10-potential-energy-curve.tsx",
+        "state_source": "assets/source-kits/classical-mechanics/src/videos/cm10-potential-energy-curve.state.ts",
+        "visible_state_parameters": [
+          "K",
+          "U",
+          "markerX"
+        ],
+        "finding": "Frame input calls stateAt; returned physical state is bound to SVG positions, dimensions or numeric annotations.",
+        "scope": [
+          "recvvJaLmbCRDy"
+        ]
+      },
+      "rendered_probe_frames": [
+        0,
+        45,
+        75,
+        90
+      ],
+      "rendered_probe_distinct_states": 3,
+      "applicability": [
+        "recvvJaLmbCRDy"
+      ]
+    },
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/classical-mechanics/src/videos/cm10-potential-energy-curve.tsx"
+  },
+  "review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — direct final-MP4 frame review",
+    "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+    "evidence": [
+      "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/risk-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — executed type, media, source-state and geometry checks",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/tsc-final.log",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/media-final.json",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/overlap-final.log",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/b1-evidence.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "classical-mechanics-20261012-v3",
+      "reviewer": "Codex main conversation — direct final-MP4 frame review",
+      "reviewed_at": "2026-10-12T08:53:18.213206+00:00",
+      "evidence": [
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/contact-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/risk-sheet.jpg",
+        "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/samples.json"
+      ],
+      "observation": "The moving point stays inside the shaded U≤E region, reaches the right root at 19 s with U=E and K=0, then returns toward the potential minimum.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-transition",
+          "times_seconds": [
+            18.0,
+            19.0,
+            20.0
+          ],
+          "evidence": [
+            "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/risk-sheet.jpg"
+          ],
+          "observation": "The moving point stays inside the shaded U≤E region, reaches the right root at 19 s with U=E and K=0, then returns toward the potential minimum."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "Core mechanism lost when headings and prose are hidden",
+          "triggered": false,
+          "reason": "The moving point stays inside the shaded U≤E region, reaches the right root at 19 s with U=E and K=0, then returns toward the potential minimum."
+        },
+        {
+          "condition": "Only decorative motion remains",
+          "triggered": false,
+          "reason": "The moving point stays inside the shaded U≤E region, reaches the right root at 19 s with U=E and K=0, then returns toward the potential minimum."
+        },
+        {
+          "condition": "A key operation is declared without being performed",
+          "triggered": false,
+          "reason": "The moving point stays inside the shaded U≤E region, reaches the right root at 19 s with U=E and K=0, then returns toward the potential minimum."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex main conversation — compared actual final MP4 frames, source narrative and prompt",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/prompts/physics/classical-mechanics/cm10-potential-energy-curve.md",
+      "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/contact-sheet.jpg",
+      "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/risk-sheet.jpg"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Course kit and source supplied; font fallback may differ; exact clean-machine reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "classical-mechanics-20261012-v3",
+      "record_id": "recvvJaLmbCRDy",
+      "verified_at": "2026-10-12T17:00:26.072232+08:00"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "classical-mechanics-20261012-v3",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/a5b1086a-5697-4d79-99a2-f3e197f6508c",
+        "comment_id": 6121049840,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128#issuecomment-6121049840",
+        "issue_number": 128,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/128",
+        "video_version": "classical-mechanics-20261012-v3",
+        "video_bytes": 1909294,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/a5b1086a-5697-4d79-99a2-f3e197f6508c",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLmbCRDy",
+  "page": "catalog/physics/8-01.md",
+  "course_code": "8.01",
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "seo_title": "Potential Energy Curve: Turning Points",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Potential energy curve",
+    "standard_name": "Potential Energy Curve",
+    "scope": "Read allowed motion, turning points and kinetic energy from U(x) and total E.",
+    "sources": [
+      {
+        "title": "OpenStax University Physics Volume 1",
+        "url": "https://openstax.org/books/university-physics-volume-1/pages/8-4-potential-energy-diagrams-and-stability",
+        "scope": "Read allowed motion, turning points and kinetic energy from U(x) and total E."
+      }
+    ]
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "classical-mechanics-20261012-v3",
+    "reviewer": "Codex main conversation — inspected topic cover and pixel geometry",
+    "reviewed_at": "2026-10-12T08:56:53.622952+00:00",
+    "evidence": [
+      "assets/covers/physics/classical-mechanics/cm10-potential-energy-curve.jpg",
+      "assets/reviews/physics/classical-mechanics/cm10-potential-energy-curve/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLmbCRDy",
+      "slug": "cm10-potential-energy-curve",
+      "bbox": [
+        207,
+        182,
+        794,
+        682
+      ],
+      "width": 587,
+      "height": 500,
+      "dx": 0.5,
+      "dy": -18.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/physics/classical-mechanics/cm10-potential-energy-curve.jpg",
+  "prompt_file": "assets/prompts/physics/classical-mechanics/cm10-potential-energy-curve.md",
+  "cover_image": "assets/covers/physics/classical-mechanics/cm10-potential-energy-curve.jpg",
+  "cover_version": "classical-mechanics-20261012-v3",
+  "feishu": {
+    "record_id": "recvvJaLmbCRDy",
+    "verified": true,
+    "verified_at": "2026-10-12T17:00:26.072232+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/a5b1086a-5697-4d79-99a2-f3e197f6508c",
+  "player_version": "classical-mechanics-20261012-v3"
+}

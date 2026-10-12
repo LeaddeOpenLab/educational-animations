@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/classical-mechanics/src/videos/cm06-conservation-of-momentum.state.ts");assert.equal(at(14).p1,6);assert.equal(at(14).p2,-1);assert(at(29).p1<6);assert(at(45).p1<6&&at(45).p2>-1);assert.equal(at(65).total,5);assert.equal(at(79).external,0);assert.equal(at(80).total,6);
+console.log("PASS: before/during/after, boundary states and visible parameters");
