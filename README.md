@@ -1,18 +1,14 @@
 # Educational Animations for Computer Science, AI & Math — Leadde
 
-[![Leadde animation collection: videos, concepts and latest activity](assets/site/library-banner.svg)](https://LeaddeOpenLab.github.io/educational-animations/)
+[![400+ educational videos · 17 disciplines · Continuously updated](assets/site/library-banner.svg)](https://LeaddeOpenLab.github.io/educational-animations/)
 
-## 434 educational videos · 528 concepts
+## 400+ Videos · 17 Disciplines · Continuously Updated
 
-**[Explore the collection →](https://LeaddeOpenLab.github.io/educational-animations/)** · Watch previews, filter by topic, copy prompts and find source notes.
+A growing library of educational animations and reusable prompts by **Leadde**. Explore **46 courses** across computer science, AI, mathematics, natural sciences, and more — with new videos and topics added regularly.
 
-[Computer Science](https://LeaddeOpenLab.github.io/educational-animations/#subject=Computer+Science) · [Artificial Intelligence](https://LeaddeOpenLab.github.io/educational-animations/#subject=Artificial+Intelligence) · [Mathematics](https://LeaddeOpenLab.github.io/educational-animations/#subject=Mathematics)
+**[Explore the collection →](https://LeaddeOpenLab.github.io/educational-animations/)** · Watch videos, browse by subject, and copy prompts for your next explanation.
 
-Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.
-
-**434 video-ready · 128 recorded review passes · 94 awaiting production · 46 courses · 17 disciplines**
-
-Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
+[Computer Science](https://LeaddeOpenLab.github.io/educational-animations/#subject=Computer+Science) · [Artificial Intelligence](https://LeaddeOpenLab.github.io/educational-animations/#subject=Artificial+Intelligence) · [Mathematics](https://LeaddeOpenLab.github.io/educational-animations/#subject=Mathematics) · [All disciplines](https://LeaddeOpenLab.github.io/educational-animations/#collection)
 
 ## Start learning
 

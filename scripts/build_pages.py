@@ -25,14 +25,45 @@ def write_banner(items):
     courses = len({(x['subject'], x['course']) for x in items})
     subjects = len({x['subject'] for x in items})
     date = git('log', '-1', '--format=%cs', '--', 'data/prompts.json')
-    banner = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="{videos} available educational videos. Explore the Leadde collection.">
-<rect width="1200" height="300" rx="22" fill="#f1edff"/><g font-family="Arial,Helvetica,sans-serif">
-<text x="54" y="55" fill="#6e4dfc" font-size="16" font-weight="700" letter-spacing="2">LEADDE · KNOWLEDGE IN MOTION</text>
-<text x="50" y="152" fill="#1e2026" font-size="76" font-weight="700">{videos}</text><text x="225" y="149" fill="#1e2026" font-size="32">videos. Big ideas, made visible.</text>
-<text x="55" y="199" fill="#737581" font-size="20">{len(items)} cataloged concepts · {courses} courses · {subjects} disciplines</text>
-<text x="55" y="252" fill="#737581" font-size="16">Latest catalog activity: {date} · Includes prompts awaiting video production</text>
-<rect x="847" y="213" width="300" height="50" rx="9" fill="#6e4dfc"/><text x="880" y="245" fill="white" font-size="19" font-weight="700">Explore the collection →</text>
-</g></svg>'''
+    milestone = f'{videos // 100 * 100}+' if videos >= 100 else str(videos)
+    banner = f'''<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="460" viewBox="0 0 1280 460" role="img" aria-labelledby="title description">
+<title id="title">{milestone} educational videos · {subjects} disciplines · Continuously updated</title>
+<desc id="description">A growing collection of {videos} available videos across {courses} courses. Explore animations and reusable prompts from Leadde. Latest catalog update: {date}.</desc>
+<defs>
+  <linearGradient id="background" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#201342"/><stop offset=".55" stop-color="#4725a8"/><stop offset="1" stop-color="#6e4dfc"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#ad94ff" stop-opacity=".32"/><stop offset="1" stop-color="#ad94ff" stop-opacity="0"/></radialGradient>
+  <clipPath id="bounds"><rect width="1280" height="460" rx="24"/></clipPath>
+</defs>
+<g clip-path="url(#bounds)">
+<rect width="1280" height="460" fill="url(#background)"/>
+<ellipse cx="1030" cy="75" rx="470" ry="330" fill="url(#glow)"/>
+<g fill="none" stroke="#b8a1ff" stroke-opacity=".12"><circle cx="1200" cy="232" r="230"/><circle cx="1200" cy="232" r="290"/><circle cx="1200" cy="232" r="350"/></g>
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="52" y="54" fill="#fff" font-size="22" font-weight="700">Leadde</text>
+  <path d="M145 37v20" stroke="#ffffff" stroke-opacity=".35"/>
+  <text x="165" y="52" fill="#cfc0ff" font-size="13" font-weight="700" letter-spacing="2">KNOWLEDGE IN MOTION</text>
+  <rect x="996" y="28" width="232" height="39" rx="19.5" fill="#ffffff" fill-opacity=".09" stroke="#ffffff" stroke-opacity=".22"/>
+  <circle cx="1017" cy="47.5" r="4" fill="#b4ffdb"/>
+  <text x="1031" y="52" fill="#fff" font-size="12" font-weight="700" letter-spacing="1">CONTINUOUSLY UPDATED</text>
+  <text x="44" y="249" fill="#fff" font-size="176" font-weight="800" letter-spacing="-9">{milestone}</text>
+  <text x="54" y="294" fill="#fff" font-size="28" font-weight="700" letter-spacing="2">EDUCATIONAL VIDEOS</text>
+  <text x="54" y="329" fill="#cfc0ff" font-size="18">Watch the concept. Reuse the prompt.</text>
+  <path d="M506 123v213" stroke="#ffffff" stroke-opacity=".19"/>
+  <text x="554" y="166" fill="#fff" font-size="44" font-weight="700" letter-spacing="-1.3">Across disciplines.</text>
+  <text x="554" y="222" fill="#cebdff" font-size="44" font-weight="700" letter-spacing="-1.3">Always growing.</text>
+  <text x="557" y="266" fill="#ded4ff" font-size="17">Computer Science · AI · Math · Science &amp; more</text>
+  <text x="556" y="320" fill="#fff" font-size="28" font-weight="700">{subjects}<tspan font-size="19" font-weight="400" fill="#e0d5ff"> disciplines</tspan></text>
+  <path d="M727 298v27" stroke="#ffffff" stroke-opacity=".25"/>
+  <text x="753" y="320" fill="#fff" font-size="28" font-weight="700">{courses}<tspan font-size="19" font-weight="400" fill="#e0d5ff"> courses</tspan></text>
+  <path d="M52 367h1176" stroke="#ffffff" stroke-opacity=".17"/>
+  <circle cx="59" cy="412" r="4" fill="#b4ffdb"/>
+  <text x="75" y="418" fill="#d8cbff" font-size="16">Latest catalog update · {date}</text>
+  <rect x="915" y="386" width="313" height="52" rx="10" fill="#fff"/>
+  <text x="947" y="419" fill="#593bd8" font-size="19" font-weight="700">Explore the collection</text>
+  <path d="M1184 412h16m-6-6 6 6-6 6" fill="none" stroke="#593bd8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</svg>'''
     (ROOT / 'assets/site/library-banner.svg').write_text(banner)
 
 def build():

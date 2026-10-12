@@ -16,10 +16,18 @@ name=lambda x:x.get('standard_name',x['title'])
 summary=lambda rows:f"{sum(bool(ready(x)) for x in rows)} videos · {sum(not ready(x) for x in rows)} awaiting production"
 lib=OrderedDict()
 for x in items: lib.setdefault(x['subject'],OrderedDict()).setdefault(x['course'],[]).append(x)
-lines=['# Educational Animations for Computer Science, AI & Math — Leadde','', 'Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.','',f"**{sum(bool(ready(x)) for x in items)} video-ready · {sum(bool(review_passed(x)) for x in items)} recorded review passes · {sum(not ready(x) for x in items)} awaiting production · {sum(len(c) for c in lib.values())} courses · {len(lib)} disciplines**",'', 'Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.','']
-write_banner(items)
+video_count = sum(bool(ready(x)) for x in items)
+video_label = f'{video_count // 100 * 100}+' if video_count >= 100 else str(video_count)
 site_url = 'https://LeaddeOpenLab.github.io/educational-animations/'
-lines[2:2] = [f'[![Leadde animation collection: videos, concepts and latest activity](assets/site/library-banner.svg)]({site_url})', '', f'## {sum(bool(ready(x)) for x in items)} educational videos · {len(items)} concepts', '', f'**[Explore the collection →]({site_url})** · Watch previews, filter by topic, copy prompts and find source notes.', '', f'[Computer Science]({site_url}#subject=Computer+Science) · [Artificial Intelligence]({site_url}#subject=Artificial+Intelligence) · [Mathematics]({site_url}#subject=Mathematics)', '']
+write_banner(items)
+lines = [
+ '# Educational Animations for Computer Science, AI & Math — Leadde', '',
+ f'[![{video_label} educational videos · {len(lib)} disciplines · Continuously updated](assets/site/library-banner.svg)]({site_url})', '',
+ f'## {video_label} Videos · {len(lib)} Disciplines · Continuously Updated', '',
+ f'A growing library of educational animations and reusable prompts by **Leadde**. Explore **{sum(len(c) for c in lib.values())} courses** across computer science, AI, mathematics, natural sciences, and more — with new videos and topics added regularly.', '',
+ f'**[Explore the collection →]({site_url})** · Watch videos, browse by subject, and copy prompts for your next explanation.', '',
+ f'[Computer Science]({site_url}#subject=Computer+Science) · [Artificial Intelligence]({site_url}#subject=Artificial+Intelligence) · [Mathematics]({site_url}#subject=Mathematics) · [All disciplines]({site_url}#collection)', '',
+]
 featured_lines = ['## Featured videos', '', '<table>', '<tr>']
 for x in items:
  if x.get('featured') and ready(x):
