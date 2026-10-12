@@ -28330,9 +28330,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/926f6601-ada0-4a65-beb8-83391b7bd98f",
           "comment_id": 6119344817,
@@ -28346,7 +28346,10 @@
         },
         "player": "https://github.com/user-attachments/assets/926f6601-ada0-4a65-beb8-83391b7bd98f",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLpUMM47",
@@ -28698,9 +28701,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v3",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/3bc3dd74-8eaa-4b16-915f-f4ede71f0e1d",
           "comment_id": 6119345954,
@@ -28714,7 +28717,10 @@
         },
         "player": "https://github.com/user-attachments/assets/3bc3dd74-8eaa-4b16-915f-f4ede71f0e1d",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLpXgCgy",
@@ -29060,9 +29066,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/7661b19d-2c2a-4f5b-a306-b99091ca21d9",
           "comment_id": 6119346931,
@@ -29076,7 +29082,10 @@
         },
         "player": "https://github.com/user-attachments/assets/7661b19d-2c2a-4f5b-a306-b99091ca21d9",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLpZN7JV",
@@ -29403,9 +29412,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/8b880eec-6bd6-4026-b183-96c3620ef160",
           "comment_id": 6119347870,
@@ -29419,7 +29428,10 @@
         },
         "player": "https://github.com/user-attachments/assets/8b880eec-6bd6-4026-b183-96c3620ef160",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLq2ENpk",
@@ -29750,9 +29762,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/82553c7f-ba4e-40e5-b582-03ea05f7a338",
           "comment_id": 6119348794,
@@ -29766,7 +29778,10 @@
         },
         "player": "https://github.com/user-attachments/assets/82553c7f-ba4e-40e5-b582-03ea05f7a338",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLq7xmDB",
@@ -30108,9 +30123,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/24f6f8f1-91e7-4572-a8d0-6f9b2dd896ec",
           "comment_id": 6119349672,
@@ -30124,7 +30139,10 @@
         },
         "player": "https://github.com/user-attachments/assets/24f6f8f1-91e7-4572-a8d0-6f9b2dd896ec",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLq9yv5g",
@@ -30484,9 +30502,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v3",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/49394713-c6e3-4df6-8517-34b43e8664a4",
           "comment_id": 6119350599,
@@ -30500,7 +30518,10 @@
         },
         "player": "https://github.com/user-attachments/assets/49394713-c6e3-4df6-8517-34b43e8664a4",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLqbYT8v",
@@ -30863,9 +30884,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/5cecb1a3-3414-48a6-9df0-194a321a10ad",
           "comment_id": 6119351548,
@@ -30879,7 +30900,10 @@
         },
         "player": "https://github.com/user-attachments/assets/5cecb1a3-3414-48a6-9df0-194a321a10ad",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLqkOmWu",
@@ -31225,9 +31249,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/65332d41-e7f4-4db1-8f43-fcb04248874a",
           "comment_id": 6119353121,
@@ -31241,7 +31265,10 @@
         },
         "player": "https://github.com/user-attachments/assets/65332d41-e7f4-4db1-8f43-fcb04248874a",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLqmGyse",
@@ -31572,9 +31599,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/39714fdf-5479-42ba-a627-3fcbabbfad6d",
           "comment_id": 6119354277,
@@ -31588,7 +31615,10 @@
         },
         "player": "https://github.com/user-attachments/assets/39714fdf-5479-42ba-a627-3fcbabbfad6d",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLqpVQek",
@@ -31919,9 +31949,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/f83e0d23-0aa4-461d-b656-516d4c3b6cd7",
           "comment_id": 6119355201,
@@ -31935,7 +31965,10 @@
         },
         "player": "https://github.com/user-attachments/assets/f83e0d23-0aa4-461d-b656-516d4c3b6cd7",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLqrxIKZ",
@@ -32288,9 +32321,9 @@
         "verified_at": "2026-10-12T15:00:10+0800"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "financial-markets-20261012-v1",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/6af2a072-63a4-4e0c-84c1-1c957d6f25b2",
           "comment_id": 6119356188,
@@ -32304,7 +32337,10 @@
         },
         "player": "https://github.com/user-attachments/assets/6af2a072-63a4-4e0c-84c1-1c957d6f25b2",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/finance/econ-252.md",
+        "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+        "verified_at": "2026-10-12T15:32:04.460622+08:00"
       }
     },
     "feishu_record_id": "recvvJaLquUYyf",

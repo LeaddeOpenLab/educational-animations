@@ -295,9 +295,9 @@
       "verified_at": "2026-10-12T15:00:10+0800"
     },
     "github": {
-      "status": "pendingpage",
+      "status": "succeeded",
       "version": "financial-markets-20261012-v3",
-      "page_status": "pending",
+      "page_status": "published",
       "attachment": {
         "attachment_url": "https://github.com/user-attachments/assets/49394713-c6e3-4df6-8517-34b43e8664a4",
         "comment_id": 6119350599,
@@ -311,7 +311,10 @@
       },
       "player": "https://github.com/user-attachments/assets/49394713-c6e3-4df6-8517-34b43e8664a4",
       "playback_status": "ACCEPTED_BY_USER_POLICY",
-      "policy_date": "2026-09-30"
+      "policy_date": "2026-09-30",
+      "page": "catalog/finance/econ-252.md",
+      "commit": "61d86275956961d0a80ce05ff9c2d856052962da",
+      "verified_at": "2026-10-12T15:32:04.460622+08:00"
     }
   },
   "feishu_record_id": "recvvJaLqbYT8v",
