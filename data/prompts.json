@@ -13943,12 +13943,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
         "record_id": "recvvJaLlR48Ya",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/d4a228ec-0c90-4edb-b7a9-da717926ec15",
           "comment_id": 6121038113,
@@ -13962,7 +13962,10 @@
         },
         "player": "https://github.com/user-attachments/assets/d4a228ec-0c90-4edb-b7a9-da717926ec15",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLlR48Ya",
@@ -14363,12 +14366,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v4",
         "record_id": "recvvJaLlTj2kp",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v4",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/af7a1404-3ce5-4e54-9114-e33c4e8de0c6",
           "comment_id": 6121039306,
@@ -14382,7 +14385,10 @@
         },
         "player": "https://github.com/user-attachments/assets/af7a1404-3ce5-4e54-9114-e33c4e8de0c6",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLlTj2kp",
@@ -14784,12 +14790,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
         "record_id": "recvvJaLlVzcKf",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/61c48659-c3fa-49f3-ba2f-0b31e5311989",
           "comment_id": 6121040525,
@@ -14803,7 +14809,10 @@
         },
         "player": "https://github.com/user-attachments/assets/61c48659-c3fa-49f3-ba2f-0b31e5311989",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLlVzcKf",
@@ -15235,12 +15244,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v5",
         "record_id": "recvvJaLlYxwrZ",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v5",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/46902ddf-0f0c-4621-87b4-3bd0581b748a",
           "comment_id": 6121041745,
@@ -15254,7 +15263,10 @@
         },
         "player": "https://github.com/user-attachments/assets/46902ddf-0f0c-4621-87b4-3bd0581b748a",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLlYxwrZ",
@@ -15657,12 +15669,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
         "record_id": "recvvJaLm0aDYw",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/df4d1e0d-8cce-420d-8b55-7385a59be5f9",
           "comment_id": 6121043062,
@@ -15676,7 +15688,10 @@
         },
         "player": "https://github.com/user-attachments/assets/df4d1e0d-8cce-420d-8b55-7385a59be5f9",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLm0aDYw",
@@ -16073,12 +16088,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
         "record_id": "recvvJaLm2cu15",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/c60e172e-6ea2-407e-8af4-dc4c9c548436",
           "comment_id": 6121044338,
@@ -16092,7 +16107,10 @@
         },
         "player": "https://github.com/user-attachments/assets/c60e172e-6ea2-407e-8af4-dc4c9c548436",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLm2cu15",
@@ -16506,12 +16524,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v4",
         "record_id": "recvvJaLm42ygG",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v4",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/d626e90f-6ab7-4cb0-8e51-7f44aadc0190",
           "comment_id": 6121045771,
@@ -16525,7 +16543,10 @@
         },
         "player": "https://github.com/user-attachments/assets/d626e90f-6ab7-4cb0-8e51-7f44aadc0190",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLm42ygG",
@@ -16925,12 +16946,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v4",
         "record_id": "recvvJaLm6nN3h",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v4",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/ea191bf3-7c91-49c5-9320-a6a7de623d50",
           "comment_id": 6121047248,
@@ -16944,7 +16965,10 @@
         },
         "player": "https://github.com/user-attachments/assets/ea191bf3-7c91-49c5-9320-a6a7de623d50",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLm6nN3h",
@@ -17340,12 +17364,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
         "record_id": "recvvJaLm8WJuN",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/61b5f00d-d6ae-4f79-bd0b-a803d63bd56e",
           "comment_id": 6121048490,
@@ -17359,7 +17383,10 @@
         },
         "player": "https://github.com/user-attachments/assets/61b5f00d-d6ae-4f79-bd0b-a803d63bd56e",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLm8WJuN",
@@ -17753,12 +17780,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
         "record_id": "recvvJaLmbCRDy",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v3",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/a5b1086a-5697-4d79-99a2-f3e197f6508c",
           "comment_id": 6121049840,
@@ -17772,7 +17799,10 @@
         },
         "player": "https://github.com/user-attachments/assets/a5b1086a-5697-4d79-99a2-f3e197f6508c",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLmbCRDy",
@@ -18152,12 +18182,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
         "record_id": "recvvJaLmd82b9",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/b37aafca-d8c2-4417-829b-a7dd029dc432",
           "comment_id": 6121051338,
@@ -18171,7 +18201,10 @@
         },
         "player": "https://github.com/user-attachments/assets/b37aafca-d8c2-4417-829b-a7dd029dc432",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLmd82b9",
@@ -18564,12 +18597,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
         "record_id": "recvvJaLmfN39b",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/b9e62817-44b1-40bd-b0f1-77d80e789b52",
           "comment_id": 6121052667,
@@ -18583,7 +18616,10 @@
         },
         "player": "https://github.com/user-attachments/assets/b9e62817-44b1-40bd-b0f1-77d80e789b52",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLmfN39b",
@@ -18978,12 +19014,12 @@
         "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
         "record_id": "recvvJaLmhOCHD",
-        "verified_at": "2026-10-12T17:00:26.072232+08:00"
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       },
       "github": {
-        "status": "pendingpage",
+        "status": "succeeded",
         "version": "classical-mechanics-20261012-v2",
-        "page_status": "pending",
+        "page_status": "published",
         "attachment": {
           "attachment_url": "https://github.com/user-attachments/assets/f7ac02c3-7106-4fbc-b600-8206eb405cde",
           "comment_id": 6121054069,
@@ -18997,7 +19033,10 @@
         },
         "player": "https://github.com/user-attachments/assets/f7ac02c3-7106-4fbc-b600-8206eb405cde",
         "playback_status": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page": "catalog/physics/8-01.md",
+        "commit": "d63bc8b4d4ce94339fd1532813ec3300be36ab27",
+        "verified_at": "2026-10-12T17:02:39.744281+08:00"
       }
     },
     "feishu_record_id": "recvvJaLmhOCHD",
