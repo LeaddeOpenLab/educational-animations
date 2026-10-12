@@ -1,5 +1,13 @@
 # Educational Animations for Computer Science, AI & Math — Leadde
 
+[![Leadde animation collection: videos, concepts and latest activity](assets/site/library-banner.svg)](https://LeaddeOpenLab.github.io/educational-animations/)
+
+## 422 educational videos · 528 concepts
+
+**[Explore the collection →](https://LeaddeOpenLab.github.io/educational-animations/)** · Watch previews, filter by topic, copy prompts and find source notes.
+
+[Computer Science](https://LeaddeOpenLab.github.io/educational-animations/#subject=Computer+Science) · [Artificial Intelligence](https://LeaddeOpenLab.github.io/educational-animations/#subject=Artificial+Intelligence) · [Mathematics](https://LeaddeOpenLab.github.io/educational-animations/#subject=Mathematics)
+
 Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.
 
 **422 video-ready · 116 recorded review passes · 106 awaiting production · 46 courses · 17 disciplines**
@@ -13,24 +21,24 @@ Explore pointers, backpropagation and RAG through short previews, then follow a 
 <table>
 <tr>
 <td width="33%" valign="top">
-<a href="catalog/computer-science/cs50x.md#c01-a014"><img src="assets/previews/c01-a014-v1.gif" width="100%" alt="Animated preview: Pointer Dereferencing"></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C01-A014"><img src="assets/previews/c01-a014-v1.gif" width="100%" alt="Animated preview: Pointer Dereferencing"></a><br>
 <a href="catalog/learning-paths/pointers-and-memory-explained-visually.md"><strong>Pointers and Memory Explained Visually</strong></a><br>
 <sub>See how a pointer leads to a memory address, then follow what happens when code reads or writes through it.</sub><br>
-<a href="catalog/computer-science/cs50x.md#c01-a014">▶ Watch Pointer Dereferencing</a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C01-A014">▶ Watch Pointer Dereferencing</a><br>
 <a href="catalog/learning-paths/pointers-and-memory-explained-visually.md">Explore the 7-video guide →</a>
 </td>
 <td width="33%" valign="top">
-<a href="catalog/artificial-intelligence/6-036.md#c03-a009"><img src="assets/previews/c03-a009-v1.gif" width="100%" alt="Animated preview: Backpropagation"></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C03-A009"><img src="assets/previews/c03-a009-v1.gif" width="100%" alt="Animated preview: Backpropagation"></a><br>
 <a href="catalog/learning-paths/neural-network-training-explained-visually.md"><strong>Neural Network Training Explained Visually</strong></a><br>
 <sub>Trace the backward flow of gradients, then connect it to loss, parameter updates and validation.</sub><br>
-<a href="catalog/artificial-intelligence/6-036.md#c03-a009">▶ Watch Backpropagation</a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C03-A009">▶ Watch Backpropagation</a><br>
 <a href="catalog/learning-paths/neural-network-training-explained-visually.md">Explore the 8-video guide →</a>
 </td>
 <td width="33%" valign="top">
-<a href="catalog/artificial-intelligence/ai-gen.md#recvw24t2zgqi9"><img src="assets/previews/recvw24t2zgqi9-v1.gif" width="100%" alt="Animated preview: Retrieval-Augmented Generation Pipeline"></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=recvw24T2zGQI9"><img src="assets/previews/recvw24t2zgqi9-v1.gif" width="100%" alt="Animated preview: Retrieval-Augmented Generation Pipeline"></a><br>
 <a href="catalog/learning-paths/llms-and-rag-explained-visually.md"><strong>LLMs and RAG Explained Visually</strong></a><br>
 <sub>Follow a question from document retrieval to model context and a grounded answer.</sub><br>
-<a href="catalog/artificial-intelligence/ai-gen.md#recvw24t2zgqi9">▶ Watch Retrieval-Augmented Generation Pipeline</a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=recvw24T2zGQI9">▶ Watch Retrieval-Augmented Generation Pipeline</a><br>
 <a href="catalog/learning-paths/llms-and-rag-explained-visually.md">Explore the 8-video guide →</a>
 </td>
 </tr>
@@ -47,22 +55,22 @@ Use this library to study and revise concepts, find visual examples for classroo
 <table>
 <tr>
 <td width="33%" valign="top">
-<a href="catalog/computer-science/6-006.md#c02-a001"><img src="assets/previews/c02-a001-v1.gif" width="100%" alt="Animated preview: Divide and conquer recursion"></a><br>
-<a href="catalog/computer-science/6-006.md#c02-a001"><strong>Divide and conquer recursion</strong></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C02-A001"><img src="assets/previews/c02-a001-v1.gif" width="100%" alt="Animated preview: Divide and conquer recursion"></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C02-A001"><strong>Divide and conquer recursion</strong></a><br>
 <sub>Read a divide-and-conquer recurrence as a recursion tree.</sub><br>
-<a href="catalog/computer-science/6-006.md#c02-a001">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C02-A001">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
 </td>
 <td width="33%" valign="top">
-<a href="catalog/artificial-intelligence/ai-rl.md#c29-a001"><img src="assets/previews/c29-a001-v1.gif" width="100%" alt="Animated preview: States, Actions, and Rewards"></a><br>
-<a href="catalog/artificial-intelligence/ai-rl.md#c29-a001"><strong>States, Actions, and Rewards</strong></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C29-A001"><img src="assets/previews/c29-a001-v1.gif" width="100%" alt="Animated preview: States, Actions, and Rewards"></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C29-A001"><strong>States, Actions, and Rewards</strong></a><br>
 <sub>Distinguish state, action and reward in an interaction loop.</sub><br>
-<a href="catalog/artificial-intelligence/ai-rl.md#c29-a001">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C29-A001">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
 </td>
 <td width="33%" valign="top">
-<a href="catalog/mathematics/18-06.md#c05-a014"><img src="assets/previews/c05-a014-v1.gif" width="100%" alt="Animated preview: Rank-Nullity Theorem"></a><br>
-<a href="catalog/mathematics/18-06.md#c05-a014"><strong>Rank-Nullity Theorem</strong></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C05-A014"><img src="assets/previews/c05-a014-v1.gif" width="100%" alt="Animated preview: Rank-Nullity Theorem"></a><br>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C05-A014"><strong>Rank-Nullity Theorem</strong></a><br>
 <sub>Account for all input dimensions using rank and nullity.</sub><br>
-<a href="catalog/mathematics/18-06.md#c05-a014">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
+<a href="https://LeaddeOpenLab.github.io/educational-animations/#item=C05-A014">▶ Watch full video</a> · <a href="docs/verification/featured-inspection.md">Inspection scope</a>
 </td>
 </tr>
 </table>

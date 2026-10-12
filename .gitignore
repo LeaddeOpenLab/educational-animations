@@ -6,3 +6,4 @@ __pycache__/
 .workbuddy/
 .env*
 node_modules
+_site/

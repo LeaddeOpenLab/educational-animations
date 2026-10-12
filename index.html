@@ -1,1 +1,57 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Leadde Knowledge in Motion | Animation &amp; AI Prompts</title><meta name="description" content="Explore educational concept animations and reusable AI prompts across computer science, AI, mathematics, physics, and more. Create your own with Leadde."><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:site_name" content="Leadde Knowledge in Motion"><meta property="og:title" content="Leadde Knowledge in Motion"><meta property="og:description" content="Watch the concept. Reuse the prompt. Create your own educational animation with Leadde."><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Leadde Knowledge in Motion"><meta name="twitter:description" content="An open educational animation and AI prompt library from Leadde."><script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Leadde Knowledge in Motion","description":"An open educational animation and AI prompt library.","isPartOf":{"@type":"WebSite","name":"Leadde","url":"https://leadde.ai"}}</script><link rel="stylesheet" href="assets/site/styles.css"></head><body><main class="shell"><header class="hero"><a class="brand" href="https://leadde.ai" target="_blank" rel="noreferrer">LEADDE <span>AI</span></a><p class="eyebrow">EDUCATIONAL ANIMATION &amp; AI PROMPT LIBRARY</p><h1>Knowledge in <em>motion.</em></h1><p class="intro">Watch the concept. Reuse the prompt. Create your own educational animation with Leadde.</p></header><p id="stats" aria-live="polite"></p><div class="filters"><label for="search">Search concept, term or alias</label><input id="search" type="search" placeholder="Row space, null space, C05-A002…"><label><input type="checkbox" id="ready-only"> Only finished videos</label></div><nav id="breadcrumb" class="breadcrumb" aria-label="Library path"></nav><section id="app" aria-live="polite"></section></main><footer>Ready to make your own concept move? <a href="https://leadde.ai/animation" target="_blank" rel="noreferrer">Explore Leadde animation tools →</a></footer><script src="assets/site/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Knowledge in Motion — Educational Animations by Leadde</title>
+  <meta name="description" content="Explore educational animations across computer science, AI, mathematics and more. Watch real examples, copy animation prompts and learn how to reuse them.">
+  <meta name="theme-color" content="#6e4dfc">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Knowledge in Motion — Leadde">
+  <meta property="og:description" content="Big ideas, made visible. An open collection of educational animations and reusable prompts.">
+  <meta property="og:image" content="https://LeaddeOpenLab.github.io/educational-animations/assets/site/library-banner.svg">
+  <link rel="canonical" href="https://LeaddeOpenLab.github.io/educational-animations/">
+  <link rel="icon" href="assets/site/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site/styles.css">
+</head>
+<body>
+<a class="skip" href="#collection">Skip to the collection</a>
+<header class="header">
+  <div class="nav wrap">
+    <a class="brand" href="./" aria-label="Knowledge in Motion home"><img src="assets/site/leadde-logo.png" alt="Leadde" width="95" height="24"><span class="brand-divider"></span><span>Knowledge in Motion</span></a>
+    <nav aria-label="Main navigation"><a href="#collection">Explore library</a><a href="#how-it-works">How to use</a><a class="nav-github" href="https://github.com/LeaddeOpenLab/educational-animations" target="_blank" rel="noopener">GitHub ↗</a></nav>
+    <a class="button button-small" href="https://leadde.ai/animation" target="_blank" rel="noopener">Create with Leadde ↗</a>
+  </div>
+</header>
+<main>
+  <section class="hero wrap" id="home">
+    <div class="hero-copy">
+      <a href="#updates" class="eyebrow pill"><span class="live-dot"></span> THE OPEN ANIMATION LIBRARY <span>↗</span></a>
+      <h1>Big ideas.<br><span>Made visible.</span></h1>
+      <p class="hero-description">A clearer way to understand complex concepts.<br>Explore educational animations, find your next teaching example, and make it your own.</p>
+      <div class="hero-actions"><a class="button" href="#collection">Explore the collection <span>→</span></a><a class="button button-white" href="https://github.com/LeaddeOpenLab/educational-animations" target="_blank" rel="noopener"><span aria-hidden="true">☆</span> Star on GitHub</a></div>
+      <p class="hero-note">Watch the concept. Reuse the prompt. Keep learning.</p>
+    </div>
+    <div class="hero-showcase" id="hero-showcase"><div class="loading">Loading a real example…</div></div>
+  </section>
+  <section class="stats wrap" aria-label="Collection at a glance" id="stats"><!-- STATS --></section>
+  <div class="library-background">
+    <section class="section wrap" id="collection" aria-labelledby="collection-title">
+      <div class="section-heading"><div><p class="eyebrow">A LITTLE CURIOSITY GOES A LONG WAY</p><h2 id="collection-title">Find your next “aha” moment.</h2><p>From a single pointer to a neural network. See the idea in action.</p></div><a class="text-link" href="https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/INDEX.md" target="_blank" rel="noopener">Full GitHub index ↗</a></div>
+      <div class="toolbar"><div class="search-wrap"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 4.5 4.5"/></svg><label class="sr-only" for="search">Search concepts, courses or IDs</label><input id="search" type="search" placeholder="Search concepts, courses, or a little inspiration…" autocomplete="off"><kbd>/</kbd></div><label class="course-filter"><span class="sr-only">Filter by course</span><select id="course"><option value="">All courses</option></select></label></div>
+      <div id="subjects" class="subjects" role="group" aria-label="Filter by discipline"></div>
+      <div class="results-bar"><div><span id="results-title">Handpicked for your first visit</span><span id="result-count" aria-live="polite"></span></div><label class="ready-label"><input type="checkbox" id="ready-only" checked> Videos available</label></div>
+      <div id="cards" class="cards" aria-live="polite"><p class="loading">Loading the collection…</p></div>
+      <div class="more-row"><button type="button" class="button button-white" id="show-more" hidden>Explore more concepts <span>↓</span></button></div>
+      <noscript><p>Enable JavaScript to browse and play videos, or <a href="https://github.com/LeaddeOpenLab/educational-animations/blob/main/catalog/INDEX.md">browse every concept on GitHub</a>.</p></noscript>
+    </section>
+  </div>
+  <section class="section wrap" id="how-it-works" aria-labelledby="how-title"><div class="section-heading"><div><p class="eyebrow">FROM INSPIRATION TO CREATION</p><h2 id="how-title">Watch it. Understand it. Make it yours.</h2><p>A useful example is just the beginning.</p></div></div><div class="steps"><article><span class="step-number">01</span><h3>Find a concept</h3><p>Browse by discipline or search for a topic. Open an example to watch the full animation and see its learning objective.</p></article><article><span class="step-number">02</span><h3>Take a closer look</h3><p>Read the prompt, check the tools and source notes, and download the video or course package when available.</p></article><article><span class="step-number">03</span><h3>Make it your own</h3><p>Copy the prompt and adapt it to your subject and audience. Follow the example’s environment notes; reproduction status varies.</p></article></div></section>
+  <section class="updates-section wrap" id="updates"><div><p class="eyebrow">GROWING WITH EVERY NEW IDEA</p><h2>A library that keeps moving.</h2><p>Recent catalog activity, straight from the repository.</p><a class="text-link" href="https://github.com/LeaddeOpenLab/educational-animations/commits/main/" target="_blank" rel="noopener">View all updates ↗</a></div><div id="update-list"><!-- UPDATES --></div></section>
+  <section class="cta-section wrap"><div><p class="eyebrow">YOUR NEXT EXPLANATION STARTS HERE</p><h2>Give your ideas a little motion.</h2><p>Explore Leadde’s animation tools, or help this collection grow on GitHub.</p></div><div class="cta-actions"><a class="button" href="https://leadde.ai/animation" target="_blank" rel="noopener">Explore Leadde ↗</a><a class="text-link" href="https://github.com/LeaddeOpenLab/educational-animations/blob/main/.github/CONTRIBUTING.md" target="_blank" rel="noopener">Contribute to the collection →</a></div></section>
+</main>
+<footer class="footer wrap"><a href="https://leadde.ai" target="_blank" rel="noopener"><img src="assets/site/leadde-logo.png" alt="Leadde" width="95" height="24"></a><p>Knowledge worth sharing. Ideas worth seeing.</p><div><a href="https://github.com/LeaddeOpenLab/educational-animations" target="_blank" rel="noopener">GitHub ↗</a><a href="https://leadde.ai" target="_blank" rel="noopener">leadde.ai ↗</a></div></footer>
+<dialog id="detail" aria-labelledby="detail-title"><button class="close-dialog" aria-label="Close concept details" autofocus>×</button><div id="detail-content"></div></dialog>
+<script src="assets/site/app.js" defer></script>
+</body>
+</html>
