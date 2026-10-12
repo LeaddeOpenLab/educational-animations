@@ -2018,5 +2018,64 @@
         "version": "zephyr-20261010-v1"
       }
     ]
+  },
+  "ECON 252": {
+    "revision": 2,
+    "download_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/download/course-videos-finance-econ-252/econ-252-videos.zip",
+    "release_url": "https://github.com/LeaddeOpenLab/educational-animations/releases/tag/course-videos-finance-econ-252",
+    "video_count": 12,
+    "version": "bundle-2",
+    "updated_at": "2026-10-12T07:15:34Z",
+    "status": "current",
+    "members": [
+      {
+        "id": "C16-A001",
+        "version": "financial-markets-20261012-v2"
+      },
+      {
+        "id": "C16-A002",
+        "version": "financial-markets-20261012-v3"
+      },
+      {
+        "id": "C16-A003",
+        "version": "financial-markets-20261012-v2"
+      },
+      {
+        "id": "C16-A004",
+        "version": "financial-markets-20261012-v1"
+      },
+      {
+        "id": "C16-A005",
+        "version": "financial-markets-20261012-v1"
+      },
+      {
+        "id": "C16-A006",
+        "version": "financial-markets-20261012-v2"
+      },
+      {
+        "id": "C16-A007",
+        "version": "financial-markets-20261012-v3"
+      },
+      {
+        "id": "C16-A008",
+        "version": "financial-markets-20261012-v2"
+      },
+      {
+        "id": "C16-A009",
+        "version": "financial-markets-20261012-v2"
+      },
+      {
+        "id": "C16-A010",
+        "version": "financial-markets-20261012-v1"
+      },
+      {
+        "id": "C16-A011",
+        "version": "financial-markets-20261012-v1"
+      },
+      {
+        "id": "C16-A012",
+        "version": "financial-markets-20261012-v1"
+      }
+    ]
   }
 }

@@ -479,18 +479,18 @@
 - [C15-A012 · Adverse Selection](economics/econ-159.md#c15-a012) — video
 ## Financial Markets
 
-- [C16-A001 · Risk-return relationship](finance/econ-252.md#c16-a001) — awaiting production
-- [C16-A002 · Portfolio diversification](finance/econ-252.md#c16-a002) — awaiting production
-- [C16-A003 · Present value](finance/econ-252.md#c16-a003) — awaiting production
-- [C16-A004 · Yield curve](finance/econ-252.md#c16-a004) — awaiting production
-- [C16-A005 · Bond price](finance/econ-252.md#c16-a005) — awaiting production
-- [C16-A006 · Efficient market hypothesis](finance/econ-252.md#c16-a006) — awaiting production
-- [C16-A007 · Behavioral bias](finance/econ-252.md#c16-a007) — awaiting production
-- [C16-A008 · Option expiration gain](finance/econ-252.md#c16-a008) — awaiting production
-- [C16-A009 · Options exposure](finance/econ-252.md#c16-a009) — awaiting production
-- [C16-A010 · Financial leverage](finance/econ-252.md#c16-a010) — awaiting production
-- [C16-A011 · Market liquidity](finance/econ-252.md#c16-a011) — awaiting production
-- [C16-A012 · Financial crisis contagion](finance/econ-252.md#c16-a012) — awaiting production
+- [C16-A001 · Risk-Return Relationship](finance/econ-252.md#c16-a001) — video
+- [C16-A002 · Portfolio Diversification](finance/econ-252.md#c16-a002) — video
+- [C16-A003 · Present Value](finance/econ-252.md#c16-a003) — video
+- [C16-A004 · Yield Curve](finance/econ-252.md#c16-a004) — video
+- [C16-A005 · Bond Price](finance/econ-252.md#c16-a005) — video
+- [C16-A006 · Efficient Market Hypothesis](finance/econ-252.md#c16-a006) — video
+- [C16-A007 · Behavioral Bias](finance/econ-252.md#c16-a007) — video
+- [C16-A008 · Option Payoff at Expiration](finance/econ-252.md#c16-a008) — video
+- [C16-A009 · Options Exposure](finance/econ-252.md#c16-a009) — video
+- [C16-A010 · Financial Leverage](finance/econ-252.md#c16-a010) — video
+- [C16-A011 · Market Liquidity](finance/econ-252.md#c16-a011) — video
+- [C16-A012 · Financial Crisis Contagion](finance/econ-252.md#c16-a012) — video
 ## Introduction to Political Philosophy
 
 - [C17-A001 · Plato's justice](political-science/plsc-114.md#c17-a001) — awaiting production

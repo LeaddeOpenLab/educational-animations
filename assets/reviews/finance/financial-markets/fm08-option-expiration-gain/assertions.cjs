@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm08-option-expiration-gain.state.ts");assert.equal(at(0).profit,-5);assert.equal(at(300).payoff,0);assert(at(361).payoff>0);assert.equal(at(450).profit,-3);assert.equal(at(630).profit,0);assert.equal(at(810).profit,15);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

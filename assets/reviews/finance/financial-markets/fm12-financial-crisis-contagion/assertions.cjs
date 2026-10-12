@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm12-financial-crisis-contagion.state.ts");assert.equal(at(0).a,0);assert.equal(at(270).failed[0],true);assert.equal(at(450).b,6);assert.equal(at(450).d,2);assert.equal(at(450).failed[1],true);assert.equal(at(690).c,4);assert.equal(at(690).failed[2],true);assert.equal(at(929).failed[3],false);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

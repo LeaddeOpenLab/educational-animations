@@ -1,0 +1,7 @@
+import React from 'react';
+import {COLORS as C,FONT,alpha} from '../theme';
+import {Axes,Curve,sampleFn} from '../components/Plot';
+import {Diversification,OptionPayoff,OptionDelta} from '../components/Fin';
+import {ReturnOutcomes,CashValue,CapitalLedger,DepthRows,BankBalance} from '../components/FinanceState';
+import {stateAt} from '../videos/fm05-bond-price.state';
+export const Minimal=({frame}:{frame:number})=>{const st=stateAt(frame);return (<svg width={900} height={640} viewBox="0 0 900 640" data-k="figure" data-n="bond discount bars"><g fontFamily={FONT}>{st.pv.map((v,i)=><g key={i}><rect x={150+i*250} y={470-st.flows[i]*3} width={85} height={st.flows[i]*3} fill={C.bg2} stroke={C.axis}/><rect x={150+i*250} y={470-v*3} width={85} height={v*3} fill={alpha(C.accent,.5)} stroke={C.accent}/><text x={192+i*250} y={515} textAnchor="middle" fill={C.textStrong} fontSize={28}>{`Year ${i+1}`}</text><text x={192+i*250} y={555} textAnchor="middle" fill={C.accent} fontSize={27}>{`PV ${v.toFixed(2)}`}</text><text x={192+i*250} y={100} textAnchor="middle" fill={C.textMuted} fontSize={25}>{`Cash ${st.flows[i].toFixed(0)}`}</text></g>)}<text x={450} y={40} textAnchor="middle" fill={C.textStrong} fontSize={30}>{`Yield ${(st.yieldRate*100).toFixed(1)}% · Price ${st.price.toFixed(2)}`}</text><text x={450} y={610} fill={C.accent} textAnchor="middle" fontSize={28}>{`Sum ${st.summed.toFixed(0)} payments: ${st.subtotal.toFixed(2)}`}</text></g></svg>);};

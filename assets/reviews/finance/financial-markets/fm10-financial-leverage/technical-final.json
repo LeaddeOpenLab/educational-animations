@@ -1,0 +1,1442 @@
+[
+  {
+    "record_id": "recvvJaLpUMM47",
+    "version": "v2",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/01_Risk_Return_Relationship.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2610000,
+          "duration": "29.000000",
+          "bit_rate": "316210",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "870",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/01_Risk_Return_Relationship.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "29.000000",
+        "size": "1158095",
+        "bit_rate": "319474",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLpUMM47/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm01-risk-return-relationship.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm01-risk-return-relationship.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"return outcomes\"><ReturnOutcomes mu={st.mu} sigma={st.sigma} samples={st.samples} chosen={st.chosen}/>{st.realized!==null?<text x={450} y={570} fill={st.realized>=0?C.primary:C.result} fontFamily={FONT} textAnchor=\"middle\" fontSize={28}>{`One possible realization: ${st.realized.toFixed(1)}%`}</text>:null}</svg>",
+        "observed_source_behavior": "Start with outcomes centered at a low expected return. Increase mean from 3 to 7 and volatility from 2 to 10; outcome bars fan out around zero. Select five possible realized returns in turn, including the negative outcome, while the expected mean stays 7%. Return the realized-outcome selection to the negative outcome; hold it next to the unchanged expected return 7%.",
+        "applicability": [
+          "recvvJaLpUMM47"
+        ]
+      },
+      "assertions": "assert.equal(at(150).mu,3);assert.equal(at(390).sigma,10);assert(at(270).samples[4]>at(150).samples[4]);assert(at(390).samples[0]<0);assert(Math.abs(at(390).samples.reduce((a,b)=>a+b,0)/5-7)<1e-8);assert.equal(at(420).chosen,0);assert(at(420).realized<0);assert.equal(at(600).chosen,4);assert.equal(at(660).chosen,0);assert(at(800).realized<0);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLpXgCgy",
+    "version": "v3",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/02_Portfolio_Diversification.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "283007",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/02_Portfolio_Diversification.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "1073480",
+        "bit_rate": "286261",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLpXgCgy/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm02-portfolio-diversification.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm02-portfolio-diversification.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[1,18]} yDomain={[0,25]} xTicks={[1,4,8,16]} yTicks={[0,10,20]} xLabel=\"Number of equal-weight assets\" yLabel=\"Volatility (%)\" pad={{l:90,r:100,t:80,b:80}}>{s=><><Diversification s={s} sigma={20} rhos={[st.rho,.8]} progress={1}/><circle cx={s.px(st.n)} cy={s.py(st.low)} r={11} fill={C.accent}/><circle cx={s.px(st.n)} cy={s.py(st.high)} r={11} fill={C.alt}/><text x={s.px(7)} y={s.py(23)} fill={C.accent} fontSize={27}>{`n ${st.n.toFixed(0)} · low ρ σ ${st.low.toFixed(1)}%`}</text></>}</Axes>",
+        "observed_source_behavior": "One asset has volatility 20%. Increase equal-weight asset count from 1 to 16; markers move down two correlation curves. With 16 assets fixed, raise shared correlation from 0.2 to 0.6; the risk floor and moving portfolio marker rise. Compare the current rho 0.6 portfolio with the rho 0.8 benchmark at the same asset count.",
+        "applicability": [
+          "recvvJaLpXgCgy"
+        ]
+      },
+      "assertions": "assert.equal(at(0).low,20);assert(at(300).low<20);assert.equal(at(450).n,16);assert(at(450).low>at(450).floor);assert(at(450).high>at(450).low);assert(at(630).low>at(450).low);assert.equal(at(630).n,16);assert.equal(Number.isInteger(at(301).n),true);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLpZN7JV",
+    "version": "v2",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/03_Present_Value.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2610000,
+          "duration": "29.000000",
+          "bit_rate": "243091",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "870",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/03_Present_Value.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "29.000000",
+        "size": "893022",
+        "bit_rate": "246350",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLpZN7JV/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm03-present-value.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm03-present-value.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"discounted cash\"><CashValue future={st.future} present={st.present} years={st.years} rate={st.rate} tokenX={st.tokenX} tokenValue={st.tokenValue}/></svg>",
+        "observed_source_behavior": "Begin with a fixed future claim of 121 and zero discount rate. Raise discount rate to 10% over two years; present value falls to 100. Extend waiting time to three years while future cash remains 121; present value falls further. Move a cash packet from today to year 3 while its value compounds from present value 90.91 to the unchanged future claim 121.",
+        "applicability": [
+          "recvvJaLpZN7JV"
+        ]
+      },
+      "assertions": "assert.equal(at(0).present,121);assert(Math.abs(at(360).present-100)<1e-8);assert(at(540).present<100);assert.equal(at(570).future,121);assert(Math.abs(at(870).reconstructed-121)<1e-8);assert.equal(at(660).tokenValue,at(660).present);assert(at(720).tokenValue>at(660).tokenValue);assert(Math.abs(at(780).tokenValue-121)<1e-8);assert.equal(at(780).tokenX,700);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLq2ENpk",
+    "version": "v1",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/04_Yield_Curve.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "255849",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/04_Yield_Curve.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "971621",
+        "bit_rate": "259098",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLq2ENpk/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm04-yield-curve.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm04-yield-curve.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[1,10]} yDomain={[0,6]} xTicks={[1,5,10]} yTicks={[0,2,4,6]} xLabel=\"Maturity (years)\" yLabel=\"Yield (%)\" pad={{l:90,r:130,t:80,b:80}}>{s=><><Curve s={s} pts={sampleFn(st.yc,1,10)} color={C.primary} progress={1}/><circle cx={s.px(1)} cy={s.py(st.short)} r={10} fill={C.accent}/><circle cx={s.px(10)} cy={s.py(st.long)} r={10} fill={C.alt}/><text x={s.px(3)} y={s.py(1)} fill={C.textStrong} fontSize={28}>{`Long − short: ${st.spread.toFixed(2)} pp`}</text></>}</Axes>",
+        "observed_source_behavior": "Start with short yield 2% and long yield 4%. Raise short yield while holding ten-year yield fixed. At short yield 4%, the linear example becomes flat. Short yield reaches 5%; the long-minus-short spread is negative.",
+        "applicability": [
+          "recvvJaLq2ENpk"
+        ]
+      },
+      "assertions": "assert.equal(at(150).spread,2);assert.equal(at(470).spread,0);assert.equal(at(630).spread,-1);assert(at(629).short<5);assert.equal(at(899).yc(10),4);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLq7xmDB",
+    "version": "v1",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/05_Bond_Price.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "210125",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/05_Bond_Price.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "800154",
+        "bit_rate": "213374",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLq7xmDB/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm05-bond-price.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm05-bond-price.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"bond discount bars\"><g fontFamily={FONT}>{st.pv.map((v,i)=><g key={i}><rect x={150+i*250} y={470-st.flows[i]*3} width={85} height={st.flows[i]*3} fill={C.bg2} stroke={C.axis}/><rect x={150+i*250} y={470-v*3} width={85} height={v*3} fill={alpha(C.accent,.5)} stroke={C.accent}/><text x={192+i*250} y={515} textAnchor=\"middle\" fill={C.textStrong} fontSize={28}>{`Year ${i+1}`}</text><text x={192+i*250} y={555} textAnchor=\"middle\" fill={C.accent} fontSize={27}>{`PV ${v.toFixed(2)}`}</text><text x={192+i*250} y={100} textAnchor=\"middle\" fill={C.textMuted} fontSize={25}>{`Cash ${st.flows[i].toFixed(0)}`}</text></g>)}<text x={450} y={40} textAnchor=\"middle\" fill={C.textStrong} fontSize={30}>{`Yield ${(st.yieldRate*100).toFixed(1)}% · Price ${st.price.toFixed(2)}`}</text><text x={450} y={610} fill={C.accent} textAnchor=\"middle\" fontSize={28}>{`Sum ${st.summed.toFixed(0)} payments: ${st.subtotal.toFixed(2)}`}</text></g></svg>",
+        "observed_source_behavior": "A three-year bond pays 5, 5 and 105; yield equals its 5% coupon. Raise required yield from 5% to 10% with cash flows unchanged. After the bars shrink, add the three discounted payments into a subtotal one at a time. Compare the changed total with the unchanged face value.",
+        "applicability": [
+          "recvvJaLq7xmDB"
+        ]
+      },
+      "assertions": "assert(Math.abs(at(0).price-100)<1e-8);assert(at(300).price<100);assert(at(450).price<at(300).price);assert.deepEqual(at(450).flows,[5,5,105]);assert(Math.abs(at(450).pv.reduce((a,b)=>a+b,0)-at(450).price)<1e-8);assert(at(570).subtotal>at(450).subtotal);assert(Math.abs(at(570).subtotal-at(570).price)<1e-8);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLq9yv5g",
+    "version": "v2",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/06_Efficient_Market_Hypothesis.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2610000,
+          "duration": "29.000000",
+          "bit_rate": "203145",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "870",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/06_Efficient_Market_Hypothesis.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "29.000000",
+        "size": "748221",
+        "bit_rate": "206405",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLq9yv5g/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm06-efficient-market-hypothesis.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[0,10]} yDomain={[90,130]} xTicks={[0,4,8,10]} yTicks={[100,120]} xLabel=\"Time around public news\" yLabel=\"Price\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={[[0,100],[Math.min(st.time,4),100],...(st.news?[[4,120],[st.time,120]]:[])] as [number,number][]} color={C.primary} progress={1}/><Curve s={s} pts={sampleFn(st.slow,0,st.time)} color={C.alt} progress={1}/><line x1={s.px(4)} x2={s.px(4)} y1={s.py(95)} y2={s.py(125)} stroke={C.accent} strokeDasharray=\"8 6\"/><circle cx={s.px(st.time)} cy={s.py(st.price)} r={10} fill={C.accent}/><text x={s.px(5)} y={s.py(95)} fill={C.textStrong} fontSize={25}>{st.news?`Efficient ${st.price.toFixed(0)} · lagged ${st.lag.toFixed(0)}`:\"News not yet public\"}</text></>}</Axes>",
+        "observed_source_behavior": "Price remains at 100 before the event; future observations remain hidden. At the public announcement, the idealized price jumps from 100 to 120. The efficient path stays at 120 while the lagged comparison adjusts progressively. Show both completed reactions with no predictable post-news drift on the idealized path.",
+        "applicability": [
+          "recvvJaLq9yv5g"
+        ]
+      },
+      "assertions": "assert.equal(at(359).price,100);assert.equal(at(360).price,120);assert.equal(at(360).lag,100);assert(at(480).lag>100&&at(480).lag<120);assert.equal(at(600).lag,120);assert.equal(at(359).news,false);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLqbYT8v",
+    "version": "v3",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/07_Behavioral_Bias.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2610000,
+          "duration": "29.000000",
+          "bit_rate": "227144",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "870",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/07_Behavioral_Bias.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "29.000000",
+        "size": "835207",
+        "bit_rate": "230401",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLqbYT8v/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS gain/loss state and displayed one-decimal monetary input at reference crossing\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm07-behavioral-bias.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm07-behavioral-bias.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[-15,15]} yDomain={[-24,16]} xTicks={[-10,0,10]} yTicks={[-20,0,10]} xLabel=\"Gain / loss relative to reference\" yLabel=\"Subjective value (illustrative)\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={sampleFn(st.curve,-15,15)} color={C.primary} progress={1}/><circle cx={s.px(st.x)} cy={s.py(st.value)} r={12} fill={st.x>=0?C.primary:C.result}/><line x1={s.px(st.x)} x2={s.px(st.x)} y1={s.py(0)} y2={s.py(st.value)} stroke={C.accent} strokeWidth={3}/><text x={s.px(-13)} y={35} fill={C.accent} fontSize={27}>{`Money ${st.x.toFixed(1)} · value ${st.value.toFixed(1)}`}</text></>}</Axes>",
+        "observed_source_behavior": "Start at the reference point with subjective value zero. Move to a gain of 10 along the concave gain branch. Return through the reference and move to a loss of 10 along the steeper loss branch. Compare subjective gain and loss magnitudes for equal monetary amounts.",
+        "applicability": [
+          "recvvJaLqbYT8v"
+        ]
+      },
+      "assertions": "assert.equal(at(0).value,0);assert.equal(at(270).x,10);assert.equal(at(570).x,-10);assert(Math.abs(at(570).loss)==2*at(570).gain);assert(at(450).x<at(360).x);assert.equal(at(470).x.toFixed(1),\"-0.5\");"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLqkOmWu",
+    "version": "v2",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/08_Option_Expiration_Gain.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "208409",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/08_Option_Expiration_Gain.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "793688",
+        "bit_rate": "211650",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLqkOmWu/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm08-option-expiration-gain.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm08-option-expiration-gain.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[75,125]} yDomain={[-10,30]} xTicks={[80,100,105,120]} yTicks={[-5,0,15,25]} xLabel=\"Stock price at expiration\" yLabel=\"Per-share payoff / net profit\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={[[75,0],[100,0],[125,25]]} color={C.alt} progress={1}/><OptionPayoff s={s} kind=\"call\" strike={st.strike} premium={st.premium} showUnderlying={false} showLabels={false} progress={1}/><circle cx={s.px(st.S)} cy={s.py(st.payoff)} r={10} fill={C.alt}/><circle cx={s.px(st.S)} cy={s.py(st.profit)} r={11} fill={st.profit>=0?C.primary:C.result}/><line x1={s.px(st.S)} x2={s.px(st.S)} y1={s.py(st.payoff)} y2={s.py(st.profit)} stroke={C.accent} strokeWidth={3}/><text x={s.px(77)} y={35} fill={C.textStrong} fontSize={26}>{`S ${st.S.toFixed(1)} · payoff ${st.payoff.toFixed(1)} · profit ${st.profit.toFixed(1)}`}</text></>}</Axes>",
+        "observed_source_behavior": "Stock is 80; long call payoff is zero and net profit is minus 5. Stock rises past strike 100; intrinsic payoff becomes positive. At 102 intrinsic payoff is 2 while net profit remains minus 3. At 105 payoff equals the premium and profit is zero. At 120 payoff is 20 and profit is 15.",
+        "applicability": [
+          "recvvJaLqkOmWu"
+        ]
+      },
+      "assertions": "assert.equal(at(0).profit,-5);assert.equal(at(300).payoff,0);assert(at(361).payoff>0);assert.equal(at(450).profit,-3);assert.equal(at(630).profit,0);assert.equal(at(810).profit,15);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLqmGyse",
+    "version": "v2",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/09_Options_Exposure.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "241562",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/09_Options_Exposure.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "918005",
+        "bit_rate": "244801",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLqmGyse/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm09-options-exposure.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm09-options-exposure.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"delta and separate share exposures\"><Axes width={900} height={420} xDomain={[75,125]} yDomain={[0,1]} xTicks={[80,100,120]} yTicks={[0,.5,1]} xLabel=\"Underlying stock price\" yLabel=\"Long-call delta\" pad={{l:90,r:60,t:90,b:60}}>{s=><><OptionDelta s={s} strike={100} T={.5} r={.03} vol={.2} showLabels={false} progress={1}/><circle cx={s.px(st.S)} cy={s.py(st.delta)} r={12} fill={C.accent}/><text x={s.px(78)} y={35} fill={C.textStrong} fontSize={26}>{`S ${st.S.toFixed(0)} · call Δ ${st.delta.toFixed(2)}`}</text></>}</Axes><g fontFamily={FONT}><text x={450} y={450} textAnchor=\"middle\" fill={C.textStrong} fontSize={27}>Equivalent shares · one 100-share call</text><line x1={450} x2={450} y1={465} y2={575} stroke={C.axis} strokeWidth={2}/><line x1={450} x2={450+st.shares*3} y1={490} y2={490} stroke={C.primary} strokeWidth={16}/><line x1={450} x2={450+st.hedge*3} y1={550} y2={550} stroke={C.result} strokeWidth={16}/><text x={105} y={497} fill={C.primary} fontSize={26}>Call</text><text x={105} y={557} fill={C.result} fontSize={26}>Hedge</text><text x={790} y={497} fill={C.primary} fontSize={26}>{st.shares.toFixed(1)}</text><text x={790} y={557} fill={C.result} fontSize={26}>{st.hedge.toFixed(1)}</text><text x={450} y={620} textAnchor=\"middle\" fill={C.accent} fontSize={28}>{`Net exposure ${st.net.toFixed(1)} shares`}</text></g></svg>",
+        "observed_source_behavior": "Begin at underlying price 90 with a long call position. Raise underlying price to 110, increasing call delta and equivalent-share exposure. Increase the magnitude of the short-share hedge to offset the new delta. Display equal and opposite current share exposures and warn that future delta can change.",
+        "applicability": [
+          "recvvJaLqmGyse"
+        ]
+      },
+      "assertions": "assert(at(450).delta>at(180).delta);assert(at(450).net>0);assert(Math.abs(at(600).net)<1e-8);assert(at(525).net<at(450).net);assert.equal(at(600).S,110);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLqpVQek",
+    "version": "v1",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/10_Financial_Leverage.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2700000,
+          "duration": "30.000000",
+          "bit_rate": "195408",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "900",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/10_Financial_Leverage.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "30.000000",
+        "size": "744966",
+        "bit_rate": "198657",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLqpVQek/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm10-financial-leverage.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm10-financial-leverage.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"leveraged balance sheet\"><CapitalLedger assets={st.assets} debt={st.debt} equity={st.equity} initial={st.initial}/></svg>",
+        "observed_source_behavior": "Start with assets 100, debt 80 and equity 20. Raise assets to 110; debt stays 80 and equity rises to 30. Reduce assets to 90; debt stays 80 and equity falls to 10. Compare minus 10% asset return with minus 50% equity return.",
+        "applicability": [
+          "recvvJaLqpVQek"
+        ]
+      },
+      "assertions": "assert.equal(at(0).equity,20);assert.equal(at(360).equity,30);assert.equal(at(630).equity,10);assert.equal(at(630).debt,80);assert(Math.abs(at(630).equityReturn+50)<1e-8);assert.equal(at(540).assets,100);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLqrxIKZ",
+    "version": "v1",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/11_Market_Liquidity.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2610000,
+          "duration": "29.000000",
+          "bit_rate": "263522",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "870",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/11_Market_Liquidity.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "29.000000",
+        "size": "967063",
+        "bit_rate": "266776",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLqrxIKZ/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm11-market-liquidity.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm11-market-liquidity.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"consumed ask book\"><DepthRows asks={st.asks} filled={st.filled} cost={st.cost} original={st.original}/></svg>",
+        "observed_source_behavior": "The ask book offers 5 units at 101, 5 at 102 and 10 at 103. A market buy consumes the 5 units at 101. The order consumes the 5 units at 102, then 2 at 103; residual sizes actually decrease. Twelve units cost 1221, for average price 101.75; eight units remain at 103.",
+        "applicability": [
+          "recvvJaLqrxIKZ"
+        ]
+      },
+      "assertions": "assert.deepEqual(at(0).asks.map(x=>x.size),[5,5,10]);assert.equal(at(380).asks[0].size,0);assert.equal(at(580).asks[1].size,0);assert.deepEqual(at(660).asks.map(x=>x.size),[0,0,8]);assert.equal(at(660).cost,1221);assert.equal(at(660).cost/at(660).filled,101.75);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  },
+  {
+    "record_id": "recvvJaLquUYyf",
+    "version": "v1",
+    "path": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/12_Financial_Crisis_Contagion.mp4",
+    "media": {
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+          "profile": "High",
+          "codec_type": "video",
+          "codec_tag_string": "avc1",
+          "codec_tag": "0x31637661",
+          "mime_codec_string": "avc1.640028",
+          "width": 1920,
+          "height": 1080,
+          "coded_width": 1920,
+          "coded_height": 1080,
+          "has_b_frames": 2,
+          "sample_aspect_ratio": "1:1",
+          "display_aspect_ratio": "16:9",
+          "pix_fmt": "yuvj420p",
+          "level": 40,
+          "color_range": "pc",
+          "color_space": "bt470bg",
+          "chroma_location": "center",
+          "field_order": "progressive",
+          "is_avc": "true",
+          "nal_length_size": "4",
+          "id": "0x1",
+          "r_frame_rate": "30/1",
+          "avg_frame_rate": "30/1",
+          "time_base": "1/90000",
+          "start_pts": 0,
+          "start_time": "0.000000",
+          "duration_ts": 2790000,
+          "duration": "31.000000",
+          "bit_rate": "206320",
+          "bits_per_raw_sample": "8",
+          "nb_frames": "930",
+          "extradata_size": 51,
+          "disposition": {
+            "default": 1,
+            "dub": 0,
+            "original": 0,
+            "comment": 0,
+            "lyrics": 0,
+            "karaoke": 0,
+            "forced": 0,
+            "hearing_impaired": 0,
+            "visual_impaired": 0,
+            "clean_effects": 0,
+            "attached_pic": 0,
+            "timed_thumbnails": 0,
+            "non_diegetic": 0,
+            "captions": 0,
+            "descriptions": 0,
+            "metadata": 0,
+            "dependent": 0,
+            "still_image": 0,
+            "multilayer": 0
+          },
+          "tags": {
+            "language": "und",
+            "handler_name": "VideoHandler",
+            "encoder": "Lavc61.19.100 libx264"
+          },
+          "side_data_list": [
+            {
+              "side_data_type": "ICC Profile"
+            }
+          ]
+        }
+      ],
+      "format": {
+        "filename": "/Users/zhoutianshuo/Desktop/leadde motion/Finance/Financial Markets/12_Financial_Crisis_Contagion.mp4",
+        "nb_streams": 1,
+        "nb_programs": 0,
+        "nb_stream_groups": 0,
+        "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+        "format_long_name": "QuickTime / MOV",
+        "start_time": "0.000000",
+        "duration": "31.000000",
+        "size": "812028",
+        "bit_rate": "209555",
+        "probe_score": 100,
+        "tags": {
+          "major_brand": "isom",
+          "minor_version": "512",
+          "compatible_brands": "isomiso2avc1mp41",
+          "encoder": "Lavf63.1.101",
+          "comment": "Made with Remotion 4.0.410"
+        }
+      }
+    },
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/register.cjs",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261012-financial-markets/recvvJaLquUYyf/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm12-financial-crisis-contagion.state.ts",
+      "minimal_source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/probes/fm12-financial-crisis-contagion.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"credit loss propagation\"><g stroke={C.axis} strokeWidth={3}><line x1={190} y1={130} x2={450} y2={330}/><line x1={190} y1={130} x2={190} y2={480}/><line x1={450} y1={330} x2={730} y2={480}/></g><BankBalance x={190} y={130} name=\"A\" capital={8} loss={st.a} failed={st.failed[0]}/><BankBalance x={450} y={330} name=\"B\" capital={5} loss={st.b} failed={st.failed[1]}/><BankBalance x={730} y={480} name=\"C\" capital={3} loss={st.c} failed={st.failed[2]}/><BankBalance x={190} y={480} name=\"D\" capital={6} loss={st.d} failed={false}/>{st.p>0&&st.p<1?<g><circle cx={190+260*st.p} cy={130+200*st.p} r={23} fill={C.result}/><circle cx={190} cy={130+350*st.p} r={17} fill={C.result}/></g>:null}{st.q>0&&st.q<1?<circle cx={450+280*st.q} cy={330+150*st.q} r={23} fill={C.result}/>:null}<text x={450} y={45} fill={C.textStrong} fontSize={27} textAnchor=\"middle\">Credit losses reduce the holders’ capital</text></svg>",
+        "observed_source_behavior": "Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B. A receives external loss 10 and becomes insolvent. Zero-recovery illustration: B loses 6 and D loses 2 on A; B becomes insolvent but D retains capital 4. B default passes loss 4 to C, exhausting its capital 3. D remains solvent because its capital buffer exceeds the loss.",
+        "applicability": [
+          "recvvJaLquUYyf"
+        ]
+      },
+      "assertions": "assert.equal(at(0).a,0);assert.equal(at(270).failed[0],true);assert.equal(at(450).b,6);assert.equal(at(450).d,2);assert.equal(at(450).failed[1],true);assert.equal(at(690).c,4);assert.equal(at(690).failed[2],true);assert.equal(at(929).failed[3],false);"
+    },
+    "type_exit_code": 0,
+    "distinctness_exit_code": 0
+  }
+]

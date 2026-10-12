@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm09-options-exposure.state.ts");assert(at(450).delta>at(180).delta);assert(at(450).net>0);assert(Math.abs(at(600).net)<1e-8);assert(at(525).net<at(450).net);assert.equal(at(600).S,110);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

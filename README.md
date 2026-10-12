@@ -2,7 +2,7 @@
 
 [![Leadde animation collection: videos, concepts and latest activity](assets/site/library-banner.svg)](https://LeaddeOpenLab.github.io/educational-animations/)
 
-## 422 educational videos · 528 concepts
+## 434 educational videos · 528 concepts
 
 **[Explore the collection →](https://LeaddeOpenLab.github.io/educational-animations/)** · Watch previews, filter by topic, copy prompts and find source notes.
 
@@ -10,7 +10,7 @@
 
 Short animated explanations of algorithms, data structures, neural networks, mathematics, and more. Watch videos, download clips, and explore animation prompts.
 
-**422 video-ready · 116 recorded review passes · 106 awaiting production · 46 courses · 17 disciplines**
+**434 video-ready · 128 recorded review passes · 94 awaiting production · 46 courses · 17 disciplines**
 
 Video-ready means a file is available. Review passes require version-specific evidence; historical videos are not automatically approved.
 
@@ -146,7 +146,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#finance"><img src="assets/subject-cards/finance.png" width="100%" alt="Finance"></a><br>
 <a href="#finance"><strong>Finance</strong></a><br>
-<sub>1 courses · 0 videos · 12 awaiting production · No finished videos yet</sub>
+<sub>1 courses · 12 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#political-science"><img src="assets/subject-cards/political-science.png" width="100%" alt="Political Science"></a><br>
@@ -554,7 +554,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="finance"></a>
 ### Finance
 
-0 videos · 12 awaiting production · **No finished videos yet**
+12 videos · 0 awaiting production
 
 <table>
 <tr>
@@ -562,7 +562,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="financial-markets"></a>
 <a href="catalog/finance/econ-252.md"><img src="assets/course-covers/econ%20252.jpg" width="100%" alt="Financial Markets"></a><br>
 <a href="catalog/finance/econ-252.md"><strong>Financial Markets</strong></a><br>
-<sub>0 videos · 12 awaiting production · No finished videos yet</sub>
+<sub>12 videos · 0 awaiting production</sub>
 </td>
 <td></td>
 <td></td>

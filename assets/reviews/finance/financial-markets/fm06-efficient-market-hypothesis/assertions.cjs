@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.state.ts");assert.equal(at(359).price,100);assert.equal(at(360).price,120);assert.equal(at(360).lag,100);assert(at(480).lag>100&&at(480).lag<120);assert.equal(at(600).lag,120);assert.equal(at(359).news,false);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

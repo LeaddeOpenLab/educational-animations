@@ -1,0 +1,150 @@
+{
+  "primitives": [
+    {
+      "name": "RiskReturn",
+      "file": "src/components/Fin.tsx",
+      "summary": "风险-收益图：有效前沿 + 无风险点 + 资本市场线，数值搜出夏普最大的切点组合；可叠加投资者的无差异曲线族",
+      "signature": "({ s, frontier, rf, utility, levels, color, progress })"
+    },
+    {
+      "name": "Diversification",
+      "file": "src/components/Fin.tsx",
+      "summary": "分散化曲线：组合波动率对资产数量，由 portfolioSigma 算出；可叠加多个相关系数 ρ 的对比，并画出不可分散的 σ√ρ 下限",
+      "signature": "({ s, sigma, rhos, color, progress })"
+    },
+    {
+      "name": "portfolioSigma",
+      "file": "src/components/Fin.tsx",
+      "summary": "求解器：n 个等权资产、相关系数 ρ、单资产波动率 σ 下的组合波动率",
+      "signature": "(n, sigma, rho) => number"
+    },
+    {
+      "name": "CashFlowTimeline",
+      "file": "src/components/Fin.tsx",
+      "summary": "现金流时间轴：各期现金流箭头（收到用 primary 红、付出用 result 绿，本课角色重载），配折现后的 PV 条与 NPV 数值",
+      "signature": "({ x, y, w, flows, rate, showPV, color, progress })"
+    },
+    {
+      "name": "YieldCurve",
+      "file": "src/components/Fin.tsx",
+      "summary": "收益率曲线：期限→收益率，按长短端利差判定 normal / inverted / flat，可叠加另一期曲线对比",
+      "signature": "({ s, yc, compare: {yc, label}, color, progress })"
+    },
+    {
+      "name": "BondPriceCurve",
+      "file": "src/components/Fin.tsx",
+      "summary": "债券价格-收益率：凸性曲线 + 当前收益率处的久期切线（一阶近似），标出面值线、久期与两者的凸性误差",
+      "signature": "({ s, face, coupon, maturity, y0, color, progress })"
+    },
+    {
+      "name": "bondPrice",
+      "file": "src/components/Fin.tsx",
+      "summary": "求解器：面值/票面利率/期限/收益率 → 债券价格",
+      "signature": "(F, c, T, y, freq) => number"
+    },
+    {
+      "name": "duration",
+      "file": "src/components/Fin.tsx",
+      "summary": "求解器：麦考利久期（年）",
+      "signature": "(F, c, T, y, freq) => number"
+    },
+    {
+      "name": "PriceReaction",
+      "file": "src/components/Fin.tsx",
+      "summary": "有效市场下的价格反应：信息到达瞬间跳到新水平（可叠加缓慢调整的对照路径），标注跳变幅度与百分比",
+      "signature": "({ s, at, before, after, lagged, color, progress, note })"
+    },
+    {
+      "name": "ProspectValue",
+      "file": "src/components/Fin.tsx",
+      "summary": "前景理论价值函数：收益区凹、损失区凸且更陡（λ 损失厌恶），参考点处 kink，虚线给出无损失厌恶的对照",
+      "signature": "({ s, alpha, lambda, color, progress })"
+    },
+    {
+      "name": "OptionPayoff",
+      "file": "src/components/Fin.tsx",
+      "summary": "期权到期收益图：call/put × long/short 的 payoff 折线，标出行权价、盈亏平衡点、权利金，可叠加标的直线",
+      "signature": "({ s, kind, strike, premium, side, showUnderlying, color, progress })"
+    },
+    {
+      "name": "OptionDelta",
+      "file": "src/components/Fin.tsx",
+      "summary": "Delta 随标的价格变化的 S 形曲线（布莱克-舒尔斯），标出平值 Δ≈0.5 与两端的深度实值/虚值极限",
+      "signature": "({ s, strike, T, r, vol, color, progress })"
+    },
+    {
+      "name": "bsDelta",
+      "file": "src/components/Fin.tsx",
+      "summary": "求解器：布莱克-舒尔斯看涨 Delta = N(d1)",
+      "signature": "(S, K, T, r, sigma, q) => number"
+    },
+    {
+      "name": "LeverageBar",
+      "file": "src/components/Fin.tsx",
+      "summary": "杠杆：权益/负债资本结构条 + ROA 与杠杆后 ROE 的对比，标出 D/E 与杠杆带来的百分点增减",
+      "signature": "({ x, y, w, equity, debt, roa, cost, color, progress })"
+    },
+    {
+      "name": "OrderBook",
+      "file": "src/components/Fin.tsx",
+      "summary": "订单簿：买盘/卖盘累积深度梯形 + 中间买卖价差，标出价差（bp）与最优买卖价；给定大单数量会高亮被吃掉的档位",
+      "signature": "({ cx, cy, w, h, bids, asks, impactSize, color, progress })"
+    },
+    {
+      "name": "ContagionNetwork",
+      "file": "src/components/Fin.tsx",
+      "summary": "危机传染网络：机构为节点、敞口为有向边；从首个违约点沿敞口传播，资本被击穿即违约，按 progress 逐级点亮",
+      "signature": "({ nodes, exposures, origin, color, progress })"
+    }
+  ],
+  "formulaKeys": [
+    "fm01Title",
+    "fm01Sharpe",
+    "fm01Premium",
+    "fm01CML",
+    "fm02Title",
+    "fm02Equal",
+    "fm02Limit",
+    "fm02Idio",
+    "fm03Title",
+    "fm03NPV",
+    "fm03Rule",
+    "fm03Annuity",
+    "fm04Title",
+    "fm04Spot",
+    "fm04Shape",
+    "fm04Invert",
+    "fm05Title",
+    "fm05Inverse",
+    "fm05Duration",
+    "fm05Convexity",
+    "fm06Title",
+    "fm06Weak",
+    "fm06Semi",
+    "fm06Strong",
+    "fm07Title",
+    "fm07Loss",
+    "fm07Concave",
+    "fm07Seek",
+    "fm08Title",
+    "fm08Put",
+    "fm08Breakeven",
+    "fm08Limited",
+    "fm09Title",
+    "fm09Range",
+    "fm09ATM",
+    "fm09Hedge",
+    "fm10Title",
+    "fm10Amplify",
+    "fm10Reverse",
+    "fm10Risk",
+    "fm11Title",
+    "fm11Depth",
+    "fm11Impact",
+    "fm11Illiquid",
+    "fm12Title",
+    "fm12Fail",
+    "fm12Cascade",
+    "fm12Network"
+  ]
+}

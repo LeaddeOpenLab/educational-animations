@@ -1,0 +1,272 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "financial-markets",
+    "label": "Financial Markets",
+    "subject": "Finance",
+    "outputDir": "Finance/Financial Markets"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "financial-markets",
+    "file": "src/theme/themes/financial-markets.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#0e0e0e",
+      "bg1": "#181a1d",
+      "bg2": "#22252a",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#ef4444",
+      "accent": "#f59e0b",
+      "result": "#22c55e",
+      "warn": "#38bdf8",
+      "alt": "#a78bfa"
+    },
+    "bg1": "#181a1d",
+    "contrast": {
+      "primary": 4.63,
+      "accent": 8.12,
+      "result": 7.65,
+      "warn": 8.14,
+      "alt": 6.41
+    }
+  },
+  "primitives": [
+    {
+      "name": "RiskReturn",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u98ce\u9669-\u6536\u76ca\u56fe\uff1a\u6709\u6548\u524d\u6cbf + \u65e0\u98ce\u9669\u70b9 + \u8d44\u672c\u5e02\u573a\u7ebf\uff0c\u6570\u503c\u641c\u51fa\u590f\u666e\u6700\u5927\u7684\u5207\u70b9\u7ec4\u5408\uff1b\u53ef\u53e0\u52a0\u6295\u8d44\u8005\u7684\u65e0\u5dee\u5f02\u66f2\u7ebf\u65cf",
+      "signature": "({ s, frontier, rf, utility, levels, color, progress })"
+    },
+    {
+      "name": "Diversification",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u5206\u6563\u5316\u66f2\u7ebf\uff1a\u7ec4\u5408\u6ce2\u52a8\u7387\u5bf9\u8d44\u4ea7\u6570\u91cf\uff0c\u7531 portfolioSigma \u7b97\u51fa\uff1b\u53ef\u53e0\u52a0\u591a\u4e2a\u76f8\u5173\u7cfb\u6570 \u03c1 \u7684\u5bf9\u6bd4\uff0c\u5e76\u753b\u51fa\u4e0d\u53ef\u5206\u6563\u7684 \u03c3\u221a\u03c1 \u4e0b\u9650",
+      "signature": "({ s, sigma, rhos, color, progress })"
+    },
+    {
+      "name": "portfolioSigma",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6c42\u89e3\u5668\uff1an \u4e2a\u7b49\u6743\u8d44\u4ea7\u3001\u76f8\u5173\u7cfb\u6570 \u03c1\u3001\u5355\u8d44\u4ea7\u6ce2\u52a8\u7387 \u03c3 \u4e0b\u7684\u7ec4\u5408\u6ce2\u52a8\u7387",
+      "signature": "(n, sigma, rho) => number"
+    },
+    {
+      "name": "CashFlowTimeline",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u73b0\u91d1\u6d41\u65f6\u95f4\u8f74\uff1a\u5404\u671f\u73b0\u91d1\u6d41\u7bad\u5934\uff08\u6536\u5230\u7528 primary \u7ea2\u3001\u4ed8\u51fa\u7528 result \u7eff\uff0c\u672c\u8bfe\u89d2\u8272\u91cd\u8f7d\uff09\uff0c\u914d\u6298\u73b0\u540e\u7684 PV \u6761\u4e0e NPV \u6570\u503c",
+      "signature": "({x,y,w,flows,rate,showPV,showTotal,pvDecimals,color,progress})"
+    },
+    {
+      "name": "YieldCurve",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6536\u76ca\u7387\u66f2\u7ebf\uff1a\u671f\u9650\u2192\u6536\u76ca\u7387\uff0c\u6309\u957f\u77ed\u7aef\u5229\u5dee\u5224\u5b9a normal / inverted / flat\uff0c\u53ef\u53e0\u52a0\u53e6\u4e00\u671f\u66f2\u7ebf\u5bf9\u6bd4",
+      "signature": "({ s, yc, compare: {yc, label}, color, progress })"
+    },
+    {
+      "name": "BondPriceCurve",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u503a\u5238\u4ef7\u683c-\u6536\u76ca\u7387\uff1a\u51f8\u6027\u66f2\u7ebf + \u5f53\u524d\u6536\u76ca\u7387\u5904\u7684\u4e45\u671f\u5207\u7ebf\uff08\u4e00\u9636\u8fd1\u4f3c\uff09\uff0c\u6807\u51fa\u9762\u503c\u7ebf\u3001\u4e45\u671f\u4e0e\u4e24\u8005\u7684\u51f8\u6027\u8bef\u5dee",
+      "signature": "({ s, face, coupon, maturity, y0, color, progress })"
+    },
+    {
+      "name": "bondPrice",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6c42\u89e3\u5668\uff1a\u9762\u503c/\u7968\u9762\u5229\u7387/\u671f\u9650/\u6536\u76ca\u7387 \u2192 \u503a\u5238\u4ef7\u683c",
+      "signature": "(F, c, T, y, freq) => number"
+    },
+    {
+      "name": "duration",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6c42\u89e3\u5668\uff1a\u9ea6\u8003\u5229\u4e45\u671f\uff08\u5e74\uff09",
+      "signature": "(F, c, T, y, freq) => number"
+    },
+    {
+      "name": "PriceReaction",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6709\u6548\u5e02\u573a\u4e0b\u7684\u4ef7\u683c\u53cd\u5e94\uff1a\u4fe1\u606f\u5230\u8fbe\u77ac\u95f4\u8df3\u5230\u65b0\u6c34\u5e73\uff08\u53ef\u53e0\u52a0\u7f13\u6162\u8c03\u6574\u7684\u5bf9\u7167\u8def\u5f84\uff09\uff0c\u6807\u6ce8\u8df3\u53d8\u5e45\u5ea6\u4e0e\u767e\u5206\u6bd4",
+      "signature": "({ s, at, before, after, lagged, color, progress, note })"
+    },
+    {
+      "name": "ProspectValue",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u524d\u666f\u7406\u8bba\u4ef7\u503c\u51fd\u6570\uff1a\u6536\u76ca\u533a\u51f9\u3001\u635f\u5931\u533a\u51f8\u4e14\u66f4\u9661\uff08\u03bb \u635f\u5931\u538c\u6076\uff09\uff0c\u53c2\u8003\u70b9\u5904 kink\uff0c\u865a\u7ebf\u7ed9\u51fa\u65e0\u635f\u5931\u538c\u6076\u7684\u5bf9\u7167",
+      "signature": "({ s, alpha, lambda, color, progress })"
+    },
+    {
+      "name": "OptionPayoff",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u671f\u6743\u5230\u671f\u6536\u76ca\u56fe\uff1acall/put \u00d7 long/short \u7684 payoff \u6298\u7ebf\uff0c\u6807\u51fa\u884c\u6743\u4ef7\u3001\u76c8\u4e8f\u5e73\u8861\u70b9\u3001\u6743\u5229\u91d1\uff0c\u53ef\u53e0\u52a0\u6807\u7684\u76f4\u7ebf",
+      "signature": "({ s, kind, strike, premium, side, showUnderlying, color, progress })"
+    },
+    {
+      "name": "OptionDelta",
+      "file": "src/components/Fin.tsx",
+      "summary": "Delta \u968f\u6807\u7684\u4ef7\u683c\u53d8\u5316\u7684 S \u5f62\u66f2\u7ebf\uff08\u5e03\u83b1\u514b-\u8212\u5c14\u65af\uff09\uff0c\u6807\u51fa\u5e73\u503c \u0394\u22480.5 \u4e0e\u4e24\u7aef\u7684\u6df1\u5ea6\u5b9e\u503c/\u865a\u503c\u6781\u9650",
+      "signature": "({ s, strike, T, r, vol, color, progress })"
+    },
+    {
+      "name": "bsDelta",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6c42\u89e3\u5668\uff1a\u5e03\u83b1\u514b-\u8212\u5c14\u65af\u770b\u6da8 Delta = N(d1)",
+      "signature": "(S, K, T, r, sigma, q) => number"
+    },
+    {
+      "name": "LeverageBar",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u6760\u6746\uff1a\u6743\u76ca/\u8d1f\u503a\u8d44\u672c\u7ed3\u6784\u6761 + ROA \u4e0e\u6760\u6746\u540e ROE \u7684\u5bf9\u6bd4\uff0c\u6807\u51fa D/E \u4e0e\u6760\u6746\u5e26\u6765\u7684\u767e\u5206\u70b9\u589e\u51cf",
+      "signature": "({ x, y, w, equity, debt, roa, cost, color, progress })"
+    },
+    {
+      "name": "OrderBook",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u8ba2\u5355\u7c3f\uff1a\u4e70\u76d8/\u5356\u76d8\u7d2f\u79ef\u6df1\u5ea6\u68af\u5f62 + \u4e2d\u95f4\u4e70\u5356\u4ef7\u5dee\uff0c\u6807\u51fa\u4ef7\u5dee\uff08bp\uff09\u4e0e\u6700\u4f18\u4e70\u5356\u4ef7\uff1b\u7ed9\u5b9a\u5927\u5355\u6570\u91cf\u4f1a\u9ad8\u4eae\u88ab\u5403\u6389\u7684\u6863\u4f4d",
+      "signature": "({ cx, cy, w, h, bids, asks, impactSize, color, progress })"
+    },
+    {
+      "name": "ContagionNetwork",
+      "file": "src/components/Fin.tsx",
+      "summary": "\u5371\u673a\u4f20\u67d3\u7f51\u7edc\uff1a\u673a\u6784\u4e3a\u8282\u70b9\u3001\u655e\u53e3\u4e3a\u6709\u5411\u8fb9\uff1b\u4ece\u9996\u4e2a\u8fdd\u7ea6\u70b9\u6cbf\u655e\u53e3\u4f20\u64ad\uff0c\u8d44\u672c\u88ab\u51fb\u7a7f\u5373\u8fdd\u7ea6\uff0c\u6309 progress \u9010\u7ea7\u70b9\u4eae",
+      "signature": "({ nodes, exposures, origin, color, progress })"
+    },
+    {
+      "name": "ReturnOutcomes",
+      "file": "src/components/FinanceState.tsx",
+      "summary": "Changes signed outcome bar lengths and expected-return/volatility values from the same scenario.",
+      "signature": "({mu,sigma,samples})"
+    },
+    {
+      "name": "CashValue",
+      "file": "src/components/FinanceState.tsx",
+      "summary": "Discounted present-value bar shrinks while future claim remains unchanged; moving token connects valuation dates.",
+      "signature": "({future,present,years,rate,tokenX})"
+    },
+    {
+      "name": "CapitalLedger",
+      "file": "src/components/FinanceState.tsx",
+      "summary": "Asset and equity bars change with asset prices while debt stays fixed; equity return derived from equity.",
+      "signature": "({assets,debt,equity,initial})"
+    },
+    {
+      "name": "DepthRows",
+      "file": "src/components/FinanceState.tsx",
+      "summary": "Actual residual order sizes shrink as market order executes; filled quantity and weighted execution cost displayed.",
+      "signature": "({asks,filled,cost,original})"
+    },
+    {
+      "name": "BankBalance",
+      "file": "src/components/FinanceState.tsx",
+      "summary": "Loss reduces capital buffer geometry; insolvency occurs when the buffer is exhausted.",
+      "signature": "({x,y,name,capital,loss,failed})"
+    }
+  ],
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "fm01Title",
+      "fm01Sharpe",
+      "fm01Premium",
+      "fm01CML",
+      "fm02Title",
+      "fm02Equal",
+      "fm02Limit",
+      "fm02Idio",
+      "fm03Title",
+      "fm03NPV",
+      "fm03Rule",
+      "fm03Annuity",
+      "fm04Title",
+      "fm04Spot",
+      "fm04Shape",
+      "fm04Invert",
+      "fm05Title",
+      "fm05Inverse",
+      "fm05Duration",
+      "fm05Convexity",
+      "fm06Title",
+      "fm06Weak",
+      "fm06Semi",
+      "fm06Strong",
+      "fm07Title",
+      "fm07Loss",
+      "fm07Concave",
+      "fm07Seek",
+      "fm08Title",
+      "fm08Put",
+      "fm08Breakeven",
+      "fm08Limited",
+      "fm09Title",
+      "fm09Range",
+      "fm09ATM",
+      "fm09Hedge",
+      "fm10Title",
+      "fm10Amplify",
+      "fm10Reverse",
+      "fm10Risk",
+      "fm11Title",
+      "fm11Depth",
+      "fm11Impact",
+      "fm11Illiquid",
+      "fm12Title",
+      "fm12Fail",
+      "fm12Cascade",
+      "fm12Network"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^fm\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "\u914d\u8272\u65cf finance-cn\uff1acn-market\uff08\u89d2\u8272\u91cd\u8f7d\uff0c\u9501\u5b9a\uff09+ Tailwind 400 \u6863",
+      "primary #ef4444 / accent #f59e0b / result #22c55e / warn #38bdf8 / alt #a78bfa",
+      "\u89d2\u8272\u91cd\u8f7d\uff1aprimary = \u6da8\uff08\u7ea2\uff09\u3001result = \u8dcc\uff08\u7eff\uff09\uff0c\u4e2d\u56fd\u5185\u5730\u5e02\u573a\u7ea6\u5b9a\uff0c\u4e0e\u7f8e\u6b27\u76f8\u53cd \u2014\u2014 \u7981\u6b62\u8f6e\u6362\uff0cprompt \u5361\u5fc5\u987b\u539f\u6837\u5e26\u4e0a"
+    ]
+  },
+  "shared": {
+    "files": [
+      "src/components/ui.tsx",
+      "src/components/Plot.tsx",
+      "src/components/MotionActions.tsx"
+    ],
+    "note": "Existing course L1c plus current canonical actions"
+  }
+}

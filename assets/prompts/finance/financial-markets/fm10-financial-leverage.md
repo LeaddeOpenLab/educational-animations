@@ -1,0 +1,9 @@
+# C16-A010 · Financial Leverage
+
+Version: financial-markets-20261012-v1 · alignment: aligned
+
+A 30-second silent English concept animation for a Financial Markets university course in Finance teaching Financial Leverage: Start with assets 100, debt 80 and equity 20; Start with assets 100, debt 80 and equity 20; Raise assets to 110; debt stays 80 and equity rises to 30; Reduce assets to 90; debt stays 80 and equity falls to 10; Compare minus 10% asset return with minus 50% equity return; Leverage magnifies gains and losses; debt does not shrink with asset prices; follow the final timeline 0–6s Finance Assets with Debt and Equity; 6–15s Assets Gain Ten Percent; 15–23s Assets Fall Below the Starting Value; 23–30s Fixed Debt Magnifies Both Directions; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.
+
+Dark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; expand and contract asset and residual-equity bars while debt stays fixed using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v1 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.
+
+Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested.

@@ -1,0 +1,9 @@
+# C16-A002 · Portfolio Diversification
+
+Version: financial-markets-20261012-v3 · alignment: aligned
+
+A 30-second silent English concept animation for a Financial Markets university course in Finance teaching Portfolio Diversification: One asset has volatility 20%; One asset has volatility 20%; Increase equal-weight asset count from 1 to 16; markers move down two correlation curves; With 16 assets fixed, raise shared correlation from 0.2 to 0.6; the risk floor and moving portfolio marker rise; Compare the current rho 0.6 portfolio with the rho 0.8 benchmark at the same asset count; More assets reduce risk most when correlation is low; systematic risk remains; follow the final timeline 0–5s One Asset Carries All Its Risk; 5–15s Add Equally Weighted Assets; 15–23s Increase the Shared Correlation; 23–30s Compare Correlation Floors; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.
+
+Dark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; marker-travel along volatility curves, then morph the correlation curve using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v3 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.
+
+Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested.

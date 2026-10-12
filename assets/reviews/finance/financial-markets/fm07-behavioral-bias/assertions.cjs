@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm07-behavioral-bias.state.ts");assert.equal(at(0).value,0);assert.equal(at(270).x,10);assert.equal(at(570).x,-10);assert(Math.abs(at(570).loss)==2*at(570).gain);assert(at(450).x<at(360).x);assert.equal(at(470).x.toFixed(1),"-0.5");
+console.log("PASS gain/loss state and displayed one-decimal monetary input at reference crossing");

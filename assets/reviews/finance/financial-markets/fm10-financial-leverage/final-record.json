@@ -1,0 +1,347 @@
+{
+  "id": "C16-A010",
+  "subject": "Finance",
+  "course": "Financial Markets",
+  "textbook": "Foundations of Financial Markets and Institutions (Fabozzi et al.)",
+  "title": "Financial Leverage: Debt Amplifies Equity Moves",
+  "status": "ready",
+  "video": "assets/videos/finance/financial-markets/fm10-financial-leverage.mp4",
+  "tags": [
+    "C16-A010",
+    "ECON 252",
+    "P0"
+  ],
+  "prompt": "A 30-second silent English concept animation for a Financial Markets university course in Finance teaching Financial Leverage: Start with assets 100, debt 80 and equity 20; Start with assets 100, debt 80 and equity 20; Raise assets to 110; debt stays 80 and equity rises to 30; Reduce assets to 90; debt stays 80 and equity falls to 10; Compare minus 10% asset return with minus 50% equity return; Leverage magnifies gains and losses; debt does not shrink with asset prices; follow the final timeline 0–6s Finance Assets with Debt and Equity; 6–15s Assets Gain Ten Percent; 15–23s Assets Fall Below the Starting Value; 23–30s Fixed Debt Magnifies Both Directions; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.\n\nDark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; expand and contract asset and residual-equity bars while debt stays fixed using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v1 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.",
+  "original_name": "Financial leverage",
+  "standard_name": "Financial Leverage",
+  "aliases": [],
+  "final_title": "Financial Leverage: Debt Amplifies Equity Moves",
+  "learning_objective": "Show fixed debt amplifying both gains and losses on equity.",
+  "core_conclusion": "Leverage magnifies gains and losses; debt does not shrink with asset prices.",
+  "references": [
+    {
+      "title": "Federal Reserve: Financial System Vulnerabilities and Risks",
+      "url": "https://www.federalreserve.gov/financial-stability/types-of-financial-system-vulnerabilities-and-risks.htm",
+      "scope": "Show fixed debt amplifying both gains and losses on equity."
+    }
+  ],
+  "artifact_version": "financial-markets-20261012-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Financial leverage” using this visual metaphor: “a focused financial flow diagram animating Financial leverage”. Dynamically demonstrate the core formula or conclusion: Financial leverage magnifies the return on equity and the loss on equity..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F4EEF8); main visual (#214E75); secondary visual (#8A2356); highlight (#725400); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/financial-markets/src/videos/fm10-financial-leverage.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/financial-markets/src/videos/fm10-financial-leverage.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "assets 100",
+          "debt 80",
+          "equity 20",
+          "asset return",
+          "equity return"
+        ],
+        "change": "Start with assets 100, debt 80 and equity 20.",
+        "cause": "Equity is the residual after fixed debt; price changes fall on a smaller equity base.",
+        "result": "Start with assets 100, debt 80 and equity 20.",
+        "start_seconds": 0.0,
+        "end_seconds": 6.0,
+        "reading_seconds": 5.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "mechanism",
+        "objects": [
+          "assets 100",
+          "debt 80",
+          "equity 20",
+          "asset return",
+          "equity return"
+        ],
+        "change": "Raise assets to 110; debt stays 80 and equity rises to 30.",
+        "cause": "Equity is the residual after fixed debt; price changes fall on a smaller equity base.",
+        "result": "Raise assets to 110; debt stays 80 and equity rises to 30.",
+        "start_seconds": 6.0,
+        "end_seconds": 15.0,
+        "reading_seconds": 8.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "comparison",
+        "objects": [
+          "assets 100",
+          "debt 80",
+          "equity 20",
+          "asset return",
+          "equity return"
+        ],
+        "change": "Reduce assets to 90; debt stays 80 and equity falls to 10.",
+        "cause": "Equity is the residual after fixed debt; price changes fall on a smaller equity base.",
+        "result": "Reduce assets to 90; debt stays 80 and equity falls to 10.",
+        "start_seconds": 15.0,
+        "end_seconds": 23.0,
+        "reading_seconds": 7.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "conclusion",
+        "objects": [
+          "assets 100",
+          "debt 80",
+          "equity 20",
+          "asset return",
+          "equity return"
+        ],
+        "change": "Compare minus 10% asset return with minus 50% equity return.",
+        "cause": "Equity is the residual after fixed debt; price changes fall on a smaller equity base.",
+        "result": "Compare minus 10% asset return with minus 50% equity return.",
+        "start_seconds": 23.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/financial-markets/src/videos/fm10-financial-leverage.state.ts",
+      "bindings": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"leveraged balance sheet\"><CapitalLedger assets={st.assets} debt={st.debt} equity={st.equity} initial={st.initial}/></svg>"
+    },
+    "template_scope": "Shared finance-cn palette, typography and basic graphic/L2 primitives only; each topic owns its state model, visual argument and scene sequence.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "comparison",
+        "uncertainty": "One-period mark-to-market example ignores interest, taxes and margin calls.",
+        "expected_observation": "Start with assets 100, debt 80 and equity 20. Raise assets to 110; debt stays 80 and equity rises to 30. Reduce assets to 90; debt stays 80 and equity falls to 10. Compare minus 10% asset return with minus 50% equity return."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 18.0,
+        "reason": "Final MP4 before/during/after inspection of the topic mechanism"
+      }
+    ],
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/register.cjs",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "assets/source-kits/financial-markets/src/videos/fm10-financial-leverage.state.ts",
+      "minimal_source": "assets/source-kits/financial-markets/src/probes/fm10-financial-leverage.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"leveraged balance sheet\"><CapitalLedger assets={st.assets} debt={st.debt} equity={st.equity} initial={st.initial}/></svg>",
+        "observed_source_behavior": "Start with assets 100, debt 80 and equity 20. Raise assets to 110; debt stays 80 and equity rises to 30. Reduce assets to 90; debt stays 80 and equity falls to 10. Compare minus 10% asset return with minus 50% equity return.",
+        "applicability": [
+          "recvvJaLqpVQek"
+        ]
+      },
+      "assertions": "assert.equal(at(0).equity,20);assert.equal(at(360).equity,30);assert.equal(at(630).equity,10);assert.equal(at(630).debt,80);assert(Math.abs(at(630).equityReturn+50)<1e-8);assert.equal(at(540).assets,100);"
+    },
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v1",
+    "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+    "reviewed_at": "2026-10-12T14:39:04.936378+08:00",
+    "evidence": [
+      "assets/reviews/finance/financial-markets/fm10-financial-leverage/contact-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm10-financial-leverage/risk-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm10-financial-leverage/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v1",
+      "reviewer": "Codex — executed source/state/type/media/geometry checks",
+      "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/technical-final.json",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/overlap-final.log",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/overlap-final-72.json",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/types-cover.log",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/distinctness-final.log"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v1",
+      "video_path": "assets/videos/finance/financial-markets/fm10-financial-leverage.mp4",
+      "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+      "reviewed_at": "2026-10-12T14:39:04.936378+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/contact-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/risk-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm10-financial-leverage/samples.json"
+      ],
+      "observation": "v1: 17.5/18/18.5s show asset and equity bars shrink through assets 100/equity20 while debt stays80; equity return changes +8.3→0→−8.3%. Overview shows assets110/equity30/+50% followed by assets90/equity10/−50%. Fixed debt and residual equity are visible, not merely declared by colors or text.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "times_seconds": [
+            17.5,
+            18.0,
+            18.5
+          ],
+          "evidence": [
+            "assets/reviews/finance/financial-markets/fm10-financial-leverage/risk-sheet.jpg"
+          ],
+          "observation": "v1: 17.5/18/18.5s show asset and equity bars shrink through assets 100/equity20 while debt stays80; equity return changes +8.3→0→−8.3%. Overview shows assets110/equity30/+50% followed by assets90/equity10/−50%. Fixed debt and residual equity are visible, not merely declared by colors or text."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "After hiding headings/copy, only generic boxes, arrows or color remain and the core process cannot be identified",
+          "triggered": false,
+          "reason": "Observed topic-specific quantities and geometry remain sufficient: v1: 17.5/18/18.5s show asset and equity bars shrink through assets 100/equity20 while debt stays80; equity return changes +8.3→0→−8.3%. Overview shows assets110/equity30/+50% followed by assets90/equity10/−50%. Fixed debt and residual equity are visible, not merely declared by colors or text."
+        },
+        {
+          "condition": "After removing entrance/fade/line-drawing decoration, no explanatory mechanism state changes",
+          "triggered": false,
+          "reason": "Observed nondecorative data/geometry change: v1: 17.5/18/18.5s show asset and equity bars shrink through assets 100/equity20 while debt stays80; equity return changes +8.3→0→−8.3%. Overview shows assets110/equity30/+50% followed by assets90/equity10/−50%. Fixed debt and residual equity are visible, not merely declared by colors or text."
+        },
+        {
+          "condition": "A key operation is declared by result labels without being performed",
+          "triggered": false,
+          "reason": "The observed changing object quantities or geometry perform the operation: v1: 17.5/18/18.5s show asset and equity bars shrink through assets 100/equity20 while debt stays80; equity return changes +8.3→0→−8.3%. Overview shows assets110/equity30/+50% followed by assets90/equity10/−50%. Fixed debt and residual equity are visible, not merely declared by colors or text."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex — reviewed final frames and source narrative against this Prompt",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/prompts/finance/financial-markets/fm10-financial-leverage.md",
+      "assets/source-kits/financial-markets/src/videos/fm10-financial-leverage.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "financial-markets-20261012-v1",
+      "record_id": "recvvJaLqpVQek",
+      "verified_at": "2026-10-12T15:00:10+0800"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "financial-markets-20261012-v1",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/39714fdf-5479-42ba-a627-3fcbabbfad6d",
+        "comment_id": 6119354277,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127#issuecomment-6119354277",
+        "issue_number": 127,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127",
+        "video_version": "financial-markets-20261012-v1",
+        "video_bytes": 744966,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/39714fdf-5479-42ba-a627-3fcbabbfad6d",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLqpVQek",
+  "page": "catalog/finance/econ-252.md",
+  "course_code": "ECON 252",
+  "seo_title": "Financial Leverage: Debt Amplifies Equity Moves",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Financial leverage",
+    "standard_name": "Financial Leverage",
+    "scope": "Show fixed debt amplifying both gains and losses on equity.",
+    "sources": [
+      {
+        "title": "Federal Reserve: Financial System Vulnerabilities and Risks",
+        "url": "https://www.federalreserve.gov/financial-stability/types-of-financial-system-vulnerabilities-and-risks.htm",
+        "scope": "Show fixed debt amplifying both gains and losses on equity."
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v1",
+    "reviewer": "Codex — observed topic cover and exact pixel geometry",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/covers/finance/financial-markets/fm10-financial-leverage.jpg",
+      "assets/reviews/finance/financial-markets/fm10-financial-leverage/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLqpVQek",
+      "bbox": [
+        268,
+        260,
+        719,
+        639
+      ],
+      "width": 451,
+      "height": 379,
+      "dx": -6.5,
+      "dy": -0.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/finance/financial-markets/fm10-financial-leverage.jpg",
+  "prompt_file": "assets/prompts/finance/financial-markets/fm10-financial-leverage.md",
+  "cover_image": "assets/covers/finance/financial-markets/fm10-financial-leverage.jpg",
+  "cover_version": "financial-markets-20261012-v1",
+  "feishu": {
+    "record_id": "recvvJaLqpVQek",
+    "verified": true,
+    "verified_at": "2026-10-12T15:01:27.840457+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/39714fdf-5479-42ba-a627-3fcbabbfad6d",
+  "player_version": "financial-markets-20261012-v1"
+}

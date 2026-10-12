@@ -1,0 +1,9 @@
+# C16-A011 · Market Liquidity
+
+Version: financial-markets-20261012-v1 · alignment: aligned
+
+A 29-second silent English concept animation for a Financial Markets university course in Finance teaching Market Liquidity: The ask book offers 5 units at 101, 5 at 102 and 10 at 103; The ask book offers 5 units at 101, 5 at 102 and 10 at 103; A market buy consumes the 5 units at 101; The order consumes the 5 units at 102, then 2 at 103; residual sizes actually decrease; Twelve units cost 1221, for average price 101.75; eight units remain at 103; Limited depth makes a larger order execute at multiple prices above the initial best ask; follow the final timeline 0–6s Read the Available Ask Depth; 6–14s Execute the First Price Level; 14–22s Continue into Higher Prices; 22–29s Measure the Average Fill; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.
+
+Dark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; consume residual ask-depth bars and count-up fills and weighted cost using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v1 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.
+
+Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested.

@@ -1,0 +1,379 @@
+{
+  "id": "C16-A008",
+  "subject": "Finance",
+  "course": "Financial Markets",
+  "textbook": "Foundations of Financial Markets and Institutions (Fabozzi et al.)",
+  "title": "Option Payoff at Expiration: Payoff vs. Profit",
+  "status": "ready",
+  "video": "assets/videos/finance/financial-markets/fm08-option-expiration-gain.mp4",
+  "tags": [
+    "C16-A008",
+    "ECON 252",
+    "P0"
+  ],
+  "prompt": "A 30-second silent English concept animation for a Financial Markets university course in Finance teaching Option Payoff at Expiration: Stock is 80; long call payoff is zero and net profit is minus 5; Stock is 80; long call payoff is zero and net profit is minus 5; Stock rises past strike 100; intrinsic payoff becomes positive; At 102 intrinsic payoff is 2 while net profit remains minus 3; At 105 payoff equals the premium and profit is zero; At 120 payoff is 20 and profit is 15; A call can have positive payoff but negative profit; break-even is strike plus premium; follow the final timeline 0–5s Pay the Premium; 5–12s Cross the Strike Price; 12–18s Payoff Is Not Yet Profit; 18–24s Reach the Break-Even Price; 24–30s Beyond Break-Even; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.\n\nDark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; marker-travel along payoff and net-profit curves across strike and break-even using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v2 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.",
+  "original_name": "Option expiration gain",
+  "standard_name": "Option Payoff at Expiration",
+  "aliases": [],
+  "final_title": "Option Payoff at Expiration: Payoff vs. Profit",
+  "learning_objective": "Distinguish long-call intrinsic payoff from profit after paying the premium.",
+  "core_conclusion": "A call can have positive payoff but negative profit; break-even is strike plus premium.",
+  "references": [
+    {
+      "title": "Options Industry Council: Long Call",
+      "url": "https://prd-web.optionseducation.org/strategies/all-strategies/long-call",
+      "scope": "Distinguish long-call intrinsic payoff from profit after paying the premium."
+    }
+  ],
+  "artifact_version": "financial-markets-20261012-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Option expiration gain” using this visual metaphor: “a focused financial flow diagram animating Option expiration gain”. Dynamically demonstrate the core formula or conclusion: A call option payoff is $\\max(S_T-K,0)$..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F7F3EA); main visual (#0B4F6C); secondary visual (#8B1E3F); highlight (#795500); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/financial-markets/src/videos/fm08-option-expiration-gain.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/financial-markets/src/videos/fm08-option-expiration-gain.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "stock at expiration",
+          "strike 100",
+          "premium 5",
+          "call payoff",
+          "net profit"
+        ],
+        "change": "Stock is 80; long call payoff is zero and net profit is minus 5.",
+        "cause": "Long-call payoff is max(S−K,0); net profit subtracts the initial premium.",
+        "result": "Stock is 80; long call payoff is zero and net profit is minus 5.",
+        "start_seconds": 0.0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "mechanism",
+        "objects": [
+          "stock at expiration",
+          "strike 100",
+          "premium 5",
+          "call payoff",
+          "net profit"
+        ],
+        "change": "Stock rises past strike 100; intrinsic payoff becomes positive.",
+        "cause": "Long-call payoff is max(S−K,0); net profit subtracts the initial premium.",
+        "result": "Stock rises past strike 100; intrinsic payoff becomes positive.",
+        "start_seconds": 5.0,
+        "end_seconds": 12.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "comparison",
+        "objects": [
+          "stock at expiration",
+          "strike 100",
+          "premium 5",
+          "call payoff",
+          "net profit"
+        ],
+        "change": "At 102 intrinsic payoff is 2 while net profit remains minus 3.",
+        "cause": "Long-call payoff is max(S−K,0); net profit subtracts the initial premium.",
+        "result": "At 102 intrinsic payoff is 2 while net profit remains minus 3.",
+        "start_seconds": 12.0,
+        "end_seconds": 18.0,
+        "reading_seconds": 5.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "conclusion",
+        "objects": [
+          "stock at expiration",
+          "strike 100",
+          "premium 5",
+          "call payoff",
+          "net profit"
+        ],
+        "change": "At 105 payoff equals the premium and profit is zero.",
+        "cause": "Long-call payoff is max(S−K,0); net profit subtracts the initial premium.",
+        "result": "At 105 payoff equals the premium and profit is zero.",
+        "start_seconds": 18.0,
+        "end_seconds": 24.0,
+        "reading_seconds": 5.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "closing",
+        "objects": [
+          "stock at expiration",
+          "strike 100",
+          "premium 5",
+          "call payoff",
+          "net profit"
+        ],
+        "change": "At 120 payoff is 20 and profit is 15.",
+        "cause": "Long-call payoff is max(S−K,0); net profit subtracts the initial premium.",
+        "result": "At 120 payoff is 20 and profit is 15.",
+        "start_seconds": 24.0,
+        "end_seconds": 30.0,
+        "reading_seconds": 5.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/financial-markets/src/videos/fm08-option-expiration-gain.state.ts",
+      "bindings": "<Axes width={900} height={640} xDomain={[75,125]} yDomain={[-10,30]} xTicks={[80,100,105,120]} yTicks={[-5,0,15,25]} xLabel=\"Stock price at expiration\" yLabel=\"Per-share payoff / net profit\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={[[75,0],[100,0],[125,25]]} color={C.alt} progress={1}/><OptionPayoff s={s} kind=\"call\" strike={st.strike} premium={st.premium} showUnderlying={false} showLabels={false} progress={1}/><circle cx={s.px(st.S)} cy={s.py(st.payoff)} r={10} fill={C.alt}/><circle cx={s.px(st.S)} cy={s.py(st.profit)} r={11} fill={st.profit>=0?C.primary:C.result}/><line x1={s.px(st.S)} x2={s.px(st.S)} y1={s.py(st.payoff)} y2={s.py(st.profit)} stroke={C.accent} strokeWidth={3}/><text x={s.px(77)} y={35} fill={C.textStrong} fontSize={26}>{`S ${st.S.toFixed(1)} · payoff ${st.payoff.toFixed(1)} · profit ${st.profit.toFixed(1)}`}</text></>}</Axes>"
+    },
+    "template_scope": "Shared finance-cn palette, typography and basic graphic/L2 primitives only; each topic owns its state model, visual argument and scene sequence.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "comparison",
+        "uncertainty": "The illustration is per share; it excludes fees and contract multiplier.",
+        "expected_observation": "Stock is 80; long call payoff is zero and net profit is minus 5. Stock rises past strike 100; intrinsic payoff becomes positive. At 102 intrinsic payoff is 2 while net profit remains minus 3. At 105 payoff equals the premium and profit is zero. At 120 payoff is 20 and profit is 15."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 14.0,
+        "reason": "Final MP4 before/during/after inspection of the topic mechanism"
+      }
+    ],
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/register.cjs",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "assets/source-kits/financial-markets/src/videos/fm08-option-expiration-gain.state.ts",
+      "minimal_source": "assets/source-kits/financial-markets/src/probes/fm08-option-expiration-gain.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[75,125]} yDomain={[-10,30]} xTicks={[80,100,105,120]} yTicks={[-5,0,15,25]} xLabel=\"Stock price at expiration\" yLabel=\"Per-share payoff / net profit\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={[[75,0],[100,0],[125,25]]} color={C.alt} progress={1}/><OptionPayoff s={s} kind=\"call\" strike={st.strike} premium={st.premium} showUnderlying={false} showLabels={false} progress={1}/><circle cx={s.px(st.S)} cy={s.py(st.payoff)} r={10} fill={C.alt}/><circle cx={s.px(st.S)} cy={s.py(st.profit)} r={11} fill={st.profit>=0?C.primary:C.result}/><line x1={s.px(st.S)} x2={s.px(st.S)} y1={s.py(st.payoff)} y2={s.py(st.profit)} stroke={C.accent} strokeWidth={3}/><text x={s.px(77)} y={35} fill={C.textStrong} fontSize={26}>{`S ${st.S.toFixed(1)} · payoff ${st.payoff.toFixed(1)} · profit ${st.profit.toFixed(1)}`}</text></>}</Axes>",
+        "observed_source_behavior": "Stock is 80; long call payoff is zero and net profit is minus 5. Stock rises past strike 100; intrinsic payoff becomes positive. At 102 intrinsic payoff is 2 while net profit remains minus 3. At 105 payoff equals the premium and profit is zero. At 120 payoff is 20 and profit is 15.",
+        "applicability": [
+          "recvvJaLqkOmWu"
+        ]
+      },
+      "assertions": "assert.equal(at(0).profit,-5);assert.equal(at(300).payoff,0);assert(at(361).payoff>0);assert.equal(at(450).profit,-3);assert.equal(at(630).profit,0);assert.equal(at(810).profit,15);"
+    },
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Payoff/profit axis title overlaps the stock/payoff/profit data annotation.",
+        "affected_ids": [
+          "C16-A008"
+        ],
+        "status": "resolved",
+        "fix": "Specific mechanism or label/graphic correction in this topic; re-render and re-review required.",
+        "evidence": [
+          "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/contact-sheet.jpg",
+          "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/risk-sheet.jpg",
+          "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/samples.json"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v2",
+    "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+    "reviewed_at": "2026-10-12T14:50:43.355558+08:00",
+    "evidence": [
+      "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/contact-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/risk-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v2",
+      "reviewer": "Codex — executed source/state/type/media/geometry checks",
+      "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/technical-final.json",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/overlap-final.log",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/overlap-final-72.json",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/types-cover.log",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/distinctness-final.log"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v2",
+      "video_path": "assets/videos/finance/financial-markets/fm08-option-expiration-gain.mp4",
+      "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+      "reviewed_at": "2026-10-12T14:50:43.355558+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/contact-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/risk-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/samples.json"
+      ],
+      "observation": "v2: at13.5–14.5s stock moves101.0→101.7, intrinsic payoff1.0→1.7 and net profit−4.0→−3.3; the two markers remain exactly a premium5 apart. Overview shows S105/payoff5/profit0, then S120/payoff20/profit15. Data annotations sit above the axis title and no longer overlap it.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "times_seconds": [
+            13.5,
+            14.0,
+            14.5
+          ],
+          "evidence": [
+            "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/risk-sheet.jpg"
+          ],
+          "observation": "v2: at13.5–14.5s stock moves101.0→101.7, intrinsic payoff1.0→1.7 and net profit−4.0→−3.3; the two markers remain exactly a premium5 apart. Overview shows S105/payoff5/profit0, then S120/payoff20/profit15. Data annotations sit above the axis title and no longer overlap it."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "After hiding headings/copy, only generic boxes, arrows or color remain and the core process cannot be identified",
+          "triggered": false,
+          "reason": "Observed topic-specific quantities and geometry remain sufficient: v2: at13.5–14.5s stock moves101.0→101.7, intrinsic payoff1.0→1.7 and net profit−4.0→−3.3; the two markers remain exactly a premium5 apart. Overview shows S105/payoff5/profit0, then S120/payoff20/profit15. Data annotations sit above the axis title and no longer overlap it."
+        },
+        {
+          "condition": "After removing entrance/fade/line-drawing decoration, no explanatory mechanism state changes",
+          "triggered": false,
+          "reason": "Observed nondecorative data/geometry change: v2: at13.5–14.5s stock moves101.0→101.7, intrinsic payoff1.0→1.7 and net profit−4.0→−3.3; the two markers remain exactly a premium5 apart. Overview shows S105/payoff5/profit0, then S120/payoff20/profit15. Data annotations sit above the axis title and no longer overlap it."
+        },
+        {
+          "condition": "A key operation is declared by result labels without being performed",
+          "triggered": false,
+          "reason": "The observed changing object quantities or geometry perform the operation: v2: at13.5–14.5s stock moves101.0→101.7, intrinsic payoff1.0→1.7 and net profit−4.0→−3.3; the two markers remain exactly a premium5 apart. Overview shows S105/payoff5/profit0, then S120/payoff20/profit15. Data annotations sit above the axis title and no longer overlap it."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "reviewer": "Codex — reviewed final frames and source narrative against this Prompt",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/prompts/finance/financial-markets/fm08-option-expiration-gain.md",
+      "assets/source-kits/financial-markets/src/videos/fm08-option-expiration-gain.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "financial-markets-20261012-v2",
+      "record_id": "recvvJaLqkOmWu",
+      "verified_at": "2026-10-12T15:00:10+0800"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "financial-markets-20261012-v2",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/5cecb1a3-3414-48a6-9df0-194a321a10ad",
+        "comment_id": 6119351548,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127#issuecomment-6119351548",
+        "issue_number": 127,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127",
+        "video_version": "financial-markets-20261012-v2",
+        "video_bytes": 793688,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/5cecb1a3-3414-48a6-9df0-194a321a10ad",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLqkOmWu",
+  "page": "catalog/finance/econ-252.md",
+  "course_code": "ECON 252",
+  "seo_title": "Option Payoff at Expiration: Payoff vs. Profit",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Option expiration gain",
+    "standard_name": "Option Payoff at Expiration",
+    "scope": "Distinguish long-call intrinsic payoff from profit after paying the premium.",
+    "sources": [
+      {
+        "title": "Options Industry Council: Long Call",
+        "url": "https://prd-web.optionseducation.org/strategies/all-strategies/long-call",
+        "scope": "Distinguish long-call intrinsic payoff from profit after paying the premium."
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v2",
+    "reviewer": "Codex — observed topic cover and exact pixel geometry",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/covers/finance/financial-markets/fm08-option-expiration-gain.jpg",
+      "assets/reviews/finance/financial-markets/fm08-option-expiration-gain/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLqkOmWu",
+      "bbox": [
+        240,
+        249,
+        764,
+        628
+      ],
+      "width": 524,
+      "height": 379,
+      "dx": 2.0,
+      "dy": -11.5,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/finance/financial-markets/fm08-option-expiration-gain.jpg",
+  "prompt_file": "assets/prompts/finance/financial-markets/fm08-option-expiration-gain.md",
+  "cover_image": "assets/covers/finance/financial-markets/fm08-option-expiration-gain.jpg",
+  "cover_version": "financial-markets-20261012-v2",
+  "feishu": {
+    "record_id": "recvvJaLqkOmWu",
+    "verified": true,
+    "verified_at": "2026-10-12T15:01:27.840457+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/5cecb1a3-3414-48a6-9df0-194a321a10ad",
+  "player_version": "financial-markets-20261012-v2"
+}

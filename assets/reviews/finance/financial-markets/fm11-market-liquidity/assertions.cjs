@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm11-market-liquidity.state.ts");assert.deepEqual(at(0).asks.map(x=>x.size),[5,5,10]);assert.equal(at(380).asks[0].size,0);assert.equal(at(580).asks[1].size,0);assert.deepEqual(at(660).asks.map(x=>x.size),[0,0,8]);assert.equal(at(660).cost,1221);assert.equal(at(660).cost/at(660).filled,101.75);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

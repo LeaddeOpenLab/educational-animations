@@ -1,0 +1,358 @@
+{
+  "id": "C16-A006",
+  "subject": "Finance",
+  "course": "Financial Markets",
+  "textbook": "Foundations of Financial Markets and Institutions (Fabozzi et al.)",
+  "title": "Efficient Market Hypothesis: Price Adjusts to Public News",
+  "status": "ready",
+  "video": "assets/videos/finance/financial-markets/fm06-efficient-market-hypothesis.mp4",
+  "tags": [
+    "C16-A006",
+    "ECON 252",
+    "P1"
+  ],
+  "prompt": "A 29-second silent English concept animation for a Financial Markets university course in Finance teaching Efficient Market Hypothesis: Price remains at 100 before the event; future observations remain hidden; Price remains at 100 before the event; future observations remain hidden; At the public announcement, the idealized price jumps from 100 to 120; The efficient path stays at 120 while the lagged comparison adjusts progressively; Show both completed reactions with no predictable post-news drift on the idealized path; Semi-strong efficiency models rapid incorporation of public information, not perfect future prediction; follow the final timeline 0–7s Before the Public Announcement; 7–14s New Information Arrives; 14–22s Price Adjusts Immediately; 22–29s A Delayed Reaction Is a Contrast; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.\n\nDark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; jump the efficient price at the news event and advance the lagged-price marker using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v2 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.",
+  "original_name": "Efficient market hypothesis",
+  "standard_name": "Efficient Market Hypothesis",
+  "aliases": [],
+  "final_title": "Efficient Market Hypothesis: Price Adjusts to Public News",
+  "learning_objective": "Demonstrate rapid price adjustment to newly public information in the idealized semi-strong hypothesis.",
+  "core_conclusion": "Semi-strong efficiency models rapid incorporation of public information, not perfect future prediction.",
+  "references": [
+    {
+      "title": "Yale: Efficient Markets",
+      "url": "https://oyc.yale.edu/economics/econ-252-11/lecture-7",
+      "scope": "Demonstrate rapid price adjustment to newly public information in the idealized semi-strong hypothesis."
+    }
+  ],
+  "artifact_version": "financial-markets-20261012-v2",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Efficient market hypothesis” using this visual metaphor: “a focused financial flow diagram animating Efficient market hypothesis”. Dynamically demonstrate the core formula or conclusion: The efficient-market hypothesis says prices rapidly incorporate available information..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F9F1F5); main visual (#15516C); secondary visual (#8F253B); highlight (#6E5300); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "public news event",
+          "idealized efficient price",
+          "lagged contrast price",
+          "revealed time series"
+        ],
+        "change": "Price remains at 100 before the event; future observations remain hidden.",
+        "cause": "The information set changes at the public announcement.",
+        "result": "Price remains at 100 before the event; future observations remain hidden.",
+        "start_seconds": 0.0,
+        "end_seconds": 7.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "mechanism",
+        "objects": [
+          "public news event",
+          "idealized efficient price",
+          "lagged contrast price",
+          "revealed time series"
+        ],
+        "change": "At the public announcement, the idealized price jumps from 100 to 120.",
+        "cause": "The information set changes at the public announcement.",
+        "result": "At the public announcement, the idealized price jumps from 100 to 120.",
+        "start_seconds": 7.0,
+        "end_seconds": 14.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "comparison",
+        "objects": [
+          "public news event",
+          "idealized efficient price",
+          "lagged contrast price",
+          "revealed time series"
+        ],
+        "change": "The efficient path stays at 120 while the lagged comparison adjusts progressively.",
+        "cause": "The information set changes at the public announcement.",
+        "result": "The efficient path stays at 120 while the lagged comparison adjusts progressively.",
+        "start_seconds": 14.0,
+        "end_seconds": 22.0,
+        "reading_seconds": 7.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "conclusion",
+        "objects": [
+          "public news event",
+          "idealized efficient price",
+          "lagged contrast price",
+          "revealed time series"
+        ],
+        "change": "Show both completed reactions with no predictable post-news drift on the idealized path.",
+        "cause": "The information set changes at the public announcement.",
+        "result": "Show both completed reactions with no predictable post-news drift on the idealized path.",
+        "start_seconds": 22.0,
+        "end_seconds": 29.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.state.ts",
+      "bindings": "<Axes width={900} height={640} xDomain={[0,10]} yDomain={[90,130]} xTicks={[0,4,8,10]} yTicks={[100,120]} xLabel=\"Time around public news\" yLabel=\"Price\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={[[0,100],[Math.min(st.time,4),100],...(st.news?[[4,120],[st.time,120]]:[])] as [number,number][]} color={C.primary} progress={1}/><Curve s={s} pts={sampleFn(st.slow,0,st.time)} color={C.alt} progress={1}/><line x1={s.px(4)} x2={s.px(4)} y1={s.py(95)} y2={s.py(125)} stroke={C.accent} strokeDasharray=\"8 6\"/><circle cx={s.px(st.time)} cy={s.py(st.price)} r={10} fill={C.accent}/><text x={s.px(5)} y={s.py(95)} fill={C.textStrong} fontSize={25}>{st.news?`Efficient ${st.price.toFixed(0)} · lagged ${st.lag.toFixed(0)}`:\"News not yet public\"}</text></>}</Axes>"
+    },
+    "template_scope": "Shared finance-cn palette, typography and basic graphic/L2 primitives only; each topic owns its state model, visual argument and scene sequence.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "mechanism",
+        "uncertainty": "The sudden upward news surprise is illustrative; surprises may also reduce price.",
+        "expected_observation": "Price remains at 100 before the event; future observations remain hidden. At the public announcement, the idealized price jumps from 100 to 120. The efficient path stays at 120 while the lagged comparison adjusts progressively. Show both completed reactions with no predictable post-news drift on the idealized path."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 12.0,
+        "reason": "Final MP4 before/during/after inspection of the topic mechanism"
+      }
+    ],
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/register.cjs",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "assets/source-kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.state.ts",
+      "minimal_source": "assets/source-kits/financial-markets/src/probes/fm06-efficient-market-hypothesis.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<Axes width={900} height={640} xDomain={[0,10]} yDomain={[90,130]} xTicks={[0,4,8,10]} yTicks={[100,120]} xLabel=\"Time around public news\" yLabel=\"Price\" pad={{l:90,r:60,t:80,b:80}}>{s=><><Curve s={s} pts={[[0,100],[Math.min(st.time,4),100],...(st.news?[[4,120],[st.time,120]]:[])] as [number,number][]} color={C.primary} progress={1}/><Curve s={s} pts={sampleFn(st.slow,0,st.time)} color={C.alt} progress={1}/><line x1={s.px(4)} x2={s.px(4)} y1={s.py(95)} y2={s.py(125)} stroke={C.accent} strokeDasharray=\"8 6\"/><circle cx={s.px(st.time)} cy={s.py(st.price)} r={10} fill={C.accent}/><text x={s.px(5)} y={s.py(95)} fill={C.textStrong} fontSize={25}>{st.news?`Efficient ${st.price.toFixed(0)} · lagged ${st.lag.toFixed(0)}`:\"News not yet public\"}</text></>}</Axes>",
+        "observed_source_behavior": "Price remains at 100 before the event; future observations remain hidden. At the public announcement, the idealized price jumps from 100 to 120. The efficient path stays at 120 while the lagged comparison adjusts progressively. Show both completed reactions with no predictable post-news drift on the idealized path.",
+        "applicability": [
+          "recvvJaLq9yv5g"
+        ]
+      },
+      "assertions": "assert.equal(at(359).price,100);assert.equal(at(360).price,120);assert.equal(at(360).lag,100);assert(at(480).lag>100&&at(480).lag<120);assert.equal(at(600).lag,120);assert.equal(at(359).news,false);"
+    },
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "Public-facing copy exposes an implementation frame index rather than the announcement event.",
+        "affected_ids": [
+          "C16-A006"
+        ],
+        "status": "resolved",
+        "fix": "Specific mechanism or label/graphic correction in this topic; re-render and re-review required.",
+        "evidence": [
+          "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/contact-sheet.jpg",
+          "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/risk-sheet.jpg",
+          "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/samples.json"
+        ]
+      }
+    ]
+  },
+  "review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v2",
+    "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+    "reviewed_at": "2026-10-12T14:50:43.355328+08:00",
+    "evidence": [
+      "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/contact-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/risk-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v2",
+      "reviewer": "Codex — executed source/state/type/media/geometry checks",
+      "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/technical-final.json",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/overlap-final.log",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/overlap-final-72.json",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/types-cover.log",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/distinctness-final.log"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v2",
+      "video_path": "assets/videos/finance/financial-markets/fm06-efficient-market-hypothesis.mp4",
+      "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+      "reviewed_at": "2026-10-12T14:50:43.355328+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/contact-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/risk-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/samples.json"
+      ],
+      "observation": "v2: at11.5s price is100 before the news line; at12s the efficient path and marker jump vertically to120 while the lagged path remains100; at12.5s the lagged price is101. The final overview converges both to120 while the efficient path has no delayed drift. Public-facing copy describes the announcement instead of an implementation frame index.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "times_seconds": [
+            11.5,
+            12.0,
+            12.5
+          ],
+          "evidence": [
+            "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/risk-sheet.jpg"
+          ],
+          "observation": "v2: at11.5s price is100 before the news line; at12s the efficient path and marker jump vertically to120 while the lagged path remains100; at12.5s the lagged price is101. The final overview converges both to120 while the efficient path has no delayed drift. Public-facing copy describes the announcement instead of an implementation frame index."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "After hiding headings/copy, only generic boxes, arrows or color remain and the core process cannot be identified",
+          "triggered": false,
+          "reason": "Observed topic-specific quantities and geometry remain sufficient: v2: at11.5s price is100 before the news line; at12s the efficient path and marker jump vertically to120 while the lagged path remains100; at12.5s the lagged price is101. The final overview converges both to120 while the efficient path has no delayed drift. Public-facing copy describes the announcement instead of an implementation frame index."
+        },
+        {
+          "condition": "After removing entrance/fade/line-drawing decoration, no explanatory mechanism state changes",
+          "triggered": false,
+          "reason": "Observed nondecorative data/geometry change: v2: at11.5s price is100 before the news line; at12s the efficient path and marker jump vertically to120 while the lagged path remains100; at12.5s the lagged price is101. The final overview converges both to120 while the efficient path has no delayed drift. Public-facing copy describes the announcement instead of an implementation frame index."
+        },
+        {
+          "condition": "A key operation is declared by result labels without being performed",
+          "triggered": false,
+          "reason": "The observed changing object quantities or geometry perform the operation: v2: at11.5s price is100 before the news line; at12s the efficient path and marker jump vertically to120 while the lagged path remains100; at12.5s the lagged price is101. The final overview converges both to120 while the efficient path has no delayed drift. Public-facing copy describes the announcement instead of an implementation frame index."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 29.0,
+    "reviewer": "Codex — reviewed final frames and source narrative against this Prompt",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/prompts/finance/financial-markets/fm06-efficient-market-hypothesis.md",
+      "assets/source-kits/financial-markets/src/videos/fm06-efficient-market-hypothesis.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "financial-markets-20261012-v2",
+      "record_id": "recvvJaLq9yv5g",
+      "verified_at": "2026-10-12T15:00:10+0800"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "financial-markets-20261012-v2",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/24f6f8f1-91e7-4572-a8d0-6f9b2dd896ec",
+        "comment_id": 6119349672,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127#issuecomment-6119349672",
+        "issue_number": 127,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127",
+        "video_version": "financial-markets-20261012-v2",
+        "video_bytes": 748221,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/24f6f8f1-91e7-4572-a8d0-6f9b2dd896ec",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLq9yv5g",
+  "page": "catalog/finance/econ-252.md",
+  "course_code": "ECON 252",
+  "seo_title": "Efficient Market Hypothesis: Price Adjusts to Public News",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Efficient market hypothesis",
+    "standard_name": "Efficient Market Hypothesis",
+    "scope": "Demonstrate rapid price adjustment to newly public information in the idealized semi-strong hypothesis.",
+    "sources": [
+      {
+        "title": "Yale: Efficient Markets",
+        "url": "https://oyc.yale.edu/economics/econ-252-11/lecture-7",
+        "scope": "Demonstrate rapid price adjustment to newly public information in the idealized semi-strong hypothesis."
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 29.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v2",
+    "reviewer": "Codex — observed topic cover and exact pixel geometry",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/covers/finance/financial-markets/fm06-efficient-market-hypothesis.jpg",
+      "assets/reviews/finance/financial-markets/fm06-efficient-market-hypothesis/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLq9yv5g",
+      "bbox": [
+        233,
+        272,
+        765,
+        628
+      ],
+      "width": 532,
+      "height": 356,
+      "dx": -1.0,
+      "dy": 0.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/finance/financial-markets/fm06-efficient-market-hypothesis.jpg",
+  "prompt_file": "assets/prompts/finance/financial-markets/fm06-efficient-market-hypothesis.md",
+  "cover_image": "assets/covers/finance/financial-markets/fm06-efficient-market-hypothesis.jpg",
+  "cover_version": "financial-markets-20261012-v2",
+  "feishu": {
+    "record_id": "recvvJaLq9yv5g",
+    "verified": true,
+    "verified_at": "2026-10-12T15:01:27.840457+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/24f6f8f1-91e7-4572-a8d0-6f9b2dd896ec",
+  "player_version": "financial-markets-20261012-v2"
+}

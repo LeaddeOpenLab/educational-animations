@@ -1,0 +1,7 @@
+import React from 'react';
+import {COLORS as C,FONT,alpha} from '../theme';
+import {Axes,Curve,sampleFn} from '../components/Plot';
+import {Diversification,OptionPayoff,OptionDelta} from '../components/Fin';
+import {ReturnOutcomes,CashValue,CapitalLedger,DepthRows,BankBalance} from '../components/FinanceState';
+import {stateAt} from '../videos/fm12-financial-crisis-contagion.state';
+export const Minimal=({frame}:{frame:number})=>{const st=stateAt(frame);return (<svg width={900} height={640} viewBox="0 0 900 640" data-k="figure" data-n="credit loss propagation"><g stroke={C.axis} strokeWidth={3}><line x1={190} y1={130} x2={450} y2={330}/><line x1={190} y1={130} x2={190} y2={480}/><line x1={450} y1={330} x2={730} y2={480}/></g><BankBalance x={190} y={130} name="A" capital={8} loss={st.a} failed={st.failed[0]}/><BankBalance x={450} y={330} name="B" capital={5} loss={st.b} failed={st.failed[1]}/><BankBalance x={730} y={480} name="C" capital={3} loss={st.c} failed={st.failed[2]}/><BankBalance x={190} y={480} name="D" capital={6} loss={st.d} failed={false}/>{st.p>0&&st.p<1?<g><circle cx={190+260*st.p} cy={130+200*st.p} r={23} fill={C.result}/><circle cx={190} cy={130+350*st.p} r={17} fill={C.result}/></g>:null}{st.q>0&&st.q<1?<circle cx={450+280*st.q} cy={330+150*st.q} r={23} fill={C.result}/>:null}<text x={450} y={45} fill={C.textStrong} fontSize={27} textAnchor="middle">Credit losses reduce the holders’ capital</text></svg>);};

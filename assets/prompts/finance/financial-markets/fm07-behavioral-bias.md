@@ -1,0 +1,9 @@
+# C16-A007 · Behavioral Bias
+
+Version: financial-markets-20261012-v3 · alignment: aligned
+
+A 29-second silent English concept animation for a Financial Markets university course in Finance teaching Behavioral Bias: Start at the reference point with subjective value zero; Start at the reference point with subjective value zero; Move to a gain of 10 along the concave gain branch; Return through the reference and move to a loss of 10 along the steeper loss branch; Compare subjective gain and loss magnitudes for equal monetary amounts; Equal monetary losses have larger subjective magnitude than equal gains in this prospect-theory example; follow the final timeline 0–5s Evaluate Relative to a Reference; 5–12s An Equal-Sized Gain; 12–21s An Equal-Sized Loss; 21–29s Loss Feels Larger in This Model; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.
+
+Dark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; marker-travel through the gain and steeper loss branches using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v3 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.
+
+Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested.

@@ -1,0 +1,369 @@
+{
+  "id": "C16-A012",
+  "subject": "Finance",
+  "course": "Financial Markets",
+  "textbook": "Foundations of Financial Markets and Institutions (Fabozzi et al.)",
+  "title": "Financial Crisis Contagion: Losses Exhaust Capital",
+  "status": "ready",
+  "video": "assets/videos/finance/financial-markets/fm12-financial-crisis-contagion.mp4",
+  "tags": [
+    "C16-A012",
+    "ECON 252",
+    "P0"
+  ],
+  "prompt": "A 31-second silent English concept animation for a Financial Markets university course in Finance teaching Financial Crisis Contagion: Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B; Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B; A receives external loss 10 and becomes insolvent; Zero-recovery illustration: B loses 6 and D loses 2 on A; B becomes insolvent but D retains capital 4; B default passes loss 4 to C, exhausting its capital 3; D remains solvent because its capital buffer exceeds the loss; Counterparty exposure can transmit insolvency; adequate capital can absorb a loss and stop propagation; follow the final timeline 0–5s Four Banks with Capital Buffers; 5–11s An External Loss Hits Bank A; 11–18s Credit Loss Reaches the Holders; 18–25s A Second Default Transmits Loss; 25–31s A Larger Buffer Stops the Chain; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.\n\nDark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; \"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; marker-travel along credit-exposure links and drain creditor capital buffers using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v1 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.",
+  "original_name": "Financial crisis contagion",
+  "standard_name": "Financial Crisis Contagion",
+  "aliases": [],
+  "final_title": "Financial Crisis Contagion: Losses Exhaust Capital",
+  "learning_objective": "Show a stylized counterparty loss propagating until capital buffers absorb it.",
+  "core_conclusion": "Counterparty exposure can transmit insolvency; adequate capital can absorb a loss and stop propagation.",
+  "references": [
+    {
+      "title": "Federal Reserve: Financial System Vulnerabilities and Risks",
+      "url": "https://www.federalreserve.gov/financial-stability/types-of-financial-system-vulnerabilities-and-risks.htm",
+      "scope": "Show a stylized counterparty loss propagating until capital buffers absorb it."
+    }
+  ],
+  "artifact_version": "financial-markets-20261012-v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Financial crisis contagion” using this visual metaphor: “a focused financial flow diagram animating Financial crisis contagion”. Dynamically demonstrate the core formula or conclusion: Financial contagion carries distress through connected balance sheets..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19.0.0",
+      "TypeScript 5.8.2",
+      "FFmpeg"
+    ],
+    "source": "assets/source-kits/financial-markets/src/videos/fm12-financial-crisis-contagion.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/blob/main/assets/source-kits/financial-markets/src/videos/fm12-financial-crisis-contagion.tsx",
+    "scenes": [
+      {
+        "id": "setup",
+        "objects": [
+          "bank A capital 8",
+          "bank B capital 5",
+          "bank C capital 3",
+          "bank D capital 6",
+          "credit losses",
+          "moving loss tokens"
+        ],
+        "change": "Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B.",
+        "cause": "An insolvent borrower cannot repay its holders in this zero-recovery illustration; creditor losses reduce their equity.",
+        "result": "Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B.",
+        "start_seconds": 0.0,
+        "end_seconds": 5.0,
+        "reading_seconds": 4.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "mechanism",
+        "objects": [
+          "bank A capital 8",
+          "bank B capital 5",
+          "bank C capital 3",
+          "bank D capital 6",
+          "credit losses",
+          "moving loss tokens"
+        ],
+        "change": "A receives external loss 10 and becomes insolvent.",
+        "cause": "An insolvent borrower cannot repay its holders in this zero-recovery illustration; creditor losses reduce their equity.",
+        "result": "A receives external loss 10 and becomes insolvent.",
+        "start_seconds": 5.0,
+        "end_seconds": 11.0,
+        "reading_seconds": 5.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "comparison",
+        "objects": [
+          "bank A capital 8",
+          "bank B capital 5",
+          "bank C capital 3",
+          "bank D capital 6",
+          "credit losses",
+          "moving loss tokens"
+        ],
+        "change": "Zero-recovery illustration: B loses 6 and D loses 2 on A; B becomes insolvent but D retains capital 4.",
+        "cause": "An insolvent borrower cannot repay its holders in this zero-recovery illustration; creditor losses reduce their equity.",
+        "result": "Zero-recovery illustration: B loses 6 and D loses 2 on A; B becomes insolvent but D retains capital 4.",
+        "start_seconds": 11.0,
+        "end_seconds": 18.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "conclusion",
+        "objects": [
+          "bank A capital 8",
+          "bank B capital 5",
+          "bank C capital 3",
+          "bank D capital 6",
+          "credit losses",
+          "moving loss tokens"
+        ],
+        "change": "B default passes loss 4 to C, exhausting its capital 3.",
+        "cause": "An insolvent borrower cannot repay its holders in this zero-recovery illustration; creditor losses reduce their equity.",
+        "result": "B default passes loss 4 to C, exhausting its capital 3.",
+        "start_seconds": 18.0,
+        "end_seconds": 25.0,
+        "reading_seconds": 6.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      },
+      {
+        "id": "closing",
+        "objects": [
+          "bank A capital 8",
+          "bank B capital 5",
+          "bank C capital 3",
+          "bank D capital 6",
+          "credit losses",
+          "moving loss tokens"
+        ],
+        "change": "D remains solvent because its capital buffer exceeds the loss.",
+        "cause": "An insolvent borrower cannot repay its holders in this zero-recovery illustration; creditor losses reduce their equity.",
+        "result": "D remains solvent because its capital buffer exceeds the loss.",
+        "start_seconds": 25.0,
+        "end_seconds": 31.0,
+        "reading_seconds": 5.0,
+        "timing_reason": "Time includes the actual mechanism change and a stable resulting-state reading interval."
+      }
+    ],
+    "state_model": {
+      "source": "assets/source-kits/financial-markets/src/videos/fm12-financial-crisis-contagion.state.ts",
+      "bindings": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"credit loss propagation\"><g stroke={C.axis} strokeWidth={3}><line x1={190} y1={130} x2={450} y2={330}/><line x1={190} y1={130} x2={190} y2={480}/><line x1={450} y1={330} x2={730} y2={480}/></g><BankBalance x={190} y={130} name=\"A\" capital={8} loss={st.a} failed={st.failed[0]}/><BankBalance x={450} y={330} name=\"B\" capital={5} loss={st.b} failed={st.failed[1]}/><BankBalance x={730} y={480} name=\"C\" capital={3} loss={st.c} failed={st.failed[2]}/><BankBalance x={190} y={480} name=\"D\" capital={6} loss={st.d} failed={false}/>{st.p>0&&st.p<1?<g><circle cx={190+260*st.p} cy={130+200*st.p} r={23} fill={C.result}/><circle cx={190} cy={130+350*st.p} r={17} fill={C.result}/></g>:null}{st.q>0&&st.q<1?<circle cx={450+280*st.q} cy={330+150*st.q} r={23} fill={C.result}/>:null}<text x={450} y={45} fill={C.textStrong} fontSize={27} textAnchor=\"middle\">Credit losses reduce the holders’ capital</text></svg>"
+    },
+    "template_scope": "Shared finance-cn palette, typography and basic graphic/L2 primitives only; each topic owns its state model, visual argument and scene sequence.",
+    "critical_processes": [
+      {
+        "id": "core-change",
+        "scene_id": "comparison",
+        "uncertainty": "Stylized zero-recovery chain; real recovery rates and interventions can change the outcome.",
+        "expected_observation": "Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B. A receives external loss 10 and becomes insolvent. Zero-recovery illustration: B loses 6 and D loses 2 on A; B becomes insolvent but D retains capital 4. B default passes loss 4 to C, exhausting its capital 3. D remains solvent because its capital buffer exceeds the loss."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "core-change",
+        "time_seconds": 14.333333333333334,
+        "reason": "Final MP4 before/during/after inspection of the topic mechanism"
+      }
+    ],
+    "code_gate": {
+      "command": [
+        "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "-r",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/register.cjs",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/assertions.cjs"
+      ],
+      "exit_code": 0,
+      "stdout": "PASS: actual before/during/after state, visible parameters and operation boundaries\n",
+      "state_source": "assets/source-kits/financial-markets/src/videos/fm12-financial-crisis-contagion.state.ts",
+      "minimal_source": "assets/source-kits/financial-markets/src/probes/fm12-financial-crisis-contagion.tsx",
+      "source_check": {
+        "passed": true,
+        "visible_binding": "<svg width={900} height={640} viewBox=\"0 0 900 640\" data-k=\"figure\" data-n=\"credit loss propagation\"><g stroke={C.axis} strokeWidth={3}><line x1={190} y1={130} x2={450} y2={330}/><line x1={190} y1={130} x2={190} y2={480}/><line x1={450} y1={330} x2={730} y2={480}/></g><BankBalance x={190} y={130} name=\"A\" capital={8} loss={st.a} failed={st.failed[0]}/><BankBalance x={450} y={330} name=\"B\" capital={5} loss={st.b} failed={st.failed[1]}/><BankBalance x={730} y={480} name=\"C\" capital={3} loss={st.c} failed={st.failed[2]}/><BankBalance x={190} y={480} name=\"D\" capital={6} loss={st.d} failed={false}/>{st.p>0&&st.p<1?<g><circle cx={190+260*st.p} cy={130+200*st.p} r={23} fill={C.result}/><circle cx={190} cy={130+350*st.p} r={17} fill={C.result}/></g>:null}{st.q>0&&st.q<1?<circle cx={450+280*st.q} cy={330+150*st.q} r={23} fill={C.result}/>:null}<text x={450} y={45} fill={C.textStrong} fontSize={27} textAnchor=\"middle\">Credit losses reduce the holders’ capital</text></svg>",
+        "observed_source_behavior": "Four banks start with positive capital; B and D hold claims on A, and C holds a claim on B. A receives external loss 10 and becomes insolvent. Zero-recovery illustration: B loses 6 and D loses 2 on A; B becomes insolvent but D retains capital 4. B default passes loss 4 to C, exhausting its capital 3. D remains solvent because its capital buffer exceeds the loss.",
+        "applicability": [
+          "recvvJaLquUYyf"
+        ]
+      },
+      "assertions": "assert.equal(at(0).a,0);assert.equal(at(270).failed[0],true);assert.equal(at(450).b,6);assert.equal(at(450).d,2);assert.equal(at(450).failed[1],true);assert.equal(at(690).c,4);assert.equal(at(690).failed[2],true);assert.equal(at(929).failed[3],false);"
+    },
+    "previews": [],
+    "rework": []
+  },
+  "review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v1",
+    "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+    "reviewed_at": "2026-10-12T14:39:05.188952+08:00",
+    "evidence": [
+      "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/contact-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/risk-sheet.jpg",
+      "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/samples.json"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    },
+    "technical": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v1",
+      "reviewer": "Codex — executed source/state/type/media/geometry checks",
+      "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/technical-final.json",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/overlap-final.log",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/overlap-final-72.json",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/types-cover.log",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/distinctness-final.log"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "financial-markets-20261012-v1",
+      "video_path": "assets/videos/finance/financial-markets/fm12-financial-crisis-contagion.mp4",
+      "reviewer": "Codex — direct final MP4 overview and risk-triplet image inspection",
+      "reviewed_at": "2026-10-12T14:39:05.188952+08:00",
+      "evidence": [
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/contact-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/risk-sheet.jpg",
+        "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/samples.json"
+      ],
+      "observation": "v1: 13.83/14.33/14.83s show moving loss markers from A toward B/D and B capital0.8→0→−0.8 with its buffer disappearing and insolvency at zero, while D retains positive capital4.6→4.1. Overview then drains C to−1 and leaves D at4. The capital changes demonstrate propagation and absorption; the lines supply the creditor relationships, not a substitute for the loss process. Brief token entry into the recipient is intentional; before/after capital values remain readable.",
+      "checks": {
+        "terminology": true,
+        "explanation": true,
+        "motion": true,
+        "consistency": true,
+        "layout": true,
+        "small_player": true,
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "core-change",
+          "times_seconds": [
+            13.833333333333334,
+            14.333333333333334,
+            14.833333333333334
+          ],
+          "evidence": [
+            "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/risk-sheet.jpg"
+          ],
+          "observation": "v1: 13.83/14.33/14.83s show moving loss markers from A toward B/D and B capital0.8→0→−0.8 with its buffer disappearing and insolvency at zero, while D retains positive capital4.6→4.1. Overview then drains C to−1 and leaves D at4. The capital changes demonstrate propagation and absorption; the lines supply the creditor relationships, not a substitute for the loss process. Brief token entry into the recipient is intentional; before/after capital values remain readable."
+        }
+      ],
+      "veto_conditions": [
+        {
+          "condition": "After hiding headings/copy, only generic boxes, arrows or color remain and the core process cannot be identified",
+          "triggered": false,
+          "reason": "Observed topic-specific quantities and geometry remain sufficient: v1: 13.83/14.33/14.83s show moving loss markers from A toward B/D and B capital0.8→0→−0.8 with its buffer disappearing and insolvency at zero, while D retains positive capital4.6→4.1. Overview then drains C to−1 and leaves D at4. The capital changes demonstrate propagation and absorption; the lines supply the creditor relationships, not a substitute for the loss process. Brief token entry into the recipient is intentional; before/after capital values remain readable."
+        },
+        {
+          "condition": "After removing entrance/fade/line-drawing decoration, no explanatory mechanism state changes",
+          "triggered": false,
+          "reason": "Observed nondecorative data/geometry change: v1: 13.83/14.33/14.83s show moving loss markers from A toward B/D and B capital0.8→0→−0.8 with its buffer disappearing and insolvency at zero, while D retains positive capital4.6→4.1. Overview then drains C to−1 and leaves D at4. The capital changes demonstrate propagation and absorption; the lines supply the creditor relationships, not a substitute for the loss process. Brief token entry into the recipient is intentional; before/after capital values remain readable."
+        },
+        {
+          "condition": "A key operation is declared by result labels without being performed",
+          "triggered": false,
+          "reason": "The observed changing object quantities or geometry perform the operation: v1: 13.83/14.33/14.83s show moving loss markers from A toward B/D and B capital0.8→0→−0.8 with its buffer disappearing and insolvency at zero, while D retains positive capital4.6→4.1. Overview then drains C to−1 and leaves D at4. The capital changes demonstrate propagation and absorption; the lines supply the creditor relationships, not a substitute for the loss process. Brief token entry into the recipient is intentional; before/after capital values remain readable."
+        }
+      ]
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 31.0,
+    "reviewer": "Codex — reviewed final frames and source narrative against this Prompt",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/prompts/finance/financial-markets/fm12-financial-crisis-contagion.md",
+      "assets/source-kits/financial-markets/src/videos/fm12-financial-crisis-contagion.tsx"
+    ],
+    "exact_reproduction_verified": false,
+    "notes": "Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested."
+  },
+  "publication": {
+    "feishu": {
+      "status": "succeeded",
+      "version": "financial-markets-20261012-v1",
+      "record_id": "recvvJaLquUYyf",
+      "verified_at": "2026-10-12T15:00:10+0800"
+    },
+    "github": {
+      "status": "pendingpage",
+      "version": "financial-markets-20261012-v1",
+      "page_status": "pending",
+      "attachment": {
+        "attachment_url": "https://github.com/user-attachments/assets/6af2a072-63a4-4e0c-84c1-1c957d6f25b2",
+        "comment_id": 6119356188,
+        "comment_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127#issuecomment-6119356188",
+        "issue_number": 127,
+        "issue_url": "https://github.com/LeaddeOpenLab/educational-animations/issues/127",
+        "video_version": "financial-markets-20261012-v1",
+        "video_bytes": 812028,
+        "playback_status": "ACCEPTED_BY_USER_POLICY",
+        "policy_date": "2026-09-30"
+      },
+      "player": "https://github.com/user-attachments/assets/6af2a072-63a4-4e0c-84c1-1c957d6f25b2",
+      "playback_status": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30"
+    }
+  },
+  "feishu_record_id": "recvvJaLquUYyf",
+  "page": "catalog/finance/econ-252.md",
+  "course_code": "ECON 252",
+  "seo_title": "Financial Crisis Contagion: Losses Exhaust Capital",
+  "terminology": {
+    "confirmed": true,
+    "original_name": "Financial crisis contagion",
+    "standard_name": "Financial Crisis Contagion",
+    "scope": "Show a stylized counterparty loss propagating until capital buffers absorb it.",
+    "sources": [
+      {
+        "title": "Federal Reserve: Financial System Vulnerabilities and Risks",
+        "url": "https://www.federalreserve.gov/financial-stability/types-of-financial-system-vulnerabilities-and-risks.htm",
+        "scope": "Show a stylized counterparty loss propagating until capital buffers absorb it."
+      }
+    ]
+  },
+  "media": {
+    "duration_seconds": 31.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover_review": {
+    "status": "passed",
+    "version": "financial-markets-20261012-v1",
+    "reviewer": "Codex — observed topic cover and exact pixel geometry",
+    "reviewed_at": "2026-10-12T14:56:13.816009+08:00",
+    "evidence": [
+      "assets/covers/finance/financial-markets/fm12-financial-crisis-contagion.jpg",
+      "assets/reviews/finance/financial-markets/fm12-financial-crisis-contagion/cover-audit.png"
+    ],
+    "geometry": {
+      "record_id": "recvvJaLquUYyf",
+      "bbox": [
+        261,
+        256,
+        752,
+        620
+      ],
+      "width": 491,
+      "height": 364,
+      "dx": 6.5,
+      "dy": -12.0,
+      "passed": true
+    }
+  },
+  "cover": "assets/covers/finance/financial-markets/fm12-financial-crisis-contagion.jpg",
+  "prompt_file": "assets/prompts/finance/financial-markets/fm12-financial-crisis-contagion.md",
+  "cover_image": "assets/covers/finance/financial-markets/fm12-financial-crisis-contagion.jpg",
+  "cover_version": "financial-markets-20261012-v1",
+  "feishu": {
+    "record_id": "recvvJaLquUYyf",
+    "verified": true,
+    "verified_at": "2026-10-12T15:01:27.840457+08:00"
+  },
+  "player": "https://github.com/user-attachments/assets/6af2a072-63a4-4e0c-84c1-1c957d6f25b2",
+  "player_version": "financial-markets-20261012-v1"
+}

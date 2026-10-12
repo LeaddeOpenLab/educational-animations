@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm10-financial-leverage.state.ts");assert.equal(at(0).equity,20);assert.equal(at(360).equity,30);assert.equal(at(630).equity,10);assert.equal(at(630).debt,80);assert(Math.abs(at(630).equityReturn+50)<1e-8);assert.equal(at(540).assets,100);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

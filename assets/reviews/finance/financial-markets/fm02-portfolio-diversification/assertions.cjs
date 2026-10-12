@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm02-portfolio-diversification.state.ts");assert.equal(at(0).low,20);assert(at(300).low<20);assert.equal(at(450).n,16);assert(at(450).low>at(450).floor);assert(at(450).high>at(450).low);assert(at(630).low>at(450).low);assert.equal(at(630).n,16);assert.equal(Number.isInteger(at(301).n),true);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");

@@ -1,0 +1,9 @@
+# C16-A009 · Options Exposure
+
+Version: financial-markets-20261012-v2 · alignment: aligned
+
+A 30-second silent English concept animation for a Financial Markets university course in Finance teaching Options Exposure: Begin at underlying price 90 with a long call position; Begin at underlying price 90 with a long call position; Raise underlying price to 110, increasing call delta and equivalent-share exposure; Increase the magnitude of the short-share hedge to offset the new delta; Display equal and opposite current share exposures and warn that future delta can change; Current delta neutrality requires rebalancing as delta changes; follow the final timeline 0–6s Delta Measures Local Sensitivity; 6–15s Move the Underlying Price; 15–23s Rebalance the Share Hedge; 23–30s A Local Hedge Is Not Permanent; use Remotion 4.0.410, React 19.0.0, TypeScript 5.8.2 and FFmpeg at 1920×1080 and 30 fps.
+
+Dark ground `#0e0e0e` → `#181a1d` → `#22252a`; primary `#ef4444` for up/positive returns, result `#22c55e` for down/negative returns, accent `#f59e0b` for key quantities, warn `#38bdf8` for attention and alt `#a78bfa` for comparisons, following the finance-cn mainland-China red-up/green-down role override; "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif, 800-weight 54px headings and 31px copy with line-height 1.45; marker-travel on the delta curve and resize separate signed share-exposure bars using the exact action windows in the topic stateAt function and the final scene timing above, with continuous scenes and all readable result states settled at least 25f before their scene ends; exact reproduction of final v2 requires the included course source kit, topic TSX/state source, financial L2 primitives, theme, formulas, fonts and Leadde icon, with system-font fallback possible and clean-machine exact reproduction untested.
+
+Complete source kit provided; font fallback can differ; clean-machine exact reproduction untested.

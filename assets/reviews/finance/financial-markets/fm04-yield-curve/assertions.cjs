@@ -1,0 +1,2 @@
+const assert=require("node:assert/strict");const {stateAt:at}=require("/Users/zhoutianshuo/Desktop/leadde motion/.kits/financial-markets/src/videos/fm04-yield-curve.state.ts");assert.equal(at(150).spread,2);assert.equal(at(470).spread,0);assert.equal(at(630).spread,-1);assert(at(629).short<5);assert.equal(at(899).yc(10),4);
+console.log("PASS: actual before/during/after state, visible parameters and operation boundaries");
