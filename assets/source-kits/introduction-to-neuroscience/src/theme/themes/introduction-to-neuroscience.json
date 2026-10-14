@@ -1,0 +1,28 @@
+{
+  "name": "introduction-to-neuroscience",
+  "label": "Introduction to Neuroscience",
+  "mode": "dark",
+  "note": "配色族 okabe-ito-dark（Okabe-Ito / Wong 2011（8 色安全集，去 #000000））；shell 取自配色库条目 okabe-ito-dark，内容角色在族内池中按 rot=[4,5,0,3] 轮换。库条目四个内容角色全部通过；补入同一安全集的 #0072b2 / #cc79a7 / #f0e442 用于轮换。",
+  "colors": {
+    "bg0": "#0e0e0e",
+    "bg1": "#171b1c",
+    "bg2": "#212629",
+    "grid": "rgba(148,163,184,0.13)",
+    "axis": "rgba(148,163,184,0.45)",
+    "textStrong": "#f8fafc",
+    "textMuted": "#a8b4c4",
+    "textDim": "#94a3b8",
+    "primary": "#cc79a7",
+    "accent": "#f0e442",
+    "result": "#56b4e9",
+    "warn": "#d55e00",
+    "alt": "#0072b2"
+  },
+  "font": "\"Helvetica Neue\", Helvetica, Arial, \"Segoe UI\", sans-serif",
+  "backdrop": {
+    "gridSize": 64,
+    "gridOpacity": 0.42,
+    "glowOpacity": 0.12,
+    "glowBlur": 44
+  }
+}

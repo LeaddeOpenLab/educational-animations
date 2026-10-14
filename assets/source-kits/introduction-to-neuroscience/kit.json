@@ -1,0 +1,216 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "introduction-to-neuroscience",
+    "label": "Introduction to Neuroscience",
+    "subject": "Neuroscience",
+    "outputDir": "Neuroscience/Introduction to Neuroscience"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "introduction-to-neuroscience",
+    "file": "src/theme/themes/introduction-to-neuroscience.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#0e0e0e",
+      "bg1": "#171b1c",
+      "bg2": "#212629",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#cc79a7",
+      "accent": "#f0e442",
+      "result": "#56b4e9",
+      "warn": "#d55e00",
+      "alt": "#0072b2"
+    },
+    "bg1": "#171b1c",
+    "contrast": {
+      "primary": 5.67,
+      "accent": 13.13,
+      "result": 7.52,
+      "warn": 4.49,
+      "alt": 3.35
+    }
+  },
+  "primitives": [
+    {
+      "name": "MembranePotential",
+      "file": "src/components/Neuro.tsx",
+      "summary": "膜电位时程：静息 → 去极化 → 峰值 → 复极化 → 超极化，标出阈电位与各阶段主导离子（Na⁺ 内流 / K⁺ 外流），波形由参数化函数给出",
+      "signature": "({ s, rest, threshold, peak, onset, dur, undershoot, color, progress, showIons })"
+    },
+    {
+      "name": "IonChannel",
+      "file": "src/components/Neuro.tsx",
+      "summary": "电压门控离子通道：闸门按 open 开合，离子按开度穿过，标注通道类型与当前开放百分比",
+      "signature": "({ x, y, thick, open, ion, color, progress, seed })"
+    },
+    {
+      "name": "Synapse",
+      "file": "src/components/Neuro.tsx",
+      "summary": "化学突触：突触前终扣（含囊泡）→ 间隙递质扩散 → 突触后受体结合，release 与 binding 两个进度分开控制",
+      "signature": "({ preX, preY, cleft, release, binding, quanta, color, progress, seed })"
+    },
+    {
+      "name": "Summation",
+      "file": "src/components/Neuro.tsx",
+      "summary": "突触整合：EPSP/IPSP 按时间与空间求和（指数衰减核），越过阈电位才发放，给出峰值与是否触发结论",
+      "signature": "({ s, inputs: [{amp, at, label, excitatory}], threshold, rest, tau, color, progress })"
+    },
+    {
+      "name": "BrainMap",
+      "file": "src/components/Neuro.tsx",
+      "summary": "脑侧面轮廓的分区定位图（额叶/顶叶/颞叶/枕叶/小脑/脑干），active 高亮指定脑区",
+      "signature": "({ cx, cy, scale, active, color, progress })"
+    },
+    {
+      "name": "Pathway",
+      "file": "src/components/Neuro.tsx",
+      "summary": "神经通路：核团节点 + 有向连线，支持在 midpoint 交叉（视交叉的鼻侧纤维交叉）",
+      "signature": "({ nodes: [{x, y, label, color}], edges: [{from, to, label, crossing}], progress, color })"
+    },
+    {
+      "name": "ReceptiveField",
+      "file": "src/components/Neuro.tsx",
+      "summary": "同心圆拮抗感受野：中心圆 + 环形外周，光斑位置决定响应，右侧给出放电率条与 Hz 数值",
+      "signature": "({ cx, cy, r, spot: {dx, dy, r}, type: 'on'|'off', baseline, gain, color, progress })"
+    },
+    {
+      "name": "Plasticity",
+      "file": "src/components/Neuro.tsx",
+      "summary": "LTP/LTD：相对基线的突触强度曲线，刺激时刻打竖直标记线，末端给出百分比与 LTP/LTD 判定",
+      "signature": "({ s, strength, stimuli, color, progress, label })"
+    },
+    {
+      "name": "MemoryPath",
+      "file": "src/components/Neuro.tsx",
+      "summary": "记忆形成通路：编码 → 海马 → 巩固 → 皮层 → 提取，带海马到皮层的巩固进度条",
+      "signature": "({ x, y, w, stages, consolidation, color, progress })"
+    },
+    {
+      "name": "IonTransit",
+      "file": "src/components/NeuroMechanisms.tsx",
+      "signature": "({x,y,open,transit,direction?:\"in\"|\"out\",ion?,progress?})",
+      "summary": "ionTransit(open, transit, direction) drives an ion across the entire membrane (−110 to +110 px for inward). Closed gate blocks transit; gap reflects opening."
+    },
+    {
+      "name": "ChemicalSynapse",
+      "file": "src/components/NeuroMechanisms.tsx",
+      "signature": "({x,y,release,binding,clearance?,count?,progress?})",
+      "summary": "ligandState moves neurotransmitter from vesicle through cleft to receptors; binding requires release=1 and activates receptor ions; clearance removes ligands."
+    },
+    {
+      "name": "CircuitSignal",
+      "file": "src/components/NeuroMechanisms.tsx",
+      "signature": "({points:[{x,y}],travel,labels?,color?,progress?})",
+      "summary": "circuitState/pointOnPath moves a signal along supplied anatomical relay path; only endpoint arrival activates final node."
+    },
+    {
+      "name": "SynapticWeight",
+      "file": "src/components/NeuroMechanisms.tsx",
+      "signature": "({x,y,strength,receptors,input,progress?})",
+      "summary": "Explicit synaptic strength changes link thickness and actual EPSP response amplitude input*strength; receptor count changes visible receptor collection."
+    }
+  ],
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "ns01Title",
+      "ns01Gradient",
+      "ns01Leak",
+      "ns01Pump",
+      "ns02Title",
+      "ns02Threshold",
+      "ns02Depolarize",
+      "ns02Refractory",
+      "ns03Title",
+      "ns03Ca",
+      "ns03Quanta",
+      "ns03Clear",
+      "ns04Title",
+      "ns04Spatial",
+      "ns04Temporal",
+      "ns04Decay",
+      "ns05Title",
+      "ns05Lateral",
+      "ns05Homo",
+      "ns05Plastic",
+      "ns06Title",
+      "ns06Decussate",
+      "ns06Relay",
+      "ns06Topo",
+      "ns07Title",
+      "ns07Cross",
+      "ns07Hemifield",
+      "ns07Dorsal",
+      "ns08Title",
+      "ns08Center",
+      "ns08Antagonism",
+      "ns08Edge",
+      "ns09Title",
+      "ns09Hebbian",
+      "ns09NMDA",
+      "ns09LTD",
+      "ns10Title",
+      "ns10Hippo",
+      "ns10Cortex",
+      "ns10Sleep"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^ns\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "配色族 okabe-ito-dark：Okabe-Ito / Wong 2011（8 色安全集，去 #000000）",
+      "primary #cc79a7 / accent #f0e442 / result #56b4e9 / warn #d55e00 / alt #0072b2",
+      "所有显示的数字必须由函数产出，不要在场景里写字面量"
+    ]
+  },
+  "shared": {
+    "files": [
+      "src/components/Plot.tsx",
+      "src/components/ui.tsx",
+      "src/components/MotionActions.tsx"
+    ],
+    "note": "L1c shared coordinates, layout and path movement; L3 owns teaching sequence."
+  }
+}

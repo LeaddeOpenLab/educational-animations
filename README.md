@@ -125,7 +125,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#neuroscience"><img src="assets/subject-cards/neuroscience.png" width="100%" alt="Neuroscience"></a><br>
 <a href="#neuroscience"><strong>Neuroscience</strong></a><br>
-<sub>1 courses · 0 videos · 10 awaiting production · No finished videos yet</sub>
+<sub>1 courses · 10 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#psychology"><img src="assets/subject-cards/psychology.png" width="100%" alt="Psychology"></a><br>
@@ -457,14 +457,15 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="neuroscience"></a>
 ### Neuroscience
 
-0 videos · 10 awaiting production · **No finished videos yet**
+10 videos · 0 awaiting production
 
 <table>
 <tr>
 <td width="33%" valign="top">
 <a id="introduction-to-neuroscience"></a>
+<a href="catalog/neuroscience/9-01.md"><img src="assets/covers/neuroscience/introduction-to-neuroscience/ns01-resting-potential.jpg" width="100%" alt="Introduction to Neuroscience"></a><br>
 <a href="catalog/neuroscience/9-01.md"><strong>Introduction to Neuroscience</strong></a><br>
-<sub>0 videos · 10 awaiting production · No finished videos yet</sub>
+<sub>10 videos · 0 awaiting production</sub>
 </td>
 <td></td>
 <td></td>

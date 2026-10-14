@@ -415,16 +415,16 @@
 - [C10-A012 · Negative feedback regulation](life-sciences/7-013.md#c10-a012) — awaiting production
 ## Introduction to Neuroscience
 
-- [C11-A001 · Resting potential](neuroscience/9-01.md#c11-a001) — awaiting production
-- [C11-A002 · Action potential](neuroscience/9-01.md#c11-a002) — awaiting production
-- [C11-A003 · Chemical synaptic transmission](neuroscience/9-01.md#c11-a003) — awaiting production
-- [C11-A004 · Synaptic integration](neuroscience/9-01.md#c11-a004) — awaiting production
-- [C11-A005 · Brain region localization](neuroscience/9-01.md#c11-a005) — awaiting production
-- [C11-A006 · Neural pathways](neuroscience/9-01.md#c11-a006) — awaiting production
-- [C11-A007 · Visual pathway](neuroscience/9-01.md#c11-a007) — awaiting production
-- [C11-A008 · Receptive field](neuroscience/9-01.md#c11-a008) — awaiting production
-- [C11-A009 · Synaptic plasticity](neuroscience/9-01.md#c11-a009) — awaiting production
-- [C11-A010 · Memory formation](neuroscience/9-01.md#c11-a010) — awaiting production
+- [C11-A001 · Resting potential](neuroscience/9-01.md#c11-a001) — video
+- [C11-A002 · Action potential](neuroscience/9-01.md#c11-a002) — video
+- [C11-A003 · Chemical synaptic transmission](neuroscience/9-01.md#c11-a003) — video
+- [C11-A004 · Synaptic integration](neuroscience/9-01.md#c11-a004) — video
+- [C11-A005 · Brain region localization](neuroscience/9-01.md#c11-a005) — video
+- [C11-A006 · Neural pathways](neuroscience/9-01.md#c11-a006) — video
+- [C11-A007 · Visual pathway](neuroscience/9-01.md#c11-a007) — video
+- [C11-A008 · Receptive field](neuroscience/9-01.md#c11-a008) — video
+- [C11-A009 · Synaptic plasticity](neuroscience/9-01.md#c11-a009) — video
+- [C11-A010 · Memory formation](neuroscience/9-01.md#c11-a010) — video
 ## Introduction to Psychology
 
 - [C12-A001 · Experimental design](psychology/9-00.md#c12-a001) — awaiting production
