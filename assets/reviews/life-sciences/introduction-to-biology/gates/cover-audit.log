@@ -1,0 +1,12 @@
+PASS bi01-protein-structure (231, 208, 747, 648) delta -11.0 -22.0 size 516 440
+PASS bi02-enzyme-kinetics (206, 230, 820, 647) delta 13.0 -11.5 size 614 417
+PASS bi03-cell-membrane-transport (242, 277, 745, 617) delta -6.5 -3.0 size 503 340
+PASS bi04-electrochemical-gradient (230, 250, 770, 693) delta 0.0 21.5 size 540 443
+PASS bi05-meiosis (278, 262, 722, 688) delta 0.0 25.0 size 444 426
+PASS bi06-genetic-linkage (264, 280, 748, 677) delta 6.0 28.5 size 484 397
+PASS bi07-genetic-probability (323, 270, 702, 687) delta 12.5 28.5 size 379 417
+PASS bi08-dna-replication (238, 258, 761, 667) delta -0.5 12.5 size 523 409
+PASS bi09-transcribe (229, 255, 765, 704) delta -3.0 29.5 size 536 449
+PASS bi10-translate (222, 240, 767, 704) delta -5.5 22.0 size 545 464
+PASS bi11-signal-transduction (254, 233, 745, 659) delta -0.5 -4.0 size 491 426
+PASS bi12-negative-feedback-regulation (237, 208, 763, 689) delta 0.0 -1.5 size 526 481

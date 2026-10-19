@@ -1,0 +1,16 @@
+      contrast: primary #56b4e9 7.52 | accent #e69f00 7.71 | result #009e73 5.07 | warn #d55e00 4.49 | alt #cc79a7 5.67 | textStrong #f8fafc 16.59 | textMuted #a8b4c4 8.26 | textDim #94a3b8 6.77
+
+  OK    R1  kit.json parsed — course="introduction-to-biology" 1920x1080@30 900f
+  OK    R2  theme "introduction-to-biology" present, 12 standard roles, active.json agrees
+  OK    R3  all stroke roles >=3 and text roles >=4.5 against bg1 #171b1c
+  OK    R4  6 scripts present
+  OK    R5  40 primitives exported and resolvable
+  OK    R6  48 declared formula keys baked (48 total in file)
+  OK    R7  registry declares 12 videos (12 written, 0 pending)
+  OK    R8  copy column 108..760 | figure 840..1840 | safeTop 60 safeBottom 1000
+  OK    R9  L1a scaffold present (Backdrop.tsx, Formula.tsx, SceneShell.tsx, OverlapProbe.tsx)
+  OK    R10  every file in src/components is L1a, shared, or a registered primitive
+  OK    R11  _kit.meta.json (12 primitives / 48 keys) is merged into kit.json
+
+kit: introduction-to-biology — 11 OK, 0 WARN, 0 FAIL, 0 PENDING
+RESULT: PASS — kit is producible.

@@ -1,0 +1,282 @@
+{
+  "checked_at": "2026-10-19T09:37:16.544Z",
+  "method": "Actual L3 React component render; compares figure SVG separately from narration text and decorative opacity",
+  "results": [
+    {
+      "file": "bi01-protein-structure.tsx",
+      "scenes": [
+        {
+          "id": "sequence",
+          "dur": 195
+        },
+        {
+          "id": "local-folds",
+          "dur": 215
+        },
+        {
+          "id": "chain-fold",
+          "dur": 235
+        },
+        {
+          "id": "subunit-assembly",
+          "dur": 255
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi02-enzyme-kinetics.tsx",
+      "scenes": [
+        {
+          "id": "low-substrate",
+          "dur": 175
+        },
+        {
+          "id": "half-max",
+          "dur": 230
+        },
+        {
+          "id": "slowing-gain",
+          "dur": 260
+        },
+        {
+          "id": "saturation",
+          "dur": 235
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi03-cell-membrane-transport.tsx",
+      "scenes": [
+        {
+          "id": "barrier",
+          "dur": 175
+        },
+        {
+          "id": "channel-crossing",
+          "dur": 265
+        },
+        {
+          "id": "pools-change",
+          "dur": 205
+        },
+        {
+          "id": "atp-pump",
+          "dur": 255
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi04-electrochemical-gradient.tsx",
+      "scenes": [
+        {
+          "id": "concentration",
+          "dur": 180
+        },
+        {
+          "id": "outward-diffusion",
+          "dur": 225
+        },
+        {
+          "id": "charge-separation",
+          "dur": 260
+        },
+        {
+          "id": "equilibrium",
+          "dur": 235
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi05-meiosis.tsx",
+      "scenes": [
+        {
+          "id": "paired-homologs",
+          "dur": 195
+        },
+        {
+          "id": "first-division",
+          "dur": 235
+        },
+        {
+          "id": "second-division",
+          "dur": 245
+        },
+        {
+          "id": "four-products",
+          "dur": 225
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi06-genetic-linkage.tsx",
+      "scenes": [
+        {
+          "id": "parental-linkage",
+          "dur": 200
+        },
+        {
+          "id": "segment-exchange",
+          "dur": 250
+        },
+        {
+          "id": "recombinant-products",
+          "dur": 210
+        },
+        {
+          "id": "map-distance",
+          "dur": 240
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi07-genetic-probability.tsx",
+      "scenes": [
+        {
+          "id": "gametes",
+          "dur": 180
+        },
+        {
+          "id": "square-fills",
+          "dur": 260
+        },
+        {
+          "id": "genotype-count",
+          "dur": 215
+        },
+        {
+          "id": "phenotype-chance",
+          "dur": 245
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi08-dna-replication.tsx",
+      "scenes": [
+        {
+          "id": "parent-duplex",
+          "dur": 185
+        },
+        {
+          "id": "fork-opens",
+          "dur": 240
+        },
+        {
+          "id": "new-strands",
+          "dur": 255
+        },
+        {
+          "id": "two-daughters",
+          "dur": 220
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi09-transcribe.tsx",
+      "scenes": [
+        {
+          "id": "dna-template",
+          "dur": 170
+        },
+        {
+          "id": "rna-pairing",
+          "dur": 250
+        },
+        {
+          "id": "transcript-extends",
+          "dur": 265
+        },
+        {
+          "id": "mrna-product",
+          "dur": 215
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi10-translate.tsx",
+      "scenes": [
+        {
+          "id": "mrna-codons",
+          "dur": 185
+        },
+        {
+          "id": "start-codon",
+          "dur": 220
+        },
+        {
+          "id": "elongation",
+          "dur": 285
+        },
+        {
+          "id": "peptide-product",
+          "dur": 210
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi11-signal-transduction.tsx",
+      "scenes": [
+        {
+          "id": "ligand-arrival",
+          "dur": 190
+        },
+        {
+          "id": "receptor-activation",
+          "dur": 225
+        },
+        {
+          "id": "kinase-relay",
+          "dur": 270
+        },
+        {
+          "id": "cell-response",
+          "dur": 215
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    },
+    {
+      "file": "bi12-negative-feedback-regulation.tsx",
+      "scenes": [
+        {
+          "id": "set-point",
+          "dur": 190
+        },
+        {
+          "id": "disturbance",
+          "dur": 245
+        },
+        {
+          "id": "opposing-response",
+          "dur": 240
+        },
+        {
+          "id": "recovery",
+          "dur": 225
+        }
+      ],
+      "first_vs_last_graphic_changed": true,
+      "in_scene_graphic_motion": true
+    }
+  ]
+}

@@ -120,7 +120,7 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <td width="33%" valign="top">
 <a href="#life-sciences"><img src="assets/subject-cards/life-sciences.png" width="100%" alt="Life Sciences"></a><br>
 <a href="#life-sciences"><strong>Life Sciences</strong></a><br>
-<sub>1 courses · 0 videos · 12 awaiting production · No finished videos yet</sub>
+<sub>1 courses · 12 videos · 0 awaiting production</sub>
 </td>
 <td width="33%" valign="top">
 <a href="#neuroscience"><img src="assets/subject-cards/neuroscience.png" width="100%" alt="Neuroscience"></a><br>
@@ -437,14 +437,15 @@ Looping GIF excerpts from the actual videos. Click a card to watch the full vide
 <a id="life-sciences"></a>
 ### Life Sciences
 
-0 videos · 12 awaiting production · **No finished videos yet**
+12 videos · 0 awaiting production
 
 <table>
 <tr>
 <td width="33%" valign="top">
 <a id="introduction-to-biology"></a>
+<a href="catalog/life-sciences/7-013.md"><img src="assets/covers/life-sciences/introduction-to-biology/bi01-protein-structure.jpg" width="100%" alt="Introduction to Biology"></a><br>
 <a href="catalog/life-sciences/7-013.md"><strong>Introduction to Biology</strong></a><br>
-<sub>0 videos · 12 awaiting production · No finished videos yet</sub>
+<sub>12 videos · 0 awaiting production</sub>
 </td>
 <td></td>
 <td></td>

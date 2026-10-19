@@ -1,0 +1,350 @@
+{
+  "kitVersion": 1,
+  "course": {
+    "id": "introduction-to-biology",
+    "label": "Introduction to Biology",
+    "subject": "Life Sciences",
+    "outputDir": "Life Sciences/Introduction to Biology"
+  },
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "framesPerVideo": 900,
+    "mode": "silent-en"
+  },
+  "theme": {
+    "name": "introduction-to-biology",
+    "file": "src/theme/themes/introduction-to-biology.json",
+    "activeJson": "src/theme/active.json",
+    "roles": {
+      "bg0": "#0e0e0e",
+      "bg1": "#171b1c",
+      "bg2": "#212629",
+      "grid": "rgba(148,163,184,0.13)",
+      "axis": "rgba(148,163,184,0.45)",
+      "textStrong": "#f8fafc",
+      "textMuted": "#a8b4c4",
+      "textDim": "#94a3b8",
+      "primary": "#56b4e9",
+      "accent": "#e69f00",
+      "result": "#009e73",
+      "warn": "#d55e00",
+      "alt": "#cc79a7"
+    },
+    "bg1": "#171b1c",
+    "contrast": {
+      "primary": 7.52,
+      "accent": 7.71,
+      "result": 5.07,
+      "warn": 4.49,
+      "alt": 5.67
+    }
+  },
+  "primitives": [
+    {
+      "name": "Kicker",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Heading",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Caption",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Lines",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Hi",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Arrow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Block",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Verdict",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Chip",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Rule",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Flow",
+      "file": "src/components/ui.tsx",
+      "summary": "场景文字家具：kicker / heading / caption / 错峰行 / 高亮 / 箭头 / 区块 / 判定行 / chip / 分隔线"
+    },
+    {
+      "name": "Axes",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "sampleFn",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "rectPts",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "shifted",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Curve",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Stems",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Impulse",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Band",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "VLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "HLine",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Dot",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "PoleMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "ZeroMark",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Tag",
+      "file": "src/components/Plot.tsx",
+      "summary": "通用连续图形层：Axes（出 Scale） / Curve / Stems / Impulse / Band / VLine / HLine / Dot / PoleMark / ZeroMark / Tag"
+    },
+    {
+      "name": "Formula",
+      "file": "src/components/Formula.tsx",
+      "summary": "渲染 render-mathjax.cjs 烘出的 MathJax SVG（字形内嵌，不依赖外部字体）"
+    },
+    {
+      "name": "Backdrop",
+      "file": "src/components/Backdrop.tsx",
+      "summary": "整幅背景：底色渐变 + 网格 + 辉光，取主题包 token"
+    },
+    {
+      "name": "ProteinLevels",
+      "file": "src/components/Bio.tsx",
+      "summary": "蛋白四级结构：残基带（一级）→ 螺旋/折叠（二级）→ 折叠链（三级）→ 四亚基（四级），level 控制展示到第几级",
+      "signature": "({ x, y, w, level, residues, color, progress })"
+    },
+    {
+      "name": "EnzymeKinetics",
+      "file": "src/components/Bio.tsx",
+      "summary": "米氏动力学曲线 v = Vmax[S]/(Km+[S])：Vmax 渐近线 + Km 处的半速点，可选叠加 Lineweaver-Burk 双倒数线; current substrate point and derived reaction rate",
+      "signature": "({ s, Vmax, Km, color, showLB, progress, substrate })"
+    },
+    {
+      "name": "mmRate",
+      "file": "src/components/Bio.tsx",
+      "summary": "米氏方程函数：底物浓度 → 反应速率，供曲线与标签共用，避免图与文案数字漂移",
+      "signature": "(s, Vmax, Km) => number"
+    },
+    {
+      "name": "Membrane",
+      "file": "src/components/Bio.tsx",
+      "summary": "磷脂双分子层 + 通道/载体/泵三类跨膜蛋白 + 两侧按浓度生成的溶质点云，转运箭头区分顺梯度（被动）与逆梯度（耗 ATP）; visible molecule crossing the bilayer",
+      "signature": "({ x, y, w, thick, outside, inside, transporters: [{kind, at, label, atp, color}], progress, seed, cargo })"
+    },
+    {
+      "name": "IonGradient",
+      "file": "src/components/Bio.tsx",
+      "summary": "膜两侧电荷分离：正负离子点云按浓度生成，给出能斯特电位 E = (RT/zF)ln([out]/[in]); final-only equilibrium potential reveal",
+      "signature": "({ x, y, w, h, out, in_, z, rtf, color, progress, seed, showPotential })"
+    },
+    {
+      "name": "ChromosomePair",
+      "file": "src/components/Bio.tsx",
+      "summary": "同源染色体对：母源/父源两条，可标基因位点与交叉互换（chiasma），separation 控制减数分裂中的分离; distal chromatid color and allele exchange after chiasma",
+      "signature": "({ cx, cy, len, chiasma, separation, maternal, paternal, loci, progress, exchange })"
+    },
+    {
+      "name": "LinkageMap",
+      "file": "src/components/Bio.tsx",
+      "summary": "遗传连锁图：按 cM 排布基因位点，可选高亮两位点间的重组率 RF（并换算成 cM）",
+      "signature": "({ x, y, w, loci: [{cM, label}], highlight, rf, color, progress })"
+    },
+    {
+      "name": "Punnett",
+      "file": "src/components/Bio.tsx",
+      "summary": "庞纳特方格：母本配子横向、父本纵向，格内按组合函数填基因型（默认显性字母在前），逐格揭示",
+      "signature": "({ x, y, cell, gam1, gam2, combine, color, progress })"
+    },
+    {
+      "name": "DnaHelix",
+      "file": "src/components/Bio.tsx",
+      "summary": "DNA 双螺旋：两条正弦链 + 碱基横档；replication>0 时中点张开成复制叉，画出连续的前导链与分段的冈崎片段; fork opening before new-strand synthesis",
+      "signature": "({ x, y, w, amp, turns, replication, color, progress, synthesis })"
+    },
+    {
+      "name": "CodonFlow",
+      "file": "src/components/Bio.tsx",
+      "summary": "中心法则的一段：DNA 模板 → mRNA 密码子 → 氨基酸链，按 progress 逐个密码子推进并高亮当前密码子; distinct transcription RNA-only and translation peptide modes; transcript release and peptide bond connections",
+      "signature": "({ x, y, dna, codonTable, cell, progress, color, mode, release })"
+    },
+    {
+      "name": "SignalingCascade",
+      "file": "src/components/Bio.tsx",
+      "summary": "磷酸化级联：一串激酶按 progress 逐级活化并挂上 P 标记，末端接出细胞响应",
+      "signature": "({ x, y, steps, gap, color, response, progress })"
+    },
+    {
+      "name": "FeedbackLoop",
+      "file": "src/components/Bio.tsx",
+      "summary": "负反馈回路：环形节点（刺激→感受器→效应器→响应），响应以 ⊣ 抑制回起点，中心显示当前值对设定点的偏差; visible controlled-value gauge and set point",
+      "signature": "({ cx, cy, r, nodes, value, setPoint, color, progress, range })"
+    },
+    {
+      "name": "BiologyCoverFigures",
+      "file": "src/components/BiologyCoverFigures.tsx",
+      "summary": "12 个知识点封面的学科原语组合图，复用 Bio.tsx 的 L2 图形"
+    }
+  ],
+  "formulas": {
+    "file": "src/formulas.json",
+    "themeFile": "src/formulas.theme.json",
+    "keys": [
+      "bi01Title",
+      "bi01Peptide",
+      "bi01Helix",
+      "bi01Sheet",
+      "bi02Title",
+      "bi02Half",
+      "bi02Vmax",
+      "bi02LB",
+      "bi03Title",
+      "bi03Passive",
+      "bi03Active",
+      "bi03Flux",
+      "bi04Title",
+      "bi04Nernst",
+      "bi04Drift",
+      "bi04Zero",
+      "bi05Title",
+      "bi05Cross",
+      "bi05Independent",
+      "bi05Reduce",
+      "bi06Title",
+      "bi06Map",
+      "bi06Max",
+      "bi06Linked",
+      "bi07Title",
+      "bi07Sum",
+      "bi07Product",
+      "bi07Ratio",
+      "bi08Title",
+      "bi08Complement",
+      "bi08Direction",
+      "bi08Fork",
+      "bi09Title",
+      "bi09Template",
+      "bi09Promoter",
+      "bi09Direction2",
+      "bi10Title",
+      "bi10Code",
+      "bi10Start",
+      "bi10Stop",
+      "bi11Title",
+      "bi11Phos",
+      "bi11Amplify",
+      "bi11Second",
+      "bi12Title",
+      "bi12Error",
+      "bi12Stable",
+      "bi12Gain"
+    ]
+  },
+  "layout": {
+    "copyColumn": {
+      "left": 108,
+      "maxRight": 760
+    },
+    "figureBand": {
+      "minLeft": 840,
+      "maxRight": 1840
+    },
+    "safeTop": 60,
+    "safeBottom": 1000
+  },
+  "videos": {
+    "registry": "src/videos/registry.ts",
+    "idPattern": "^bi\\d{2}-[a-z0-9-]+$",
+    "naming": {
+      "file": "src/videos/<id>.tsx",
+      "export": "SCENES",
+      "compId": "<id>",
+      "outputStem": "<NN>_<Title_With_Underscores>"
+    }
+  },
+  "scripts": {
+    "mathjax": "scripts/render-mathjax.cjs",
+    "verify": "scripts/verify-kit.mjs",
+    "overlapMeasure": "scripts/measure-overlap.cjs",
+    "overlapCheck": "scripts/check-overlap.cjs",
+    "renderAll": "scripts/render-all.sh",
+    "sheets": "scripts/sheets-from-mp4.sh"
+  },
+  "lint": {
+    "lineHeight": 1.45,
+    "notes": [
+      "配色族 okabe-ito-dark：Okabe-Ito / Wong 2011（8 色安全集，去 #000000）",
+      "primary #56b4e9 / accent #e69f00 / result #009e73 / warn #d55e00 / alt #cc79a7",
+      "所有显示的数字必须由函数产出，不要在场景里写字面量"
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "checked_at": "2026-10-19T09:37:16.424Z",
+  "method": "TypeScript source check plus actual React server-rendered SVG state assertions",
+  "checks": [
+    {
+      "name": "Protein structure",
+      "changed": true,
+      "expected": "quaternary"
+    },
+    {
+      "name": "Enzyme kinetics",
+      "changed": true,
+      "expected": "v 8.0"
+    },
+    {
+      "name": "Cell membrane transport",
+      "changed": true,
+      "expected": "inside = 0.40"
+    },
+    {
+      "name": "Electrochemical gradient",
+      "changed": true,
+      "expected": "mV"
+    },
+    {
+      "name": "Meiosis",
+      "changed": true,
+      "expected": "visible SVG state"
+    },
+    {
+      "name": "Genetic linkage",
+      "changed": true,
+      "expected": "b"
+    },
+    {
+      "name": "Genetic probability",
+      "changed": true,
+      "expected": "aa"
+    },
+    {
+      "name": "DNA replication",
+      "changed": true,
+      "expected": "Okazaki"
+    },
+    {
+      "name": "Transcribe",
+      "changed": true,
+      "expected": "GAA"
+    },
+    {
+      "name": "Translate",
+      "changed": true,
+      "expected": "Glu"
+    },
+    {
+      "name": "Signal transduction",
+      "changed": true,
+      "expected": "response"
+    },
+    {
+      "name": "Negative feedback regulation",
+      "changed": true,
+      "expected": "0.55"
+    }
+  ]
+}

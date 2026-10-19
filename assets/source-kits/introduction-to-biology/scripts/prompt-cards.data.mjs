@@ -1,0 +1,21 @@
+export const COURSE = 'Introduction to Biology';
+
+const entries = [
+  ['bi01-protein-structure','01_Protein_structure','Protein structure','Show how one amino-acid sequence forms secondary motifs, folds into a tertiary chain, then assembles four subunits into a quaternary complex.',['sequence','local-folds','chain-fold','subunit-assembly'],'staggered residue reveal, progressive folding and convergent subunit motion'],
+  ['bi02-enzyme-kinetics','02_Enzyme_kinetics','Enzyme kinetics','Move measured substrate points along a Michaelis–Menten curve, mark half-maximal velocity at Km, and show diminishing rate gains toward Vmax.',['low-substrate','half-max','slowing-gain','saturation'],'curve draw-on and measured-point travel'],
+  ['bi03-cell-membrane-transport','03_Cell_membrane_transport','Cell membrane transport','Show solute crossing a selective channel down a concentration gradient, then contrast an ATP pump moving solute back toward the concentrated side.',['barrier','channel-crossing','pools-change','atp-pump'],'solute crossing and transporter-specific directional motion'],
+  ['bi04-electrochemical-gradient','04_Electrochemical_gradient','Electrochemical gradient','Move K+ outward down its concentration gradient, build the opposing electrical attraction, and end when the two forces balance at the K+ equilibrium potential.',['concentration','outward-diffusion','charge-separation','equilibrium'],'ion travel with opposing force arrows and a final potential reveal'],
+  ['bi05-meiosis','05_Meiosis','Meiosis','Separate paired homologs in meiosis I, then sister chromatids in meiosis II, yielding four cells with one chromosome copy each.',['paired-homologs','first-division','second-division','four-products'],'chromosome separation followed by four-product reveal'],
+  ['bi06-genetic-linkage','06_Genetic_linkage','Genetic linkage','Swap distal segments at a chiasma to create recombinant allele combinations, then infer map distance from recombinant offspring frequency.',['parental-linkage','segment-exchange','recombinant-products','map-distance'],'chromatid segment exchange and recombination-map draw-on'],
+  ['bi07-genetic-probability','07_Genetic_probability','Genetic probability','Fill an Aa by Aa Punnett square one pairing at a time, count AA, Aa and aa genotypes, and derive the 3/4 dominant phenotype probability.',['gametes','square-fills','genotype-count','phenotype-chance'],'cell-by-cell grid reveal and probability count-up'],
+  ['bi08-dna-replication','08_DNA_replication','DNA replication','Open the parental duplex, synthesize complementary strands at the replication fork, and resolve two DNA products each carrying one old and one new strand.',['parent-duplex','fork-opens','new-strands','two-daughters'],'replication-fork opening and new-strand growth'],
+  ['bi09-transcribe','09_Transcribe','Transcribe','Read a DNA template, add complementary RNA bases using U in place of T, extend the transcript, then release the completed mRNA.',['dna-template','rna-pairing','transcript-extends','mrna-product'],'polymerase travel, codon growth and transcript release'],
+  ['bi10-translate','10_Translate','Translate','Read AUG, CCU and GAA codons in sequence, recruit Met, Pro and Glu, and join their beads into a peptide chain.',['mrna-codons','start-codon','elongation','peptide-product'],'ribosome cursor travel and amino-acid chain growth'],
+  ['bi11-signal-transduction','11_Signal_transduction','Signal transduction','Bind a ligand to its receptor, activate K1 then K2 then K3 with phosphorylation markers, and switch on the cellular response.',['ligand-arrival','receptor-activation','kinase-relay','cell-response'],'ligand approach, sequential kinase activation and response-bar fill'],
+  ['bi12-negative-feedback-regulation','12_Negative_feedback_regulation','Negative feedback regulation','Raise a measured variable above its set point, pass the error through sensor and effector, then show the response reducing the deviation.',['set-point','disturbance','opposing-response','recovery'],'disturbance rise, loop propagation and value-gauge recovery'],
+];
+
+export const CARDS = entries.map(([id,file,knowledgePoint,task,sceneIds,motionStyle]) => ({
+  id,file,knowledgePoint,task,motionStyle,palette:'okabe-ito-dark',
+  beats:Object.fromEntries(sceneIds.map(sceneId=>[sceneId,{}])),
+}));

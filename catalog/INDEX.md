@@ -401,18 +401,18 @@
 - [C09-A014 · Retrosynthetic analysis](chemistry/5-12.md#c09-a014) — video
 ## Introduction to Biology
 
-- [C10-A001 · Protein structure](life-sciences/7-013.md#c10-a001) — awaiting production
-- [C10-A002 · Enzyme kinetics](life-sciences/7-013.md#c10-a002) — awaiting production
-- [C10-A003 · Cell membrane transport](life-sciences/7-013.md#c10-a003) — awaiting production
-- [C10-A004 · Electrochemical gradient](life-sciences/7-013.md#c10-a004) — awaiting production
-- [C10-A005 · Meiosis](life-sciences/7-013.md#c10-a005) — awaiting production
-- [C10-A006 · Genetic linkage](life-sciences/7-013.md#c10-a006) — awaiting production
-- [C10-A007 · Genetic probability](life-sciences/7-013.md#c10-a007) — awaiting production
-- [C10-A008 · DNA replication](life-sciences/7-013.md#c10-a008) — awaiting production
-- [C10-A009 · Transcribe](life-sciences/7-013.md#c10-a009) — awaiting production
-- [C10-A010 · Translate](life-sciences/7-013.md#c10-a010) — awaiting production
-- [C10-A011 · Signal transduction](life-sciences/7-013.md#c10-a011) — awaiting production
-- [C10-A012 · Negative feedback regulation](life-sciences/7-013.md#c10-a012) — awaiting production
+- [C10-A001 · Protein structure](life-sciences/7-013.md#c10-a001) — video
+- [C10-A002 · Enzyme kinetics](life-sciences/7-013.md#c10-a002) — video
+- [C10-A003 · Cell membrane transport](life-sciences/7-013.md#c10-a003) — video
+- [C10-A004 · Electrochemical gradient](life-sciences/7-013.md#c10-a004) — video
+- [C10-A005 · Meiosis](life-sciences/7-013.md#c10-a005) — video
+- [C10-A006 · Genetic linkage](life-sciences/7-013.md#c10-a006) — video
+- [C10-A007 · Genetic probability](life-sciences/7-013.md#c10-a007) — video
+- [C10-A008 · DNA replication](life-sciences/7-013.md#c10-a008) — video
+- [C10-A009 · Transcribe](life-sciences/7-013.md#c10-a009) — video
+- [C10-A010 · Translate](life-sciences/7-013.md#c10-a010) — video
+- [C10-A011 · Signal transduction](life-sciences/7-013.md#c10-a011) — video
+- [C10-A012 · Negative feedback regulation](life-sciences/7-013.md#c10-a012) — video
 ## Introduction to Neuroscience
 
 - [C11-A001 · Resting potential](neuroscience/9-01.md#c11-a001) — video
