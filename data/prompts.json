@@ -21085,18 +21085,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v3",
         "issue_number": 130,
         "comment_id": 6264624863,
         "attachment_url": "https://github.com/user-attachments/assets/b1f65d88-ab4c-4ca1-9253-0f641eb27939",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v3",
-        "record_id": "recvvJaLnkWIzj"
+        "record_id": "recvvJaLnkWIzj",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnkWIzj",
@@ -21393,18 +21399,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264627001,
         "attachment_url": "https://github.com/user-attachments/assets/bfde1c5a-e39b-4376-91ad-45b6c822ed33",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnmxwC7"
+        "record_id": "recvvJaLnmxwC7",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnmxwC7",
@@ -21701,18 +21713,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v3",
         "issue_number": 130,
         "comment_id": 6264628999,
         "attachment_url": "https://github.com/user-attachments/assets/3fafa46e-de8d-4601-bc0b-70419b3b5fcb",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v3",
-        "record_id": "recvvJaLnoFSXo"
+        "record_id": "recvvJaLnoFSXo",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnoFSXo",
@@ -22009,18 +22027,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264630802,
         "attachment_url": "https://github.com/user-attachments/assets/61ed9f2c-77fc-4815-b13b-59777d40e8ca",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnqS8Ts"
+        "record_id": "recvvJaLnqS8Ts",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnqS8Ts",
@@ -22317,18 +22341,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264632959,
         "attachment_url": "https://github.com/user-attachments/assets/249e2eba-98fb-499d-880e-99c1e2c29f22",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLntVqoE"
+        "record_id": "recvvJaLntVqoE",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLntVqoE",
@@ -22625,18 +22655,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264634971,
         "attachment_url": "https://github.com/user-attachments/assets/f68e7154-29b5-447d-82d4-e774f2e0df80",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnvWPUx"
+        "record_id": "recvvJaLnvWPUx",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnvWPUx",
@@ -22933,18 +22969,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264637090,
         "attachment_url": "https://github.com/user-attachments/assets/687ffbfe-07cf-4607-b597-8cde6648cbc4",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnxwQKa"
+        "record_id": "recvvJaLnxwQKa",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnxwQKa",
@@ -23241,18 +23283,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264639153,
         "attachment_url": "https://github.com/user-attachments/assets/fda51c25-1314-4960-a3dd-e68765282ac6",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnz6N62"
+        "record_id": "recvvJaLnz6N62",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnz6N62",
@@ -23549,18 +23597,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264640896,
         "attachment_url": "https://github.com/user-attachments/assets/21c0842d-b752-45dd-af63-52c69c5465ec",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnCh30A"
+        "record_id": "recvvJaLnCh30A",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnCh30A",
@@ -23857,18 +23911,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264644261,
         "attachment_url": "https://github.com/user-attachments/assets/5a9db8b4-ce0b-4242-b60e-a0b452bebf10",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnG0E6R"
+        "record_id": "recvvJaLnG0E6R",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnG0E6R",
@@ -24165,18 +24225,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264646116,
         "attachment_url": "https://github.com/user-attachments/assets/d16a25b2-829b-48dc-a36a-b3ec6fb7d847",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnIDzTL"
+        "record_id": "recvvJaLnIDzTL",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnIDzTL",
@@ -24473,18 +24539,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v2",
         "issue_number": 130,
         "comment_id": 6264647666,
         "attachment_url": "https://github.com/user-attachments/assets/685d46ec-b2f4-445d-91a8-8494d983b0b2",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/life-sciences/7-013.md",
+        "commit": "bdb4d711fe084e86593b21228ca95c57296e01c1",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v2",
-        "record_id": "recvvJaLnKPrsp"
+        "record_id": "recvvJaLnKPrsp",
+        "verified_at": "2026-10-19T18:04:03.182838+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnKPrsp",
