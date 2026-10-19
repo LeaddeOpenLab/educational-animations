@@ -1,0 +1,444 @@
+{
+  "id": "C11-A004",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Synaptic integration",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns04-synaptic-integration.mp4",
+  "tags": [
+    "C11-A004",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 29-second silent English 1920×1080 educational animation about Synaptic integration for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–6s, single: Signal travels down one dendrite; voltage rises by 10 mV then decays without crossing threshold. Why: A single small EPSP is subthreshold. Visible result: No axonal spike is generated.\n2. 6–14s, temporal: Second signal travels the same dendrite; its EPSP adds to the remaining first EPSP and crosses threshold; outgoing spike appears after crossing. Why: Temporal overlap preserves enough depolarization to add. Visible result: Closely timed inputs can trigger a spike.\n3. 14–21s, spatial: Signals converge from separate branches; sum trace rises by 18 mV and axonal spike follows crossing. Why: Inputs from different sites contribute to the same initial-segment voltage. Visible result: Spatial summation also reaches threshold.\n4. 21–29s, inhibition: Third branch signal contributes downward voltage; visible EPSP components remain but combined trace drops below threshold and no outgoing spike occurs. Why: Inhibitory influence opposes depolarization in this simplified model. Visible result: Total voltage, not input count, controls firing.\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Synaptic integration",
+  "standard_name": "Synaptic integration",
+  "aliases": [],
+  "final_title": "Synaptic Integration: How Inputs Reach Threshold",
+  "learning_objective": "Show that timed excitatory and inhibitory inputs combine at the axon initial segment and determine whether threshold is crossed.",
+  "core_conclusion": "A neuron integrates inputs across space and time; a spike occurs only when the combined voltage reaches threshold.",
+  "references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK26910/",
+      "use": "mechanism factual support",
+      "checked": "2026-10-14 web search; NCBI direct page captcha",
+      "title": "www.ncbi.nlm.nih.gov"
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Synaptic integration” using this visual metaphor: “a glowing neural circuit carrying one signal for Synaptic integration”. Dynamically demonstrate the core formula or conclusion: Synaptic integration sums incoming potentials at one neuron..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F9F1F5); main visual (#15516C); secondary visual (#8F253B); highlight (#6E5300); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "status": "reviewed",
+    "tool": "Remotion",
+    "duration_seconds": 29,
+    "fps": 30,
+    "language": "en",
+    "audio": "silent",
+    "scenes": [
+      {
+        "id": "single",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "objects": [
+          "branched neuron",
+          "one excitatory synapse",
+          "EPSP trace",
+          "threshold line"
+        ],
+        "initial_state": {
+          "inputs": [],
+          "rest": -70,
+          "threshold": -55
+        },
+        "trigger": "One excitatory event reaches neuron",
+        "change": "Signal travels down one dendrite; voltage rises by 10 mV then decays without crossing threshold.",
+        "cause": "A single small EPSP is subthreshold.",
+        "result": "No axonal spike is generated.",
+        "screen_copy": [
+          "Synaptic integration",
+          "One input may be too small"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "3 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "temporal",
+        "start_seconds": 6,
+        "end_seconds": 14,
+        "objects": [
+          "same excitatory synapse",
+          "two closely timed events",
+          "summed voltage",
+          "axon spike"
+        ],
+        "initial_state": {
+          "input_spacing": 1,
+          "amplitude": 10
+        },
+        "trigger": "Second event arrives before the first EPSP decays",
+        "change": "Second signal travels the same dendrite; its EPSP adds to the remaining first EPSP and crosses threshold; outgoing spike appears after crossing.",
+        "cause": "Temporal overlap preserves enough depolarization to add.",
+        "result": "Closely timed inputs can trigger a spike.",
+        "screen_copy": [
+          "Temporal summation",
+          "Close in time → add together"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "spatial",
+        "start_seconds": 14,
+        "end_seconds": 21,
+        "objects": [
+          "two distinct excitatory synapses",
+          "two dendritic signals",
+          "sum trace",
+          "axon spike"
+        ],
+        "initial_state": {
+          "inputs": [
+            {
+              "amp": 9,
+              "at": 2
+            },
+            {
+              "amp": 9,
+              "at": 2
+            }
+          ]
+        },
+        "trigger": "Two synapses activate together",
+        "change": "Signals converge from separate branches; sum trace rises by 18 mV and axonal spike follows crossing.",
+        "cause": "Inputs from different sites contribute to the same initial-segment voltage.",
+        "result": "Spatial summation also reaches threshold.",
+        "screen_copy": [
+          "Spatial summation",
+          "Different synapses → one sum"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "inhibition",
+        "start_seconds": 21,
+        "end_seconds": 29,
+        "objects": [
+          "two excitatory inputs",
+          "third inhibitory synapse",
+          "combined trace",
+          "silent axon"
+        ],
+        "initial_state": {
+          "excitatory_sum": 18,
+          "inhibitory_amp": -8
+        },
+        "trigger": "Add coincident inhibitory input",
+        "change": "Third branch signal contributes downward voltage; visible EPSP components remain but combined trace drops below threshold and no outgoing spike occurs.",
+        "cause": "Inhibitory influence opposes depolarization in this simplified model.",
+        "result": "Total voltage, not input count, controls firing.",
+        "screen_copy": [
+          "Inhibition changes the total",
+          "Threshold decides the output"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      }
+    ],
+    "scene_rationale": "Four examples distinguish one decaying input, closely timed inputs, multiple synapses and an inhibitory subtraction. Each modifies real summation data and spike output, so it is not four captions on one unchanged trace. Scope uses a clearly labeled simplified linear model, not a claim that biological dendrites are always linear.",
+    "critical_processes": [
+      {
+        "id": "threshold",
+        "scene_id": "temporal",
+        "uncertainty": "Axon spike must begin at/after summed voltage crosses threshold, not on second token launch.",
+        "expected_observation": "Axon spike must begin at/after summed voltage crosses threshold, not on second token launch.",
+        "time_seconds": 10
+      },
+      {
+        "id": "inhibition",
+        "scene_id": "inhibition",
+        "uncertainty": "Components unchanged, negative contribution lowers sum below threshold; output withheld.",
+        "expected_observation": "Components unchanged, negative contribution lowers sum below threshold; output withheld.",
+        "time_seconds": 25
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "threshold",
+        "time_seconds": 10,
+        "reason": "Axon spike must begin at/after summed voltage crosses threshold, not on second token launch."
+      },
+      {
+        "id": "inhibition",
+        "time_seconds": 25,
+        "reason": "Components unchanged, negative contribution lowers sum below threshold; output withheld."
+      }
+    ],
+    "state_model": {
+      "status": "implemented",
+      "source": ".kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.state.ts",
+      "bindings": [
+        "integrationState(frame).inputs -> sumPotential and component curves",
+        "integrationState(frame).time -> graph reveal and arrival signals",
+        "sumPotential >= threshold at past times -> outgoing spike activation"
+      ],
+      "render_source": ".kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.tsx"
+    },
+    "template_scope": "Reuse existing course palette, fonts, SceneShell, Plot and listed L2 geometry only; topic owns causal sequence and state.",
+    "implementation_plan": "Independent branched neuron with component EPSP traces and total curve. Four numerical experiments have specific event arrays; graph voltage, threshold result and axonal signal share sumPotential.",
+    "requirement_resolution": {
+      "preserved": "Original requirement_prompt and subject identity unchanged.",
+      "effective": "User explicitly invoked current edu-video orchestration; Remotion 25–35s English silent kit takes precedence over historical Manim 15s palette/3D prompt."
+    },
+    "previews": [],
+    "rework": [],
+    "tsx_path": ".kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.tsx",
+    "key_frames": [
+      30,
+      165,
+      330,
+      510,
+      690,
+      840
+    ],
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "source_version": "v1-full",
+        "reviewer": "Codex kit/ns01-04 agent",
+        "reviewed_at": "2026-10-14T07:06:45.385530+00:00",
+        "command": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node .workbuddy/batch-20261014-neuroscience/b1-assert-01-04.cjs",
+        "exit_code": 0,
+        "log": ".workbuddy/batch-20261014-neuroscience/b1-assert-01-04.log",
+        "state_source": ".kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.state.ts",
+        "minimal_tsx": ".kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.mechanism.tsx",
+        "assertions": {
+          "slug": "ns04-synaptic-integration",
+          "frames": [
+            30,
+            239,
+            240
+          ],
+          "assertions": "PASS: before/mid/after plus transition boundaries; actual minimal TSX renders different bound geometry",
+          "rendered_markup_lengths": [
+            398,
+            849,
+            929
+          ],
+          "full_source": {
+            "duration": 870,
+            "scene_bindings": [
+              {
+                "scene": "single",
+                "markup_length": 7770
+              },
+              {
+                "scene": "temporal",
+                "markup_length": 10263
+              },
+              {
+                "scene": "spatial",
+                "markup_length": 10575
+              },
+              {
+                "scene": "inhibition",
+                "markup_length": 13030
+              }
+            ]
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "binding_inspection": "Inspected IntegrationMechanism -> integrationState -> sumPotential; trace v maps to SVG y, same voltage creates numeric label; threshold crossing controls actual outgoing signal circle. Temporal and spatial crossing and inhibitory withheld output asserted.",
+          "full_binding_inspection": "Inspected independent L3 scene components and local board. All scene offsets preserve design timeline; actual .state.ts inputs drive geometric positions, actual curve/path points, receptor counts or visible voltage, not the minimal mechanism wrapper. Full SCENES SSR checked each scene for figure output and non-NaN coordinates."
+        },
+        "scope": "Authorizes full TSX expansion only. Full implementation must reuse these state functions and preserve bindings. Teaching review remains pending.",
+        "full_tsx": ".kits/introduction-to-neuroscience/src/videos/ns04-synaptic-integration.tsx"
+      },
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex parent reviewer",
+      "reviewed_at": "2026-10-14T08:01:06.033988+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "threshold",
+          "times_seconds": [
+            9.7,
+            10.0,
+            10.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/risk-sheet.jpg"
+          ],
+          "observation": "A single EPSP stays below threshold; repeated activity sums to a spike."
+        },
+        {
+          "risk_id": "inhibition",
+          "times_seconds": [
+            24.7,
+            25.0,
+            25.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/risk-sheet.jpg"
+          ],
+          "observation": "Spatial excitation crosses threshold; adding inhibition lowers the voltage and silences the axon."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Converging synapses, voltage trace and axon output identify summation."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Inputs change total voltage and spike state."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Adding inhibition visibly changes the voltage and output."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            1,
+            11
+          ],
+          "observed": "A single EPSP stays below threshold; repeated activity sums to a spike."
+        },
+        {
+          "times_seconds": [
+            17,
+            28
+          ],
+          "observed": "Spatial excitation crosses threshold; adding inhibition lowers the voltage and silences the axon."
+        },
+        {
+          "times_seconds": [
+            9.7,
+            10.3
+          ],
+          "observed": "A second temporal event alters the total curve and threshold state."
+        }
+      ]
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 29.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnSPIfP/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164316580,
+      "attachment_url": "https://github.com/user-attachments/assets/b6168e83-0c86-46d3-8fac-da0228502188",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLnSPIfP",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLnSPIfP",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "confirmed": true,
+    "terms": [
+      "EPSP",
+      "IPSP",
+      "temporal summation",
+      "spatial summation",
+      "axon initial segment"
+    ]
+  },
+  "media": {
+    "duration_seconds": 29.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns04-synaptic-integration.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/b6168e83-0c86-46d3-8fac-da0228502188",
+  "player_version": "v1"
+}

@@ -21876,18 +21876,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164215638,
         "attachment_url": "https://github.com/user-attachments/assets/0ba35035-b5d3-43e8-a4f0-ddb21083a56a",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnMfbvF"
+        "record_id": "recvvJaLnMfbvF",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnMfbvF",
@@ -22351,18 +22357,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164307217,
         "attachment_url": "https://github.com/user-attachments/assets/3b443151-6863-4bfd-aad4-0245c8e5a671",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnOlKnX"
+        "record_id": "recvvJaLnOlKnX",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnOlKnX",
@@ -22779,18 +22791,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164111529,
         "attachment_url": "https://github.com/user-attachments/assets/0dd7cc60-f378-4ef8-8fb5-e7373b03aee6",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnQc1Un"
+        "record_id": "recvvJaLnQc1Un",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnQc1Un",
@@ -23217,18 +23235,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164316580,
         "attachment_url": "https://github.com/user-attachments/assets/b6168e83-0c86-46d3-8fac-da0228502188",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnSPIfP"
+        "record_id": "recvvJaLnSPIfP",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnSPIfP",
@@ -23704,18 +23728,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164236101,
         "attachment_url": "https://github.com/user-attachments/assets/325ac024-f020-47fd-b67c-3a99efb062b4",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnVkMnK"
+        "record_id": "recvvJaLnVkMnK",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnVkMnK",
@@ -24196,18 +24226,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164243944,
         "attachment_url": "https://github.com/user-attachments/assets/c9ba9903-e6bd-4290-80b9-acf3c4bc5698",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnXnupL"
+        "record_id": "recvvJaLnXnupL",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnXnupL",
@@ -24720,18 +24756,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164248910,
         "attachment_url": "https://github.com/user-attachments/assets/6616f185-61a9-4fc6-9e9c-11d698467547",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLnZbgp2"
+        "record_id": "recvvJaLnZbgp2",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLnZbgp2",
@@ -25156,18 +25198,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164335072,
         "attachment_url": "https://github.com/user-attachments/assets/a78c68ec-47b7-4318-96d2-ec364d93622c",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLo1xR2X"
+        "record_id": "recvvJaLo1xR2X",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLo1xR2X",
@@ -25627,18 +25675,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164183268,
         "attachment_url": "https://github.com/user-attachments/assets/5443c332-36dd-4f87-baa2-bb70010eb9be",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLo3Xey1"
+        "record_id": "recvvJaLo3Xey1",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLo3Xey1",
@@ -26086,18 +26140,24 @@
     },
     "publication": {
       "github": {
-        "status": "attachment_uploaded",
+        "status": "succeeded",
         "version": "v1",
         "issue_number": 129,
         "comment_id": 6164290136,
         "attachment_url": "https://github.com/user-attachments/assets/b4957566-b3a4-4ecb-b49d-18330827591b",
         "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
-        "policy_date": "2026-09-30"
+        "policy_date": "2026-09-30",
+        "page_status": "published",
+        "page": "catalog/neuroscience/9-01.md",
+        "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00",
+        "playback_status": "ACCEPTED_BY_USER_POLICY"
       },
       "feishu": {
-        "status": "verified",
+        "status": "succeeded",
         "version": "v1",
-        "record_id": "recvvJaLo5zE0k"
+        "record_id": "recvvJaLo5zE0k",
+        "verified_at": "2026-10-19T16:46:42.593335+08:00"
       }
     },
     "feishu_record_id": "recvvJaLo5zE0k",

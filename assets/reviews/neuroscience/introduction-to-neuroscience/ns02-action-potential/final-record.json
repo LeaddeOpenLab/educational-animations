@@ -1,0 +1,481 @@
+{
+  "id": "C11-A002",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Action potential",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns02-action-potential.mp4",
+  "tags": [
+    "C11-A002",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 31-second silent English 1920×1080 educational animation about Action potential for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns02-action-potential.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–6s, threshold: Small trace rises and returns; stronger input reaches illustrative −55 mV threshold while Na+ gate starts opening. Why: Subthreshold graded voltage fails to recruit a regenerative spike. Visible result: Threshold crossing separates a graded input from spike initiation.\n2. 6–13s, sodium: Na+ token crosses inward; trace climbs to illustrative +40 mV and moving cursor follows the actual trace. Why: Na+ influx depolarizes the patch and recruits additional Na+ channels. Visible result: A rapid upstroke appears.\n3. 13–20s, potassium: K+ moves outward; trace falls below rest before recovering as K+ opening subsides. Why: Delayed outward K+ current repolarizes then briefly hyperpolarizes membrane. Visible result: The spike is brief rather than sustained.\n4. 20–27s, propagate: Identical spike shape rises successively at three adjacent positions while each earlier patch falls; yellow signal travels between them. Why: Each fresh segment regenerates the spike instead of merely transporting one fixed ion. Visible result: Spike amplitude is preserved along the axon.\n5. 27–31s, refractory: Input reaches the patch but cannot start another upstroke; gate availability then returns as patch rests. Why: Inactivated Na+ channels impose an absolute refractory period. Visible result: Immediate refiring is prevented.\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Action potential",
+  "standard_name": "Action potential",
+  "aliases": [],
+  "final_title": "Action Potential: Threshold to Refractory Recovery",
+  "learning_objective": "Connect threshold crossing to Na+ entry, delayed K+ exit and regeneration of an all-or-none spike along an axon.",
+  "core_conclusion": "Threshold triggers a regenerated spike: Na+ enters, then K+ exits; refractory membrane limits immediate refiring.",
+  "references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK10897/",
+      "use": "mechanism factual support",
+      "checked": "2026-10-14 web search; NCBI direct page captcha",
+      "title": "www.ncbi.nlm.nih.gov"
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Action potential” using this visual metaphor: “a glowing neural circuit carrying one signal for Action potential”. Dynamically demonstrate the core formula or conclusion: An action potential is an all-or-none traveling voltage spike..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "status": "reviewed",
+    "tool": "Remotion",
+    "duration_seconds": 31,
+    "fps": 30,
+    "language": "en",
+    "audio": "silent",
+    "scenes": [
+      {
+        "id": "threshold",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "objects": [
+          "axon membrane patch",
+          "voltage trace",
+          "threshold line",
+          "two stimulus arrows"
+        ],
+        "initial_state": {
+          "voltage": -70,
+          "Na_open": 0
+        },
+        "trigger": "Show a small depolarization followed by a threshold-reaching input",
+        "change": "Small trace rises and returns; stronger input reaches illustrative −55 mV threshold while Na+ gate starts opening.",
+        "cause": "Subthreshold graded voltage fails to recruit a regenerative spike.",
+        "result": "Threshold crossing separates a graded input from spike initiation.",
+        "screen_copy": [
+          "Action potential",
+          "Reach threshold to trigger a spike"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "3 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "sodium",
+        "start_seconds": 6,
+        "end_seconds": 13,
+        "objects": [
+          "Na+ gate",
+          "inward Na+ token",
+          "rising voltage trace"
+        ],
+        "initial_state": {
+          "voltage": -55,
+          "Na_open": 1,
+          "K_open": 0
+        },
+        "trigger": "Voltage-dependent Na+ channels open",
+        "change": "Na+ token crosses inward; trace climbs to illustrative +40 mV and moving cursor follows the actual trace.",
+        "cause": "Na+ influx depolarizes the patch and recruits additional Na+ channels.",
+        "result": "A rapid upstroke appears.",
+        "screen_copy": [
+          "Na+ in",
+          "Rapid depolarization"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "potassium",
+        "start_seconds": 13,
+        "end_seconds": 20,
+        "objects": [
+          "inactivated Na+ gate",
+          "open K+ gate",
+          "outward K+ token",
+          "falling voltage trace"
+        ],
+        "initial_state": {
+          "voltage": 40,
+          "Na_open": 0,
+          "K_open": 1
+        },
+        "trigger": "Na+ channels inactivate and delayed K+ conductance increases",
+        "change": "K+ moves outward; trace falls below rest before recovering as K+ opening subsides.",
+        "cause": "Delayed outward K+ current repolarizes then briefly hyperpolarizes membrane.",
+        "result": "The spike is brief rather than sustained.",
+        "screen_copy": [
+          "K+ out",
+          "Repolarize, then recover"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "propagate",
+        "start_seconds": 20,
+        "end_seconds": 27,
+        "objects": [
+          "three axon patches",
+          "local voltage profiles",
+          "traveling signal"
+        ],
+        "initial_state": {
+          "patch_times": [
+            0,
+            -1,
+            -2
+          ]
+        },
+        "trigger": "Local current depolarizes the next patch to threshold",
+        "change": "Identical spike shape rises successively at three adjacent positions while each earlier patch falls; yellow signal travels between them.",
+        "cause": "Each fresh segment regenerates the spike instead of merely transporting one fixed ion.",
+        "result": "Spike amplitude is preserved along the axon.",
+        "screen_copy": [
+          "Regenerated at each patch",
+          "All-or-none propagation"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "refractory",
+        "start_seconds": 27,
+        "end_seconds": 31,
+        "objects": [
+          "recovering patch",
+          "attempted second input",
+          "Na+ channel state"
+        ],
+        "initial_state": {
+          "available_Na": 0
+        },
+        "trigger": "Apply another input before Na+ channels recover",
+        "change": "Input reaches the patch but cannot start another upstroke; gate availability then returns as patch rests.",
+        "cause": "Inactivated Na+ channels impose an absolute refractory period.",
+        "result": "Immediate refiring is prevented.",
+        "screen_copy": [
+          "A brief refractory period"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "2 seconds for visible operation; 2 seconds to read the result while the mechanism remains visible."
+      }
+    ],
+    "scene_rationale": "Five causal stages are needed because threshold, opposing ionic phases, propagation and refractory recovery cannot be merged into a single generic moving highlight. The waveform remains continuous and each local ion event is linked to a visible voltage sample.",
+    "critical_processes": [
+      {
+        "id": "ions",
+        "scene_id": "potassium",
+        "uncertainty": "Na+ closed and K+ outward must coincide with falling voltage.",
+        "expected_observation": "Na+ closed and K+ outward must coincide with falling voltage.",
+        "time_seconds": 15.5
+      },
+      {
+        "id": "regeneration",
+        "scene_id": "propagate",
+        "uncertainty": "Successive spatial patches show same peak, shifted in time; signal does not shrink.",
+        "expected_observation": "Successive spatial patches show same peak, shifted in time; signal does not shrink.",
+        "time_seconds": 23.5
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "threshold",
+        "time_seconds": 6,
+        "reason": "threshold voltage must remain continuous across first transition"
+      },
+      {
+        "id": "ions",
+        "time_seconds": 13,
+        "reason": "Na closes and K opens at local peak"
+      },
+      {
+        "id": "regeneration",
+        "time_seconds": 23.5,
+        "reason": "successive spatial patches regenerate equivalent spike waveforms"
+      }
+    ],
+    "state_model": {
+      "status": "implemented",
+      "source": ".kits/introduction-to-neuroscience/src/videos/ns02-action-potential.state.ts",
+      "bindings": [
+        "actionState(frame).time -> voltageAt and curve cursor",
+        "actionState(frame).NaOpen/KOpen/transit -> IonTransit gates and positions",
+        "actionState(frame).patchTimes -> three spatial membrane patch waveforms"
+      ],
+      "render_source": ".kits/introduction-to-neuroscience/src/videos/ns02-action-potential.tsx"
+    },
+    "template_scope": "Reuse existing course palette, fonts, SceneShell, Plot and listed L2 geometry only; topic owns causal sequence and state.",
+    "implementation_plan": "Independent voltage-time graph and membrane patch storyboard; propagation uses three spatially shifted voltageAt traces, not just a moving dot.",
+    "requirement_resolution": {
+      "preserved": "Original requirement_prompt and subject identity unchanged.",
+      "effective": "User explicitly invoked current edu-video orchestration; Remotion 25–35s English silent kit takes precedence over historical Manim 15s palette/3D prompt."
+    },
+    "previews": [],
+    "rework": [],
+    "tsx_path": ".kits/introduction-to-neuroscience/src/videos/ns02-action-potential.tsx",
+    "key_frames": [
+      30,
+      180,
+      360,
+      555,
+      735,
+      900
+    ],
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "source_version": "v1-full",
+        "reviewer": "Codex kit/ns01-04 agent",
+        "reviewed_at": "2026-10-14T07:06:45.384038+00:00",
+        "command": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node .workbuddy/batch-20261014-neuroscience/b1-assert-01-04.cjs",
+        "exit_code": 0,
+        "log": ".workbuddy/batch-20261014-neuroscience/b1-assert-01-04.log",
+        "state_source": ".kits/introduction-to-neuroscience/src/videos/ns02-action-potential.state.ts",
+        "minimal_tsx": ".kits/introduction-to-neuroscience/src/videos/ns02-action-potential.mechanism.tsx",
+        "assertions": {
+          "slug": "ns02-action-potential",
+          "frames": [
+            180,
+            260,
+            450
+          ],
+          "assertions": "PASS: before/mid/after plus transition boundaries; actual minimal TSX renders different bound geometry",
+          "rendered_markup_lengths": [
+            1528,
+            1572,
+            1572
+          ],
+          "full_source": {
+            "duration": 930,
+            "scene_bindings": [
+              {
+                "scene": "threshold",
+                "markup_length": 5958
+              },
+              {
+                "scene": "sodium",
+                "markup_length": 6517
+              },
+              {
+                "scene": "potassium",
+                "markup_length": 8169
+              },
+              {
+                "scene": "propagate",
+                "markup_length": 8787
+              },
+              {
+                "scene": "refractory",
+                "markup_length": 7983
+              }
+            ]
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "binding_inspection": "Inspected ActionMechanism -> actionState -> voltageAt; voltage binds SVG cursor cy and mV label, channel state and transit bind IonTransit. patchVoltages bind actual geometric heights. Threshold transition remains continuous at frame 180; Na/K switch at 390. Propagation equality checked at shifted frames.",
+          "full_binding_inspection": "Inspected independent L3 scene components and local board. All scene offsets preserve design timeline; actual .state.ts inputs drive geometric positions, actual curve/path points, receptor counts or visible voltage, not the minimal mechanism wrapper. Full SCENES SSR checked each scene for figure output and non-NaN coordinates."
+        },
+        "scope": "Authorizes full TSX expansion only. Full implementation must reuse these state functions and preserve bindings. Teaching review remains pending.",
+        "full_tsx": ".kits/introduction-to-neuroscience/src/videos/ns02-action-potential.tsx"
+      },
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex parent reviewer",
+      "reviewed_at": "2026-10-14T08:01:06.033988+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "threshold",
+          "times_seconds": [
+            5.7,
+            6.0,
+            6.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/risk-sheet.jpg"
+          ],
+          "observation": "Voltage crosses -55 mV as the Na+ channel opens."
+        },
+        {
+          "risk_id": "ions",
+          "times_seconds": [
+            12.7,
+            13.0,
+            13.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/risk-sheet.jpg"
+          ],
+          "observation": "After the peak, Na+ inactivates and K+ opens as voltage falls."
+        },
+        {
+          "risk_id": "regeneration",
+          "times_seconds": [
+            23.2,
+            23.5,
+            23.8
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/risk-sheet.jpg"
+          ],
+          "observation": "A full spike progresses from one membrane patch to another."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Ion-channel patches and voltage waveform identify an action potential."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Channel state, ion transit, voltage and propagation change."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Spike phases and the traveling event are drawn."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            5.7,
+            6.3
+          ],
+          "observed": "Voltage crosses -55 mV as the Na+ channel opens."
+        },
+        {
+          "times_seconds": [
+            12.7,
+            13.3
+          ],
+          "observed": "After the peak, Na+ inactivates and K+ opens as voltage falls."
+        },
+        {
+          "times_seconds": [
+            23.2,
+            23.8
+          ],
+          "observed": "A full spike progresses from one membrane patch to another."
+        }
+      ]
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 31.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnOlKnX/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164307217,
+      "attachment_url": "https://github.com/user-attachments/assets/3b443151-6863-4bfd-aad4-0245c8e5a671",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLnOlKnX",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLnOlKnX",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "confirmed": true,
+    "terms": [
+      "threshold",
+      "depolarization",
+      "repolarization",
+      "refractory period",
+      "voltage-gated channel"
+    ]
+  },
+  "media": {
+    "duration_seconds": 31.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns02-action-potential.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/3b443151-6863-4bfd-aad4-0245c8e5a671",
+  "player_version": "v1"
+}

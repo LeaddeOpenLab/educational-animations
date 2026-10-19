@@ -1,0 +1,467 @@
+{
+  "id": "C11-A010",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Memory formation",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns10-memory-formation.mp4",
+  "tags": [
+    "C11-A010",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 32-second silent English 1920×1080 educational animation about Memory formation for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–8s, association: Place and sound ensembles fire; two pulses converge on hippocampus; hippocampal association becomes available after convergence Why: Hippocampal activity supports binding elements of an episode Visible result: Both features and their common association remain visible\n2. 8–17s, reactivation: A hippocampal pulse reactivates place then sound; two replay cycles repeat the same feature sequence Why: Reactivation can coordinate distributed activity Visible result: The same feature pattern reappears without the external bell or park input\n3. 17–25s, strengthening: Replay pulses traverse retained network while cortical link thickens from strength .625 to 1 and its response grows; weight starts rising during prior reactivation. Why: Repeated coordinated activity supports circuit reorganization Visible result: Stronger cortical influence is visible; hippocampus is neither emptied nor removed\n4. 25–32s, retrieval: Cue activates sound, a signal travels along strengthened cortical path, and place ensemble reactivates after arrival Why: A partial cue can help reinstate associated features Visible result: Place returns without a park stimulus; hippocampus remains part of network\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Memory formation",
+  "standard_name": "Memory formation",
+  "aliases": [],
+  "final_title": "Memory Formation: Replay to Partial-Cue Recall",
+  "learning_objective": "Describe a simplified episodic-memory example in which hippocampal association and repeated reactivation help strengthen distributed cortical connections.",
+  "core_conclusion": "Memory formation involves changing distributed neural connections; consolidation is reorganization rather than literal transfer of a memory object.",
+  "references": [
+    {
+      "title": "Engrams and circuits crucial for systems consolidation of a memory",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28386011/",
+      "supports": "Cortical engram maturation through hippocampal network interaction",
+      "verification": "Research abstract retrieved by web search 2026-10-14"
+    },
+    {
+      "title": "Electrophysiological mechanisms of human memory consolidation",
+      "url": "https://www.nature.com/articles/s41467-018-06553-y",
+      "supports": "Reactivation and hippocampal-cortical activity during consolidation",
+      "verification": "Research article retrieved by web search 2026-10-14"
+    },
+    {
+      "title": "The role of engram cells in the systems consolidation of memory",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29970909/",
+      "supports": "Systems consolidation reorganizes circuits over time",
+      "verification": "Abstract retrieved by web search 2026-10-14"
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Memory formation” using this visual metaphor: “a glowing neural circuit carrying one signal for Memory formation”. Dynamically demonstrate the core formula or conclusion: Memory formation stabilizes selected patterns of neural activity..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#FFF3E8); main visual (#1D4D73); secondary visual (#9A2E24); highlight (#6C5200); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "status": "reviewed",
+    "tool": "Remotion",
+    "workflow_version": 2,
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "kit_version": 1,
+    "format": "silent-en",
+    "duration_seconds": 32,
+    "scenes": [
+      {
+        "id": "association",
+        "start_seconds": 0,
+        "end_seconds": 8,
+        "objects": [
+          "cortical place ensemble",
+          "cortical sound ensemble",
+          "hippocampal ensemble",
+          "weak cortical link"
+        ],
+        "initial_state": {
+          "cortical_weight": 0.25,
+          "hippocampal_link": false
+        },
+        "trigger": "Experience a bell in a park",
+        "change": "Place and sound ensembles fire; two pulses converge on hippocampus; hippocampal association becomes available after convergence",
+        "cause": "Hippocampal activity supports binding elements of an episode",
+        "result": "Both features and their common association remain visible",
+        "screen_copy": [
+          "An episode: a bell in a park",
+          "Hippocampus helps bind features",
+          "Distributed cortical activity"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      },
+      {
+        "id": "reactivation",
+        "start_seconds": 8,
+        "end_seconds": 17,
+        "objects": [
+          "retained place/sound/hippocampus ensembles",
+          "moving reactivation pulses",
+          "weak cortical connection"
+        ],
+        "initial_state": {
+          "cortical_weight": 0.25,
+          "hippocampal_link": true
+        },
+        "trigger": "Reactivate the associated pattern during rest",
+        "change": "A hippocampal pulse reactivates place then sound; two replay cycles repeat the same feature sequence",
+        "cause": "Reactivation can coordinate distributed activity",
+        "result": "The same feature pattern reappears without the external bell or park input",
+        "screen_copy": [
+          "Reactivate during rest",
+          "The pattern plays again",
+          "No new sensory event"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      },
+      {
+        "id": "strengthening",
+        "start_seconds": 17,
+        "end_seconds": 25,
+        "objects": [
+          "same cortical ensembles",
+          "cortical connection",
+          "response mini-trace",
+          "hippocampus retained"
+        ],
+        "initial_state": {
+          "cortical_weight": 0.625
+        },
+        "trigger": "Additional coordinated reactivation",
+        "change": "Replay pulses traverse retained network while cortical link thickens from strength .625 to 1 and its response grows; weight starts rising during prior reactivation.",
+        "cause": "Repeated coordinated activity supports circuit reorganization",
+        "result": "Stronger cortical influence is visible; hippocampus is neither emptied nor removed",
+        "screen_copy": [
+          "Cortical connections strengthen",
+          "Consolidation takes time",
+          "Schematic; not a literal transfer"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      },
+      {
+        "id": "retrieval",
+        "start_seconds": 25,
+        "end_seconds": 32,
+        "objects": [
+          "partial sound cue",
+          "sound ensemble",
+          "strengthened cortical route",
+          "place ensemble",
+          "hippocampus retained"
+        ],
+        "initial_state": {
+          "cue": "sound only",
+          "cortical_weight": 1
+        },
+        "trigger": "Hear the bell later",
+        "change": "Cue activates sound, a signal travels along strengthened cortical path, and place ensemble reactivates after arrival",
+        "cause": "A partial cue can help reinstate associated features",
+        "result": "Place returns without a park stimulus; hippocampus remains part of network",
+        "screen_copy": [
+          "A cue helps recall the episode",
+          "Connections support retrieval",
+          "Hippocampal involvement varies"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      }
+    ],
+    "scene_rationale": "Four scenes bind two experience features, replay the same pattern, strengthen cortical coupling across repeats, and retrieve from a partial cue. Encoding needs both cortical features and a hippocampal association; replay and retrieval are separate causal events, while strengthening is a sustained process.",
+    "critical_processes": [
+      {
+        "id": "replay-strengthening",
+        "scene_id": "strengthening",
+        "uncertainty": "Reactivation needs moving activity and an actual response-weight change, without representing memory as an object moved out of hippocampus.",
+        "expected_observation": "Repeated patterned activity accompanies stronger cortical connection and greater target response; hippocampal ensemble stays present."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "risk-1",
+        "time_seconds": 5.5,
+        "reason": "association convergence"
+      },
+      {
+        "id": "risk-2",
+        "time_seconds": 12,
+        "reason": "replay target arrival"
+      },
+      {
+        "id": "risk-3",
+        "time_seconds": 21,
+        "reason": "cortical strength change"
+      },
+      {
+        "id": "risk-4",
+        "time_seconds": 29,
+        "reason": "partial cue retrieval"
+      }
+    ],
+    "state_model": {
+      "source": ".kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.state.ts",
+      "bindings": {
+        "route_travel": "CircuitSignal travel and target-arrival activation",
+        "cortical_weight": "cortical connection strokeWidth, influence bar width, and explicit EPSP path height (equal input=1)",
+        "feature_active": "place/sound neuronal population firing markers",
+        "hippocampus": "retained object throughout, no deletion/transfer"
+      },
+      "assertions": [
+        "Both input features arrive before association state turns available.",
+        "Replay propagates along a route; target fires only after arrival.",
+        "Cortical weight rises from .25 to 1 over replay history.",
+        "Hippocampal ensemble stays present at all frames.",
+        "Retrieval starts with sound only and activates place after the cue arrives."
+      ]
+    },
+    "template_scope": "Reuse existing okabe-ito-dark palette, typography, layout helpers and registered L2 primitives; own scene composition and causal timeline.",
+    "previews": [],
+    "rework": [],
+    "source": ".kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.tsx",
+    "instruction_resolution": "Explicit current edu-video workflow uses 25–35 second Remotion silent-English production and existing kit; legacy 15-second Manim requirement retained as historical input only.",
+    "source_files": [
+      ".kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.tsx",
+      ".kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "phase": "C full implementation rechecked",
+        "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node .workbuddy/batch-20261014-neuroscience/b1/assert-ns08-10.cjs",
+        "build_command": ".kits/introduction-to-neuroscience/node_modules/esbuild/bin/esbuild .kits/introduction-to-neuroscience/src/videos/assert-ns08-10.tsx --bundle --platform=node --outfile=.workbuddy/batch-20261014-neuroscience/b1/assert-ns08-10.cjs",
+        "exit_code": 0,
+        "build_exit_code": 0,
+        "log": ".workbuddy/batch-20261014-neuroscience/b1/assert-ns08-10.log",
+        "source_files": [
+          ".kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.tsx",
+          ".kits/introduction-to-neuroscience/src/videos/ns10-memory-formation.state.ts"
+        ],
+        "source_check": "Inspected memoryState -> CircuitSignal travel; target states activate on arrival; weight drives cortical SVG strokeWidth and SynapticWeight response amplitude. Retained hippocampus is an actual ellipse at every tested frame, and the final cue route terminates at the place ensemble.",
+        "assertion_result": "ns10 PASS: association 179→180; replay before/mid/arrival 329→330; weight .25→.625→1; retrieval boundary 854→855; hippocampus retained in rendered output.",
+        "applicability": [
+          "recvvJaLo5zE0k"
+        ],
+        "reviewer": "neuro_08_10 agent",
+        "reviewed_at": "2026-10-14T07:05:49.165807+00:00",
+        "resolved_execution_error": "Initial attempt invoked native esbuild binary via node; corrected to execute native binary directly; bundling and assertions then passed.",
+        "full_implementation_binding_check": "Scene components pass local frame plus scene offset into the same mechanism component tested by assertions; mechanism states feed visible geometry, counts and labels. No changes to shared kit or registry."
+      },
+      "implementation_checks": {
+        "bundle": "passed",
+        "assertions": "passed",
+        "typecheck": "No diagnostics in ns08–10; overall project pending concurrent ns01–04 Backdrop props and missing ns07 file at time of check.",
+        "short_file_review": "Independent complete mechanism and own scene composition retained; no padding to line threshold."
+      },
+      "version": "v1",
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex neuro_05_07 (independent of authorship)",
+      "reviewed_at": "2026-10-14T07:55:17.397430+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "risk-1",
+          "times_seconds": [
+            5.2,
+            5.5,
+            5.8
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg"
+          ],
+          "observation": "5.2/5.5/5.8 s: incoming dots change position around hippocampal junction while ensembles alternate in brightness."
+        },
+        {
+          "risk_id": "risk-2",
+          "times_seconds": [
+            11.7,
+            12.0,
+            12.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg"
+          ],
+          "observation": "11.7/12/12.3 s: cortical dots dim at the replay reset, then a packet appears departing the hippocampal link."
+        },
+        {
+          "risk_id": "risk-3",
+          "times_seconds": [
+            20.7,
+            21.0,
+            21.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg"
+          ],
+          "observation": "20.7/21/21.3 s: a packet advances between hippocampus and place while thick cortical link and stronger response remain visible."
+        },
+        {
+          "risk_id": "risk-4",
+          "times_seconds": [
+            28.7,
+            29.0,
+            29.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg"
+          ],
+          "observation": "28.7/29/29.3 s: cue persists at sound; both cortical ensembles are active and a packet changes position along the strong arc."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Distributed ensembles, hippocampal relay, moving activity packets, strengthened cortical arc and cue-driven completion identify an episodic network process."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Activity travels links, ensemble dots switch between inactive/active, connection width and measured-response graphic increase."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "A partial sound cue precedes reactivation of the place ensemble; the hippocampal structure is retained rather than simply labeled empty or transferred."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            3,
+            5.2,
+            5.5,
+            5.8
+          ],
+          "observed": "Place and sound ensembles contain activity dots. Bright signal markers occupy intermediate positions on links toward hippocampus, while the hippocampal outline remains present."
+        },
+        {
+          "times_seconds": [
+            9,
+            11.7,
+            12,
+            12.3,
+            15
+          ],
+          "observed": "Cortical ensembles alternate between dim and bright dots across replay. At 12.3 s a signal marker lies between hippocampus and the place node; by 15 s both cortical patterns are bright again without a new external cue."
+        },
+        {
+          "times_seconds": [
+            20,
+            20.7,
+            21,
+            21.3
+          ],
+          "observed": "The cortical link is thicker and influence bar and equal-input response are larger than in the early frames. Hippocampal activity dots persist while packets occupy different positions on its cortical links."
+        },
+        {
+          "times_seconds": [
+            25.5,
+            28.7,
+            29,
+            29.3,
+            30.5
+          ],
+          "observed": "A yellow cue enters beside the sound ensemble and activity travels along the cortical arc. The place ensemble is dim at 25.5 s and active in later recall frames; hippocampal dots remain visible throughout."
+        }
+      ]
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 32.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo5zE0k/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164290136,
+      "attachment_url": "https://github.com/user-attachments/assets/b4957566-b3a4-4ecb-b49d-18330827591b",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLo5zE0k",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLo5zE0k",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "preferred": [
+      "episodic memory",
+      "encoding",
+      "hippocampus",
+      "reactivation",
+      "systems consolidation",
+      "retrieval"
+    ],
+    "scope": "Introductory schematic example; quantities and times are illustrative.",
+    "confirmed": true
+  },
+  "media": {
+    "duration_seconds": 32.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns10-memory-formation.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/b4957566-b3a4-4ecb-b49d-18330827591b",
+  "player_version": "v1"
+}

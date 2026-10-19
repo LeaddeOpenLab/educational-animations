@@ -1,0 +1,532 @@
+{
+  "id": "C11-A007",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Visual pathway",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns07-visual-pathway.mp4",
+  "tags": [
+    "C11-A007",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 32-second silent English 1920×1080 educational animation about Visual pathway for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns07-visual-pathway.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–6s, hemifield: Light-ray guides connect the left target to the right half of each retinal diagram: left-eye nasal retina and right-eye temporal retina. These two retinal patches receive paired signal markers. Why: Optical inversion places left-field information on right retinal halves in both eyes. Visible result: The two activated retinal patches have different nasal/temporal identities despite carrying the same left-field target.\n2. 6–11s, optic: Two distinguishable packets travel down their respective optic nerves and stop before the chiasm; inactive fibers remain as faint context. Why: Each eye initially sends its retinal signals through its own optic nerve. Visible result: Two separate packets reach the chiasm from different eyes; neither has switched side yet.\n3. 11–20s, chiasm: The nasal packet curves across the midline into the right optic tract; the temporal packet follows its outer ipsilateral path. Both finish on the right, side by side rather than fusing. Why: Only nasal retinal fibers decussate; temporal fibers remain ipsilateral. Visible result: The crossing packet passes the midline and the temporal packet never does; both contribute to the same right tract.\n4. 20–27s, thalamus: Incoming markers terminate at the LGN relay and outgoing activity progresses along right optic radiations, then reaches the right occipital endpoint. Why: The main conscious visual pathway relays in the LGN before visual cortex. Visible result: LGN arrival precedes cortical arrival; no packet switches back to the left side after chiasm.\n5. 27–32s, rule: A miniature left-half target representation settles inside the right cortical endpoint while both originating retinal paths remain distinct and connected. Why: The pathway groups information by visual hemifield, not by one eye per hemisphere. Visible result: One left visual hemifield is represented in right cortex using inputs from both eyes.\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Visual pathway",
+  "standard_name": "Visual pathway",
+  "aliases": [],
+  "final_title": "Visual Pathway: One Field, Two Retinal Routes",
+  "learning_objective": "Follow left-hemifield information from both eyes to right visual cortex and distinguish nasal crossing from temporal noncrossing.",
+  "core_conclusion": "Nasal retinal fibers cross at the optic chiasm; temporal retinal fibers stay on their side, so each visual hemifield reaches the opposite cortex.",
+  "references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK553189/",
+      "title": "Neuroanatomy, Visual Pathway",
+      "supports": "Nasal crossing, ipsilateral temporal fibers, contralateral field organization, LGN and optic radiations.",
+      "verification": "Read source lines 59–89; 2026-10-14."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK220/?report=reader",
+      "title": "Visual Fields — Clinical Methods",
+      "supports": "Retinal nasal/temporal halves represent opposite visual hemifields.",
+      "verification": "Retrieved search excerpt."
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Visual pathway” using this visual metaphor: “a glowing neural circuit carrying one signal for Visual pathway”. Dynamically demonstrate the core formula or conclusion: The visual pathway carries retinal signals toward visual cortex..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EDF4FA); main visual (#154C79); secondary visual (#8A2D2D); highlight (#6B5700); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "status": "reviewed",
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "kit_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/kit.json",
+    "kit_version": 1,
+    "composition_id": "ns07-visual-pathway",
+    "output_stem": "07_Visual_Pathway",
+    "duration_seconds": 32,
+    "fps": 30,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "silent": true,
+    "language": "en",
+    "source_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/videos/ns07-visual-pathway.tsx",
+    "scenes": [
+      {
+        "id": "hemifield",
+        "start_seconds": 0,
+        "end_seconds": 6,
+        "objects": [
+          "binocular left visual hemifield",
+          "left and right eye cross-sections",
+          "nasal/temporal retinal halves",
+          "fixation midline"
+        ],
+        "initial_state": "Both eyes, fixation and hemifield halves are visible; no activity has entered the optic nerves.",
+        "trigger": "A dot appears in the left binocular hemifield.",
+        "change": "Light-ray guides connect the left target to the right half of each retinal diagram: left-eye nasal retina and right-eye temporal retina. These two retinal patches receive paired signal markers.",
+        "cause": "Optical inversion places left-field information on right retinal halves in both eyes.",
+        "result": "The two activated retinal patches have different nasal/temporal identities despite carrying the same left-field target.",
+        "screen_copy": [
+          "Visual pathway",
+          "Left visual field, both eyes"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "Six seconds separates visual-field position from retinal side, the main prerequisite for understanding crossing."
+      },
+      {
+        "id": "optic",
+        "start_seconds": 6,
+        "end_seconds": 11,
+        "objects": [
+          "left nasal signal",
+          "right temporal signal",
+          "optic nerves",
+          "optic chiasm entry"
+        ],
+        "initial_state": "Two retinal signals are activated: left nasal and right temporal.",
+        "trigger": "Retinal ganglion-cell axons conduct toward the optic chiasm.",
+        "change": "Two distinguishable packets travel down their respective optic nerves and stop before the chiasm; inactive fibers remain as faint context.",
+        "cause": "Each eye initially sends its retinal signals through its own optic nerve.",
+        "result": "Two separate packets reach the chiasm from different eyes; neither has switched side yet.",
+        "screen_copy": [
+          "Each eye sends a signal",
+          "Optic nerves"
+        ],
+        "reading_seconds": 2.5,
+        "timing_reason": "Five seconds connects retinal activation to chiasm entry without premature crossing."
+      },
+      {
+        "id": "chiasm",
+        "start_seconds": 11,
+        "end_seconds": 20,
+        "objects": [
+          "nasal crossing fiber",
+          "temporal uncrossed fiber",
+          "midline",
+          "two moving packets"
+        ],
+        "initial_state": "The left-eye nasal packet and right-eye temporal packet are at chiasm entry.",
+        "trigger": "The signals traverse their anatomically distinct axon paths.",
+        "change": "The nasal packet curves across the midline into the right optic tract; the temporal packet follows its outer ipsilateral path. Both finish on the right, side by side rather than fusing.",
+        "cause": "Only nasal retinal fibers decussate; temporal fibers remain ipsilateral.",
+        "result": "The crossing packet passes the midline and the temporal packet never does; both contribute to the same right tract.",
+        "screen_copy": [
+          "Nasal fibers cross",
+          "Temporal fibers stay"
+        ],
+        "reading_seconds": 4,
+        "timing_reason": "Nine seconds makes both paths traceable, with distinct labels and simultaneous retained trajectories."
+      },
+      {
+        "id": "thalamus",
+        "start_seconds": 20,
+        "end_seconds": 27,
+        "objects": [
+          "right optic tract packets",
+          "right LGN",
+          "right optic radiations",
+          "right visual cortex"
+        ],
+        "initial_state": "Both left-field signals are in the right optic tract; the right LGN and cortex are inactive.",
+        "trigger": "The packets arrive at the right LGN.",
+        "change": "Incoming markers terminate at the LGN relay and outgoing activity progresses along right optic radiations, then reaches the right occipital endpoint.",
+        "cause": "The main conscious visual pathway relays in the LGN before visual cortex.",
+        "result": "LGN arrival precedes cortical arrival; no packet switches back to the left side after chiasm.",
+        "screen_copy": [
+          "Relay: LGN in thalamus",
+          "Destination: right visual cortex"
+        ],
+        "reading_seconds": 3.5,
+        "timing_reason": "Seven seconds resolves the relay and destination while preserving the established sidedness."
+      },
+      {
+        "id": "rule",
+        "start_seconds": 27,
+        "end_seconds": 32,
+        "objects": [
+          "left hemifield target",
+          "two retinal patches",
+          "one right cortical representation",
+          "persistent fibers"
+        ],
+        "initial_state": "Both originating eye paths and the right cortical destination remain visible.",
+        "trigger": "Compare the shared field origin with the completed destination.",
+        "change": "A miniature left-half target representation settles inside the right cortical endpoint while both originating retinal paths remain distinct and connected.",
+        "cause": "The pathway groups information by visual hemifield, not by one eye per hemisphere.",
+        "result": "One left visual hemifield is represented in right cortex using inputs from both eyes.",
+        "screen_copy": [
+          "Left visual field → right cortex",
+          "Both eyes contribute"
+        ],
+        "reading_seconds": 2.5,
+        "timing_reason": "Five seconds holds the final spatial relation after propagation and avoids adding lesion side cases."
+      }
+    ],
+    "scene_rationale": "Five scenes are needed to disambiguate field-to-retina inversion, each eye’s optic nerve, selective chiasmal crossing, thalamic relay, and hemifield organization. The nine-second chiasm scene is longest because nasal crossing and temporal noncrossing must both be tracked.",
+    "critical_processes": [
+      {
+        "interval": [
+          0,
+          6
+        ],
+        "process": "Left binocular target activates left nasal and right temporal retinal patches.",
+        "id": "process-1",
+        "scene_id": "hemifield",
+        "uncertainty": "Confirm rendered objects follow the planned anatomical relation and event ordering.",
+        "expected_observation": "Left binocular target activates left nasal and right temporal retinal patches."
+      },
+      {
+        "interval": [
+          11,
+          20
+        ],
+        "process": "Nasal packet crosses midline while temporal packet stays ipsilateral.",
+        "id": "process-2",
+        "scene_id": "chiasm",
+        "uncertainty": "Confirm rendered objects follow the planned anatomical relation and event ordering.",
+        "expected_observation": "Nasal packet crosses midline while temporal packet stays ipsilateral."
+      },
+      {
+        "interval": [
+          20,
+          27
+        ],
+        "process": "Both packets reach right LGN before right cortex.",
+        "id": "process-3",
+        "scene_id": "thalamus",
+        "uncertainty": "Confirm rendered objects follow the planned anatomical relation and event ordering.",
+        "expected_observation": "Both packets reach right LGN before right cortex."
+      }
+    ],
+    "risk_moments": [
+      {
+        "seconds": 3,
+        "risk": "Do not equate left visual field with left retina: left field projects to right retinal halves.",
+        "id": "risk-1",
+        "time_seconds": 3,
+        "reason": "Do not equate left visual field with left retina: left field projects to right retinal halves."
+      },
+      {
+        "seconds": 15,
+        "risk": "Do not cross temporal fibers or all fibers.",
+        "id": "risk-2",
+        "time_seconds": 15,
+        "reason": "Do not cross temporal fibers or all fibers."
+      },
+      {
+        "seconds": 19,
+        "risk": "Both left-field paths must end in right optic tract.",
+        "id": "risk-3",
+        "time_seconds": 19,
+        "reason": "Both left-field paths must end in right optic tract."
+      },
+      {
+        "seconds": 26.5,
+        "risk": "LGN before cortex; fiber paths do not represent two rays of light after retina.",
+        "id": "risk-4",
+        "time_seconds": 26.5,
+        "reason": "LGN before cortex; fiber paths do not represent two rays of light after retina."
+      }
+    ],
+    "state_model": {
+      "status": "implemented",
+      "source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/mechanisms/ns07-visual-pathway.state.ts",
+      "inputs": [
+        "frame"
+      ],
+      "outputs": [
+        "retinalActivation",
+        "nasalTravel",
+        "temporalTravel",
+        "lgnArrived",
+        "radiationTravel",
+        "cortexArrived",
+        "nasalPoint",
+        "temporalPoint"
+      ],
+      "bindings": [
+        "Retinal patch fills and marker positions derive from retinalActivation",
+        "CircuitSignal points encode actual nasal crossing and temporal ipsilateral geometry",
+        "nasalTravel and temporalTravel control visible circle coordinates on the two routes",
+        "LGN arrival gates outgoing radiationTravel",
+        "cortexArrived controls the cortical endpoint representation"
+      ],
+      "assertions": [
+        "Left-field input activates exactly left nasal and right temporal patches.",
+        "At chiasm entry both packets are still on their eye’s side.",
+        "The nasal x coordinate changes side across the chiasm interval.",
+        "The temporal x coordinate remains on the right side throughout.",
+        "Both terminal tract positions are right-sided.",
+        "Before LGN arrival no cortical activity is emitted.",
+        "After final arrival right cortex is active and left cortex remains inactive."
+      ]
+    },
+    "key_frames": [
+      135,
+      270,
+      405,
+      540,
+      735,
+      900
+    ],
+    "design_status": "ready_for_B1",
+    "previews": [],
+    "requirement_resolution": "Explicit edu-video production skill supersedes historical 15-second Manim requirement_prompt: silent English Remotion, 25–35 seconds, current dark course palette. Historical requirement preserved for provenance.",
+    "workflow_version": 2,
+    "template_scope": "Reuse course dark palette, font, SceneShell, BrainMap or CircuitSignal L2 anatomy/propagation graphics; each video owns its task sequence, anatomical arrangement and state model. No shared L3 scenes.",
+    "tsx_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/videos/ns07-visual-pathway.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "source_version": "v1-full-l3",
+        "reviewer": "Codex neuro_05_07",
+        "reviewed_at": "2026-10-14T07:06:18.686122+00:00",
+        "commands": [
+          ".kits/_shared/node_modules/esbuild/bin/esbuild .kits/introduction-to-neuroscience/src/mechanisms/assert-05-07.tsx --bundle --platform=node --outfile=/tmp/neuro-b1-05-07.cjs",
+          "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /tmp/neuro-b1-05-07.cjs"
+        ],
+        "exit_code": 0,
+        "log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/full-bindings-05-07.log",
+        "source_files": [
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/mechanisms/ns07-visual-pathway.tsx",
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/mechanisms/ns07-visual-pathway.state.ts",
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/videos/ns07-visual-pathway.tsx"
+        ],
+        "applicability": [
+          "recvvJaLnZbgp2"
+        ],
+        "assertions_result": "ns07 PASS: retinal activation 89/90, nasal-only crossing, all temporal crossing-window frames stay right, LGN 659/660 and cortex 794/795; actual SVG positions and arrival attributes bound. FULL L3 binding assertions passed.",
+        "source_check": {
+          "status": "passed",
+          "basis": "Read TSX: actual circle cx/cy or task transforms consume imported frame-state outputs; tests import the same functions, server-render these actual components, and match visible SVG geometry and arrival attributes to the state. Mechanism paths stay fixed; activity changes ownership and position. No complete scene implementations exist yet. Full SCENES independently own JSX and read the same state modules; extended assertions server-render real scene components at event and scene boundaries and match packet and task geometry. Durations verified 900/900/960 frames.",
+          "relation_exception": null
+        },
+        "prior_error": {
+          "command": "node esbuild/bin/esbuild",
+          "error": "Native Mach-O binary interpreted as JS; corrected to direct executable invocation."
+        }
+      },
+      "compilation_note": "All three full TSX bundled through actual scene-binding assertion entry with esbuild, exit 0; batch type/distinctness checks are controlled by main agent.",
+      "version": "v1",
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent kit-agent reviewer (authored ns01–04 only)",
+      "reviewed_at": "2026-10-14T07:55:15.039231+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "risk-1",
+          "times_seconds": [
+            2.7,
+            3.0,
+            3.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg"
+          ],
+          "observation": "Left visual-field target is linked to the right retinal half of both eye diagrams. Left eye nasal origin is pink, right eye temporal origin blue; both move along their optic nerves. Pink signal crosses the dashed midline at chiasm while blue stays on the right. Both approach the right optic tract and LGN. Both signals leave activated right LGN along optic radiations; right visual cortex activates when the colored signals arrive. Final frame retains two eye contributions to the same right cortical destination."
+        },
+        {
+          "risk_id": "risk-2",
+          "times_seconds": [
+            14.7,
+            15.0,
+            15.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg"
+          ],
+          "observation": "Left visual-field target is linked to the right retinal half of both eye diagrams. Left eye nasal origin is pink, right eye temporal origin blue; both move along their optic nerves. Pink signal crosses the dashed midline at chiasm while blue stays on the right. Both approach the right optic tract and LGN. Both signals leave activated right LGN along optic radiations; right visual cortex activates when the colored signals arrive. Final frame retains two eye contributions to the same right cortical destination."
+        },
+        {
+          "risk_id": "risk-3",
+          "times_seconds": [
+            18.7,
+            19.0,
+            19.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg"
+          ],
+          "observation": "Left visual-field target is linked to the right retinal half of both eye diagrams. Left eye nasal origin is pink, right eye temporal origin blue; both move along their optic nerves. Pink signal crosses the dashed midline at chiasm while blue stays on the right. Both approach the right optic tract and LGN. Both signals leave activated right LGN along optic radiations; right visual cortex activates when the colored signals arrive. Final frame retains two eye contributions to the same right cortical destination."
+        },
+        {
+          "risk_id": "risk-4",
+          "times_seconds": [
+            26.2,
+            26.5,
+            26.8
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg"
+          ],
+          "observation": "Left visual-field target is linked to the right retinal half of both eye diagrams. Left eye nasal origin is pink, right eye temporal origin blue; both move along their optic nerves. Pink signal crosses the dashed midline at chiasm while blue stays on the right. Both approach the right optic tract and LGN. Both signals leave activated right LGN along optic radiations; right visual cortex activates when the colored signals arrive. Final frame retains two eye contributions to the same right cortical destination."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Two retinal origins, selective chiasmatic crossing and shared contralateral cortical endpoint identify the visual pathway without prose."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Pink and blue signals occupy different changing positions; one crosses while the other does not, then both arrive at relay and cortical endpoints."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Selective crossing and sequential arrival are actually drawn across sampled before/mid/after frames."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            2.7,
+            3,
+            3.3,
+            4.5,
+            9
+          ],
+          "observed": "Left visual-field target is linked to the right retinal half of both eye diagrams. Left eye nasal origin is pink, right eye temporal origin blue; both move along their optic nerves."
+        },
+        {
+          "times_seconds": [
+            13.5,
+            14.7,
+            15,
+            15.3,
+            18,
+            18.7,
+            19,
+            19.3
+          ],
+          "observed": "Pink signal crosses the dashed midline at chiasm while blue stays on the right. Both approach the right optic tract and LGN."
+        },
+        {
+          "times_seconds": [
+            24.5,
+            26.2,
+            26.5,
+            26.8,
+            30
+          ],
+          "observed": "Both signals leave activated right LGN along optic radiations; right visual cortex activates when the colored signals arrive. Final frame retains two eye contributions to the same right cortical destination."
+        }
+      ]
+    },
+    "design": {
+      "status": "designed",
+      "scene_check": "Each scene identifies initial state, trigger, object change, cause and observable result. B1 and final video observations pending."
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 32.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnZbgp2/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164248910,
+      "attachment_url": "https://github.com/user-attachments/assets/6616f185-61a9-4fc6-9e9c-11d698467547",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLnZbgp2",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLnZbgp2",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "nasal retina": "The retinal half toward the nose.",
+    "temporal retina": "The retinal half toward the temple.",
+    "LGN": "Lateral geniculate nucleus of the thalamus.",
+    "diagram orientation": "Top-down schematic with subject-left on the page left and subject-right on page right; label both explicitly.",
+    "binocular field": "Use a target within the overlapping left hemifield so both eyes receive it.",
+    "confirmed": true
+  },
+  "media": {
+    "duration_seconds": 32.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns07-visual-pathway.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/6616f185-61a9-4fc6-9e9c-11d698467547",
+  "player_version": "v1"
+}

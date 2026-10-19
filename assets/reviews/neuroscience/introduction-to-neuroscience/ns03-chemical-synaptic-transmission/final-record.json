@@ -1,0 +1,434 @@
+{
+  "id": "C11-A003",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Chemical synaptic transmission",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns03-chemical-synaptic-transmission.mp4",
+  "tags": [
+    "C11-A003",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080 educational animation about Chemical synaptic transmission for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–7s, calcium: Signal reaches terminal; Ca2+ gate opens and Ca2+ token crosses inward toward docked vesicle. Why: Presynaptic depolarization opens voltage-gated Ca2+ channels. Visible result: Calcium entry precedes transmitter release.\n2. 7–14s, release: Vesicle boundary opens/disappears at membrane and six tracked molecules leave toward the cleft. Why: Calcium-sensitive release machinery enables exocytosis. Visible result: Transmitter is extracellular in the cleft, not electrically conducted across it.\n3. 14–23s, receptors: Molecules traverse remaining gap and dock one per visible receptor; bound receptors open and postsynaptic ion tokens cross while EPSP trace rises. Why: Ligand binding changes channel conductance in this excitatory ionotropic example. Visible result: Chemical signal changes postsynaptic voltage.\n4. 23–30s, clearance: Molecule count at receptors falls; cleared tokens leave the cleft toward a transporter; postsynaptic response decays. Why: Removal of neurotransmitter ends receptor activation. Visible result: The synapse can signal again.\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Chemical synaptic transmission",
+  "standard_name": "Chemical synaptic transmission",
+  "aliases": [],
+  "final_title": "Chemical Synaptic Transmission: Ca2+ to Receptor",
+  "learning_objective": "Trace the conversion of an arriving presynaptic spike into calcium-triggered transmitter release, receptor binding and a postsynaptic response.",
+  "core_conclusion": "Ca2+ triggers release; neurotransmitter crosses the cleft, binds receptors and changes the postsynaptic membrane.",
+  "references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK526047/",
+      "use": "mechanism factual support",
+      "checked": "2026-10-14 web search; NCBI direct page captcha",
+      "title": "www.ncbi.nlm.nih.gov"
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Chemical synaptic transmission” using this visual metaphor: “a glowing neural circuit carrying one signal for Chemical synaptic transmission”. Dynamically demonstrate the core formula or conclusion: Chemical synaptic transmission releases neurotransmitter across a synaptic cleft..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F0F3FB); main visual (#253D75); secondary visual (#9B2447); highlight (#6A5600); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "status": "reviewed",
+    "tool": "Remotion",
+    "duration_seconds": 30,
+    "fps": 30,
+    "language": "en",
+    "audio": "silent",
+    "scenes": [
+      {
+        "id": "calcium",
+        "start_seconds": 0,
+        "end_seconds": 7,
+        "objects": [
+          "presynaptic axon",
+          "terminal",
+          "Ca2+ channel",
+          "docked vesicle",
+          "postsynaptic membrane"
+        ],
+        "initial_state": {
+          "spike_arrived": false,
+          "calcium_inside": false,
+          "release": 0
+        },
+        "trigger": "An axonal spike reaches terminal",
+        "change": "Signal reaches terminal; Ca2+ gate opens and Ca2+ token crosses inward toward docked vesicle.",
+        "cause": "Presynaptic depolarization opens voltage-gated Ca2+ channels.",
+        "result": "Calcium entry precedes transmitter release.",
+        "screen_copy": [
+          "Chemical synaptic transmission",
+          "Spike arrives → Ca2+ enters"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "release",
+        "start_seconds": 7,
+        "end_seconds": 14,
+        "objects": [
+          "docked vesicle",
+          "presynaptic membrane",
+          "six neurotransmitter molecules"
+        ],
+        "initial_state": {
+          "release": 0,
+          "binding": 0
+        },
+        "trigger": "Ca2+ inside triggers vesicle fusion",
+        "change": "Vesicle boundary opens/disappears at membrane and six tracked molecules leave toward the cleft.",
+        "cause": "Calcium-sensitive release machinery enables exocytosis.",
+        "result": "Transmitter is extracellular in the cleft, not electrically conducted across it.",
+        "screen_copy": [
+          "Ca2+ triggers release",
+          "Vesicle → cleft"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "receptors",
+        "start_seconds": 14,
+        "end_seconds": 23,
+        "objects": [
+          "same six molecules",
+          "postsynaptic receptors",
+          "postsynaptic ion flow",
+          "response trace"
+        ],
+        "initial_state": {
+          "binding": 0
+        },
+        "trigger": "Released transmitter diffuses to receptor sites",
+        "change": "Molecules traverse remaining gap and dock one per visible receptor; bound receptors open and postsynaptic ion tokens cross while EPSP trace rises.",
+        "cause": "Ligand binding changes channel conductance in this excitatory ionotropic example.",
+        "result": "Chemical signal changes postsynaptic voltage.",
+        "screen_copy": [
+          "Bind receptors",
+          "An excitatory response begins"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "6 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "clearance",
+        "start_seconds": 23,
+        "end_seconds": 30,
+        "objects": [
+          "bound transmitter",
+          "reuptake route",
+          "receptors",
+          "EPSP trace"
+        ],
+        "initial_state": {
+          "clearance": 0
+        },
+        "trigger": "Transporters clear transmitter and molecules dissociate",
+        "change": "Molecule count at receptors falls; cleared tokens leave the cleft toward a transporter; postsynaptic response decays.",
+        "cause": "Removal of neurotransmitter ends receptor activation.",
+        "result": "The synapse can signal again.",
+        "screen_copy": [
+          "Clear transmitter",
+          "Response ends"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "4 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      }
+    ],
+    "scene_rationale": "Four stages preserve causal order: arrival/calcium, vesicle release, receptor response, and clearance. The same labeled terminal and postsynaptic membrane stay on screen so substance identity survives handoff. ChemicalSynapse shows literal transmitter movement; its generic calcium-independent release is driven by an explicit local Ca2+ state.",
+    "critical_processes": [
+      {
+        "id": "binding",
+        "scene_id": "receptors",
+        "uncertainty": "Ligands visibly arrive at receptor sites before ions/response activate.",
+        "expected_observation": "Ligands visibly arrive at receptor sites before ions/response activate.",
+        "time_seconds": 18
+      },
+      {
+        "id": "clearance",
+        "scene_id": "clearance",
+        "uncertainty": "Loss of ligands is paired with visible clearance route and response decline.",
+        "expected_observation": "Loss of ligands is paired with visible clearance route and response decline.",
+        "time_seconds": 26
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "binding",
+        "time_seconds": 19,
+        "reason": "ligands arrive, receptors bind and postsynaptic path amplitude rises together"
+      },
+      {
+        "id": "clearance",
+        "time_seconds": 26,
+        "reason": "visible cleared molecules move toward uptake while occupied count and response decline"
+      }
+    ],
+    "state_model": {
+      "status": "implemented",
+      "source": ".kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.state.ts",
+      "bindings": [
+        "synapseState(frame).CaTransit -> IonTransit calcium token",
+        "synapseState(frame).release/binding/clearance -> ChemicalSynapse and ligandState",
+        "ligandState bound count -> receptor occupancy, ion flow and EPSP"
+      ],
+      "render_source": ".kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.tsx"
+    },
+    "template_scope": "Reuse existing course palette, fonts, SceneShell, Plot and listed L2 geometry only; topic owns causal sequence and state.",
+    "implementation_plan": "Independent continuous anatomical cleft diagram. Explicit traveling spike and Ca2+ token precede ligand transport. Clearance visibly removes receptor ligands; postsynaptic response derives from occupancy.",
+    "requirement_resolution": {
+      "preserved": "Original requirement_prompt and subject identity unchanged.",
+      "effective": "User explicitly invoked current edu-video orchestration; Remotion 25–35s English silent kit takes precedence over historical Manim 15s palette/3D prompt."
+    },
+    "previews": [],
+    "rework": [],
+    "tsx_path": ".kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.tsx",
+    "key_frames": [
+      30,
+      195,
+      345,
+      600,
+      750,
+      870
+    ],
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "source_version": "v1-full",
+        "reviewer": "Codex kit/ns01-04 agent",
+        "reviewed_at": "2026-10-14T07:06:45.384990+00:00",
+        "command": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node .workbuddy/batch-20261014-neuroscience/b1-assert-01-04.cjs",
+        "exit_code": 0,
+        "log": ".workbuddy/batch-20261014-neuroscience/b1-assert-01-04.log",
+        "state_source": ".kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.state.ts",
+        "minimal_tsx": ".kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.mechanism.tsx",
+        "assertions": {
+          "slug": "ns03-chemical-synaptic-transmission",
+          "frames": [
+            0,
+            480,
+            600
+          ],
+          "assertions": "PASS: before/mid/after plus transition boundaries; actual minimal TSX renders different bound geometry",
+          "rendered_markup_lengths": [
+            2075,
+            1977,
+            2328
+          ],
+          "full_source": {
+            "duration": 900,
+            "scene_bindings": [
+              {
+                "scene": "calcium",
+                "markup_length": 6976
+              },
+              {
+                "scene": "release",
+                "markup_length": 7059
+              },
+              {
+                "scene": "receptors",
+                "markup_length": 6945
+              },
+              {
+                "scene": "clearance",
+                "markup_length": 7400
+              }
+            ]
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "binding_inspection": "Inspected SynapseMechanism -> synapseState -> ligandState and ChemicalSynapse; release/binding/clearance bind actual transmitter x and occupancy. Occupancy drives receptor-bound number and EPSP path amplitude; calcium movement precedes release. The same L2 function computes test and rendering occupancy.",
+          "full_binding_inspection": "Inspected independent L3 scene components and local board. All scene offsets preserve design timeline; actual .state.ts inputs drive geometric positions, actual curve/path points, receptor counts or visible voltage, not the minimal mechanism wrapper. Full SCENES SSR checked each scene for figure output and non-NaN coordinates."
+        },
+        "scope": "Authorizes full TSX expansion only. Full implementation must reuse these state functions and preserve bindings. Teaching review remains pending.",
+        "full_tsx": ".kits/introduction-to-neuroscience/src/videos/ns03-chemical-synaptic-transmission.tsx"
+      },
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex parent reviewer",
+      "reviewed_at": "2026-10-14T08:01:06.033988+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "binding",
+          "times_seconds": [
+            18.7,
+            19.0,
+            19.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/risk-sheet.jpg"
+          ],
+          "observation": "Six receptor sites bind ligand and the postsynaptic response appears."
+        },
+        {
+          "risk_id": "clearance",
+          "times_seconds": [
+            25.7,
+            26.0,
+            26.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/risk-sheet.jpg"
+          ],
+          "observation": "Occupancy falls from four to three as the response subsides."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Presynaptic terminal, vesicle, cleft and receptors identify a chemical synapse."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Calcium entry precedes ligand release, binding and clearance."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Receptor occupancy visibly drives and then reduces the response."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            6.5,
+            18.5
+          ],
+          "observed": "Presynaptic spike and Ca2+ entry precede released ligands moving across the cleft."
+        },
+        {
+          "times_seconds": [
+            18.7,
+            19.3
+          ],
+          "observed": "Six receptor sites bind ligand and the postsynaptic response appears."
+        },
+        {
+          "times_seconds": [
+            25.7,
+            26.3
+          ],
+          "observed": "Occupancy falls from four to three as the response subsides."
+        }
+      ]
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnQc1Un/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164111529,
+      "attachment_url": "https://github.com/user-attachments/assets/0dd7cc60-f378-4ef8-8fb5-e7373b03aee6",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLnQc1Un",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLnQc1Un",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "confirmed": true,
+    "terms": [
+      "presynaptic terminal",
+      "Ca2+ influx",
+      "vesicle fusion",
+      "synaptic cleft",
+      "ligand-gated receptor"
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns03-chemical-synaptic-transmission.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/0dd7cc60-f378-4ef8-8fb5-e7373b03aee6",
+  "player_version": "v1"
+}

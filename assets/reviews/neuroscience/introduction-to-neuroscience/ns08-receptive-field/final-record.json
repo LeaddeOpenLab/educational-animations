@@ -1,0 +1,444 @@
+{
+  "id": "C11-A008",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Receptive field",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns08-receptive-field.mp4",
+  "tags": [
+    "C11-A008",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 28-second silent English 1920×1080 educational animation about Receptive field for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–5s, baseline: Steady illustrative baseline spike train advances at 20 Hz Why: Retinal ganglion cells can fire spontaneously Visible result: Baseline provides the comparison for every subsequent probe\n2. 5–12s, center: Spot appears at dx=0; firing rises from baseline to 80 Hz and spike spacing narrows Why: Light in the ON-center increases this cell’s response Visible result: Position and measured rate change together\n3. 12–20s, surround: Probe switches location with an intervening baseline; response falls to 0 Hz and spikes pause Why: Surround illumination antagonizes the center response Visible result: Less firing despite the same spot brightness\n4. 20–28s, outside: Rate returns to 20 Hz; spikes resume at baseline; center and surround markers retain opposing signs Why: The outside probe does not stimulate the modeled receptive field Visible result: Spatial tests define where this neuron’s activity is changed\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Receptive field",
+  "standard_name": "Receptive field",
+  "aliases": [],
+  "final_title": "Receptive Field: Center and Surround Responses",
+  "learning_objective": "Predict how a small light spot in an ON-center retinal ganglion cell receptive field changes firing relative to baseline.",
+  "core_conclusion": "A receptive field is the stimulus region that changes a neuron’s activity; center and surround can act oppositely.",
+  "references": [
+    {
+      "title": "Visual Responses of Ganglion Cells",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK11550/",
+      "supports": "ON-center receptive fields, antagonistic surround and spot mapping",
+      "verification": "Content retrieved by web search on 2026-10-14"
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Receptive field” using this visual metaphor: “a glowing neural circuit carrying one signal for Receptive field”. Dynamically demonstrate the core formula or conclusion: A receptive field is the stimulus region that changes one neuron's activity..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F4EEF8); main visual (#214E75); secondary visual (#8A2356); highlight (#725400); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "status": "reviewed",
+    "tool": "Remotion",
+    "workflow_version": 2,
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "kit_version": 1,
+    "format": "silent-en",
+    "duration_seconds": 28,
+    "scenes": [
+      {
+        "id": "baseline",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "ON-center disk and surround annulus",
+          "single ganglion cell spike train",
+          "response meter"
+        ],
+        "initial_state": {
+          "spot": null,
+          "baseline_hz": 20
+        },
+        "trigger": "Observe without a light probe",
+        "change": "Steady illustrative baseline spike train advances at 20 Hz",
+        "cause": "Retinal ganglion cells can fire spontaneously",
+        "result": "Baseline provides the comparison for every subsequent probe",
+        "screen_copy": [
+          "One neuron",
+          "No light probe",
+          "Baseline: 20 Hz"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      },
+      {
+        "id": "center",
+        "start_seconds": 5,
+        "end_seconds": 12,
+        "objects": [
+          "small light spot",
+          "center disk",
+          "same spike train and meter"
+        ],
+        "initial_state": {
+          "spot": null
+        },
+        "trigger": "Present radius-12 spot entirely inside radius-72 center",
+        "change": "Spot appears at dx=0; firing rises from baseline to 80 Hz and spike spacing narrows",
+        "cause": "Light in the ON-center increases this cell’s response",
+        "result": "Position and measured rate change together",
+        "screen_copy": [
+          "Light in center",
+          "More spikes: 80 Hz",
+          "Illustrative rates"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      },
+      {
+        "id": "surround",
+        "start_seconds": 12,
+        "end_seconds": 20,
+        "objects": [
+          "same small spot",
+          "surround annulus",
+          "same spike train"
+        ],
+        "initial_state": {
+          "spot": {
+            "dx": 0,
+            "dy": 0,
+            "r": 12
+          }
+        },
+        "trigger": "Turn center spot off, then illuminate dx=112 in the surround",
+        "change": "Probe switches location with an intervening baseline; response falls to 0 Hz and spikes pause",
+        "cause": "Surround illumination antagonizes the center response",
+        "result": "Less firing despite the same spot brightness",
+        "screen_copy": [
+          "Light in surround",
+          "Fewer spikes",
+          "Same neuron; same light"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      },
+      {
+        "id": "outside",
+        "start_seconds": 20,
+        "end_seconds": 28,
+        "objects": [
+          "spot beyond field at dx=-215",
+          "field outline",
+          "same spike train",
+          "three prior-position markers"
+        ],
+        "initial_state": {
+          "response_hz": 0
+        },
+        "trigger": "Move probe outside after briefly switching it off",
+        "change": "Rate returns to 20 Hz; spikes resume at baseline; center and surround markers retain opposing signs",
+        "cause": "The outside probe does not stimulate the modeled receptive field",
+        "result": "Spatial tests define where this neuron’s activity is changed",
+        "screen_copy": [
+          "Outside this field",
+          "Baseline returns",
+          "Position changes the response"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Allocate time for the visible operation, then 2 seconds to compare its result."
+      }
+    ],
+    "scene_rationale": "Four scenes establish one cell and baseline, test its center, test its surround, and test an outside location. Each probe changes a spatial cause while preserving the same recorded neuron; removing any test loses the opposing sign or field boundary.",
+    "critical_processes": [
+      {
+        "id": "spot-response",
+        "scene_id": "surround",
+        "uncertainty": "Spot geometry must stay completely inside each sampled region and rates must drive spikes as well as labels.",
+        "expected_observation": "Center spot gives dense spikes; surround spot suppresses them; outside restores baseline."
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "risk-1",
+        "time_seconds": 5.5,
+        "reason": "center onset"
+      },
+      {
+        "id": "risk-2",
+        "time_seconds": 13.0,
+        "reason": "surround switch"
+      },
+      {
+        "id": "risk-3",
+        "time_seconds": 21.0,
+        "reason": "outside switch"
+      }
+    ],
+    "state_model": {
+      "source": ".kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.state.ts",
+      "bindings": {
+        "spot": "ReceptiveField spot and SVG probe position",
+        "rate": "ReceptiveField bar/label plus actual scrolling spike population derived from rate",
+        "r": 160,
+        "baseline": 20,
+        "gain": 60
+      },
+      "assertions": [
+        "No probe and outside spot produce 20 Hz.",
+        "Center gives 80 Hz; surround gives 0 Hz, never negative.",
+        "Probe radius 12 fits wholly in radius-72 center or annulus 72..160; no area-integration claim."
+      ]
+    },
+    "template_scope": "Reuse existing okabe-ito-dark palette, typography, layout helpers and registered L2 primitives; own scene composition and causal timeline.",
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "ON and surround labels collided with spot/region boundary",
+        "affected_ids": [
+          "C11-A008"
+        ],
+        "status": "resolved",
+        "fix": "Moved both labels and sampled actual stimulus onset times; independent visual re-review passed",
+        "evidence": [
+          "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/review-repair-08.json"
+        ]
+      }
+    ],
+    "source": ".kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.tsx",
+    "instruction_resolution": "Explicit current edu-video workflow uses 25–35 second Remotion silent-English production and existing kit; legacy 15-second Manim requirement retained as historical input only.",
+    "source_files": [
+      ".kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.tsx",
+      ".kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.state.ts"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "phase": "C full implementation rechecked",
+        "command": "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node .workbuddy/batch-20261014-neuroscience/b1/assert-ns08-10.cjs",
+        "build_command": ".kits/introduction-to-neuroscience/node_modules/esbuild/bin/esbuild .kits/introduction-to-neuroscience/src/videos/assert-ns08-10.tsx --bundle --platform=node --outfile=.workbuddy/batch-20261014-neuroscience/b1/assert-ns08-10.cjs",
+        "exit_code": 0,
+        "build_exit_code": 0,
+        "log": ".workbuddy/batch-20261014-neuroscience/b1/assert-ns08-10.log",
+        "source_files": [
+          ".kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.tsx",
+          ".kits/introduction-to-neuroscience/src/videos/ns08-receptive-field.state.ts"
+        ],
+        "source_check": "Inspected receptiveState -> ReceptiveField spot/baseline/gain -> receptiveResponse -> rate bar and label. The exact same returned rate sets actual SVG spike population. The spot switches through baseline between wholly-contained probe locations.",
+        "assertion_result": "ns08 PASS: baseline/center/surround/outside and switch boundaries, spatial containment, rendered rate and spike bindings.",
+        "applicability": [
+          "recvvJaLo1xR2X"
+        ],
+        "reviewer": "neuro_08_10 agent",
+        "reviewed_at": "2026-10-14T07:05:49.163839+00:00",
+        "resolved_execution_error": "Initial attempt invoked native esbuild binary via node; corrected to execute native binary directly; bundling and assertions then passed.",
+        "full_implementation_binding_check": "Scene components pass local frame plus scene offset into the same mechanism component tested by assertions; mechanism states feed visible geometry, counts and labels. No changes to shared kit or registry."
+      },
+      "implementation_checks": {
+        "bundle": "passed",
+        "assertions": "passed",
+        "typecheck": "No diagnostics in ns08–10; overall project pending concurrent ns01–04 Backdrop props and missing ns07 file at time of check.",
+        "short_file_review": "Independent complete mechanism and own scene composition retained; no padding to line threshold."
+      },
+      "version": "v1",
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex neuro_05_07 (independent reviewer)",
+      "reviewed_at": "2026-10-14T08:03:16.958206+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "risk-1",
+          "times_seconds": [
+            5.2,
+            5.5,
+            5.8
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/risk-sheet.jpg"
+          ],
+          "observation": "Before center onset the probe is absent with sparse spikes and 20 Hz. At and after 5.5 s the center spot appears, bar reaches 80 Hz and the spike raster is denser."
+        },
+        {
+          "risk_id": "risk-2",
+          "times_seconds": [
+            12.7,
+            13.0,
+            13.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/risk-sheet.jpg"
+          ],
+          "observation": "At 12.7 s the probe is absent with 20 Hz baseline. At 13 and 13.3 s the light is visibly within the right annulus, the bar is at 0 Hz and spikes are absent."
+        },
+        {
+          "risk_id": "risk-3",
+          "times_seconds": [
+            20.7,
+            21.0,
+            21.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/risk-sheet.jpg"
+          ],
+          "observation": "At 20.7 s the probe is absent with baseline firing. At 21 and 21.3 s the probe is outside the left edge of the receptive field while the 20 Hz bar and sparse baseline raster remain unchanged."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Center/annular stimulus geometry plus firing bar and raster identify the receptive-field operation without explanatory headings."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Actual light position, spike density and bar height vary; center increases activity and surround suppresses it."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Observed raster and bar demonstrate the effect; outcome is not merely announced in a label."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            2.5,
+            7.5,
+            13,
+            17.5,
+            23,
+            26.5
+          ],
+          "observed": "ON is now above the central spot within the pink disk. The yellow center light does not intersect the letters. Surround is located in the lower blue annulus, separated from pink center boundary. Rate, raster and explanatory copy remain legible."
+        },
+        {
+          "times_seconds": [
+            5.2,
+            5.5,
+            5.8
+          ],
+          "observed": "Before center onset the probe is absent with sparse spikes and 20 Hz. At and after 5.5 s the center spot appears, bar reaches 80 Hz and the spike raster is denser."
+        },
+        {
+          "times_seconds": [
+            12.7,
+            13,
+            13.3
+          ],
+          "observed": "At 12.7 s the probe is absent with 20 Hz baseline. At 13 and 13.3 s the light is visibly within the right annulus, the bar is at 0 Hz and spikes are absent."
+        },
+        {
+          "times_seconds": [
+            20.7,
+            21,
+            21.3
+          ],
+          "observed": "At 20.7 s the probe is absent with baseline firing. At 21 and 21.3 s the probe is outside the left edge of the receptive field while the 20 Hz bar and sparse baseline raster remain unchanged."
+        }
+      ]
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 28.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLo1xR2X/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164335072,
+      "attachment_url": "https://github.com/user-attachments/assets/a78c68ec-47b7-4318-96d2-ec364d93622c",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLo1xR2X",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLo1xR2X",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "preferred": [
+      "receptive field",
+      "ON-center",
+      "antagonistic surround",
+      "firing rate"
+    ],
+    "scope": "Introductory schematic example; quantities and times are illustrative.",
+    "confirmed": true
+  },
+  "media": {
+    "duration_seconds": 28.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns08-receptive-field.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/a78c68ec-47b7-4318-96d2-ec364d93622c",
+  "player_version": "v1"
+}

@@ -1,0 +1,448 @@
+{
+  "id": "C11-A001",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Resting potential",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns01-resting-potential.mp4",
+  "tags": [
+    "C11-A001",
+    "9.01",
+    "P0"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080 educational animation about Resting potential for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–5s, gradient: Two ion populations remain on opposite sides; membrane and concentration imbalance visible from first frame. Why: Concentrations are unequal before the selectively permeable pathway opens. Visible result: Viewer can identify inside, outside and K+ gradient.\n2. 5–13s, leak: Four identified K+ circles cross from inside/below to outside/above; each exit leaves an additional fixed negative marker and drives meter negative. Why: Selective K+ permeability allows positive charge to leave. Visible result: Inside becomes negative while bulk concentration pools remain unequal.\n3. 13–22s, balance: Inward force arrow grows while outward gradient arrow stays fixed; final pair of K+ movements oppose one another rather than draining the inside pool. Why: Negative inside attracts K+ back, opposing diffusion; a small charge separation suffices. Visible result: Opposing influences produce a stable negative resting voltage.\n4. 22–30s, maintain: Three Na+ tokens move outward and two K+ tokens inward at the pump; membrane leak region remains in place and voltage stays at illustrative resting value. Why: Active transport maintains gradients over time; it does not generate the spike or directly reset each leak event. Visible result: Maintained gradients support continued resting potential.\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Resting potential",
+  "standard_name": "Resting potential",
+  "aliases": [],
+  "final_title": "Resting Potential: K+ Leakage and Ion Gradients",
+  "learning_objective": "Explain how selective K+ permeability converts an ion gradient into an inside-negative voltage, with pumps maintaining the gradients.",
+  "core_conclusion": "Ion gradients plus selective permeability create resting voltage; the Na+/K+ pump maintains the gradients.",
+  "references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK538338/",
+      "use": "mechanism factual support",
+      "checked": "2026-10-14 web search; NCBI direct page captcha",
+      "title": "www.ncbi.nlm.nih.gov"
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Resting potential” using this visual metaphor: “a glowing neural circuit carrying one signal for Resting potential”. Dynamically demonstrate the core formula or conclusion: Resting potential comes from ion gradients and selective membrane permeability..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#EEF7EE); main visual (#145A56); secondary visual (#8F2B2B); highlight (#735000); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "workflow_version": 2,
+    "status": "reviewed",
+    "tool": "Remotion",
+    "duration_seconds": 30,
+    "fps": 30,
+    "language": "en",
+    "audio": "silent",
+    "scenes": [
+      {
+        "id": "gradient",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "membrane",
+          "inside K+ pool",
+          "outside Na+ pool",
+          "closed channel"
+        ],
+        "initial_state": {
+          "inside_K": 12,
+          "outside_K": 3,
+          "relative_voltage": 0
+        },
+        "trigger": "Reveal a simplified initially uncharged membrane model",
+        "change": "Two ion populations remain on opposite sides; membrane and concentration imbalance visible from first frame.",
+        "cause": "Concentrations are unequal before the selectively permeable pathway opens.",
+        "result": "Viewer can identify inside, outside and K+ gradient.",
+        "screen_copy": [
+          "Resting potential",
+          "More K+ inside"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "2 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "leak",
+        "start_seconds": 5,
+        "end_seconds": 13,
+        "objects": [
+          "K+ leak channel",
+          "four tracked K+ ions",
+          "inside negative markers",
+          "voltage meter"
+        ],
+        "initial_state": {
+          "channel_open": 0,
+          "escaped": 0
+        },
+        "trigger": "Open the K+ leak pathway",
+        "change": "Four identified K+ circles cross from inside/below to outside/above; each exit leaves an additional fixed negative marker and drives meter negative.",
+        "cause": "Selective K+ permeability allows positive charge to leave.",
+        "result": "Inside becomes negative while bulk concentration pools remain unequal.",
+        "screen_copy": [
+          "K+ leaks out",
+          "Inside becomes negative"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "balance",
+        "start_seconds": 13,
+        "end_seconds": 22,
+        "objects": [
+          "same membrane",
+          "outward chemical-force arrow",
+          "inward electrical-force arrow",
+          "tracked K+"
+        ],
+        "initial_state": {
+          "electrical_force": 0.2
+        },
+        "trigger": "Increase electrical attraction as inside loses positive charge",
+        "change": "Inward force arrow grows while outward gradient arrow stays fixed; final pair of K+ movements oppose one another rather than draining the inside pool.",
+        "cause": "Negative inside attracts K+ back, opposing diffusion; a small charge separation suffices.",
+        "result": "Opposing influences produce a stable negative resting voltage.",
+        "screen_copy": [
+          "Electrical pull opposes diffusion",
+          "Typical neuron: about −70 mV"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "6 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      },
+      {
+        "id": "maintain",
+        "start_seconds": 22,
+        "end_seconds": 30,
+        "objects": [
+          "Na+/K+ pump",
+          "three Na+",
+          "two K+",
+          "unchanged resting-voltage meter"
+        ],
+        "initial_state": {
+          "pump_cycle": 0
+        },
+        "trigger": "One ATP-powered pump cycle",
+        "change": "Three Na+ tokens move outward and two K+ tokens inward at the pump; membrane leak region remains in place and voltage stays at illustrative resting value.",
+        "cause": "Active transport maintains gradients over time; it does not generate the spike or directly reset each leak event.",
+        "result": "Maintained gradients support continued resting potential.",
+        "screen_copy": [
+          "Pump maintains the gradients",
+          "3 Na+ out · 2 K+ in"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "5 seconds for visible operation; 3 seconds to read the result while the mechanism remains visible."
+      }
+    ],
+    "scene_rationale": "Four contiguous stages distinguish the pre-existing gradient, actual K+ escape, opposing electrical force, and gradient maintenance. Omitting the force balance would imply endless diffusion; omitting the maintenance step would incorrectly make the pump the immediate cause of every voltage change.",
+    "critical_processes": [
+      {
+        "id": "leak",
+        "scene_id": "leak",
+        "uncertainty": "Ion must cross membrane and charge markers/meter must follow exit, not precede it.",
+        "expected_observation": "Ion must cross membrane and charge markers/meter must follow exit, not precede it.",
+        "time_seconds": 9
+      },
+      {
+        "id": "pump",
+        "scene_id": "maintain",
+        "uncertainty": "Three outward sodium and two inward potassium tokens move through distinct pump path; voltage remains negative.",
+        "expected_observation": "Three outward sodium and two inward potassium tokens move through distinct pump path; voltage remains negative.",
+        "time_seconds": 26
+      }
+    ],
+    "risk_moments": [
+      {
+        "id": "leak",
+        "time_seconds": 9,
+        "reason": "Ion must cross membrane and charge markers/meter must follow exit, not precede it."
+      },
+      {
+        "id": "pump",
+        "time_seconds": 26,
+        "reason": "Three outward sodium and two inward potassium tokens move through distinct pump path; voltage remains negative."
+      }
+    ],
+    "state_model": {
+      "status": "implemented",
+      "source": ".kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.state.ts",
+      "bindings": [
+        "restingState(frame).escaped -> ion positions, negative marker count and meter",
+        "ionTransit(open,transit,\"out\") -> K+ cy and ownership",
+        "restingState(frame).pump -> 3 outward Na+ and 2 inward K+ positions",
+        "restingState.balance -> two opposite transmembrane trajectories at constant resting voltage"
+      ],
+      "render_source": ".kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.tsx"
+    },
+    "template_scope": "Reuse existing course palette, fonts, SceneShell, Plot and listed L2 geometry only; topic owns causal sequence and state.",
+    "implementation_plan": "Independent membrane schematic with concentration pools, K+ leakage, force balance, and one pump cycle. New local restingState uses IonTransit; all copy and numeric meter derived from that state.",
+    "requirement_resolution": {
+      "preserved": "Original requirement_prompt and subject identity unchanged.",
+      "effective": "User explicitly invoked current edu-video orchestration; Remotion 25–35s English silent kit takes precedence over historical Manim 15s palette/3D prompt."
+    },
+    "previews": [],
+    "rework": [
+      {
+        "category": "layout",
+        "cause": "K+ transit extended outside the SVG during membrane exit",
+        "affected_ids": [
+          "C11-A001"
+        ],
+        "status": "resolved",
+        "fix": "Moved transit start within the figure and rerendered; overlap checks now pass",
+        "evidence": [
+          "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/risk-sheet.jpg"
+        ]
+      }
+    ],
+    "tsx_path": ".kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.tsx",
+    "key_frames": [
+      30,
+      180,
+      345,
+      540,
+      735,
+      870
+    ],
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "version": "v1",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "source_version": "v1-full",
+        "reviewer": "Codex kit/ns01-04 agent",
+        "reviewed_at": "2026-10-14T07:06:45.381940+00:00",
+        "command": "/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node .workbuddy/batch-20261014-neuroscience/b1-assert-01-04.cjs",
+        "exit_code": 0,
+        "log": ".workbuddy/batch-20261014-neuroscience/b1-assert-01-04.log",
+        "state_source": ".kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.state.ts",
+        "minimal_tsx": ".kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.mechanism.tsx",
+        "assertions": {
+          "slug": "ns01-resting-potential",
+          "frames": [
+            0,
+            178,
+            400
+          ],
+          "assertions": "PASS: before/mid/after plus transition boundaries; actual minimal TSX renders different bound geometry",
+          "rendered_markup_lengths": [
+            2797,
+            2827,
+            2978
+          ],
+          "full_source": {
+            "duration": 900,
+            "scene_bindings": [
+              {
+                "scene": "gradient",
+                "markup_length": 7755
+              },
+              {
+                "scene": "leak",
+                "markup_length": 8031
+              },
+              {
+                "scene": "balance",
+                "markup_length": 8919
+              },
+              {
+                "scene": "maintain",
+                "markup_length": 9058
+              }
+            ]
+          }
+        },
+        "source_check": {
+          "status": "passed",
+          "binding_inspection": "Inspected RestingMechanism -> restingState -> IonTransit(open,transit,direction=out); ion progress binds actual cy across membrane. Escaped count uses completed transit and binds negative markers and voltage, pump state binds opposite sodium/potassium positions.",
+          "full_binding_inspection": "Inspected independent L3 scene components and local board. All scene offsets preserve design timeline; actual .state.ts inputs drive geometric positions, actual curve/path points, receptor counts or visible voltage, not the minimal mechanism wrapper. Full SCENES SSR checked each scene for figure output and non-NaN coordinates. Balance stage uses new balance progress for opposing ion trajectories with unchanged voltage; added before/mid/after balance assertions."
+        },
+        "scope": "Authorizes full TSX expansion only. Full implementation must reuse these state functions and preserve bindings. Teaching review remains pending.",
+        "full_tsx": ".kits/introduction-to-neuroscience/src/videos/ns01-resting-potential.tsx"
+      },
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex parent reviewer",
+      "reviewed_at": "2026-10-14T08:01:06.033988+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "leak",
+          "times_seconds": [
+            8.7,
+            9.0,
+            9.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/risk-sheet.jpg"
+          ],
+          "observation": "K+ crosses the open leak path; negative charge accumulates inside as voltage moves from 0 to -70 mV."
+        },
+        {
+          "risk_id": "pump",
+          "times_seconds": [
+            25.7,
+            26.0,
+            26.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/risk-sheet.jpg"
+          ],
+          "observation": "Pump markers move Na+ outward and K+ inward while resting voltage persists."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Membrane, K+ gradient, leak and pump identify the mechanism."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "K+ ions cross the membrane and pump markers move; voltage changes."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Charge separation and maintenance are depicted, not just captioned."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            6,
+            11.5
+          ],
+          "observed": "K+ crosses the open leak path; negative charge accumulates inside as voltage moves from 0 to -70 mV."
+        },
+        {
+          "times_seconds": [
+            8.7,
+            9.3
+          ],
+          "observed": "Successive K+ ions occupy distinct positions across the membrane."
+        },
+        {
+          "times_seconds": [
+            25.7,
+            26.3
+          ],
+          "observed": "Pump markers move Na+ outward and K+ inward while resting voltage persists."
+        }
+      ]
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnMfbvF/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164215638,
+      "attachment_url": "https://github.com/user-attachments/assets/0ba35035-b5d3-43e8-a4f0-ddb21083a56a",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLnMfbvF",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLnMfbvF",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "confirmed": true,
+    "terms": [
+      "K+ leak channel",
+      "concentration gradient",
+      "electrical force",
+      "resting membrane potential",
+      "Na+/K+ pump"
+    ]
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns01-resting-potential.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/0ba35035-b5d3-43e8-a4f0-ddb21083a56a",
+  "player_version": "v1"
+}

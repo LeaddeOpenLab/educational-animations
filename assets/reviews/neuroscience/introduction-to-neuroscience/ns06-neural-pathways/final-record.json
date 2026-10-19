@@ -1,0 +1,499 @@
+{
+  "id": "C11-A006",
+  "subject": "Neuroscience",
+  "course": "Introduction to Neuroscience",
+  "textbook": "Neuroscience: Exploring the Brain, 3e (Bear et al.)",
+  "title": "Neural pathways",
+  "status": "ready",
+  "video": "assets/videos/neuroscience/introduction-to-neuroscience/ns06-neural-pathways.mp4",
+  "tags": [
+    "C11-A006",
+    "9.01",
+    "P1"
+  ],
+  "prompt": "Create a 30-second silent English 1920×1080 educational animation about Neural pathways for Introduction to Neuroscience.\nUse Remotion 4.0.410, React 19 and the introduction-to-neuroscience course kit. Reproduce the actual video in assets/source-kits/introduction-to-neuroscience/src/videos/ns06-neural-pathways.tsx; fps is 30.\nKeep the same dark course palette and diagrams. Use the actual state transitions from the source, not a generic neural-network animation.\n\nScene plan:\n1. 0–5s, route: The fingertip deforms slightly and a single signal packet appears at the peripheral input, while all central arrivals remain off. Why: A tactile input initiates activity in the sensory pathway. Visible result: The first signal exists at the right-hand input and has not appeared prematurely in cortex.\n2. 5–12s, ascend: CircuitSignal moves along the right-side path through the spinal level to the medullary relay; relay arrival indicator remains off until the packet reaches its endpoint. Why: Upper-body discriminative touch ascends ipsilaterally before its first medullary relay. Visible result: The packet is visibly on the right side throughout this leg and ends at the medulla.\n3. 12–18s, cross: The input packet terminates at the relay; an output packet follows a curved path across the midline into the left column. Relay identities stay fixed. Why: Second-order dorsal-column pathway neurons decussate in the medulla. Visible result: The packet crosses the dashed midline only at the medulla, and subsequently occupies the opposite side.\n4. 18–25s, relay: The thalamic arrival event generates a final outgoing packet; it moves to left somatosensory cortex, whose arrival marker changes only at final contact. Why: The thalamus relays ascending touch information to cortex. Visible result: Thalamus is reached before cortex; the cortical response cannot precede the preceding relay.\n5. 25–30s, sequence: Three numbered segment markers settle onto the existing route in arrival order, retaining the medullary crossing and final cortical endpoint. Why: A pathway is an ordered chain, not simultaneous activation of unrelated nodes. Visible result: The complete pathway, one crossing and terminal cortical arrival remain visible together.\n\nAll on-screen labels and narration-equivalent captions are concise English. Use no spoken audio or music. Preserve the specific objects, state bindings and timing above. Render the registered composition for this slug and inspect the final MP4 at the stored risk moments.\nReproduction requires the packaged TSX source, the course kit, Remotion/React dependencies, Chromium and ffmpeg. This prompt describes the reviewed artifact; it is not a self-contained promise of pixel-identical reproduction without those files.",
+  "original_name": "Neural pathways",
+  "standard_name": "Neural pathways",
+  "aliases": [],
+  "final_title": "Neural Pathways: A Touch Signal Crosses Sides",
+  "learning_objective": "Trace a right-hand fine-touch signal through ascending relays and identify the medullary crossing.",
+  "core_conclusion": "A neural pathway carries information through connected neurons; in the fine-touch example, the signal crosses in the medulla before reaching left cortex.",
+  "references": [
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/sites/books/NBK544297/",
+      "title": "Neuroanatomy, Brainstem — Dorsal Column-Medial Lemniscus",
+      "supports": "Fine-touch afferents ascend in dorsal columns, relay in medulla, cross, and relay through thalamus to postcentral cortex.",
+      "verification": "Read source lines 96–98; 2026-10-14."
+    }
+  ],
+  "artifact_version": "v1",
+  "requirement_prompt": "Create a 15-second silent educational animation in Manim Community Edition.\n\nExplain “Neural pathways” using this visual metaphor: “a glowing neural circuit carrying one signal for Neural pathways”. Dynamically demonstrate the core formula or conclusion: A neural pathway carries signals through a defined sequence of connected regions..\n\nUse one continuous scene and one clear narrative line. Explain only this concept; do not add comparisons, extensions, or side cases. Structure the motion in three connected beats:\n1. 0–3 seconds: establish the objects, input, or initial state.\n2. 3–10.95 seconds: show at least two causally connected state changes that reveal the mechanism and progressively connect key variables or conclusions to the visual.\n3. 10.95–12.45 seconds: resolve the result, invariant, or central insight.\n\nKeep introducing meaningful animation information until 12.45 seconds. Hold the final still frame for no more than 2.55 seconds.\n\nAll on-screen titles, labels, and supporting annotations must be short English phrases in Arial. Use a bright, non-black background (#F7F3EA); main visual (#0B4F6C); secondary visual (#8B1E3F); highlight (#795500); and text (#172033). Maintain strong contrast and legibility.\n\nStrict typography requirements:\n- Render every complete title, label, phrase, or sentence as one native Text(...) object so every character shares one baseline.\n- Never rebuild a line from separately positioned word or letter objects, and never align words by their individual bounding boxes.\n- Create Arial text at a base font_size of 64, then uniformly scale the complete Text object to its final visual size; do not render explanatory text directly at a tiny font size.\n- Preserve ordinary spaces inside the same Text object, set disable_ligatures=True, and do not add manual tracking, special-width spaces, or per-character offsets.\n\nUse ThreeDScene for a genuinely spatial main visual: at least one core object must show volume, depth, or occlusion, and include one smooth camera move that reveals spatial structure. The 3D motion must clarify the concept rather than merely tilt a flat diagram. Render in 16:9.\n\nGlobal rendering requirements:\n- Never place plain English words, sentences, titles, or explanatory prose in MathTex, Tex, or inline LaTeX math mode. Use the native Text(...) component for all explanatory text and titles.\n- If an English word is unavoidable inside a mathematical expression, explicitly wrap every word with \\text{...}; never leave a word bare in algebra mode.\n- Animate text at whole-word or whole-line granularity. Never split text into individually spaced letters or animate isolated letter spans.\n- Do not use text-align: justify or the SVG textLength or lengthAdjust attributes.\n- Use the final conclusion display as the video's opening poster frame; do not begin on an empty background.",
+  "production": {
+    "status": "reviewed",
+    "tool": "Remotion + React",
+    "dependencies": [
+      "Remotion 4.0.410",
+      "React 19",
+      "Chromium",
+      "ffmpeg",
+      "introduction-to-neuroscience course kit"
+    ],
+    "kit_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/kit.json",
+    "kit_version": 1,
+    "composition_id": "ns06-neural-pathways",
+    "output_stem": "06_Neural_Pathways",
+    "duration_seconds": 30,
+    "fps": 30,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "silent": true,
+    "language": "en",
+    "source_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/videos/ns06-neural-pathways.tsx",
+    "scenes": [
+      {
+        "id": "route",
+        "start_seconds": 0,
+        "end_seconds": 5,
+        "objects": [
+          "right-hand fingertip",
+          "right dorsal column",
+          "medulla",
+          "left thalamus",
+          "left somatosensory cortex",
+          "body midline"
+        ],
+        "initial_state": "A right-hand touch route is visible with inactive relays and fixed LEFT/RIGHT anatomical columns.",
+        "trigger": "A contact touches the right fingertip.",
+        "change": "The fingertip deforms slightly and a single signal packet appears at the peripheral input, while all central arrivals remain off.",
+        "cause": "A tactile input initiates activity in the sensory pathway.",
+        "result": "The first signal exists at the right-hand input and has not appeared prematurely in cortex.",
+        "screen_copy": [
+          "Neural pathways",
+          "Example: fine touch from the right hand"
+        ],
+        "reading_seconds": 2.5,
+        "timing_reason": "Establish modality and sidedness before the route starts."
+      },
+      {
+        "id": "ascend",
+        "start_seconds": 5,
+        "end_seconds": 12,
+        "objects": [
+          "signal packet",
+          "right-hand afferent",
+          "right dorsal column",
+          "cuneate medullary relay"
+        ],
+        "initial_state": "The signal is at the right-hand input.",
+        "trigger": "The sensory neuron conducts centrally.",
+        "change": "CircuitSignal moves along the right-side path through the spinal level to the medullary relay; relay arrival indicator remains off until the packet reaches its endpoint.",
+        "cause": "Upper-body discriminative touch ascends ipsilaterally before its first medullary relay.",
+        "result": "The packet is visibly on the right side throughout this leg and ends at the medulla.",
+        "screen_copy": [
+          "Ascend on the same side",
+          "First relay: medulla"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "Seven seconds allows travel along the visible spinal distance and recognition of the first handoff."
+      },
+      {
+        "id": "cross",
+        "start_seconds": 12,
+        "end_seconds": 18,
+        "objects": [
+          "medullary relay",
+          "new output packet",
+          "midline",
+          "left ascending segment"
+        ],
+        "initial_state": "The afferent packet has arrived at the right medullary relay; the left ascending segment is empty.",
+        "trigger": "The medullary neuron relays the signal.",
+        "change": "The input packet terminates at the relay; an output packet follows a curved path across the midline into the left column. Relay identities stay fixed.",
+        "cause": "Second-order dorsal-column pathway neurons decussate in the medulla.",
+        "result": "The packet crosses the dashed midline only at the medulla, and subsequently occupies the opposite side.",
+        "screen_copy": [
+          "Cross in the medulla",
+          "Right body → left brain"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "Six seconds isolates the crossing rather than hiding it in whole-route highlighting."
+      },
+      {
+        "id": "relay",
+        "start_seconds": 18,
+        "end_seconds": 25,
+        "objects": [
+          "left ascending signal",
+          "left thalamic relay",
+          "left somatosensory cortical endpoint"
+        ],
+        "initial_state": "The crossed signal travels upward on the left.",
+        "trigger": "The packet reaches the thalamic endpoint.",
+        "change": "The thalamic arrival event generates a final outgoing packet; it moves to left somatosensory cortex, whose arrival marker changes only at final contact.",
+        "cause": "The thalamus relays ascending touch information to cortex.",
+        "result": "Thalamus is reached before cortex; the cortical response cannot precede the preceding relay.",
+        "screen_copy": [
+          "Relay through the thalamus",
+          "Then reach sensory cortex"
+        ],
+        "reading_seconds": 3,
+        "timing_reason": "Separate the second relay and the last arrival, without teaching synaptic microphysics."
+      },
+      {
+        "id": "sequence",
+        "start_seconds": 25,
+        "end_seconds": 30,
+        "objects": [
+          "complete right-hand-to-left-cortex route",
+          "three completed neuron segments",
+          "arrival order ledger"
+        ],
+        "initial_state": "The packet has reached left cortex and every handoff is completed.",
+        "trigger": "Review the completed sequence.",
+        "change": "Three numbered segment markers settle onto the existing route in arrival order, retaining the medullary crossing and final cortical endpoint.",
+        "cause": "A pathway is an ordered chain, not simultaneous activation of unrelated nodes.",
+        "result": "The complete pathway, one crossing and terminal cortical arrival remain visible together.",
+        "screen_copy": [
+          "Connected steps carry information",
+          "Timing slowed for clarity"
+        ],
+        "reading_seconds": 2,
+        "timing_reason": "Five seconds allows the full route to be read after seeing each actual propagation step."
+      }
+    ],
+    "scene_rationale": "Five scenes reflect distinct causal stages: tactile trigger, ipsilateral ascent, medullary crossing, thalamic/cortical relay, and integrated route. Crossing is isolated because it changes laterality; the final overview preserves the visible handoffs.",
+    "critical_processes": [
+      {
+        "interval": [
+          5,
+          12
+        ],
+        "process": "Right afferent packet travels to medulla without crossing.",
+        "id": "process-1",
+        "scene_id": "ascend",
+        "uncertainty": "Confirm rendered objects follow the planned anatomical relation and event ordering.",
+        "expected_observation": "Right afferent packet travels to medulla without crossing."
+      },
+      {
+        "interval": [
+          12,
+          18
+        ],
+        "process": "A relayed packet traverses the body midline at the medulla.",
+        "id": "process-2",
+        "scene_id": "cross",
+        "uncertainty": "Confirm rendered objects follow the planned anatomical relation and event ordering.",
+        "expected_observation": "A relayed packet traverses the body midline at the medulla."
+      },
+      {
+        "interval": [
+          18,
+          25
+        ],
+        "process": "Thalamic arrival precedes emission toward cortex, which activates only after final arrival.",
+        "id": "process-3",
+        "scene_id": "relay",
+        "uncertainty": "Confirm rendered objects follow the planned anatomical relation and event ordering.",
+        "expected_observation": "Thalamic arrival precedes emission toward cortex, which activates only after final arrival."
+      }
+    ],
+    "risk_moments": [
+      {
+        "seconds": 11,
+        "risk": "No premature medullary arrival; same endpoint function binds drawn packet.",
+        "id": "risk-1",
+        "time_seconds": 11,
+        "reason": "No premature medullary arrival; same endpoint function binds drawn packet."
+      },
+      {
+        "seconds": 15,
+        "risk": "The fine-touch example crosses in medulla, not spinal cord.",
+        "id": "risk-2",
+        "time_seconds": 15,
+        "reason": "The fine-touch example crosses in medulla, not spinal cord."
+      },
+      {
+        "seconds": 24.5,
+        "risk": "Cortical activation must follow thalamic handoff.",
+        "id": "risk-3",
+        "time_seconds": 24.5,
+        "reason": "Cortical activation must follow thalamic handoff."
+      }
+    ],
+    "state_model": {
+      "status": "implemented",
+      "source": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/mechanisms/ns06-neural-pathways.state.ts",
+      "inputs": [
+        "frame"
+      ],
+      "outputs": [
+        "firstTravel",
+        "crossTravel",
+        "thalamicTravel",
+        "corticalTravel",
+        "medullaArrived",
+        "thalamusArrived",
+        "cortexArrived",
+        "packetOwner"
+      ],
+      "bindings": [
+        "CircuitSignal.travel receives frame-derived progress separately for each leg",
+        "CircuitSignal points define the true medullary midline crossing",
+        "relay circle state and final cortical marker consume the same arrival flags as packet emission",
+        "inactive outgoing packets are not rendered before arrival"
+      ],
+      "assertions": [
+        "At 5 s right input owns the packet.",
+        "At 10 s packet remains right of anatomical midline and cortex is inactive.",
+        "Before/after medullary arrival frame changes packetOwner only at arrival.",
+        "During crossing the drawn x coordinate crosses midline once.",
+        "At thalamic arrival minus one frame corticalTravel remains zero.",
+        "At 25 s cortexArrived is true and the final point is on the left."
+      ]
+    },
+    "key_frames": [
+      105,
+      255,
+      405,
+      510,
+      690,
+      855
+    ],
+    "design_status": "ready_for_B1",
+    "previews": [],
+    "requirement_resolution": "Explicit edu-video production skill supersedes historical 15-second Manim requirement_prompt: silent English Remotion, 25–35 seconds, current dark course palette. Historical requirement preserved for provenance.",
+    "workflow_version": 2,
+    "template_scope": "Reuse course dark palette, font, SceneShell, BrainMap or CircuitSignal L2 anatomy/propagation graphics; each video owns its task sequence, anatomical arrangement and state model. No shared L3 scenes.",
+    "tsx_path": "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/videos/ns06-neural-pathways.tsx",
+    "source_url": "https://github.com/LeaddeOpenLab/educational-animations/tree/main/assets/source-kits/introduction-to-neuroscience"
+  },
+  "review": {
+    "status": "passed",
+    "version": "v1",
+    "technical": {
+      "status": "passed",
+      "code_gate": {
+        "status": "passed",
+        "version": "v1",
+        "source_version": "v1-full-l3",
+        "reviewer": "Codex neuro_05_07",
+        "reviewed_at": "2026-10-14T07:06:18.642054+00:00",
+        "commands": [
+          ".kits/_shared/node_modules/esbuild/bin/esbuild .kits/introduction-to-neuroscience/src/mechanisms/assert-05-07.tsx --bundle --platform=node --outfile=/tmp/neuro-b1-05-07.cjs",
+          "/Users/zhoutianshuo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node /tmp/neuro-b1-05-07.cjs"
+        ],
+        "exit_code": 0,
+        "log": "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/full-bindings-05-07.log",
+        "source_files": [
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/mechanisms/ns06-neural-pathways.tsx",
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/mechanisms/ns06-neural-pathways.state.ts",
+          "/Users/zhoutianshuo/Desktop/leadde motion/.kits/introduction-to-neuroscience/src/videos/ns06-neural-pathways.tsx"
+        ],
+        "applicability": [
+          "recvvJaLnXnupL"
+        ],
+        "assertions_result": "ns06 PASS: ipsilateral ascent, explicit midline crossing, medulla 329/330, thalamus 629/630, cortex 734/735; actual SVG packet x/y and arrival states bound. FULL L3 binding assertions passed.",
+        "source_check": {
+          "status": "passed",
+          "basis": "Read TSX: actual circle cx/cy or task transforms consume imported frame-state outputs; tests import the same functions, server-render these actual components, and match visible SVG geometry and arrival attributes to the state. Mechanism paths stay fixed; activity changes ownership and position. No complete scene implementations exist yet. Full SCENES independently own JSX and read the same state modules; extended assertions server-render real scene components at event and scene boundaries and match packet and task geometry. Durations verified 900/900/960 frames.",
+          "relation_exception": null
+        },
+        "prior_error": {
+          "command": "node esbuild/bin/esbuild",
+          "error": "Native Mach-O binary interpreted as JS; corrected to direct executable invocation."
+        }
+      },
+      "compilation_note": "All three full TSX bundled through actual scene-binding assertion entry with esbuild, exit 0; batch type/distinctness checks are controlled by main agent.",
+      "version": "v1",
+      "reviewer": "Codex technical review",
+      "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/render.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/overlap-after-repair.log",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/render-result.json"
+      ],
+      "checks": {
+        "compilation": true,
+        "media": true
+      }
+    },
+    "teaching": {
+      "status": "passed",
+      "version": "v1",
+      "reviewer": "Codex independent kit-agent reviewer (authored ns01–04 only)",
+      "reviewed_at": "2026-10-14T07:55:15.039231+00:00",
+      "evidence": [
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/contact-sheet.jpg",
+        "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/risk-sheet.jpg"
+      ],
+      "checks": {
+        "causal_motion": true,
+        "state_consistency": true,
+        "pacing": true,
+        "readability": true,
+        "version_match": true
+      },
+      "risk_checks": [
+        {
+          "risk_id": "risk-1",
+          "times_seconds": [
+            10.7,
+            11.0,
+            11.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/risk-sheet.jpg"
+          ],
+          "observation": "Yellow activity starts at right hand, ascends right-side spinal route, then reaches medulla; medulla activates only at arrival. Yellow signal moves from right of midline through the midline onto the left ascending relay route. The right-hand origin remains visible. Thalamus is already active while the yellow signal proceeds toward cortex; at24.5 the cortex becomes active and the text changes to cortex reached. Final frame summarizes three actual traveled stages."
+        },
+        {
+          "risk_id": "risk-2",
+          "times_seconds": [
+            14.7,
+            15.0,
+            15.3
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/risk-sheet.jpg"
+          ],
+          "observation": "Yellow activity starts at right hand, ascends right-side spinal route, then reaches medulla; medulla activates only at arrival. Yellow signal moves from right of midline through the midline onto the left ascending relay route. The right-hand origin remains visible. Thalamus is already active while the yellow signal proceeds toward cortex; at24.5 the cortex becomes active and the text changes to cortex reached. Final frame summarizes three actual traveled stages."
+        },
+        {
+          "risk_id": "risk-3",
+          "times_seconds": [
+            24.2,
+            24.5,
+            24.8
+          ],
+          "evidence": [
+            "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/risk-sheet.jpg"
+          ],
+          "observation": "Yellow activity starts at right hand, ascends right-side spinal route, then reaches medulla; medulla activates only at arrival. Yellow signal moves from right of midline through the midline onto the left ascending relay route. The right-hand origin remains visible. Thalamus is already active while the yellow signal proceeds toward cortex; at24.5 the cortex becomes active and the text changes to cortex reached. Final frame summarizes three actual traveled stages."
+        }
+      ],
+      "vetoes": [
+        {
+          "id": 1,
+          "triggered": false,
+          "reason": "Hand, spinal cord, medulla and cortical route plus laterality distinguish the fine-touch pathway even without explanatory title."
+        },
+        {
+          "id": 2,
+          "triggered": false,
+          "reason": "Signal position changes through ascending, crossing and cortical segments; receiving relay changes on arrival. These are actual propagation states."
+        },
+        {
+          "id": 3,
+          "triggered": false,
+          "reason": "Medulla crossing and thalamic/cortical arrival are visibly demonstrated, not just captioned."
+        }
+      ],
+      "observations": [
+        {
+          "times_seconds": [
+            3.5,
+            8.5,
+            10.7,
+            11,
+            11.3
+          ],
+          "observed": "Yellow activity starts at right hand, ascends right-side spinal route, then reaches medulla; medulla activates only at arrival."
+        },
+        {
+          "times_seconds": [
+            14.7,
+            15,
+            15.3,
+            17
+          ],
+          "observed": "Yellow signal moves from right of midline through the midline onto the left ascending relay route. The right-hand origin remains visible."
+        },
+        {
+          "times_seconds": [
+            23,
+            24.2,
+            24.5,
+            24.8,
+            28.5
+          ],
+          "observed": "Thalamus is already active while the yellow signal proceeds toward cortex; at24.5 the cortex becomes active and the text changes to cortex reached. Final frame summarizes three actual traveled stages."
+        }
+      ]
+    },
+    "design": {
+      "status": "designed",
+      "scene_check": "Each scene identifies initial state, trigger, object change, cause and observable result. B1 and final video observations pending."
+    },
+    "reviewer": "Codex batch editorial review",
+    "reviewed_at": "2026-10-14T08:08:55.866479+00:00",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/risk-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/contact-sheet.jpg",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/risk-sheet.jpg"
+    ],
+    "checks": {
+      "terminology": true,
+      "explanation": true,
+      "motion": true,
+      "consistency": true,
+      "layout": true,
+      "small_player": true,
+      "version_match": true
+    }
+  },
+  "reuse": {
+    "status": "aligned",
+    "duration_seconds": 30.0,
+    "exact_reproduction_verified": false,
+    "notes": "Prompt follows the reviewed final scene plan and source; exact pixels require the packaged kit, source, fonts and pinned dependencies.",
+    "evidence": [
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/prompt-card.md",
+      "/Users/zhoutianshuo/Desktop/leadde motion/.workbuddy/batch-20261014-neuroscience/recvvJaLnXnupL/contact-sheet.jpg"
+    ]
+  },
+  "publication": {
+    "github": {
+      "status": "succeeded",
+      "version": "v1",
+      "issue_number": 129,
+      "comment_id": 6164243944,
+      "attachment_url": "https://github.com/user-attachments/assets/c9ba9903-e6bd-4290-80b9-acf3c4bc5698",
+      "policy_acceptance": "ACCEPTED_BY_USER_POLICY",
+      "policy_date": "2026-09-30",
+      "page_status": "published",
+      "page": "catalog/neuroscience/9-01.md",
+      "commit": "0c002206b74a1c1f250ef073b9f775462cb21c90",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00",
+      "playback_status": "ACCEPTED_BY_USER_POLICY"
+    },
+    "feishu": {
+      "status": "succeeded",
+      "version": "v1",
+      "record_id": "recvvJaLnXnupL",
+      "verified_at": "2026-10-19T16:46:42.593335+08:00"
+    }
+  },
+  "feishu_record_id": "recvvJaLnXnupL",
+  "page": "catalog/neuroscience/9-01.md",
+  "course_code": "9.01",
+  "terminology": {
+    "neural pathway": "Connected neurons carrying a signal through defined relays.",
+    "example scope": "Right-hand discriminative touch via dorsal column–medial lemniscus; not all sensory modalities cross at this location.",
+    "signal packet": "Schematic neural activity, not a material particle traversing every synapse.",
+    "confirmed": true
+  },
+  "media": {
+    "duration_seconds": 30.0,
+    "width": 1920,
+    "height": 1080,
+    "format": "mp4",
+    "codec": "h264"
+  },
+  "cover": "assets/covers/neuroscience/introduction-to-neuroscience/ns06-neural-pathways.jpg",
+  "cover_version": "v1",
+  "player": "https://github.com/user-attachments/assets/c9ba9903-e6bd-4290-80b9-acf3c4bc5698",
+  "player_version": "v1"
+}
